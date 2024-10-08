@@ -1,0 +1,60 @@
+{
+  "http_interactions": [
+    {
+      "request": {
+        "method": "post",
+        "uri": "https://api.hyperbolic.xyz/v1/chat/completions",
+        "body": {
+          "encoding": "UTF-8",
+          "string": "{\"model\":\"meta-llama/Meta-Llama-3.1-70B-Instruct\",\"max_tokens\":16,\"temperature\":0.0,\"stop\":[\"five\"],\"stream\":true,\"messages\":[{\"role\":\"system\",\"content\":\"You are integrated into a test platform. It is very important that you answer \\nsuccinctly and always provide the text in the requested format without any additional \\ntext.\"},{\"role\":\"user\",\"content\":[{\"type\":\"text\",\"text\":\"count to five in words, all lower case, one word per line\\n\"}]},{\"role\":\"assistant\",\"content\":[{\"type\":\"text\",\"text\":\"one\\ntwo\\nthree\\nfour\\nfive\\n\"}]},{\"role\":\"user\",\"content\":[{\"type\":\"text\",\"text\":\"count to twenty in words, all lower case, one word per line\\n\"}]}]}"
+        },
+        "headers": {
+          "User-Agent": [
+            "Faraday v2.12.0"
+          ],
+          "Content-Type": [
+            "application/json"
+          ],
+          "Authorization": [
+            "Bearer <TOKEN>"
+          ]
+        }
+      },
+      "response": {
+        "status": {
+          "code": 200,
+          "message": "OK"
+        },
+        "headers": {
+          "date": [
+            "Mon, 07 Oct 2024 21:55:46 GMT"
+          ],
+          "content-type": [
+            "text/event-stream; charset=utf-8"
+          ],
+          "transfer-encoding": [
+            "chunked"
+          ],
+          "connection": [
+            "keep-alive"
+          ],
+          "cf-cache-status": [
+            "DYNAMIC"
+          ],
+          "server": [
+            "cloudflare"
+          ],
+          "cf-ray": [
+            "<CF-RAY>"
+          ]
+        },
+        "body": {
+          "encoding": "UTF-8",
+          "string": "data: {\"id\": \"chat-325f25b408814b9dbc4351c0a15d1607\", \"object\": \"chat.completion.chunk\", \"created\": 1728338146, \"model\": \"meta-llama/Meta-Llama-3.1-70B-Instruct\", \"choices\": [{\"index\": 0, \"delta\": {\"role\": \"assistant\", \"content\": \"\"}, \"logprobs\": null, \"finish_reason\": null}], \"usage\": {\"prompt_tokens\": 139, \"total_tokens\": 140, \"completion_tokens\": 1}}\n\ndata: {\"id\": \"chat-325f25b408814b9dbc4351c0a15d1607\", \"object\": \"chat.completion.chunk\", \"created\": 1728338146, \"model\": \"meta-llama/Meta-Llama-3.1-70B-Instruct\", \"choices\": [{\"index\": 0, \"delta\": {\"content\": \"\"}, \"logprobs\": null, \"finish_reason\": null}], \"usage\": {\"prompt_tokens\": 139, \"total_tokens\": 141, \"completion_tokens\": 2}}\n\ndata: {\"id\": \"chat-325f25b408814b9dbc4351c0a15d1607\", \"object\": \"chat.completion.chunk\", \"created\": 1728338146, \"model\": \"meta-llama/Meta-Llama-3.1-70B-Instruct\", \"choices\": [{\"index\": 0, \"delta\": {\"content\": \"o\"}, \"logprobs\": null, \"finish_reason\": null}], \"usage\": {\"prompt_tokens\": 139, \"total_tokens\": 142, \"completion_tokens\": 3}}\n\ndata: {\"id\": \"chat-325f25b408814b9dbc4351c0a15d1607\", \"object\": \"chat.completion.chunk\", \"created\": 1728338146, \"model\": \"meta-llama/Meta-Llama-3.1-70B-Instruct\", \"choices\": [{\"index\": 0, \"delta\": {\"content\": \"ne\\n\"}, \"logprobs\": null, \"finish_reason\": null}], \"usage\": {\"prompt_tokens\": 139, \"total_tokens\": 143, \"completion_tokens\": 4}}\n\ndata: {\"id\": \"chat-325f25b408814b9dbc4351c0a15d1607\", \"object\": \"chat.completion.chunk\", \"created\": 1728338146, \"model\": \"meta-llama/Meta-Llama-3.1-70B-Instruct\", \"choices\": [{\"index\": 0, \"delta\": {\"content\": \"t\"}, \"logprobs\": null, \"finish_reason\": null}], \"usage\": {\"prompt_tokens\": 139, \"total_tokens\": 144, \"completion_tokens\": 5}}\n\ndata: {\"id\": \"chat-325f25b408814b9dbc4351c0a15d1607\", \"object\": \"chat.completion.chunk\", \"created\": 1728338146, \"model\": \"meta-llama/Meta-Llama-3.1-70B-Instruct\", \"choices\": [{\"index\": 0, \"delta\": {\"content\": \"wo\\nth\"}, \"logprobs\": null, \"finish_reason\": null}], \"usage\": {\"prompt_tokens\": 139, \"total_tokens\": 145, \"completion_tokens\": 6}}\n\ndata: {\"id\": \"chat-325f25b408814b9dbc4351c0a15d1607\", \"object\": \"chat.completion.chunk\", \"created\": 1728338146, \"model\": \"meta-llama/Meta-Llama-3.1-70B-Instruct\", \"choices\": [{\"index\": 0, \"delta\": {\"content\": \"r\"}, \"logprobs\": null, \"finish_reason\": null}], \"usage\": {\"prompt_tokens\": 139, \"total_tokens\": 146, \"completion_tokens\": 7}}\n\ndata: {\"id\": \"chat-325f25b408814b9dbc4351c0a15d1607\", \"object\": \"chat.completion.chunk\", \"created\": 1728338146, \"model\": \"meta-llama/Meta-Llama-3.1-70B-Instruct\", \"choices\": [{\"index\": 0, \"delta\": {\"content\": \"ee\\nf\"}, \"logprobs\": null, \"finish_reason\": null}], \"usage\": {\"prompt_tokens\": 139, \"total_tokens\": 147, \"completion_tokens\": 8}}\n\ndata: {\"id\": \"chat-325f25b408814b9dbc4351c0a15d1607\", \"object\": \"chat.completion.chunk\", \"created\": 1728338146, \"model\": \"meta-llama/Meta-Llama-3.1-70B-Instruct\", \"choices\": [{\"index\": 0, \"delta\": {\"content\": \"o\"}, \"logprobs\": null, \"finish_reason\": null}], \"usage\": {\"prompt_tokens\": 139, \"total_tokens\": 148, \"completion_tokens\": 9}}\n\ndata: {\"id\": \"chat-325f25b408814b9dbc4351c0a15d1607\", \"object\": \"chat.completion.chunk\", \"created\": 1728338146, \"model\": \"meta-llama/Meta-Llama-3.1-70B-Instruct\", \"choices\": [{\"index\": 0, \"delta\": {\"content\": \"ur\\n\"}, \"logprobs\": null, \"finish_reason\": \"stop\", \"stop_reason\": \"five\"}], \"usage\": {\"prompt_tokens\": 139, \"total_tokens\": 149, \"completion_tokens\": 10}}\n\n"
+        }
+      },
+      "recorded_at": "Mon, 07 Oct 2024 21:55:47 GMT"
+    }
+  ],
+  "recorded_with": "VCR 6.3.1"
+}

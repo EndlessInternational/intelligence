@@ -1,0 +1,96 @@
+{
+  "http_interactions": [
+    {
+      "request": {
+        "method": "post",
+        "uri": "https://api.groq.com/openai/v1/chat/completions",
+        "body": {
+          "encoding": "UTF-8",
+          "string": "{\"model\":\"llama-3.1-70b-versatile\",\"max_tokens\":32,\"stop\":[\"five\"],\"temperature\":0.0,\"messages\":[{\"role\":\"system\",\"content\":\"You are integrated into a test platform. It is very important that you answer \\nsuccinctly and always provide the text in the requested format without any additional \\ntext.\"},{\"role\":\"user\",\"content\":\"count to five in words, one word per line\\n\"},{\"role\":\"assistant\",\"content\":\"one\\ntwo\\nthree\\nfour\\nfive\\n\"},{\"role\":\"user\",\"content\":\"count to ten in words, one word per line\\n\"}]}"
+        },
+        "headers": {
+          "User-Agent": [
+            "Faraday v2.12.0"
+          ],
+          "Content-Type": [
+            "application/json"
+          ],
+          "Authorization": [
+            "Bearer <TOKEN>"
+          ]
+        }
+      },
+      "response": {
+        "status": {
+          "code": 200,
+          "message": "OK"
+        },
+        "headers": {
+          "date": [
+            "Mon, 07 Oct 2024 21:51:16 GMT"
+          ],
+          "content-type": [
+            "application/json"
+          ],
+          "transfer-encoding": [
+            "chunked"
+          ],
+          "connection": [
+            "keep-alive"
+          ],
+          "cache-control": [
+            "private, max-age=0, no-store, no-cache, must-revalidate"
+          ],
+          "vary": [
+            "Origin"
+          ],
+          "x-ratelimit-limit-requests": [
+            "14400"
+          ],
+          "x-ratelimit-limit-tokens": [
+            "20000"
+          ],
+          "x-ratelimit-remaining-requests": [
+            "14394"
+          ],
+          "x-ratelimit-remaining-tokens": [
+            "19651"
+          ],
+          "x-ratelimit-reset-requests": [
+            "35.806s"
+          ],
+          "x-ratelimit-reset-tokens": [
+            "1.046s"
+          ],
+          "x-request-id": [
+            "<X-REQUEST-ID>"
+          ],
+          "via": [
+            "1.1 google"
+          ],
+          "cf-cache-status": [
+            "DYNAMIC"
+          ],
+          "set-cookie": [
+            "<SET-COOKIE>"
+          ],
+          "server": [
+            "cloudflare"
+          ],
+          "cf-ray": [
+            "<CF-RAY>"
+          ],
+          "content-encoding": [
+            "gzip"
+          ]
+        },
+        "body": {
+          "encoding": "ASCII-8BIT",
+          "string": "{\"id\":\"chatcmpl-4f48e9d9-f328-48bb-a2d3-3c8227406b5a\",\"object\":\"chat.completion\",\"created\":1728337876,\"model\":\"llama-3.1-70b-versatile\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"one\\ntwo\\nthree\\nfour\\n\"},\"logprobs\":null,\"finish_reason\":\"stop\"}],\"usage\":{\"queue_time\":0.006213697000000001,\"prompt_tokens\":111,\"prompt_time\":0.026619421,\"completion_tokens\":20,\"completion_time\":0.08,\"total_tokens\":131,\"total_time\":0.106619421},\"system_fingerprint\":\"fp_b3ae7e594e\",\"x_groq\":{\"id\":\"req_01j9mfe5m4ef9txy3wgxfc47rc\"}}\n"
+        }
+      },
+      "recorded_at": "Mon, 07 Oct 2024 21:51:16 GMT"
+    }
+  ],
+  "recorded_with": "VCR 6.3.1"
+}
