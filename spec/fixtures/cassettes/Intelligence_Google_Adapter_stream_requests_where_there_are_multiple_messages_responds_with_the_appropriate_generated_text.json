@@ -1,0 +1,69 @@
+{
+  "http_interactions": [
+    {
+      "request": {
+        "method": "post",
+        "uri": "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro-002:streamGenerateContent?alt=sse&key=<KEY>",
+        "body": {
+          "encoding": "UTF-8",
+          "string": "{\"generationConfig\":{\"maxOutputTokens\":16,\"temperature\":0.0},\"systemInstruction\":{\"role\":\"user\",\"parts\":[{\"text\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"}]},\"contents\":[{\"role\":\"user\",\"parts\":[{\"text\":\"this is a test, respond with 'test'\\n\"}]},{\"role\":\"model\",\"parts\":[{\"text\":\"test\\n\"}]},{\"role\":\"user\",\"parts\":[{\"text\":\"what was the previous user message?\\n\"}]}]}"
+        },
+        "headers": {
+          "User-Agent": [
+            "Faraday v2.12.0"
+          ],
+          "Content-Type": [
+            "application/json"
+          ]
+        }
+      },
+      "response": {
+        "status": {
+          "code": 200,
+          "message": "OK"
+        },
+        "headers": {
+          "content-type": [
+            "text/event-stream"
+          ],
+          "content-disposition": [
+            "attachment"
+          ],
+          "vary": [
+            "Origin, X-Origin, Referer"
+          ],
+          "transfer-encoding": [
+            "chunked"
+          ],
+          "date": [
+            "Mon, 14 Oct 2024 03:32:04 GMT"
+          ],
+          "server": [
+            "scaffolding on HTTPServer2"
+          ],
+          "x-xss-protection": [
+            "0"
+          ],
+          "x-frame-options": [
+            "SAMEORIGIN"
+          ],
+          "x-content-type-options": [
+            "nosniff"
+          ],
+          "server-timing": [
+            "gfet4t7; dur=466"
+          ],
+          "alt-svc": [
+            "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+          ]
+        },
+        "body": {
+          "encoding": "UTF-8",
+          "string": "data: {\"candidates\": [{\"content\": {\"parts\": [{\"text\": \"this\"}],\"role\": \"model\"}}],\"usageMetadata\": {\"promptTokenCount\": 68,\"totalTokenCount\": 68}}\r\n\r\ndata: {\"candidates\": [{\"content\": {\"parts\": [{\"text\": \" is a test, respond with 'test'\\n\"}],\"role\": \"model\"}}],\"usageMetadata\": {\"promptTokenCount\": 68,\"totalTokenCount\": 68}}\r\n\r\ndata: {\"candidates\": [{\"content\": {\"parts\": [{\"text\": \"\"}],\"role\": \"model\"},\"finishReason\": \"STOP\"}],\"usageMetadata\": {\"promptTokenCount\": 68,\"candidatesTokenCount\": 11,\"totalTokenCount\": 79}}\r\n\r\n"
+        }
+      },
+      "recorded_at": "Mon, 14 Oct 2024 03:32:04 GMT"
+    }
+  ],
+  "recorded_with": "VCR 6.3.1"
+}

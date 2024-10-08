@@ -1,0 +1,96 @@
+{
+  "http_interactions": [
+    {
+      "request": {
+        "method": "post",
+        "uri": "https://api.cerebras.ai/v1/chat/completions",
+        "body": {
+          "encoding": "UTF-8",
+          "string": "{\"model\":\"llama3.1-70b\",\"max_tokens\":16,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"this is a test, respond with 'test'\\n\"},{\"role\":\"assistant\",\"content\":\"test\\n\"},{\"role\":\"user\",\"content\":\"hello!\\n\"},{\"role\":\"user\",\"content\":\"what was the previous user message?\\n\"}]}"
+        },
+        "headers": {
+          "User-Agent": [
+            "Faraday v2.12.0"
+          ],
+          "Content-Type": [
+            "application/json"
+          ],
+          "Authorization": [
+            "Bearer <TOKEN>"
+          ]
+        }
+      },
+      "response": {
+        "status": {
+          "code": 200,
+          "message": "OK"
+        },
+        "headers": {
+          "content-type": [
+            "application/json"
+          ],
+          "content-length": [
+            "476"
+          ],
+          "connection": [
+            "keep-alive"
+          ],
+          "date": [
+            "Mon, 14 Oct 2024 03:31:13 GMT"
+          ],
+          "server": [
+            "uvicorn"
+          ],
+          "x-request-id": [
+            "<X-REQUEST-ID>"
+          ],
+          "x-ratelimit-limit-requests-day": [
+            "14400"
+          ],
+          "x-ratelimit-limit-tokens-minute": [
+            "60000"
+          ],
+          "x-ratelimit-remaining-requests-day": [
+            "14394"
+          ],
+          "x-ratelimit-remaining-tokens-minute": [
+            "59894"
+          ],
+          "x-ratelimit-reset-requests-day": [
+            "73726.06267166138"
+          ],
+          "x-ratelimit-reset-tokens-minute": [
+            "46.06267166137695"
+          ],
+          "referrer-policy": [
+            "strict-origin-when-cross-origin"
+          ],
+          "x-content-type-options": [
+            "nosniff"
+          ],
+          "strict-transport-security": [
+            "max-age=3600; includeSubDomains"
+          ],
+          "x-cache": [
+            "Miss from cloudfront"
+          ],
+          "via": [
+            "1.1 b13f158bdf9805ca47e07c0c35870c12.cloudfront.net (CloudFront)"
+          ],
+          "x-amz-cf-pop": [
+            "SEA73-P1"
+          ],
+          "x-amz-cf-id": [
+            "w9PTmgA2BgpVZWY5nbfZbLuSFtW4Pzle5QcP0t2l31xGJwHWJhO5OQ=="
+          ]
+        },
+        "body": {
+          "encoding": "UTF-8",
+          "string": "{\"id\":\"chatcmpl-f9f082ce-eb88-4160-8c69-bec54c10fe15\",\"choices\":[{\"finish_reason\":\"stop\",\"index\":0,\"message\":{\"content\":\"hello!\",\"role\":\"assistant\"}}],\"created\":1728876673,\"model\":\"llama3.1-70b\",\"system_fingerprint\":\"fp_97b75e13af\",\"object\":\"chat.completion\",\"usage\":{\"prompt_tokens\":85,\"completion_tokens\":3,\"total_tokens\":88},\"time_info\":{\"queue_time\":2.753e-05,\"prompt_time\":0.004704235,\"completion_time\":0.005115867,\"total_time\":0.025386810302734375,\"created\":1728876673}}"
+        }
+      },
+      "recorded_at": "Mon, 14 Oct 2024 03:31:13 GMT"
+    }
+  ],
+  "recorded_with": "VCR 6.3.1"
+}
