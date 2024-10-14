@@ -35,7 +35,7 @@ adapter = Intelligence::Adapter.build :hyperbolic do
   key             ENV[ 'HYPERBOLIC_API_KEY' ]           # this is the hyperbolic api key; here 
                                                         # it is retrieved from the envionment
   chat_options do                                       
-    model         'Qwen/Qwen2-VL-72B-Instruct'          # this is the open ai model we want to use
+    model         'Qwen/Qwen2-VL-7B-Instruct'          # this is the open ai model we want to use
     max_tokens    256                                   # this is the maximum number of tokens we
                                                         # want the model to generate
   end
