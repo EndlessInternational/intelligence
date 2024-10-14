@@ -183,7 +183,6 @@ module Intelligence
 
           next if line.end_with?( '[DONE]' )
           data = JSON.parse( line )
-
           if data.is_a?( Hash )
             
             data[ 'choices' ]&.each do | data_choice |
@@ -201,10 +200,8 @@ module Intelligence
                 data_choice_content = data_choice_delta[ 'content' ] || ''
                 if last_content.nil? || last_content[ :type ] == :tool_call
                   contents.push( { type: :text, text: data_choice_content } )
-                elsif last_content[ :type ].nil?
+                elsif last_content[ :type ] == :text || last_content[ :type ].nil?
                   last_content[ :type ] = :text 
-                  last_content[ :text ] = data_choice_content
-                elsif last_content[ :type ] == :text 
                   last_content[ :text ] = ( last_content[ :text ] || '' ) + data_choice_content
                 end
               elsif data_choice_delta.include?( 'function_call' )
@@ -228,7 +225,7 @@ module Intelligence
                 end
               end
               choices[ data_choice_index ][ :message ][ :contents ] = contents
-              choices[ data_choice_index ][ :end_reason ] = 
+              choices[ data_choice_index ][ :end_reason ] ||= 
                 translate_end_result( data_choice_finish_reason )
             end
   
