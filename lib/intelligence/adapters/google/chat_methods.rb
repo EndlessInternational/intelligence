@@ -6,6 +6,15 @@ module Intelligence
 
       GENERATIVE_LANGUAGE_URI = "https://generativelanguage.googleapis.com/v1beta/models/"
 
+      SUPPORTED_CONTENT_TYPES = %w[
+        image/png image/jpeg image/webp
+        video/x-flv video/quicktime video/mpeg video/mpegps video/mpg video/mp4 video/webm 
+        video/wmv video/3gpp
+        audio/aac audio/flac audio/mp3 audio/m4a audio/mpeg audio/mpga audio/mp4 audio/opus 
+        audio/pcm audio/wav audio/webm
+        application/pdf text/plain
+      ]
+
       def chat_request_uri( options )
         options = options ? self.class.configure( options ) : {}
         options = @options.merge( options )
@@ -65,8 +74,7 @@ module Intelligence
               content_type = content[ :content_type ]
               bytes = content[ :bytes ]
               if content_type && bytes
-                unless MIME::Types[ content_type ].empty?
-                  # TODO: verify the specific google supported MIME types
+                if SUPPORTED_CONTENT_TYPES.include?( content_type )
                   result_message_parts << {
                     inline_data: {
                       mime_type: content_type,
@@ -76,7 +84,7 @@ module Intelligence
                 else
                   raise UnsupportedContentError.new( 
                     :google, 
-                    'only support recognized mime types' 
+                    "only supports content of type #{SUPPORTED_CONTENT_TYPES.join( ', ' )}"
                   ) 
                 end
               else 
@@ -85,6 +93,8 @@ module Intelligence
                   'requires binary content to include content type and ( packed ) bytes'  
                 )
               end
+            else 
+              raise InvalidContentError.new( :google ) 
             end 
           end
 
