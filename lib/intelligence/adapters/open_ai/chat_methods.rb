@@ -4,6 +4,8 @@ module Intelligence
 
       CHAT_REQUEST_URI = "https://api.openai.com/v1/chat/completions"
 
+      SUPPORTED_CONTENT_TYPES = [ 'image/jpeg', 'image/png' ]
+
       def chat_request_uri( options )
         CHAT_REQUEST_URI
       end
@@ -70,7 +72,33 @@ module Intelligence
                   'requires binary content to include content type and ( packed ) bytes'  
                 )
               end
-            end 
+            when :file 
+              content_type = content[ :content_type ]
+              uri = content[ :uri ]
+              if content_type && uri  
+                if SUPPORTED_CONTENT_TYPES.include?( content_type )
+                  result_message_content << {
+                    type: 'image_url',
+                    image_url: {
+                      url: uri 
+                    }
+                  }
+                else 
+                  raise UnsupportedContentError.new( 
+                    :open_ai, 
+                    "only supports content of type #{SUPPORTED_CONTENT_TYPES.join( ', ' )}" 
+                  ) 
+                end 
+              else 
+                raise UnsupportedContentError.new(
+                  :open_ai, 
+                  'requires file content to include content type and uri'  
+                )
+              end 
+            else 
+              raise InvalidContentError.new( :open_ai ) 
+            end
+
           end
 
           result_message[ :content ] = result_message_content
