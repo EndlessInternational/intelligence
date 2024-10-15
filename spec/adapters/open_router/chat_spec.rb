@@ -49,6 +49,10 @@ RSpec.describe "#{Intelligence::Adapter[ :open_router ]} chat requests", :open_r
         model                 'qwen/qwen-2-vl-7b-instruct'
         max_tokens            16
         temperature           0
+        provider do 
+          order               [ 'Hyperbolic' ]
+          allow_fallbacks     false 
+        end
       end
     end
   end

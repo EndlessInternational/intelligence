@@ -21,6 +21,12 @@ module Intelligence
           parameter :frequency_penalty, Float
           parameter :repetition_penalty, Float
           parameter :presence_penalty, Float
+          
+          group :provider do 
+            parameter :order, String, array: true 
+            parameter :require_parameters, [ TrueClass, FalseClass ]
+            parameter :allow_fallbacks, [ TrueClass, FalseClass ]
+          end
         end
       end
 

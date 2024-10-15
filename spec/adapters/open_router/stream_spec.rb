@@ -44,6 +44,11 @@ RSpec.describe "#{Intelligence::Adapter[ :open_router ]} stream requests", :open
         temperature           0
 
         stream                true
+        
+        provider do 
+          order               [ 'Hyperbolic' ]
+          allow_fallbacks     false 
+        end
       end
     end
   end
