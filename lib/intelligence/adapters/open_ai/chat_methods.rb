@@ -52,8 +52,7 @@ module Intelligence
               content_type = content[ :content_type ]
               bytes = content[ :bytes ]
               if content_type && bytes
-                mime_type = MIME::Types[ content_type ].first
-                if mime_type&.media_type == 'image'
+                if SUPPORTED_CONTENT_TYPES.include?( content_type )
                   result_message_content << {
                     type: 'image_url',
                     image_url: {
@@ -63,7 +62,7 @@ module Intelligence
                 else
                   raise UnsupportedContentError.new( 
                     :open_ai, 
-                    'only supports content of type image/*' 
+                    "only supports content of type #{SUPPORTED_CONTENT_TYPES.join( ', ' )}"
                   ) 
                 end
               else 
