@@ -68,7 +68,7 @@ RSpec.describe Intelligence::Adapter[ :google ], :google do
   include_examples 'chat requests with token limit exceeded'
   include_examples 'chat requests with stop sequence'
   include_examples 'chat requests with error response'
-  include_examples 'chat requests with images'
+  include_examples 'chat requests with binary images'
   include_examples 'chat requests without alternating roles'
 
 end

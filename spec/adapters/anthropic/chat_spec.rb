@@ -117,7 +117,7 @@ RSpec.describe "#{Intelligence::Adapter[ :anthropic ]} chat requests", :anthropi
   end
 
   include_examples 'chat requests with error response'
-  include_examples 'chat requests with images'
+  include_examples 'chat requests with binary images'
   
   # anthropic does not support chat requests with alternating roles, requiring the adapter to
   # coalece sequential messages with the same role into a single message 

@@ -39,7 +39,7 @@ RSpec.describe "#{Intelligence::Adapter[ :open_router ]} stream requests", :open
     Intelligence::Adapter[ :open_router ].build! do   
       key                     ENV[ 'OPENROUTER_API_KEY' ]
       chat_options do
-        model                 'meta-llama/llama-3.2-11b-vision-instruct'
+        model                 'qwen/qwen-2-vl-7b-instruct'
         max_tokens            16
         temperature           0
 
@@ -51,7 +51,7 @@ RSpec.describe "#{Intelligence::Adapter[ :open_router ]} stream requests", :open
   include_examples 'stream requests'
   include_examples 'stream requests with token limit exceeded'
   include_examples 'stream requests with stop sequence'
-  include_examples 'stream requests with images'
+  include_examples 'stream requests with binary images'
   include_examples 'stream requests without alternating roles'
 
 end

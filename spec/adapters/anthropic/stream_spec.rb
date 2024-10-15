@@ -125,6 +125,6 @@ RSpec.describe "#{Intelligence::Adapter[ :anthropic ]} stream requests", :anthro
     end
   end
 
-  include_examples 'stream requests with images'
+  include_examples 'stream requests with binary images'
 
 end

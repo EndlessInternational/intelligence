@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-RSpec.shared_examples 'stream requests with images' do 
+RSpec.shared_examples 'stream requests with binary images' do 
 
   let( :binary_content_of_red_balloon ) {
     build_binary_content( fixture_file_path( 'single-red-balloon.png'  ) )
@@ -10,7 +10,7 @@ RSpec.shared_examples 'stream requests with images' do
     build_binary_content( fixture_file_path( 'three-balloons.png'  ) )
   }
 
-  context 'where there is a single message and an image' do 
+  context 'where there is a single message and a binary image' do 
     it 'responds with the appropriate generated text' do
 
       conversation = create_conversation( "identify this image; all lower case\n" )
@@ -37,12 +37,11 @@ RSpec.shared_examples 'stream requests with images' do
       expect( response.result.choices.first ).to be_a( Intelligence::ChatResultChoice )
       expect( response.result.choices.first.end_reason ).to eq( :ended )
 
-      expect( text ).to match( /balloon/i )
-
+      expect( text ).to match( /balloon/i ), "Expected text to include 'balloon' but got '#{text}'."
     end
   end
 
-  context 'where there are multiple messages with the first including an image' do
+  context 'where there are multiple messages with the first including a binary image' do
     it 'responds with the appropriate generated text' do
 
 
@@ -72,12 +71,12 @@ RSpec.shared_examples 'stream requests with images' do
       expect( response.result.choices.first ).to be_a( Intelligence::ChatResultChoice )
       expect( response.result.choices.first.end_reason ).to eq( :ended )
 
-      expect( text ).to match( /red/i )
+      expect( text ).to match( /red/i ), "Expected text to include 'red' but got '#{text}'."
 
     end
   end
 
-  context 'where there are multiple messages with each including an image' do
+  context 'where there are multiple messages with each including a binary image' do
     it 'responds with the appropriate generated text' do
 
       conversation = create_conversation( "identify this image; all lower case\n" )
@@ -108,7 +107,7 @@ RSpec.shared_examples 'stream requests with images' do
       expect( response.result.choices.first ).to be_a( Intelligence::ChatResultChoice )
       expect( response.result.choices.first.end_reason ).to eq( :ended )
 
-      expect( text ).to match( /balloons/i )
+      expect( text ).to match( /balloons/i ), "Expected text to include 'balloons' but got '#{text}'."
     
     end
   end

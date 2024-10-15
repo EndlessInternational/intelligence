@@ -51,7 +51,7 @@ RSpec.describe "#{Intelligence::Adapter[ :hyperbolic ]} stream requests", :hyper
   include_examples 'stream requests'
   include_examples 'stream requests with token limit exceeded'
   include_examples 'stream requests with stop sequence'
-  include_examples 'stream requests with images'
+  include_examples 'stream requests with binary images'
   include_examples 'stream requests without alternating roles'
 
 end
