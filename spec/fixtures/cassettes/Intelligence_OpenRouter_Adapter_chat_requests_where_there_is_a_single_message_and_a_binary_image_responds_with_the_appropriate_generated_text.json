@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Tue, 15 Oct 2024 01:43:00 GMT"
+            "Tue, 15 Oct 2024 02:22:10 GMT"
           ],
           "content-type": [
             "application/json"
@@ -63,7 +63,7 @@
             "/api/v1/chat/completions"
           ],
           "x-vercel-id": [
-            "pdx1::pj8rr-1728956580290-5b30be83093d"
+            "pdx1::b5zgr-1728958930625-8f07b6310e34"
           ],
           "cf-cache-status": [
             "DYNAMIC"
@@ -80,10 +80,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "\n         \n\n         \n\n         \n\n         \n{\"id\":\"gen-1728956580-SFYYrBFiZhrWqhQyYuJ3\",\"provider\":\"Hyperbolic\",\"model\":\"qwen/qwen-2-vl-7b-instruct\",\"object\":\"chat.completion\",\"created\":1728956580,\"choices\":[{\"logprobs\":null,\"finish_reason\":\"stop\",\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"red balloon\",\"refusal\":\"\"}}],\"usage\":{\"prompt_tokens\":62,\"completion_tokens\":4,\"total_tokens\":66}}"
+          "string": "\n         \n\n         \n\n         \n\n         \n{\"id\":\"gen-1728958930-q3b2rkJ0NWtLH4KRvC5N\",\"provider\":\"Hyperbolic\",\"model\":\"qwen/qwen-2-vl-7b-instruct\",\"object\":\"chat.completion\",\"created\":1728958930,\"choices\":[{\"logprobs\":null,\"finish_reason\":\"stop\",\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"red balloon\",\"refusal\":\"\"}}],\"usage\":{\"prompt_tokens\":62,\"completion_tokens\":4,\"total_tokens\":66}}"
         }
       },
-      "recorded_at": "Tue, 15 Oct 2024 01:43:00 GMT"
+      "recorded_at": "Tue, 15 Oct 2024 02:22:11 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

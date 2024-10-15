@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Tue, 15 Oct 2024 00:47:46 GMT"
+            "Tue, 15 Oct 2024 02:21:38 GMT"
           ],
           "content-type": [
             "text/event-stream; charset=utf-8"
@@ -50,10 +50,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "data: {\"id\": \"chat-1beaff8eb1ad40ab8ee04265d4a455d0\", \"object\": \"chat.completion.chunk\", \"created\": 1728953266, \"model\": \"Qwen/Qwen2-VL-7B-Instruct\", \"choices\": [{\"index\": 0, \"delta\": {\"role\": \"assistant\", \"content\": \"\"}, \"logprobs\": null, \"finish_reason\": null}], \"usage\": {\"prompt_tokens\": 78, \"total_tokens\": 79, \"completion_tokens\": 1}}\n\ndata: {\"id\": \"chat-1beaff8eb1ad40ab8ee04265d4a455d0\", \"object\": \"chat.completion.chunk\", \"created\": 1728953266, \"model\": \"Qwen/Qwen2-VL-7B-Instruct\", \"choices\": [{\"index\": 0, \"delta\": {\"content\": \"red\"}, \"logprobs\": null, \"finish_reason\": null}], \"usage\": {\"prompt_tokens\": 78, \"total_tokens\": 80, \"completion_tokens\": 2}}\n\ndata: {\"id\": \"chat-1beaff8eb1ad40ab8ee04265d4a455d0\", \"object\": \"chat.completion.chunk\", \"created\": 1728953266, \"model\": \"Qwen/Qwen2-VL-7B-Instruct\", \"choices\": [{\"index\": 0, \"delta\": {\"content\": \"\"}, \"logprobs\": null, \"finish_reason\": \"stop\", \"stop_reason\": null}], \"usage\": {\"prompt_tokens\": 78, \"total_tokens\": 81, \"completion_tokens\": 3}}\n\n"
+          "string": "data: {\"id\": \"chat-335f1cdb69be4701867b35d6a19e1afc\", \"object\": \"chat.completion.chunk\", \"created\": 1728958898, \"model\": \"Qwen/Qwen2-VL-7B-Instruct\", \"choices\": [{\"index\": 0, \"delta\": {\"role\": \"assistant\", \"content\": \"\"}, \"logprobs\": null, \"finish_reason\": null}], \"usage\": {\"prompt_tokens\": 78, \"total_tokens\": 79, \"completion_tokens\": 1}}\n\ndata: {\"id\": \"chat-335f1cdb69be4701867b35d6a19e1afc\", \"object\": \"chat.completion.chunk\", \"created\": 1728958898, \"model\": \"Qwen/Qwen2-VL-7B-Instruct\", \"choices\": [{\"index\": 0, \"delta\": {\"content\": \"red\"}, \"logprobs\": null, \"finish_reason\": null}], \"usage\": {\"prompt_tokens\": 78, \"total_tokens\": 80, \"completion_tokens\": 2}}\n\ndata: {\"id\": \"chat-335f1cdb69be4701867b35d6a19e1afc\", \"object\": \"chat.completion.chunk\", \"created\": 1728958898, \"model\": \"Qwen/Qwen2-VL-7B-Instruct\", \"choices\": [{\"index\": 0, \"delta\": {\"content\": \"\"}, \"logprobs\": null, \"finish_reason\": \"stop\", \"stop_reason\": null}], \"usage\": {\"prompt_tokens\": 78, \"total_tokens\": 81, \"completion_tokens\": 3}}\n\n"
         }
       },
-      "recorded_at": "Tue, 15 Oct 2024 00:47:46 GMT"
+      "recorded_at": "Tue, 15 Oct 2024 02:21:38 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

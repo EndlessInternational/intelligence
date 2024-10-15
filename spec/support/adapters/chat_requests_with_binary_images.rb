@@ -34,7 +34,7 @@ RSpec.shared_examples 'chat requests with binary images' do
     end
   end
 
-  context 'where there are multiple messages with the first including an image' do
+  context 'where there are multiple messages with the first including a binary image' do
     it 'responds with the appropriate generated text' do
 
       conversation = create_conversation( "identify this image; all lower case\n" )
