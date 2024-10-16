@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Tue, 15 Oct 2024 02:31:25 GMT"
+            "Wed, 16 Oct 2024 15:21:35 GMT"
           ],
           "content-type": [
             "text/event-stream; charset=utf-8"
@@ -45,7 +45,7 @@
             "<OPENAI-ORGANIZATION>"
           ],
           "openai-processing-ms": [
-            "515"
+            "221"
           ],
           "openai-version": [
             "2020-10-01"
@@ -60,7 +60,7 @@
             "9999"
           ],
           "x-ratelimit-remaining-tokens": [
-            "29999903"
+            "29999902"
           ],
           "x-ratelimit-reset-requests": [
             "6ms"
@@ -95,10 +95,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "data: {\"id\":\"chatcmpl-AIRdFTXyjk4tUO0JlNJM6ypwWLe5Z\",\"object\":\"chat.completion.chunk\",\"created\":1728959485,\"model\":\"gpt-4o-2024-08-06\",\"system_fingerprint\":\"fp_6b68a8204b\",\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"\",\"refusal\":null},\"logprobs\":null,\"finish_reason\":null}],\"usage\":null}\n\ndata: {\"id\":\"chatcmpl-AIRdFTXyjk4tUO0JlNJM6ypwWLe5Z\",\"object\":\"chat.completion.chunk\",\"created\":1728959485,\"model\":\"gpt-4o-2024-08-06\",\"system_fingerprint\":\"fp_6b68a8204b\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"hello\"},\"logprobs\":null,\"finish_reason\":null}],\"usage\":null}\n\ndata: {\"id\":\"chatcmpl-AIRdFTXyjk4tUO0JlNJM6ypwWLe5Z\",\"object\":\"chat.completion.chunk\",\"created\":1728959485,\"model\":\"gpt-4o-2024-08-06\",\"system_fingerprint\":\"fp_6b68a8204b\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"!\"},\"logprobs\":null,\"finish_reason\":null}],\"usage\":null}\n\ndata: {\"id\":\"chatcmpl-AIRdFTXyjk4tUO0JlNJM6ypwWLe5Z\",\"object\":\"chat.completion.chunk\",\"created\":1728959485,\"model\":\"gpt-4o-2024-08-06\",\"system_fingerprint\":\"fp_6b68a8204b\",\"choices\":[{\"index\":0,\"delta\":{},\"logprobs\":null,\"finish_reason\":\"stop\"}],\"usage\":null}\n\ndata: {\"id\":\"chatcmpl-AIRdFTXyjk4tUO0JlNJM6ypwWLe5Z\",\"object\":\"chat.completion.chunk\",\"created\":1728959485,\"model\":\"gpt-4o-2024-08-06\",\"system_fingerprint\":\"fp_6b68a8204b\",\"choices\":[],\"usage\":{\"prompt_tokens\":83,\"completion_tokens\":2,\"total_tokens\":85,\"prompt_tokens_details\":{\"cached_tokens\":0},\"completion_tokens_details\":{\"reasoning_tokens\":0}}}\n\ndata: [DONE]\n\n"
+          "string": "data: {\"id\":\"chatcmpl-AJ0876nVZzkeZDsjnAPRdIe4gUn3R\",\"object\":\"chat.completion.chunk\",\"created\":1729092095,\"model\":\"gpt-4o-2024-08-06\",\"system_fingerprint\":\"fp_6b68a8204b\",\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"\",\"refusal\":null},\"logprobs\":null,\"finish_reason\":null}],\"usage\":null}\n\ndata: {\"id\":\"chatcmpl-AJ0876nVZzkeZDsjnAPRdIe4gUn3R\",\"object\":\"chat.completion.chunk\",\"created\":1729092095,\"model\":\"gpt-4o-2024-08-06\",\"system_fingerprint\":\"fp_6b68a8204b\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"hello\"},\"logprobs\":null,\"finish_reason\":null}],\"usage\":null}\n\ndata: {\"id\":\"chatcmpl-AJ0876nVZzkeZDsjnAPRdIe4gUn3R\",\"object\":\"chat.completion.chunk\",\"created\":1729092095,\"model\":\"gpt-4o-2024-08-06\",\"system_fingerprint\":\"fp_6b68a8204b\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"!\"},\"logprobs\":null,\"finish_reason\":null}],\"usage\":null}\n\ndata: {\"id\":\"chatcmpl-AJ0876nVZzkeZDsjnAPRdIe4gUn3R\",\"object\":\"chat.completion.chunk\",\"created\":1729092095,\"model\":\"gpt-4o-2024-08-06\",\"system_fingerprint\":\"fp_6b68a8204b\",\"choices\":[{\"index\":0,\"delta\":{},\"logprobs\":null,\"finish_reason\":\"stop\"}],\"usage\":null}\n\ndata: {\"id\":\"chatcmpl-AJ0876nVZzkeZDsjnAPRdIe4gUn3R\",\"object\":\"chat.completion.chunk\",\"created\":1729092095,\"model\":\"gpt-4o-2024-08-06\",\"system_fingerprint\":\"fp_6b68a8204b\",\"choices\":[],\"usage\":{\"prompt_tokens\":83,\"completion_tokens\":2,\"total_tokens\":85,\"prompt_tokens_details\":{\"cached_tokens\":0},\"completion_tokens_details\":{\"reasoning_tokens\":0}}}\n\ndata: [DONE]\n\n"
         }
       },
-      "recorded_at": "Tue, 15 Oct 2024 02:31:25 GMT"
+      "recorded_at": "Wed, 16 Oct 2024 15:21:36 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

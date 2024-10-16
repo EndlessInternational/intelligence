@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Tue, 15 Oct 2024 01:42:57 GMT"
+            "Wed, 16 Oct 2024 15:21:36 GMT"
           ],
           "content-type": [
             "application/json"
@@ -63,7 +63,7 @@
             "/api/v1/chat/completions"
           ],
           "x-vercel-id": [
-            "pdx1::p8wqq-1728956576934-b7323062dee3"
+            "pdx1::5cmhz-1729092096817-65da1d1cf08e"
           ],
           "cf-cache-status": [
             "DYNAMIC"
@@ -80,10 +80,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n{\"id\":\"gen-1728956577-mWl18QviOpHYZciW9mEv\",\"provider\":\"Together\",\"model\":\"meta-llama/llama-3.2-11b-vision-instruct\",\"object\":\"chat.completion\",\"created\":1728956577,\"choices\":[{\"logprobs\":null,\"finish_reason\":\"stop\",\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"this is a test, respond with 'test'\",\"refusal\":\"\"}}],\"usage\":{\"prompt_tokens\":82,\"completion_tokens\":11,\"total_tokens\":93}}"
+          "string": "\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n{\"id\":\"gen-1729092097-VOhuEfKlslTZB541A9Cr\",\"provider\":\"Together\",\"model\":\"meta-llama/llama-3.2-11b-vision-instruct\",\"object\":\"chat.completion\",\"created\":1729092097,\"choices\":[{\"logprobs\":null,\"finish_reason\":\"stop\",\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"this is a test, respond with 'test'\",\"refusal\":\"\"}}],\"usage\":{\"prompt_tokens\":82,\"completion_tokens\":11,\"total_tokens\":93}}"
         }
       },
-      "recorded_at": "Tue, 15 Oct 2024 01:42:57 GMT"
+      "recorded_at": "Wed, 16 Oct 2024 15:21:37 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"
