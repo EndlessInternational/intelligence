@@ -29,9 +29,7 @@ RSpec.describe "#{Intelligence::Adapter[ :groq ]} chat requests", :groq do
       end
     end
   end
-
-  # groq has a weird quird where even if though it hits the stop sequence it will continute to 
-  # generate tokens, returning a token exceeded end reason
+  
   let( :adapter_with_stop_sequence ) do
     Intelligence::Adapter[ :groq ].build! do   
       key   ENV[ 'GROQ_API_KEY' ]

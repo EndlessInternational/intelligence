@@ -48,7 +48,7 @@ RSpec.shared_examples 'stream requests with binary encoded images' do
       conversation = create_conversation( "identify this image; all lower case\n" )
       conversation.messages.last.append_content( binary_content_of_red_balloon )
       conversation.messages << build_text_message( :assistant, "balloon\n" )
-      conversation.messages << build_text_message( :user, "what color?\n" )
+      conversation.messages << build_text_message( :user, "what color?\nrespond in less than 16 words" )
       
       text = ''
       response = create_and_make_stream_request( vision_adapter, conversation ) do | result | 
@@ -82,7 +82,7 @@ RSpec.shared_examples 'stream requests with binary encoded images' do
       conversation = create_conversation( "identify this image; all lower case\n" )
       conversation.messages.last.append_content( binary_content_of_red_balloon )
       conversation.messages << build_text_message( :assistant, "one red balloon\n" )
-      message = build_text_message( :user, "what about this image?\n" )
+      message = build_text_message( :user, "what about this image? respons in less than 16 words\n" )
       message.append_content( binary_content_of_three_balloons )
       conversation.messages << message 
       

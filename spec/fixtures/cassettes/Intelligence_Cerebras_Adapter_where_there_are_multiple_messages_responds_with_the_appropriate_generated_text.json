@@ -6,7 +6,7 @@
         "uri": "https://api.cerebras.ai/v1/chat/completions",
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"model\":\"llama3.1-70b\",\"max_tokens\":16,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"this is a test, respond with 'test'\\n\"},{\"role\":\"assistant\",\"content\":\"test\\n\"},{\"role\":\"user\",\"content\":\"what was the previous user message?\\n\"}]}"
+          "string": "{\"model\":\"llama3.1-70b\",\"max_tokens\":16,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"this is a test, respond with 'test'\\n\"},{\"role\":\"assistant\",\"content\":\"test\\n\"},{\"role\":\"user\",\"content\":\"what was the previous user message?\\nrespond in less than 16 words\\n\"}]}"
         },
         "headers": {
           "User-Agent": [
@@ -30,13 +30,13 @@
             "application/json"
           ],
           "content-length": [
-            "516"
+            "515"
           ],
           "connection": [
             "keep-alive"
           ],
           "date": [
-            "Mon, 14 Oct 2024 18:25:09 GMT"
+            "Wed, 16 Oct 2024 20:27:48 GMT"
           ],
           "server": [
             "uvicorn"
@@ -51,16 +51,16 @@
             "60000"
           ],
           "x-ratelimit-remaining-requests-day": [
-            "14371"
+            "14385"
           ],
           "x-ratelimit-remaining-tokens-minute": [
             "59940"
           ],
           "x-ratelimit-reset-requests-day": [
-            "20090.554358959198"
+            "12731.676695346832"
           ],
           "x-ratelimit-reset-tokens-minute": [
-            "50.554358959198"
+            "11.676695346832275"
           ],
           "referrer-policy": [
             "strict-origin-when-cross-origin"
@@ -75,21 +75,21 @@
             "Miss from cloudfront"
           ],
           "via": [
-            "1.1 5954c6394458ffb44c970b3819d7ff2a.cloudfront.net (CloudFront)"
+            "1.1 35575576af8067e30cfb17c6b9fde8e2.cloudfront.net (CloudFront)"
           ],
           "x-amz-cf-pop": [
             "SEA73-P1"
           ],
           "x-amz-cf-id": [
-            "PUp_Wsu5Jb_LZSIWPbygVObQGxxlGuPQIyrJZRwXfwtw1DzBiZ0RvA=="
+            "1h9PCZea-b3ZAyKqrcNmBt27WGajwmmMxo0QfvEMXXGMRSdPmeH-9g=="
           ]
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"id\":\"chatcmpl-105669b9-40ce-45e5-9ce1-c76d7bc7d430\",\"choices\":[{\"finish_reason\":\"stop\",\"index\":0,\"message\":{\"content\":\"this is a test, respond with 'test'\",\"role\":\"assistant\"}}],\"created\":1728930309,\"model\":\"llama3.1-70b\",\"system_fingerprint\":\"fp_97b75e13af\",\"object\":\"chat.completion\",\"usage\":{\"prompt_tokens\":78,\"completion_tokens\":11,\"total_tokens\":89},\"time_info\":{\"queue_time\":2.155e-05,\"prompt_time\":0.004625277499999999,\"completion_time\":0.0187084095,\"total_time\":0.038907766342163086,\"created\":1728930309}}"
+          "string": "{\"id\":\"chatcmpl-533a0068-c367-43d1-899d-4758c3469d75\",\"choices\":[{\"finish_reason\":\"stop\",\"index\":0,\"message\":{\"content\":\"this is a test, respond with 'test'\",\"role\":\"assistant\"}}],\"created\":1729110468,\"model\":\"llama3.1-70b\",\"system_fingerprint\":\"fp_17596fc414\",\"object\":\"chat.completion\",\"usage\":{\"prompt_tokens\":85,\"completion_tokens\":11,\"total_tokens\":96},\"time_info\":{\"queue_time\":2.495e-05,\"prompt_time\":0.0043703401,\"completion_time\":0.017437242899999997,\"total_time\":0.03722357749938965,\"created\":1729110468}}"
         }
       },
-      "recorded_at": "Mon, 14 Oct 2024 18:25:09 GMT"
+      "recorded_at": "Wed, 16 Oct 2024 20:27:48 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

@@ -45,7 +45,7 @@ RSpec.describe "#{Intelligence::Adapter[ :mistral ]} stream requests", :mistral 
       key                     ENV[ 'MISTRAL_API_KEY' ]
       chat_options do
         model                 'pixtral-12b-2409'
-        max_tokens            24
+        max_tokens            32 
         temperature           0
 
         stream                true
@@ -56,10 +56,8 @@ RSpec.describe "#{Intelligence::Adapter[ :mistral ]} stream requests", :mistral 
   include_examples 'stream requests'
   include_examples 'stream requests with token limit exceeded'
   include_examples 'stream requests with stop sequence'
-  # mistral currently supports text through the legacy content encoding 
-  # while supporting vision through the modern content encoding making 
-  # vision support challenging
-  # include_examples 'stream requests with binary encoded images'
+  include_examples 'stream requests with binary encoded images'
+  include_examples 'stream requests with file images'
   include_examples 'stream requests without alternating roles'
 
 end

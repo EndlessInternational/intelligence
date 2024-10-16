@@ -13,7 +13,7 @@ RSpec.shared_examples 'chat requests with binary encoded images' do
   context 'where there is a single message and a binary encoded image' do 
     it 'responds with the appropriate generated text' do
 
-      conversation = create_conversation( "identify this image; all lower case\n" )
+      conversation = create_conversation( "identify this image; respond in less that 16 words\n" )
       conversation.messages.last.append_content( binary_content_of_red_balloon )
       response = create_and_make_chat_request( vision_adapter, conversation )
 
@@ -40,7 +40,7 @@ RSpec.shared_examples 'chat requests with binary encoded images' do
       conversation = create_conversation( "identify this image; all lower case\n" )
       conversation.messages.last.append_content( binary_content_of_red_balloon )
       conversation.messages << build_text_message( :assistant, "balloon\n" )
-      conversation.messages << build_text_message( :user, "what color?\n" )
+      conversation.messages << build_text_message( :user, "what color?\nrespond in less that 16 words\m" )
       response = create_and_make_chat_request( vision_adapter, conversation )
       
       expect( response.success? ).to be( true ), response_error_description( response )
@@ -68,7 +68,7 @@ RSpec.shared_examples 'chat requests with binary encoded images' do
       conversation = create_conversation( "identify this image; all lower case\n" )
       conversation.messages.last.append_content( binary_content_of_red_balloon )
       conversation.messages << build_text_message( :assistant, "one red balloon\n" )
-      message = build_text_message( :user, "what about this image?\n" )
+      message = build_text_message( :user, "what about this image?\nrespond in less that 16 words\n" )
       message.append_content( binary_content_of_three_balloons )
       conversation.messages << message 
       response = create_and_make_chat_request( vision_adapter, conversation )

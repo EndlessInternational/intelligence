@@ -62,10 +62,8 @@ RSpec.describe "#{Intelligence::Adapter[ :mistral ]} chat requests", :mistral do
   include_examples 'chat requests with token limit exceeded'
   include_examples 'chat requests with stop sequence'
   include_examples 'chat requests with error response'
-  # mistral currently supports text through the legacy content encoding 
-  # while supporting vision through the modern content encoding making 
-  # vision support challenging
-  # include_examples 'chat requests with binary encoded images'
+  include_examples 'chat requests with binary encoded images'
+  include_examples 'chat requests with file images'
   include_examples 'chat requests without alternating roles'
 
 end

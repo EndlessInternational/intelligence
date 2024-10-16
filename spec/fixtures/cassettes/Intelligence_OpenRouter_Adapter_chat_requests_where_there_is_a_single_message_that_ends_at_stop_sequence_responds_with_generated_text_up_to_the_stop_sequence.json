@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Wed, 16 Oct 2024 15:21:39 GMT"
+            "Wed, 16 Oct 2024 20:27:17 GMT"
           ],
           "content-type": [
             "application/json"
@@ -63,7 +63,7 @@
             "/api/v1/chat/completions"
           ],
           "x-vercel-id": [
-            "pdx1::kkrp6-1729092099110-3ae1255d47e0"
+            "pdx1::rf949-1729110436998-7f83844cd89d"
           ],
           "cf-cache-status": [
             "DYNAMIC"
@@ -80,10 +80,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n{\"id\":\"gen-1729092099-ojSQr0CTna5Uqh4sdNl1\",\"provider\":\"DeepInfra\",\"model\":\"meta-llama/llama-3.2-11b-vision-instruct\",\"object\":\"chat.completion\",\"created\":1729092099,\"choices\":[{\"logprobs\":null,\"finish_reason\":\"stop\",\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"one\\ntwo\\nthree\\nfour\\n\",\"refusal\":\"\"}}],\"usage\":{\"prompt_tokens\":105,\"completion_tokens\":1,\"total_tokens\":106}}"
+          "string": "\n         \n\n         \n\n         \n\n         \n\n         \n{\"id\":\"gen-1729110437-Wj5r2SwnvCDe1oCwprja\",\"provider\":\"Fireworks\",\"model\":\"meta-llama/llama-3.2-11b-vision-instruct\",\"object\":\"chat.completion\",\"created\":1729110437,\"choices\":[{\"logprobs\":null,\"finish_reason\":\"stop\",\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"one\\ntwo\\nthree\\nfour\\n\",\"refusal\":\"\"}}],\"usage\":{\"prompt_tokens\":68,\"completion_tokens\":9,\"total_tokens\":77}}"
         }
       },
-      "recorded_at": "Wed, 16 Oct 2024 15:21:39 GMT"
+      "recorded_at": "Wed, 16 Oct 2024 20:27:17 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

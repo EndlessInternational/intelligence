@@ -6,7 +6,7 @@
         "uri": "https://api.hyperbolic.xyz/v1/chat/completions",
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"model\":\"meta-llama/Meta-Llama-3.1-70B-Instruct\",\"max_tokens\":16,\"temperature\":0.0,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":[{\"type\":\"text\",\"text\":\"this is a test, respond with 'test'\\n\"}]},{\"role\":\"assistant\",\"content\":[{\"type\":\"text\",\"text\":\"test\\n\"}]},{\"role\":\"user\",\"content\":[{\"type\":\"text\",\"text\":\"what was the previous user message?\\n\"}]}]}"
+          "string": "{\"model\":\"meta-llama/Meta-Llama-3.1-70B-Instruct\",\"max_tokens\":16,\"temperature\":0.0,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":[{\"type\":\"text\",\"text\":\"this is a test, respond with 'test'\\n\"}]},{\"role\":\"assistant\",\"content\":[{\"type\":\"text\",\"text\":\"test\\n\"}]},{\"role\":\"user\",\"content\":[{\"type\":\"text\",\"text\":\"what was the previous user message?\\nrespond in less than 16 words\\n\"}]}]}"
         },
         "headers": {
           "User-Agent": [
@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Wed, 16 Oct 2024 15:20:38 GMT"
+            "Wed, 16 Oct 2024 20:29:33 GMT"
           ],
           "content-type": [
             "application/json"
@@ -53,10 +53,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\"id\":\"chat-54392c7c2c8a488081fc934f295407bd\",\"object\":\"chat.completion\",\"created\":1729092037,\"model\":\"meta-llama/Meta-Llama-3.1-70B-Instruct\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"this is a test, respond with 'test'\"},\"finish_reason\":\"stop\",\"logprobs\":null}],\"usage\":{\"prompt_tokens\":78,\"total_tokens\":89,\"completion_tokens\":11}}"
+          "string": "{\"id\":\"chat-c702fb738cb04890b5b55f21945b7dba\",\"object\":\"chat.completion\",\"created\":1729110572,\"model\":\"meta-llama/Meta-Llama-3.1-70B-Instruct\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"this is a test, respond with 'test'\"},\"finish_reason\":\"stop\",\"logprobs\":null}],\"usage\":{\"prompt_tokens\":105,\"total_tokens\":116,\"completion_tokens\":11}}"
         }
       },
-      "recorded_at": "Wed, 16 Oct 2024 15:20:38 GMT"
+      "recorded_at": "Wed, 16 Oct 2024 20:29:32 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"
