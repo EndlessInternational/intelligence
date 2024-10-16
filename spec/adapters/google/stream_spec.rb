@@ -51,7 +51,10 @@ RSpec.describe "#{Intelligence::Adapter[ :google ]} stream requests", :google do
   include_examples 'stream requests'
   include_examples 'stream requests with token limit exceeded'
   include_examples 'stream requests with stop sequence'
-  include_examples 'stream requests with binary images'
   include_examples 'stream requests without alternating roles'
+  include_examples 'stream requests with binary encoded images'
+  include_examples 'stream requests with binary encoded audio'
+  include_examples 'stream requests with binary encoded pdf'
+  include_examples 'stream requests with binary encoded text'
 
 end

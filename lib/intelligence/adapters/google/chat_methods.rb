@@ -6,13 +6,24 @@ module Intelligence
 
       GENERATIVE_LANGUAGE_URI = "https://generativelanguage.googleapis.com/v1beta/models/"
 
+      SUPPORTED_BINARY_MEDIA_TYPES = %w[ text ]
+
+      SUPPORTED_BINARY_CONTENT_TYPES = %w[
+        image/png image/jpeg image/webp image/heic image/heif 
+        audio/aac audio/flac audio/mp3 audio/m4a audio/mpeg audio/mpga audio/mp4 audio/opus 
+        audio/pcm audio/wav audio/webm
+        application/pdf 
+      ]
+
+      SUPPORTED_FILE_MEDIA_TYPES = %w[ text ]
+
       SUPPORTED_CONTENT_TYPES = %w[
-        image/png image/jpeg image/webp
+        image/png image/jpeg image/webp image/heic image/heif 
         video/x-flv video/quicktime video/mpeg video/mpegps video/mpg video/mp4 video/webm 
         video/wmv video/3gpp
         audio/aac audio/flac audio/mp3 audio/m4a audio/mpeg audio/mpga audio/mp4 audio/opus 
         audio/pcm audio/wav audio/webm
-        application/pdf text/plain
+        application/pdf 
       ]
 
       def chat_request_uri( options )
@@ -74,7 +85,9 @@ module Intelligence
               content_type = content[ :content_type ]
               bytes = content[ :bytes ]
               if content_type && bytes
-                if SUPPORTED_CONTENT_TYPES.include?( content_type )
+                mime_type = MIME::Types[ content_type ].first
+                if SUPPORTED_BINARY_MEDIA_TYPES.include?( mime_type&.media_type ) || 
+                   SUPPORTED_BINARY_CONTENT_TYPES.include?( content_type )
                   result_message_parts << {
                     inline_data: {
                       mime_type: content_type,
@@ -84,7 +97,7 @@ module Intelligence
                 else
                   raise UnsupportedContentError.new( 
                     :google, 
-                    "only supports content of type #{SUPPORTED_CONTENT_TYPES.join( ', ' )}"
+                    "does not support #{content_type} content type"
                   ) 
                 end
               else 
@@ -92,7 +105,33 @@ module Intelligence
                   :google, 
                   'requires binary content to include content type and ( packed ) bytes'  
                 )
-              end
+              end 
+            when :file
+              content_type = content[ :content_type ]
+              uri = content[ :uri ]
+              if content_type && uri
+                mime_type = MIME::Types[ content_type ].first
+                if SUPPORTED_FILE_MEDIA_TYPES.include?( mime_type&.media_type ) || 
+                   SUPPORTED_FILE_CONTENT_TYPES.include?( content_type )
+                  result_message_parts << {
+                    file_data: {
+                      mime_type: content_type,
+                      file_uri: uri
+                    }
+                  }
+                else
+                  raise UnsupportedContentError.new( 
+                    :google, 
+                    "does not support #{content_type} content type"
+                  ) 
+                end
+              else 
+                raise UnsupportedContentError.new(
+                  :google, 
+                  'requires file content to include content type and uri'  
+                )
+              end 
+ 
             else 
               raise InvalidContentError.new( :google ) 
             end 

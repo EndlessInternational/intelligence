@@ -58,7 +58,7 @@ RSpec.describe Intelligence::Adapter[ :google ], :google do
       key   ENV[ 'GOOGLE_API_KEY' ]
       chat_options do
         model                 'gemini-1.5-pro-002'
-        max_tokens            16
+        max_tokens            32
         temperature           0
       end
     end
@@ -68,8 +68,11 @@ RSpec.describe Intelligence::Adapter[ :google ], :google do
   include_examples 'chat requests with token limit exceeded'
   include_examples 'chat requests with stop sequence'
   include_examples 'chat requests with error response'
-  include_examples 'chat requests with binary images'
   include_examples 'chat requests without alternating roles'
+  include_examples 'chat requests with binary encoded images'
+  include_examples 'chat requests with binary encoded text'
+  include_examples 'chat requests with binary encoded pdf'
+  include_examples 'chat requests with binary encoded audio'
 
 end
   

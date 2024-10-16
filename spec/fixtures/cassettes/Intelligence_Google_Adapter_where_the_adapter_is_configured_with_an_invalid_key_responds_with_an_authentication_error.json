@@ -33,7 +33,7 @@
             "gzip"
           ],
           "date": [
-            "Tue, 15 Oct 2024 02:58:42 GMT"
+            "Wed, 16 Oct 2024 15:13:42 GMT"
           ],
           "server": [
             "scaffolding on HTTPServer2"
@@ -51,7 +51,7 @@
             "nosniff"
           ],
           "server-timing": [
-            "gfet4t7; dur=18"
+            "gfet4t7; dur=44"
           ],
           "alt-svc": [
             "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
@@ -65,7 +65,7 @@
           "string": "{\n  \"error\": {\n    \"code\": 400,\n    \"message\": \"API key not valid. Please pass a valid API key.\",\n    \"status\": \"INVALID_ARGUMENT\",\n    \"details\": [\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.ErrorInfo\",\n        \"reason\": \"API_KEY_INVALID\",\n        \"domain\": \"googleapis.com\",\n        \"metadata\": {\n          \"service\": \"generativelanguage.googleapis.com\"\n        }\n      }\n    ]\n  }\n}\n"
         }
       },
-      "recorded_at": "Tue, 15 Oct 2024 02:58:42 GMT"
+      "recorded_at": "Wed, 16 Oct 2024 15:13:42 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"
