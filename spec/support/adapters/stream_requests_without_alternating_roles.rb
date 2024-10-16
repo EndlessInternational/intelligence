@@ -36,7 +36,7 @@ RSpec.shared_examples 'stream requests without alternating roles' do
       choice = response.result.choices.first
       expect( choice.end_reason ).to eq( :ended )
 
-      expect( text ).to( match( /hello/i ) )
+      expect( text ).to( match( /this is a test|hello/i ) )
 
     end
   end

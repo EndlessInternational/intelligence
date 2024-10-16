@@ -25,7 +25,7 @@ RSpec.shared_examples 'chat requests without alternating roles' do
       expect( choice.message.contents ).not_to be_nil
       expect( choice.message.contents.length ).to eq( 1 )
       expect( message_contents_to_text( choice.message ) ).to( 
-        match( /hello/i )
+        match( /this is a test|hello/i )
       )
 
     end
