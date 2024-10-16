@@ -84,6 +84,28 @@ module Intelligence
                 'requires binary content to include content type and ( packed ) bytes'  
               )
             end
+          when :file 
+            content_type = content[ :content_type ]
+            uri = content[ :uri ]
+            if content_type && uri
+              mime_type = MIME::Types[ content_type ].first
+              if mime_type&.media_type == 'image'
+                result_message_content << {
+                  type: 'image_url',
+                  image_url: { url: uri }
+                }
+              else
+                raise UnsupportedContentError.new( 
+                  :generic, 
+                  'only support content of type image/*' 
+                ) 
+              end
+            else 
+              raise UnsupportedContentError.new(
+                :generic, 
+                'requires binary content to include content type and ( packed ) bytes'  
+              )
+            end
           end
         end
         result_message[ :content ] = result_message_content
@@ -129,7 +151,7 @@ module Intelligence
       end
 
       def chat_result_error_attributes( response )
-
+        
         error_type, error_description = translate_error_response_status( response.status )
         result = {
           error_type: error_type.to_s,
