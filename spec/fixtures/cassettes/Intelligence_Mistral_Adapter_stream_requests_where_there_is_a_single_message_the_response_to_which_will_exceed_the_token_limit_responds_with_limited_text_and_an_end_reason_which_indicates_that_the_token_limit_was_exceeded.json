@@ -1,0 +1,102 @@
+{
+  "http_interactions": [
+    {
+      "request": {
+        "method": "post",
+        "uri": "https://api.mistral.ai/v1/chat/completions",
+        "body": {
+          "encoding": "UTF-8",
+          "string": "{\"model\":\"mistral-large-latest\",\"max_tokens\":16,\"temperature\":0.0,\"stream\":true,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"count to twenty in words, all lower case, one word per line\\n\"}]}"
+        },
+        "headers": {
+          "User-Agent": [
+            "Faraday v2.12.0"
+          ],
+          "Content-Type": [
+            "application/json"
+          ],
+          "Authorization": [
+            "Bearer <TOKEN>"
+          ]
+        }
+      },
+      "response": {
+        "status": {
+          "code": 200,
+          "message": "OK"
+        },
+        "headers": {
+          "date": [
+            "Wed, 16 Oct 2024 16:44:24 GMT"
+          ],
+          "content-type": [
+            "text/event-stream; charset=utf-8"
+          ],
+          "transfer-encoding": [
+            "chunked"
+          ],
+          "connection": [
+            "keep-alive"
+          ],
+          "x-ratelimitbysize-limit-minute": [
+            "500000"
+          ],
+          "x-ratelimitbysize-remaining-minute": [
+            "499239"
+          ],
+          "x-ratelimitbysize-limit-day": [
+            "150000000"
+          ],
+          "x-ratelimitbysize-remaining-day": [
+            "149986206"
+          ],
+          "ratelimitbysize-reset": [
+            "37"
+          ],
+          "ratelimitbysize-remaining": [
+            "499239"
+          ],
+          "ratelimitbysize-query-cost": [
+            "72"
+          ],
+          "ratelimitbysize-limit": [
+            "500000"
+          ],
+          "x-envoy-upstream-service-time": [
+            "298"
+          ],
+          "access-control-allow-origin": [
+            "*"
+          ],
+          "x-kong-upstream-latency": [
+            "300"
+          ],
+          "x-kong-proxy-latency": [
+            "2"
+          ],
+          "x-kong-request-id": [
+            "723833619790201fef84ef0bb108eb43"
+          ],
+          "cf-cache-status": [
+            "DYNAMIC"
+          ],
+          "server": [
+            "cloudflare"
+          ],
+          "cf-ray": [
+            "<CF-RAY>"
+          ],
+          "alt-svc": [
+            "h3=\":443\"; ma=86400"
+          ]
+        },
+        "body": {
+          "encoding": "UTF-8",
+          "string": "data: {\"id\":\"8eae416490524d6f94c89f533ee7fc5d\",\"object\":\"chat.completion.chunk\",\"created\":1729097063,\"model\":\"mistral-large-latest\",\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"\"},\"finish_reason\":null}]}\n\ndata: {\"id\":\"8eae416490524d6f94c89f533ee7fc5d\",\"object\":\"chat.completion.chunk\",\"created\":1729097063,\"model\":\"mistral-large-latest\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"one\"},\"finish_reason\":null}]}\n\ndata: {\"id\":\"8eae416490524d6f94c89f533ee7fc5d\",\"object\":\"chat.completion.chunk\",\"created\":1729097063,\"model\":\"mistral-large-latest\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"\\n\"},\"finish_reason\":null}]}\n\ndata: {\"id\":\"8eae416490524d6f94c89f533ee7fc5d\",\"object\":\"chat.completion.chunk\",\"created\":1729097063,\"model\":\"mistral-large-latest\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"two\"},\"finish_reason\":null}]}\n\ndata: {\"id\":\"8eae416490524d6f94c89f533ee7fc5d\",\"object\":\"chat.completion.chunk\",\"created\":1729097063,\"model\":\"mistral-large-latest\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"\\n\"},\"finish_reason\":null}]}\n\ndata: {\"id\":\"8eae416490524d6f94c89f533ee7fc5d\",\"object\":\"chat.completion.chunk\",\"created\":1729097063,\"model\":\"mistral-large-latest\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"three\"},\"finish_reason\":null}]}\n\ndata: {\"id\":\"8eae416490524d6f94c89f533ee7fc5d\",\"object\":\"chat.completion.chunk\",\"created\":1729097063,\"model\":\"mistral-large-latest\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"\\n\"},\"finish_reason\":null}]}\n\ndata: {\"id\":\"8eae416490524d6f94c89f533ee7fc5d\",\"object\":\"chat.completion.chunk\",\"created\":1729097063,\"model\":\"mistral-large-latest\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"four\"},\"finish_reason\":null}]}\n\ndata: {\"id\":\"8eae416490524d6f94c89f533ee7fc5d\",\"object\":\"chat.completion.chunk\",\"created\":1729097063,\"model\":\"mistral-large-latest\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"\\n\"},\"finish_reason\":null}]}\n\ndata: {\"id\":\"8eae416490524d6f94c89f533ee7fc5d\",\"object\":\"chat.completion.chunk\",\"created\":1729097063,\"model\":\"mistral-large-latest\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"five\"},\"finish_reason\":null}]}\n\ndata: {\"id\":\"8eae416490524d6f94c89f533ee7fc5d\",\"object\":\"chat.completion.chunk\",\"created\":1729097063,\"model\":\"mistral-large-latest\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"\\n\"},\"finish_reason\":null}]}\n\ndata: {\"id\":\"8eae416490524d6f94c89f533ee7fc5d\",\"object\":\"chat.completion.chunk\",\"created\":1729097063,\"model\":\"mistral-large-latest\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"six\"},\"finish_reason\":null}]}\n\ndata: {\"id\":\"8eae416490524d6f94c89f533ee7fc5d\",\"object\":\"chat.completion.chunk\",\"created\":1729097063,\"model\":\"mistral-large-latest\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"\\n\"},\"finish_reason\":null}]}\n\ndata: {\"id\":\"8eae416490524d6f94c89f533ee7fc5d\",\"object\":\"chat.completion.chunk\",\"created\":1729097063,\"model\":\"mistral-large-latest\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"seven\"},\"finish_reason\":null}]}\n\ndata: {\"id\":\"8eae416490524d6f94c89f533ee7fc5d\",\"object\":\"chat.completion.chunk\",\"created\":1729097063,\"model\":\"mistral-large-latest\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"\\n\"},\"finish_reason\":null}]}\n\ndata: {\"id\":\"8eae416490524d6f94c89f533ee7fc5d\",\"object\":\"chat.completion.chunk\",\"created\":1729097063,\"model\":\"mistral-large-latest\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"eight\"},\"finish_reason\":null}]}\n\ndata: {\"id\":\"8eae416490524d6f94c89f533ee7fc5d\",\"object\":\"chat.completion.chunk\",\"created\":1729097063,\"model\":\"mistral-large-latest\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"\\n\"},\"finish_reason\":\"length\"}],\"usage\":{\"prompt_tokens\":60,\"total_tokens\":76,\"completion_tokens\":16}}\n\ndata: [DONE]\n\n"
+        }
+      },
+      "recorded_at": "Wed, 16 Oct 2024 16:44:24 GMT"
+    }
+  ],
+  "recorded_with": "VCR 6.3.1"
+}

@@ -1,0 +1,105 @@
+{
+  "http_interactions": [
+    {
+      "request": {
+        "method": "post",
+        "uri": "https://api.mistral.ai/v1/chat/completions",
+        "body": {
+          "encoding": "UTF-8",
+          "string": "{\"model\":\"mistral-large-latest\",\"max_tokens\":24,\"temperature\":0.0,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"count to five in words, all lower case, one word per line\\n\"},{\"role\":\"assistant\",\"content\":\"one\\ntwo\\nthree\\nfour\\nfive\\n\"},{\"role\":\"user\",\"content\":\"count to twenty in words, all lower case, one word per line\\n\"}]}"
+        },
+        "headers": {
+          "User-Agent": [
+            "Faraday v2.12.0"
+          ],
+          "Content-Type": [
+            "application/json"
+          ],
+          "Authorization": [
+            "Bearer <TOKEN>"
+          ]
+        }
+      },
+      "response": {
+        "status": {
+          "code": 200,
+          "message": "OK"
+        },
+        "headers": {
+          "date": [
+            "Wed, 16 Oct 2024 16:44:05 GMT"
+          ],
+          "content-type": [
+            "application/json"
+          ],
+          "transfer-encoding": [
+            "chunked"
+          ],
+          "connection": [
+            "keep-alive"
+          ],
+          "ratelimitbysize-remaining": [
+            "499665"
+          ],
+          "x-ratelimitbysize-limit-day": [
+            "150000000"
+          ],
+          "x-ratelimitbysize-remaining-day": [
+            "149986684"
+          ],
+          "x-ratelimitbysize-limit-minute": [
+            "500000"
+          ],
+          "x-ratelimitbysize-remaining-minute": [
+            "499665"
+          ],
+          "ratelimitbysize-reset": [
+            "56"
+          ],
+          "ratelimitbysize-query-cost": [
+            "104"
+          ],
+          "ratelimitbysize-limit": [
+            "500000"
+          ],
+          "x-envoy-upstream-service-time": [
+            "933"
+          ],
+          "access-control-allow-origin": [
+            "*"
+          ],
+          "x-kong-upstream-latency": [
+            "934"
+          ],
+          "x-kong-proxy-latency": [
+            "1"
+          ],
+          "x-kong-request-id": [
+            "7fe3e0718239be600e0944140ccdaf36"
+          ],
+          "cf-cache-status": [
+            "DYNAMIC"
+          ],
+          "server": [
+            "cloudflare"
+          ],
+          "cf-ray": [
+            "<CF-RAY>"
+          ],
+          "content-encoding": [
+            "gzip"
+          ],
+          "alt-svc": [
+            "h3=\":443\"; ma=86400"
+          ]
+        },
+        "body": {
+          "encoding": "ASCII-8BIT",
+          "string": "{\"id\":\"b290e42948844f54b6f93d10f2d50fd3\",\"object\":\"chat.completion\",\"created\":1729097044,\"model\":\"mistral-large-latest\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"one\\ntwo\\nthree\\nfour\\nfive\\nsix\\nseven\\neight\\nnine\\nten\\neleven\\n\",\"tool_calls\":null},\"finish_reason\":\"length\"}],\"usage\":{\"prompt_tokens\":87,\"total_tokens\":111,\"completion_tokens\":24}}"
+        }
+      },
+      "recorded_at": "Wed, 16 Oct 2024 16:44:05 GMT"
+    }
+  ],
+  "recorded_with": "VCR 6.3.1"
+}

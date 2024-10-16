@@ -40,7 +40,7 @@ RSpec.shared_examples 'stream requests' do
       conversation =  create_conversation( 
         "this is a test, respond with 'test'\n",
         "test\n",
-        "what was the previous user message?\n"
+        "what was the previous user message?\nrespond in less than 16 words\n"
       )
       
       text = ''
