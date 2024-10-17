@@ -35,6 +35,7 @@ module Intelligence
           # openai properties for openai generative text endpoint
           parameter :logit_bias
           parameter :logprobs, [ TrueClass, FalseClass ]
+          parameter :modalities, String, array: true 
           parameter :parallel_tool_calls, [ TrueClass, FalseClass ]
           group :response_format do 
             # 'text' and 'json_schema' are the only supported types
