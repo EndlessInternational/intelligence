@@ -42,8 +42,9 @@ response = request.chat( conversation )
 if response.success?
   # if successful, the result will be a ChatResult instance
   result = response.result 
-  # every successful result has a collection of response choices ( typically there is only one 
-  # but some adapters can return n result choices simultanously )
+  # every successful result has a collection of choices ( typically there is only one but some
+  # adapters can return n result choices simultanously ); a choice is an instance of 
+  # ChatResultChoice
   choices = result.choices 
   # we will select the first choice, as we expect only one 
   choice = choices.first 
@@ -57,7 +58,7 @@ if response.success?
     puts content.text if content.is_a?( Intelligence::MessageContent::Text ) 
   end
 else 
-  # if not successful, the result will be a CharErrorResult instance which includes error 
+  # if not successful, the result will be a ChatErrorResult instance which includes error 
   # information
   error_result = response.error_result
   puts "Error: " + error_result.error_description

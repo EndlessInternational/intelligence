@@ -25,7 +25,7 @@ if response.success?
   # to easilly retrieve the response text 
   puts response.result.text 
 else 
-  # if not successful, the result be a CharErrorResult instance which includes error information
+  # if not successful, the result be a ChatErrorResult instance which includes error information
   puts "Error: " + response.result.error_description
 end 
 
