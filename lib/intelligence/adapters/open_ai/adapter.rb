@@ -14,7 +14,7 @@ module Intelligence
         parameter :project
         
         # properties for generative text endpoints
-        group :chat_options do 
+        parameters :chat_options do 
         
           # normalized properties for openai generative text endpoint
           parameter :model, String
@@ -33,17 +33,21 @@ module Intelligence
           parameter :max_completion_tokens, Integer
 
           # openai properties for openai generative text endpoint
+          parameters :audio do 
+            parameter :voice, String 
+            parameter :format, String 
+          end
           parameter :logit_bias
           parameter :logprobs, [ TrueClass, FalseClass ]
           parameter :modalities, String, array: true 
           parameter :parallel_tool_calls, [ TrueClass, FalseClass ]
-          group :response_format do 
+          parameters :response_format do 
             # 'text' and 'json_schema' are the only supported types
             parameter :type, String
             parameter :json_schema
           end
           parameter :service_tier, String
-          group :stream_options do
+          parameters :stream_options do
             parameter :include_usage, [ TrueClass, FalseClass ]
           end
           parameter :tool_choice

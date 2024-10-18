@@ -6,7 +6,7 @@
         "uri": "https://api.anthropic.com/v1/messages",
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"model\":\"claude-3-5-sonnet-20240620\",\"max_tokens\":24,\"temperature\":0.0,\"system\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \",\"messages\":[{\"role\":\"user\",\"content\":[{\"type\":\"text\",\"text\":\"this is a test, respond with 'test'\\n\"}]},{\"role\":\"assistant\",\"content\":[{\"type\":\"text\",\"text\":\"test\\n\"}]},{\"role\":\"user\",\"content\":[{\"type\":\"text\",\"text\":\"what was the previous user message?\\n\"}]}]}"
+          "string": "{\"model\":\"claude-3-5-sonnet-20240620\",\"max_tokens\":24,\"temperature\":0.0,\"system\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \",\"messages\":[{\"role\":\"user\",\"content\":[{\"type\":\"text\",\"text\":\"this is a test, respond with 'test'\\n\"}]},{\"role\":\"assistant\",\"content\":[{\"type\":\"text\",\"text\":\"test\\n\"}]},{\"role\":\"user\",\"content\":[{\"type\":\"text\",\"text\":\"what was the previous user message?\\nrespond in less than 16 words\\n\"}]}]}"
         },
         "headers": {
           "User-Agent": [
@@ -30,7 +30,7 @@
         },
         "headers": {
           "date": [
-            "Wed, 16 Oct 2024 15:07:35 GMT"
+            "Fri, 18 Oct 2024 03:06:45 GMT"
           ],
           "content-type": [
             "application/json"
@@ -48,7 +48,7 @@
             "999"
           ],
           "anthropic-ratelimit-requests-reset": [
-            "2024-10-16T15:08:17Z"
+            "2024-10-18T03:07:17Z"
           ],
           "anthropic-ratelimit-tokens-limit": [
             "80000"
@@ -57,7 +57,7 @@
             "80000"
           ],
           "anthropic-ratelimit-tokens-reset": [
-            "2024-10-16T15:07:35Z"
+            "2024-10-18T03:06:45Z"
           ],
           "request-id": [
             "<REQUEST-ID>"
@@ -86,10 +86,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\"id\":\"msg_01Kg4QqViTcqvcxJJa85ja7C\",\"type\":\"message\",\"role\":\"assistant\",\"model\":\"claude-3-5-sonnet-20240620\",\"content\":[{\"type\":\"text\",\"text\":\"this is a test, respond with 'test'\"}],\"stop_reason\":\"end_turn\",\"stop_sequence\":null,\"usage\":{\"input_tokens\":71,\"output_tokens\":14}}"
+          "string": "{\"id\":\"msg_013AvbPbtphTYKBJxJjTMk1e\",\"type\":\"message\",\"role\":\"assistant\",\"model\":\"claude-3-5-sonnet-20240620\",\"content\":[{\"type\":\"text\",\"text\":\"The previous user message was \\\"this is a test, respond with 'test'\\\".\"}],\"stop_reason\":\"end_turn\",\"stop_sequence\":null,\"usage\":{\"input_tokens\":80,\"output_tokens\":21}}"
         }
       },
-      "recorded_at": "Wed, 16 Oct 2024 15:07:35 GMT"
+      "recorded_at": "Fri, 18 Oct 2024 03:06:45 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

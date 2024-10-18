@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Wed, 16 Oct 2024 20:27:14 GMT"
+            "Fri, 18 Oct 2024 02:57:16 GMT"
           ],
           "content-type": [
             "application/json"
@@ -63,10 +63,13 @@
             "/api/v1/chat/completions"
           ],
           "x-vercel-id": [
-            "pdx1::n9sgg-1729110433701-874342fd75c4"
+            "pdx1::hhglb-1729220236167-35794b46645d"
           ],
           "cf-cache-status": [
             "DYNAMIC"
+          ],
+          "vary": [
+            "accept-encoding"
           ],
           "server": [
             "cloudflare"
@@ -80,10 +83,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n{\"id\":\"gen-1729110434-6zVQx5TXlddjrbpPI3jh\",\"provider\":\"Together\",\"model\":\"meta-llama/llama-3.2-11b-vision-instruct\",\"object\":\"chat.completion\",\"created\":1729110434,\"choices\":[{\"logprobs\":null,\"finish_reason\":\"length\",\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"one\\ntwo\\nthree\\nfour\\nfive\\nsix\\nseven\\neight\\n\",\"refusal\":\"\"}}],\"usage\":{\"prompt_tokens\":103,\"completion_tokens\":16,\"total_tokens\":119}}"
+          "string": "\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n{\"id\":\"gen-1729220236-kjlbCgmOIjjkZ9FoZlZr\",\"provider\":\"Together\",\"model\":\"meta-llama/llama-3.2-11b-vision-instruct\",\"object\":\"chat.completion\",\"created\":1729220236,\"choices\":[{\"logprobs\":null,\"finish_reason\":\"length\",\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"one\\ntwo\\nthree\\nfour\\nfive\\nsix\\nseven\\neight\\n\",\"refusal\":\"\"}}],\"usage\":{\"prompt_tokens\":103,\"completion_tokens\":16,\"total_tokens\":119}}"
         }
       },
-      "recorded_at": "Wed, 16 Oct 2024 20:27:16 GMT"
+      "recorded_at": "Fri, 18 Oct 2024 02:57:16 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

@@ -12,7 +12,7 @@ module Intelligence
         # anthropic specific properties for all endpoints
         parameter :version, String, default: '2023-06-01'
  
-        group :chat_options do 
+        parameters :chat_options do 
   
           # normalized properties for anthropic generative text endpoint
           parameter :model, String
@@ -32,7 +32,7 @@ module Intelligence
             # the name parameter should only be set if type = 'tool'
             parameter :name, String
           end
-          group :metadata do
+          parameters :metadata do
             parameter :user_id, String
           end 
           

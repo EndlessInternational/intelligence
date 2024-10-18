@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Wed, 16 Oct 2024 15:21:35 GMT"
+            "Fri, 18 Oct 2024 03:00:27 GMT"
           ],
           "content-type": [
             "text/event-stream; charset=utf-8"
@@ -45,7 +45,7 @@
             "<OPENAI-ORGANIZATION>"
           ],
           "openai-processing-ms": [
-            "221"
+            "596"
           ],
           "openai-version": [
             "2020-10-01"
@@ -95,10 +95,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "data: {\"id\":\"chatcmpl-AJ0876nVZzkeZDsjnAPRdIe4gUn3R\",\"object\":\"chat.completion.chunk\",\"created\":1729092095,\"model\":\"gpt-4o-2024-08-06\",\"system_fingerprint\":\"fp_6b68a8204b\",\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"\",\"refusal\":null},\"logprobs\":null,\"finish_reason\":null}],\"usage\":null}\n\ndata: {\"id\":\"chatcmpl-AJ0876nVZzkeZDsjnAPRdIe4gUn3R\",\"object\":\"chat.completion.chunk\",\"created\":1729092095,\"model\":\"gpt-4o-2024-08-06\",\"system_fingerprint\":\"fp_6b68a8204b\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"hello\"},\"logprobs\":null,\"finish_reason\":null}],\"usage\":null}\n\ndata: {\"id\":\"chatcmpl-AJ0876nVZzkeZDsjnAPRdIe4gUn3R\",\"object\":\"chat.completion.chunk\",\"created\":1729092095,\"model\":\"gpt-4o-2024-08-06\",\"system_fingerprint\":\"fp_6b68a8204b\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"!\"},\"logprobs\":null,\"finish_reason\":null}],\"usage\":null}\n\ndata: {\"id\":\"chatcmpl-AJ0876nVZzkeZDsjnAPRdIe4gUn3R\",\"object\":\"chat.completion.chunk\",\"created\":1729092095,\"model\":\"gpt-4o-2024-08-06\",\"system_fingerprint\":\"fp_6b68a8204b\",\"choices\":[{\"index\":0,\"delta\":{},\"logprobs\":null,\"finish_reason\":\"stop\"}],\"usage\":null}\n\ndata: {\"id\":\"chatcmpl-AJ0876nVZzkeZDsjnAPRdIe4gUn3R\",\"object\":\"chat.completion.chunk\",\"created\":1729092095,\"model\":\"gpt-4o-2024-08-06\",\"system_fingerprint\":\"fp_6b68a8204b\",\"choices\":[],\"usage\":{\"prompt_tokens\":83,\"completion_tokens\":2,\"total_tokens\":85,\"prompt_tokens_details\":{\"cached_tokens\":0},\"completion_tokens_details\":{\"reasoning_tokens\":0}}}\n\ndata: [DONE]\n\n"
+          "string": "data: {\"id\":\"chatcmpl-AJXVy4fR8fM3YHzsyIozQ0YodnM0l\",\"object\":\"chat.completion.chunk\",\"created\":1729220426,\"model\":\"gpt-4o-2024-08-06\",\"system_fingerprint\":\"fp_6b68a8204b\",\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"\",\"refusal\":null},\"logprobs\":null,\"finish_reason\":null}],\"usage\":null}\n\ndata: {\"id\":\"chatcmpl-AJXVy4fR8fM3YHzsyIozQ0YodnM0l\",\"object\":\"chat.completion.chunk\",\"created\":1729220426,\"model\":\"gpt-4o-2024-08-06\",\"system_fingerprint\":\"fp_6b68a8204b\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"hello\"},\"logprobs\":null,\"finish_reason\":null}],\"usage\":null}\n\ndata: {\"id\":\"chatcmpl-AJXVy4fR8fM3YHzsyIozQ0YodnM0l\",\"object\":\"chat.completion.chunk\",\"created\":1729220426,\"model\":\"gpt-4o-2024-08-06\",\"system_fingerprint\":\"fp_6b68a8204b\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"!\"},\"logprobs\":null,\"finish_reason\":null}],\"usage\":null}\n\ndata: {\"id\":\"chatcmpl-AJXVy4fR8fM3YHzsyIozQ0YodnM0l\",\"object\":\"chat.completion.chunk\",\"created\":1729220426,\"model\":\"gpt-4o-2024-08-06\",\"system_fingerprint\":\"fp_6b68a8204b\",\"choices\":[{\"index\":0,\"delta\":{},\"logprobs\":null,\"finish_reason\":\"stop\"}],\"usage\":null}\n\ndata: {\"id\":\"chatcmpl-AJXVy4fR8fM3YHzsyIozQ0YodnM0l\",\"object\":\"chat.completion.chunk\",\"created\":1729220426,\"model\":\"gpt-4o-2024-08-06\",\"system_fingerprint\":\"fp_6b68a8204b\",\"choices\":[],\"usage\":{\"prompt_tokens\":83,\"completion_tokens\":2,\"total_tokens\":85,\"prompt_tokens_details\":{\"cached_tokens\":0},\"completion_tokens_details\":{\"reasoning_tokens\":0}}}\n\ndata: [DONE]\n\n"
         }
       },
-      "recorded_at": "Wed, 16 Oct 2024 15:21:36 GMT"
+      "recorded_at": "Fri, 18 Oct 2024 03:00:27 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

@@ -30,7 +30,7 @@
         },
         "headers": {
           "date": [
-            "Wed, 16 Oct 2024 15:07:34 GMT"
+            "Fri, 18 Oct 2024 03:06:44 GMT"
           ],
           "content-type": [
             "application/json"
@@ -48,7 +48,7 @@
             "999"
           ],
           "anthropic-ratelimit-requests-reset": [
-            "2024-10-16T15:08:17Z"
+            "2024-10-18T03:07:17Z"
           ],
           "anthropic-ratelimit-tokens-limit": [
             "80000"
@@ -57,13 +57,10 @@
             "80000"
           ],
           "anthropic-ratelimit-tokens-reset": [
-            "2024-10-16T15:07:34Z"
+            "2024-10-18T03:06:44Z"
           ],
           "request-id": [
             "<REQUEST-ID>"
-          ],
-          "x-cloud-trace-context": [
-            "<X-CLOUD-TRACE-CONTEXT>"
           ],
           "via": [
             "1.1 google"
@@ -86,10 +83,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\"id\":\"msg_01EdvGgffXJJTmPjeyWW8jTL\",\"type\":\"message\",\"role\":\"assistant\",\"model\":\"claude-3-5-sonnet-20240620\",\"content\":[{\"type\":\"text\",\"text\":\"hello\"}],\"stop_reason\":\"end_turn\",\"stop_sequence\":null,\"usage\":{\"input_tokens\":55,\"output_tokens\":4}}"
+          "string": "{\"id\":\"msg_01JecjmDFtU2L2GfHpmQsiN6\",\"type\":\"message\",\"role\":\"assistant\",\"model\":\"claude-3-5-sonnet-20240620\",\"content\":[{\"type\":\"text\",\"text\":\"hello\"}],\"stop_reason\":\"end_turn\",\"stop_sequence\":null,\"usage\":{\"input_tokens\":55,\"output_tokens\":4}}"
         }
       },
-      "recorded_at": "Wed, 16 Oct 2024 15:07:34 GMT"
+      "recorded_at": "Fri, 18 Oct 2024 03:06:44 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

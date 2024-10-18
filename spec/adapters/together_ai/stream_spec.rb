@@ -35,6 +35,20 @@ RSpec.describe "#{Intelligence::Adapter[ :together_ai ]} stream requests", :toge
     end
   end
 
+  let( :vision_adapter ) do
+    Intelligence::Adapter[ :together_ai ].build! do   
+      key                     ENV[ 'TOGETHERAI_API_KEY' ]
+      chat_options do
+        model                 'meta-llama/Llama-3.2-11B-Vision-Instruct-Turbo'
+        max_tokens            16
+        temperature           0
+
+        stream                true
+      end
+    end
+  end
+
+
   include_examples 'stream requests'
   include_examples 'stream requests with token limit exceeded'
   context 'where there is a single message that ends at stop sequence' do
@@ -111,5 +125,6 @@ RSpec.describe "#{Intelligence::Adapter[ :together_ai ]} stream requests", :toge
   end
   
   include_examples 'stream requests without alternating roles'
+  # include_examples 'stream requests with binary encoded images'
 
 end

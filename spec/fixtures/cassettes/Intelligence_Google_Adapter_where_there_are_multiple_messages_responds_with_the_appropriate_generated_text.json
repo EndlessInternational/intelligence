@@ -6,7 +6,7 @@
         "uri": "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro-002:generateContent?key=<KEY>",
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"generationConfig\":{\"maxOutputTokens\":16,\"temperature\":0.0},\"systemInstruction\":{\"role\":\"user\",\"parts\":[{\"text\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"}]},\"contents\":[{\"role\":\"user\",\"parts\":[{\"text\":\"this is a test, respond with 'test'\\n\"}]},{\"role\":\"model\",\"parts\":[{\"text\":\"test\\n\"}]},{\"role\":\"user\",\"parts\":[{\"text\":\"what was the previous user message?\\n\"}]}]}"
+          "string": "{\"generationConfig\":{\"maxOutputTokens\":16,\"temperature\":0.0},\"systemInstruction\":{\"role\":\"user\",\"parts\":[{\"text\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"}]},\"contents\":[{\"role\":\"user\",\"parts\":[{\"text\":\"this is a test, respond with 'test'\\n\"}]},{\"role\":\"model\",\"parts\":[{\"text\":\"test\\n\"}]},{\"role\":\"user\",\"parts\":[{\"text\":\"what was the previous user message?\\nrespond in less than 16 words\\n\"}]}]}"
         },
         "headers": {
           "User-Agent": [
@@ -33,7 +33,7 @@
             "gzip"
           ],
           "date": [
-            "Wed, 16 Oct 2024 15:13:38 GMT"
+            "Fri, 18 Oct 2024 02:53:35 GMT"
           ],
           "server": [
             "scaffolding on HTTPServer2"
@@ -51,7 +51,7 @@
             "nosniff"
           ],
           "server-timing": [
-            "gfet4t7; dur=759"
+            "gfet4t7; dur=720"
           ],
           "alt-svc": [
             "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
@@ -62,10 +62,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "{\n  \"candidates\": [\n    {\n      \"content\": {\n        \"parts\": [\n          {\n            \"text\": \"this is a test, respond with 'test'\\n\"\n          }\n        ],\n        \"role\": \"model\"\n      },\n      \"finishReason\": \"STOP\",\n      \"avgLogprobs\": -2.7091558959827206e-07\n    }\n  ],\n  \"usageMetadata\": {\n    \"promptTokenCount\": 68,\n    \"candidatesTokenCount\": 11,\n    \"totalTokenCount\": 79\n  }\n}\n"
+          "string": "{\n  \"candidates\": [\n    {\n      \"content\": {\n        \"parts\": [\n          {\n            \"text\": \"this is a test, respond with 'test'\\n\"\n          }\n        ],\n        \"role\": \"model\"\n      },\n      \"finishReason\": \"STOP\",\n      \"avgLogprobs\": -2.0836510388603941e-05\n    }\n  ],\n  \"usageMetadata\": {\n    \"promptTokenCount\": 77,\n    \"candidatesTokenCount\": 11,\n    \"totalTokenCount\": 88\n  }\n}\n"
         }
       },
-      "recorded_at": "Wed, 16 Oct 2024 15:13:38 GMT"
+      "recorded_at": "Fri, 18 Oct 2024 02:53:35 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

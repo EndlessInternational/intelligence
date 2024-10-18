@@ -15,8 +15,8 @@ RSpec.describe Intelligence::Message, :unit do
       it 'raises an ArgumentError' do 
         expect { described_class.build! }.to( 
           raise_error( 
-            AdaptiveConfiguration::RequirementUnmetError, 
-            /The parameter role is required./
+            AdaptiveConfiguration::RequiredOptionError, 
+            /The parameter 'role' is required/
           )
         )
       end

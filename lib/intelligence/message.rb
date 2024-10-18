@@ -6,7 +6,7 @@ module Intelligence
     ROLES = [ :system, :user, :assistant ]
     CONFIGURATION = Proc.new do
       parameter :role, Symbol, required: true 
-      group :content, array: true, as: :contents do 
+      parameters :content, array: true, as: :contents do 
         parameter :type, Symbol, default: :text 
         parameter :text, String 
         parameter :content_type, String
@@ -98,13 +98,6 @@ module Intelligence
       result.join( "\n" ) 
     end
 
-    def to_h
-      { 
-        role: @role,
-        contents: @contents.map { | c | c.to_h }
-      }
-    end
-
     def each_content( &block )
       @contents.each( &block )
     end
@@ -115,6 +108,13 @@ module Intelligence
     end
 
     alias :<< :append_content
+
+    def to_h
+      { 
+        role: @role,
+        contents: @contents.map { | c | c.to_h }
+      }
+    end
 
   end
 end

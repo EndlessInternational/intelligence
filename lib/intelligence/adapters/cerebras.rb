@@ -9,7 +9,7 @@ module Intelligence
       
       configuration do 
         parameter :key 
-        group :chat_options do 
+        parameters :chat_options do 
           parameter :model, String
           parameter :max_tokens, Integer
           parameter :response_format do 

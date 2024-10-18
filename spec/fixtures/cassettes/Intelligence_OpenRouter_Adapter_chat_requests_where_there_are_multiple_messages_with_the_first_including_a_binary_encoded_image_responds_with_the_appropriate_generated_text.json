@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Wed, 16 Oct 2024 20:27:19 GMT"
+            "Fri, 18 Oct 2024 02:57:20 GMT"
           ],
           "content-type": [
             "application/json"
@@ -63,10 +63,13 @@
             "/api/v1/chat/completions"
           ],
           "x-vercel-id": [
-            "pdx1::qwvmt-1729110439193-83b3bd838d28"
+            "pdx1::pwdnn-1729220240077-e9e47b42b07e"
           ],
           "cf-cache-status": [
             "DYNAMIC"
+          ],
+          "vary": [
+            "accept-encoding"
           ],
           "server": [
             "cloudflare"
@@ -80,10 +83,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "\n         \n\n         \n\n         \n{\"id\":\"gen-1729110439-6JT0GESEdKhhtOSmqINx\",\"provider\":\"Hyperbolic\",\"model\":\"qwen/qwen-2-vl-7b-instruct\",\"object\":\"chat.completion\",\"created\":1729110439,\"choices\":[{\"logprobs\":null,\"finish_reason\":\"stop\",\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"red\",\"refusal\":\"\"}}],\"usage\":{\"prompt_tokens\":87,\"completion_tokens\":3,\"total_tokens\":90}}"
+          "string": "\n         \n\n         \n\n         \n{\"id\":\"gen-1729220240-zc6MbQFpPl0E3cD87XKl\",\"provider\":\"Hyperbolic\",\"model\":\"qwen/qwen-2-vl-7b-instruct\",\"object\":\"chat.completion\",\"created\":1729220240,\"choices\":[{\"logprobs\":null,\"finish_reason\":\"stop\",\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"red\",\"refusal\":\"\"}}],\"usage\":{\"prompt_tokens\":79,\"completion_tokens\":3,\"total_tokens\":82}}"
         }
       },
-      "recorded_at": "Wed, 16 Oct 2024 20:27:19 GMT"
+      "recorded_at": "Fri, 18 Oct 2024 02:57:20 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

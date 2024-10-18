@@ -9,7 +9,7 @@ module Intelligence
       
       configuration do 
         parameter :key, String 
-        group :chat_options do 
+        parameters :chat_options do 
           parameter :model, String
           parameter :temperature, Float
           parameter :top_p, Float
@@ -20,12 +20,12 @@ module Intelligence
           parameter :stream, [ TrueClass, FalseClass ]
 
           parameter :random_seed, Integer
-          group :response_format do 
+          parameters :response_format do 
             parameter :type, String 
           end
-          group :tool_choice do 
+          parameters :tool_choice do 
             parameter :type, String 
-            group :function do 
+            parameters :function do 
               parameter :name, String 
             end
           end

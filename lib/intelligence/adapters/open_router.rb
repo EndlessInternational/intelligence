@@ -9,7 +9,7 @@ module Intelligence
       
       configuration do 
         parameter :key, String 
-        group :chat_options do 
+        parameters :chat_options do 
           parameter :model, String
           parameter :temperature, Float
           parameter :top_k, Integer
@@ -22,7 +22,7 @@ module Intelligence
           parameter :repetition_penalty, Float
           parameter :presence_penalty, Float
           
-          group :provider do 
+          parameters :provider do 
             parameter :order, String, array: true 
             parameter :require_parameters, [ TrueClass, FalseClass ]
             parameter :allow_fallbacks, [ TrueClass, FalseClass ]

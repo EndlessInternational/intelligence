@@ -6,7 +6,7 @@ module Intelligence
       
       configuration do
         parameter :api_key, String, required: true
-        group :options, default: {} do
+        parameters :options, default: {} do
           parameter :timeout, Integer
           parameter :debug, [ TrueClass, FalseClass ], default: false
         end
@@ -57,12 +57,12 @@ RSpec.describe Intelligence::ConfigurationTest::Adapter, :unit do
       expect( adapter.options.to_h ).to eq( { timeout: 40, debug: false } )
     end
 
-    it 'handles nested group parameters' do
+    it 'handles nested parameters parameters' do
       described_class.class_eval do
         configuration do
-          group :options do
+          parameters :options do
             parameter :debug, default: false 
-            group :logging do
+            parameters :logging do
               parameter :level, String, default: 'info'
             end
           end

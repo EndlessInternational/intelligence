@@ -1,0 +1,54 @@
+{
+  "http_interactions": [
+    {
+      "request": {
+        "method": "post",
+        "uri": "https://api.sambanova.ai/v1/chat/completions",
+        "body": {
+          "encoding": "UTF-8",
+          "string": "{\"model\":\"Meta-Llama-3.1-70B-Instruct\",\"max_tokens\":16,\"temperature\":0.0,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"count to twenty in words, all lower case, one word per line\\n\"}]}"
+        },
+        "headers": {
+          "User-Agent": [
+            "Faraday v2.12.0"
+          ],
+          "Content-Type": [
+            "application/json"
+          ],
+          "Authorization": [
+            "Bearer <TOKEN>"
+          ]
+        }
+      },
+      "response": {
+        "status": {
+          "code": 200,
+          "message": "OK"
+        },
+        "headers": {
+          "date": [
+            "Fri, 18 Oct 2024 02:57:28 GMT"
+          ],
+          "content-type": [
+            "application/json; charset=utf-8"
+          ],
+          "content-length": [
+            "791"
+          ],
+          "connection": [
+            "keep-alive"
+          ],
+          "strict-transport-security": [
+            "max-age=31536000; includeSubDomains"
+          ]
+        },
+        "body": {
+          "encoding": "UTF-8",
+          "string": "{\"choices\":[{\"finish_reason\":\"length\",\"index\":0,\"logprobs\":null,\"message\":{\"content\":\"one\\ntwo\\nthree\\nfour\\nfive\\nsix\\nseven\\neight\\n\",\"role\":\"assistant\"}}],\"created\":1729220248,\"id\":\"50af778b-4bed-4a33-a731-3836e0d3e54c\",\"model\":\"Meta-Llama-3.1-70B-Instruct\",\"object\":\"chat.completion\",\"system_fingerprint\":\"fastcoe\",\"usage\":{\"acceptance_rate\":21,\"completion_tokens\":17,\"completion_tokens_after_first_per_sec\":625.0185245550474,\"completion_tokens_after_first_per_sec_first_ten\":1852.9585358157146,\"completion_tokens_per_sec\":116.22306852059566,\"end_time\":1729220248.2105787,\"is_last_response\":true,\"prompt_tokens\":84,\"start_time\":1729220248.0478835,\"time_to_first_token\":0.13709592819213867,\"total_latency\":0.14627044541495188,\"total_tokens\":101,\"total_tokens_per_sec\":690.5017600341272}}\n"
+        }
+      },
+      "recorded_at": "Fri, 18 Oct 2024 02:57:28 GMT"
+    }
+  ],
+  "recorded_with": "VCR 6.3.1"
+}

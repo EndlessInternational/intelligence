@@ -9,7 +9,7 @@ module Intelligence
         # normalized properties for all endpoints
         parameter :key, String  
 
-        group :chat_options, as: :generationConfig do
+        parameters :chat_options, as: :generationConfig do
 
           # normalized properties for google generative text endpoint
           parameter :model, String

@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Wed, 16 Oct 2024 15:21:16 GMT"
+            "Fri, 18 Oct 2024 03:00:10 GMT"
           ],
           "content-type": [
             "application/json"
@@ -45,7 +45,7 @@
             "<OPENAI-ORGANIZATION>"
           ],
           "openai-processing-ms": [
-            "5544"
+            "2739"
           ],
           "openai-version": [
             "2020-10-01"
@@ -98,10 +98,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\n  \"id\": \"chatcmpl-AJ07lj3WMczWy9xG7yiwlrEu5f6OC\",\n  \"object\": \"chat.completion\",\n  \"created\": 1729092073,\n  \"model\": \"gpt-4o-mini-2024-07-18\",\n  \"choices\": [\n    {\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": \"three balloons (red, yellow, blue)\",\n        \"refusal\": null\n      },\n      \"logprobs\": null,\n      \"finish_reason\": \"stop\"\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 17074,\n    \"completion_tokens\": 9,\n    \"total_tokens\": 17083,\n    \"prompt_tokens_details\": {\n      \"cached_tokens\": 0\n    },\n    \"completion_tokens_details\": {\n      \"reasoning_tokens\": 0\n    }\n  },\n  \"system_fingerprint\": \"fp_8552ec53e1\"\n}\n"
+          "string": "{\n  \"id\": \"chatcmpl-AJXVh5muG4nPscyrGTirdgihERQ3D\",\n  \"object\": \"chat.completion\",\n  \"created\": 1729220409,\n  \"model\": \"gpt-4o-mini-2024-07-18\",\n  \"choices\": [\n    {\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": \"three balloons (red, yellow, blue)\",\n        \"refusal\": null\n      },\n      \"logprobs\": null,\n      \"finish_reason\": \"stop\"\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 17074,\n    \"completion_tokens\": 9,\n    \"total_tokens\": 17083,\n    \"prompt_tokens_details\": {\n      \"cached_tokens\": 0\n    },\n    \"completion_tokens_details\": {\n      \"reasoning_tokens\": 0\n    }\n  },\n  \"system_fingerprint\": \"fp_8552ec53e1\"\n}\n"
         }
       },
-      "recorded_at": "Wed, 16 Oct 2024 15:21:16 GMT"
+      "recorded_at": "Fri, 18 Oct 2024 03:00:10 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

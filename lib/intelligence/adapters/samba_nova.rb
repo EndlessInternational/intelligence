@@ -13,7 +13,7 @@ module Intelligence
         parameter :key, String
         
         # properties for generative text endpoints
-        group :chat_options do 
+        parameters :chat_options do 
         
           # normalized properties for samba nova generative text endpoint
           parameter :model, String
@@ -26,7 +26,7 @@ module Intelligence
 
           # samba nova properties for samba nova generative text endpoint
           parameter :repetition_penalty, Float
-          group :stream_options do
+          parameters :stream_options do
             parameter :include_usage, [ TrueClass, FalseClass ]
           end
 

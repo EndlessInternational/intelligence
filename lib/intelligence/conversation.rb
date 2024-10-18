@@ -4,8 +4,8 @@ module Intelligence
     extend AdaptiveConfiguration::Configurable 
 
     configuration do
-      group :system_message, default: { role: :system }, &Message::CONFIGURATION  
-      group :message, as: :messages, array: true, &Message::CONFIGURATION
+      parameters :system_message, default: { role: :system }, &Message::CONFIGURATION  
+      parameters :message, as: :messages, array: true, &Message::CONFIGURATION
     end
 
     def self.build( attributes = nil, &block )

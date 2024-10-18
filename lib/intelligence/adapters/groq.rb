@@ -9,7 +9,7 @@ module Intelligence
 
       configuration do 
         parameter :key, String
-        group :chat_options do 
+        parameters :chat_options do 
           parameter :frequency_penalty, Float
           parameter :logit_bias
           parameter :logprobs, [ TrueClass, FalseClass ]
@@ -19,7 +19,7 @@ module Intelligence
             # the parallel_tool_calls parameter is only allowed when 'tools' are specified
           parameter :parallel_tool_calls, [ TrueClass, FalseClass ]
           parameter :presence_penalty, Float
-          group :response_format do 
+          parameters :response_format do 
             # 'text' and 'json_object' are the only supported types; you must also instruct 
             # the model to output json
             parameter :type, String
@@ -27,15 +27,15 @@ module Intelligence
           parameter :seed, Integer
           parameter :stop, String, array: true
           parameter :stream, [ TrueClass, FalseClass ]
-          group :stream_options do
+          parameters :stream_options do
             parameter :include_usage, [ TrueClass, FalseClass ]
           end
           parameter :temperature, Float
-          group :tool_choice do 
+          parameters :tool_choice do 
             # one of 'auto', 'none' or 'function'
             parameter :type, String 
-            # the function group is required if you specify a type of 'function' 
-            group :function do 
+            # the function parameters is required if you specify a type of 'function' 
+            parameters :function do 
               parameter :name, String 
             end
           end

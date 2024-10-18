@@ -38,7 +38,7 @@ RSpec.describe "#{Intelligence::Adapter[ :anthropic ]} stream requests", :anthro
       key   ENV[ 'ANTHROPIC_API_KEY' ]
       chat_options do
         model                 'claude-3-5-sonnet-20240620'
-        max_tokens            16
+        max_tokens            24
         temperature           0
         stream                true
       end

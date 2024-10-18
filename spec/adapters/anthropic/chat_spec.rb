@@ -13,7 +13,7 @@ RSpec.describe "#{Intelligence::Adapter[ :anthropic ]} chat requests", :anthropi
       key                     'this-key-is-not-valid'  
       chat_options do
         model                 'claude-3-5-sonnet-20240620'
-        max_tokens            16
+        max_tokens            24
         temperature           0
       end
     end

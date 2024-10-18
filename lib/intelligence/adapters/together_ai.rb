@@ -9,7 +9,7 @@ module Intelligence
       
       configuration do 
         parameter :key, String 
-        group :chat_options do 
+        parameters :chat_options do 
           parameter :model, String
           parameter :temperature, Float
           parameter :top_p, Float
