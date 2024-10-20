@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Sun, 20 Oct 2024 06:23:12 GMT"
+            "Sun, 20 Oct 2024 18:59:48 GMT"
           ],
           "content-type": [
             "application/json; charset=utf-8"
@@ -42,7 +42,7 @@
             "*"
           ],
           "x-api-received": [
-            "2024-10-20T06:23:11.572Z"
+            "2024-10-20T18:59:48.336Z"
           ],
           "x-ratelimit": [
             "false"
@@ -57,7 +57,7 @@
             "2"
           ],
           "x-ratelimit-remaining-tokens": [
-            "3000"
+            "2891"
           ],
           "x-ratelimit-limit-tokens": [
             "3000"
@@ -66,13 +66,13 @@
             "v2"
           ],
           "x-api-call-start": [
-            "2024-10-20T06:23:11.580Z"
+            "2024-10-20T18:59:48.347Z"
           ],
           "x-api-call-end": [
-            "2024-10-20T06:23:12.003Z"
+            "2024-10-20T18:59:48.728Z"
           ],
           "etag": [
-            "W/\"222-WXOcTa7yRDI/jCdFBVNSYcPFSjg\""
+            "W/\"222-pNSWAUDRuVZ0d2liHVok8mbslrE\""
           ],
           "cf-cache-status": [
             "DYNAMIC"
@@ -95,10 +95,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "{\n  \"id\": \"chat-abd33c27b2404d70a0da46e4e3a1bf15\",\n  \"object\": \"chat.completion\",\n  \"created\": 1729405392,\n  \"model\": \"meta-llama/Llama-3.2-11B-Vision-Instruct-Turbo\",\n  \"prompt_logprobs\": null,\n  \"prompt\": [],\n  \"choices\": [\n    {\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": \"The image depicts a red balloon.\",\n        \"tool_calls\": []\n      },\n      \"logprobs\": null,\n      \"finish_reason\": \"stop\"\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 66,\n    \"total_tokens\": 74,\n    \"completion_tokens\": 8\n  }\n}"
+          "string": "{\n  \"id\": \"chat-fcb8d9571bdd4c6a9a9ecec74b3de2d0\",\n  \"object\": \"chat.completion\",\n  \"created\": 1729450788,\n  \"model\": \"meta-llama/Llama-3.2-11B-Vision-Instruct-Turbo\",\n  \"prompt_logprobs\": null,\n  \"prompt\": [],\n  \"choices\": [\n    {\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": \"The image depicts a red balloon.\",\n        \"tool_calls\": []\n      },\n      \"logprobs\": null,\n      \"finish_reason\": \"stop\"\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 66,\n    \"total_tokens\": 74,\n    \"completion_tokens\": 8\n  }\n}"
         }
       },
-      "recorded_at": "Sun, 20 Oct 2024 06:23:11 GMT"
+      "recorded_at": "Sun, 20 Oct 2024 18:59:48 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

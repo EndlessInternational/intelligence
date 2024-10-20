@@ -27,12 +27,14 @@ module Intelligence
 
       def translate_end_result( end_result )
         case end_result
-          when 'eos'
+          when 'eos', 'stop'
             :ended
-          when 'length'
+          # unfortunatelly eos seems to only work with certain models while others always return
+          # stop so for now there tomorrow ai will not support :end_sequence_encountered
+          # when 'stop'
+          #   :end_sequence_encountered
+         when 'length'
             :token_limit_exceeded
-          when 'stop'
-            :end_sequence_encountered
           when 'function_call'
             :tool_called
           else

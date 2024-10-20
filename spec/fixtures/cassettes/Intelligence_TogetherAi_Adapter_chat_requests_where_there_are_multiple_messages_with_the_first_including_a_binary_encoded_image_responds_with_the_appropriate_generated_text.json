@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Sun, 20 Oct 2024 06:23:12 GMT"
+            "Sun, 20 Oct 2024 18:59:49 GMT"
           ],
           "content-type": [
             "application/json; charset=utf-8"
@@ -42,7 +42,7 @@
             "*"
           ],
           "x-api-received": [
-            "2024-10-20T06:23:12.120Z"
+            "2024-10-20T18:59:48.866Z"
           ],
           "x-ratelimit": [
             "false"
@@ -57,7 +57,7 @@
             "1"
           ],
           "x-ratelimit-remaining-tokens": [
-            "2926"
+            "2817"
           ],
           "x-ratelimit-limit-tokens": [
             "3000"
@@ -66,13 +66,13 @@
             "v2"
           ],
           "x-api-call-start": [
-            "2024-10-20T06:23:12.127Z"
+            "2024-10-20T18:59:48.872Z"
           ],
           "x-api-call-end": [
-            "2024-10-20T06:23:12.527Z"
+            "2024-10-20T18:59:49.222Z"
           ],
           "etag": [
-            "W/\"213-e0UvWhsJ0N5G30DRxBFkYG1doPw\""
+            "W/\"213-e8jIyuUofqHU9fUxvHKzsbOlTU8\""
           ],
           "cf-cache-status": [
             "DYNAMIC"
@@ -95,10 +95,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "{\n  \"id\": \"chat-39b6d11d453c42ab9361537a3bb7a0a0\",\n  \"object\": \"chat.completion\",\n  \"created\": 1729405392,\n  \"model\": \"meta-llama/Llama-3.2-11B-Vision-Instruct-Turbo\",\n  \"prompt_logprobs\": null,\n  \"prompt\": [],\n  \"choices\": [\n    {\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": \"The color is red.\",\n        \"tool_calls\": []\n      },\n      \"logprobs\": null,\n      \"finish_reason\": \"stop\"\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 86,\n    \"total_tokens\": 92,\n    \"completion_tokens\": 6\n  }\n}"
+          "string": "{\n  \"id\": \"chat-be05bc959c5a4dfe8df3842d39345535\",\n  \"object\": \"chat.completion\",\n  \"created\": 1729450789,\n  \"model\": \"meta-llama/Llama-3.2-11B-Vision-Instruct-Turbo\",\n  \"prompt_logprobs\": null,\n  \"prompt\": [],\n  \"choices\": [\n    {\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": \"The color is red.\",\n        \"tool_calls\": []\n      },\n      \"logprobs\": null,\n      \"finish_reason\": \"stop\"\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 86,\n    \"total_tokens\": 92,\n    \"completion_tokens\": 6\n  }\n}"
         }
       },
-      "recorded_at": "Sun, 20 Oct 2024 06:23:12 GMT"
+      "recorded_at": "Sun, 20 Oct 2024 18:59:49 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

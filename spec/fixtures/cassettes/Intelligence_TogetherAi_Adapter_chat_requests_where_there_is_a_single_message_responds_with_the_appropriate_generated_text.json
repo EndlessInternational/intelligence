@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Sun, 20 Oct 2024 06:14:50 GMT"
+            "Sun, 20 Oct 2024 18:59:43 GMT"
           ],
           "content-type": [
             "application/json; charset=utf-8"
@@ -42,7 +42,7 @@
             "*"
           ],
           "x-api-received": [
-            "2024-10-20T06:14:50.105Z"
+            "2024-10-20T18:59:43.697Z"
           ],
           "x-ratelimit": [
             "false"
@@ -66,13 +66,13 @@
             "v2"
           ],
           "x-api-call-start": [
-            "2024-10-20T06:14:50.111Z"
+            "2024-10-20T18:59:43.704Z"
           ],
           "x-api-call-end": [
-            "2024-10-20T06:14:50.538Z"
+            "2024-10-20T18:59:43.894Z"
           ],
           "etag": [
-            "W/\"1fb-oUGgTCqMaZf3rLOI9X4VPqHKK7Q\""
+            "W/\"1fb-5zaDC97kaIgHuEEGYGnFdoqSzAE\""
           ],
           "cf-cache-status": [
             "DYNAMIC"
@@ -95,10 +95,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "{\n  \"id\": \"8d56deb30d602804-SEA\",\n  \"object\": \"chat.completion\",\n  \"created\": 1729404890,\n  \"model\": \"meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo\",\n  \"prompt\": [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"eos\",\n      \"seed\": 5184770634554649000,\n      \"logprobs\": null,\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": \"hello\",\n        \"tool_calls\": []\n      }\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 79,\n    \"completion_tokens\": 2,\n    \"total_tokens\": 81\n  }\n}"
+          "string": "{\n  \"id\": \"8d5b3f260c0276c2-SEA\",\n  \"object\": \"chat.completion\",\n  \"created\": 1729450783,\n  \"model\": \"meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo\",\n  \"prompt\": [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"eos\",\n      \"seed\": 9436391079425563000,\n      \"logprobs\": null,\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": \"hello\",\n        \"tool_calls\": []\n      }\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 79,\n    \"completion_tokens\": 2,\n    \"total_tokens\": 81\n  }\n}"
         }
       },
-      "recorded_at": "Sun, 20 Oct 2024 06:14:50 GMT"
+      "recorded_at": "Sun, 20 Oct 2024 18:59:44 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

@@ -51,10 +51,8 @@ RSpec.describe "#{Intelligence::Adapter[ :together_ai ]} stream requests", :toge
 
   include_examples 'stream requests'
   include_examples 'stream requests with token limit exceeded'
-  include_examples 'stream requests with stop sequence',
-                   adapter: :adapter_with_stop_sequence, end_reason: :end_sequence_encountered
+  include_examples 'stream requests with stop sequence', adapter: :adapter_with_stop_sequence
   include_examples 'stream requests without alternating roles'
-  include_examples 'stream requests with binary encoded images',
-                   adapter: :vision_adapter, end_reason: :end_sequence_encountered
+  include_examples 'stream requests with binary encoded images', adapter: :vision_adapter
 
 end
