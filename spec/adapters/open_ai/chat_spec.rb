@@ -41,17 +41,6 @@ RSpec.describe "#{Intelligence::Adapter[ :open_ai ]} chat requests", :open_ai do
     end
   end
 
-  let( :vision_adapter ) do
-    Intelligence::Adapter[ :open_ai ].build! do   
-      key                     ENV[ 'OPENAI_API_KEY' ]
-      chat_options do
-        model                 'gpt-4o-mini'
-        temperature           0
-        max_tokens            24
-      end
-    end
-  end
-
   include_examples 'chat requests'
   include_examples 'chat requests with token limit exceeded'
   include_examples 'chat requests with stop sequence'

@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Fri, 18 Oct 2024 02:57:17 GMT"
+            "Sun, 20 Oct 2024 06:10:10 GMT"
           ],
           "content-type": [
             "application/json"
@@ -63,7 +63,7 @@
             "/api/v1/chat/completions"
           ],
           "x-vercel-id": [
-            "pdx1::rnfnt-1729220236897-29968f281813"
+            "pdx1::hmk7f-1729404610407-ec7da1a3cbe2"
           ],
           "cf-cache-status": [
             "DYNAMIC"
@@ -80,10 +80,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n{\"id\":\"gen-1729220237-aIRNrpPHdxqm2UsHdDh2\",\"provider\":\"DeepInfra\",\"model\":\"meta-llama/llama-3.2-11b-vision-instruct\",\"object\":\"chat.completion\",\"created\":1729220237,\"choices\":[{\"logprobs\":null,\"finish_reason\":\"stop\",\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"one\\ntwo\\nthree\\nfour\\n\",\"refusal\":\"\"}}],\"usage\":{\"prompt_tokens\":105,\"completion_tokens\":1,\"total_tokens\":106}}"
+          "string": "\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n{\"id\":\"gen-1729404610-nHGiXTXT4hmNNrAykG1P\",\"provider\":\"DeepInfra\",\"model\":\"meta-llama/llama-3.2-11b-vision-instruct\",\"object\":\"chat.completion\",\"created\":1729404610,\"choices\":[{\"logprobs\":null,\"finish_reason\":\"stop\",\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"one\\ntwo\\nthree\\nfour\\n\",\"refusal\":\"\"}}],\"usage\":{\"prompt_tokens\":105,\"completion_tokens\":1,\"total_tokens\":106}}"
         }
       },
-      "recorded_at": "Fri, 18 Oct 2024 02:57:17 GMT"
+      "recorded_at": "Sun, 20 Oct 2024 06:10:10 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

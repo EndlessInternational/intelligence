@@ -42,17 +42,6 @@ RSpec.describe "#{Intelligence::Adapter[ :anthropic ]} chat requests", :anthropi
     end
   end
 
-  let( :vision_adapter ) do
-    Intelligence::Adapter[ :anthropic ].build! do   
-      key   ENV[ 'ANTHROPIC_API_KEY' ]
-      chat_options do
-        model                 'claude-3-5-sonnet-20240620'
-        max_tokens            32
-        temperature           0
-      end
-    end
-  end
-
   include_examples 'chat requests'
   include_examples 'chat requests with token limit exceeded'
 

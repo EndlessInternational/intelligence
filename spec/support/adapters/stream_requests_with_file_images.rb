@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-RSpec.shared_examples 'stream requests with file images' do 
+RSpec.shared_examples 'stream requests with file images' do | options = {} | 
 
   let( :file_content_of_red_balloon ) {
     Intelligence::MessageContent::File.build do 
@@ -21,7 +21,7 @@ RSpec.shared_examples 'stream requests with file images' do
       conversation.messages.last.append_content( file_content_of_red_balloon )
 
       text = ''
-      response = create_and_make_stream_request( vision_adapter, conversation ) do | result | 
+      response = create_and_make_stream_request( send( options[ :adapter ] || :adapter ), conversation ) do | result | 
         
         expect( result ).to be_a( Intelligence::ChatResult )
         expect( result.choices ).not_to be_nil
@@ -39,7 +39,7 @@ RSpec.shared_examples 'stream requests with file images' do
       expect( response.result ).to be_a( Intelligence::ChatResult )
       expect( response.result.choices ).not_to be_nil
       expect( response.result.choices.first ).to be_a( Intelligence::ChatResultChoice )
-      expect( response.result.choices.first.end_reason ).to eq( :ended )
+      expect( response.result.choices.first.end_reason ).to eq( options[ :end_reason ] || :ended )
 
       expect( text ).to match( /balloon/i ), "Expected text to include 'balloon' but got '#{text}'."
     end
@@ -55,7 +55,7 @@ RSpec.shared_examples 'stream requests with file images' do
       conversation.messages << build_text_message( :user, "what color?\n" )
       
       text = ''
-      response = create_and_make_stream_request( vision_adapter, conversation ) do | result | 
+      response = create_and_make_stream_request( send( options[ :adapter ] || :adapter ), conversation ) do | result | 
         
         expect( result ).to be_a( Intelligence::ChatResult )
         expect( result.choices ).not_to be_nil
@@ -73,7 +73,7 @@ RSpec.shared_examples 'stream requests with file images' do
       expect( response.result ).to be_a( Intelligence::ChatResult )
       expect( response.result.choices ).not_to be_nil
       expect( response.result.choices.first ).to be_a( Intelligence::ChatResultChoice )
-      expect( response.result.choices.first.end_reason ).to eq( :ended )
+      expect( response.result.choices.first.end_reason ).to eq( options[ :end_reason ] || :ended )
 
       expect( text ).to match( /red/i ), "Expected text to include 'red' but got '#{text}'."
 
@@ -91,7 +91,7 @@ RSpec.shared_examples 'stream requests with file images' do
       conversation.messages << message 
       
       text = ''
-      response = create_and_make_stream_request( vision_adapter, conversation ) do | result | 
+      response = create_and_make_stream_request( send( options[ :adapter ] || :adapter ), conversation ) do | result | 
         
         expect( result ).to be_a( Intelligence::ChatResult )
         expect( result.choices ).not_to be_nil
@@ -109,7 +109,7 @@ RSpec.shared_examples 'stream requests with file images' do
       expect( response.result ).to be_a( Intelligence::ChatResult )
       expect( response.result.choices ).not_to be_nil
       expect( response.result.choices.first ).to be_a( Intelligence::ChatResultChoice )
-      expect( response.result.choices.first.end_reason ).to eq( :ended )
+      expect( response.result.choices.first.end_reason ).to eq( options[ :end_reason ] || :ended )
 
       expect( text ).to match( /balloons/i ), "Expected text to include 'balloons' but got '#{text}'."
     

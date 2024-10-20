@@ -125,6 +125,7 @@ RSpec.describe "#{Intelligence::Adapter[ :together_ai ]} stream requests", :toge
   end
   
   include_examples 'stream requests without alternating roles'
-  # include_examples 'stream requests with binary encoded images'
+  include_examples 'stream requests with binary encoded images',
+                   adapter: :vision_adapter, end_reason: :end_sequence_encountered
 
 end

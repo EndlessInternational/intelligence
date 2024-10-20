@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Fri, 18 Oct 2024 02:57:36 GMT"
+            "Sun, 20 Oct 2024 06:14:57 GMT"
           ],
           "content-type": [
             "text/event-stream;charset=utf-8"
@@ -42,7 +42,7 @@
             "*"
           ],
           "x-api-received": [
-            "2024-10-18T02:57:35.986Z"
+            "2024-10-20T06:14:56.536Z"
           ],
           "x-ratelimit": [
             "false"
@@ -51,13 +51,13 @@
             "10"
           ],
           "x-ratelimit-remaining": [
-            "16"
+            "17"
           ],
           "x-ratelimit-reset": [
             "1"
           ],
           "x-ratelimit-remaining-tokens": [
-            "2544"
+            "2736"
           ],
           "x-ratelimit-limit-tokens": [
             "3000"
@@ -66,7 +66,7 @@
             "v2"
           ],
           "x-api-call-start": [
-            "2024-10-18T02:57:35.993Z"
+            "2024-10-20T06:14:56.541Z"
           ],
           "cache-control": [
             "no-cache, no-transform"
@@ -89,10 +89,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "data: {\"id\":\"8d454307d803ba09-SEA\",\"object\":\"chat.completion.chunk\",\"created\":1729220255,\"choices\":[{\"index\":0,\"text\":\"hello\",\"logprobs\":null,\"finish_reason\":null,\"seed\":null,\"delta\":{\"token_id\":15339,\"role\":\"assistant\",\"content\":\"hello\",\"tool_calls\":null}}],\"model\":\"meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo\",\"usage\":null}\n\ndata: {\"id\":\"8d454307d803ba09-SEA\",\"object\":\"chat.completion.chunk\",\"created\":1729220255,\"choices\":[{\"index\":0,\"text\":\"\",\"logprobs\":null,\"finish_reason\":\"eos\",\"seed\":13957424601200472000,\"delta\":{\"token_id\":128009,\"role\":\"assistant\",\"content\":\"\",\"tool_calls\":null}}],\"model\":\"meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo\",\"usage\":{\"prompt_tokens\":79,\"completion_tokens\":2,\"total_tokens\":81}}\n\ndata: [DONE]\n\n"
+          "string": "data: {\"id\":\"8d56dedb4f0ceb97-SEA\",\"object\":\"chat.completion.chunk\",\"created\":1729404896,\"choices\":[{\"index\":0,\"text\":\"hello\",\"logprobs\":null,\"finish_reason\":null,\"seed\":null,\"delta\":{\"token_id\":15339,\"role\":\"assistant\",\"content\":\"hello\",\"tool_calls\":null}}],\"model\":\"meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo\",\"usage\":null}\n\ndata: {\"id\":\"8d56dedb4f0ceb97-SEA\",\"object\":\"chat.completion.chunk\",\"created\":1729404896,\"choices\":[{\"index\":0,\"text\":\"\",\"logprobs\":null,\"finish_reason\":\"eos\",\"seed\":8270813607266053000,\"delta\":{\"token_id\":128009,\"role\":\"assistant\",\"content\":\"\",\"tool_calls\":null}}],\"model\":\"meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo\",\"usage\":{\"prompt_tokens\":79,\"completion_tokens\":2,\"total_tokens\":81}}\n\ndata: [DONE]\n\n"
         }
       },
-      "recorded_at": "Fri, 18 Oct 2024 02:57:36 GMT"
+      "recorded_at": "Sun, 20 Oct 2024 06:14:57 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

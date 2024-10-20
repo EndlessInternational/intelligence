@@ -33,18 +33,6 @@ RSpec.describe "#{Intelligence::Adapter[ :anthropic ]} stream requests", :anthro
     end
   end
 
-  let( :vision_adapter ) do
-    Intelligence::Adapter[ :anthropic ].build! do   
-      key   ENV[ 'ANTHROPIC_API_KEY' ]
-      chat_options do
-        model                 'claude-3-5-sonnet-20240620'
-        max_tokens            24
-        temperature           0
-        stream                true
-      end
-    end
-  end
-
   include_examples 'stream requests'
   include_examples 'stream requests with token limit exceeded'
 

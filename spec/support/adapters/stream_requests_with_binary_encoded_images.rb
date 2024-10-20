@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-RSpec.shared_examples 'stream requests with binary encoded images' do 
+RSpec.shared_examples 'stream requests with binary encoded images' do | options = {} |
 
   let( :binary_content_of_red_balloon ) {
     build_binary_content( fixture_file_path( 'single-red-balloon.png'  ) )
@@ -17,7 +17,7 @@ RSpec.shared_examples 'stream requests with binary encoded images' do
       conversation.messages.last.append_content( binary_content_of_red_balloon )
 
       text = ''
-      response = create_and_make_stream_request( vision_adapter, conversation ) do | result | 
+      response = create_and_make_stream_request( send( options[ :adapter ] || :adapter ), conversation ) do | result | 
         
         expect( result ).to be_a( Intelligence::ChatResult )
         expect( result.choices ).not_to be_nil
@@ -35,7 +35,7 @@ RSpec.shared_examples 'stream requests with binary encoded images' do
       expect( response.result ).to be_a( Intelligence::ChatResult )
       expect( response.result.choices ).not_to be_nil
       expect( response.result.choices.first ).to be_a( Intelligence::ChatResultChoice )
-      expect( response.result.choices.first.end_reason ).to eq( :ended )
+      expect( response.result.choices.first.end_reason ).to eq( options[ :end_reason ] || :ended )
 
       expect( text ).to match( /balloon/i ), "Expected text to include 'balloon' but got '#{text}'."
     end
@@ -51,7 +51,7 @@ RSpec.shared_examples 'stream requests with binary encoded images' do
       conversation.messages << build_text_message( :user, "what color?\nrespond in less than 16 words" )
       
       text = ''
-      response = create_and_make_stream_request( vision_adapter, conversation ) do | result | 
+      response = create_and_make_stream_request( send( options[ :adapter ] || :adapter ), conversation ) do | result | 
         
         expect( result ).to be_a( Intelligence::ChatResult )
         expect( result.choices ).not_to be_nil
@@ -69,7 +69,7 @@ RSpec.shared_examples 'stream requests with binary encoded images' do
       expect( response.result ).to be_a( Intelligence::ChatResult )
       expect( response.result.choices ).not_to be_nil
       expect( response.result.choices.first ).to be_a( Intelligence::ChatResultChoice )
-      expect( response.result.choices.first.end_reason ).to eq( :ended )
+      expect( response.result.choices.first.end_reason ).to eq( options[ :end_reason ] || :ended )
 
       expect( text ).to match( /red/i ), "Expected text to include 'red' but got '#{text}'."
 
@@ -87,7 +87,7 @@ RSpec.shared_examples 'stream requests with binary encoded images' do
       conversation.messages << message 
       
       text = ''
-      response = create_and_make_stream_request( vision_adapter, conversation ) do | result | 
+      response = create_and_make_stream_request( send( options[ :adapter ] || :adapter ), conversation ) do | result | 
         
         expect( result ).to be_a( Intelligence::ChatResult )
         expect( result.choices ).not_to be_nil
@@ -105,7 +105,7 @@ RSpec.shared_examples 'stream requests with binary encoded images' do
       expect( response.result ).to be_a( Intelligence::ChatResult )
       expect( response.result.choices ).not_to be_nil
       expect( response.result.choices.first ).to be_a( Intelligence::ChatResultChoice )
-      expect( response.result.choices.first.end_reason ).to eq( :ended )
+      expect( response.result.choices.first.end_reason ).to eq( options[ :end_reason ] || :ended )
 
       expect( text ).to match( /balloons/i ), "Expected text to include 'balloons' but got '#{text}'."
     

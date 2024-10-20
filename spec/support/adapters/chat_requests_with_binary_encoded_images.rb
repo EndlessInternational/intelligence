@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-RSpec.shared_examples 'chat requests with binary encoded images' do 
+RSpec.shared_examples 'chat requests with binary encoded images' do | options = {} |
 
   let( :binary_content_of_red_balloon ) {
     build_binary_content( fixture_file_path( 'single-red-balloon.png'  ) )
@@ -15,7 +15,7 @@ RSpec.shared_examples 'chat requests with binary encoded images' do
 
       conversation = create_conversation( "identify this image; respond in less that 16 words\n" )
       conversation.messages.last.append_content( binary_content_of_red_balloon )
-      response = create_and_make_chat_request( vision_adapter, conversation )
+      response = create_and_make_chat_request( send( options[ :adapter ] || :adapter ), conversation )
 
       expect( response.success? ).to be( true ), response_error_description( response )
       expect( response.result ).to be_a( Intelligence::ChatResult )
@@ -24,7 +24,7 @@ RSpec.shared_examples 'chat requests with binary encoded images' do
       expect( response.result.choices.first ).to be_a( Intelligence::ChatResultChoice )
 
       choice = response.result.choices.first
-      expect( choice.end_reason ).to eq( :ended )
+      expect( choice.end_reason ).to eq( options[ :end_reason ] || :ended  )
       expect( choice.message ).to be_a( Intelligence::Message )
       expect( choice.message.contents ).not_to be_nil
       expect( choice.message.contents.length ).to eq( 1 )
@@ -41,7 +41,7 @@ RSpec.shared_examples 'chat requests with binary encoded images' do
       conversation.messages.last.append_content( binary_content_of_red_balloon )
       conversation.messages << build_text_message( :assistant, "balloon\n" )
       conversation.messages << build_text_message( :user, "what color?\nrespond in less that 16 words\m" )
-      response = create_and_make_chat_request( vision_adapter, conversation )
+      response = create_and_make_chat_request( send( options[ :adapter ] || :adapter ) , conversation )
       
       expect( response.success? ).to be( true ), response_error_description( response )
       expect( response.result ).to be_a( Intelligence::ChatResult )
@@ -50,7 +50,7 @@ RSpec.shared_examples 'chat requests with binary encoded images' do
       expect( response.result.choices.first ).to be_a( Intelligence::ChatResultChoice )
 
       choice = response.result.choices.first
-      expect( choice.end_reason ).to eq( :ended )
+      expect( choice.end_reason ).to eq( options[ :end_reason ] || :ended  )
       expect( choice.message ).to be_a( Intelligence::Message )
       expect( choice.message.contents ).not_to be_nil
       expect( choice.message.contents.length ).to eq( 1 )
@@ -71,7 +71,8 @@ RSpec.shared_examples 'chat requests with binary encoded images' do
       message = build_text_message( :user, "what about this image?\nrespond in less that 16 words\n" )
       message.append_content( binary_content_of_three_balloons )
       conversation.messages << message 
-      response = create_and_make_chat_request( vision_adapter, conversation )
+      response = create_and_make_chat_request( send( options[ :adapter ] || :adapter ) , conversation )
+
       
       expect( response.success? ).to be( true ), response_error_description( response )
       expect( response.result ).to be_a( Intelligence::ChatResult )
@@ -80,7 +81,7 @@ RSpec.shared_examples 'chat requests with binary encoded images' do
       expect( response.result.choices.first ).to be_a( Intelligence::ChatResultChoice )
 
       choice = response.result.choices.first
-      expect( choice.end_reason ).to eq( :ended )
+      expect( choice.end_reason ).to eq( options[ :end_reason ] || :ended  )
       expect( choice.message ).to be_a( Intelligence::Message )
       expect( choice.message.contents ).not_to be_nil
       expect( choice.message.contents.length ).to eq( 1 )

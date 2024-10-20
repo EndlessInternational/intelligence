@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Fri, 18 Oct 2024 02:57:16 GMT"
+            "Sun, 20 Oct 2024 06:10:09 GMT"
           ],
           "content-type": [
             "application/json"
@@ -63,13 +63,10 @@
             "/api/v1/chat/completions"
           ],
           "x-vercel-id": [
-            "pdx1::hhglb-1729220236167-35794b46645d"
+            "pdx1::58f2p-1729404609848-f8c429ca845f"
           ],
           "cf-cache-status": [
             "DYNAMIC"
-          ],
-          "vary": [
-            "accept-encoding"
           ],
           "server": [
             "cloudflare"
@@ -83,10 +80,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n{\"id\":\"gen-1729220236-kjlbCgmOIjjkZ9FoZlZr\",\"provider\":\"Together\",\"model\":\"meta-llama/llama-3.2-11b-vision-instruct\",\"object\":\"chat.completion\",\"created\":1729220236,\"choices\":[{\"logprobs\":null,\"finish_reason\":\"length\",\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"one\\ntwo\\nthree\\nfour\\nfive\\nsix\\nseven\\neight\\n\",\"refusal\":\"\"}}],\"usage\":{\"prompt_tokens\":103,\"completion_tokens\":16,\"total_tokens\":119}}"
+          "string": "\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n{\"id\":\"gen-1729404610-qvl8GmehoQTZgC29VYjS\",\"provider\":\"Fireworks\",\"model\":\"meta-llama/llama-3.2-11b-vision-instruct\",\"object\":\"chat.completion\",\"created\":1729404610,\"choices\":[{\"logprobs\":null,\"finish_reason\":\"length\",\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"one\\ntwo\\nthree\\nfour\\nfive\\nsix\\nseven\\neight\\n\",\"refusal\":\"\"}}],\"usage\":{\"prompt_tokens\":103,\"completion_tokens\":16,\"total_tokens\":119}}"
         }
       },
-      "recorded_at": "Fri, 18 Oct 2024 02:57:16 GMT"
+      "recorded_at": "Sun, 20 Oct 2024 06:10:10 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Fri, 18 Oct 2024 02:57:15 GMT"
+            "Sun, 20 Oct 2024 06:10:08 GMT"
           ],
           "content-type": [
             "application/json"
@@ -63,7 +63,7 @@
             "/api/v1/chat/completions"
           ],
           "x-vercel-id": [
-            "pdx1::gr8hv-1729220235001-c8f0c2ccac50"
+            "pdx1::j9xkr-1729404608705-834d34ccbe2c"
           ],
           "cf-cache-status": [
             "DYNAMIC"
@@ -80,10 +80,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n{\"id\":\"gen-1729220235-OAVzmmgTfAvXA1FiRsnD\",\"provider\":\"Together\",\"model\":\"meta-llama/llama-3.2-11b-vision-instruct\",\"object\":\"chat.completion\",\"created\":1729220235,\"choices\":[{\"logprobs\":null,\"finish_reason\":\"stop\",\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"This is a test, respond with 'test'.\",\"refusal\":\"\"}}],\"usage\":{\"prompt_tokens\":90,\"completion_tokens\":11,\"total_tokens\":101}}"
+          "string": "\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n{\"id\":\"gen-1729404608-wgDhTlOKxkEuifc7vyH6\",\"provider\":\"Together\",\"model\":\"meta-llama/llama-3.2-11b-vision-instruct\",\"object\":\"chat.completion\",\"created\":1729404608,\"choices\":[{\"logprobs\":null,\"finish_reason\":\"stop\",\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"This is a test, respond with 'test'.\",\"refusal\":\"\"}}],\"usage\":{\"prompt_tokens\":90,\"completion_tokens\":11,\"total_tokens\":101}}"
         }
       },
-      "recorded_at": "Fri, 18 Oct 2024 02:57:15 GMT"
+      "recorded_at": "Sun, 20 Oct 2024 06:10:09 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

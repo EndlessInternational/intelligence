@@ -117,6 +117,7 @@ RSpec.describe "#{Intelligence::Adapter[ :together_ai ]} chat requests", :togeth
 
   include_examples 'chat requests with error response'
   include_examples 'chat requests without alternating roles'
-  # include_examples 'chat requests with binary encoded images'
+  include_examples 'chat requests with binary encoded images', 
+                   adapter: :vision_adapter, end_reason: :end_sequence_encountered
 
 end

@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Fri, 18 Oct 2024 02:57:38 GMT"
+            "Sun, 20 Oct 2024 06:14:59 GMT"
           ],
           "content-type": [
             "text/event-stream;charset=utf-8"
@@ -42,7 +42,7 @@
             "*"
           ],
           "x-api-received": [
-            "2024-10-18T02:57:38.149Z"
+            "2024-10-20T06:14:58.793Z"
           ],
           "x-ratelimit": [
             "false"
@@ -51,13 +51,13 @@
             "10"
           ],
           "x-ratelimit-remaining": [
-            "17"
+            "16"
           ],
           "x-ratelimit-reset": [
-            "1"
+            "0"
           ],
           "x-ratelimit-remaining-tokens": [
-            "2648"
+            "2567"
           ],
           "x-ratelimit-limit-tokens": [
             "3000"
@@ -66,7 +66,7 @@
             "v2"
           ],
           "x-api-call-start": [
-            "2024-10-18T02:57:38.156Z"
+            "2024-10-20T06:14:58.798Z"
           ],
           "cache-control": [
             "no-cache, no-transform"
@@ -89,10 +89,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "data: {\"id\":\"8d4543155b7275d6-SEA\",\"object\":\"chat.completion.chunk\",\"created\":1729220258,\"choices\":[{\"index\":0,\"text\":\"one\",\"logprobs\":null,\"finish_reason\":null,\"seed\":null,\"delta\":{\"token_id\":606,\"role\":\"assistant\",\"content\":\"one\",\"tool_calls\":null}}],\"model\":\"meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo\",\"usage\":null}\n\ndata: {\"id\":\"8d4543155b7275d6-SEA\",\"object\":\"chat.completion.chunk\",\"created\":1729220258,\"choices\":[{\"index\":0,\"text\":\"\\n\",\"logprobs\":null,\"finish_reason\":null,\"seed\":null,\"delta\":{\"token_id\":198,\"role\":\"assistant\",\"content\":\"\\n\",\"tool_calls\":null}}],\"model\":\"meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo\",\"usage\":null}\n\ndata: {\"id\":\"8d4543155b7275d6-SEA\",\"object\":\"chat.completion.chunk\",\"created\":1729220258,\"choices\":[{\"index\":0,\"text\":\"two\",\"logprobs\":null,\"finish_reason\":null,\"seed\":null,\"delta\":{\"token_id\":20375,\"role\":\"assistant\",\"content\":\"two\",\"tool_calls\":null}}],\"model\":\"meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo\",\"usage\":null}\n\ndata: {\"id\":\"8d4543155b7275d6-SEA\",\"object\":\"chat.completion.chunk\",\"created\":1729220258,\"choices\":[{\"index\":0,\"text\":\"\\n\",\"logprobs\":null,\"finish_reason\":null,\"seed\":null,\"delta\":{\"token_id\":198,\"role\":\"assistant\",\"content\":\"\\n\",\"tool_calls\":null}}],\"model\":\"meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo\",\"usage\":null}\n\ndata: {\"id\":\"8d4543155b7275d6-SEA\",\"object\":\"chat.completion.chunk\",\"created\":1729220258,\"choices\":[{\"index\":0,\"text\":\"three\",\"logprobs\":null,\"finish_reason\":null,\"seed\":null,\"delta\":{\"token_id\":28956,\"role\":\"assistant\",\"content\":\"three\",\"tool_calls\":null}}],\"model\":\"meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo\",\"usage\":null}\n\ndata: {\"id\":\"8d4543155b7275d6-SEA\",\"object\":\"chat.completion.chunk\",\"created\":1729220258,\"choices\":[{\"index\":0,\"text\":\"\\n\",\"logprobs\":null,\"finish_reason\":null,\"seed\":null,\"delta\":{\"token_id\":198,\"role\":\"assistant\",\"content\":\"\\n\",\"tool_calls\":null}}],\"model\":\"meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo\",\"usage\":null}\n\ndata: {\"id\":\"8d4543155b7275d6-SEA\",\"object\":\"chat.completion.chunk\",\"created\":1729220258,\"choices\":[{\"index\":0,\"text\":\"four\",\"logprobs\":null,\"finish_reason\":null,\"seed\":null,\"delta\":{\"token_id\":35124,\"role\":\"assistant\",\"content\":\"four\",\"tool_calls\":null}}],\"model\":\"meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo\",\"usage\":null}\n\ndata: {\"id\":\"8d4543155b7275d6-SEA\",\"object\":\"chat.completion.chunk\",\"created\":1729220258,\"choices\":[{\"index\":0,\"text\":\"\\n\",\"logprobs\":null,\"finish_reason\":null,\"seed\":null,\"delta\":{\"token_id\":198,\"role\":\"assistant\",\"content\":\"\\n\",\"tool_calls\":null}}],\"model\":\"meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo\",\"usage\":null}\n\ndata: {\"id\":\"8d4543155b7275d6-SEA\",\"object\":\"chat.completion.chunk\",\"created\":1729220258,\"choices\":[{\"index\":0,\"text\":\"\",\"logprobs\":null,\"finish_reason\":\"stop\",\"seed\":7653552297243730000,\"delta\":{\"token_id\":53770,\"role\":\"assistant\",\"content\":\"\",\"tool_calls\":null}}],\"model\":\"meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo\",\"usage\":{\"prompt_tokens\":85,\"completion_tokens\":9,\"total_tokens\":94}}\n\ndata: [DONE]\n\n"
+          "string": "data: {\"id\":\"8d56dee95bc0def6-SEA\",\"object\":\"chat.completion.chunk\",\"created\":1729404898,\"choices\":[{\"index\":0,\"text\":\"one\",\"logprobs\":null,\"finish_reason\":null,\"seed\":null,\"delta\":{\"token_id\":606,\"role\":\"assistant\",\"content\":\"one\",\"tool_calls\":null}}],\"model\":\"meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo\",\"usage\":null}\n\ndata: {\"id\":\"8d56dee95bc0def6-SEA\",\"object\":\"chat.completion.chunk\",\"created\":1729404898,\"choices\":[{\"index\":0,\"text\":\"\\n\",\"logprobs\":null,\"finish_reason\":null,\"seed\":null,\"delta\":{\"token_id\":198,\"role\":\"assistant\",\"content\":\"\\n\",\"tool_calls\":null}}],\"model\":\"meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo\",\"usage\":null}\n\ndata: {\"id\":\"8d56dee95bc0def6-SEA\",\"object\":\"chat.completion.chunk\",\"created\":1729404898,\"choices\":[{\"index\":0,\"text\":\"two\",\"logprobs\":null,\"finish_reason\":null,\"seed\":null,\"delta\":{\"token_id\":20375,\"role\":\"assistant\",\"content\":\"two\",\"tool_calls\":null}}],\"model\":\"meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo\",\"usage\":null}\n\ndata: {\"id\":\"8d56dee95bc0def6-SEA\",\"object\":\"chat.completion.chunk\",\"created\":1729404898,\"choices\":[{\"index\":0,\"text\":\"\\n\",\"logprobs\":null,\"finish_reason\":null,\"seed\":null,\"delta\":{\"token_id\":198,\"role\":\"assistant\",\"content\":\"\\n\",\"tool_calls\":null}}],\"model\":\"meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo\",\"usage\":null}\n\ndata: {\"id\":\"8d56dee95bc0def6-SEA\",\"object\":\"chat.completion.chunk\",\"created\":1729404898,\"choices\":[{\"index\":0,\"text\":\"three\",\"logprobs\":null,\"finish_reason\":null,\"seed\":null,\"delta\":{\"token_id\":28956,\"role\":\"assistant\",\"content\":\"three\",\"tool_calls\":null}}],\"model\":\"meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo\",\"usage\":null}\n\ndata: {\"id\":\"8d56dee95bc0def6-SEA\",\"object\":\"chat.completion.chunk\",\"created\":1729404898,\"choices\":[{\"index\":0,\"text\":\"\\n\",\"logprobs\":null,\"finish_reason\":null,\"seed\":null,\"delta\":{\"token_id\":198,\"role\":\"assistant\",\"content\":\"\\n\",\"tool_calls\":null}}],\"model\":\"meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo\",\"usage\":null}\n\ndata: {\"id\":\"8d56dee95bc0def6-SEA\",\"object\":\"chat.completion.chunk\",\"created\":1729404898,\"choices\":[{\"index\":0,\"text\":\"four\",\"logprobs\":null,\"finish_reason\":null,\"seed\":null,\"delta\":{\"token_id\":35124,\"role\":\"assistant\",\"content\":\"four\",\"tool_calls\":null}}],\"model\":\"meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo\",\"usage\":null}\n\ndata: {\"id\":\"8d56dee95bc0def6-SEA\",\"object\":\"chat.completion.chunk\",\"created\":1729404898,\"choices\":[{\"index\":0,\"text\":\"\\n\",\"logprobs\":null,\"finish_reason\":null,\"seed\":null,\"delta\":{\"token_id\":198,\"role\":\"assistant\",\"content\":\"\\n\",\"tool_calls\":null}}],\"model\":\"meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo\",\"usage\":null}\n\ndata: {\"id\":\"8d56dee95bc0def6-SEA\",\"object\":\"chat.completion.chunk\",\"created\":1729404898,\"choices\":[{\"index\":0,\"text\":\"\",\"logprobs\":null,\"finish_reason\":\"stop\",\"seed\":4516307313984837000,\"delta\":{\"token_id\":53770,\"role\":\"assistant\",\"content\":\"\",\"tool_calls\":null}}],\"model\":\"meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo\",\"usage\":{\"prompt_tokens\":85,\"completion_tokens\":9,\"total_tokens\":94}}\n\ndata: [DONE]\n\n"
         }
       },
-      "recorded_at": "Fri, 18 Oct 2024 02:57:38 GMT"
+      "recorded_at": "Sun, 20 Oct 2024 06:14:59 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

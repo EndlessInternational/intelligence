@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Fri, 18 Oct 2024 02:57:24 GMT"
+            "Sun, 20 Oct 2024 06:10:16 GMT"
           ],
           "content-type": [
             "text/event-stream"
@@ -63,7 +63,7 @@
             "/api/v1/chat/completions"
           ],
           "x-vercel-id": [
-            "pdx1::qz67z-1729220244032-f2d53c921045"
+            "pdx1::7rns5-1729404616549-e3b76f9ca15c"
           ],
           "cf-cache-status": [
             "DYNAMIC"
@@ -77,10 +77,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "data: {\"id\":\"gen-1729220244-2t5Qn0tSltiFuzXXTp5d\",\"provider\":\"Fireworks\",\"model\":\"meta-llama/llama-3.2-11b-vision-instruct\",\"object\":\"chat.completion.chunk\",\"created\":1729220244,\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"\"},\"finish_reason\":null}]}\n\ndata: {\"id\":\"gen-1729220244-2t5Qn0tSltiFuzXXTp5d\",\"provider\":\"Fireworks\",\"model\":\"meta-llama/llama-3.2-11b-vision-instruct\",\"object\":\"chat.completion.chunk\",\"created\":1729220244,\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"one\\n\"},\"finish_reason\":null}]}\n\ndata: {\"id\":\"gen-1729220244-2t5Qn0tSltiFuzXXTp5d\",\"provider\":\"Fireworks\",\"model\":\"meta-llama/llama-3.2-11b-vision-instruct\",\"object\":\"chat.completion.chunk\",\"created\":1729220244,\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"two\\nthree\\nfour\\n\"},\"finish_reason\":null}]}\n\ndata: {\"id\":\"gen-1729220244-2t5Qn0tSltiFuzXXTp5d\",\"provider\":\"Fireworks\",\"model\":\"meta-llama/llama-3.2-11b-vision-instruct\",\"object\":\"chat.completion.chunk\",\"created\":1729220244,\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"\"},\"finish_reason\":\"stop\"}]}\n\ndata: {\"id\":\"gen-1729220244-2t5Qn0tSltiFuzXXTp5d\",\"provider\":\"Fireworks\",\"model\":\"meta-llama/llama-3.2-11b-vision-instruct\",\"object\":\"chat.completion.chunk\",\"created\":1729220244,\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"\"},\"finish_reason\":null,\"logprobs\":null}],\"usage\":{\"prompt_tokens\":103,\"completion_tokens\":9,\"total_tokens\":112}}\n\ndata: [DONE]\n\n"
+          "string": "data: {\"id\":\"gen-1729404616-20cnV72Ihp4q31yflffr\",\"provider\":\"Together\",\"model\":\"meta-llama/llama-3.2-11b-vision-instruct\",\"object\":\"chat.completion.chunk\",\"created\":1729404616,\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"\"},\"finish_reason\":null,\"logprobs\":null}]}\n\ndata: {\"id\":\"gen-1729404616-20cnV72Ihp4q31yflffr\",\"provider\":\"Together\",\"model\":\"meta-llama/llama-3.2-11b-vision-instruct\",\"object\":\"chat.completion.chunk\",\"created\":1729404616,\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"\"},\"finish_reason\":null,\"logprobs\":null}]}\n\ndata: {\"id\":\"gen-1729404616-20cnV72Ihp4q31yflffr\",\"provider\":\"Together\",\"model\":\"meta-llama/llama-3.2-11b-vision-instruct\",\"object\":\"chat.completion.chunk\",\"created\":1729404616,\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"\"},\"finish_reason\":null,\"logprobs\":null}]}\n\ndata: {\"id\":\"gen-1729404616-20cnV72Ihp4q31yflffr\",\"provider\":\"Together\",\"model\":\"meta-llama/llama-3.2-11b-vision-instruct\",\"object\":\"chat.completion.chunk\",\"created\":1729404616,\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"\"},\"finish_reason\":null,\"logprobs\":null}]}\n\ndata: {\"id\":\"gen-1729404616-20cnV72Ihp4q31yflffr\",\"provider\":\"Together\",\"model\":\"meta-llama/llama-3.2-11b-vision-instruct\",\"object\":\"chat.completion.chunk\",\"created\":1729404616,\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"\"},\"finish_reason\":null,\"logprobs\":null}]}\n\ndata: {\"id\":\"gen-1729404616-20cnV72Ihp4q31yflffr\",\"provider\":\"Together\",\"model\":\"meta-llama/llama-3.2-11b-vision-instruct\",\"object\":\"chat.completion.chunk\",\"created\":1729404616,\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"\"},\"finish_reason\":null,\"logprobs\":null}]}\n\ndata: {\"id\":\"gen-1729404616-20cnV72Ihp4q31yflffr\",\"provider\":\"Together\",\"model\":\"meta-llama/llama-3.2-11b-vision-instruct\",\"object\":\"chat.completion.chunk\",\"created\":1729404616,\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"\"},\"finish_reason\":null,\"logprobs\":null}]}\n\ndata: {\"id\":\"gen-1729404616-20cnV72Ihp4q31yflffr\",\"provider\":\"Together\",\"model\":\"meta-llama/llama-3.2-11b-vision-instruct\",\"object\":\"chat.completion.chunk\",\"created\":1729404616,\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"one\\n\"},\"finish_reason\":null,\"logprobs\":null}]}\n\ndata: {\"id\":\"gen-1729404616-20cnV72Ihp4q31yflffr\",\"provider\":\"Together\",\"model\":\"meta-llama/llama-3.2-11b-vision-instruct\",\"object\":\"chat.completion.chunk\",\"created\":1729404616,\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"t\"},\"finish_reason\":null,\"logprobs\":null}]}\n\ndata: {\"id\":\"gen-1729404616-20cnV72Ihp4q31yflffr\",\"provider\":\"Together\",\"model\":\"meta-llama/llama-3.2-11b-vision-instruct\",\"object\":\"chat.completion.chunk\",\"created\":1729404616,\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"wo\\nthree\\nfour\\n\"},\"finish_reason\":\"stop\",\"logprobs\":null}]}\n\n: OPENROUTER PROCESSING\n\ndata: {\"id\":\"gen-1729404616-20cnV72Ihp4q31yflffr\",\"provider\":\"Together\",\"model\":\"meta-llama/llama-3.2-11b-vision-instruct\",\"object\":\"chat.completion.chunk\",\"created\":1729404616,\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"\"},\"finish_reason\":null,\"logprobs\":null}],\"usage\":{\"prompt_tokens\":103,\"completion_tokens\":9,\"total_tokens\":112}}\n\ndata: [DONE]\n\n"
         }
       },
-      "recorded_at": "Fri, 18 Oct 2024 02:57:24 GMT"
+      "recorded_at": "Sun, 20 Oct 2024 06:10:16 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

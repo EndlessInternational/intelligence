@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Fri, 18 Oct 2024 02:57:33 GMT"
+            "Sun, 20 Oct 2024 06:14:51 GMT"
           ],
           "content-type": [
             "application/json; charset=utf-8"
@@ -42,7 +42,7 @@
             "*"
           ],
           "x-api-received": [
-            "2024-10-18T02:57:33.112Z"
+            "2024-10-20T06:14:50.718Z"
           ],
           "x-ratelimit": [
             "false"
@@ -66,13 +66,13 @@
             "v2"
           ],
           "x-api-call-start": [
-            "2024-10-18T02:57:33.118Z"
+            "2024-10-20T06:14:50.723Z"
           ],
           "x-api-call-end": [
-            "2024-10-18T02:57:33.546Z"
+            "2024-10-20T06:14:51.099Z"
           ],
           "etag": [
-            "W/\"21c-g1+cXH1zkLtS5ALDl63IHTcRb6A\""
+            "W/\"21c-Az3ST8HUZzidnYMoBI9xA2djqJo\""
           ],
           "cf-cache-status": [
             "DYNAMIC"
@@ -95,10 +95,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "{\n  \"id\": \"8d4542f5decddeec-SEA\",\n  \"object\": \"chat.completion\",\n  \"created\": 1729220253,\n  \"model\": \"meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo\",\n  \"prompt\": [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"eos\",\n      \"seed\": 1363883657852890400,\n      \"logprobs\": null,\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": \"this is a test, respond with 'test'\",\n        \"tool_calls\": []\n      }\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 106,\n    \"completion_tokens\": 11,\n    \"total_tokens\": 117\n  }\n}"
+          "string": "{\n  \"id\": \"8d56deb6efa5b9a4-SEA\",\n  \"object\": \"chat.completion\",\n  \"created\": 1729404890,\n  \"model\": \"meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo\",\n  \"prompt\": [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"eos\",\n      \"seed\": 4998888119469480000,\n      \"logprobs\": null,\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": \"this is a test, respond with 'test'\",\n        \"tool_calls\": []\n      }\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 106,\n    \"completion_tokens\": 11,\n    \"total_tokens\": 117\n  }\n}"
         }
       },
-      "recorded_at": "Fri, 18 Oct 2024 02:57:33 GMT"
+      "recorded_at": "Sun, 20 Oct 2024 06:14:51 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

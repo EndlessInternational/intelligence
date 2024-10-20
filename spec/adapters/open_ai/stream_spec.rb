@@ -41,22 +41,6 @@ RSpec.describe "#{Intelligence::Adapter[ :open_ai ]} stream requests", :open_ai 
     end
   end
 
-  let( :vision_adapter ) do
-    Intelligence::Adapter[ :open_ai ].build! do   
-      key                     ENV[ 'OPENAI_API_KEY' ]
-      chat_options do
-        model                 'gpt-4o-mini'
-        max_completion_tokens 24
-        temperature           0
-
-        stream                true
-        stream_options do
-          include_usage       true
-        end
-      end
-    end
-  end
-
   include_examples 'stream requests'
   include_examples 'stream requests with token limit exceeded'
   include_examples 'stream requests with stop sequence'
