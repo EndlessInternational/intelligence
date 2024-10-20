@@ -1,10 +1,10 @@
-require_relative 'class_methods/construction'
+require_relative 'class_methods'
 
 module Intelligence
   module Adapter
     class Base
       extend AdaptiveConfiguration::Configurable
-      extend ClassMethods::Construction
+      extend ClassMethods
 
       def initialize( options = nil, configuration: nil )
         @options = options ? self.class.configure( options ) : {}
