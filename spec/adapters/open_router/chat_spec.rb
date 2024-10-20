@@ -59,7 +59,7 @@ RSpec.describe "#{Intelligence::Adapter[ :open_router ]} chat requests", :open_r
 
   include_examples 'chat requests'
   include_examples 'chat requests with token limit exceeded'
-  include_examples 'chat requests with stop sequence'
+  include_examples 'chat requests with stop sequence', adapter: :adapter_with_stop_sequence  
   include_examples 'chat requests with error response'
   include_examples 'chat requests with binary encoded images',
                    adapter: :vision_adapter

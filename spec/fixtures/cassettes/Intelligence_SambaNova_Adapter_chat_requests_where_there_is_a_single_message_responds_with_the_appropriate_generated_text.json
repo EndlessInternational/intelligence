@@ -27,13 +27,13 @@
         },
         "headers": {
           "date": [
-            "Fri, 18 Oct 2024 02:57:27 GMT"
+            "Sun, 20 Oct 2024 18:40:30 GMT"
           ],
           "content-type": [
             "application/json; charset=utf-8"
           ],
           "content-length": [
-            "725"
+            "723"
           ],
           "connection": [
             "keep-alive"
@@ -44,10 +44,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"choices\":[{\"finish_reason\":\"stop\",\"index\":0,\"logprobs\":null,\"message\":{\"content\":\"hello\",\"role\":\"assistant\"}}],\"created\":1729220247,\"id\":\"917a47a1-1a2d-4772-bad7-779bfc4bf882\",\"model\":\"Meta-Llama-3.1-70B-Instruct\",\"object\":\"chat.completion\",\"system_fingerprint\":\"fastcoe\",\"usage\":{\"acceptance_rate\":1,\"completion_tokens\":2,\"completion_tokens_after_first_per_sec\":77.15081394279407,\"completion_tokens_after_first_per_sec_first_ten\":0,\"completion_tokens_per_sec\":13.171265860348853,\"end_time\":1729220247.4650211,\"is_last_response\":true,\"prompt_tokens\":78,\"start_time\":1729220247.3131754,\"time_to_first_token\":0.1388840675354004,\"total_latency\":0.15184569358825684,\"total_tokens\":80,\"total_tokens_per_sec\":526.8506344139541}}\n"
+          "string": "{\"choices\":[{\"finish_reason\":\"stop\",\"index\":0,\"logprobs\":null,\"message\":{\"content\":\"hello\",\"role\":\"assistant\"}}],\"created\":1729449630,\"id\":\"84fbbfb0-64cc-4d3f-bde1-d669e9480097\",\"model\":\"Meta-Llama-3.1-70B-Instruct\",\"object\":\"chat.completion\",\"system_fingerprint\":\"fastcoe\",\"usage\":{\"acceptance_rate\":1,\"completion_tokens\":2,\"completion_tokens_after_first_per_sec\":79.80485948589151,\"completion_tokens_after_first_per_sec_first_ten\":0,\"completion_tokens_per_sec\":13.472191128077718,\"end_time\":1729449630.4267044,\"is_last_response\":true,\"prompt_tokens\":78,\"start_time\":1729449630.2782505,\"time_to_first_token\":0.1359233856201172,\"total_latency\":0.148453950881958,\"total_tokens\":80,\"total_tokens_per_sec\":538.8876451231088}}\n"
         }
       },
-      "recorded_at": "Fri, 18 Oct 2024 02:57:27 GMT"
+      "recorded_at": "Sun, 20 Oct 2024 18:40:30 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

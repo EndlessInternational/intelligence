@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-RSpec.shared_examples 'stream requests with stop sequence' do 
+RSpec.shared_examples 'stream requests with stop sequence' do | options = {} |  
 
   context 'where there is a single message that ends at stop sequence' do
     it 'responds with generated text up to the stop sequence' do
@@ -26,7 +26,7 @@ RSpec.shared_examples 'stream requests with stop sequence' do
       expect( response.result ).to be_a( Intelligence::ChatResult )
       expect( response.result.choices ).not_to be_nil
       expect( response.result.choices.first ).to be_a( Intelligence::ChatResultChoice )
-      expect( response.result.choices.first.end_reason ).to eq( :ended )
+      expect( response.result.choices.first.end_reason ).to eq( options[ :end_reason ] || :ended  )
 
       expect( text  ).to match( /four/i )
       expect( text  ).to_not match( /five/i )
@@ -63,7 +63,7 @@ RSpec.shared_examples 'stream requests with stop sequence' do
       expect( response.result.choices ).not_to be_nil
       expect( response.result.choices.length ).to eq( 1 )
       expect( response.result.choices.first ).to be_a( Intelligence::ChatResultChoice )
-      expect( response.result.choices.first.end_reason ).to eq( :ended )
+      expect( response.result.choices.first.end_reason ).to eq( options[ :end_reason ] || :ended  )
 
       expect( text ).to match( /four/i )
       expect( text ).to_not match( /five/i )

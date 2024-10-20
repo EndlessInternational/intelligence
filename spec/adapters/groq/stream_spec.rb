@@ -38,7 +38,7 @@ RSpec.describe "#{Intelligence::Adapter[ :groq ]} stream requests", :groq do
   include_examples 'stream requests'
   include_examples 'stream requests with token limit exceeded'
   # groq seems to be consistently failing this test so disabled for now
-  # include_examples 'stream requests with stop sequence'
+  # include_examples 'stream requests with stop sequence', adapter: :adapter_with_stop_sequence  
   include_examples 'stream requests without alternating roles'
 
 end

@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Sun, 20 Oct 2024 17:54:06 GMT"
+            "Sun, 20 Oct 2024 18:41:22 GMT"
           ],
           "content-type": [
             "application/json"
@@ -38,20 +38,8 @@
           "connection": [
             "keep-alive"
           ],
-          "ratelimitbysize-remaining": [
-            "499920"
-          ],
-          "x-ratelimitbysize-limit-minute": [
-            "500000"
-          ],
-          "ratelimitbysize-reset": [
-            "55"
-          ],
-          "x-ratelimitbysize-remaining-day": [
-            "149989577"
-          ],
           "x-ratelimitbysize-remaining-minute": [
-            "499920"
+            "499757"
           ],
           "x-ratelimitbysize-limit-day": [
             "150000000"
@@ -59,23 +47,35 @@
           "ratelimitbysize-query-cost": [
             "80"
           ],
+          "x-ratelimitbysize-limit-minute": [
+            "500000"
+          ],
+          "ratelimitbysize-remaining": [
+            "499757"
+          ],
           "ratelimitbysize-limit": [
             "500000"
           ],
+          "ratelimitbysize-reset": [
+            "39"
+          ],
+          "x-ratelimitbysize-remaining-day": [
+            "149987857"
+          ],
           "x-envoy-upstream-service-time": [
-            "919"
+            "852"
           ],
           "access-control-allow-origin": [
             "*"
           ],
           "x-kong-upstream-latency": [
-            "920"
+            "854"
           ],
           "x-kong-proxy-latency": [
-            "1"
+            "2"
           ],
           "x-kong-request-id": [
-            "0c11cc38cfa15f6ad4233f564388bb39"
+            "3acdb959f526f54371af3478ed753146"
           ],
           "cf-cache-status": [
             "DYNAMIC"
@@ -95,10 +95,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\"id\":\"90d31edccbd0465a8b0dc617e1eae1c9\",\"object\":\"chat.completion\",\"created\":1729446845,\"model\":\"mistral-large-latest\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"one\\ntwo\\nthree\\nfour\\nfive\\nsix\\nseven\\neight\\nnine\\nten\\neleven\\n\",\"tool_calls\":null},\"finish_reason\":\"length\"}],\"usage\":{\"prompt_tokens\":60,\"total_tokens\":84,\"completion_tokens\":24}}"
+          "string": "{\"id\":\"c01974d39dab47e9ab892034cddf529a\",\"object\":\"chat.completion\",\"created\":1729449682,\"model\":\"mistral-large-latest\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"one\\ntwo\\nthree\\nfour\\nfive\\nsix\\nseven\\neight\\nnine\\nten\\neleven\\n\",\"tool_calls\":null},\"finish_reason\":\"length\"}],\"usage\":{\"prompt_tokens\":60,\"total_tokens\":84,\"completion_tokens\":24}}"
         }
       },
-      "recorded_at": "Sun, 20 Oct 2024 17:54:06 GMT"
+      "recorded_at": "Sun, 20 Oct 2024 18:41:22 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

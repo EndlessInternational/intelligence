@@ -35,7 +35,7 @@ RSpec.describe "#{Intelligence::Adapter[ :samba_nova ]} chat requests", :samba_n
       key   ENV[ 'SAMBANOVA_API_KEY' ]
       chat_options do
         model                 'Meta-Llama-3.1-70B-Instruct'
-        max_tokens            20
+        max_tokens            24
         temperature           0
         stop                  'five'
       end
@@ -44,7 +44,7 @@ RSpec.describe "#{Intelligence::Adapter[ :samba_nova ]} chat requests", :samba_n
 
   include_examples 'chat requests'
   include_examples 'chat requests with token limit exceeded'
-  include_examples 'chat requests with stop sequence'
+  include_examples 'chat requests with stop sequence', adapter: :adapter_with_stop_sequence
   include_examples 'chat requests with error response'
   include_examples 'chat requests without alternating roles'
 

@@ -30,7 +30,7 @@
         },
         "headers": {
           "date": [
-            "Fri, 18 Oct 2024 03:06:45 GMT"
+            "Sun, 20 Oct 2024 18:49:20 GMT"
           ],
           "content-type": [
             "application/json"
@@ -48,7 +48,7 @@
             "999"
           ],
           "anthropic-ratelimit-requests-reset": [
-            "2024-10-18T03:07:17Z"
+            "2024-10-20T18:50:17Z"
           ],
           "anthropic-ratelimit-tokens-limit": [
             "80000"
@@ -57,13 +57,10 @@
             "80000"
           ],
           "anthropic-ratelimit-tokens-reset": [
-            "2024-10-18T03:06:45Z"
+            "2024-10-20T18:49:20Z"
           ],
           "request-id": [
             "<REQUEST-ID>"
-          ],
-          "x-cloud-trace-context": [
-            "<X-CLOUD-TRACE-CONTEXT>"
           ],
           "via": [
             "1.1 google"
@@ -86,10 +83,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\"id\":\"msg_013AvbPbtphTYKBJxJjTMk1e\",\"type\":\"message\",\"role\":\"assistant\",\"model\":\"claude-3-5-sonnet-20240620\",\"content\":[{\"type\":\"text\",\"text\":\"The previous user message was \\\"this is a test, respond with 'test'\\\".\"}],\"stop_reason\":\"end_turn\",\"stop_sequence\":null,\"usage\":{\"input_tokens\":80,\"output_tokens\":21}}"
+          "string": "{\"id\":\"msg_018ZCgjkT2qefhsMioLrvD5a\",\"type\":\"message\",\"role\":\"assistant\",\"model\":\"claude-3-5-sonnet-20240620\",\"content\":[{\"type\":\"text\",\"text\":\"The previous user message was \\\"this is a test, respond with 'test'\\\".\"}],\"stop_reason\":\"end_turn\",\"stop_sequence\":null,\"usage\":{\"input_tokens\":80,\"output_tokens\":21}}"
         }
       },
-      "recorded_at": "Fri, 18 Oct 2024 03:06:45 GMT"
+      "recorded_at": "Sun, 20 Oct 2024 18:49:20 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

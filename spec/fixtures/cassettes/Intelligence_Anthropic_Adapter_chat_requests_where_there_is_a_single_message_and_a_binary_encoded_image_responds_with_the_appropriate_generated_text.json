@@ -30,7 +30,7 @@
         },
         "headers": {
           "date": [
-            "Sun, 20 Oct 2024 06:22:31 GMT"
+            "Sun, 20 Oct 2024 18:49:26 GMT"
           ],
           "content-type": [
             "application/json"
@@ -48,7 +48,7 @@
             "999"
           ],
           "anthropic-ratelimit-requests-reset": [
-            "2024-10-20T06:23:17Z"
+            "2024-10-20T18:50:17Z"
           ],
           "anthropic-ratelimit-tokens-limit": [
             "80000"
@@ -57,7 +57,7 @@
             "80000"
           ],
           "anthropic-ratelimit-tokens-reset": [
-            "2024-10-20T06:22:31Z"
+            "2024-10-20T18:49:25Z"
           ],
           "request-id": [
             "<REQUEST-ID>"
@@ -83,10 +83,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\"id\":\"msg_01Xh7McGQvzbBgcs3oVJU5qZ\",\"type\":\"message\",\"role\":\"assistant\",\"model\":\"claude-3-5-sonnet-20240620\",\"content\":[{\"type\":\"text\",\"text\":\"A shiny red balloon with a white string attached, floating against a white background.\"}],\"stop_reason\":\"end_turn\",\"stop_sequence\":null,\"usage\":{\"input_tokens\":145,\"output_tokens\":20}}"
+          "string": "{\"id\":\"msg_01L7onxHrcsTjkby3BS2kPNQ\",\"type\":\"message\",\"role\":\"assistant\",\"model\":\"claude-3-5-sonnet-20240620\",\"content\":[{\"type\":\"text\",\"text\":\"A shiny red balloon with a white string attached, floating against a white background.\"}],\"stop_reason\":\"end_turn\",\"stop_sequence\":null,\"usage\":{\"input_tokens\":145,\"output_tokens\":20}}"
         }
       },
-      "recorded_at": "Sun, 20 Oct 2024 06:22:31 GMT"
+      "recorded_at": "Sun, 20 Oct 2024 18:49:26 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

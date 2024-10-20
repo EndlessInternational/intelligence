@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Sun, 20 Oct 2024 06:25:23 GMT"
+            "Sun, 20 Oct 2024 18:41:51 GMT"
           ],
           "content-type": [
             "application/json"
@@ -38,11 +38,23 @@
           "connection": [
             "keep-alive"
           ],
+          "ratelimitbysize-remaining": [
+            "499115"
+          ],
+          "x-ratelimitbysize-limit-day": [
+            "150000000"
+          ],
+          "ratelimitbysize-reset": [
+            "10"
+          ],
+          "x-ratelimitbysize-remaining-day": [
+            "149987215"
+          ],
           "x-ratelimitbysize-limit-minute": [
             "500000"
           ],
           "x-ratelimitbysize-remaining-minute": [
-            "499106"
+            "499115"
           ],
           "ratelimitbysize-query-cost": [
             "73"
@@ -50,32 +62,20 @@
           "ratelimitbysize-limit": [
             "500000"
           ],
-          "x-ratelimitbysize-limit-day": [
-            "150000000"
-          ],
-          "x-ratelimitbysize-remaining-day": [
-            "149991165"
-          ],
-          "ratelimitbysize-reset": [
-            "38"
-          ],
-          "ratelimitbysize-remaining": [
-            "499106"
-          ],
           "x-envoy-upstream-service-time": [
-            "729"
+            "1496"
           ],
           "access-control-allow-origin": [
             "*"
           ],
           "x-kong-upstream-latency": [
-            "731"
+            "1497"
           ],
           "x-kong-proxy-latency": [
             "1"
           ],
           "x-kong-request-id": [
-            "cc3871690d9d71500d249248c456ca42"
+            "dbb2f0778f8745355456cc05bc894d03"
           ],
           "cf-cache-status": [
             "DYNAMIC"
@@ -95,10 +95,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\"id\":\"1f071c11484a4c6688f61d810c355086\",\"object\":\"chat.completion\",\"created\":1729405522,\"model\":\"pixtral-12b-2409\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"red\",\"tool_calls\":null},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":335,\"total_tokens\":336,\"completion_tokens\":1}}"
+          "string": "{\"id\":\"8cedb40043fd4e6da33645c19118c82c\",\"object\":\"chat.completion\",\"created\":1729449711,\"model\":\"pixtral-12b-2409\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"red\",\"tool_calls\":null},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":335,\"total_tokens\":336,\"completion_tokens\":1}}"
         }
       },
-      "recorded_at": "Sun, 20 Oct 2024 06:25:23 GMT"
+      "recorded_at": "Sun, 20 Oct 2024 18:41:51 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

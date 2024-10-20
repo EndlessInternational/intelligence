@@ -6,7 +6,7 @@
         "uri": "https://api.sambanova.ai/v1/chat/completions",
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"model\":\"Meta-Llama-3.1-70B-Instruct\",\"max_tokens\":20,\"temperature\":0.0,\"stop\":[\"five\"],\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"count to five in words, one word per line\\n\"},{\"role\":\"assistant\",\"content\":\"one\\ntwo\\nthree\\nfour\\nfive\\n\"},{\"role\":\"user\",\"content\":\"count to ten in words, one word per line\\n\"}]}"
+          "string": "{\"model\":\"Meta-Llama-3.1-70B-Instruct\",\"max_tokens\":24,\"temperature\":0.0,\"stop\":[\"five\"],\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"count to five in words, one word per line\\n\"},{\"role\":\"assistant\",\"content\":\"one\\ntwo\\nthree\\nfour\\nfive\\n\"},{\"role\":\"user\",\"content\":\"count to ten in words, one word per line\\n\"}]}"
         },
         "headers": {
           "User-Agent": [
@@ -27,13 +27,13 @@
         },
         "headers": {
           "date": [
-            "Fri, 18 Oct 2024 02:57:29 GMT"
+            "Sun, 20 Oct 2024 18:40:32 GMT"
           ],
           "content-type": [
             "application/json; charset=utf-8"
           ],
           "content-length": [
-            "764"
+            "761"
           ],
           "connection": [
             "keep-alive"
@@ -44,10 +44,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"choices\":[{\"finish_reason\":\"stop\",\"index\":0,\"logprobs\":null,\"message\":{\"content\":\"one\\ntwo\\nthree\\nfour\\n\",\"role\":\"assistant\"}}],\"created\":1729220249,\"id\":\"84bf301d-11c1-4a2e-8e31-5845d5b9cb38\",\"model\":\"Meta-Llama-3.1-70B-Instruct\",\"object\":\"chat.completion\",\"system_fingerprint\":\"fastcoe\",\"usage\":{\"acceptance_rate\":21,\"completion_tokens\":9,\"completion_tokens_after_first_per_sec\":325.78067322349193,\"completion_tokens_after_first_per_sec_first_ten\":1805.0368670205135,\"completion_tokens_per_sec\":63.151800262987955,\"end_time\":1729220249.3198318,\"is_last_response\":true,\"prompt_tokens\":109,\"start_time\":1729220249.1577477,\"time_to_first_token\":0.1375277042388916,\"total_latency\":0.14251375198364258,\"total_tokens\":118,\"total_tokens_per_sec\":827.9902701147311}}\n"
+          "string": "{\"choices\":[{\"finish_reason\":\"stop\",\"index\":0,\"logprobs\":null,\"message\":{\"content\":\"one\\ntwo\\nthree\\nfour\\n\",\"role\":\"assistant\"}}],\"created\":1729449631,\"id\":\"a23c90b3-9fb0-4758-b832-775191a92620\",\"model\":\"Meta-Llama-3.1-70B-Instruct\",\"object\":\"chat.completion\",\"system_fingerprint\":\"fastcoe\",\"usage\":{\"acceptance_rate\":21,\"completion_tokens\":9,\"completion_tokens_after_first_per_sec\":325.0799949621678,\"completion_tokens_after_first_per_sec_first_ten\":1855.613036425306,\"completion_tokens_per_sec\":63.13109967187453,\"end_time\":1729449632.1068192,\"is_last_response\":true,\"prompt_tokens\":109,\"start_time\":1729449631.9444995,\"time_to_first_token\":0.1377103328704834,\"total_latency\":0.14256048202514648,\"total_tokens\":118,\"total_tokens_per_sec\":827.7188623645771}}\n"
         }
       },
-      "recorded_at": "Fri, 18 Oct 2024 02:57:29 GMT"
+      "recorded_at": "Sun, 20 Oct 2024 18:40:32 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

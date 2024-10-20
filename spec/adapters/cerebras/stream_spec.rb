@@ -40,7 +40,7 @@ RSpec.describe "#{Intelligence::Adapter[ :cerebras ]} stream requests", :cerebra
 
   include_examples 'stream requests'
   include_examples 'stream requests with token limit exceeded'
-  include_examples 'stream requests with stop sequence'
+  include_examples 'stream requests with stop sequence', adapter: :adapter_with_stop_sequence  
   include_examples 'stream requests without alternating roles'
 
 end
