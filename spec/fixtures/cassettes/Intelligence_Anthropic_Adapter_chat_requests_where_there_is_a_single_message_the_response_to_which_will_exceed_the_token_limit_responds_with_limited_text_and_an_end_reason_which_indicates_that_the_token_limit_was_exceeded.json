@@ -30,7 +30,7 @@
         },
         "headers": {
           "date": [
-            "Fri, 18 Oct 2024 03:06:46 GMT"
+            "Sun, 20 Oct 2024 17:53:53 GMT"
           ],
           "content-type": [
             "application/json"
@@ -48,7 +48,7 @@
             "999"
           ],
           "anthropic-ratelimit-requests-reset": [
-            "2024-10-18T03:07:17Z"
+            "2024-10-20T17:54:17Z"
           ],
           "anthropic-ratelimit-tokens-limit": [
             "80000"
@@ -57,13 +57,10 @@
             "80000"
           ],
           "anthropic-ratelimit-tokens-reset": [
-            "2024-10-18T03:06:46Z"
+            "2024-10-20T17:53:53Z"
           ],
           "request-id": [
             "<REQUEST-ID>"
-          ],
-          "x-cloud-trace-context": [
-            "<X-CLOUD-TRACE-CONTEXT>"
           ],
           "via": [
             "1.1 google"
@@ -86,10 +83,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\"id\":\"msg_0144ksDC24ErtzH2jQ8FMrXY\",\"type\":\"message\",\"role\":\"assistant\",\"model\":\"claude-3-5-sonnet-20240620\",\"content\":[{\"type\":\"text\",\"text\":\"one\\ntwo\\nthree\\nfour\\nfive\\nsix\\nseven\\neight\\nnine\\nten\\neleven\\ntwelve\"}],\"stop_reason\":\"max_tokens\",\"stop_sequence\":null,\"usage\":{\"input_tokens\":60,\"output_tokens\":24}}"
+          "string": "{\"id\":\"msg_01C7mdK9KjnfMUdagLXKmnSt\",\"type\":\"message\",\"role\":\"assistant\",\"model\":\"claude-3-5-sonnet-20240620\",\"content\":[{\"type\":\"text\",\"text\":\"one\\ntwo\\nthree\\nfour\\nfive\\nsix\\nseven\\neight\\nnine\\nten\\neleven\\ntwelve\"}],\"stop_reason\":\"max_tokens\",\"stop_sequence\":null,\"usage\":{\"input_tokens\":60,\"output_tokens\":24}}"
         }
       },
-      "recorded_at": "Fri, 18 Oct 2024 03:06:46 GMT"
+      "recorded_at": "Sun, 20 Oct 2024 17:53:53 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Fri, 18 Oct 2024 02:55:01 GMT"
+            "Sun, 20 Oct 2024 17:54:01 GMT"
           ],
           "content-type": [
             "application/json"
@@ -48,19 +48,19 @@
             "14400"
           ],
           "x-ratelimit-limit-tokens": [
-            "20000"
+            "18000"
           ],
           "x-ratelimit-remaining-requests": [
-            "14397"
+            "14399"
           ],
           "x-ratelimit-remaining-tokens": [
-            "19841"
+            "17920"
           ],
           "x-ratelimit-reset-requests": [
-            "17.261s"
+            "6s"
           ],
           "x-ratelimit-reset-tokens": [
-            "474.999999ms"
+            "266.666666ms"
           ],
           "x-request-id": [
             "<X-REQUEST-ID>"
@@ -89,10 +89,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\"id\":\"chatcmpl-d1997c5e-d2f8-4528-b858-276f12c320f1\",\"object\":\"chat.completion\",\"created\":1729220100,\"model\":\"llama-3.1-70b-versatile\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"one\\ntwo\\nthree\\nfour\\nfive\\nsix\\nseven\\neight\\n\"},\"logprobs\":null,\"finish_reason\":\"length\"}],\"usage\":{\"queue_time\":0.005389957000000001,\"prompt_tokens\":85,\"prompt_time\":0.023358198,\"completion_tokens\":16,\"completion_time\":0.064,\"total_tokens\":101,\"total_time\":0.087358198},\"system_fingerprint\":\"fp_b3ae7e594e\",\"x_groq\":{\"id\":\"req_01jaersgthevhth3ja0wc2w6qs\"}}\n"
+          "string": "{\"id\":\"chatcmpl-f559cb72-20b0-46f4-88b1-12062fe92577\",\"object\":\"chat.completion\",\"created\":1729446840,\"model\":\"llama-3.1-70b-versatile\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"one\\ntwo\\nthree\\nfour\\nfive\\nsix\\nseven\\neight\\n\"},\"logprobs\":null,\"finish_reason\":\"length\"}],\"usage\":{\"queue_time\":0.00487887,\"prompt_tokens\":85,\"prompt_time\":0.021081858,\"completion_tokens\":16,\"completion_time\":0.064,\"total_tokens\":101,\"total_time\":0.085081858},\"system_fingerprint\":\"fp_b3ae7e594e\",\"x_groq\":{\"id\":\"req_01janh12mjeaery09njf5se8s0\"}}\n"
         }
       },
-      "recorded_at": "Fri, 18 Oct 2024 02:55:01 GMT"
+      "recorded_at": "Sun, 20 Oct 2024 17:54:01 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

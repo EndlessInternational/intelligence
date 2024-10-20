@@ -1,12 +1,13 @@
 require 'spec_helper'
 
-RSpec.shared_examples 'chat requests with token limit exceeded' do 
+RSpec.shared_examples 'chat requests with token limit exceeded' do | options = {} |
+  
 
   context 'where there is a single message the response to which will exceed the token limit' do
     it 'responds with limited text and an end reason which indicates that the token limit was exceeded' do
     
       response = create_and_make_chat_request(
-        adapter, 
+        send( options[ :adapter ] || :adapter ), 
         create_conversation( "count to twenty in words, all lower case, one word per line\n" )
       )
       
@@ -17,7 +18,7 @@ RSpec.shared_examples 'chat requests with token limit exceeded' do
       expect( response.result.choices.first ).to be_a( Intelligence::ChatResultChoice )
 
       choice = response.result.choices.first
-      expect( choice.end_reason ).to eq( :token_limit_exceeded )
+      expect( choice.end_reason ).to eq( options[ :end_reason ] || :token_limit_exceeded  )
       expect( choice.message ).to be_a( Intelligence::Message )
       expect( choice.message.contents ).not_to be_nil
       expect( choice.message.contents.length ).to eq( 1 )
@@ -32,7 +33,7 @@ RSpec.shared_examples 'chat requests with token limit exceeded' do
     it 'responds with limited text and an end reason which indicates that the token limit was exceeded' do
 
       response = create_and_make_chat_request(
-        adapter, 
+        send( options[ :adapter ] || :adapter ), 
         create_conversation( 
           "count to five in words, all lower case, one word per line\n",
           "one\ntwo\nthree\nfour\nfive\n",
@@ -47,7 +48,7 @@ RSpec.shared_examples 'chat requests with token limit exceeded' do
       expect( response.result.choices.first ).to be_a( Intelligence::ChatResultChoice )
 
       choice = response.result.choices.first
-      expect( choice.end_reason ).to eq( :token_limit_exceeded )
+      expect( choice.end_reason ).to eq( options[ :end_reason ] || :token_limit_exceeded  )
       expect( choice.message ).to be_a( Intelligence::Message )
       expect( choice.message.contents ).not_to be_nil
       expect( choice.message.contents.length ).to eq( 1 )

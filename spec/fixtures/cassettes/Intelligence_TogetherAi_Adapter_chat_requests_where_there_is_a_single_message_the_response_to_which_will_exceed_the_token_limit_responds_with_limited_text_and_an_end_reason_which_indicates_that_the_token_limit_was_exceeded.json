@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Sun, 20 Oct 2024 06:14:51 GMT"
+            "Sun, 20 Oct 2024 17:54:15 GMT"
           ],
           "content-type": [
             "application/json; charset=utf-8"
@@ -42,7 +42,7 @@
             "*"
           ],
           "x-api-received": [
-            "2024-10-20T06:14:51.181Z"
+            "2024-10-20T17:54:15.497Z"
           ],
           "x-ratelimit": [
             "false"
@@ -51,13 +51,13 @@
             "10"
           ],
           "x-ratelimit-remaining": [
-            "17"
+            "18"
           ],
           "x-ratelimit-reset": [
             "1"
           ],
           "x-ratelimit-remaining-tokens": [
-            "2802"
+            "2532"
           ],
           "x-ratelimit-limit-tokens": [
             "3000"
@@ -66,13 +66,13 @@
             "v2"
           ],
           "x-api-call-start": [
-            "2024-10-20T06:14:51.187Z"
+            "2024-10-20T17:54:15.504Z"
           ],
           "x-api-call-end": [
-            "2024-10-20T06:14:51.902Z"
+            "2024-10-20T17:54:15.915Z"
           ],
           "etag": [
-            "W/\"22b-L1mdtJuIKEzCDlF+UyVBI87iF7I\""
+            "W/\"22c-7RXxwryasAiKaa7t5gS7SDjd4fU\""
           ],
           "cf-cache-status": [
             "DYNAMIC"
@@ -95,10 +95,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "{\n  \"id\": \"8d56deb9cd87b9f7-SEA\",\n  \"object\": \"chat.completion\",\n  \"created\": 1729404891,\n  \"model\": \"meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo\",\n  \"prompt\": [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"length\",\n      \"seed\": 8570201001097660000,\n      \"logprobs\": null,\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": \"one\\ntwo\\nthree\\nfour\\nfive\\nsix\\nseven\\neight\\n\",\n        \"tool_calls\": []\n      }\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 85,\n    \"completion_tokens\": 16,\n    \"total_tokens\": 101\n  }\n}"
+          "string": "{\n  \"id\": \"8d5adf3ec8e930be-SEA\",\n  \"object\": \"chat.completion\",\n  \"created\": 1729446855,\n  \"model\": \"meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo\",\n  \"prompt\": [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"length\",\n      \"seed\": 17499475066523914000,\n      \"logprobs\": null,\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": \"one\\ntwo\\nthree\\nfour\\nfive\\nsix\\nseven\\neight\\n\",\n        \"tool_calls\": []\n      }\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 85,\n    \"completion_tokens\": 16,\n    \"total_tokens\": 101\n  }\n}"
         }
       },
-      "recorded_at": "Sun, 20 Oct 2024 06:14:51 GMT"
+      "recorded_at": "Sun, 20 Oct 2024 17:54:15 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

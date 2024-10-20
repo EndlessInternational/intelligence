@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Fri, 18 Oct 2024 02:59:55 GMT"
+            "Sun, 20 Oct 2024 17:54:09 GMT"
           ],
           "content-type": [
             "application/json"
@@ -45,13 +45,10 @@
             "<OPENAI-ORGANIZATION>"
           ],
           "openai-processing-ms": [
-            "352"
+            "742"
           ],
           "openai-version": [
             "2020-10-01"
-          ],
-          "strict-transport-security": [
-            "max-age=31536000; includeSubDomains; preload"
           ],
           "x-ratelimit-limit-requests": [
             "10000"
@@ -73,6 +70,9 @@
           ],
           "x-request-id": [
             "<X-REQUEST-ID>"
+          ],
+          "strict-transport-security": [
+            "max-age=31536000; includeSubDomains; preload"
           ],
           "cf-cache-status": [
             "DYNAMIC"
@@ -98,10 +98,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\n  \"id\": \"chatcmpl-AJXVSFFbThtQwxJUmWFBWNJb4MAE2\",\n  \"object\": \"chat.completion\",\n  \"created\": 1729220394,\n  \"model\": \"gpt-4o-2024-08-06\",\n  \"choices\": [\n    {\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": \"one\\ntwo\\nthree\\nfour\\nfive\\nsix\\nseven\\neight\\nnine\\nten\\neleven\\nt\",\n        \"refusal\": null\n      },\n      \"logprobs\": null,\n      \"finish_reason\": \"length\"\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 98,\n    \"completion_tokens\": 24,\n    \"total_tokens\": 122,\n    \"prompt_tokens_details\": {\n      \"cached_tokens\": 0\n    },\n    \"completion_tokens_details\": {\n      \"reasoning_tokens\": 0\n    }\n  },\n  \"system_fingerprint\": \"fp_a20a4ee344\"\n}\n"
+          "string": "{\n  \"id\": \"chatcmpl-AKUPxCh19ZWBaCwu0ioeE5GYco87e\",\n  \"object\": \"chat.completion\",\n  \"created\": 1729446849,\n  \"model\": \"gpt-4o-2024-08-06\",\n  \"choices\": [\n    {\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": \"one\\ntwo\\nthree\\nfour\\nfive\\nsix\\nseven\\neight\\nnine\\nten\\neleven\\nt\",\n        \"refusal\": null\n      },\n      \"logprobs\": null,\n      \"finish_reason\": \"length\"\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 98,\n    \"completion_tokens\": 24,\n    \"total_tokens\": 122,\n    \"prompt_tokens_details\": {\n      \"cached_tokens\": 0\n    },\n    \"completion_tokens_details\": {\n      \"reasoning_tokens\": 0\n    }\n  },\n  \"system_fingerprint\": \"fp_6b68a8204b\"\n}\n"
         }
       },
-      "recorded_at": "Fri, 18 Oct 2024 02:59:55 GMT"
+      "recorded_at": "Sun, 20 Oct 2024 17:54:09 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"
