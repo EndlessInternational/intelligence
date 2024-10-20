@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Fri, 18 Oct 2024 02:55:03 GMT"
+            "Sun, 20 Oct 2024 19:12:16 GMT"
           ],
           "content-type": [
             "text/event-stream"
@@ -48,19 +48,19 @@
             "14400"
           ],
           "x-ratelimit-limit-tokens": [
-            "20000"
+            "18000"
           ],
           "x-ratelimit-remaining-requests": [
-            "14388"
+            "14375"
           ],
           "x-ratelimit-remaining-tokens": [
-            "19457"
+            "17164"
           ],
           "x-ratelimit-reset-requests": [
-            "1m11.758999999s"
+            "2m29.643s"
           ],
           "x-ratelimit-reset-tokens": [
-            "1.628s"
+            "2.785333333s"
           ],
           "x-request-id": [
             "<X-REQUEST-ID>"
@@ -86,10 +86,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "data: {\"id\":\"chatcmpl-7f82ea34-1a18-447e-895b-3ce911204eb7\",\"object\":\"chat.completion.chunk\",\"created\":1729220103,\"model\":\"llama-3.1-70b-versatile\",\"system_fingerprint\":\"fp_b3ae7e594e\",\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"\"},\"logprobs\":null,\"finish_reason\":null}],\"x_groq\":{\"id\":\"req_01jaersjsmfzw9rncfp44mq05z\"}}\n\ndata: {\"id\":\"chatcmpl-7f82ea34-1a18-447e-895b-3ce911204eb7\",\"object\":\"chat.completion.chunk\",\"created\":1729220103,\"model\":\"llama-3.1-70b-versatile\",\"system_fingerprint\":\"fp_b3ae7e594e\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"hello\"},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"chatcmpl-7f82ea34-1a18-447e-895b-3ce911204eb7\",\"object\":\"chat.completion.chunk\",\"created\":1729220103,\"model\":\"llama-3.1-70b-versatile\",\"system_fingerprint\":\"fp_b3ae7e594e\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"!\"},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"chatcmpl-7f82ea34-1a18-447e-895b-3ce911204eb7\",\"object\":\"chat.completion.chunk\",\"created\":1729220103,\"model\":\"llama-3.1-70b-versatile\",\"system_fingerprint\":\"fp_b3ae7e594e\",\"choices\":[{\"index\":0,\"delta\":{},\"logprobs\":null,\"finish_reason\":\"stop\"}],\"x_groq\":{\"id\":\"req_01jaersjsmfzw9rncfp44mq05z\",\"usage\":{\"queue_time\":0.004929660000000002,\"prompt_tokens\":106,\"prompt_time\":0.026157918,\"completion_tokens\":3,\"completion_time\":0.012,\"total_tokens\":109,\"total_time\":0.038157918}}}\n\ndata: [DONE]\n\n"
+          "string": "data: {\"id\":\"chatcmpl-ff6da714-cc3e-49d7-b81e-2930889ec161\",\"object\":\"chat.completion.chunk\",\"created\":1729451536,\"model\":\"llama-3.1-70b-versatile\",\"system_fingerprint\":\"fp_b3ae7e594e\",\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"\"},\"logprobs\":null,\"finish_reason\":null}],\"x_groq\":{\"id\":\"req_01janngbk4fy89x2q9749xj22k\"}}\n\ndata: {\"id\":\"chatcmpl-ff6da714-cc3e-49d7-b81e-2930889ec161\",\"object\":\"chat.completion.chunk\",\"created\":1729451536,\"model\":\"llama-3.1-70b-versatile\",\"system_fingerprint\":\"fp_b3ae7e594e\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"hello\"},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"chatcmpl-ff6da714-cc3e-49d7-b81e-2930889ec161\",\"object\":\"chat.completion.chunk\",\"created\":1729451536,\"model\":\"llama-3.1-70b-versatile\",\"system_fingerprint\":\"fp_b3ae7e594e\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"!\"},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"chatcmpl-ff6da714-cc3e-49d7-b81e-2930889ec161\",\"object\":\"chat.completion.chunk\",\"created\":1729451536,\"model\":\"llama-3.1-70b-versatile\",\"system_fingerprint\":\"fp_b3ae7e594e\",\"choices\":[{\"index\":0,\"delta\":{},\"logprobs\":null,\"finish_reason\":\"stop\"}],\"x_groq\":{\"id\":\"req_01janngbk4fy89x2q9749xj22k\",\"usage\":{\"queue_time\":0.11110010899999999,\"prompt_tokens\":106,\"prompt_time\":0.030025917,\"completion_tokens\":3,\"completion_time\":0.012,\"total_tokens\":109,\"total_time\":0.042025917}}}\n\ndata: [DONE]\n\n"
         }
       },
-      "recorded_at": "Fri, 18 Oct 2024 02:55:03 GMT"
+      "recorded_at": "Sun, 20 Oct 2024 19:12:16 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

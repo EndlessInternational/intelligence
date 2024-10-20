@@ -26,7 +26,7 @@ RSpec.describe "#{Intelligence::Adapter[ :groq ]} stream requests", :groq do
       key   ENV[ 'GROQ_API_KEY' ]
       chat_options do
         model                 'llama-3.1-70b-versatile'
-        max_tokens            24
+        max_tokens            64 
         stop                  'five'
         temperature           0
 
@@ -37,8 +37,9 @@ RSpec.describe "#{Intelligence::Adapter[ :groq ]} stream requests", :groq do
 
   include_examples 'stream requests'
   include_examples 'stream requests with token limit exceeded'
-  # groq seems to be consistently failing this test so disabled for now
-  # include_examples 'stream requests with stop sequence', adapter: :adapter_with_stop_sequence  
+  # groq seems to be consistently failing this test ( returning 'length' as the finish_reason ) 
+  # unless it has a generous number of tokens to work with
+  include_examples 'stream requests with stop sequence', adapter: :adapter_with_stop_sequence  
   include_examples 'stream requests without alternating roles'
 
 end
