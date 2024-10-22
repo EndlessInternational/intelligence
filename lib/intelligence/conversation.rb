@@ -22,7 +22,7 @@ module Intelligence
       @messages = []
       @tools = []
       if attributes
-        if attributes[ :system_message ] 
+        if attributes[ :system_message ]&.any? 
           system_message = Message.new( 
             attributes[ :system_message ][ :role ],  
             attributes[ :system_message ]
@@ -63,6 +63,11 @@ module Intelligence
     end
 
     alias :<< :append_message
+
+    def append_tool( *tools )
+      @tools.concat( tools.flatten )
+      self 
+    end
 
     def to_h
       result = {}

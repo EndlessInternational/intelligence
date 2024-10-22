@@ -6,7 +6,7 @@ module Intelligence
       configuration do 
         parameter :tool_call_id, String 
         parameter :tool_name, String, required: true 
-        parameter :tool_parameters, String, array: true
+        parameter :tool_parameters, [ Hash, String ]
       end 
 
       attr_reader :tool_call_id 

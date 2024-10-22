@@ -8,10 +8,17 @@ module Intelligence
       parameter :role, Symbol, required: true 
       parameters :content, array: true, as: :contents do 
         parameter :type, Symbol, default: :text 
+        # text 
         parameter :text, String 
+        # binary and file 
         parameter :content_type, String
         parameter :bytes, String 
         parameter :uri, URI
+        # tool call and tool result 
+        parameter :tool_call_id, String 
+        parameter :tool_name, String 
+        parameter :tool_parameters, [ String, Hash ]
+        parameter :tool_result, [ String, Hash ]
       end
     end
 

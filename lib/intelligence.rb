@@ -14,6 +14,7 @@ require 'intelligence/unsupported_content_error'
 require 'intelligence/error_result'
 require 'intelligence/chat_error_result'
 
+require 'intelligence/tool'
 require 'intelligence/message_content'
 require 'intelligence/message'
 require 'intelligence/conversation'

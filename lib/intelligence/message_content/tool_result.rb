@@ -6,7 +6,7 @@ module Intelligence
       configuration do 
         parameter :tool_call_id
         parameter :tool_name, String, required: true 
-        parameter :tool_result, String, required: true 
+        parameter :tool_result, [ String, String ]
       end 
 
       attr_reader :tool_call_id 
@@ -15,10 +15,10 @@ module Intelligence
 
       def to_h
         { 
-          type:             :tool_call, 
+          type:             :tool_result, 
           tool_call_id:     tool_call_id, 
           tool_name:        tool_name, 
-          tool_parameters:  tool_result 
+          tool_result:      tool_result 
         }.compact
       end
     end 
