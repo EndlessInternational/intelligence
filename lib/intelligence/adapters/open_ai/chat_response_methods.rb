@@ -1,116 +1,9 @@
 module Intelligence
   module OpenAi
-    module ChatMethods
-
-      CHAT_REQUEST_URI = "https://api.openai.com/v1/chat/completions"
-
-      SUPPORTED_CONTENT_TYPES = [ 'image/jpeg', 'image/png' ]
-
-      def chat_request_uri( options )
-        CHAT_REQUEST_URI
-      end
-
-      def chat_request_headers( options = {} )
-        options = options ? self.class.configure( options ) : {}
-        options = @options.merge( options )
-        result = {}
-
-        key = options[ :key ] 
-        organization = options[ :organization ] 
-        project = options[ :project ]  
-
-        raise ArgumentError.new( "An OpenAI key is required to build an OpenAI chat request." ) \
-          if key.nil?
-
-        result[ 'Content-Type' ] = 'application/json'
-        result[ 'Authorization' ] = "Bearer #{key}"
-        result[ 'OpenAI-Organization' ] = organization unless organization.nil?
-        result[ 'OpenAI-Project' ] = project unless project.nil?
-
-        result 
-      end
-
-      def chat_request_body( conversation, options = {} )
-        options = options ? self.class.configure( options ) : {}
-        options = @options.merge( options )
-        result = options[ :chat_options ]&.compact || {}
-        result[ :messages ] = []
-
-        system_message = translate_system_message( conversation[ :system_message ] )
-        result[ :messages ] << { role: 'system', content: system_message } if system_message
-
-        conversation[ :messages ]&.each do | message |
-
-          result_message = { role: message[ :role ] }
-          result_message_content = []
-          
-          message[ :contents ]&.each do | content |
-            case content[ :type ]
-            when :text
-              result_message_content << { type: 'text', text: content[ :text ] }
-            when :binary
-              content_type = content[ :content_type ]
-              bytes = content[ :bytes ]
-              if content_type && bytes
-                if SUPPORTED_CONTENT_TYPES.include?( content_type )
-                  result_message_content << {
-                    type: 'image_url',
-                    image_url: {
-                      url: "data:#{content_type};base64,#{Base64.strict_encode64( bytes )}".freeze
-                    }
-                  }
-                else
-                  raise UnsupportedContentError.new( 
-                    :open_ai, 
-                    "only supports content of type #{SUPPORTED_CONTENT_TYPES.join( ', ' )}"
-                  ) 
-                end
-              else 
-                raise UnsupportedContentError.new(
-                  :open_ai, 
-                  'requires binary content to include content type and ( packed ) bytes'  
-                )
-              end
-            when :file 
-              content_type = content[ :content_type ]
-              uri = content[ :uri ]
-              if content_type && uri  
-                if SUPPORTED_CONTENT_TYPES.include?( content_type )
-                  result_message_content << {
-                    type: 'image_url',
-                    image_url: {
-                      url: uri 
-                    }
-                  }
-                else 
-                  raise UnsupportedContentError.new( 
-                    :open_ai, 
-                    "only supports content of type #{SUPPORTED_CONTENT_TYPES.join( ', ' )}" 
-                  ) 
-                end 
-              else 
-                raise UnsupportedContentError.new(
-                  :open_ai, 
-                  'requires file content to include content type and uri'  
-                )
-              end 
-            else 
-              raise InvalidContentError.new( :open_ai ) 
-            end
-
-          end
-
-          result_message[ :content ] = result_message_content
-          result[ :messages ] << result_message
-
-        end
-
-        JSON.generate( result )
-      end 
+    module ChatResponseMethods
 
       def chat_result_attributes( response )
         return nil unless response.success?
-        
         response_json = JSON.parse( response.body, symbolize_names: true ) rescue nil
         return nil \
           if response_json.nil? || response_json[ :choices ].nil?
@@ -120,15 +13,31 @@ module Intelligence
 
         ( response_json[ :choices ] || [] ).each do | json_choice |
           json_message = json_choice[ :message ]
-          result[ :choices ].push(
-            { 
-              end_reason: translate_end_result( json_choice[ :finish_reason ] ), 
-              message: { 
-                role: json_message[ :role ],
-                contents: [ { type: 'text', text: json_message[ :content ] } ]
-              } 
-            }
-          )
+          result_message = nil
+          if ( json_message )
+            result_message = { role: json_message[ :role ] }
+            if json_message[ :content ] 
+              result_message[ :contents ] = [ { type: :text, text: json_message[ :content ] } ]
+            end
+            if json_message[ :tool_calls ] && !json_message[ :tool_calls ].empty?
+              result_message[ :contents ] ||= []
+              json_message[ :tool_calls ].each do | json_message_tool_call |
+                result_message_tool_call_parameters = 
+                  JSON.parse( json_message_tool_call[ :function ][ :arguments ], symbolize_names: true ) \
+                    rescue json_message_tool_call[ :function ][ :arguments ]
+                result_message[ :contents ] << {
+                  type: :tool_call, 
+                  tool_call_id: json_message_tool_call[ :id ],
+                  tool_name: json_message_tool_call[ :function ][ :name ],
+                  tool_parameters: result_message_tool_call_parameters
+                }
+              end 
+            end
+          end 
+          result[ :choices ].push( { 
+            end_reason: translate_end_result( json_choice[ :finish_reason ] ), 
+            message: result_message 
+          } )
         end
 
         metrics_json = response_json[ :usage ]
@@ -275,26 +184,15 @@ module Intelligence
 
       alias_method :stream_result_error_attributes, :chat_result_error_attributes
 
-      private; def translate_system_message( system_message )
+    private 
 
-        return nil if system_message.nil?
-
-        result = ''
-        system_message[ :contents ].each do | content |
-          result += content[ :text ] if content[ :type ] == :text 
-        end
-
-        result.empty? ? nil : result 
-
-      end 
-
-      private; def translate_end_result( end_result )
+      def translate_end_result( end_result )
         case end_result
           when 'stop'
             :ended
           when 'length'
             :token_limit_exceeded
-          when 'function_call'
+          when 'tool_calls'
             :tool_called
           when 'content_filter'
             :filtered
@@ -305,37 +203,37 @@ module Intelligence
 
       def translate_error_response_status( status )
         case status
-          when 400
-            [ :invalid_request_error, 
-              "There was an issue with the format or content of your request." ]
-          when 401
-            [ :authentication_error, 
-              "There's an issue with your API key." ]
-          when 403
-            [ :permission_error, 
-              "Your API key does not have permission to use the specified resource." ]
-          when 404
-            [ :not_found_error, 
-              "The requested resource was not found." ]
-          when 413
-            [ :request_too_large, 
-              "Request exceeds the maximum allowed number of bytes." ]
-          when 422
-            [ :invalid_request_error, 
-              "There was an issue with the format or content of your request." ]
-          when 429
-            [ :rate_limit_error, 
-              "Your account has hit a rate limit." ]
-          when 500, 502, 503
-            [ :api_error, 
-              "An unexpected error has occurred internal to the providers systems." ]
-          when 529
-            [ :overloaded_error, 
-              "The providers server is temporarily overloaded." ]
-          else
-            [ :unknown_error, "
-              An unknown error occurred." ]
-          end
+        when 400
+          [ :invalid_request_error, 
+            "There was an issue with the format or content of your request." ]
+        when 401
+          [ :authentication_error, 
+            "There's an issue with your API key." ]
+        when 403
+          [ :permission_error, 
+            "Your API key does not have permission to use the specified resource." ]
+        when 404
+          [ :not_found_error, 
+            "The requested resource was not found." ]
+        when 413
+          [ :request_too_large, 
+            "Request exceeds the maximum allowed number of bytes." ]
+        when 422
+          [ :invalid_request_error, 
+            "There was an issue with the format or content of your request." ]
+        when 429
+          [ :rate_limit_error, 
+            "Your account has hit a rate limit." ]
+        when 500, 502, 503
+          [ :api_error, 
+            "An unexpected error has occurred internal to the providers systems." ]
+        when 529
+          [ :overloaded_error, 
+            "The providers server is temporarily overloaded." ]
+        else
+          [ :unknown_error, "
+            An unknown error occurred." ]
+        end
       end
     
     end

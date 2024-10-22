@@ -1,4 +1,5 @@
-require_relative 'chat_methods'
+require_relative 'chat_request_methods'
+require_relative 'chat_response_methods'
 
 module Intelligence
   module OpenAi
@@ -40,6 +41,7 @@ module Intelligence
           parameter :logit_bias
           parameter :logprobs, [ TrueClass, FalseClass ]
           parameter :modalities, String, array: true 
+          # the parallel_tool_calls parameter is only allowed when 'tools' are specified
           parameter :parallel_tool_calls, [ TrueClass, FalseClass ]
           parameters :response_format do 
             # 'text' and 'json_schema' are the only supported types
@@ -51,7 +53,6 @@ module Intelligence
             parameter :include_usage, [ TrueClass, FalseClass ]
           end
           parameter :tool_choice
-          # the parallel_tool_calls parameter is only allowed when 'tools' are specified
           parameter :top_logprobs, Integer
           parameter :user
 
@@ -59,7 +60,8 @@ module Intelligence
 
       end
 
-      include ChatMethods
+      include ChatRequestMethods 
+      include ChatResponseMethods
 
     end 
   end
