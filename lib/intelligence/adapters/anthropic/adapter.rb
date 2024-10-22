@@ -1,4 +1,5 @@
-require_relative 'chat_methods'
+require_relative 'chat_request_methods'
+require_relative 'chat_response_methods'
 
 module Intelligence
   module Anthropic
@@ -40,7 +41,8 @@ module Intelligence
         
       end
 
-      include ChatMethods
+      include ChatRequestMethods
+      include ChatResponseMethods
 
     end 
   end

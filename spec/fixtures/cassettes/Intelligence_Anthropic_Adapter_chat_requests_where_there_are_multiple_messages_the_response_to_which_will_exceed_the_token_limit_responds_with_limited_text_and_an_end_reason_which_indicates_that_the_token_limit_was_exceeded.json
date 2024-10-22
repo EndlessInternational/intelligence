@@ -6,7 +6,7 @@
         "uri": "https://api.anthropic.com/v1/messages",
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"model\":\"claude-3-5-sonnet-20240620\",\"max_tokens\":24,\"temperature\":0.0,\"system\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \",\"messages\":[{\"role\":\"user\",\"content\":[{\"type\":\"text\",\"text\":\"count to five in words, all lower case, one word per line\\n\"}]},{\"role\":\"assistant\",\"content\":[{\"type\":\"text\",\"text\":\"one\\ntwo\\nthree\\nfour\\nfive\\n\"}]},{\"role\":\"user\",\"content\":[{\"type\":\"text\",\"text\":\"count to twenty in words, all lower case, one word per line\\n\"}]}]}"
+          "string": "{\"model\":\"claude-3-5-sonnet-20240620\",\"max_tokens\":32,\"temperature\":0.0,\"system\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \",\"messages\":[{\"role\":\"user\",\"content\":[{\"type\":\"text\",\"text\":\"count to five in words, all lower case, one word per line\\n\"}]},{\"role\":\"assistant\",\"content\":[{\"type\":\"text\",\"text\":\"one\\ntwo\\nthree\\nfour\\nfive\\n\"}]},{\"role\":\"user\",\"content\":[{\"type\":\"text\",\"text\":\"count to twenty in words, all lower case, one word per line\\n\"}]}]}"
         },
         "headers": {
           "User-Agent": [
@@ -30,7 +30,7 @@
         },
         "headers": {
           "date": [
-            "Sun, 20 Oct 2024 18:49:22 GMT"
+            "Tue, 22 Oct 2024 04:40:42 GMT"
           ],
           "content-type": [
             "application/json"
@@ -48,7 +48,7 @@
             "999"
           ],
           "anthropic-ratelimit-requests-reset": [
-            "2024-10-20T18:50:17Z"
+            "2024-10-22T04:41:17Z"
           ],
           "anthropic-ratelimit-tokens-limit": [
             "80000"
@@ -57,7 +57,7 @@
             "80000"
           ],
           "anthropic-ratelimit-tokens-reset": [
-            "2024-10-20T18:49:22Z"
+            "2024-10-22T04:40:42Z"
           ],
           "request-id": [
             "<REQUEST-ID>"
@@ -83,10 +83,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\"id\":\"msg_01KqHKynKddm6a9VY1j6Z65R\",\"type\":\"message\",\"role\":\"assistant\",\"model\":\"claude-3-5-sonnet-20240620\",\"content\":[{\"type\":\"text\",\"text\":\"one\\ntwo\\nthree\\nfour\\nfive\\nsix\\nseven\\neight\\nnine\\nten\\neleven\\ntwelve\"}],\"stop_reason\":\"max_tokens\",\"stop_sequence\":null,\"usage\":{\"input_tokens\":89,\"output_tokens\":24}}"
+          "string": "{\"id\":\"msg_01DmXxwUxbYgSkxAujBxm1tV\",\"type\":\"message\",\"role\":\"assistant\",\"model\":\"claude-3-5-sonnet-20240620\",\"content\":[{\"type\":\"text\",\"text\":\"one\\ntwo\\nthree\\nfour\\nfive\\nsix\\nseven\\neight\\nnine\\nten\\neleven\\ntwelve\\nthirteen\\nfourteen\\nfifteen\\nsixteen\"}],\"stop_reason\":\"max_tokens\",\"stop_sequence\":null,\"usage\":{\"input_tokens\":89,\"output_tokens\":32}}"
         }
       },
-      "recorded_at": "Sun, 20 Oct 2024 18:49:22 GMT"
+      "recorded_at": "Tue, 22 Oct 2024 04:40:42 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

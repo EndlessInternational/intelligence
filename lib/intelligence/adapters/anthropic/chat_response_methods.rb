@@ -1,113 +1,6 @@
 module Intelligence
   module Anthropic
-    module ChatMethods
-
-      CHAT_REQUEST_URI = "https://api.anthropic.com/v1/messages"
-
-      def chat_request_uri( options )
-        CHAT_REQUEST_URI
-      end
-
-      def chat_request_headers( options = nil )
-        options = options ? self.class.configure( options ) : {}
-        options = @options.merge( options )
-        result = {}
-
-        key = options[ :key ] 
-        version = options[ :version ] || "2023-06-01" 
-
-        raise ArgumentError.new( 
-          "An Anthropic key is required to build an Anthropic chat request." 
-        ) if key.nil?
-
-        result[ 'content-type' ] = 'application/json'
-        result[ 'x-api-key' ] = "#{key}"
-        result[ 'anthropic-version' ] = version unless version.nil?
-
-        result 
-      end
-
-      def chat_request_body( conversation, options = nil )
-        options = options ? self.class.configure( options ) : {}
-        options = @options.merge( options )
-        result = options[ :chat_options ]&.compact || {}
-
-        system_message = translate_system_message( conversation[ :system_message ] )
-        result[ :system ] = system_message unless system_message.nil?
-        result[ :messages ] = []
-
-        messages = conversation[ :messages ] 
-        length = messages&.length || 0
-        index = 0; while index < length 
-          
-          message = messages[ index ]
-          unless message.nil?
-
-            # The Anthropic API will not accept a sequence of messages where the role of two 
-            # sequentian messages is the same.
-            #
-            # The purpose of this code is to identify such occurences and coalece them such 
-            # that the first message in the sequence aggregates the contents of all subsequent
-            # messages with the same role.
-            look_ahead_index = index + 1; while look_ahead_index < length
-              ahead_message = messages[ look_ahead_index ]
-              unless ahead_message.nil?
-                if ahead_message[ :role ] == message[ :role ]
-                  message[ :contents ] = 
-                    ( message[ :contents ] || [] ) + 
-                    ( ahead_message[ :contents ] || [] )
-                  messages[ look_ahead_index ] = nil 
-                  look_ahead_index += 1
-                else 
-                  break
-                end
-              end
-            end
-
-            result_message = { role: message[ :role ] }
-            result_message_content = []
-            
-            message[ :contents ]&.each do | content |
-              case content[ :type ]
-              when :text
-                result_message_content << { type: 'text', text: content[ :text ] }
-              when :binary
-                content_type = content[ :content_type ]
-                bytes = content[ :bytes ]
-                if content_type && bytes
-                  mime_type = MIME::Types[ content_type ].first
-                  if mime_type&.media_type == 'image'
-                    result_message_content << {
-                      type: 'image',
-                      source: {
-                        type: 'base64',
-                        media_type: content_type,
-                        data: Base64.strict_encode64( bytes )
-                      }
-                    }
-                  else
-                    raise UnsupportedContentError.new( 
-                      :anthropic, 
-                      'only support content of type image/*' 
-                    ) 
-                  end
-                else 
-                  raise InvalidContentError.new( :anthropic ) 
-                end
-              end 
-            end
-            
-            result_message[ :content ] = result_message_content
-            result[ :messages ] << result_message
-          
-          end
-        
-          index += 1
-        
-        end
-
-        JSON.generate( result )
-      end 
+    module ChatResponseMethods
 
       def chat_result_attributes( response )
         return nil unless response.success?
@@ -130,6 +23,13 @@ module Intelligence
           response_json[ :content ].each do | content |
             if content[ :type ] == 'text'
               result_content.push( { type: 'text', text: content[ :text ] } )
+            elsif content[ :type ] == 'tool_use'
+              result_content.push( { 
+                type: :tool_call, 
+                tool_call_id: content[ :id ],
+                tool_name: content[ :name ],
+                tool_parameters: content[ :input ]
+              } )
             end
           end
 
@@ -288,23 +188,6 @@ module Intelligence
       alias_method :stream_result_error_attributes, :chat_result_error_attributes 
 
     private 
-
-      def translate_system_message( system_message )
-
-        return nil if system_message.nil?
-
-        # note: the current version of the anthropic api simply takes a string as the 
-        #       system message but the beta version requires an array of objects akin
-        #       to message contents.
-
-        result = ''
-        system_message[ :contents ].each do | content |
-          result += content[ :text ] if content[ :type ] == :text 
-        end
-
-        result.empty? ? nil : result 
-
-      end 
 
       def translate_end_result( end_result )
         case end_result

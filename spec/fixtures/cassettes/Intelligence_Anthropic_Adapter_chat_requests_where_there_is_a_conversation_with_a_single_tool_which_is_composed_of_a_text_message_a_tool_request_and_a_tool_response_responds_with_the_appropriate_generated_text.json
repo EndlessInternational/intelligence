@@ -6,7 +6,7 @@
         "uri": "https://api.anthropic.com/v1/messages",
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"model\":\"claude-3-5-sonnet-20240620\",\"max_tokens\":32,\"temperature\":0.0,\"system\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \",\"messages\":[{\"role\":\"user\",\"content\":[{\"type\":\"text\",\"text\":\"this is a test, respond with 'test'\\n\"}]},{\"role\":\"assistant\",\"content\":[{\"type\":\"text\",\"text\":\"test\\n\"}]},{\"role\":\"user\",\"content\":[{\"type\":\"text\",\"text\":\"hello!\\n\"},{\"type\":\"text\",\"text\":\"what was the previous user message?\\n\"}]}]}"
+          "string": "{\"model\":\"claude-3-5-sonnet-20240620\",\"max_tokens\":128,\"temperature\":0.0,\"system\":\"You are a helpfull assistant who answers questions succinctly.\",\"messages\":[{\"role\":\"user\",\"content\":[{\"type\":\"text\",\"text\":\"Where am I located?\"}]},{\"role\":\"assistant\",\"content\":[{\"type\":\"tool_use\",\"id\":\"call_RX1D4jUDUrfi4AePr4ZP7Sqv\",\"name\":\"get_location\",\"input\":{}}]},{\"role\":\"user\",\"content\":[{\"type\":\"tool_result\",\"tool_use_id\":\"call_RX1D4jUDUrfi4AePr4ZP7Sqv\",\"content\":\"Seattle, WA, USA\"}]}],\"tools\":[{\"name\":\"get_location\",\"description\":\"The get_location tool will return the users city, state or province and country.\",\"input_schema\":{\"type\":\"object\"}}]}"
         },
         "headers": {
           "User-Agent": [
@@ -30,7 +30,7 @@
         },
         "headers": {
           "date": [
-            "Tue, 22 Oct 2024 04:40:45 GMT"
+            "Tue, 22 Oct 2024 04:41:06 GMT"
           ],
           "content-type": [
             "application/json"
@@ -57,7 +57,7 @@
             "80000"
           ],
           "anthropic-ratelimit-tokens-reset": [
-            "2024-10-22T04:40:45Z"
+            "2024-10-22T04:41:06Z"
           ],
           "request-id": [
             "<REQUEST-ID>"
@@ -83,10 +83,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\"id\":\"msg_01XPK3aNPBoKNgFQF3c3z5QA\",\"type\":\"message\",\"role\":\"assistant\",\"model\":\"claude-3-5-sonnet-20240620\",\"content\":[{\"type\":\"text\",\"text\":\"The previous user message was:\\n\\n\\\"this is a test, respond with 'test'\\\"\"}],\"stop_reason\":\"end_turn\",\"stop_sequence\":null,\"usage\":{\"input_tokens\":74,\"output_tokens\":22}}"
+          "string": "{\"id\":\"msg_012ecF11TLoyY6x39ML9gyEF\",\"type\":\"message\",\"role\":\"assistant\",\"model\":\"claude-3-5-sonnet-20240620\",\"content\":[{\"type\":\"text\",\"text\":\"Based on the information provided by the get_location tool, you are currently located in Seattle, WA, USA. Seattle is a major city in the state of Washington, located in the Pacific Northwest region of the United States of America.\"}],\"stop_reason\":\"end_turn\",\"stop_sequence\":null,\"usage\":{\"input_tokens\":421,\"output_tokens\":52}}"
         }
       },
-      "recorded_at": "Tue, 22 Oct 2024 04:40:45 GMT"
+      "recorded_at": "Tue, 22 Oct 2024 04:41:06 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

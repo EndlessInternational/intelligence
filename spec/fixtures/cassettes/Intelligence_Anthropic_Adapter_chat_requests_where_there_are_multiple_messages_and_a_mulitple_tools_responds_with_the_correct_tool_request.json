@@ -1,0 +1,93 @@
+{
+  "http_interactions": [
+    {
+      "request": {
+        "method": "post",
+        "uri": "https://api.anthropic.com/v1/messages",
+        "body": {
+          "encoding": "UTF-8",
+          "string": "{\"model\":\"claude-3-5-sonnet-20240620\",\"max_tokens\":128,\"temperature\":0.0,\"system\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \",\"messages\":[{\"role\":\"user\",\"content\":[{\"type\":\"text\",\"text\":\"I am in Seattle, WA\\n\"}]},{\"role\":\"assistant\",\"content\":[{\"type\":\"text\",\"text\":\"Got it! Let me know if you need any local insights or information related to Seattle!\\n\"}]},{\"role\":\"user\",\"content\":[{\"type\":\"text\",\"text\":\"What is the current weather?\\n\"}]}],\"tools\":[{\"name\":\"get_location\",\"description\":\"The get_location tool will return the users city, state or province and country.\",\"input_schema\":{\"type\":\"object\"}},{\"name\":\"get_weather\",\"description\":\"The get_weather tool will return the current weather in a given locality.\",\"input_schema\":{\"type\":\"object\",\"properties\":{\"location\":{\"type\":\"object\",\"description\":\"The locality for which the weather will be returned\",\"properties\":{\"city\":{\"type\":\"string\",\"description\":\"The city or town for which the current weather should be returned.\"},\"state\":{\"type\":\"string\",\"description\":\"The state or province for which the current weather should be returned. If this is not provided the largest or most prominent city with the given name, in the given country or in the worldi, will be assumed.\"},\"country\":{\"type\":\"string\",\"description\":\"The country for which the given weather should be returned. If this is not provided the largest or most prominent city with the given name will be returned.\"}},\"required\":[\"city\"]}},\"required\":[\"location\"]}}]}"
+        },
+        "headers": {
+          "User-Agent": [
+            "Faraday v2.12.0"
+          ],
+          "content-type": [
+            "application/json"
+          ],
+          "x-api-key": [
+            "<X-API-KEY>"
+          ],
+          "anthropic-version": [
+            "2023-06-01"
+          ]
+        }
+      },
+      "response": {
+        "status": {
+          "code": 200,
+          "message": "OK"
+        },
+        "headers": {
+          "date": [
+            "Tue, 22 Oct 2024 04:41:03 GMT"
+          ],
+          "content-type": [
+            "application/json"
+          ],
+          "transfer-encoding": [
+            "chunked"
+          ],
+          "connection": [
+            "keep-alive"
+          ],
+          "anthropic-ratelimit-requests-limit": [
+            "1000"
+          ],
+          "anthropic-ratelimit-requests-remaining": [
+            "999"
+          ],
+          "anthropic-ratelimit-requests-reset": [
+            "2024-10-22T04:41:17Z"
+          ],
+          "anthropic-ratelimit-tokens-limit": [
+            "80000"
+          ],
+          "anthropic-ratelimit-tokens-remaining": [
+            "80000"
+          ],
+          "anthropic-ratelimit-tokens-reset": [
+            "2024-10-22T04:41:03Z"
+          ],
+          "request-id": [
+            "<REQUEST-ID>"
+          ],
+          "via": [
+            "1.1 google"
+          ],
+          "cf-cache-status": [
+            "DYNAMIC"
+          ],
+          "x-robots-tag": [
+            "none"
+          ],
+          "server": [
+            "cloudflare"
+          ],
+          "cf-ray": [
+            "<CF-RAY>"
+          ],
+          "content-encoding": [
+            "gzip"
+          ]
+        },
+        "body": {
+          "encoding": "ASCII-8BIT",
+          "string": "{\"id\":\"msg_01Xyi7th4uwLCwzZrtEPpJpw\",\"type\":\"message\",\"role\":\"assistant\",\"model\":\"claude-3-5-sonnet-20240620\",\"content\":[{\"type\":\"text\",\"text\":\"To get the current weather for Seattle, WA, I'll use the get_weather tool. First, I'll set up the location parameters, and then make the API call.\"},{\"type\":\"tool_use\",\"id\":\"toolu_01NsmiDivk9oAaH6YL7eDQsU\",\"name\":\"get_weather\",\"input\":{\"location\":{\"city\":\"Seattle\",\"state\":\"WA\",\"country\":\"United States\"}}}],\"stop_reason\":\"tool_use\",\"stop_sequence\":null,\"usage\":{\"input_tokens\":636,\"output_tokens\":121}}"
+        }
+      },
+      "recorded_at": "Tue, 22 Oct 2024 04:41:03 GMT"
+    }
+  ],
+  "recorded_with": "VCR 6.3.1"
+}
