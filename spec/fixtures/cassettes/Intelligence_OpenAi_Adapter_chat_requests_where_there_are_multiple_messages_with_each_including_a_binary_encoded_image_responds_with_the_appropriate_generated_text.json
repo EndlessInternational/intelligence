@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Tue, 22 Oct 2024 04:16:37 GMT"
+            "Fri, 25 Oct 2024 20:18:23 GMT"
           ],
           "content-type": [
             "application/json"
@@ -45,7 +45,7 @@
             "<OPENAI-ORGANIZATION>"
           ],
           "openai-processing-ms": [
-            "837"
+            "1221"
           ],
           "openai-version": [
             "2020-10-01"
@@ -98,10 +98,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\n  \"id\": \"chatcmpl-AL0btirl80RxtYTXFmB3GaMqiJED2\",\n  \"object\": \"chat.completion\",\n  \"created\": 1729570597,\n  \"model\": \"gpt-4o-2024-08-06\",\n  \"choices\": [\n    {\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": \"three balloons: red, blue, and yellow\",\n        \"refusal\": null\n      },\n      \"logprobs\": null,\n      \"finish_reason\": \"stop\"\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 592,\n    \"completion_tokens\": 9,\n    \"total_tokens\": 601,\n    \"prompt_tokens_details\": {\n      \"cached_tokens\": 0\n    },\n    \"completion_tokens_details\": {\n      \"reasoning_tokens\": 0\n    }\n  },\n  \"system_fingerprint\": \"fp_45c6de4934\"\n}\n"
+          "string": "{\n  \"id\": \"chatcmpl-AML3GsprPzTxOYcjS4Vlp5UTFqcvu\",\n  \"object\": \"chat.completion\",\n  \"created\": 1729887502,\n  \"model\": \"gpt-4o-2024-08-06\",\n  \"choices\": [\n    {\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": \"three balloons: red, blue, and yellow\",\n        \"refusal\": null\n      },\n      \"logprobs\": null,\n      \"finish_reason\": \"stop\"\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 592,\n    \"completion_tokens\": 9,\n    \"total_tokens\": 601,\n    \"prompt_tokens_details\": {\n      \"cached_tokens\": 0\n    },\n    \"completion_tokens_details\": {\n      \"reasoning_tokens\": 0\n    }\n  },\n  \"system_fingerprint\": \"fp_72bbfa6014\"\n}\n"
         }
       },
-      "recorded_at": "Tue, 22 Oct 2024 04:16:37 GMT"
+      "recorded_at": "Fri, 25 Oct 2024 20:18:23 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

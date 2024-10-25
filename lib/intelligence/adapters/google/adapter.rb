@@ -4,35 +4,35 @@ module Intelligence
   module Google
     class Adapter < Adapter::Base
 
-      configuration do 
+      schema do 
 
         # normalized properties for all endpoints
-        parameter :key, String  
+        key               String  
 
-        parameters :chat_options, as: :generationConfig do
+        chat_options      as: :generationConfig do
 
           # normalized properties for google generative text endpoint
-          parameter :model, String
-          parameter :max_tokens, Integer, as: :maxOutputTokens
-          parameter :n, Integer, as: :candidateCount
-          parameter :temperature, Float
-          parameter :top_k, Integer, as: :topK
-          parameter :top_p, Float, as: :topP
-          parameter :seed, Integer
-          parameter :stop, String, array: true, as: :stopSequences
-          parameter :stream, [ TrueClass, FalseClass ]
+          model           String
+          max_tokens      Integer,    as: :maxOutputTokens
+          n               Integer,    as: :candidateCount
+          temperature     Float
+          top_k           Integer,    as: :topK
+          top_p           Float,      as: :topP
+          seed            Integer
+          stop            String,     array: true, as: :stopSequences
+          stream          [ TrueClass, FalseClass ]
 
-          parameter :frequency_penalty, Float, as: :frequencyPenalty
-          parameter :presence_penalty, Float, as: :presencePenalty
+          frequency_penalty Float,    as: :frequencyPenalty
+          presence_penalty Float,     as: :presencePenalty
 
           # google variant of normalized properties for google generative text endpoints
-          parameter :candidate_count, Integer, as: :candidateCount
-          parameter :max_output_tokens, Integer, as: :maxOutputTokens
-          parameter :stop_sequences, String, array: true, as: :stopSequences
+          candidate_count Integer,    as: :candidateCount
+          max_output_tokens Integer,  as: :maxOutputTokens
+          stop_sequences String,      array: true, as: :stopSequences
 
           # google specific properties for google generative text endpoints
-          parameter :response_mime_type, String, as: :responseMimeType
-          parameter :response_schema, as: :responseSchema
+          response_mime_type String,  as: :responseMimeType
+          response_schema             as: :responseSchema
 
         end
 

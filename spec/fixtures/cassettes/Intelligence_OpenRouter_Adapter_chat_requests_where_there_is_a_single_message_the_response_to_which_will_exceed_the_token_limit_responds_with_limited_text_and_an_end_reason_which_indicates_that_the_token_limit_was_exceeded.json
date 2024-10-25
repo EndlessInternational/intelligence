@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Sun, 20 Oct 2024 17:54:11 GMT"
+            "Fri, 25 Oct 2024 17:39:40 GMT"
           ],
           "content-type": [
             "application/json"
@@ -63,7 +63,7 @@
             "/api/v1/chat/completions"
           ],
           "x-vercel-id": [
-            "pdx1::w5h9h-1729446851382-593c3c4ed391"
+            "pdx1::fv8zg-1729877979997-df09c9a60d1f"
           ],
           "cf-cache-status": [
             "DYNAMIC"
@@ -83,10 +83,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n{\"id\":\"gen-1729446851-SQEsZPyXYLTrjp6Uii2E\",\"provider\":\"DeepInfra\",\"model\":\"meta-llama/llama-3.2-11b-vision-instruct\",\"object\":\"chat.completion\",\"created\":1729446851,\"choices\":[{\"logprobs\":null,\"finish_reason\":\"length\",\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"one\\ntwo\\nthree\\nfour\\nfive\\nsix\\nseven\\neight\\n\",\"refusal\":\"\"}}],\"usage\":{\"prompt_tokens\":105,\"completion_tokens\":1,\"total_tokens\":106}}"
+          "string": "\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n{\"id\":\"gen-1729877980-M5V3nTrT1ChTmwyrLVAO\",\"provider\":\"Fireworks\",\"model\":\"meta-llama/llama-3.2-11b-vision-instruct\",\"object\":\"chat.completion\",\"created\":1729877980,\"choices\":[{\"logprobs\":null,\"finish_reason\":\"length\",\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"one\\ntwo\\nthree\\nfour\\nfive\\nsix\\nseven\\neight\\n\",\"refusal\":\"\"}}],\"usage\":{\"prompt_tokens\":68,\"completion_tokens\":16,\"total_tokens\":84}}"
         }
       },
-      "recorded_at": "Sun, 20 Oct 2024 17:54:12 GMT"
+      "recorded_at": "Fri, 25 Oct 2024 17:39:40 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Sun, 20 Oct 2024 18:59:45 GMT"
+            "Fri, 25 Oct 2024 17:40:04 GMT"
           ],
           "content-type": [
             "application/json; charset=utf-8"
@@ -42,7 +42,7 @@
             "*"
           ],
           "x-api-received": [
-            "2024-10-20T18:59:44.452Z"
+            "2024-10-25T17:40:03.531Z"
           ],
           "x-ratelimit": [
             "false"
@@ -57,7 +57,7 @@
             "1"
           ],
           "x-ratelimit-remaining-tokens": [
-            "2802"
+            "3000"
           ],
           "x-ratelimit-limit-tokens": [
             "3000"
@@ -66,13 +66,13 @@
             "v2"
           ],
           "x-api-call-start": [
-            "2024-10-20T18:59:44.458Z"
+            "2024-10-25T17:40:03.540Z"
           ],
           "x-api-call-end": [
-            "2024-10-20T18:59:45.175Z"
+            "2024-10-25T17:40:04.253Z"
           ],
           "etag": [
-            "W/\"22b-fEndhn9EGJEAxaTZLJqL3Qne8+g\""
+            "W/\"22b-xAzTAJdAcQfY3zyj2X72Iack/GA\""
           ],
           "cf-cache-status": [
             "DYNAMIC"
@@ -95,10 +95,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "{\n  \"id\": \"8d5b3f2abd097693-SEA\",\n  \"object\": \"chat.completion\",\n  \"created\": 1729450784,\n  \"model\": \"meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo\",\n  \"prompt\": [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"length\",\n      \"seed\": 5945698232505310000,\n      \"logprobs\": null,\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": \"one\\ntwo\\nthree\\nfour\\nfive\\nsix\\nseven\\neight\\n\",\n        \"tool_calls\": []\n      }\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 85,\n    \"completion_tokens\": 16,\n    \"total_tokens\": 101\n  }\n}"
+          "string": "{\n  \"id\": \"8d83fd51fbc275e0-SEA\",\n  \"object\": \"chat.completion\",\n  \"created\": 1729878003,\n  \"model\": \"meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo\",\n  \"prompt\": [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"length\",\n      \"seed\": 5941857912443958000,\n      \"logprobs\": null,\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": \"one\\ntwo\\nthree\\nfour\\nfive\\nsix\\nseven\\neight\\n\",\n        \"tool_calls\": []\n      }\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 85,\n    \"completion_tokens\": 16,\n    \"total_tokens\": 101\n  }\n}"
         }
       },
-      "recorded_at": "Sun, 20 Oct 2024 18:59:45 GMT"
+      "recorded_at": "Fri, 25 Oct 2024 17:40:04 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

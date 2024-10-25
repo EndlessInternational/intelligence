@@ -30,7 +30,7 @@
         },
         "headers": {
           "date": [
-            "Tue, 22 Oct 2024 04:40:56 GMT"
+            "Fri, 25 Oct 2024 17:47:54 GMT"
           ],
           "content-type": [
             "application/json"
@@ -48,7 +48,7 @@
             "999"
           ],
           "anthropic-ratelimit-requests-reset": [
-            "2024-10-22T04:41:17Z"
+            "2024-10-25T17:48:17Z"
           ],
           "anthropic-ratelimit-tokens-limit": [
             "80000"
@@ -57,7 +57,7 @@
             "80000"
           ],
           "anthropic-ratelimit-tokens-reset": [
-            "2024-10-22T04:40:56Z"
+            "2024-10-25T17:47:54Z"
           ],
           "request-id": [
             "<REQUEST-ID>"
@@ -83,10 +83,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\"id\":\"msg_01PjA8vp4puTHS6Zi9MrPv7s\",\"type\":\"message\",\"role\":\"assistant\",\"model\":\"claude-3-5-sonnet-20240620\",\"content\":[{\"type\":\"text\",\"text\":\"Certainly! I'll use the get_weather tool to check the current weather in Seattle, WA for you.\"},{\"type\":\"tool_use\",\"id\":\"toolu_01M5v1gwHxESAqVeVDBQbJDW\",\"name\":\"get_weather\",\"input\":{\"location\":{\"city\":\"Seattle\",\"state\":\"WA\"}}}],\"stop_reason\":\"tool_use\",\"stop_sequence\":null,\"usage\":{\"input_tokens\":591,\"output_tokens\":99}}"
+          "string": "{\"id\":\"msg_01NAWEacxVP7SXsUeaht5Roi\",\"type\":\"message\",\"role\":\"assistant\",\"model\":\"claude-3-5-sonnet-20240620\",\"content\":[{\"type\":\"text\",\"text\":\"Certainly! I'll use the get_weather tool to check the current weather in Seattle, WA for you.\"},{\"type\":\"tool_use\",\"id\":\"toolu_019Js87WBxcrNVyPesPnu1xN\",\"name\":\"get_weather\",\"input\":{\"location\":{\"city\":\"Seattle\",\"state\":\"WA\"}}}],\"stop_reason\":\"tool_use\",\"stop_sequence\":null,\"usage\":{\"input_tokens\":591,\"output_tokens\":99}}"
         }
       },
-      "recorded_at": "Tue, 22 Oct 2024 04:40:56 GMT"
+      "recorded_at": "Fri, 25 Oct 2024 17:47:54 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

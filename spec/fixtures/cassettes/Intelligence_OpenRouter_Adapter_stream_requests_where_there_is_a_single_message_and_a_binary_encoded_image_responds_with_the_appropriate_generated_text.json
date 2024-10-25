@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Sun, 20 Oct 2024 06:23:09 GMT"
+            "Fri, 25 Oct 2024 17:39:49 GMT"
           ],
           "content-type": [
             "text/event-stream"
@@ -63,7 +63,7 @@
             "/api/v1/chat/completions"
           ],
           "x-vercel-id": [
-            "pdx1::gd5pj-1729405389768-398af8d3595e"
+            "pdx1::nsnsj-1729877989246-fc3f479905ce"
           ],
           "cf-cache-status": [
             "DYNAMIC"
@@ -77,10 +77,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": ": OPENROUTER PROCESSING\n\ndata: {\"id\":\"gen-1729405389-4dweYBdybsljCMQHgCYv\",\"provider\":\"Hyperbolic\",\"model\":\"qwen/qwen-2-vl-7b-instruct\",\"object\":\"chat.completion.chunk\",\"created\":1729405389,\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"\"},\"finish_reason\":null,\"logprobs\":null}]}\n\ndata: {\"id\":\"gen-1729405389-4dweYBdybsljCMQHgCYv\",\"provider\":\"Hyperbolic\",\"model\":\"qwen/qwen-2-vl-7b-instruct\",\"object\":\"chat.completion.chunk\",\"created\":1729405389,\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"\"},\"finish_reason\":null,\"logprobs\":null}]}\n\ndata: {\"id\":\"gen-1729405389-4dweYBdybsljCMQHgCYv\",\"provider\":\"Hyperbolic\",\"model\":\"qwen/qwen-2-vl-7b-instruct\",\"object\":\"chat.completion.chunk\",\"created\":1729405389,\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"\"},\"finish_reason\":null,\"logprobs\":null}]}\n\ndata: {\"id\":\"gen-1729405389-4dweYBdybsljCMQHgCYv\",\"provider\":\"Hyperbolic\",\"model\":\"qwen/qwen-2-vl-7b-instruct\",\"object\":\"chat.completion.chunk\",\"created\":1729405389,\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"red balloon\"},\"finish_reason\":\"stop\",\"logprobs\":null}]}\n\ndata: {\"id\":\"gen-1729405389-4dweYBdybsljCMQHgCYv\",\"provider\":\"Hyperbolic\",\"model\":\"qwen/qwen-2-vl-7b-instruct\",\"object\":\"chat.completion.chunk\",\"created\":1729405389,\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"\"},\"finish_reason\":null,\"logprobs\":null}],\"usage\":{\"prompt_tokens\":62,\"completion_tokens\":4,\"total_tokens\":66}}\n\ndata: [DONE]\n\n"
+          "string": "data: {\"id\":\"gen-1729877989-nCUo5o2hDb9AGXGac8Iy\",\"provider\":\"Hyperbolic\",\"model\":\"qwen/qwen-2-vl-7b-instruct\",\"object\":\"chat.completion.chunk\",\"created\":1729877989,\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"\"},\"finish_reason\":null,\"logprobs\":null}]}\n\ndata: {\"id\":\"gen-1729877989-nCUo5o2hDb9AGXGac8Iy\",\"provider\":\"Hyperbolic\",\"model\":\"qwen/qwen-2-vl-7b-instruct\",\"object\":\"chat.completion.chunk\",\"created\":1729877989,\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"\"},\"finish_reason\":null,\"logprobs\":null}]}\n\ndata: {\"id\":\"gen-1729877989-nCUo5o2hDb9AGXGac8Iy\",\"provider\":\"Hyperbolic\",\"model\":\"qwen/qwen-2-vl-7b-instruct\",\"object\":\"chat.completion.chunk\",\"created\":1729877989,\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"\"},\"finish_reason\":null,\"logprobs\":null}]}\n\ndata: {\"id\":\"gen-1729877989-nCUo5o2hDb9AGXGac8Iy\",\"provider\":\"Hyperbolic\",\"model\":\"qwen/qwen-2-vl-7b-instruct\",\"object\":\"chat.completion.chunk\",\"created\":1729877989,\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"red balloon\"},\"finish_reason\":\"stop\",\"logprobs\":null}]}\n\ndata: {\"id\":\"gen-1729877989-nCUo5o2hDb9AGXGac8Iy\",\"provider\":\"Hyperbolic\",\"model\":\"qwen/qwen-2-vl-7b-instruct\",\"object\":\"chat.completion.chunk\",\"created\":1729877989,\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"\"},\"finish_reason\":null,\"logprobs\":null}],\"usage\":{\"prompt_tokens\":62,\"completion_tokens\":4,\"total_tokens\":66}}\n\ndata: [DONE]\n\n"
         }
       },
-      "recorded_at": "Sun, 20 Oct 2024 06:23:10 GMT"
+      "recorded_at": "Fri, 25 Oct 2024 17:39:49 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

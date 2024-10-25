@@ -7,25 +7,25 @@ module Intelligence
 
       chat_request_uri "https://openrouter.ai/api/v1/chat/completions"
       
-      configuration do 
-        parameter :key, String 
-        parameters :chat_options do 
-          parameter :model, String
-          parameter :temperature, Float
-          parameter :top_k, Integer
-          parameter :top_p, Float
-          parameter :max_tokens, Integer
-          parameter :seed, Integer
-          parameter :stop, String, array: true
-          parameter :stream, [ TrueClass, FalseClass ]
-          parameter :frequency_penalty, Float
-          parameter :repetition_penalty, Float
-          parameter :presence_penalty, Float
+      schema do 
+        key                     String 
+        chat_options do 
+          model                 String
+          temperature           Float
+          top_k                 Integer
+          top_p                 Float
+          max_tokens            Integer
+          seed                  Integer
+          stop                  String, array: true
+          stream                [ TrueClass, FalseClass ]
+          frequency_penalty     Float
+          repetition_penalty    Float
+          presence_penalty      Float
           
-          parameters :provider do 
-            parameter :order, String, array: true 
-            parameter :require_parameters, [ TrueClass, FalseClass ]
-            parameter :allow_fallbacks, [ TrueClass, FalseClass ]
+          provider do 
+            order               String, array: true 
+            require_parameters  [ TrueClass, FalseClass ]
+            allow_fallbacks     [ TrueClass, FalseClass ]
           end
         end
       end

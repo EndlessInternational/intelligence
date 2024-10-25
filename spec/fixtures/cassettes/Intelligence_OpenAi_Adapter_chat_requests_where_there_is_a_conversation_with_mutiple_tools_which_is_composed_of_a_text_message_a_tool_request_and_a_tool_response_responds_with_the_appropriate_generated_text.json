@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Tue, 22 Oct 2024 04:16:53 GMT"
+            "Fri, 25 Oct 2024 20:18:35 GMT"
           ],
           "content-type": [
             "application/json"
@@ -45,7 +45,7 @@
             "<OPENAI-ORGANIZATION>"
           ],
           "openai-processing-ms": [
-            "820"
+            "485"
           ],
           "openai-version": [
             "2020-10-01"
@@ -98,10 +98,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\n  \"id\": \"chatcmpl-AL0c8ljWM7gFvGpjHVxJOpSUJv64l\",\n  \"object\": \"chat.completion\",\n  \"created\": 1729570612,\n  \"model\": \"gpt-4o-2024-08-06\",\n  \"choices\": [\n    {\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": null,\n        \"tool_calls\": [\n          {\n            \"id\": \"call_XW4fRDlPsmxLfbcnoqcPRJiY\",\n            \"type\": \"function\",\n            \"function\": {\n              \"name\": \"get_weather\",\n              \"arguments\": \"{\\\"location\\\":{\\\"city\\\":\\\"Seattle\\\",\\\"state\\\":\\\"WA\\\",\\\"country\\\":\\\"USA\\\"}}\"\n            }\n          }\n        ],\n        \"refusal\": null\n      },\n      \"logprobs\": null,\n      \"finish_reason\": \"tool_calls\"\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 225,\n    \"completion_tokens\": 24,\n    \"total_tokens\": 249,\n    \"prompt_tokens_details\": {\n      \"cached_tokens\": 0\n    },\n    \"completion_tokens_details\": {\n      \"reasoning_tokens\": 0\n    }\n  },\n  \"system_fingerprint\": \"fp_a7d06e42a7\"\n}\n"
+          "string": "{\n  \"id\": \"chatcmpl-AML3Tq4MQM4l4lOxwXvzJkuzj8192\",\n  \"object\": \"chat.completion\",\n  \"created\": 1729887515,\n  \"model\": \"gpt-4o-2024-08-06\",\n  \"choices\": [\n    {\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": null,\n        \"tool_calls\": [\n          {\n            \"id\": \"call_jz8IRNGUlq7rHLwfweduZryo\",\n            \"type\": \"function\",\n            \"function\": {\n              \"name\": \"get_weather\",\n              \"arguments\": \"{\\\"location\\\":{\\\"city\\\":\\\"Seattle\\\",\\\"state\\\":\\\"WA\\\",\\\"country\\\":\\\"USA\\\"}}\"\n            }\n          }\n        ],\n        \"refusal\": null\n      },\n      \"logprobs\": null,\n      \"finish_reason\": \"tool_calls\"\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 225,\n    \"completion_tokens\": 24,\n    \"total_tokens\": 249,\n    \"prompt_tokens_details\": {\n      \"cached_tokens\": 0\n    },\n    \"completion_tokens_details\": {\n      \"reasoning_tokens\": 0\n    }\n  },\n  \"system_fingerprint\": \"fp_90354628f2\"\n}\n"
         }
       },
-      "recorded_at": "Tue, 22 Oct 2024 04:16:53 GMT"
+      "recorded_at": "Fri, 25 Oct 2024 20:18:35 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

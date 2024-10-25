@@ -30,7 +30,7 @@ RSpec.describe "#{Intelligence::Adapter[ :cerebras ]} stream requests", :cerebra
       key   ENV[ 'CEREBRAS_API_KEY' ]
       chat_options do
         model                 'llama3.1-70b'
-        max_tokens            24
+        max_tokens            64
         stop                  'five'
 
         stream                true

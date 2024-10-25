@@ -7,19 +7,19 @@ module Intelligence
 
       chat_request_uri "https://api.hyperbolic.xyz/v1/chat/completions"
       
-      configuration do 
-        parameter :key, String 
-        parameters :chat_options do 
-          parameter :model, String
-          parameter :temperature, Float
-          parameter :top_p, Float
-          parameter :n, Integer
-          parameter :max_tokens, Integer
-          parameter :stop, String, array: true
-          parameter :stream, [ TrueClass, FalseClass ]
-          parameter :frequency_penalty, Float
-          parameter :presence_penalty, Float
-          parameter :user, String
+      schema do 
+        key                 String 
+        chat_options do 
+          model             String
+          temperature       Float
+          top_p             Float
+          n                 Integer
+          max_tokens        Integer
+          stop              String, array: true
+          stream            [ TrueClass, FalseClass ]
+          frequency_penalty Float
+          presence_penalty  Float
+          user              String
         end
       end
 

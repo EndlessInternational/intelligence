@@ -1,16 +1,16 @@
 module Intelligence
   class Conversation 
 
-    extend AdaptiveConfiguration::Configurable 
+    extend DynamicSchema::Definition 
 
-    configuration do
-      parameters :system_message, default: { role: :system }, &Message::CONFIGURATION  
-      parameters :message, as: :messages, array: true, &Message::CONFIGURATION
+    schema do
+      system_message    default: { role: :system }, &Message::SCHEMA  
+      message           as: :messages, array: true, &Message::SCHEMA
     end
 
     def self.build( attributes = nil, &block )
-      configuration = self.configure( attributes, &block )
-      self.new( configuration.to_h )
+      attributes = self.build_with_schema( attributes, &block )
+      self.new( attributes )
     end
 
     attr_reader   :system_message

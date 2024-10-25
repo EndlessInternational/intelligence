@@ -7,25 +7,25 @@ module Intelligence
 
       chat_request_uri "https://api.cerebras.ai/v1/chat/completions"
       
-      configuration do 
-        parameter :key 
-        parameters :chat_options do 
-          parameter :model, String
-          parameter :max_tokens, Integer
-          parameter :response_format do 
-            parameter :type, String, default: 'json_schema'
-            parameter :json_schema
+      schema do 
+        key               String 
+        chat_options do 
+          model           String
+          max_tokens      Integer
+          response_format do 
+            type          String, default: 'json_schema'
+            json_schema
           end
-          parameter :seed, Integer
-          parameter :stop, array: true
-          parameter :stream, [ TrueClass, FalseClass ]
-          parameter :temperature, Float
-          parameter :top_p, Float
-          parameter :tool_choice do 
-            parameter :type, String 
-            parameter :mame, String
+          seed            Integer
+          stop            array: true
+          stream          [ TrueClass, FalseClass ]
+          temperature     Float
+          top_p           Float
+          tool_choice do 
+            type          String 
+            mame          String
           end
-          parameter :user
+          user
         end
       end
 

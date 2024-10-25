@@ -7,41 +7,40 @@ module Intelligence
       
       chat_request_uri 'https://api.groq.com/openai/v1/chat/completions'
 
-      configuration do 
-        parameter :key, String
-        parameters :chat_options do 
-          parameter :frequency_penalty, Float
-          parameter :logit_bias
-          parameter :logprobs, [ TrueClass, FalseClass ]
-          parameter :max_tokens, Integer
-          parameter :model, String
-          parameter :n, Integer
-            # the parallel_tool_calls parameter is only allowed when 'tools' are specified
-          parameter :parallel_tool_calls, [ TrueClass, FalseClass ]
-          parameter :presence_penalty, Float
-          parameters :response_format do 
+      schema do 
+        key                   String
+        chat_options do 
+          frequency_penalty   Float
+          logit_bias
+          logprobs            [ TrueClass, FalseClass ]
+          max_tokens          Integer
+          model               String
+          # the parallel_tool_calls is only allowed when 'tools' are specified
+          parallel_tool_calls [ TrueClass, FalseClass ]
+          presence_penalty    Float
+          response_format do 
             # 'text' and 'json_object' are the only supported types; you must also instruct 
             # the model to output json
-            parameter :type, String
+            type              Symbol, in: [ :text, :json_object ]
           end
-          parameter :seed, Integer
-          parameter :stop, String, array: true
-          parameter :stream, [ TrueClass, FalseClass ]
-          parameters :stream_options do
-            parameter :include_usage, [ TrueClass, FalseClass ]
+          seed                Integer
+          stop                String, array: true
+          stream              [ TrueClass, FalseClass ]
+          stream_options do
+            include_usage     [ TrueClass, FalseClass ]
           end
-          parameter :temperature, Float
-          parameters :tool_choice do 
+          temperature         Float
+          tool_choice do 
             # one of 'auto', 'none' or 'function'
-            parameter :type, String 
+            type              Symbol, in: [ :auto, :none, :function ]
             # the function parameters is required if you specify a type of 'function' 
-            parameters :function do 
-              parameter :name, String 
+            function do 
+              name            String 
             end
           end
-          parameter :top_logprobs, Integer
-          parameter :top_p, Float
-          parameter :user, String
+          top_logprobs        Integer
+          top_p               Float
+          user                String
         end
       end
 

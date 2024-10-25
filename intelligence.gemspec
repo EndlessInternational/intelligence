@@ -37,7 +37,7 @@ Gem::Specification.new do | spec |
   spec.require_paths = [ "lib" ]
 
   spec.add_runtime_dependency 'faraday', '~> 2.7'
-  spec.add_runtime_dependency 'adaptiveconfiguration', '~> 1.0.0.beta09'
+  spec.add_runtime_dependency 'dynamicschema', '~> 1.0.0.beta01'
   spec.add_runtime_dependency 'mime-types', '~> 3.6'
 
   spec.add_development_dependency 'rspec', '~> 3.4'

@@ -4,8 +4,8 @@ require 'spec_helper'
 module Intelligence
   module TestAdapter
     class Adapter < Intelligence::Adapter::Base
-      configuration do 
-        parameter :key
+      schema do 
+        key
       end
     end
   end

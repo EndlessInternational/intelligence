@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Sun, 20 Oct 2024 18:59:50 GMT"
+            "Fri, 25 Oct 2024 17:40:11 GMT"
           ],
           "content-type": [
             "application/json; charset=utf-8"
@@ -42,7 +42,7 @@
             "*"
           ],
           "x-api-received": [
-            "2024-10-20T18:59:49.512Z"
+            "2024-10-25T17:40:10.874Z"
           ],
           "x-ratelimit": [
             "false"
@@ -54,10 +54,10 @@
             "17"
           ],
           "x-ratelimit-reset": [
-            "1"
+            "0"
           ],
           "x-ratelimit-remaining-tokens": [
-            "2725"
+            "3000"
           ],
           "x-ratelimit-limit-tokens": [
             "3000"
@@ -66,13 +66,13 @@
             "v2"
           ],
           "x-api-call-start": [
-            "2024-10-20T18:59:49.519Z"
+            "2024-10-25T17:40:10.883Z"
           ],
           "x-api-call-end": [
-            "2024-10-20T18:59:50.025Z"
+            "2024-10-25T17:40:11.534Z"
           ],
           "etag": [
-            "W/\"224-hPKUGIFsgoqPlzXlBXJyB4AC+cU\""
+            "W/\"224-llZhbW6Sbn46BRtr+tJUBDvCyAc\""
           ],
           "cf-cache-status": [
             "DYNAMIC"
@@ -95,10 +95,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "{\n  \"id\": \"chat-70d120b8482e4f62bd416758748b1142\",\n  \"object\": \"chat.completion\",\n  \"created\": 1729450789,\n  \"model\": \"meta-llama/Llama-3.2-11B-Vision-Instruct-Turbo\",\n  \"prompt_logprobs\": null,\n  \"prompt\": [],\n  \"choices\": [\n    {\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": \"It is a picture of three balloons.\",\n        \"tool_calls\": []\n      },\n      \"logprobs\": null,\n      \"finish_reason\": \"stop\"\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 89,\n    \"total_tokens\": 98,\n    \"completion_tokens\": 9\n  }\n}"
+          "string": "{\n  \"id\": \"chat-55327c7b2f1d4a958cc391666b238ebb\",\n  \"object\": \"chat.completion\",\n  \"created\": 1729878011,\n  \"model\": \"meta-llama/Llama-3.2-11B-Vision-Instruct-Turbo\",\n  \"prompt_logprobs\": null,\n  \"prompt\": [],\n  \"choices\": [\n    {\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": \"It is a picture of three balloons.\",\n        \"tool_calls\": []\n      },\n      \"logprobs\": null,\n      \"finish_reason\": \"stop\"\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 89,\n    \"total_tokens\": 98,\n    \"completion_tokens\": 9\n  }\n}"
         }
       },
-      "recorded_at": "Sun, 20 Oct 2024 18:59:50 GMT"
+      "recorded_at": "Fri, 25 Oct 2024 17:40:11 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

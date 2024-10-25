@@ -3,10 +3,10 @@ module Intelligence
 
     class ToolCall < Base
       
-      configuration do 
-        parameter :tool_call_id, String 
-        parameter :tool_name, String, required: true 
-        parameter :tool_parameters, [ Hash, String ]
+      schema do 
+        tool_call_id    String 
+        tool_name       String, required: true 
+        tool_parameters [ Hash, String ]
       end 
 
       attr_reader :tool_call_id 

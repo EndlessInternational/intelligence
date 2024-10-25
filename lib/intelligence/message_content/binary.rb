@@ -3,9 +3,9 @@ module Intelligence
 
     class Binary < Base
   
-      configuration do 
-        parameter :content_type, String, required: true 
-        parameter :bytes, String, required: true 
+      schema do 
+        content_type    String, required: true 
+        bytes           String, required: true 
       end
 
       attr_reader :content_type 

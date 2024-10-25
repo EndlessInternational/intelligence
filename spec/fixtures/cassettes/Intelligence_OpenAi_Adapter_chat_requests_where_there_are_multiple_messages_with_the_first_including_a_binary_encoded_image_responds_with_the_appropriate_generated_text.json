@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Tue, 22 Oct 2024 04:16:36 GMT"
+            "Fri, 25 Oct 2024 20:18:21 GMT"
           ],
           "content-type": [
             "application/json"
@@ -45,10 +45,13 @@
             "<OPENAI-ORGANIZATION>"
           ],
           "openai-processing-ms": [
-            "1151"
+            "793"
           ],
           "openai-version": [
             "2020-10-01"
+          ],
+          "strict-transport-security": [
+            "max-age=31536000; includeSubDomains; preload"
           ],
           "x-ratelimit-limit-requests": [
             "10000"
@@ -60,7 +63,7 @@
             "9999"
           ],
           "x-ratelimit-remaining-tokens": [
-            "29999138"
+            "29999137"
           ],
           "x-ratelimit-reset-requests": [
             "6ms"
@@ -70,9 +73,6 @@
           ],
           "x-request-id": [
             "<X-REQUEST-ID>"
-          ],
-          "strict-transport-security": [
-            "max-age=31536000; includeSubDomains; preload"
           ],
           "cf-cache-status": [
             "DYNAMIC"
@@ -98,10 +98,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\n  \"id\": \"chatcmpl-AL0bsZUD1D8uN1KadF8ohKjyC9Fkk\",\n  \"object\": \"chat.completion\",\n  \"created\": 1729570596,\n  \"model\": \"gpt-4o-2024-08-06\",\n  \"choices\": [\n    {\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": \"red\",\n        \"refusal\": null\n      },\n      \"logprobs\": null,\n      \"finish_reason\": \"stop\"\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 334,\n    \"completion_tokens\": 1,\n    \"total_tokens\": 335,\n    \"prompt_tokens_details\": {\n      \"cached_tokens\": 0\n    },\n    \"completion_tokens_details\": {\n      \"reasoning_tokens\": 0\n    }\n  },\n  \"system_fingerprint\": \"fp_45c6de4934\"\n}\n"
+          "string": "{\n  \"id\": \"chatcmpl-AML3FW2nNUYybKfshfaonbydD2WT9\",\n  \"object\": \"chat.completion\",\n  \"created\": 1729887501,\n  \"model\": \"gpt-4o-2024-08-06\",\n  \"choices\": [\n    {\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": \"red\",\n        \"refusal\": null\n      },\n      \"logprobs\": null,\n      \"finish_reason\": \"stop\"\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 334,\n    \"completion_tokens\": 1,\n    \"total_tokens\": 335,\n    \"prompt_tokens_details\": {\n      \"cached_tokens\": 0\n    },\n    \"completion_tokens_details\": {\n      \"reasoning_tokens\": 0\n    }\n  },\n  \"system_fingerprint\": \"fp_72bbfa6014\"\n}\n"
         }
       },
-      "recorded_at": "Tue, 22 Oct 2024 04:16:36 GMT"
+      "recorded_at": "Fri, 25 Oct 2024 20:18:21 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

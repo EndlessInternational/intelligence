@@ -5,36 +5,36 @@ module Intelligence
   module Anthropic
     class Adapter < Adapter::Base
 
-      configuration do 
+      schema do 
 
         # normalized properties for all endpoints
-        parameter :key 
+        key 
 
         # anthropic specific properties for all endpoints
-        parameter :version, String, default: '2023-06-01'
+        version           String, default: '2023-06-01'
  
-        parameters :chat_options do 
+        chat_options do 
   
           # normalized properties for anthropic generative text endpoint
-          parameter :model, String
-          parameter :max_tokens, Integer
-          parameter :temperature, Float
-          parameter :top_k, Integer
-          parameter :top_p, Float
-          parameter :stop, String, array: true, as: :stop_sequences
-          parameter :stream, [ TrueClass, FalseClass ]
+          model           String
+          max_tokens      Integer
+          temperature     Float
+          top_k           Integer
+          top_p           Float
+          stop            String, array: true, as: :stop_sequences
+          stream          [ TrueClass, FalseClass ]
 
           # anthropic variant of normalized properties for anthropic generative text endpoints
-          parameter :stop_sequences, String, array: true
+          stop_sequences  String, array: true
 
           # anthropic specific properties for anthropic generative text endpoints
-          parameter :tool_choice do 
-            parameter :type, String  
+          tool_choice     do 
+            type          String  
             # the name parameter should only be set if type = 'tool'
-            parameter :name, String
+            name          String
           end
-          parameters :metadata do
-            parameter :user_id, String
+          metadata do
+            user_id       String
           end 
           
         end

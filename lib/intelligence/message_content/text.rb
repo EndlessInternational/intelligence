@@ -3,8 +3,8 @@ module Intelligence
 
     class Text < Base
         
-      configuration do 
-        parameter :text, String, required: true
+      schema do 
+        text            String, required: true
       end
 
       attr_reader :text 

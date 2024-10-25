@@ -2,14 +2,14 @@ module Intelligence
   module MessageContent 
 
     class Base
-      extend AdaptiveConfiguration::Configurable
+      extend DynamicSchema::Definition 
 
       def self.build( attributes = nil, &block ) 
-        self.new( self.configure( attributes, &block ) )
+        self.new( self.build_with_schema( attributes, &block ) )
       end 
       
       def self.build!( attributes = nil, &block ) 
-        self.new( self.configure!( attributes, &block ) )
+        self.new( self.build_with_schema!( attributes, &block ) )
       end 
       
       def initialize( attributes = {} )

@@ -30,7 +30,7 @@
         },
         "headers": {
           "date": [
-            "Tue, 22 Oct 2024 04:40:59 GMT"
+            "Fri, 25 Oct 2024 17:47:55 GMT"
           ],
           "content-type": [
             "application/json"
@@ -48,7 +48,7 @@
             "999"
           ],
           "anthropic-ratelimit-requests-reset": [
-            "2024-10-22T04:41:17Z"
+            "2024-10-25T17:48:17Z"
           ],
           "anthropic-ratelimit-tokens-limit": [
             "80000"
@@ -57,7 +57,7 @@
             "80000"
           ],
           "anthropic-ratelimit-tokens-reset": [
-            "2024-10-22T04:40:59Z"
+            "2024-10-25T17:47:55Z"
           ],
           "request-id": [
             "<REQUEST-ID>"
@@ -83,10 +83,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\"id\":\"msg_01KPovv9EwbpqGL3zZNFhZpM\",\"type\":\"message\",\"role\":\"assistant\",\"model\":\"claude-3-5-sonnet-20240620\",\"content\":[{\"type\":\"text\",\"text\":\"To provide you with the current weather information, I need to know your location. Let me first get your location using the available tool.\"},{\"type\":\"tool_use\",\"id\":\"toolu_0191PW2tk8UFgQzWcBcw32Kr\",\"name\":\"get_location\",\"input\":{}}],\"stop_reason\":\"tool_use\",\"stop_sequence\":null,\"usage\":{\"input_tokens\":605,\"output_tokens\":64}}"
+          "string": "{\"id\":\"msg_01DSZqTnG18kjhtddhMiBLne\",\"type\":\"message\",\"role\":\"assistant\",\"model\":\"claude-3-5-sonnet-20240620\",\"content\":[{\"type\":\"text\",\"text\":\"To provide you with the current weather information, I need to know your location. Let me first get your location using the available tool.\"},{\"type\":\"tool_use\",\"id\":\"toolu_01HL733X7KrVTC5i6PAwEmXp\",\"name\":\"get_location\",\"input\":{}}],\"stop_reason\":\"tool_use\",\"stop_sequence\":null,\"usage\":{\"input_tokens\":605,\"output_tokens\":64}}"
         }
       },
-      "recorded_at": "Tue, 22 Oct 2024 04:40:59 GMT"
+      "recorded_at": "Fri, 25 Oct 2024 17:47:55 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

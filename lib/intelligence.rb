@@ -2,7 +2,7 @@ require 'json'
 require 'base64'
 
 require 'faraday'
-require 'adaptive_configuration'
+require 'dynamic_schema'
 require 'mime-types'
 
 require 'intelligence/version'

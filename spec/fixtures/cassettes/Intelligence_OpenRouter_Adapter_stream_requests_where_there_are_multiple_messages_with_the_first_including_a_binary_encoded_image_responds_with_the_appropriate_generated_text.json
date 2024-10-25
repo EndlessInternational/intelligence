@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Sun, 20 Oct 2024 06:23:10 GMT"
+            "Fri, 25 Oct 2024 17:39:50 GMT"
           ],
           "content-type": [
             "text/event-stream"
@@ -63,7 +63,7 @@
             "/api/v1/chat/completions"
           ],
           "x-vercel-id": [
-            "pdx1::7sfpx-1729405390416-999559563586"
+            "pdx1::qxqjl-1729877989911-c25031945b9e"
           ],
           "cf-cache-status": [
             "DYNAMIC"
@@ -77,10 +77,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "data: {\"id\":\"gen-1729405390-TwW1RgSwSjR0bYtZA7Sn\",\"provider\":\"Hyperbolic\",\"model\":\"qwen/qwen-2-vl-7b-instruct\",\"object\":\"chat.completion.chunk\",\"created\":1729405390,\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"\"},\"finish_reason\":null,\"logprobs\":null}]}\n\ndata: {\"id\":\"gen-1729405390-TwW1RgSwSjR0bYtZA7Sn\",\"provider\":\"Hyperbolic\",\"model\":\"qwen/qwen-2-vl-7b-instruct\",\"object\":\"chat.completion.chunk\",\"created\":1729405390,\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"\"},\"finish_reason\":null,\"logprobs\":null}]}\n\ndata: {\"id\":\"gen-1729405390-TwW1RgSwSjR0bYtZA7Sn\",\"provider\":\"Hyperbolic\",\"model\":\"qwen/qwen-2-vl-7b-instruct\",\"object\":\"chat.completion.chunk\",\"created\":1729405390,\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"red\"},\"finish_reason\":\"stop\",\"logprobs\":null}]}\n\ndata: {\"id\":\"gen-1729405390-TwW1RgSwSjR0bYtZA7Sn\",\"provider\":\"Hyperbolic\",\"model\":\"qwen/qwen-2-vl-7b-instruct\",\"object\":\"chat.completion.chunk\",\"created\":1729405390,\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"\"},\"finish_reason\":null,\"logprobs\":null}],\"usage\":{\"prompt_tokens\":78,\"completion_tokens\":3,\"total_tokens\":81}}\n\ndata: [DONE]\n\n"
+          "string": "data: {\"id\":\"gen-1729877990-ZM6Knjxmvzt0DLxDckLl\",\"provider\":\"Hyperbolic\",\"model\":\"qwen/qwen-2-vl-7b-instruct\",\"object\":\"chat.completion.chunk\",\"created\":1729877990,\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"\"},\"finish_reason\":null,\"logprobs\":null}]}\n\ndata: {\"id\":\"gen-1729877990-ZM6Knjxmvzt0DLxDckLl\",\"provider\":\"Hyperbolic\",\"model\":\"qwen/qwen-2-vl-7b-instruct\",\"object\":\"chat.completion.chunk\",\"created\":1729877990,\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"\"},\"finish_reason\":null,\"logprobs\":null}]}\n\ndata: {\"id\":\"gen-1729877990-ZM6Knjxmvzt0DLxDckLl\",\"provider\":\"Hyperbolic\",\"model\":\"qwen/qwen-2-vl-7b-instruct\",\"object\":\"chat.completion.chunk\",\"created\":1729877990,\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"red\"},\"finish_reason\":\"stop\",\"logprobs\":null}]}\n\ndata: {\"id\":\"gen-1729877990-ZM6Knjxmvzt0DLxDckLl\",\"provider\":\"Hyperbolic\",\"model\":\"qwen/qwen-2-vl-7b-instruct\",\"object\":\"chat.completion.chunk\",\"created\":1729877990,\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"\"},\"finish_reason\":null,\"logprobs\":null}],\"usage\":{\"prompt_tokens\":78,\"completion_tokens\":3,\"total_tokens\":81}}\n\ndata: [DONE]\n\n"
         }
       },
-      "recorded_at": "Sun, 20 Oct 2024 06:23:10 GMT"
+      "recorded_at": "Fri, 25 Oct 2024 17:39:51 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

@@ -36,7 +36,13 @@
             "keep-alive"
           ],
           "date": [
-            "Sun, 20 Oct 2024 18:38:02 GMT"
+            "Fri, 25 Oct 2024 20:26:11 GMT"
+          ],
+          "x-content-type-options": [
+            "nosniff"
+          ],
+          "strict-transport-security": [
+            "max-age=3600; includeSubDomains"
           ],
           "server": [
             "uvicorn"
@@ -51,45 +57,39 @@
             "60000"
           ],
           "x-ratelimit-remaining-requests-day": [
-            "14369"
+            "14350"
           ],
           "x-ratelimit-remaining-tokens-minute": [
-            "60000"
+            "59892"
           ],
           "x-ratelimit-reset-requests-day": [
-            "19317.141817569733"
+            "12828.059266805649"
           ],
           "x-ratelimit-reset-tokens-minute": [
-            "57.141817569732666"
+            "48.059266805648804"
           ],
           "referrer-policy": [
             "strict-origin-when-cross-origin"
-          ],
-          "x-content-type-options": [
-            "nosniff"
-          ],
-          "strict-transport-security": [
-            "max-age=3600; includeSubDomains"
           ],
           "x-cache": [
             "Miss from cloudfront"
           ],
           "via": [
-            "1.1 01147dcc35d57fc0238a3c1700c13f16.cloudfront.net (CloudFront)"
+            "1.1 1343d20bdb50193b4d08099f66c57450.cloudfront.net (CloudFront)"
           ],
           "x-amz-cf-pop": [
-            "SEA73-P1"
+            "SFO20-C1"
           ],
           "x-amz-cf-id": [
-            "5AVEmkrftrwu2ZG-rrya2HBEi7xsZ0mDwEjjT1EratOaLpZ4NRYEgw=="
+            "hoJ8Jl1KF9JoTk-P-ngZ0VTAfdvzkInXOWQJvr1sEb5UlJPD89VcOA=="
           ]
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "data: {\"id\":\"chatcmpl-606c60aa-d0e7-4cd7-bce4-3d73aa18af43\",\"choices\":[{\"delta\":{\"role\":\"assistant\"},\"index\":0}],\"created\":1729449482,\"model\":\"llama3.1-70b\",\"system_fingerprint\":\"fp_17596fc414\",\"object\":\"chat.completion.chunk\"}\n\ndata: {\"id\":\"chatcmpl-606c60aa-d0e7-4cd7-bce4-3d73aa18af43\",\"choices\":[{\"delta\":{\"content\":\"hello\"},\"index\":0}],\"created\":1729449482,\"model\":\"llama3.1-70b\",\"system_fingerprint\":\"fp_17596fc414\",\"object\":\"chat.completion.chunk\"}\n\ndata: {\"id\":\"chatcmpl-606c60aa-d0e7-4cd7-bce4-3d73aa18af43\",\"choices\":[{\"delta\":{},\"finish_reason\":\"stop\",\"index\":0}],\"created\":1729449482,\"model\":\"llama3.1-70b\",\"system_fingerprint\":\"fp_17596fc414\",\"object\":\"chat.completion.chunk\",\"usage\":{\"prompt_tokens\":58,\"completion_tokens\":2,\"total_tokens\":60},\"time_info\":{\"queue_time\":0.00002509,\"prompt_time\":0.0028169090000000003,\"completion_time\":0.003179774,\"total_time\":0.022025346755981445,\"created\":1729449482}}\n\n"
+          "string": "data: {\"id\":\"chatcmpl-56c4243b-43a7-4b6e-a8af-9de63d43fae2\",\"choices\":[{\"delta\":{\"role\":\"assistant\"},\"index\":0}],\"created\":1729887971,\"model\":\"llama3.1-70b\",\"system_fingerprint\":\"fp_55ebaf7e1e\",\"object\":\"chat.completion.chunk\"}\n\ndata: {\"id\":\"chatcmpl-56c4243b-43a7-4b6e-a8af-9de63d43fae2\",\"choices\":[{\"delta\":{\"content\":\"hello\"},\"index\":0}],\"created\":1729887971,\"model\":\"llama3.1-70b\",\"system_fingerprint\":\"fp_55ebaf7e1e\",\"object\":\"chat.completion.chunk\"}\n\ndata: {\"id\":\"chatcmpl-56c4243b-43a7-4b6e-a8af-9de63d43fae2\",\"choices\":[{\"delta\":{},\"finish_reason\":\"stop\",\"index\":0}],\"created\":1729887971,\"model\":\"llama3.1-70b\",\"system_fingerprint\":\"fp_55ebaf7e1e\",\"object\":\"chat.completion.chunk\",\"usage\":{\"prompt_tokens\":78,\"completion_tokens\":2,\"total_tokens\":80},\"time_info\":{\"queue_time\":0.00002675,\"prompt_time\":0.0029385920000000003,\"completion_time\":0.0032171019999999995,\"total_time\":0.0213775634765625,\"created\":1729887971}}\n\n"
         }
       },
-      "recorded_at": "Sun, 20 Oct 2024 18:38:02 GMT"
+      "recorded_at": "Fri, 25 Oct 2024 20:26:11 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

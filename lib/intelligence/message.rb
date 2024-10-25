@@ -1,28 +1,28 @@
 module Intelligence
   class Message
 
-    extend AdaptiveConfiguration::Configurable 
+    extend DynamicSchema::Definition
 
     ROLES = [ :system, :user, :assistant ]
-    CONFIGURATION = Proc.new do
-      parameter :role, Symbol, required: true 
-      parameters :content, array: true, as: :contents do 
-        parameter :type, Symbol, default: :text 
+    SCHEMA = Proc.new do
+      role              Symbol, required: true 
+      content           array: true, as: :contents do 
+        type            Symbol, default: :text 
         # text 
-        parameter :text, String 
+        text            String 
         # binary and file 
-        parameter :content_type, String
-        parameter :bytes, String 
-        parameter :uri, URI
+        content_type    String
+        bytes           String 
+        uri             URI
         # tool call and tool result 
-        parameter :tool_call_id, String 
-        parameter :tool_name, String 
-        parameter :tool_parameters, [ String, Hash ]
-        parameter :tool_result, [ String, Hash ]
+        tool_call_id    String 
+        tool_name       String 
+        tool_parameters [ String, Hash ]
+        tool_result     [ String, Hash ]
       end
     end
 
-    configuration( &CONFIGURATION ) 
+    schema( &SCHEMA ) 
 
     attr_reader :role
     attr_reader :contents
@@ -59,8 +59,8 @@ module Intelligence
     #     bytes File.binread( '99_red_balloons.png' )
     #
     def self.build!( attributes = nil, &block )
-      configuration = self.configure!( attributes, &block ).to_h
-      self.new( configuration[ :role ], configuration )
+      attributes = self.build_with_schema!( attributes, &block ).to_h
+      self.new( attributes[ :role ], attributes )
     end
 
     def initialize( role, attributes = nil )

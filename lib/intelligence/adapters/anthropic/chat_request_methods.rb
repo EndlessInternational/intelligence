@@ -9,7 +9,7 @@ module Intelligence
       end
 
       def chat_request_headers( options = nil )
-        options = options ? self.class.configure( options ) : {}
+        options = options ? self.class.build_with_schema( options ) : {}
         options = @options.merge( options )
         result = {}
 
@@ -28,7 +28,7 @@ module Intelligence
       end
 
       def chat_request_body( conversation, options = nil )
-        options = options ? self.class.configure( options ) : {}
+        options = options ? self.class.build_with_schema( options ) : {}
         options = @options.merge( options )
         result = options[ :chat_options ]&.compact || {}
 

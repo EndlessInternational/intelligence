@@ -7,26 +7,26 @@ module Intelligence
 
       chat_request_uri "https://api.mistral.ai/v1/chat/completions"
       
-      configuration do 
-        parameter :key, String 
-        parameters :chat_options do 
-          parameter :model, String
-          parameter :temperature, Float
-          parameter :top_p, Float
-          parameter :max_tokens, Integer
-          parameter :min_tokens, Integer
-          parameter :seed, Integer, as: :random_seed 
-          parameter :stop, String, array: true
-          parameter :stream, [ TrueClass, FalseClass ]
+      schema do 
+        key                   String 
+        chat_options do 
+          model               String
+          temperature         Float
+          top_p               Float
+          max_tokens          Integer
+          min_tokens          Integer
+          seed                Integer, as: :random_seed 
+          stop                String, array: true
+          stream              [ TrueClass, FalseClass ]
 
-          parameter :random_seed, Integer
-          parameters :response_format do 
-            parameter :type, String 
+          random_seed         Integer
+          response_format do 
+            type              String 
           end
-          parameters :tool_choice do 
-            parameter :type, String 
-            parameters :function do 
-              parameter :name, String 
+          tool_choice do 
+            type              String 
+            function do 
+              name            String 
             end
           end
         end

@@ -90,56 +90,43 @@ module Intelligence
   # end 
   # 
   class Tool
-    extend AdaptiveConfiguration::Configurable
+    extend DynamicSchema::Definition 
 
     ARGUMENT_TYPES = [ 'string', 'number', 'integer', 'array', 'boolean', 'object' ]
 
-    ARGUMENT_CONFIGURATION = proc do
-      parameter :type, String, in: ARGUMENT_TYPES
-      parameter :name, String, required: true
-      parameter :description, String, required: true 
-      parameter :required, [ TrueClass, FalseClass ]
+    ARGUMENT_SCHEMA = proc do
+      type            String, in: ARGUMENT_TYPES
+      name            String, required: true
+      description     String, required: true 
+      required        [ TrueClass, FalseClass ]
       # note that an enum does not require a type as it implicitly restricts the argument 
       # to specific values
-      parameter :enum, array: true 
+      enum            array: true 
       # for arguments of type number and integer
-      parameter :minimum, [ Integer, Float ]
-      parameter :maximum, [ Integer, Float ]
+      minimum         [ Integer, Float ]
+      maximum         [ Integer, Float ]
       # for arguments of type array 
-      parameter :maximum_items, Integer, as: :maxItems
-      parameter :minimum_items, Integer, as: :minItems 
-      parameter :unique_items, [ TrueClass, FalseClass ]
+      maximum_items   Integer, as: :maxItems
+      minimum_items   Integer, as: :minItems 
+      unique_items    [ TrueClass, FalseClass ]
+      items           do
+        type          in: ARGUMENT_TYPES
+        property      array: true, as: :properties, &ARGUMENT_SCHEMA 
+      end
+      # for arguments of type object 
+      property        array: true, as: :properties, &ARGUMENT_SCHEMA
     end
 
-    ARGUMENT_ITEMS_CONFIGURATION = proc do 
-      parameters :items do 
-        parameter :type, in: ARGUMENT_TYPES
-        parameters :properties, &ARGUMENT_CONFIGURATION
-      end    
-    end 
-
-    configuration do 
-      parameter :name, String, required: true 
-      parameter :description, String, required: true 
-
-      # json schema allows for infinite depth but this isn't practical for a tool hence the 
-      # three levels of depth
-      parameters :argument, array: true, as: :properties do 
-        self.instance_eval( &ARGUMENT_CONFIGURATION )
-        self.instance_eval( &ARGUMENT_ITEMS_CONFIGURATION )
-        parameters :argument, array: true, as: :properties do 
-          self.instance_eval( &ARGUMENT_CONFIGURATION ) 
-          self.instance_eval( &ARGUMENT_ITEMS_CONFIGURATION )
-          parameters :argument, array: true, as: :properties do 
-            self.instance_eval( &ARGUMENT_CONFIGURATION ) 
-            self.instance_eval( &ARGUMENT_ITEMS_CONFIGURATION )
-          end 
-        end 
-      end
+    schema            do 
+      name            String, required: true 
+      description     String, required: true 
+      argument        array: true, as: :properties do 
+        self.instance_eval( &ARGUMENT_SCHEMA )
+      end 
     end  
     
     def self.build!( attributes = nil, &block )
-      attributes = self.configure!( attributes, &block ).to_h
+      attributes = self.build_with_schema!( attributes, &block )
       self.new( attributes )
     end
 

@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Sun, 20 Oct 2024 18:59:47 GMT"
+            "Fri, 25 Oct 2024 17:40:06 GMT"
           ],
           "content-type": [
             "application/json; charset=utf-8"
@@ -42,7 +42,7 @@
             "*"
           ],
           "x-api-received": [
-            "2024-10-20T18:59:46.166Z"
+            "2024-10-25T17:40:05.635Z"
           ],
           "x-ratelimit": [
             "false"
@@ -57,7 +57,7 @@
             "2"
           ],
           "x-ratelimit-remaining-tokens": [
-            "2866"
+            "3000"
           ],
           "x-ratelimit-limit-tokens": [
             "3000"
@@ -66,13 +66,13 @@
             "v2"
           ],
           "x-api-call-start": [
-            "2024-10-20T18:59:46.173Z"
+            "2024-10-25T17:40:05.643Z"
           ],
           "x-api-call-end": [
-            "2024-10-20T18:59:46.992Z"
+            "2024-10-25T17:40:06.295Z"
           ],
           "etag": [
-            "W/\"20f-7Pm9ME13Yltu40rCGbphTi+hHVg\""
+            "W/\"20f-gJsdqaQ7RyF4CZYRJCHIxxdLd2w\""
           ],
           "cf-cache-status": [
             "DYNAMIC"
@@ -95,10 +95,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "{\n  \"id\": \"8d5b3f3578ae7586-SEA\",\n  \"object\": \"chat.completion\",\n  \"created\": 1729450786,\n  \"model\": \"meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo\",\n  \"prompt\": [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"stop\",\n      \"seed\": 16636705635106015000,\n      \"logprobs\": null,\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": \"one\\ntwo\\nthree\\nfour\\n\",\n        \"tool_calls\": []\n      }\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 85,\n    \"completion_tokens\": 9,\n    \"total_tokens\": 94\n  }\n}"
+          "string": "{\n  \"id\": \"8d83fd5f1959a341-SEA\",\n  \"object\": \"chat.completion\",\n  \"created\": 1729878005,\n  \"model\": \"meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo\",\n  \"prompt\": [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"stop\",\n      \"seed\": 14954884151366914000,\n      \"logprobs\": null,\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": \"one\\ntwo\\nthree\\nfour\\n\",\n        \"tool_calls\": []\n      }\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 85,\n    \"completion_tokens\": 9,\n    \"total_tokens\": 94\n  }\n}"
         }
       },
-      "recorded_at": "Sun, 20 Oct 2024 18:59:46 GMT"
+      "recorded_at": "Fri, 25 Oct 2024 17:40:06 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

@@ -30,7 +30,7 @@
         },
         "headers": {
           "date": [
-            "Tue, 22 Oct 2024 04:40:53 GMT"
+            "Fri, 25 Oct 2024 17:47:51 GMT"
           ],
           "content-type": [
             "application/json"
@@ -48,7 +48,7 @@
             "999"
           ],
           "anthropic-ratelimit-requests-reset": [
-            "2024-10-22T04:41:17Z"
+            "2024-10-25T17:48:17Z"
           ],
           "anthropic-ratelimit-tokens-limit": [
             "80000"
@@ -57,7 +57,7 @@
             "80000"
           ],
           "anthropic-ratelimit-tokens-reset": [
-            "2024-10-22T04:40:52Z"
+            "2024-10-25T17:47:51Z"
           ],
           "request-id": [
             "<REQUEST-ID>"
@@ -83,10 +83,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\"id\":\"msg_01FUPiQGQ3WtyQHqgUAaZnc7\",\"type\":\"message\",\"role\":\"assistant\",\"model\":\"claude-3-5-sonnet-20240620\",\"content\":[{\"type\":\"text\",\"text\":\"To answer your question about your location, I'll need to use the get_location tool. Let me retrieve that information for you.\"},{\"type\":\"tool_use\",\"id\":\"toolu_01Va4Gac8twdgSMxFtYw9PnV\",\"name\":\"get_location\",\"input\":{}}],\"stop_reason\":\"tool_use\",\"stop_sequence\":null,\"usage\":{\"input_tokens\":391,\"output_tokens\":64}}"
+          "string": "{\"id\":\"msg_015sdZa1CyMXznT9LNLCCGKU\",\"type\":\"message\",\"role\":\"assistant\",\"model\":\"claude-3-5-sonnet-20240620\",\"content\":[{\"type\":\"text\",\"text\":\"To answer your question about your location, I'll need to use the get_location tool. Let me retrieve that information for you.\"},{\"type\":\"tool_use\",\"id\":\"toolu_019N6egk7K1gzzFf3o1bCbvF\",\"name\":\"get_location\",\"input\":{}}],\"stop_reason\":\"tool_use\",\"stop_sequence\":null,\"usage\":{\"input_tokens\":391,\"output_tokens\":64}}"
         }
       },
-      "recorded_at": "Tue, 22 Oct 2024 04:40:53 GMT"
+      "recorded_at": "Fri, 25 Oct 2024 17:47:51 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

@@ -4,20 +4,20 @@ module Intelligence
   module ConfigurationTest
     class Adapter < Intelligence::Adapter::Base
       
-      configuration do
-        parameter :api_key, String, required: true
-        parameters :options, default: {} do
-          parameter :timeout, Integer
-          parameter :debug, [ TrueClass, FalseClass ], default: false
+      schema do
+        api_key String, required: true
+        options default: {} do
+          timeout Integer
+          debug [ TrueClass, FalseClass ], default: false
         end
       end
 
       attr_reader :api_key, :options
 
       def initialize( attributes = nil, &block )
-        configuration = self.class.configure( attributes, &block )
-        @api_key = configuration[ :api_key ]
-        @options = configuration[ :options ] || {}
+        schema = self.class.build_with_schema( attributes, &block )
+        @api_key = schema[ :api_key ]
+        @options = schema[ :options ] || {}
       end
     end
   end
@@ -25,8 +25,8 @@ end
 
 RSpec.describe Intelligence::ConfigurationTest::Adapter, :unit do
 
-  describe '.configuration' do
-    it 'allows setting and retrieving configuration parameters' do
+  describe '.schema' do
+    it 'allows setting and retrieving schema parameters' do
       adapter = described_class.new( api_key: 'test_key' ) do
         options do
           timeout 30
@@ -59,11 +59,11 @@ RSpec.describe Intelligence::ConfigurationTest::Adapter, :unit do
 
     it 'handles nested parameters parameters' do
       described_class.class_eval do
-        configuration do
-          parameters :options do
-            parameter :debug, default: false 
-            parameters :logging do
-              parameter :level, String, default: 'info'
+        schema do
+          options do
+            debug default: false 
+            logging do
+              level String, default: 'info'
             end
           end
         end

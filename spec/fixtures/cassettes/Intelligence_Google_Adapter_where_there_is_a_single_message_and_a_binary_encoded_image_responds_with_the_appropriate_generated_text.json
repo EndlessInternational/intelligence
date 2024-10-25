@@ -33,7 +33,7 @@
             "gzip"
           ],
           "date": [
-            "Sun, 20 Oct 2024 06:22:36 GMT"
+            "Fri, 25 Oct 2024 17:34:52 GMT"
           ],
           "server": [
             "scaffolding on HTTPServer2"
@@ -51,7 +51,7 @@
             "nosniff"
           ],
           "server-timing": [
-            "gfet4t7; dur=881"
+            "gfet4t7; dur=1118"
           ],
           "alt-svc": [
             "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
@@ -62,10 +62,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "{\n  \"candidates\": [\n    {\n      \"content\": {\n        \"parts\": [\n          {\n            \"text\": \"Red balloon.\"\n          }\n        ],\n        \"role\": \"model\"\n      },\n      \"finishReason\": \"STOP\",\n      \"avgLogprobs\": -0.040439764658610024\n    }\n  ],\n  \"usageMetadata\": {\n    \"promptTokenCount\": 316,\n    \"candidatesTokenCount\": 3,\n    \"totalTokenCount\": 319\n  }\n}\n"
+          "string": "{\n  \"candidates\": [\n    {\n      \"content\": {\n        \"parts\": [\n          {\n            \"text\": \"Red balloon.\"\n          }\n        ],\n        \"role\": \"model\"\n      },\n      \"finishReason\": \"STOP\",\n      \"avgLogprobs\": -0.081309899687767029\n    }\n  ],\n  \"usageMetadata\": {\n    \"promptTokenCount\": 316,\n    \"candidatesTokenCount\": 3,\n    \"totalTokenCount\": 319\n  },\n  \"modelVersion\": \"gemini-1.5-pro-002\"\n}\n"
         }
       },
-      "recorded_at": "Sun, 20 Oct 2024 06:22:36 GMT"
+      "recorded_at": "Fri, 25 Oct 2024 17:34:52 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

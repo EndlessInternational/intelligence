@@ -30,7 +30,7 @@
         },
         "headers": {
           "date": [
-            "Tue, 22 Oct 2024 04:41:10 GMT"
+            "Fri, 25 Oct 2024 17:48:02 GMT"
           ],
           "content-type": [
             "application/json"
@@ -48,7 +48,7 @@
             "999"
           ],
           "anthropic-ratelimit-requests-reset": [
-            "2024-10-22T04:41:17Z"
+            "2024-10-25T17:48:17Z"
           ],
           "anthropic-ratelimit-tokens-limit": [
             "80000"
@@ -57,7 +57,7 @@
             "80000"
           ],
           "anthropic-ratelimit-tokens-reset": [
-            "2024-10-22T04:41:10Z"
+            "2024-10-25T17:48:02Z"
           ],
           "request-id": [
             "<REQUEST-ID>"
@@ -83,10 +83,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\"id\":\"msg_01YKb2UfGhk3JEqHqmtq4jzt\",\"type\":\"message\",\"role\":\"assistant\",\"model\":\"claude-3-5-sonnet-20240620\",\"content\":[{\"type\":\"text\",\"text\":\"To provide you with the current weather, I'll need to use the location information we just obtained. Let me fetch the weather data for you.\"},{\"type\":\"tool_use\",\"id\":\"toolu_01GeTDkM9XgsHd7xRW24TirV\",\"name\":\"get_weather\",\"input\":{\"location\":{\"city\":\"Seattle\",\"state\":\"WA\",\"country\":\"USA\"}}}],\"stop_reason\":\"tool_use\",\"stop_sequence\":null,\"usage\":{\"input_tokens\":635,\"output_tokens\":113}}"
+          "string": "{\"id\":\"msg_01CXu7E1L5WMa5h1ecxqANZH\",\"type\":\"message\",\"role\":\"assistant\",\"model\":\"claude-3-5-sonnet-20240620\",\"content\":[{\"type\":\"text\",\"text\":\"To provide you with the current weather, I'll need to use the location information we just obtained. Let me fetch the weather data for you.\"},{\"type\":\"tool_use\",\"id\":\"toolu_01Aftc5xSZyjGYuq2ZqE2xss\",\"name\":\"get_weather\",\"input\":{\"location\":{\"city\":\"Seattle\",\"state\":\"WA\",\"country\":\"USA\"}}}],\"stop_reason\":\"tool_use\",\"stop_sequence\":null,\"usage\":{\"input_tokens\":635,\"output_tokens\":113}}"
         }
       },
-      "recorded_at": "Tue, 22 Oct 2024 04:41:10 GMT"
+      "recorded_at": "Fri, 25 Oct 2024 17:48:02 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

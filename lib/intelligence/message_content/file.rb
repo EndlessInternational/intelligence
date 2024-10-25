@@ -3,9 +3,9 @@ module Intelligence
 
     class File < Base
   
-      configuration do 
-        parameter :content_type, String 
-        parameter :uri, URI, required: true 
+      schema do 
+        content_type    String 
+        uri             URI, required: true 
       end
 
       def initialize( attributes )

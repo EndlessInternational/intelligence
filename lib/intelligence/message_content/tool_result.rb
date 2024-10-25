@@ -3,10 +3,10 @@ module Intelligence
 
     class ToolResult < Base
 
-      configuration do 
-        parameter :tool_call_id
-        parameter :tool_name, String, required: true 
-        parameter :tool_result, [ String, String ]
+      schema do 
+        tool_call_id
+        tool_name       String, required: true 
+        tool_result     [ String, String ]
       end 
 
       attr_reader :tool_call_id 

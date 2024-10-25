@@ -27,7 +27,7 @@ module Intelligence
       ]
 
       def chat_request_uri( options )
-        options = options ? self.class.configure( options ) : {}
+        options = options ? self.class.build_with_schema( options ) : {}
         options = @options.merge( options )
 
         key = options[ :key ] 
@@ -56,7 +56,7 @@ module Intelligence
       end
 
       def chat_request_body( conversation, options = {} )
-        options = options ? self.class.configure( options ) : {}
+        options = options ? self.class.build_with_schema( options ) : {}
         options = @options.merge( options )
 
         gc = options[ :generationConfig ]

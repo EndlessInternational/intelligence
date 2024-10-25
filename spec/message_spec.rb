@@ -15,8 +15,8 @@ RSpec.describe Intelligence::Message, :unit do
       it 'raises an ArgumentError' do 
         expect { described_class.build! }.to( 
           raise_error( 
-            AdaptiveConfiguration::RequiredOptionError, 
-            /The parameter 'role' is required/
+            DynamicSchema::RequiredOptionError, 
+            /The attribute 'role' is required/
           )
         )
       end

@@ -20,8 +20,7 @@ conversation = Intelligence::Conversation.build do
   system_message do 
     content text: "You are a highly efficient AI assistant. Provide clear, concise responses."
   end 
-  message do 
-    role :user
+  message role: :user do 
     content text: ARGV[ 0 ] || 'Hello!'
   end
 end

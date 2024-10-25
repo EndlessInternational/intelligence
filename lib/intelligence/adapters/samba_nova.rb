@@ -7,27 +7,27 @@ module Intelligence
 
       chat_request_uri "https://api.sambanova.ai/v1/chat/completions"
       
-      configuration do 
+      schema do 
 
         # normalized properties for all endpoints
-        parameter :key, String
+        key                   String
         
         # properties for generative text endpoints
-        parameters :chat_options do 
+        chat_options do 
         
           # normalized properties for samba nova generative text endpoint
-          parameter :model, String
-          parameter :max_tokens, Integer
-          parameter :temperature, Float
-          parameter :top_p, Float
-          parameter :top_k, Float
-          parameter :stop, String, array: true
-          parameter :stream, [ TrueClass, FalseClass ]
+          model               String
+          max_tokens          Integer
+          temperature         Float
+          top_p               Float
+          top_k               Float
+          stop                String, array: true
+          stream              [ TrueClass, FalseClass ]
 
           # samba nova properties for samba nova generative text endpoint
-          parameter :repetition_penalty, Float
-          parameters :stream_options do
-            parameter :include_usage, [ TrueClass, FalseClass ]
+          repetition_penalty  Float
+          stream_options do
+            include_usage     [ TrueClass, FalseClass ]
           end
 
         end

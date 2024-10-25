@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Tue, 22 Oct 2024 04:16:51 GMT"
+            "Fri, 25 Oct 2024 20:18:34 GMT"
           ],
           "content-type": [
             "application/json"
@@ -45,7 +45,7 @@
             "<OPENAI-ORGANIZATION>"
           ],
           "openai-processing-ms": [
-            "680"
+            "452"
           ],
           "openai-version": [
             "2020-10-01"
@@ -98,10 +98,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\n  \"id\": \"chatcmpl-AL0c72SQxSJ0aVbA0jO5ZsytPbUZU\",\n  \"object\": \"chat.completion\",\n  \"created\": 1729570611,\n  \"model\": \"gpt-4o-2024-08-06\",\n  \"choices\": [\n    {\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": \"You are located in Seattle, WA, USA.\",\n        \"refusal\": null\n      },\n      \"logprobs\": null,\n      \"finish_reason\": \"stop\"\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 87,\n    \"completion_tokens\": 11,\n    \"total_tokens\": 98,\n    \"prompt_tokens_details\": {\n      \"cached_tokens\": 0\n    },\n    \"completion_tokens_details\": {\n      \"reasoning_tokens\": 0\n    }\n  },\n  \"system_fingerprint\": \"fp_a7d06e42a7\"\n}\n"
+          "string": "{\n  \"id\": \"chatcmpl-AML3Sj9uWIdhdVXt8AxuRAZPlvncA\",\n  \"object\": \"chat.completion\",\n  \"created\": 1729887514,\n  \"model\": \"gpt-4o-2024-08-06\",\n  \"choices\": [\n    {\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": \"You are located in Seattle, WA, USA.\",\n        \"refusal\": null\n      },\n      \"logprobs\": null,\n      \"finish_reason\": \"stop\"\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 87,\n    \"completion_tokens\": 11,\n    \"total_tokens\": 98,\n    \"prompt_tokens_details\": {\n      \"cached_tokens\": 0\n    },\n    \"completion_tokens_details\": {\n      \"reasoning_tokens\": 0\n    }\n  },\n  \"system_fingerprint\": \"fp_90354628f2\"\n}\n"
         }
       },
-      "recorded_at": "Tue, 22 Oct 2024 04:16:51 GMT"
+      "recorded_at": "Fri, 25 Oct 2024 20:18:34 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

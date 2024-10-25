@@ -7,8 +7,8 @@ RSpec.describe Intelligence::MessageContent, :unit do
       it 'creates an instance of the correct class' do
         # define a mock class for the test
         class Intelligence::MessageContent::TestType < Intelligence::MessageContent::Base; 
-          configuration do 
-            parameter :some_attribute
+          schema do 
+            some_attribute
           end
           attr_reader :some_attribute 
         end
