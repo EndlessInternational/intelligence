@@ -50,7 +50,7 @@ conversation = Intelligence::Conversation.build do
     content text: "You are a highly efficient AI assistant. Provide clear, concise responses."
   end 
   message role: :user do 
-    content text: 'What do you see in this image?'
+    content text: ARGV[ 1 ] || 'What do you see in this image?'
     content do 
       type :binary 
       content_type file_content_type

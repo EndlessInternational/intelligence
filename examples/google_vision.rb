@@ -3,7 +3,6 @@
 require_relative '../lib/intelligence'
 # this line will include the mime types gem; be sure to install it: `gem install "mime-types"`
 require 'mime-types'
-require 'debug'
 
 file_path = ARGV[ 0 ]
 if file_path.nil? || !File.exist?( file_path )
@@ -11,19 +10,19 @@ if file_path.nil? || !File.exist?( file_path )
   exit 
 end 
 file_mime_type = MIME::Types.type_for( file_path )&.first
-if file_mime_type.nil? || file_mime_type.media_type != 'image'
-  puts "Error: You have not specified an image file."
+if file_mime_type.nil?
+  puts "Error: You have not specified a recognizable file."
   exit
 end
 file_content_type = file_mime_type.content_type
 
-# this block of code builds and configures your adapter; in this case we have chosen open_ai 
-adapter = Intelligence::Adapter.build :open_ai do 
-  key             ENV[ 'OPENAI_API_KEY' ]               # this is the open ai api key; here it is
+# this block of code builds and configures your adapter; in this case we have chosen google 
+adapter = Intelligence::Adapter.build :google do 
+  key             ENV[ 'GOOGLE_API_KEY' ]               # this is the google api key; here it is
                                                         # retrieved from the envionment
   chat_options do                                       
-    model         'gpt-4o'                              # this is the open ai model we want to use
-    max_tokens    256                                   # this is the maximum number of tokens we
+    model         'gemini-1.5-flash-8b'                 # this is the open ai model we want to use
+    max_tokens    8192                                  # this is the maximum number of tokens we
                                                         # want the model to generate
   end
 end
