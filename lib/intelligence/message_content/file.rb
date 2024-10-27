@@ -4,7 +4,7 @@ module Intelligence
     class File < Base
   
       schema do 
-        content_type    String 
+        content_type    String  
         uri             URI, required: true 
       end
 

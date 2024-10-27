@@ -13,6 +13,10 @@ module Intelligence
       attr_reader :tool_name
       attr_reader :tool_parameters
 
+      def valid?
+        tool_name && !tool_name.empty?
+      end
+
       def to_h
         { 
           type:             :tool_call, 
