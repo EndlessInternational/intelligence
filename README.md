@@ -9,7 +9,7 @@ all providers.
 The gem operates with minimal dependencies and doesn't require vendor SDK installation, 
 making it easy to switch between providers or work with multiple providers simultaneously.
 
-```
+```ruby
 require 'intelligence'
 
 adapter = Intelligence::Adapter.build :open_ai do 
