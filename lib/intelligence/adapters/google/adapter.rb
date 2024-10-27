@@ -1,4 +1,5 @@
-require_relative 'chat_methods'
+require_relative 'chat_request_methods'
+require_relative 'chat_response_methods'
 
 module Intelligence
   module Google
@@ -34,11 +35,21 @@ module Intelligence
           response_mime_type String,  as: :responseMimeType
           response_schema             as: :responseSchema
 
+          # google specific tool configuration
+          tool_configuration          as: :tool_config do
+            function_calling          as: :function_calling_config do 
+              mode                    Symbol, in: [ :auto, :any, :none ]
+              allowed_function_names  String, array: true 
+            end
+          end 
+
+
         end
 
       end
 
-      include ChatMethods
+      include ChatRequestMethods 
+      include ChatResponseMethods
 
     end 
 

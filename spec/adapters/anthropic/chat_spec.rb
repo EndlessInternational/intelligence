@@ -63,5 +63,7 @@ RSpec.describe "#{Intelligence::Adapter[ :anthropic ]} chat requests", :anthropi
   include_examples 'chat requests with binary encoded images'
   include_examples 'chat requests with tools', 
                    adapter: :adapter_with_high_max_tokens
+  include_examples 'chat requests with complex tools',
+                   adapter: :adapter_with_high_max_tokens
   
 end

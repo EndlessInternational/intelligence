@@ -49,5 +49,6 @@ RSpec.describe "#{Intelligence::Adapter[ :open_ai ]} chat requests", :open_ai do
   include_examples 'chat requests with file images'
   include_examples 'chat requests without alternating roles'
   include_examples 'chat requests with tools'
+  include_examples 'chat requests with complex tools'
 
 end

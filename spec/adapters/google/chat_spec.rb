@@ -24,7 +24,7 @@ RSpec.describe Intelligence::Adapter[ :google ], :google do
       key   ENV[ 'GOOGLE_API_KEY' ]
       chat_options do
         model                 'gemini-1.5-pro-002'
-        max_tokens            16
+        max_tokens            64 
         temperature           0
       end
     end
@@ -73,6 +73,7 @@ RSpec.describe Intelligence::Adapter[ :google ], :google do
   include_examples 'chat requests with binary encoded text'
   include_examples 'chat requests with binary encoded pdf'
   include_examples 'chat requests with binary encoded audio'
+  include_examples 'chat requests with tools'
 
 end
   

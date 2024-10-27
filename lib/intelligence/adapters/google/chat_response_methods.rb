@@ -2,149 +2,9 @@ require 'uri'
 
 module Intelligence
   module Google
-    module ChatMethods
+    module ChatResponseMethods
 
-      GENERATIVE_LANGUAGE_URI = "https://generativelanguage.googleapis.com/v1beta/models/"
-
-      SUPPORTED_BINARY_MEDIA_TYPES = %w[ text ]
-
-      SUPPORTED_BINARY_CONTENT_TYPES = %w[
-        image/png image/jpeg image/webp image/heic image/heif 
-        audio/aac audio/flac audio/mp3 audio/m4a audio/mpeg audio/mpga audio/mp4 audio/opus 
-        audio/pcm audio/wav audio/webm
-        application/pdf 
-      ]
-
-      SUPPORTED_FILE_MEDIA_TYPES = %w[ text ]
-
-      SUPPORTED_CONTENT_TYPES = %w[
-        image/png image/jpeg image/webp image/heic image/heif 
-        video/x-flv video/quicktime video/mpeg video/mpegps video/mpg video/mp4 video/webm 
-        video/wmv video/3gpp
-        audio/aac audio/flac audio/mp3 audio/m4a audio/mpeg audio/mpga audio/mp4 audio/opus 
-        audio/pcm audio/wav audio/webm
-        application/pdf 
-      ]
-
-      def chat_request_uri( options )
-        options = @options.merge( build_options( options ) )
-
-        key = options[ :key ] 
-        gc = options[ :generationConfig ] || {}
-        model = gc[ :model ]
-        stream = gc.key?( :stream ) ? gc[ :stream ] : false 
-      
-        raise ArgumentError.new( "A Google API key is required to build a Google chat request." ) \
-          if key.nil?
-        raise ArgumentError.new( "A Google model is required to build a Google chat request." ) \
-          if model.nil?
-        
-        uri = URI( GENERATIVE_LANGUAGE_URI )
-        path = File.join( uri.path, model )
-        path += stream ? ':streamGenerateContent' : ':generateContent'
-        uri.path = path
-        query = { key: key }
-        query[ :alt ] = 'sse' if stream
-        uri.query = URI.encode_www_form( query )
-
-        uri.to_s
-      end
-
-      def chat_request_headers( options = {} )
-        { 'Content-Type' => 'application/json' }
-      end
-
-      def chat_request_body( conversation, options = {} )
-        options = @options.merge( build_options( options ) )
-
-        gc = options[ :generationConfig ]
-        # discard properties not part of the google generationConfig schema
-        gc.delete( :model )
-        gc.delete( :stream )
-
-        result = {}
-        result[ :generationConfig ] = gc
-
-        # construct the system prompt in the form of the google schema
-        system_instructions = translate_system_message( conversation[ :system_message ] )
-        result[ :systemInstruction ] = system_instructions if system_instructions
-
-        result[ :contents ] = []
-        conversation[ :messages ]&.each do | message |
-
-          result_message = { role: message[ :role ] == :user ? 'user' : 'model' }
-          result_message_parts = []
-          
-          message[ :contents ]&.each do | content |
-            case content[ :type ]
-            when :text
-              result_message_parts << { text: content[ :text ] }
-            when :binary
-              content_type = content[ :content_type ]
-              bytes = content[ :bytes ]
-              if content_type && bytes
-                mime_type = MIME::Types[ content_type ].first
-                if SUPPORTED_BINARY_MEDIA_TYPES.include?( mime_type&.media_type ) || 
-                   SUPPORTED_BINARY_CONTENT_TYPES.include?( content_type )
-                  result_message_parts << {
-                    inline_data: {
-                      mime_type: content_type,
-                      data: Base64.strict_encode64( bytes )
-                    }
-                  }
-                else
-                  raise UnsupportedContentError.new( 
-                    :google, 
-                    "does not support #{content_type} content type"
-                  ) 
-                end
-              else 
-                raise UnsupportedContentError.new(
-                  :google, 
-                  'requires binary content to include content type and ( packed ) bytes'  
-                )
-              end 
-            when :file
-              content_type = content[ :content_type ]
-              uri = content[ :uri ]
-              if content_type && uri
-                mime_type = MIME::Types[ content_type ].first
-                if SUPPORTED_FILE_MEDIA_TYPES.include?( mime_type&.media_type ) || 
-                   SUPPORTED_FILE_CONTENT_TYPES.include?( content_type )
-                  result_message_parts << {
-                    file_data: {
-                      mime_type: content_type,
-                      file_uri: uri
-                    }
-                  }
-                else
-                  raise UnsupportedContentError.new( 
-                    :google, 
-                    "does not support #{content_type} content type"
-                  ) 
-                end
-              else 
-                raise UnsupportedContentError.new(
-                  :google, 
-                  'requires file content to include content type and uri'  
-                )
-              end 
- 
-            else 
-              raise InvalidContentError.new( :google ) 
-            end 
-          end
-
-          result_message[ :parts ] = result_message_parts
-          result[ :contents ] << result_message
-
-        end
-
-        JSON.generate( result )
-
-      end 
-
-      def chat_result_attributes( response )
+       def chat_result_attributes( response )
 
         return nil unless response.success?
 
@@ -164,13 +24,21 @@ module Intelligence
           response_content = response_choice[ :content ]
           if response_content
             role = ( response_content[ :role ] == 'model' ) ? 'assistant' : 'user'
-
             contents = []
             response_content[ :parts ]&.each do | response_content_part |
               if response_content_part.key?( :text )              
                 contents.push( {
                   type: 'text', text: response_content_part[ :text ]
                 } )
+              elsif function_call = response_content_part[ :functionCall ]                
+                contents.push( {
+                  type: :tool_call, 
+                  tool_name: function_call[ :name ],
+                  tool_parameters: function_call[ :args ]
+                } )
+                # google does not indicate there is tool call in the stop reason so 
+                # we will synthesize this end reason
+                end_reason = :tool_called if end_reason == :ended
               end
             end
           end
@@ -316,24 +184,6 @@ module Intelligence
 
     private 
     
-      def translate_system_message( system_message )
-        return nil if system_message.nil?
-
-        text = ''
-        system_message[ :contents ].each do | content |
-          text += content[ :text ] if content[ :type ] == :text 
-        end
-
-        return nil if text.empty?
-
-        {
-          role: 'user',
-          parts: [
-            { text: text }
-          ] 
-        }
-      end 
-
       def translate_finish_reason( finish_reason )
         case finish_reason
         when 'STOP'

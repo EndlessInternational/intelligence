@@ -15,23 +15,20 @@ RSpec.shared_examples 'chat requests with tools' do | options = {} |
     Intelligence::Tool.build! do  
       name :get_weather
       description "The get_weather tool will return the current weather in a given locality."
-      argument name: :location, required: true, type: 'object' do  
-        description "The locality for which the weather will be returned"
-        property name: :city, type: 'string', required: true do 
-          description "The city or town for which the current weather should be returned."
-        end 
-        property name: :state, type: 'string' do 
-          description \
-            "The state or province for which the current weather should be returned. If this is " \
-            "not provided the largest or most prominent city with the given name, in the given " \
-            "country or in the worldi, will be assumed."
-        end  
-        property name: :country, type: 'string' do 
-          description \
-            "The country for which the given weather should be returned. If this is not provided " \
-            "the largest or most prominent city with the given name will be returned."
-        end 
-      end
+      argument name: :city, type: 'string', required: true do 
+        description "The city or town for which the current weather should be returned."
+      end 
+      argument name: :state, type: 'string' do 
+        description \
+          "The state or province for which the current weather should be returned. If this is " \
+          "not provided the largest or most prominent city with the given name, in the given " \
+          "country or in the worldi, will be assumed."
+      end  
+      argument name: :country, type: 'string' do 
+        description \
+          "The country for which the given weather should be returned. If this is not provided " \
+          "the largest or most prominent city with the given name will be returned."
+      end 
     end
   }
 
@@ -88,7 +85,7 @@ RSpec.shared_examples 'chat requests with tools' do | options = {} |
      
       tool_call = choice.message.contents.last
       expect( tool_call.tool_parameters ).to be_a( Hash )
-      expect( tool_call.tool_parameters[ :location ][ :city ] ).to match( /seattle/i )
+      expect( tool_call.tool_parameters[ :city ] ).to match( /seattle/i )
 
     end
   end
@@ -148,7 +145,7 @@ RSpec.shared_examples 'chat requests with tools' do | options = {} |
      
       tool_call = choice.message.contents.last
       expect( tool_call.tool_parameters ).to be_a( Hash )
-      expect( tool_call.tool_parameters[ :location ][ :city ] ).to match( /seattle/i )
+      expect( tool_call.tool_parameters[ :city ] ).to match( /seattle/i )
 
     end
   end
@@ -249,7 +246,7 @@ RSpec.shared_examples 'chat requests with tools' do | options = {} |
        
         tool_call = choice.message.contents.last
         expect( tool_call.tool_parameters ).to be_a( Hash )
-        expect( tool_call.tool_parameters[ :location ][ :city ] ).to match( /seattle/i )
+        expect( tool_call.tool_parameters[ :city ] ).to match( /seattle/i )
 
       end
     end
