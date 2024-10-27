@@ -3,11 +3,11 @@ module Intelligence
     module ClassMethods
 
       def build( options = nil, &block )
-        self.new( configuration: self.build_with_schema( options, &block ) )
+        new( configuration: builder.build( options, &block ) )
       end
 
       def build!( options = nil, &block )
-        self.new( configuration: self.build_with_schema!( options, &block ) ) 
+        new( configuration: builder.build( options, &block ) )
       end
 
     end

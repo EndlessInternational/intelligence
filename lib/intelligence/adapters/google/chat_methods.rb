@@ -27,8 +27,7 @@ module Intelligence
       ]
 
       def chat_request_uri( options )
-        options = options ? self.class.build_with_schema( options ) : {}
-        options = @options.merge( options )
+        options = @options.merge( build_options( options ) )
 
         key = options[ :key ] 
         gc = options[ :generationConfig ] || {}
@@ -56,8 +55,7 @@ module Intelligence
       end
 
       def chat_request_body( conversation, options = {} )
-        options = options ? self.class.build_with_schema( options ) : {}
-        options = @options.merge( options )
+        options = @options.merge( build_options( options ) )
 
         gc = options[ :generationConfig ]
         # discard properties not part of the google generationConfig schema
@@ -151,8 +149,7 @@ module Intelligence
         return nil unless response.success?
 
         response_json = JSON.parse( response.body, symbolize_names: true ) rescue nil
-        return nil \
-          if response_json.nil? || response_json[ :candidates ].nil?
+        return nil if response_json.nil? || response_json[ :candidates ].nil?
         
         result = {}
         result[ :choices ] = []
@@ -225,7 +222,6 @@ module Intelligence
       end
 
       def stream_result_chunk_attributes( context, chunk )
-      #---------------------------------------------------
 
         context ||= {}
         buffer = context[ :buffer ] || ''
@@ -304,7 +300,6 @@ module Intelligence
       end
 
       def stream_result_attributes( context )
-      #--------------------------------------
 
         choices = context[ :choices ]
         metrics = context[ :metrics ]
@@ -319,9 +314,9 @@ module Intelligence
 
       alias_method :stream_result_error_attributes, :chat_result_error_attributes
 
-      private; def translate_system_message( system_message )
-      # -----------------------------------------------------
-
+    private 
+    
+      def translate_system_message( system_message )
         return nil if system_message.nil?
 
         text = ''
@@ -337,53 +332,51 @@ module Intelligence
             { text: text }
           ] 
         }
-
       end 
 
-      private; def translate_finish_reason( finish_reason )
-      # ---------------------------------------------------
+      def translate_finish_reason( finish_reason )
         case finish_reason
-          when 'STOP'
-            :ended
-          when 'MAX_TOKENS'
-            :token_limit_exceeded
-          when 'SAFETY', 'RECITATION', 'BLOCKLIST', 'PROHIBITED_CONTENT', 'SPII'
-            :filtered
-          else
-            nil
+        when 'STOP'
+          :ended
+        when 'MAX_TOKENS'
+          :token_limit_exceeded
+        when 'SAFETY', 'RECITATION', 'BLOCKLIST', 'PROHIBITED_CONTENT', 'SPII'
+          :filtered
+        else
+          nil
         end
       end
     
-      private; def translate_error_response_status( status )
+      def translate_error_response_status( status )
         case status
-          when 400
-            [ :invalid_request_error, 
-              "There was an issue with the format or content of your request." ]
-          when 403
-            [ :permission_error, 
-              "Your API key does not have permission to use the specified resource." ]
-          when 404
-            [ :not_found_error, 
-              "The requested resource was not found." ]
-          when 413
-            [ :request_too_large, 
-              "Request exceeds the maximum allowed number of bytes." ]
-          when 422
-            [ :invalid_request_error, 
-              "There was an issue with the format or content of your request." ]
-          when 429
-            [ :rate_limit_error, 
-              "Your account has hit a rate limit." ]
-          when 500, 502, 503
-            [ :api_error, 
-              "An unexpected error has occurred internal to the providers systems." ]
-          when 529
-            [ :overloaded_error, 
-              "The providers server is temporarily overloaded." ]
-          else
-            [ :unknown_error, "
-              An unknown error occurred." ]
-          end
+        when 400
+          [ :invalid_request_error, 
+            "There was an issue with the format or content of your request." ]
+        when 403
+          [ :permission_error, 
+            "Your API key does not have permission to use the specified resource." ]
+        when 404
+          [ :not_found_error, 
+            "The requested resource was not found." ]
+        when 413
+          [ :request_too_large, 
+            "Request exceeds the maximum allowed number of bytes." ]
+        when 422
+          [ :invalid_request_error, 
+            "There was an issue with the format or content of your request." ]
+        when 429
+          [ :rate_limit_error, 
+            "Your account has hit a rate limit." ]
+        when 500, 502, 503
+          [ :api_error, 
+            "An unexpected error has occurred internal to the providers systems." ]
+        when 529
+          [ :overloaded_error, 
+            "The providers server is temporarily overloaded." ]
+        else
+          [ :unknown_error, "
+            An unknown error occurred." ]
+        end
       end
 
     end

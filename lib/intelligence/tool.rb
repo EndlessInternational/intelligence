@@ -90,7 +90,8 @@ module Intelligence
   # end 
   # 
   class Tool
-    extend DynamicSchema::Definition 
+    include DynamicSchema::Definable
+    include DynamicSchema::Buildable
 
     ARGUMENT_TYPES = [ 'string', 'number', 'integer', 'array', 'boolean', 'object' ]
 
@@ -125,11 +126,6 @@ module Intelligence
       end 
     end  
     
-    def self.build!( attributes = nil, &block )
-      attributes = self.build_with_schema!( attributes, &block )
-      self.new( attributes )
-    end
-
     def initialize( attributes = nil )
       @properies = attributes
     end 

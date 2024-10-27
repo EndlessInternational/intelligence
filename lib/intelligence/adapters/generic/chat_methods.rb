@@ -21,8 +21,7 @@ module Intelligence
       end
 
       def chat_request_headers( options = nil )
-        options = options ? self.class.build_with_schema( options ) : {}
-        options = @options.merge( options )
+        options = @options.merge( build_options( options ) )
         result = {}
 
         key = options[ :key ]
@@ -37,8 +36,7 @@ module Intelligence
       end
 
       def chat_request_body( conversation, options = nil )
-        options = options ? self.class.build_with_schema( options ) : {}
-        options = @options.merge( options )
+        options = @options.merge( build_options( options ) )
         
         result = options[ :chat_options ]
         result[ :messages ] = []
@@ -337,7 +335,16 @@ module Intelligence
           end
       end
 
-      private; def system_message_to_s( system_message )
+    private
+
+      def to_options( options, &block )
+        return {} unless options&.any?
+        @options_builder ||= DynamicSchema::Builder.new.define( &self.class.schema )
+        @options_builder.build( options, &block )
+      end
+
+
+      def system_message_to_s( system_message )
 
         return nil if system_message.nil?
 

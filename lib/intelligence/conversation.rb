@@ -1,16 +1,12 @@
 module Intelligence
   class Conversation 
 
-    extend DynamicSchema::Definition 
+    include DynamicSchema::Definable 
+    include DynamicSchema::Buildable 
 
     schema do
-      system_message    default: { role: :system }, &Message::SCHEMA  
-      message           as: :messages, array: true, &Message::SCHEMA
-    end
-
-    def self.build( attributes = nil, &block )
-      attributes = self.build_with_schema( attributes, &block )
-      self.new( attributes )
+      system_message    default: { role: :system }, &Message.schema  
+      message           as: :messages, array: true, &Message.schema
     end
 
     attr_reader   :system_message

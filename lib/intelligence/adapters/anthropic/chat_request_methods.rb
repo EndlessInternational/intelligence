@@ -9,8 +9,7 @@ module Intelligence
       end
 
       def chat_request_headers( options = nil )
-        options = options ? self.class.build_with_schema( options ) : {}
-        options = @options.merge( options )
+        options = @options.merge( build_options( options ) )
         result = {}
 
         key = options[ :key ] 
@@ -28,8 +27,7 @@ module Intelligence
       end
 
       def chat_request_body( conversation, options = nil )
-        options = options ? self.class.build_with_schema( options ) : {}
-        options = @options.merge( options )
+        options = @options.merge( build_options( options ) )
         result = options[ :chat_options ]&.compact || {}
 
         system_message = to_anthropic_system_message( conversation[ :system_message ] )
