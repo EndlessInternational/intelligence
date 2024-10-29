@@ -229,7 +229,9 @@ RSpec.shared_examples 'chat requests with tools' do | options = {} |
         conversation.append_tool( get_location_tool )
         conversation.append_tool( get_weather_tool )
        
-        response = create_and_make_chat_request( send( options[ :adapter ] || :adapter ), conversation ) 
+        response = create_and_make_chat_request( 
+          send( options[ :adapter ] || :adapter ), conversation 
+        ) 
         
         expect( response.success? ).to be( true ), response_error_description( response )
         expect( response.result ).to be_a( Intelligence::ChatResult )

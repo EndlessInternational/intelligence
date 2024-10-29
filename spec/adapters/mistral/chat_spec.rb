@@ -14,16 +14,6 @@ RSpec.describe "#{Intelligence::Adapter[ :mistral ]} chat requests", :mistral do
     sleep 3 if cassette && cassette.new_recorded_interactions.any? 
   end
 
-  let( :adapter_with_invalid_key ) do
-    Intelligence::Adapter[ :mistral ].build! do 
-      key                     'this-key-is-not-valid'  
-      chat_options do
-        model                 'mistral-large-latest'
-        max_tokens            16
-        temperature           0
-      end
-    end
-  end
 
   let( :adapter ) do
     Intelligence::Adapter[ :mistral ].build! do   
@@ -59,14 +49,37 @@ RSpec.describe "#{Intelligence::Adapter[ :mistral ]} chat requests", :mistral do
     end
   end
 
+  let( :adapter_with_invalid_key ) do
+    Intelligence::Adapter[ :mistral ].build! do 
+      key                     'invalid key'
+      chat_options do
+        model                 'pixtral-12b-2409'        
+        max_tokens            16
+        temperature           0
+      end
+    end
+  end 
+
+  let( :adapter_with_invalid_model ) do
+    Intelligence::Adapter[ :mistral ].build! do 
+      key                     ENV[ 'MISTRAL_API_KEY' ]
+      chat_options do
+        model                 'invalid'
+        max_tokens            16
+        temperature           0
+      end
+    end
+  end
+
   include_examples 'chat requests'
   include_examples 'chat requests with token limit exceeded'
   include_examples 'chat requests with stop sequence', adapter: :adapter_with_stop_sequence 
-  include_examples 'chat requests with error response'
   include_examples 'chat requests with binary encoded images', adapter: :vision_adapter
   include_examples 'chat requests with file images', adapter: :vision_adapter
   include_examples 'chat requests without alternating roles'
   include_examples 'chat requests with tools'
   include_examples 'chat requests with complex tools'
 
+  include_examples 'chat requests with invalid key'
+  include_examples 'chat requests with invalid model', error_type: 'invalid_request_error'
 end

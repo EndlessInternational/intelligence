@@ -6,7 +6,7 @@
         "uri": "https://api.mistral.ai/v1/chat/completions",
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"model\":\"mistral-large-latest\",\"max_tokens\":16,\"temperature\":0.0,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"respond only with the word 'hello'\\n\"}]}"
+          "string": "{\"model\":\"pixtral-12b-2409\",\"max_tokens\":16,\"temperature\":0.0,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"respond only with the word 'hello'\\n\"}]}"
         },
         "headers": {
           "User-Agent": [
@@ -16,7 +16,7 @@
             "application/json"
           ],
           "Authorization": [
-            "Bearer <TOKEN>"
+            "Bearer <TOKEN> key"
           ]
         }
       },
@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Tue, 29 Oct 2024 04:09:55 GMT"
+            "Tue, 29 Oct 2024 18:24:05 GMT"
           ],
           "content-type": [
             "application/json; charset=utf-8"
@@ -45,10 +45,10 @@
             "*"
           ],
           "x-kong-response-latency": [
-            "0"
+            "1"
           ],
           "x-kong-request-id": [
-            "acefea280be8bf4f7df45c4c9ed14423"
+            "b792ea39118ed742849cd21747597443"
           ],
           "cf-cache-status": [
             "DYNAMIC"
@@ -65,10 +65,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "{\n  \"message\":\"Unauthorized\",\n  \"request_id\":\"acefea280be8bf4f7df45c4c9ed14423\"\n}"
+          "string": "{\n  \"message\":\"Unauthorized\",\n  \"request_id\":\"b792ea39118ed742849cd21747597443\"\n}"
         }
       },
-      "recorded_at": "Tue, 29 Oct 2024 04:09:55 GMT"
+      "recorded_at": "Tue, 29 Oct 2024 18:24:05 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

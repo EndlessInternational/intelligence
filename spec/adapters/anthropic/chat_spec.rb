@@ -19,9 +19,20 @@ RSpec.describe "#{Intelligence::Adapter[ :anthropic ]} chat requests", :anthropi
     end
   end
 
+  let( :adapter_with_invalid_model ) do
+    Intelligence::Adapter[ :anthropic ].build! do 
+      key                     ENV[ 'ANTHROPIC_API_KEY' ]  
+      chat_options do
+        model                 'invalid-model'
+        max_tokens            24
+        temperature           0
+      end
+    end
+  end
+
   let( :adapter ) do
     Intelligence::Adapter[ :anthropic ].build! do   
-      key   ENV[ 'ANTHROPIC_API_KEY' ]
+      key                     ENV[ 'ANTHROPIC_API_KEY' ]
       chat_options do
         model                 'claude-3-5-sonnet-20240620'
         max_tokens            32
@@ -32,7 +43,7 @@ RSpec.describe "#{Intelligence::Adapter[ :anthropic ]} chat requests", :anthropi
 
   let( :adapter_with_high_max_tokens ) do
     Intelligence::Adapter[ :anthropic ].build! do   
-      key   ENV[ 'ANTHROPIC_API_KEY' ]
+      key                     ENV[ 'ANTHROPIC_API_KEY' ]
       chat_options do
         model                 'claude-3-5-sonnet-20240620'
         max_tokens            128
@@ -43,7 +54,7 @@ RSpec.describe "#{Intelligence::Adapter[ :anthropic ]} chat requests", :anthropi
 
   let( :adapter_with_stop_sequence ) do
     Intelligence::Adapter[ :anthropic ].build! do   
-      key   ENV[ 'ANTHROPIC_API_KEY' ]
+      key                     ENV[ 'ANTHROPIC_API_KEY' ]
       chat_options do
         model                 'claude-3-5-sonnet-20240620'
         max_tokens            24
@@ -58,12 +69,14 @@ RSpec.describe "#{Intelligence::Adapter[ :anthropic ]} chat requests", :anthropi
   include_examples 'chat requests with stop sequence', 
                    adapter: :adapter_with_stop_sequence, 
                    end_reason: :end_sequence_encountered 
-  include_examples 'chat requests with error response'
   include_examples 'chat requests without alternating roles'
   include_examples 'chat requests with binary encoded images'
   include_examples 'chat requests with tools', 
                    adapter: :adapter_with_high_max_tokens
   include_examples 'chat requests with complex tools',
                    adapter: :adapter_with_high_max_tokens
+
+  include_examples 'chat requests with invalid key'
+  include_examples 'chat requests with invalid model' 
   
 end

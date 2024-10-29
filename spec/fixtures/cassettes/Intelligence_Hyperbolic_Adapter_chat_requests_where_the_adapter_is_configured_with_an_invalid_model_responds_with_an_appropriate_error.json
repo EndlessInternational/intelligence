@@ -1,0 +1,60 @@
+{
+  "http_interactions": [
+    {
+      "request": {
+        "method": "post",
+        "uri": "https://api.hyperbolic.xyz/v1/chat/completions",
+        "body": {
+          "encoding": "UTF-8",
+          "string": "{\"model\":\"invalid-model\",\"max_tokens\":16,\"temperature\":0.0,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"respond only with the word 'hello'\\n\"}]}"
+        },
+        "headers": {
+          "User-Agent": [
+            "Faraday v2.12.0"
+          ],
+          "Content-Type": [
+            "application/json"
+          ],
+          "Authorization": [
+            "Bearer <TOKEN>"
+          ]
+        }
+      },
+      "response": {
+        "status": {
+          "code": 400,
+          "message": "Bad Request"
+        },
+        "headers": {
+          "date": [
+            "Tue, 29 Oct 2024 18:24:05 GMT"
+          ],
+          "content-type": [
+            "application/json"
+          ],
+          "content-length": [
+            "545"
+          ],
+          "connection": [
+            "keep-alive"
+          ],
+          "cf-cache-status": [
+            "DYNAMIC"
+          ],
+          "server": [
+            "cloudflare"
+          ],
+          "cf-ray": [
+            "<CF-RAY>"
+          ]
+        },
+        "body": {
+          "encoding": "UTF-8",
+          "string": "{\"object\":\"error\",\"message\":\"Only meta-llama/Meta-Llama-3.1-405B-Instruct && NousResearch/Hermes-3-Llama-3.1-70B && Qwen/Qwen2.5-72B-Instruct && meta-llama/Llama-3.2-3B-Instruct && meta-llama/Meta-Llama-3.1-70B-Instruct && FLUX.1-dev && meta-llama/Meta-Llama-3.1-8B-Instruct && mistralai/Pixtral-12B-2409 && StableDiffusion && Qwen/Qwen2-VL-72B-Instruct && meta-llama/Meta-Llama-3.1-405B && TTS && Qwen/Qwen2-VL-7B-Instruct && meta-llama/Meta-Llama-3-70B-Instruct && deepseek-ai/DeepSeek-V2.5 allowed now, your model invalid-model\",\"code\":40301}"
+        }
+      },
+      "recorded_at": "Tue, 29 Oct 2024 18:24:05 GMT"
+    }
+  ],
+  "recorded_with": "VCR 6.3.1"
+}

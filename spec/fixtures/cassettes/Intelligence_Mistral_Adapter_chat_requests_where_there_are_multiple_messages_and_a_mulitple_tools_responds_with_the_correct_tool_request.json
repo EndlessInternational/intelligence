@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Tue, 29 Oct 2024 04:10:42 GMT"
+            "Tue, 29 Oct 2024 16:39:45 GMT"
           ],
           "content-type": [
             "application/json"
@@ -38,11 +38,11 @@
           "connection": [
             "keep-alive"
           ],
-          "x-ratelimitbysize-remaining-minute": [
-            "498861"
+          "x-ratelimitbysize-limit-minute": [
+            "500000"
           ],
-          "x-ratelimitbysize-limit-day": [
-            "150000000"
+          "x-ratelimitbysize-remaining-minute": [
+            "498847"
           ],
           "ratelimitbysize-query-cost": [
             "124"
@@ -51,31 +51,31 @@
             "500000"
           ],
           "ratelimitbysize-remaining": [
-            "498861"
+            "498847"
           ],
           "x-ratelimitbysize-remaining-day": [
-            "149983157"
+            "149974434"
           ],
           "ratelimitbysize-reset": [
-            "19"
+            "16"
           ],
-          "x-ratelimitbysize-limit-minute": [
-            "500000"
+          "x-ratelimitbysize-limit-day": [
+            "150000000"
           ],
           "x-envoy-upstream-service-time": [
-            "992"
+            "1367"
           ],
           "access-control-allow-origin": [
             "*"
           ],
           "x-kong-upstream-latency": [
-            "992"
+            "1367"
           ],
           "x-kong-proxy-latency": [
             "1"
           ],
           "x-kong-request-id": [
-            "96c6e741711b2d2242a0a92004d8ba28"
+            "40f41d1b3a9f0a428f687b7786bfe008"
           ],
           "cf-cache-status": [
             "DYNAMIC"
@@ -95,10 +95,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\"id\":\"ce97cc83387f4a109b8aa46b40c4479e\",\"object\":\"chat.completion\",\"created\":1730175041,\"model\":\"mistral-large-latest\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"\",\"tool_calls\":[{\"id\":\"5O78H2FWu\",\"type\":\"function\",\"function\":{\"name\":\"get_weather\",\"arguments\":\"{\\\"city\\\": \\\"Seattle\\\", \\\"state\\\": \\\"WA\\\", \\\"country\\\": \\\"USA\\\"}\"}}]},\"finish_reason\":\"tool_calls\"}],\"usage\":{\"prompt_tokens\":314,\"total_tokens\":349,\"completion_tokens\":35}}"
+          "string": "{\"id\":\"3735f9d756ff4684889de9f0257d7321\",\"object\":\"chat.completion\",\"created\":1730219984,\"model\":\"mistral-large-latest\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"\",\"tool_calls\":[{\"id\":\"2RLDOtbGX\",\"type\":\"function\",\"function\":{\"name\":\"get_weather\",\"arguments\":\"{\\\"city\\\": \\\"Seattle\\\", \\\"state\\\": \\\"WA\\\", \\\"country\\\": \\\"USA\\\"}\"}}]},\"finish_reason\":\"tool_calls\"}],\"usage\":{\"prompt_tokens\":314,\"total_tokens\":349,\"completion_tokens\":35}}"
         }
       },
-      "recorded_at": "Tue, 29 Oct 2024 04:10:42 GMT"
+      "recorded_at": "Tue, 29 Oct 2024 16:39:45 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

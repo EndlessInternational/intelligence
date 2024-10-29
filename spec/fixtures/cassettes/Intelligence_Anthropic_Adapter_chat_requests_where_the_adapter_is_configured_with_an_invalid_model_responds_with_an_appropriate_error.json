@@ -6,7 +6,7 @@
         "uri": "https://api.anthropic.com/v1/messages",
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"model\":\"claude-3-5-sonnet-20240620\",\"max_tokens\":24,\"temperature\":0.0,\"system\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \",\"messages\":[{\"role\":\"user\",\"content\":[{\"type\":\"text\",\"text\":\"respond only with the word 'hello'\\n\"}]}]}"
+          "string": "{\"model\":\"invalid-model\",\"max_tokens\":24,\"temperature\":0.0,\"system\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \",\"messages\":[{\"role\":\"user\",\"content\":[{\"type\":\"text\",\"text\":\"respond only with the word 'hello'\\n\"}]}]}"
         },
         "headers": {
           "User-Agent": [
@@ -25,18 +25,18 @@
       },
       "response": {
         "status": {
-          "code": 401,
-          "message": "Unauthorized"
+          "code": 404,
+          "message": "Not Found"
         },
         "headers": {
           "date": [
-            "Fri, 25 Oct 2024 17:47:46 GMT"
+            "Tue, 29 Oct 2024 18:23:53 GMT"
           ],
           "content-type": [
             "application/json"
           ],
-          "content-length": [
-            "86"
+          "transfer-encoding": [
+            "chunked"
           ],
           "connection": [
             "keep-alive"
@@ -61,14 +61,17 @@
           ],
           "cf-ray": [
             "<CF-RAY>"
+          ],
+          "content-encoding": [
+            "gzip"
           ]
         },
         "body": {
-          "encoding": "UTF-8",
-          "string": "{\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"}}"
+          "encoding": "ASCII-8BIT",
+          "string": "{\"type\":\"error\",\"error\":{\"type\":\"not_found_error\",\"message\":\"model: invalid-model\"}}"
         }
       },
-      "recorded_at": "Fri, 25 Oct 2024 17:47:45 GMT"
+      "recorded_at": "Tue, 29 Oct 2024 18:23:53 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

@@ -8,20 +8,9 @@ RSpec.describe Intelligence::Adapter[ :google ], :google do
     raise "An GOOGLE_API_KEY must be defined in the environment." unless ENV[ 'GOOGLE_API_KEY' ]
   end
 
-  let( :adapter_with_invalid_key ) do
-    Intelligence::Adapter[ :google ].build! do 
-      key                     'this-key-is-not-valid'  
-      chat_options do
-        model                 'gemini-1.5-pro-002'
-        max_tokens            16
-        temperature           0
-      end
-    end
-  end
-
   let( :adapter ) do
     Intelligence::Adapter[ :google ].build! do   
-      key   ENV[ 'GOOGLE_API_KEY' ]
+      key                     ENV[ 'GOOGLE_API_KEY' ]
       chat_options do
         model                 'gemini-1.5-pro-002'
         max_tokens            64 
@@ -32,7 +21,7 @@ RSpec.describe Intelligence::Adapter[ :google ], :google do
   
   let( :adapter_with_limited_max_tokens ) do
     Intelligence::Adapter[ :google ].build! do   
-      key   ENV[ 'GOOGLE_API_KEY' ]
+      key                     ENV[ 'GOOGLE_API_KEY' ]
       chat_options do
         model                 'gemini-1.5-pro-002'
         max_tokens            16 
@@ -43,7 +32,7 @@ RSpec.describe Intelligence::Adapter[ :google ], :google do
   
   let( :vision_adapter ) do
     Intelligence::Adapter[ :google ].build! do   
-      key   ENV[ 'GOOGLE_API_KEY' ]
+      key                     ENV[ 'GOOGLE_API_KEY' ]
       chat_options do
         model                 'gemini-1.5-pro-002'
         max_tokens            32 
@@ -54,7 +43,7 @@ RSpec.describe Intelligence::Adapter[ :google ], :google do
 
   let( :adapter_with_stop_sequence ) do
     Intelligence::Adapter[ :google ].build! do   
-      key   ENV[ 'GOOGLE_API_KEY' ]
+      key                     ENV[ 'GOOGLE_API_KEY' ]
       chat_options do
         model                 'gemini-1.5-pro-002'
         max_tokens            16
@@ -66,10 +55,32 @@ RSpec.describe Intelligence::Adapter[ :google ], :google do
 
   let( :vision_adapter ) do
     Intelligence::Adapter[ :google ].build! do   
-      key   ENV[ 'GOOGLE_API_KEY' ]
+      key                     ENV[ 'GOOGLE_API_KEY' ]
       chat_options do
         model                 'gemini-1.5-pro-002'
         max_tokens            32
+        temperature           0
+      end
+    end
+  end
+
+  let( :adapter_with_invalid_key ) do
+    Intelligence::Adapter[ :google ].build! do 
+      key                     'this-key-is-not-valid'  
+      chat_options do
+        model                 'gemini-1.5-pro-002'
+        max_tokens            16
+        temperature           0
+      end
+    end
+  end 
+
+  let( :adapter_with_invalid_model ) do
+    Intelligence::Adapter[ :google ].build! do 
+      key                     ENV[ 'GOOGLE_API_KEY' ]  
+      chat_options do
+        model                 'invalid-model'
+        max_tokens            16
         temperature           0
       end
     end
@@ -80,7 +91,6 @@ RSpec.describe Intelligence::Adapter[ :google ], :google do
                    adapter: :adapter_with_limited_max_tokens
   include_examples 'chat requests with stop sequence', 
                    adapter: :adapter_with_stop_sequence  
-  include_examples 'chat requests with error response'
   include_examples 'chat requests without alternating roles'
   include_examples 'chat requests with binary encoded images'
   include_examples 'chat requests with binary encoded text'
@@ -88,5 +98,7 @@ RSpec.describe Intelligence::Adapter[ :google ], :google do
   include_examples 'chat requests with binary encoded audio'
   include_examples 'chat requests with tools'
 
+  include_examples 'chat requests with invalid key'
+  include_examples 'chat requests with invalid model' 
 end
   
