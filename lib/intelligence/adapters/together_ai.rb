@@ -25,7 +25,7 @@ module Intelligence
         end
       end
 
-      def translate_end_result( end_result )
+      def to_end_reason( end_result )
         case end_result
           when 'eos', 'stop'
             :ended

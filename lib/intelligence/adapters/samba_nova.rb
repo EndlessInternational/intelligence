@@ -35,8 +35,7 @@ module Intelligence
       end
 
       def chat_result_error_attributes( response )
-
-        error_type, error_description = translate_error_response_status( response.status )
+        error_type, error_description = to_error_response( response.status )
         result = {
           error_type: error_type.to_s,
           error_description: error_description
@@ -55,7 +54,6 @@ module Intelligence
         end
 
         result
-
       end
 
     end

@@ -32,7 +32,7 @@ module Intelligence
             end
           end
           result[ :choices ].push( { 
-            end_reason: translate_end_result( json_choice[ :finish_reason ] ), 
+            end_reason: to_end_reason( json_choice[ :finish_reason ] ), 
             message: result_message 
           } )
         end
@@ -53,7 +53,7 @@ module Intelligence
       end
 
       def chat_result_error_attributes( response )
-        error_type, error_description = translate_error_response_status( response.status )
+        error_type, error_description = to_error_response( response.status )
         result = {
           error_type: error_type.to_s,
           error_description: error_description
@@ -147,7 +147,7 @@ module Intelligence
               end
               choices[ data_choice_index ][ :message ][ :contents ] = contents
               choices[ data_choice_index ][ :end_reason ] ||= 
-                translate_end_result( data_choice_finish_reason )
+                to_end_reason( data_choice_finish_reason )
             end
   
             if usage = data[ 'usage' ]
@@ -184,8 +184,8 @@ module Intelligence
 
       alias_method :stream_result_error_attributes, :chat_result_error_attributes
 
-      def translate_end_result( end_result )
-        case end_result
+      def to_end_reason( finish_reason )
+        case finish_reason
           when 'stop'
             :ended
           when 'length'
@@ -199,7 +199,7 @@ module Intelligence
         end
       end
 
-      def translate_error_response_status( status )
+      def to_error_response( status )
         case status
           when 400
             [ :invalid_request_error, 
