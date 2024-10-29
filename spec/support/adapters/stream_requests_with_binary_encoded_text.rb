@@ -11,7 +11,7 @@ RSpec.shared_examples 'stream requests with binary encoded text' do
   }
 
   context 'where there is a single message and binary encoded text' do 
-    it 'responds with the appropriate generated text' do
+    it 'streams the appropriate generated text' do
 
       conversation = create_conversation( "what is the text in the attached file?\n" )
       conversation.messages.last.append_content( binary_content_of_text_file )
@@ -46,7 +46,7 @@ RSpec.shared_examples 'stream requests with binary encoded text' do
   end
 
   context 'where there are multiple messages with the first including binary encoded text' do
-    it 'responds with the appropriate generated text' do
+    it 'streams the appropriate generated text' do
 
       conversation = create_conversation( "what is the text in the attached file?\n" )
       conversation.messages.last.append_content( binary_content_of_text_file )
@@ -83,7 +83,7 @@ RSpec.shared_examples 'stream requests with binary encoded text' do
   end 
 
   context 'where there are multiple messages with each including a binary encoded text' do
-    it 'responds with the appropriate generated text' do
+    it 'streams the appropriate generated text' do
 
       conversation = create_conversation( "what is the text in the attached file?\n" )
       conversation.messages.last.append_content( binary_content_of_text_file )

@@ -3,7 +3,7 @@ require 'spec_helper'
 RSpec.shared_examples 'stream requests with stop sequence' do | options = {} |  
 
   context 'where there is a single message that ends at stop sequence' do
-    it 'responds with generated text up to the stop sequence' do
+    it 'streams generated text up to the stop sequence' do
 
       conversation = create_conversation( "count to twenty in words, all lower case, one word per line\n" )
       
@@ -35,7 +35,7 @@ RSpec.shared_examples 'stream requests with stop sequence' do | options = {} |
   end
 
   context 'where there are multiple messages and the last ends at stop sequence' do
-    it 'responds with generated text up to the stop sequence' do 
+    it 'streams generated text up to the stop sequence' do 
 
       conversation =  create_conversation( 
         "count to five in words, all lower case, one word per line\n",

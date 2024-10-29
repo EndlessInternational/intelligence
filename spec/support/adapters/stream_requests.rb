@@ -3,7 +3,7 @@ require 'spec_helper'
 RSpec.shared_examples 'stream requests' do 
 
   context 'where there is a single message' do
-    it 'responds with the appropriate generated text' do
+    it 'streams the appropriate generated text' do
 
       conversation = create_conversation( "respond only with the word 'hello'\n" )
       
@@ -35,7 +35,7 @@ RSpec.shared_examples 'stream requests' do
 
 
   context 'where there are multiple messages' do
-    it 'responds with the appropriate generated text' do
+    it 'streams the appropriate generated text' do
     
       conversation =  create_conversation( 
         "this is a test, respond with 'test'\n",

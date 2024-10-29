@@ -1,0 +1,60 @@
+{
+  "http_interactions": [
+    {
+      "request": {
+        "method": "post",
+        "uri": "https://api.hyperbolic.xyz/v1/chat/completions",
+        "body": {
+          "encoding": "UTF-8",
+          "string": "{\"model\":\"meta-llama/Meta-Llama-3.1-70B-Instruct\",\"max_tokens\":16,\"temperature\":0.0,\"stream\":true,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"this is a test, respond with 'test'\\n\"},{\"role\":\"assistant\",\"content\":\"test\\n\"},{\"role\":\"user\",\"content\":\"what was the previous user message?\\nrespond in less than 16 words\\n\"}]}"
+        },
+        "headers": {
+          "User-Agent": [
+            "Faraday v2.12.0"
+          ],
+          "Content-Type": [
+            "application/json"
+          ],
+          "Authorization": [
+            "Bearer <TOKEN>"
+          ]
+        }
+      },
+      "response": {
+        "status": {
+          "code": 200,
+          "message": "OK"
+        },
+        "headers": {
+          "date": [
+            "Tue, 29 Oct 2024 21:45:13 GMT"
+          ],
+          "content-type": [
+            "text/event-stream; charset=utf-8"
+          ],
+          "transfer-encoding": [
+            "chunked"
+          ],
+          "connection": [
+            "keep-alive"
+          ],
+          "cf-cache-status": [
+            "DYNAMIC"
+          ],
+          "server": [
+            "cloudflare"
+          ],
+          "cf-ray": [
+            "<CF-RAY>"
+          ]
+        },
+        "body": {
+          "encoding": "UTF-8",
+          "string": "data: {\"id\": \"chat-916e1b8a52774ad1a46a8eba1d2d415d\", \"object\": \"chat.completion.chunk\", \"created\": 1730238312, \"model\": \"meta-llama/Meta-Llama-3.1-70B-Instruct\", \"choices\": [{\"index\": 0, \"delta\": {\"role\": \"assistant\", \"content\": \"\"}, \"logprobs\": null, \"finish_reason\": null}], \"usage\": {\"prompt_tokens\": 85, \"total_tokens\": 86, \"completion_tokens\": 1}}\n\ndata: {\"id\": \"chat-916e1b8a52774ad1a46a8eba1d2d415d\", \"object\": \"chat.completion.chunk\", \"created\": 1730238312, \"model\": \"meta-llama/Meta-Llama-3.1-70B-Instruct\", \"choices\": [{\"index\": 0, \"delta\": {\"content\": \"this\"}, \"logprobs\": null, \"finish_reason\": null}], \"usage\": {\"prompt_tokens\": 85, \"total_tokens\": 87, \"completion_tokens\": 2}}\n\ndata: {\"id\": \"chat-916e1b8a52774ad1a46a8eba1d2d415d\", \"object\": \"chat.completion.chunk\", \"created\": 1730238312, \"model\": \"meta-llama/Meta-Llama-3.1-70B-Instruct\", \"choices\": [{\"index\": 0, \"delta\": {\"content\": \" is\"}, \"logprobs\": null, \"finish_reason\": null}], \"usage\": {\"prompt_tokens\": 85, \"total_tokens\": 88, \"completion_tokens\": 3}}\n\ndata: {\"id\": \"chat-916e1b8a52774ad1a46a8eba1d2d415d\", \"object\": \"chat.completion.chunk\", \"created\": 1730238312, \"model\": \"meta-llama/Meta-Llama-3.1-70B-Instruct\", \"choices\": [{\"index\": 0, \"delta\": {\"content\": \" a\"}, \"logprobs\": null, \"finish_reason\": null}], \"usage\": {\"prompt_tokens\": 85, \"total_tokens\": 89, \"completion_tokens\": 4}}\n\ndata: {\"id\": \"chat-916e1b8a52774ad1a46a8eba1d2d415d\", \"object\": \"chat.completion.chunk\", \"created\": 1730238312, \"model\": \"meta-llama/Meta-Llama-3.1-70B-Instruct\", \"choices\": [{\"index\": 0, \"delta\": {\"content\": \" test\"}, \"logprobs\": null, \"finish_reason\": null}], \"usage\": {\"prompt_tokens\": 85, \"total_tokens\": 90, \"completion_tokens\": 5}}\n\ndata: {\"id\": \"chat-916e1b8a52774ad1a46a8eba1d2d415d\", \"object\": \"chat.completion.chunk\", \"created\": 1730238312, \"model\": \"meta-llama/Meta-Llama-3.1-70B-Instruct\", \"choices\": [{\"index\": 0, \"delta\": {\"content\": \",\"}, \"logprobs\": null, \"finish_reason\": null}], \"usage\": {\"prompt_tokens\": 85, \"total_tokens\": 91, \"completion_tokens\": 6}}\n\ndata: {\"id\": \"chat-916e1b8a52774ad1a46a8eba1d2d415d\", \"object\": \"chat.completion.chunk\", \"created\": 1730238312, \"model\": \"meta-llama/Meta-Llama-3.1-70B-Instruct\", \"choices\": [{\"index\": 0, \"delta\": {\"content\": \" respond\"}, \"logprobs\": null, \"finish_reason\": null}], \"usage\": {\"prompt_tokens\": 85, \"total_tokens\": 92, \"completion_tokens\": 7}}\n\ndata: {\"id\": \"chat-916e1b8a52774ad1a46a8eba1d2d415d\", \"object\": \"chat.completion.chunk\", \"created\": 1730238312, \"model\": \"meta-llama/Meta-Llama-3.1-70B-Instruct\", \"choices\": [{\"index\": 0, \"delta\": {\"content\": \" with\"}, \"logprobs\": null, \"finish_reason\": null}], \"usage\": {\"prompt_tokens\": 85, \"total_tokens\": 93, \"completion_tokens\": 8}}\n\ndata: {\"id\": \"chat-916e1b8a52774ad1a46a8eba1d2d415d\", \"object\": \"chat.completion.chunk\", \"created\": 1730238312, \"model\": \"meta-llama/Meta-Llama-3.1-70B-Instruct\", \"choices\": [{\"index\": 0, \"delta\": {\"content\": \" '\"}, \"logprobs\": null, \"finish_reason\": null}], \"usage\": {\"prompt_tokens\": 85, \"total_tokens\": 94, \"completion_tokens\": 9}}\n\ndata: {\"id\": \"chat-916e1b8a52774ad1a46a8eba1d2d415d\", \"object\": \"chat.completion.chunk\", \"created\": 1730238312, \"model\": \"meta-llama/Meta-Llama-3.1-70B-Instruct\", \"choices\": [{\"index\": 0, \"delta\": {\"content\": \"test\"}, \"logprobs\": null, \"finish_reason\": null}], \"usage\": {\"prompt_tokens\": 85, \"total_tokens\": 95, \"completion_tokens\": 10}}\n\ndata: {\"id\": \"chat-916e1b8a52774ad1a46a8eba1d2d415d\", \"object\": \"chat.completion.chunk\", \"created\": 1730238312, \"model\": \"meta-llama/Meta-Llama-3.1-70B-Instruct\", \"choices\": [{\"index\": 0, \"delta\": {\"content\": \"'\"}, \"logprobs\": null, \"finish_reason\": null}], \"usage\": {\"prompt_tokens\": 85, \"total_tokens\": 96, \"completion_tokens\": 11}}\n\ndata: {\"id\": \"chat-916e1b8a52774ad1a46a8eba1d2d415d\", \"object\": \"chat.completion.chunk\", \"created\": 1730238312, \"model\": \"meta-llama/Meta-Llama-3.1-70B-Instruct\", \"choices\": [{\"index\": 0, \"delta\": {\"content\": \"\"}, \"logprobs\": null, \"finish_reason\": \"stop\", \"stop_reason\": null}], \"usage\": {\"prompt_tokens\": 85, \"total_tokens\": 97, \"completion_tokens\": 12}}\n\n"
+        }
+      },
+      "recorded_at": "Tue, 29 Oct 2024 21:45:13 GMT"
+    }
+  ],
+  "recorded_with": "VCR 6.3.1"
+}

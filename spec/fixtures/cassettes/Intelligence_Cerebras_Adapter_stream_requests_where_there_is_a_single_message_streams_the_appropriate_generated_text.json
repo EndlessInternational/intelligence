@@ -1,0 +1,96 @@
+{
+  "http_interactions": [
+    {
+      "request": {
+        "method": "post",
+        "uri": "https://api.cerebras.ai/v1/chat/completions",
+        "body": {
+          "encoding": "UTF-8",
+          "string": "{\"model\":\"llama3.1-70b\",\"max_tokens\":16,\"stream\":true,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"respond only with the word 'hello'\\n\"}]}"
+        },
+        "headers": {
+          "User-Agent": [
+            "Faraday v2.12.0"
+          ],
+          "Content-Type": [
+            "application/json"
+          ],
+          "Authorization": [
+            "Bearer <TOKEN>"
+          ]
+        }
+      },
+      "response": {
+        "status": {
+          "code": 200,
+          "message": "OK"
+        },
+        "headers": {
+          "content-type": [
+            "text/event-stream; charset=utf-8"
+          ],
+          "transfer-encoding": [
+            "chunked"
+          ],
+          "connection": [
+            "keep-alive"
+          ],
+          "date": [
+            "Tue, 29 Oct 2024 21:43:50 GMT"
+          ],
+          "x-content-type-options": [
+            "nosniff"
+          ],
+          "strict-transport-security": [
+            "max-age=3600; includeSubDomains"
+          ],
+          "server": [
+            "uvicorn"
+          ],
+          "x-request-id": [
+            "<X-REQUEST-ID>"
+          ],
+          "x-ratelimit-limit-requests-day": [
+            "14400"
+          ],
+          "x-ratelimit-limit-tokens-minute": [
+            "60000"
+          ],
+          "x-ratelimit-remaining-requests-day": [
+            "14370"
+          ],
+          "x-ratelimit-remaining-tokens-minute": [
+            "60000"
+          ],
+          "x-ratelimit-reset-requests-day": [
+            "8169.991727113724"
+          ],
+          "x-ratelimit-reset-tokens-minute": [
+            "9.991727113723755"
+          ],
+          "referrer-policy": [
+            "strict-origin-when-cross-origin"
+          ],
+          "x-cache": [
+            "Miss from cloudfront"
+          ],
+          "via": [
+            "1.1 707e733794d52100fde0ab21bf0b1462.cloudfront.net (CloudFront)"
+          ],
+          "x-amz-cf-pop": [
+            "SEA73-P1"
+          ],
+          "x-amz-cf-id": [
+            "skVg73t0x9dPi1KT1M-Bx2tICGMFaV1dKDckcAAQ5FNGhioQsAAyPw=="
+          ]
+        },
+        "body": {
+          "encoding": "UTF-8",
+          "string": "data: {\"id\":\"chatcmpl-481da05b-cb5b-467b-85c6-f594db3400a3\",\"choices\":[{\"delta\":{\"role\":\"assistant\"},\"index\":0}],\"created\":1730238229,\"model\":\"llama3.1-70b\",\"system_fingerprint\":\"fp_55ebaf7e1e\",\"object\":\"chat.completion.chunk\"}\n\ndata: {\"id\":\"chatcmpl-481da05b-cb5b-467b-85c6-f594db3400a3\",\"choices\":[{\"delta\":{\"content\":\"hello\"},\"index\":0}],\"created\":1730238229,\"model\":\"llama3.1-70b\",\"system_fingerprint\":\"fp_55ebaf7e1e\",\"object\":\"chat.completion.chunk\"}\n\ndata: {\"id\":\"chatcmpl-481da05b-cb5b-467b-85c6-f594db3400a3\",\"choices\":[{\"delta\":{},\"finish_reason\":\"stop\",\"index\":0}],\"created\":1730238229,\"model\":\"llama3.1-70b\",\"system_fingerprint\":\"fp_55ebaf7e1e\",\"object\":\"chat.completion.chunk\",\"usage\":{\"prompt_tokens\":78,\"completion_tokens\":2,\"total_tokens\":80},\"time_info\":{\"queue_time\":0.00002684,\"prompt_time\":0.0029286729999999997,\"completion_time\":0.0032167340000000006,\"total_time\":0.00861358642578125,\"created\":1730238229}}\n\n"
+        }
+      },
+      "recorded_at": "Tue, 29 Oct 2024 21:43:49 GMT"
+    }
+  ],
+  "recorded_with": "VCR 6.3.1"
+}

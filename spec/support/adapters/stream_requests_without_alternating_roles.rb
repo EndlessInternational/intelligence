@@ -3,7 +3,7 @@ require 'spec_helper'
 RSpec.shared_examples 'stream requests without alternating roles' do 
 
   context 'where there are two messages with the same role in a sequence' do
-    it 'responds with the appropriate generated text' do 
+    it 'streams the appropriate generated text' do 
 
       conversation = create_conversation( 
         "this is a test, respond with 'test'\n",

@@ -3,7 +3,7 @@ require 'spec_helper'
 RSpec.shared_examples 'stream requests with token limit exceeded' do | options = {} |  
 
   context 'where there is a single message the response to which will exceed the token limit' do
-    it 'responds with limited text and an end reason which indicates that the token limit was exceeded' do
+    it 'streams limited text and an end reason which indicates that the token limit was exceeded' do
 
       conversation = create_conversation( "count to twenty in words, all lower case, one word per line\n" )
       
@@ -37,7 +37,7 @@ RSpec.shared_examples 'stream requests with token limit exceeded' do | options =
   end
 
   context 'where there are multiple messages the response to which will exceed the token limit' do
-    it 'responds with limited text and an end reason which indicates that the token limit was exceeded' do
+    it 'streams limited text and an end reason which indicates that the token limit was exceeded' do
 
       conversation = create_conversation( 
         "count to five in words, all lower case, one word per line\n",

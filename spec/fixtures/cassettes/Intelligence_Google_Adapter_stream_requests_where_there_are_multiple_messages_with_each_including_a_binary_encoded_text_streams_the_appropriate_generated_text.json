@@ -1,0 +1,69 @@
+{
+  "http_interactions": [
+    {
+      "request": {
+        "method": "post",
+        "uri": "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro-002:streamGenerateContent?alt=sse&key=<KEY>",
+        "body": {
+          "encoding": "UTF-8",
+          "string": "{\"generationConfig\":{\"maxOutputTokens\":24,\"temperature\":0.0},\"systemInstruction\":{\"role\":\"user\",\"parts\":[{\"text\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"}]},\"contents\":[{\"role\":\"user\",\"parts\":[{\"text\":\"what is the text in the attached file?\\n\"},{\"inline_data\":{\"mime_type\":\"text/plain\",\"data\":\"dGhpcyBpcyBhIHRlc3QK\"}}]},{\"role\":\"model\",\"parts\":[{\"text\":\"this is a test\\n\"}]},{\"role\":\"user\",\"parts\":[{\"text\":\"what about this file? what is it about?\\nrespond in less than 16 words\\n\"},{\"inline_data\":{\"mime_type\":\"text/plain\",\"data\":\"SW4gdGhlIGJlZ2lubmluZywgdGhlcmUgd2FzIGEgc2luZ3VsYXJpdHnigJRhbiBpbmZpbml0ZXNpbWFsbHkgc21hbGwsIGhvdCwgYW5kIGRlbnNlIHBvaW50LiAKQXBwcm94aW1hdGVseSAxMy43IGJpbGxpb24geWVhcnMgYWdvLCB0aGlzIHNpbmd1bGFyaXR5IGV4cGFuZGVkIGluIGEgbW9udW1lbnRhbCBldmVudCBrbm93biAKYXMgdGhlIEJpZyBCYW5nLCBnaXZpbmcgYmlydGggdG8gdGhlIHVuaXZlcnNlIGFzIHdlIGtub3cgaXQuIFRpbWUgYW5kIHNwYWNlIHVuZnVybGVkLCBsZWFkaW5nIAp0byB0aGUgZm9ybWF0aW9uIG9mIHN1YmF0b21pYyBwYXJ0aWNsZXMsIGF0b21zLCBhbmQgZXZlbnR1YWxseSwgdGhlIHZhc3QgYXJyYXkgb2YgY2VsZXN0aWFsIApib2RpZXMgdGhhdCBwb3B1bGF0ZSB0aGUgY29zbW9zIHRvZGF5LiBGcm9tIHRoYXQgcHJpbW9yZGlhbCBleHBsb3Npb24gZW1lcmdlZCBnYWxheGllcywgc3RhcnMsIApwbGFuZXRzLCBhbmQgdGhlIGludHJpY2F0ZSB0YXBlc3RyeSBvZiBsaWZlLCBhbGwgZXZvbHZpbmcgb3ZlciBiaWxsaW9ucyBvZiB5ZWFycyBpbnRvIHRoZSAKY29tcGxleCBhbmQgd29uZHJvdXMgdW5pdmVyc2Ugd2Ugb2JzZXJ2ZSBub3cuCg==\"}}]}]}"
+        },
+        "headers": {
+          "User-Agent": [
+            "Faraday v2.12.0"
+          ],
+          "Content-Type": [
+            "application/json"
+          ]
+        }
+      },
+      "response": {
+        "status": {
+          "code": 200,
+          "message": "OK"
+        },
+        "headers": {
+          "content-type": [
+            "text/event-stream"
+          ],
+          "content-disposition": [
+            "attachment"
+          ],
+          "vary": [
+            "Origin, X-Origin, Referer"
+          ],
+          "transfer-encoding": [
+            "chunked"
+          ],
+          "date": [
+            "Tue, 29 Oct 2024 21:45:08 GMT"
+          ],
+          "server": [
+            "scaffolding on HTTPServer2"
+          ],
+          "x-xss-protection": [
+            "0"
+          ],
+          "x-frame-options": [
+            "SAMEORIGIN"
+          ],
+          "x-content-type-options": [
+            "nosniff"
+          ],
+          "server-timing": [
+            "gfet4t7; dur=442"
+          ],
+          "alt-svc": [
+            "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+          ]
+        },
+        "body": {
+          "encoding": "UTF-8",
+          "string": "data: {\"candidates\": [{\"content\": {\"parts\": [{\"text\": \"Big\"}],\"role\": \"model\"}}],\"usageMetadata\": {\"promptTokenCount\": 221,\"totalTokenCount\": 221},\"modelVersion\": \"gemini-1.5-pro-002\"}\r\n\r\ndata: {\"candidates\": [{\"content\": {\"parts\": [{\"text\": \" Bang started universe 13.7 billion years ago, creating everything.\\n\"}],\"role\": \"model\"}}],\"usageMetadata\": {\"promptTokenCount\": 221,\"totalTokenCount\": 221},\"modelVersion\": \"gemini-1.5-pro-002\"}\r\n\r\ndata: {\"candidates\": [{\"content\": {\"parts\": [{\"text\": \"\"}],\"role\": \"model\"},\"finishReason\": \"STOP\"}],\"usageMetadata\": {\"promptTokenCount\": 221,\"candidatesTokenCount\": 17,\"totalTokenCount\": 238},\"modelVersion\": \"gemini-1.5-pro-002\"}\r\n\r\n"
+        }
+      },
+      "recorded_at": "Tue, 29 Oct 2024 21:45:09 GMT"
+    }
+  ],
+  "recorded_with": "VCR 6.3.1"
+}
