@@ -1,0 +1,105 @@
+{
+  "http_interactions": [
+    {
+      "request": {
+        "method": "post",
+        "uri": "https://api.mistral.ai/v1/chat/completions",
+        "body": {
+          "encoding": "UTF-8",
+          "string": "{\"model\":\"mistral-large-latest\",\"max_tokens\":48,\"temperature\":0.0,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"Tell me the weather in Seattle.\\n\"}],\"tools\":[{\"type\":\"function\",\"function\":{\"name\":\"get_weather\",\"description\":\"The get_weather tool returns the current weather in given locality.\",\"parameters\":{\"type\":\"object\",\"properties\":{\"location\":{\"type\":\"object\",\"description\":\"The locality for which the weather will be returned\",\"properties\":{\"city\":{\"type\":\"string\",\"description\":\"The city or town for which the current weather should be returned.\"},\"state\":{\"type\":\"string\",\"description\":\"The state or province for which the current weather should be returned. If this is not provided the largest or most prominent city with the given name, in the given country or in the worldi, will be assumed.\"},\"country\":{\"type\":\"string\",\"description\":\"The country for which the given weather should be returned. If this is not provided the largest or most prominent city with the given name will be returned.\"}},\"required\":[\"city\"]}},\"required\":[\"location\"]}}}]}"
+        },
+        "headers": {
+          "User-Agent": [
+            "Faraday v2.12.0"
+          ],
+          "Content-Type": [
+            "application/json"
+          ],
+          "Authorization": [
+            "Bearer <TOKEN>"
+          ]
+        }
+      },
+      "response": {
+        "status": {
+          "code": 200,
+          "message": "OK"
+        },
+        "headers": {
+          "date": [
+            "Tue, 29 Oct 2024 04:10:55 GMT"
+          ],
+          "content-type": [
+            "application/json"
+          ],
+          "transfer-encoding": [
+            "chunked"
+          ],
+          "connection": [
+            "keep-alive"
+          ],
+          "x-ratelimitbysize-remaining-minute": [
+            "498772"
+          ],
+          "x-ratelimitbysize-limit-day": [
+            "150000000"
+          ],
+          "ratelimitbysize-query-cost": [
+            "96"
+          ],
+          "ratelimitbysize-limit": [
+            "500000"
+          ],
+          "ratelimitbysize-remaining": [
+            "498772"
+          ],
+          "x-ratelimitbysize-remaining-day": [
+            "149982919"
+          ],
+          "ratelimitbysize-reset": [
+            "6"
+          ],
+          "x-ratelimitbysize-limit-minute": [
+            "500000"
+          ],
+          "x-envoy-upstream-service-time": [
+            "1058"
+          ],
+          "access-control-allow-origin": [
+            "*"
+          ],
+          "x-kong-upstream-latency": [
+            "1059"
+          ],
+          "x-kong-proxy-latency": [
+            "1"
+          ],
+          "x-kong-request-id": [
+            "4ea0c06f4217580042d068029b7c8d66"
+          ],
+          "cf-cache-status": [
+            "DYNAMIC"
+          ],
+          "server": [
+            "cloudflare"
+          ],
+          "cf-ray": [
+            "<CF-RAY>"
+          ],
+          "content-encoding": [
+            "gzip"
+          ],
+          "alt-svc": [
+            "h3=\":443\"; ma=86400"
+          ]
+        },
+        "body": {
+          "encoding": "ASCII-8BIT",
+          "string": "{\"id\":\"08e7b6787d1e45d290af97be0b092167\",\"object\":\"chat.completion\",\"created\":1730175054,\"model\":\"mistral-large-latest\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"\",\"tool_calls\":[{\"id\":\"9pBQ1kKOu\",\"type\":\"function\",\"function\":{\"name\":\"get_weather\",\"arguments\":\"{\\\"location\\\": {\\\"city\\\": \\\"Seattle\\\"}}\"}}]},\"finish_reason\":\"tool_calls\"}],\"usage\":{\"prompt_tokens\":275,\"total_tokens\":301,\"completion_tokens\":26}}"
+        }
+      },
+      "recorded_at": "Tue, 29 Oct 2024 04:10:55 GMT"
+    }
+  ],
+  "recorded_with": "VCR 6.3.1"
+}

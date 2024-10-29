@@ -10,7 +10,8 @@ RSpec.describe "#{Intelligence::Adapter[ :mistral ]} chat requests", :mistral do
 
   # this is needed for mistral test to avoid the rate limit
   after( :each ) do | example |
-    sleep 2 if example.metadata[ :record_cassettes ]
+    cassette = VCR.current_cassette
+    sleep 3 if cassette && cassette.new_recorded_interactions.any? 
   end
 
   let( :adapter_with_invalid_key ) do
@@ -29,7 +30,7 @@ RSpec.describe "#{Intelligence::Adapter[ :mistral ]} chat requests", :mistral do
       key                     ENV[ 'MISTRAL_API_KEY' ]
       chat_options do
         model                 'mistral-large-latest'
-        max_tokens            24
+        max_tokens            48 
         temperature           0
       end
     end
@@ -65,5 +66,7 @@ RSpec.describe "#{Intelligence::Adapter[ :mistral ]} chat requests", :mistral do
   include_examples 'chat requests with binary encoded images', adapter: :vision_adapter
   include_examples 'chat requests with file images', adapter: :vision_adapter
   include_examples 'chat requests without alternating roles'
+  include_examples 'chat requests with tools'
+  include_examples 'chat requests with complex tools'
 
 end

@@ -1,135 +1,40 @@
 module Intelligence
   module Generic
-    module ChatMethods
-
-      module ClassMethods
-        def chat_request_uri( uri = nil )
-          if uri
-            @chat_request_uri = uri
-          else
-            @chat_request_uri
-          end
-        end
-      end
-
-      def self.included( base )
-        base.extend( ClassMethods )
-      end
-
-      def chat_request_uri( options )
-        self.class.chat_request_uri
-      end
-
-      def chat_request_headers( options = nil )
-        options = @options.merge( build_options( options ) )
-        result = {}
-
-        key = options[ :key ]
-
-        raise ArgumentError.new( "An API key is required to build a chat request." ) \
-          if key.nil?
-
-        result[ 'Content-Type' ] = 'application/json'
-        result[ 'Authorization' ] = "Bearer #{key}"
-
-        result 
-      end
-
-      def chat_request_body( conversation, options = nil )
-        options = @options.merge( build_options( options ) )
-        
-        result = options[ :chat_options ]
-        result[ :messages ] = []
-
-        system_message = system_message_to_s( conversation[ :system_message ] )
-        result[ :messages ] << { role: 'system', content: system_message } if system_message
-
-        conversation[ :messages ]&.each do | message |
-          result[ :messages ] << chat_request_message_attributes( message )
-        end
-
-        JSON.generate( result )
-      end 
-
-      def chat_request_message_attributes( message )
-        result_message = { role: message[ :role ] }
-        result_message_content = []
-        message[ :contents ]&.each do | content |
-          case content[ :type ]
-          when :text
-            result_message_content << { type: 'text', text: content[ :text ] }
-          when :binary 
-            content_type = content[ :content_type ]
-            bytes = content[ :bytes ]
-            if content_type && bytes
-              mime_type = MIME::Types[ content_type ].first
-              if mime_type&.media_type == 'image'
-                result_message_content << {
-                  type: 'image_url',
-                  image_url: {
-                    url: "data:#{content_type};base64,#{Base64.strict_encode64( bytes )}".freeze
-                  }
-                }
-              else
-                raise UnsupportedContentError.new( 
-                  :generic, 
-                  'only support content of type image/*' 
-                ) 
-              end
-            else 
-              raise UnsupportedContentError.new(
-                :generic, 
-                'requires binary content to include content type and ( packed ) bytes'  
-              )
-            end
-          when :file 
-            content_type = content[ :content_type ]
-            uri = content[ :uri ]
-            if content_type && uri
-              mime_type = MIME::Types[ content_type ].first
-              if mime_type&.media_type == 'image'
-                result_message_content << {
-                  type: 'image_url',
-                  image_url: { url: uri }
-                }
-              else
-                raise UnsupportedContentError.new( 
-                  :generic, 
-                  'only support content of type image/*' 
-                ) 
-              end
-            else 
-              raise UnsupportedContentError.new(
-                :generic, 
-                'requires binary content to include content type and ( packed ) bytes'  
-              )
-            end
-          end
-        end
-        result_message[ :content ] = result_message_content
-        result_message
-      end
+    module ChatResponseMethods
 
       def chat_result_attributes( response )
-
         return nil unless response.success?
         response_json = JSON.parse( response.body, symbolize_names: true ) rescue nil
         return nil if response_json.nil? || response_json[ :choices ].nil?
-        
+
         result = {}
         result[ :choices ] = []
 
         ( response_json[ :choices ] || [] ).each do | json_choice |
-          json_message = json_choice[ :message ]
-          result[ :choices ].push(
-            { 
-              end_reason: translate_end_result( json_choice[ :finish_reason ] ), 
-              message: { 
-                role: json_message[ :role ],
-                contents: [ { type: 'text', text: json_message[ :content ] } ]
-              } 
-            }
-          )
+          if ( json_message = json_choice[ :message ] )
+            result_message = { role: json_message[ :role ] }
+            if json_message[ :content ] 
+              result_message[ :contents ] = [ { type: :text, text: json_message[ :content ] } ]
+            end
+            if json_message[ :tool_calls ] && !json_message[ :tool_calls ].empty?
+              result_message[ :contents ] ||= []
+              json_message[ :tool_calls ].each do | json_message_tool_call |
+                result_message_tool_call_parameters = 
+                  JSON.parse( json_message_tool_call[ :function ][ :arguments ], symbolize_names: true ) \
+                    rescue json_message_tool_call[ :function ][ :arguments ]
+                result_message[ :contents ] << {
+                  type: :tool_call, 
+                  tool_call_id: json_message_tool_call[ :id ],
+                  tool_name: json_message_tool_call[ :function ][ :name ],
+                  tool_parameters: result_message_tool_call_parameters
+                }
+              end 
+            end
+          end
+          result[ :choices ].push( { 
+            end_reason: translate_end_result( json_choice[ :finish_reason ] ), 
+            message: result_message 
+          } )
         end
 
         metrics_json = response_json[ :usage ]
@@ -145,11 +50,9 @@ module Intelligence
         end
 
         result
-      
       end
 
       def chat_result_error_attributes( response )
-        
         error_type, error_description = translate_error_response_status( response.status )
         result = {
           error_type: error_type.to_s,
@@ -166,11 +69,9 @@ module Intelligence
         end
 
         result
-
       end
 
       def stream_result_chunk_attributes( context, chunk )
-
         context ||= {}
         buffer = context[ :buffer ] || ''
         metrics = context[ :metrics ] || {
@@ -271,7 +172,6 @@ module Intelligence
       end
 
       def stream_result_attributes( context )
-
         choices = context[ :choices ]
         metrics = context[ :metrics ]
 
@@ -280,7 +180,6 @@ module Intelligence
         end
 
         { choices: choices, metrics: context[ :metrics ] }
-
       end
 
       alias_method :stream_result_error_attributes, :chat_result_error_attributes
@@ -291,7 +190,7 @@ module Intelligence
             :ended
           when 'length'
             :token_limit_exceeded
-          when 'function_call'
+          when 'tool_calls'
             :tool_called
           when 'content_filter'
             :filtered
@@ -334,28 +233,6 @@ module Intelligence
               An unknown error occurred." ]
           end
       end
-
-    private
-
-      def to_options( options, &block )
-        return {} unless options&.any?
-        @options_builder ||= DynamicSchema::Builder.new.define( &self.class.schema )
-        @options_builder.build( options, &block )
-      end
-
-
-      def system_message_to_s( system_message )
-
-        return nil if system_message.nil?
-
-        result = ''
-        system_message[ :contents ].each do | content |
-          result += content[ :text ] if content[ :type ] == :text 
-        end
-
-        result.empty? ? nil : result 
-
-      end 
     
     end
   end

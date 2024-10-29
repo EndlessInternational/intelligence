@@ -6,7 +6,7 @@
         "uri": "https://openrouter.ai/api/v1/chat/completions",
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"model\":\"meta-llama/llama-3.2-11b-vision-instruct\",\"max_tokens\":16,\"temperature\":0.0,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":[{\"type\":\"text\",\"text\":\"respond only with the word 'hello'\\n\"}]}]}"
+          "string": "{\"model\":\"meta-llama/llama-3.2-11b-vision-instruct\",\"max_tokens\":24,\"temperature\":0.0,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"respond only with the word 'hello'\\n\"}]}"
         },
         "headers": {
           "User-Agent": [
@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Fri, 25 Oct 2024 17:39:38 GMT"
+            "Tue, 29 Oct 2024 04:17:06 GMT"
           ],
           "content-type": [
             "application/json"
@@ -62,8 +62,11 @@
           "x-matched-path": [
             "/api/v1/chat/completions"
           ],
+          "x-vercel-cache": [
+            "MISS"
+          ],
           "x-vercel-id": [
-            "pdx1::5wqx2-1729877978324-855701480f41"
+            "pdx1::rldxx-1730175425847-0c196f229187"
           ],
           "cf-cache-status": [
             "DYNAMIC"
@@ -83,10 +86,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "\n         \n\n         \n\n         \n\n         \n\n         \n{\"id\":\"gen-1729877978-hBt5yemfbfHCKGylk5Jx\",\"provider\":\"Fireworks\",\"model\":\"meta-llama/llama-3.2-11b-vision-instruct\",\"object\":\"chat.completion\",\"created\":1729877978,\"choices\":[{\"logprobs\":null,\"finish_reason\":\"stop\",\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"hello\",\"refusal\":\"\"}}],\"usage\":{\"prompt_tokens\":61,\"completion_tokens\":2,\"total_tokens\":63}}"
+          "string": "\n         \n\n         \n\n         \n\n         \n\n         \n{\"id\":\"gen-1730175426-P6DNs2wBhFIBQVwYPr3e\",\"provider\":\"Together\",\"model\":\"meta-llama/llama-3.2-11b-vision-instruct\",\"object\":\"chat.completion\",\"created\":1730175426,\"choices\":[{\"logprobs\":null,\"finish_reason\":\"stop\",\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"hello\",\"refusal\":\"\"}}],\"usage\":{\"prompt_tokens\":61,\"completion_tokens\":2,\"total_tokens\":63}}"
         }
       },
-      "recorded_at": "Fri, 25 Oct 2024 17:39:38 GMT"
+      "recorded_at": "Tue, 29 Oct 2024 04:17:06 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

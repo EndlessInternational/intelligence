@@ -6,7 +6,7 @@
         "uri": "https://openrouter.ai/api/v1/chat/completions",
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"model\":\"meta-llama/llama-3.2-11b-vision-instruct\",\"max_tokens\":24,\"temperature\":0.0,\"stop\":[\"five\"],\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":[{\"type\":\"text\",\"text\":\"count to five in words, one word per line\\n\"}]},{\"role\":\"assistant\",\"content\":[{\"type\":\"text\",\"text\":\"one\\ntwo\\nthree\\nfour\\nfive\\n\"}]},{\"role\":\"user\",\"content\":[{\"type\":\"text\",\"text\":\"count to ten in words, one word per line\\n\"}]}]}"
+          "string": "{\"model\":\"meta-llama/llama-3.2-11b-vision-instruct\",\"max_tokens\":24,\"temperature\":0.0,\"stop\":[\"five\"],\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"count to five in words, one word per line\\n\"},{\"role\":\"assistant\",\"content\":\"one\\ntwo\\nthree\\nfour\\nfive\\n\"},{\"role\":\"user\",\"content\":\"count to ten in words, one word per line\\n\"}]}"
         },
         "headers": {
           "User-Agent": [
@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Fri, 25 Oct 2024 17:39:42 GMT"
+            "Tue, 29 Oct 2024 04:17:09 GMT"
           ],
           "content-type": [
             "application/json"
@@ -62,8 +62,11 @@
           "x-matched-path": [
             "/api/v1/chat/completions"
           ],
+          "x-vercel-cache": [
+            "MISS"
+          ],
           "x-vercel-id": [
-            "pdx1::vwcg9-1729877982172-119dffe3ab71"
+            "pdx1::szb77-1730175429148-eea5d690f703"
           ],
           "cf-cache-status": [
             "DYNAMIC"
@@ -83,10 +86,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n{\"id\":\"gen-1729877982-GoAnz7B2jvjp4Gmgvpvo\",\"provider\":\"Together\",\"model\":\"meta-llama/llama-3.2-11b-vision-instruct\",\"object\":\"chat.completion\",\"created\":1729877982,\"choices\":[{\"logprobs\":null,\"finish_reason\":\"stop\",\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"one\\ntwo\\nthree\\nfour\\n\",\"refusal\":\"\"}}],\"usage\":{\"prompt_tokens\":95,\"completion_tokens\":9,\"total_tokens\":104}}"
+          "string": "\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n\n         \n{\"id\":\"gen-1730175429-HMfe6sYFTiohdjf4I9HJ\",\"provider\":\"DeepInfra\",\"model\":\"meta-llama/llama-3.2-11b-vision-instruct\",\"object\":\"chat.completion\",\"created\":1730175429,\"choices\":[{\"logprobs\":null,\"finish_reason\":\"stop\",\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"one\\ntwo\\nthree\\nfour\\n\",\"refusal\":\"\"}}],\"usage\":{\"prompt_tokens\":89,\"completion_tokens\":8,\"total_tokens\":97}}"
         }
       },
-      "recorded_at": "Fri, 25 Oct 2024 17:39:42 GMT"
+      "recorded_at": "Tue, 29 Oct 2024 04:17:09 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

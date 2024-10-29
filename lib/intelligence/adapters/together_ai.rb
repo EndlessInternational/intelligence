@@ -1,9 +1,9 @@
-require_relative 'legacy/adapter'
+require_relative 'generic/adapter'
 
 module Intelligence
   module TogetherAi
 
-    class Adapter < Legacy::Adapter
+    class Adapter < Generic::Adapter
 
       chat_request_uri "https://api.together.xyz/v1/chat/completions"
       
@@ -35,7 +35,7 @@ module Intelligence
           #   :end_sequence_encountered
          when 'length'
             :token_limit_exceeded
-          when 'function_call'
+          when 'tool_calls'
             :tool_called
           else
             nil

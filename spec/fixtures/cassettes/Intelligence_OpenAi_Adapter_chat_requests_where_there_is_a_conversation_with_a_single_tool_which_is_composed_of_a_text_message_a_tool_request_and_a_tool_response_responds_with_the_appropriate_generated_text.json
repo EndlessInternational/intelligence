@@ -6,7 +6,7 @@
         "uri": "https://api.openai.com/v1/chat/completions",
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"model\":\"gpt-4o\",\"temperature\":0.0,\"max_completion_tokens\":32,\"messages\":[{\"role\":\"system\",\"content\":\"You are a helpfull assistant who answers questions succinctly.\"},{\"role\":\"user\",\"content\":[{\"type\":\"text\",\"text\":\"Where am I located?\"}]},{\"role\":\"assistant\",\"tool_calls\":[{\"id\":\"call_RX1D4jUDUrfi4AePr4ZP7Sqv\",\"type\":\"function\",\"function\":{\"name\":\"get_location\",\"arguments\":\"{}\"}}],\"content\":[]},{\"role\":\"tool\",\"tool_call_id\":\"call_RX1D4jUDUrfi4AePr4ZP7Sqv\",\"content\":\"Seattle, WA, USA\"}],\"tools\":[{\"type\":\"function\",\"function\":{\"name\":\"get_location\",\"description\":\"The get_location tool will return the users city, state or province and country.\"}}]}"
+          "string": "{\"model\":\"gpt-4o\",\"temperature\":0.0,\"max_completion_tokens\":32,\"messages\":[{\"role\":\"system\",\"content\":\"You are a helpfull assistant who answers questions succinctly.\"},{\"role\":\"user\",\"content\":[{\"type\":\"text\",\"text\":\"Where am I located?\"}]},{\"role\":\"assistant\",\"tool_calls\":[{\"id\":\"MpfiuoRaM\",\"type\":\"function\",\"function\":{\"name\":\"get_location\",\"arguments\":\"{}\"}}],\"content\":[]},{\"role\":\"tool\",\"tool_call_id\":\"MpfiuoRaM\",\"content\":\"Seattle, WA, USA\"}],\"tools\":[{\"type\":\"function\",\"function\":{\"name\":\"get_location\",\"description\":\"The get_location tool will return the users city, state or province and country.\"}}]}"
         },
         "headers": {
           "User-Agent": [
@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Sun, 27 Oct 2024 22:28:34 GMT"
+            "Tue, 29 Oct 2024 04:04:14 GMT"
           ],
           "content-type": [
             "application/json"
@@ -45,13 +45,10 @@
             "<OPENAI-ORGANIZATION>"
           ],
           "openai-processing-ms": [
-            "1731"
+            "468"
           ],
           "openai-version": [
             "2020-10-01"
-          ],
-          "strict-transport-security": [
-            "max-age=31536000; includeSubDomains; preload"
           ],
           "x-ratelimit-limit-requests": [
             "10000"
@@ -73,6 +70,9 @@
           ],
           "x-request-id": [
             "<X-REQUEST-ID>"
+          ],
+          "strict-transport-security": [
+            "max-age=31536000; includeSubDomains; preload"
           ],
           "cf-cache-status": [
             "DYNAMIC"
@@ -98,10 +98,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\n  \"id\": \"chatcmpl-AN62Kq05FRghU4xcW1OY3HHbnESf9\",\n  \"object\": \"chat.completion\",\n  \"created\": 1730068112,\n  \"model\": \"gpt-4o-2024-08-06\",\n  \"choices\": [\n    {\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": \"You are located in Seattle, WA, USA.\",\n        \"refusal\": null\n      },\n      \"logprobs\": null,\n      \"finish_reason\": \"stop\"\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 87,\n    \"completion_tokens\": 11,\n    \"total_tokens\": 98,\n    \"prompt_tokens_details\": {\n      \"cached_tokens\": 0\n    },\n    \"completion_tokens_details\": {\n      \"reasoning_tokens\": 0\n    }\n  },\n  \"system_fingerprint\": \"fp_90354628f2\"\n}\n"
+          "string": "{\n  \"id\": \"chatcmpl-ANXkkD2Qg85rg6Lpl4NwRPfHrOHuq\",\n  \"object\": \"chat.completion\",\n  \"created\": 1730174654,\n  \"model\": \"gpt-4o-2024-08-06\",\n  \"choices\": [\n    {\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": \"You are located in Seattle, WA, USA.\",\n        \"refusal\": null\n      },\n      \"logprobs\": null,\n      \"finish_reason\": \"stop\"\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 87,\n    \"completion_tokens\": 11,\n    \"total_tokens\": 98,\n    \"prompt_tokens_details\": {\n      \"cached_tokens\": 0\n    },\n    \"completion_tokens_details\": {\n      \"reasoning_tokens\": 0\n    }\n  },\n  \"system_fingerprint\": \"fp_90354628f2\"\n}\n"
         }
       },
-      "recorded_at": "Sun, 27 Oct 2024 22:28:34 GMT"
+      "recorded_at": "Tue, 29 Oct 2024 04:04:14 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

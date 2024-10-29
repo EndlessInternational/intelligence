@@ -1,9 +1,9 @@
-require_relative 'legacy/adapter'
+require_relative 'generic/adapter'
 
 module Intelligence
   module Cerebras
 
-    class Adapter < Legacy::Adapter
+    class Adapter < Generic::Adapter
 
       chat_request_uri "https://api.cerebras.ai/v1/chat/completions"
       

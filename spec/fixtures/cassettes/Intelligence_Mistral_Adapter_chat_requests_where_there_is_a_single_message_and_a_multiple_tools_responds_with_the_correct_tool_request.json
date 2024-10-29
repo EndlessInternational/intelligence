@@ -1,0 +1,105 @@
+{
+  "http_interactions": [
+    {
+      "request": {
+        "method": "post",
+        "uri": "https://api.mistral.ai/v1/chat/completions",
+        "body": {
+          "encoding": "UTF-8",
+          "string": "{\"model\":\"mistral-large-latest\",\"max_tokens\":48,\"temperature\":0.0,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"Where am I located?\"}],\"tools\":[{\"type\":\"function\",\"function\":{\"name\":\"get_location\",\"description\":\"The get_location tool will return the users city, state or province and country.\",\"parameters\":{}}},{\"type\":\"function\",\"function\":{\"name\":\"get_weather\",\"description\":\"The get_weather tool will return the current weather in a given locality.\",\"parameters\":{\"type\":\"object\",\"properties\":{\"city\":{\"type\":\"string\",\"description\":\"The city or town for which the current weather should be returned.\"},\"state\":{\"type\":\"string\",\"description\":\"The state or province for which the current weather should be returned. If this is not provided the largest or most prominent city with the given name, in the given country or in the worldi, will be assumed.\"},\"country\":{\"type\":\"string\",\"description\":\"The country for which the given weather should be returned. If this is not provided the largest or most prominent city with the given name will be returned.\"}},\"required\":[\"city\"]}}}]}"
+        },
+        "headers": {
+          "User-Agent": [
+            "Faraday v2.12.0"
+          ],
+          "Content-Type": [
+            "application/json"
+          ],
+          "Authorization": [
+            "Bearer <TOKEN>"
+          ]
+        }
+      },
+      "response": {
+        "status": {
+          "code": 200,
+          "message": "OK"
+        },
+        "headers": {
+          "date": [
+            "Tue, 29 Oct 2024 04:10:37 GMT"
+          ],
+          "content-type": [
+            "application/json"
+          ],
+          "transfer-encoding": [
+            "chunked"
+          ],
+          "connection": [
+            "keep-alive"
+          ],
+          "ratelimitbysize-remaining": [
+            "498940"
+          ],
+          "x-ratelimitbysize-limit-day": [
+            "150000000"
+          ],
+          "ratelimitbysize-query-cost": [
+            "93"
+          ],
+          "ratelimitbysize-limit": [
+            "500000"
+          ],
+          "x-ratelimitbysize-limit-minute": [
+            "500000"
+          ],
+          "x-ratelimitbysize-remaining-minute": [
+            "498940"
+          ],
+          "ratelimitbysize-reset": [
+            "23"
+          ],
+          "x-ratelimitbysize-remaining-day": [
+            "149983281"
+          ],
+          "x-envoy-upstream-service-time": [
+            "683"
+          ],
+          "access-control-allow-origin": [
+            "*"
+          ],
+          "x-kong-upstream-latency": [
+            "684"
+          ],
+          "x-kong-proxy-latency": [
+            "1"
+          ],
+          "x-kong-request-id": [
+            "f6360e20f595067d1621804144b0837f"
+          ],
+          "cf-cache-status": [
+            "DYNAMIC"
+          ],
+          "server": [
+            "cloudflare"
+          ],
+          "cf-ray": [
+            "<CF-RAY>"
+          ],
+          "content-encoding": [
+            "gzip"
+          ],
+          "alt-svc": [
+            "h3=\":443\"; ma=86400"
+          ]
+        },
+        "body": {
+          "encoding": "ASCII-8BIT",
+          "string": "{\"id\":\"a2995de216c8457cabbb82b0e5b2d058\",\"object\":\"chat.completion\",\"created\":1730175037,\"model\":\"mistral-large-latest\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"\",\"tool_calls\":[{\"id\":\"EL5A9iIO4\",\"type\":\"function\",\"function\":{\"name\":\"get_location\",\"arguments\":\"{}\"}}]},\"finish_reason\":\"tool_calls\"}],\"usage\":{\"prompt_tokens\":285,\"total_tokens\":301,\"completion_tokens\":16}}"
+        }
+      },
+      "recorded_at": "Tue, 29 Oct 2024 04:10:37 GMT"
+    }
+  ],
+  "recorded_with": "VCR 6.3.1"
+}

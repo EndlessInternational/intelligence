@@ -94,7 +94,7 @@ RSpec.shared_examples 'chat requests with tools' do | options = {} |
     it 'responds with the correct tool request' do
 
       response = nil
-      conversation = create_conversation( "What is the current weather?\n" )
+      conversation = create_conversation( "Where am I located?" )
       conversation.append_tool( get_location_tool )
       conversation.append_tool( get_weather_tool )
       response = create_and_make_chat_request( send( options[ :adapter ] || :adapter ), conversation ) 
@@ -111,7 +111,7 @@ RSpec.shared_examples 'chat requests with tools' do | options = {} |
       expect( choice.message.contents ).not_to be_nil
       expect( choice.message.contents.length ).to be > 0
       expect( choice.message.contents.last ).to be_a( Intelligence::MessageContent::ToolCall )
-     
+
       tool_call = choice.message.contents.last
       expect( tool_call.tool_name ).to eq( 'get_location' )
 
@@ -164,13 +164,13 @@ RSpec.shared_examples 'chat requests with tools' do | options = {} |
           end 
           message role: :assistant do
             content type: :tool_call do
-              tool_call_id "call_RX1D4jUDUrfi4AePr4ZP7Sqv"
+              tool_call_id "MpfiuoRaM"
               tool_name :get_location
             end
           end
           message role: :user do 
             content type: :tool_result do 
-              tool_call_id "call_RX1D4jUDUrfi4AePr4ZP7Sqv"
+              tool_call_id "MpfiuoRaM"
               tool_name :get_location
               tool_result "Seattle, WA, USA"
             end 
@@ -214,13 +214,13 @@ RSpec.shared_examples 'chat requests with tools' do | options = {} |
           end 
           message role: :assistant do
             content type: :tool_call do
-              tool_call_id "call_RX1D4jUDUrfi4AePr4ZP7Sqv"
+              tool_call_id "MpfiuoRaM"
               tool_name "get_location"
             end
           end
           message role: :user do 
             content type: :tool_result do 
-              tool_call_id "call_RX1D4jUDUrfi4AePr4ZP7Sqv"
+              tool_call_id "MpfiuoRaM"
               tool_name "get_location"
               tool_result "Seattle, WA, USA"
             end 

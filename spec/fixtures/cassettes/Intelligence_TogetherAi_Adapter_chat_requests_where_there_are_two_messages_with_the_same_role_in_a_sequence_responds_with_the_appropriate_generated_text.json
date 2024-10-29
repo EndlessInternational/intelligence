@@ -6,7 +6,7 @@
         "uri": "https://api.together.xyz/v1/chat/completions",
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"model\":\"meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo\",\"max_tokens\":16.0,\"temperature\":0.0,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"this is a test, respond with 'test'\\n\"},{\"role\":\"assistant\",\"content\":\"test\\n\"},{\"role\":\"user\",\"content\":\"hello!\\n\"},{\"role\":\"user\",\"content\":\"what was the previous user message?\\n\"}]}"
+          "string": "{\"model\":\"meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo\",\"max_tokens\":128.0,\"temperature\":0.0,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"this is a test, respond with 'test'\\n\"},{\"role\":\"assistant\",\"content\":\"test\\n\"},{\"role\":\"user\",\"content\":\"hello!\\n\"},{\"role\":\"user\",\"content\":\"what was the previous user message?\\n\"}]}"
         },
         "headers": {
           "User-Agent": [
@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Fri, 25 Oct 2024 17:40:09 GMT"
+            "Tue, 29 Oct 2024 04:25:43 GMT"
           ],
           "content-type": [
             "application/json; charset=utf-8"
@@ -42,7 +42,7 @@
             "*"
           ],
           "x-api-received": [
-            "2024-10-25T17:40:07.817Z"
+            "2024-10-29T04:25:43.368Z"
           ],
           "x-ratelimit": [
             "false"
@@ -57,7 +57,7 @@
             "2"
           ],
           "x-ratelimit-remaining-tokens": [
-            "3000"
+            "2881"
           ],
           "x-ratelimit-limit-tokens": [
             "3000"
@@ -66,13 +66,13 @@
             "v2"
           ],
           "x-api-call-start": [
-            "2024-10-25T17:40:07.827Z"
+            "2024-10-29T04:25:43.375Z"
           ],
           "x-api-call-end": [
-            "2024-10-25T17:40:09.200Z"
+            "2024-10-29T04:25:43.970Z"
           ],
           "etag": [
-            "W/\"1ff-nkv2pMxsGK5QZPnPo/rowyUw1OI\""
+            "W/\"1fe-AxpcbB4d06ATtk5G47jcEC0fYLY\""
           ],
           "cf-cache-status": [
             "DYNAMIC"
@@ -95,10 +95,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "{\n  \"id\": \"8d83fd6cc8c00899-SEA\",\n  \"object\": \"chat.completion\",\n  \"created\": 1729878007,\n  \"model\": \"meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo\",\n  \"prompt\": [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"eos\",\n      \"seed\": 14589121422089562000,\n      \"logprobs\": null,\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": \"hello!\",\n        \"tool_calls\": []\n      }\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 106,\n    \"completion_tokens\": 3,\n    \"total_tokens\": 109\n  }\n}"
+          "string": "{\n  \"id\": \"8da0673decdb682e-SEA\",\n  \"object\": \"chat.completion\",\n  \"created\": 1730175943,\n  \"model\": \"meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo\",\n  \"prompt\": [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"eos\",\n      \"seed\": 9182870419142541000,\n      \"logprobs\": null,\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": \"hello!\",\n        \"tool_calls\": []\n      }\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 106,\n    \"completion_tokens\": 3,\n    \"total_tokens\": 109\n  }\n}"
         }
       },
-      "recorded_at": "Fri, 25 Oct 2024 17:40:09 GMT"
+      "recorded_at": "Tue, 29 Oct 2024 04:25:43 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

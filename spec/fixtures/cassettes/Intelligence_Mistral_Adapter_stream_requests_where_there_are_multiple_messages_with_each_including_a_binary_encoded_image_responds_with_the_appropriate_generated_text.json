@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Fri, 25 Oct 2024 17:38:35 GMT"
+            "Tue, 29 Oct 2024 04:11:41 GMT"
           ],
           "content-type": [
             "text/event-stream; charset=utf-8"
@@ -42,19 +42,7 @@
             "150000000"
           ],
           "x-ratelimitbysize-remaining-day": [
-            "149998254"
-          ],
-          "x-ratelimitbysize-limit-minute": [
-            "500000"
-          ],
-          "x-ratelimitbysize-remaining-minute": [
-            "498845"
-          ],
-          "ratelimitbysize-reset": [
-            "27"
-          ],
-          "ratelimitbysize-remaining": [
-            "498845"
+            "149982085"
           ],
           "ratelimitbysize-query-cost": [
             "75"
@@ -62,20 +50,32 @@
           "ratelimitbysize-limit": [
             "500000"
           ],
+          "ratelimitbysize-remaining": [
+            "498865"
+          ],
+          "ratelimitbysize-reset": [
+            "21"
+          ],
+          "x-ratelimitbysize-limit-minute": [
+            "500000"
+          ],
+          "x-ratelimitbysize-remaining-minute": [
+            "498865"
+          ],
           "x-envoy-upstream-service-time": [
-            "1227"
+            "622"
           ],
           "access-control-allow-origin": [
             "*"
           ],
           "x-kong-upstream-latency": [
-            "1228"
+            "623"
           ],
           "x-kong-proxy-latency": [
-            "207"
+            "367"
           ],
           "x-kong-request-id": [
-            "6588b816b7fdbd7de0b290785b8d9022"
+            "63aa62554dd665482f99d015f7b9110f"
           ],
           "cf-cache-status": [
             "DYNAMIC"
@@ -92,10 +92,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "data: {\"id\":\"05805b3ac2964658997595188cfaeeae\",\"object\":\"chat.completion.chunk\",\"created\":1729877914,\"model\":\"pixtral-12b-2409\",\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"\"},\"finish_reason\":null}]}\n\ndata: {\"id\":\"05805b3ac2964658997595188cfaeeae\",\"object\":\"chat.completion.chunk\",\"created\":1729877914,\"model\":\"pixtral-12b-2409\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"three\"},\"finish_reason\":null}]}\n\ndata: {\"id\":\"05805b3ac2964658997595188cfaeeae\",\"object\":\"chat.completion.chunk\",\"created\":1729877914,\"model\":\"pixtral-12b-2409\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\" ball\"},\"finish_reason\":null}]}\n\ndata: {\"id\":\"05805b3ac2964658997595188cfaeeae\",\"object\":\"chat.completion.chunk\",\"created\":1729877914,\"model\":\"pixtral-12b-2409\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"oons\"},\"finish_reason\":null}]}\n\ndata: {\"id\":\"05805b3ac2964658997595188cfaeeae\",\"object\":\"chat.completion.chunk\",\"created\":1729877914,\"model\":\"pixtral-12b-2409\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":1402,\"total_tokens\":1405,\"completion_tokens\":3}}\n\ndata: [DONE]\n\n"
+          "string": "data: {\"id\":\"164ba75f22454d3cac1fb14311ffc829\",\"object\":\"chat.completion.chunk\",\"created\":1730175100,\"model\":\"pixtral-12b-2409\",\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"\"},\"finish_reason\":null}]}\n\ndata: {\"id\":\"164ba75f22454d3cac1fb14311ffc829\",\"object\":\"chat.completion.chunk\",\"created\":1730175100,\"model\":\"pixtral-12b-2409\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"three\"},\"finish_reason\":null}]}\n\ndata: {\"id\":\"164ba75f22454d3cac1fb14311ffc829\",\"object\":\"chat.completion.chunk\",\"created\":1730175100,\"model\":\"pixtral-12b-2409\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\" ball\"},\"finish_reason\":null}]}\n\ndata: {\"id\":\"164ba75f22454d3cac1fb14311ffc829\",\"object\":\"chat.completion.chunk\",\"created\":1730175100,\"model\":\"pixtral-12b-2409\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"oons\"},\"finish_reason\":null}]}\n\ndata: {\"id\":\"164ba75f22454d3cac1fb14311ffc829\",\"object\":\"chat.completion.chunk\",\"created\":1730175100,\"model\":\"pixtral-12b-2409\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":1402,\"total_tokens\":1405,\"completion_tokens\":3}}\n\ndata: [DONE]\n\n"
         }
       },
-      "recorded_at": "Fri, 25 Oct 2024 17:38:35 GMT"
+      "recorded_at": "Tue, 29 Oct 2024 04:11:41 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

@@ -6,7 +6,7 @@
         "uri": "https://api.mistral.ai/v1/chat/completions",
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"model\":\"pixtral-12b-2409\",\"max_tokens\":32,\"temperature\":0.0,\"stream\":true,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":[{\"type\":\"text\",\"text\":\"identify this image; all lower case\\n\"},{\"type\":\"image_url\",\"image_url\":{\"url\":\"https://github.com/EndlessInternational/intelligence/blob/main/spec/fixtures/files/single-red-balloon.png?raw=true\"}}]},{\"role\":\"assistant\",\"content\":\"balloon\\n\"},{\"role\":\"user\",\"content\":[{\"type\":\"text\",\"text\":\"what color?\\n\"}]}]}"
+          "string": "{\"model\":\"pixtral-12b-2409\",\"max_tokens\":32,\"temperature\":0.0,\"stream\":true,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":[{\"type\":\"text\",\"text\":\"identify this image; all lower case\\n\"},{\"type\":\"image_url\",\"image_url\":{\"url\":\"https://github.com/EndlessInternational/intelligence/blob/main/spec/fixtures/files/single-red-balloon.png?raw=true\"}}]},{\"role\":\"assistant\",\"content\":\"balloon\\n\"},{\"role\":\"user\",\"content\":\"what color?\\n\"}]}"
         },
         "headers": {
           "User-Agent": [
@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Fri, 25 Oct 2024 17:38:43 GMT"
+            "Tue, 29 Oct 2024 04:11:49 GMT"
           ],
           "content-type": [
             "text/event-stream; charset=utf-8"
@@ -38,44 +38,44 @@
           "connection": [
             "keep-alive"
           ],
-          "x-ratelimitbysize-limit-day": [
-            "150000000"
-          ],
-          "x-ratelimitbysize-remaining-day": [
-            "149998110"
-          ],
           "x-ratelimitbysize-limit-minute": [
             "500000"
           ],
           "x-ratelimitbysize-remaining-minute": [
-            "498825"
+            "498895"
           ],
           "ratelimitbysize-reset": [
-            "19"
+            "12"
           ],
           "ratelimitbysize-remaining": [
-            "498825"
+            "498895"
+          ],
+          "x-ratelimitbysize-limit-day": [
+            "150000000"
+          ],
+          "x-ratelimitbysize-remaining-day": [
+            "149981939"
           ],
           "ratelimitbysize-query-cost": [
-            "73"
+            "75"
           ],
           "ratelimitbysize-limit": [
             "500000"
           ],
           "x-envoy-upstream-service-time": [
-            "2644"
+            "758"
           ],
           "access-control-allow-origin": [
             "*"
           ],
           "x-kong-upstream-latency": [
-            "2645"
+            "758"
           ],
           "x-kong-proxy-latency": [
-            "2"
+            "1"
           ],
           "x-kong-request-id": [
-            "c89dcc7dd1d5bc3962dfbf53605fe244"
+            "fcbe507ffdbaaf1dfc538361986c3b58"
           ],
           "cf-cache-status": [
             "DYNAMIC"
@@ -92,10 +92,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "data: {\"id\":\"a9c3596b54e64bcbaab999ef8be561f7\",\"object\":\"chat.completion.chunk\",\"created\":1729877923,\"model\":\"pixtral-12b-2409\",\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"\"},\"finish_reason\":null}]}\n\ndata: {\"id\":\"a9c3596b54e64bcbaab999ef8be561f7\",\"object\":\"chat.completion.chunk\",\"created\":1729877923,\"model\":\"pixtral-12b-2409\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"red\"},\"finish_reason\":null}]}\n\ndata: {\"id\":\"a9c3596b54e64bcbaab999ef8be561f7\",\"object\":\"chat.completion.chunk\",\"created\":1729877923,\"model\":\"pixtral-12b-2409\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":335,\"total_tokens\":336,\"completion_tokens\":1}}\n\ndata: [DONE]\n\n"
+          "string": "data: {\"id\":\"a13badc60be14811accf55bc6f11047a\",\"object\":\"chat.completion.chunk\",\"created\":1730175109,\"model\":\"pixtral-12b-2409\",\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"\"},\"finish_reason\":null}]}\n\ndata: {\"id\":\"a13badc60be14811accf55bc6f11047a\",\"object\":\"chat.completion.chunk\",\"created\":1730175109,\"model\":\"pixtral-12b-2409\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"red\"},\"finish_reason\":null}]}\n\ndata: {\"id\":\"a13badc60be14811accf55bc6f11047a\",\"object\":\"chat.completion.chunk\",\"created\":1730175109,\"model\":\"pixtral-12b-2409\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":335,\"total_tokens\":336,\"completion_tokens\":1}}\n\ndata: [DONE]\n\n"
         }
       },
-      "recorded_at": "Fri, 25 Oct 2024 17:38:44 GMT"
+      "recorded_at": "Tue, 29 Oct 2024 04:11:49 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

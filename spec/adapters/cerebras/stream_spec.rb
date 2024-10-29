@@ -6,8 +6,10 @@ RSpec.describe "#{Intelligence::Adapter[ :cerebras ]} stream requests", :cerebra
 
   # this is needed for cerebras test to avoid the rate limit
   after( :each ) do | example |
-    sleep 5 if example.metadata[ :record_cassettes ]
+    cassette = VCR.current_cassette
+    sleep 5 if cassette && cassette.new_recorded_interactions.any? 
   end
+
 
   before do 
     raise "An CEREBRAS_API_KEY must be defined in the environment." unless ENV[ 'CEREBRAS_API_KEY' ]

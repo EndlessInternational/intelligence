@@ -24,7 +24,7 @@ RSpec.describe "#{Intelligence::Adapter[ :open_router ]} chat requests", :open_r
       key                     ENV[ 'OPENROUTER_API_KEY' ]
       chat_options do
         model                 'meta-llama/llama-3.2-11b-vision-instruct'
-        max_tokens            16
+        max_tokens            24 
         temperature           0
       end
     end
@@ -47,7 +47,7 @@ RSpec.describe "#{Intelligence::Adapter[ :open_router ]} chat requests", :open_r
       key                     ENV[ 'OPENROUTER_API_KEY' ]
       chat_options do
         model                 'qwen/qwen-2-vl-7b-instruct'
-        max_tokens            16
+        max_tokens            24
         temperature           0
         provider do 
           order               [ 'Hyperbolic' ]

@@ -13,7 +13,7 @@ RSpec.describe "#{Intelligence::Adapter[ :open_router ]} stream requests", :open
       key                     ENV[ 'OPENROUTER_API_KEY' ]
       chat_options do
         model                 'meta-llama/llama-3.2-11b-vision-instruct'
-        max_tokens            16
+        max_tokens            32 
         temperature           0
 
         stream                true

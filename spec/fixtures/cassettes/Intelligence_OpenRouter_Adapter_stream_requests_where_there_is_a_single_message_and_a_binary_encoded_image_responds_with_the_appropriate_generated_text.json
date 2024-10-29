@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Fri, 25 Oct 2024 17:39:49 GMT"
+            "Tue, 29 Oct 2024 04:17:17 GMT"
           ],
           "content-type": [
             "text/event-stream"
@@ -62,8 +62,11 @@
           "x-matched-path": [
             "/api/v1/chat/completions"
           ],
+          "x-vercel-cache": [
+            "MISS"
+          ],
           "x-vercel-id": [
-            "pdx1::nsnsj-1729877989246-fc3f479905ce"
+            "pdx1::4fqjv-1730175437426-1412cf76cf42"
           ],
           "cf-cache-status": [
             "DYNAMIC"
@@ -77,10 +80,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "data: {\"id\":\"gen-1729877989-nCUo5o2hDb9AGXGac8Iy\",\"provider\":\"Hyperbolic\",\"model\":\"qwen/qwen-2-vl-7b-instruct\",\"object\":\"chat.completion.chunk\",\"created\":1729877989,\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"\"},\"finish_reason\":null,\"logprobs\":null}]}\n\ndata: {\"id\":\"gen-1729877989-nCUo5o2hDb9AGXGac8Iy\",\"provider\":\"Hyperbolic\",\"model\":\"qwen/qwen-2-vl-7b-instruct\",\"object\":\"chat.completion.chunk\",\"created\":1729877989,\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"\"},\"finish_reason\":null,\"logprobs\":null}]}\n\ndata: {\"id\":\"gen-1729877989-nCUo5o2hDb9AGXGac8Iy\",\"provider\":\"Hyperbolic\",\"model\":\"qwen/qwen-2-vl-7b-instruct\",\"object\":\"chat.completion.chunk\",\"created\":1729877989,\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"\"},\"finish_reason\":null,\"logprobs\":null}]}\n\ndata: {\"id\":\"gen-1729877989-nCUo5o2hDb9AGXGac8Iy\",\"provider\":\"Hyperbolic\",\"model\":\"qwen/qwen-2-vl-7b-instruct\",\"object\":\"chat.completion.chunk\",\"created\":1729877989,\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"red balloon\"},\"finish_reason\":\"stop\",\"logprobs\":null}]}\n\ndata: {\"id\":\"gen-1729877989-nCUo5o2hDb9AGXGac8Iy\",\"provider\":\"Hyperbolic\",\"model\":\"qwen/qwen-2-vl-7b-instruct\",\"object\":\"chat.completion.chunk\",\"created\":1729877989,\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"\"},\"finish_reason\":null,\"logprobs\":null}],\"usage\":{\"prompt_tokens\":62,\"completion_tokens\":4,\"total_tokens\":66}}\n\ndata: [DONE]\n\n"
+          "string": "data: {\"id\":\"gen-1730175437-0s7wxfoLFCWOsp9rBfqD\",\"provider\":\"Hyperbolic\",\"model\":\"qwen/qwen-2-vl-7b-instruct\",\"object\":\"chat.completion.chunk\",\"created\":1730175437,\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"\"},\"finish_reason\":null,\"logprobs\":null}]}\n\ndata: {\"id\":\"gen-1730175437-0s7wxfoLFCWOsp9rBfqD\",\"provider\":\"Hyperbolic\",\"model\":\"qwen/qwen-2-vl-7b-instruct\",\"object\":\"chat.completion.chunk\",\"created\":1730175437,\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"\"},\"finish_reason\":null,\"logprobs\":null}]}\n\ndata: {\"id\":\"gen-1730175437-0s7wxfoLFCWOsp9rBfqD\",\"provider\":\"Hyperbolic\",\"model\":\"qwen/qwen-2-vl-7b-instruct\",\"object\":\"chat.completion.chunk\",\"created\":1730175437,\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"\"},\"finish_reason\":null,\"logprobs\":null}]}\n\ndata: {\"id\":\"gen-1730175437-0s7wxfoLFCWOsp9rBfqD\",\"provider\":\"Hyperbolic\",\"model\":\"qwen/qwen-2-vl-7b-instruct\",\"object\":\"chat.completion.chunk\",\"created\":1730175437,\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"red balloon\"},\"finish_reason\":\"stop\",\"logprobs\":null}]}\n\ndata: {\"id\":\"gen-1730175437-0s7wxfoLFCWOsp9rBfqD\",\"provider\":\"Hyperbolic\",\"model\":\"qwen/qwen-2-vl-7b-instruct\",\"object\":\"chat.completion.chunk\",\"created\":1730175437,\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"\"},\"finish_reason\":null,\"logprobs\":null}],\"usage\":{\"prompt_tokens\":62,\"completion_tokens\":4,\"total_tokens\":66}}\n\ndata: [DONE]\n\n"
         }
       },
-      "recorded_at": "Fri, 25 Oct 2024 17:39:49 GMT"
+      "recorded_at": "Tue, 29 Oct 2024 04:17:17 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

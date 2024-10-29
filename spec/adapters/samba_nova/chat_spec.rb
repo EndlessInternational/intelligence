@@ -24,7 +24,7 @@ RSpec.describe "#{Intelligence::Adapter[ :samba_nova ]} chat requests", :samba_n
       key   ENV[ 'SAMBANOVA_API_KEY' ]
       chat_options do
         model                 'Meta-Llama-3.1-70B-Instruct'
-        max_tokens            16
+        max_tokens            24 
         temperature           0
       end
     end

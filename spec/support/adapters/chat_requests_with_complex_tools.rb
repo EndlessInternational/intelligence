@@ -28,7 +28,7 @@ RSpec.shared_examples 'chat requests with complex tools' do | options = {} |
   }
 
   context 'where there is a single message and a single tool' do
-    context 'where the tool parameters include are an object' do 
+    context 'where the tool parameters include an object' do 
       it 'responds with a tool request' do
 
         response = nil

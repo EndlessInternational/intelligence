@@ -44,7 +44,6 @@ RSpec.shared_examples 'stream requests with binary encoded images' do | options 
   context 'where there are multiple messages with the first including a binary encoded image' do
     it 'responds with the appropriate generated text' do
 
-
       conversation = create_conversation( "identify this image; all lower case\n" )
       conversation.messages.last.append_content( binary_content_of_red_balloon )
       conversation.messages << build_text_message( :assistant, "balloon\n" )

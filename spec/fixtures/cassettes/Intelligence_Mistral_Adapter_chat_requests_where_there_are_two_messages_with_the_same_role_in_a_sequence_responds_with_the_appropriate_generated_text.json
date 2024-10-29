@@ -6,7 +6,7 @@
         "uri": "https://api.mistral.ai/v1/chat/completions",
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"model\":\"mistral-large-latest\",\"max_tokens\":24,\"temperature\":0.0,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"this is a test, respond with 'test'\\n\"},{\"role\":\"assistant\",\"content\":\"test\\n\"},{\"role\":\"user\",\"content\":\"hello!\\n\"},{\"role\":\"user\",\"content\":\"what was the previous user message?\\n\"}]}"
+          "string": "{\"model\":\"mistral-large-latest\",\"max_tokens\":48,\"temperature\":0.0,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"this is a test, respond with 'test'\\n\"},{\"role\":\"assistant\",\"content\":\"test\\n\"},{\"role\":\"user\",\"content\":\"hello!\\n\"},{\"role\":\"user\",\"content\":\"what was the previous user message?\\n\"}]}"
         },
         "headers": {
           "User-Agent": [
@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Fri, 25 Oct 2024 17:38:00 GMT"
+            "Tue, 29 Oct 2024 04:10:23 GMT"
           ],
           "content-type": [
             "application/json"
@@ -41,41 +41,41 @@
           "ratelimitbysize-limit": [
             "500000"
           ],
-          "x-ratelimitbysize-limit-day": [
-            "150000000"
+          "ratelimitbysize-remaining": [
+            "499092"
           ],
           "ratelimitbysize-query-cost": [
-            "84"
+            "108"
           ],
           "x-ratelimitbysize-limit-minute": [
             "500000"
           ],
           "x-ratelimitbysize-remaining-minute": [
-            "498956"
-          ],
-          "ratelimitbysize-remaining": [
-            "498956"
-          ],
-          "ratelimitbysize-reset": [
-            "2"
+            "499092"
           ],
           "x-ratelimitbysize-remaining-day": [
-            "149998956"
+            "149983590"
+          ],
+          "ratelimitbysize-reset": [
+            "37"
+          ],
+          "x-ratelimitbysize-limit-day": [
+            "150000000"
           ],
           "x-envoy-upstream-service-time": [
-            "2609"
+            "376"
           ],
           "access-control-allow-origin": [
             "*"
           ],
           "x-kong-upstream-latency": [
-            "2610"
+            "376"
           ],
           "x-kong-proxy-latency": [
-            "3"
+            "1"
           ],
           "x-kong-request-id": [
-            "db0a90609763e21757de1e38c4d3835f"
+            "b3c42478dcfdc957e02a862851583406"
           ],
           "cf-cache-status": [
             "DYNAMIC"
@@ -95,10 +95,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\"id\":\"dacfa853da704bdbb302951a44cc7db2\",\"object\":\"chat.completion\",\"created\":1729877879,\"model\":\"mistral-large-latest\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"hello!\",\"tool_calls\":null},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":72,\"total_tokens\":75,\"completion_tokens\":3}}"
+          "string": "{\"id\":\"a169c239cea74f9baf894b3f9e9d6d41\",\"object\":\"chat.completion\",\"created\":1730175023,\"model\":\"mistral-large-latest\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"hello!\",\"tool_calls\":null},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":72,\"total_tokens\":75,\"completion_tokens\":3}}"
         }
       },
-      "recorded_at": "Fri, 25 Oct 2024 17:38:00 GMT"
+      "recorded_at": "Tue, 29 Oct 2024 04:10:23 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

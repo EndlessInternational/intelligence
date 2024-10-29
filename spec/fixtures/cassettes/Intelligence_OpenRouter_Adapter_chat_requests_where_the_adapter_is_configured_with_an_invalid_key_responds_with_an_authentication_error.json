@@ -6,7 +6,7 @@
         "uri": "https://openrouter.ai/api/v1/chat/completions",
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"model\":\"meta-llama/llama-3.2-11b-vision-instruct\",\"max_tokens\":16,\"temperature\":0.0,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":[{\"type\":\"text\",\"text\":\"respond only with the word 'hello'\\n\"}]}]}"
+          "string": "{\"model\":\"meta-llama/llama-3.2-11b-vision-instruct\",\"max_tokens\":16,\"temperature\":0.0,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"respond only with the word 'hello'\\n\"}]}"
         },
         "headers": {
           "User-Agent": [
@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Fri, 25 Oct 2024 17:39:42 GMT"
+            "Tue, 29 Oct 2024 04:17:09 GMT"
           ],
           "content-type": [
             "application/json"
@@ -60,7 +60,7 @@
             "max-age=63072000"
           ],
           "x-vercel-id": [
-            "pdx1::sr2tx-1729877982761-53d7e6ea0ef5"
+            "pdx1::6lfqk-1730175429727-90487a7c111f"
           ],
           "cf-cache-status": [
             "DYNAMIC"
@@ -77,7 +77,7 @@
           "string": "{\"error\":{\"message\":\"Missing Authentication header or invalid API key\",\"code\":401}}"
         }
       },
-      "recorded_at": "Fri, 25 Oct 2024 17:39:42 GMT"
+      "recorded_at": "Tue, 29 Oct 2024 04:17:09 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

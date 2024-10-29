@@ -10,7 +10,8 @@ RSpec.describe "#{Intelligence::Adapter[ :mistral ]} stream requests", :mistral 
 
   # this is needed for mistral test to avoid the rate limit
   after( :each ) do | example |
-    sleep 2 if example.metadata[ :record_cassettes ]
+    cassette = VCR.current_cassette
+    sleep 3 if cassette && cassette.new_recorded_interactions.any? 
   end
 
   let( :adapter ) do

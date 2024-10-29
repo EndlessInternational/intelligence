@@ -24,7 +24,18 @@ RSpec.describe "#{Intelligence::Adapter[ :together_ai ]} chat requests", :togeth
       key   ENV[ 'TOGETHERAI_API_KEY' ]
       chat_options do
         model                 'meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo'
-        max_tokens            16
+        max_tokens            128 
+        temperature           0
+      end
+    end
+  end 
+
+  let( :adapter_with_limited_max_tokens ) do
+    Intelligence::Adapter[ :together_ai ].build! do   
+      key   ENV[ 'TOGETHERAI_API_KEY' ]
+      chat_options do
+        model                 'meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo'
+        max_tokens            24 
         temperature           0
       end
     end
@@ -54,10 +65,15 @@ RSpec.describe "#{Intelligence::Adapter[ :together_ai ]} chat requests", :togeth
   end
 
   include_examples 'chat requests'
-  include_examples 'chat requests with token limit exceeded'
-  include_examples 'chat requests with stop sequence', adapter: :adapter_with_stop_sequence
+  include_examples 'chat requests with token limit exceeded', 
+                   adapter: :adapter_with_limited_max_tokens 
+  include_examples 'chat requests with stop sequence', 
+                   adapter: :adapter_with_stop_sequence
   include_examples 'chat requests with error response'
   include_examples 'chat requests without alternating roles'
-  include_examples 'chat requests with binary encoded images', adapter: :vision_adapter
+  include_examples 'chat requests with binary encoded images', 
+                   adapter: :vision_adapter
+  include_examples 'chat requests with tools'
+  include_examples 'chat requests with complex tools'
 
 end

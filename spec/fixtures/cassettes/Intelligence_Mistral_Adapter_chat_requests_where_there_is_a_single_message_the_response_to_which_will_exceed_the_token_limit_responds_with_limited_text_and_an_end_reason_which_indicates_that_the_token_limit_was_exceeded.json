@@ -6,7 +6,7 @@
         "uri": "https://api.mistral.ai/v1/chat/completions",
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"model\":\"mistral-large-latest\",\"max_tokens\":24,\"temperature\":0.0,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"count to twenty in words, all lower case, one word per line\\n\"}]}"
+          "string": "{\"model\":\"mistral-large-latest\",\"max_tokens\":48,\"temperature\":0.0,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"count to twenty in words, all lower case, one word per line\\n\"}]}"
         },
         "headers": {
           "User-Agent": [
@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Fri, 25 Oct 2024 17:37:13 GMT"
+            "Tue, 29 Oct 2024 04:09:38 GMT"
           ],
           "content-type": [
             "application/json"
@@ -38,44 +38,44 @@
           "connection": [
             "keep-alive"
           ],
-          "ratelimitbysize-reset": [
-            "48"
-          ],
-          "x-ratelimitbysize-remaining-day": [
-            "149999757"
-          ],
-          "ratelimitbysize-query-cost": [
-            "80"
-          ],
           "ratelimitbysize-limit": [
             "500000"
           ],
           "ratelimitbysize-remaining": [
-            "499757"
+            "499685"
           ],
-          "x-ratelimitbysize-remaining-minute": [
-            "499757"
-          ],
-          "x-ratelimitbysize-limit-day": [
-            "150000000"
+          "ratelimitbysize-query-cost": [
+            "104"
           ],
           "x-ratelimitbysize-limit-minute": [
             "500000"
           ],
+          "x-ratelimitbysize-remaining-minute": [
+            "499685"
+          ],
+          "x-ratelimitbysize-remaining-day": [
+            "149984450"
+          ],
+          "ratelimitbysize-reset": [
+            "23"
+          ],
+          "x-ratelimitbysize-limit-day": [
+            "150000000"
+          ],
           "x-envoy-upstream-service-time": [
-            "1433"
+            "1544"
           ],
           "access-control-allow-origin": [
             "*"
           ],
           "x-kong-upstream-latency": [
-            "1434"
+            "1544"
           ],
           "x-kong-proxy-latency": [
             "1"
           ],
           "x-kong-request-id": [
-            "00bd2c6f2392ef0205a82051de378111"
+            "7d9fbf4cb1dad560331e5f0dbd536927"
           ],
           "cf-cache-status": [
             "DYNAMIC"
@@ -95,10 +95,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\"id\":\"c07e947cbeaa4b0fa26297b64b59ef79\",\"object\":\"chat.completion\",\"created\":1729877832,\"model\":\"mistral-large-latest\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"one\\ntwo\\nthree\\nfour\\nfive\\nsix\\nseven\\neight\\nnine\\nten\\neleven\\n\",\"tool_calls\":null},\"finish_reason\":\"length\"}],\"usage\":{\"prompt_tokens\":60,\"total_tokens\":84,\"completion_tokens\":24}}"
+          "string": "{\"id\":\"736afdc31f304c3aaba10174f8d8e4e5\",\"object\":\"chat.completion\",\"created\":1730174977,\"model\":\"mistral-large-latest\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"one\\ntwo\\nthree\\nfour\\nfive\\nsix\\nseven\\neight\\nnine\\nten\\neleven\\ntwelve\\nthirteen\\nfourteen\\nfifteen\\nsixteen\\nseventeen\\neighteen\\nnin\",\"tool_calls\":null},\"finish_reason\":\"length\"}],\"usage\":{\"prompt_tokens\":60,\"total_tokens\":108,\"completion_tokens\":48}}"
         }
       },
-      "recorded_at": "Fri, 25 Oct 2024 17:37:13 GMT"
+      "recorded_at": "Tue, 29 Oct 2024 04:09:38 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

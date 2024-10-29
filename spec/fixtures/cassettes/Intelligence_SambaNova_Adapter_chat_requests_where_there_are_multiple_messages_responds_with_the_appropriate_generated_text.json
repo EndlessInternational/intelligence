@@ -6,7 +6,7 @@
         "uri": "https://api.sambanova.ai/v1/chat/completions",
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"model\":\"Meta-Llama-3.1-70B-Instruct\",\"max_tokens\":16,\"temperature\":0.0,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"this is a test, respond with 'test'\\n\"},{\"role\":\"assistant\",\"content\":\"test\\n\"},{\"role\":\"user\",\"content\":\"what was the previous user message?\\nrespond in less than 16 words\\n\"}]}"
+          "string": "{\"model\":\"Meta-Llama-3.1-70B-Instruct\",\"max_tokens\":24,\"temperature\":0.0,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"this is a test, respond with 'test'\\n\"},{\"role\":\"assistant\",\"content\":\"test\\n\"},{\"role\":\"user\",\"content\":\"what was the previous user message?\\nrespond in less than 16 words\\n\"}]}"
         },
         "headers": {
           "User-Agent": [
@@ -27,13 +27,13 @@
         },
         "headers": {
           "date": [
-            "Fri, 25 Oct 2024 17:39:55 GMT"
+            "Tue, 29 Oct 2024 04:18:25 GMT"
           ],
           "content-type": [
             "application/json; charset=utf-8"
           ],
           "content-length": [
-            "773"
+            "754"
           ],
           "connection": [
             "keep-alive"
@@ -44,10 +44,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"choices\":[{\"finish_reason\":\"stop\",\"index\":0,\"logprobs\":null,\"message\":{\"content\":\"this is a test, respond with 'test'\",\"role\":\"assistant\"}}],\"created\":1729877995,\"id\":\"6d9d9b81-d0ad-4805-88ee-1857e1610ce6\",\"model\":\"Meta-Llama-3.1-70B-Instruct\",\"object\":\"chat.completion\",\"system_fingerprint\":\"fastcoe\",\"usage\":{\"acceptance_rate\":20,\"completion_tokens\":11,\"completion_tokens_after_first_per_sec\":375.1345163136806,\"completion_tokens_after_first_per_sec_first_ten\":1584.9093107617896,\"completion_tokens_per_sec\":70.0955566521383,\"end_time\":1729877995.517898,\"is_last_response\":true,\"prompt_tokens\":105,\"start_time\":1729877995.3412528,\"time_to_first_token\":0.14998817443847656,\"total_latency\":0.1569286346435547,\"total_tokens\":116,\"total_tokens_per_sec\":739.1895065134584}}\n"
+          "string": "{\"choices\":[{\"finish_reason\":\"stop\",\"index\":0,\"logprobs\":null,\"message\":{\"content\":\"this is a test, respond with 'test'\",\"role\":\"assistant\"}}],\"created\":1730175505,\"id\":\"4be4876b-68e9-47ba-9c06-769bcc3d210a\",\"model\":\"Meta-Llama-3.1-70B-Instruct\",\"object\":\"chat.completion\",\"system_fingerprint\":\"fastcoe\",\"usage\":{\"completion_tokens\":10,\"completion_tokens_after_first_per_sec\":190.38575715546588,\"completion_tokens_after_first_per_sec_first_ten\":547.0638048112431,\"completion_tokens_per_sec\":15.465167433378014,\"end_time\":1730175505.9561834,\"is_last_response\":true,\"prompt_tokens\":105,\"start_time\":1730175505.280576,\"time_to_first_token\":0.6283349990844727,\"total_latency\":0.6466144025325775,\"total_tokens\":115,\"total_tokens_per_sec\":177.84942548384717}}\n"
         }
       },
-      "recorded_at": "Fri, 25 Oct 2024 17:39:55 GMT"
+      "recorded_at": "Tue, 29 Oct 2024 04:18:26 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

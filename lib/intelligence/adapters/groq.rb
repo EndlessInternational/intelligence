@@ -1,9 +1,9 @@
-require_relative 'legacy/adapter'
+require_relative 'generic/adapter'
 
 module Intelligence
   module Groq
 
-    class Adapter < Legacy::Adapter
+    class Adapter < Generic::Adapter
       
       chat_request_uri 'https://api.groq.com/openai/v1/chat/completions'
 
@@ -41,25 +41,6 @@ module Intelligence
           top_logprobs        Integer
           top_p               Float
           user                String
-        end
-      end
-
-      alias chat_request_generic_message_attributes chat_request_message_attributes 
-      
-      # groq models only support the legacy Open AI message schema for the assistant 
-      # messages while supporting the modern message schema for user messages 
-      def chat_request_message_attributes( message )
-        role = message[ :role ]&.to_sym 
-        case role 
-        when :user 
-          chat_request_generic_message_attributes( message )
-        when :assistant 
-          chat_request_legacy_message_attributes( message )
-        else 
-          raise UnsupportedContentError.new(
-            :mistral, 
-            'only supports user and assistant message roles'  
-          )
         end
       end
 

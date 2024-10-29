@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Fri, 25 Oct 2024 20:18:26 GMT"
+            "Tue, 29 Oct 2024 04:04:06 GMT"
           ],
           "content-type": [
             "application/json"
@@ -45,10 +45,13 @@
             "<OPENAI-ORGANIZATION>"
           ],
           "openai-processing-ms": [
-            "3363"
+            "2084"
           ],
           "openai-version": [
             "2020-10-01"
+          ],
+          "strict-transport-security": [
+            "max-age=31536000; includeSubDomains; preload"
           ],
           "x-ratelimit-limit-requests": [
             "10000"
@@ -70,9 +73,6 @@
           ],
           "x-request-id": [
             "<X-REQUEST-ID>"
-          ],
-          "strict-transport-security": [
-            "max-age=31536000; includeSubDomains; preload"
           ],
           "cf-cache-status": [
             "DYNAMIC"
@@ -98,10 +98,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\n  \"id\": \"chatcmpl-AML3KfjbdiBISBs7j5OA4rihWuLcV\",\n  \"object\": \"chat.completion\",\n  \"created\": 1729887506,\n  \"model\": \"gpt-4o-2024-08-06\",\n  \"choices\": [\n    {\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": \"red balloon\",\n        \"refusal\": null\n      },\n      \"logprobs\": null,\n      \"finish_reason\": \"stop\"\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 312,\n    \"completion_tokens\": 2,\n    \"total_tokens\": 314,\n    \"prompt_tokens_details\": {\n      \"cached_tokens\": 0\n    },\n    \"completion_tokens_details\": {\n      \"reasoning_tokens\": 0\n    }\n  },\n  \"system_fingerprint\": \"fp_72bbfa6014\"\n}\n"
+          "string": "{\n  \"id\": \"chatcmpl-ANXkcMxmo3z9FHM6WPI38XmeeExa7\",\n  \"object\": \"chat.completion\",\n  \"created\": 1730174646,\n  \"model\": \"gpt-4o-2024-08-06\",\n  \"choices\": [\n    {\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": \"red balloon\",\n        \"refusal\": null\n      },\n      \"logprobs\": null,\n      \"finish_reason\": \"stop\"\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 312,\n    \"completion_tokens\": 2,\n    \"total_tokens\": 314,\n    \"prompt_tokens_details\": {\n      \"cached_tokens\": 0\n    },\n    \"completion_tokens_details\": {\n      \"reasoning_tokens\": 0\n    }\n  },\n  \"system_fingerprint\": \"fp_72bbfa6014\"\n}\n"
         }
       },
-      "recorded_at": "Fri, 25 Oct 2024 20:18:26 GMT"
+      "recorded_at": "Tue, 29 Oct 2024 04:04:06 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

@@ -1,9 +1,9 @@
-require_relative 'legacy/adapter'
+require_relative 'generic/adapter'
 
 module Intelligence
   module SambaNova
 
-    class Adapter < Legacy::Adapter
+    class Adapter < Generic::Adapter
 
       chat_request_uri "https://api.sambanova.ai/v1/chat/completions"
       
