@@ -33,7 +33,7 @@
             "gzip"
           ],
           "date": [
-            "Fri, 25 Oct 2024 17:34:57 GMT"
+            "Tue, 29 Oct 2024 03:53:25 GMT"
           ],
           "server": [
             "scaffolding on HTTPServer2"
@@ -51,7 +51,7 @@
             "nosniff"
           ],
           "server-timing": [
-            "gfet4t7; dur=853"
+            "gfet4t7; dur=1020"
           ],
           "alt-svc": [
             "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
@@ -62,10 +62,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "{\n  \"candidates\": [\n    {\n      \"content\": {\n        \"parts\": [\n          {\n            \"text\": \"Big Bang started universe 13.7 billion years ago, creating everything.\\n\"\n          }\n        ],\n        \"role\": \"model\"\n      },\n      \"finishReason\": \"STOP\",\n      \"avgLogprobs\": -0.02290213984601638\n    }\n  ],\n  \"usageMetadata\": {\n    \"promptTokenCount\": 221,\n    \"candidatesTokenCount\": 17,\n    \"totalTokenCount\": 238\n  },\n  \"modelVersion\": \"gemini-1.5-pro-002\"\n}\n"
+          "string": "{\n  \"candidates\": [\n    {\n      \"content\": {\n        \"parts\": [\n          {\n            \"text\": \"Big Bang started universe 13.7 billion years ago, creating everything.\\n\"\n          }\n        ],\n        \"role\": \"model\"\n      },\n      \"finishReason\": \"STOP\",\n      \"avgLogprobs\": -0.0091241624425439267\n    }\n  ],\n  \"usageMetadata\": {\n    \"promptTokenCount\": 221,\n    \"candidatesTokenCount\": 17,\n    \"totalTokenCount\": 238\n  },\n  \"modelVersion\": \"gemini-1.5-pro-002\"\n}\n"
         }
       },
-      "recorded_at": "Fri, 25 Oct 2024 17:34:57 GMT"
+      "recorded_at": "Tue, 29 Oct 2024 03:53:25 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

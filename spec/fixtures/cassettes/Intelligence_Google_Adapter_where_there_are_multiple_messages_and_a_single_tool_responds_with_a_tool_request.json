@@ -33,7 +33,7 @@
             "gzip"
           ],
           "date": [
-            "Sun, 27 Oct 2024 22:28:25 GMT"
+            "Tue, 29 Oct 2024 03:54:00 GMT"
           ],
           "server": [
             "scaffolding on HTTPServer2"
@@ -51,7 +51,7 @@
             "nosniff"
           ],
           "server-timing": [
-            "gfet4t7; dur=1124"
+            "gfet4t7; dur=951"
           ],
           "alt-svc": [
             "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
@@ -62,10 +62,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "{\n  \"candidates\": [\n    {\n      \"content\": {\n        \"parts\": [\n          {\n            \"functionCall\": {\n              \"name\": \"get_weather\",\n              \"args\": {\n                \"city\": \"Seattle\",\n                \"state\": \"WA\"\n              }\n            }\n          }\n        ],\n        \"role\": \"model\"\n      },\n      \"finishReason\": \"STOP\",\n      \"avgLogprobs\": -3.7974049129323769e-06\n    }\n  ],\n  \"usageMetadata\": {\n    \"promptTokenCount\": 241,\n    \"candidatesTokenCount\": 7,\n    \"totalTokenCount\": 248\n  },\n  \"modelVersion\": \"gemini-1.5-pro-002\"\n}\n"
+          "string": "{\n  \"candidates\": [\n    {\n      \"content\": {\n        \"parts\": [\n          {\n            \"functionCall\": {\n              \"name\": \"get_weather\",\n              \"args\": {\n                \"state\": \"WA\",\n                \"city\": \"Seattle\"\n              }\n            }\n          }\n        ],\n        \"role\": \"model\"\n      },\n      \"finishReason\": \"STOP\",\n      \"avgLogprobs\": -3.5419652704149485e-06\n    }\n  ],\n  \"usageMetadata\": {\n    \"promptTokenCount\": 241,\n    \"candidatesTokenCount\": 7,\n    \"totalTokenCount\": 248\n  },\n  \"modelVersion\": \"gemini-1.5-pro-002\"\n}\n"
         }
       },
-      "recorded_at": "Sun, 27 Oct 2024 22:28:25 GMT"
+      "recorded_at": "Tue, 29 Oct 2024 03:54:00 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

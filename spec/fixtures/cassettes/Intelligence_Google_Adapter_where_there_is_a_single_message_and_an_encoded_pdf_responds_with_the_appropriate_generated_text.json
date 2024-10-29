@@ -33,7 +33,7 @@
             "gzip"
           ],
           "date": [
-            "Fri, 25 Oct 2024 17:35:05 GMT"
+            "Tue, 29 Oct 2024 03:53:32 GMT"
           ],
           "server": [
             "scaffolding on HTTPServer2"
@@ -51,7 +51,7 @@
             "nosniff"
           ],
           "server-timing": [
-            "gfet4t7; dur=7628"
+            "gfet4t7; dur=6778"
           ],
           "alt-svc": [
             "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
@@ -62,10 +62,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "{\n  \"candidates\": [\n    {\n      \"content\": {\n        \"parts\": [\n          {\n            \"text\": \"The Vision for Space Exploration\\n\"\n          }\n        ],\n        \"role\": \"model\"\n      },\n      \"finishReason\": \"STOP\",\n      \"avgLogprobs\": -0.02788224071264267\n    }\n  ],\n  \"usageMetadata\": {\n    \"promptTokenCount\": 19356,\n    \"candidatesTokenCount\": 6,\n    \"totalTokenCount\": 19362\n  },\n  \"modelVersion\": \"gemini-1.5-pro-002\"\n}\n"
+          "string": "{\n  \"candidates\": [\n    {\n      \"content\": {\n        \"parts\": [\n          {\n            \"text\": \"The Vision for Space Exploration\\n\"\n          }\n        ],\n        \"role\": \"model\"\n      },\n      \"finishReason\": \"STOP\",\n      \"avgLogprobs\": -0.034572785099347435\n    }\n  ],\n  \"usageMetadata\": {\n    \"promptTokenCount\": 19772,\n    \"candidatesTokenCount\": 6,\n    \"totalTokenCount\": 19778\n  },\n  \"modelVersion\": \"gemini-1.5-pro-002\"\n}\n"
         }
       },
-      "recorded_at": "Fri, 25 Oct 2024 17:35:05 GMT"
+      "recorded_at": "Tue, 29 Oct 2024 03:53:32 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

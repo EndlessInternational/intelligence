@@ -164,8 +164,9 @@ module Intelligence
         end 
 
         tools_attributes = to_google_tools( conversation[ :tools ] )
-        result[ :tools ] = tools_attributes if tools_attributes && tools_attributes.length > 0
-  
+        result[ :tools ] = [ { function_declarations: tools_attributes } ] \
+          if tools_attributes&.any?
+
         JSON.generate( result )
       end 
 
@@ -208,7 +209,7 @@ module Intelligence
           [ object, required.compact  ]
         end
 
-        return [ { function_declarations: tools&.map { | tool |
+        return tools&.map { | tool |
           function = { 
             name: tool[ :name ],
             description: tool[ :description ],
@@ -223,7 +224,7 @@ module Intelligence
             function[ :parameters ][ :required ] = properties_required if properties_required.any?
           end
           function 
-        } } ]
+        } 
       end
 
     end
