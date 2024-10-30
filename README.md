@@ -61,10 +61,11 @@ $ gem install intelligence
 
 ## Usage
 
-### Minimal Chat Request
+### Fundamentals
 
 The core components of Intelligence are adapters, requests and responses. An adapter encapsulates
-the differences between different providers allowing you to use requests and responses uniformly.
+the differences between different API vendors, allowing you to use requests and responses 
+uniformly.
 
 You retrieve an adapter for a specific vendor, configure it with a key, model and associated  
 parameters and then make a request by calling either the `chat` or `stream` methods.
@@ -98,15 +99,14 @@ The `response` object is a Faraday response with an added method: `result`. If a
 successful `result` returns a `ChatResult`. If it is not successful it returns a 
 `ChatErrorResult`. 
 
-### Understanding Results
+### Results
 
 When you make a request using Intelligence, the response includes a `result` that provides 
 structured access to the model's output. 
 
 - A `ChatResult` contains one or more `choices` (alternate responses from the model). The 
-  `choices` method returns an array of `ChatResultChoice` instances. It also includes 
-  a `metrics` methods which provides information about token usage for the request.
-  optional `metrics` about token usage
+  `choices` method returns an array of `ChatResultChoice` instances. `ChatResult` also 
+  includes a `metrics` methods which provides information about token usage for the request.
 - A `ChatResultChoice` contains a `message` from the assistant and an `end_result` which
   indicates how the response ended;
   - `:ended` means the model completed its response normally
@@ -157,7 +157,7 @@ if response.success?
     puts "Total tokens: #{result.metrics.total_tokens}"
   end
 else
-  # or alternativelly handle the end result 
+  # or alternativelly handle the error result 
   puts "Error: #{response.result.error_description}"
 end
 ```
@@ -172,7 +172,7 @@ A response might end for various reasons, indicated by the `end_reason` in each 
 - `:filtered` means the content was filtered by safety settings
 - `:tool_called` means the model is requesting to use a tool
 
-### Understanding Conversations, Messages, and Content
+### Conversations, Messages, and Content
 
 Intelligence organizes interactions with models using three main components:
 
@@ -189,8 +189,8 @@ Intelligence organizes interactions with models using three main components:
   to files (`MessageContent::File`).
 
 In the previous examples we used a simple string as an argument to `chat`. As a convenience,
-the `chat` methods builds a coversation for you but, typically, you will construct a coversation 
-instance (`Coversation`) and pass that to the chat or stream methods. 
+the `chat` methods builds a coversation for you from a String but, typically, you will construct
+a coversation instance (`Coversation`) and pass that to the chat or stream methods. 
 
 The following example expands the minimal example, building a conversation, messages and content:
 
@@ -289,7 +289,7 @@ This pattern allows you to maintain context across multiple interactions with th
 request includes the full conversation history, helping the model provide more contextually 
 relevant responses.
 
-### Using Builders
+### Builders
 
 For more readable configuration, Intelligence provides builder syntax for both adapters and 
 conversations.
