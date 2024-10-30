@@ -1,0 +1,102 @@
+{
+  "http_interactions": [
+    {
+      "request": {
+        "method": "post",
+        "uri": "https://api.mistral.ai/v1/chat/completions",
+        "body": {
+          "encoding": "UTF-8",
+          "string": "{\"model\":\"mistral-large-latest\",\"max_tokens\":128,\"temperature\":0.0,\"stream\":true,\"messages\":[{\"role\":\"system\",\"content\":\"You are a helpfull assistant who answers questions succinctly.\"},{\"role\":\"user\",\"content\":\"Where am I located?\"},{\"role\":\"assistant\",\"tool_calls\":[{\"id\":\"MpfiuoRaM\",\"type\":\"function\",\"function\":{\"name\":\"get_location\",\"arguments\":\"{}\"}}],\"content\":\"\"},{\"role\":\"tool\",\"tool_call_id\":\"MpfiuoRaM\",\"content\":\"Seattle, WA, USA\"}],\"tools\":[{\"type\":\"function\",\"function\":{\"name\":\"get_location\",\"description\":\"The get_location tool will return the users city, state or province and country.\",\"parameters\":{}}}]}"
+        },
+        "headers": {
+          "User-Agent": [
+            "Faraday v2.12.0"
+          ],
+          "Content-Type": [
+            "application/json"
+          ],
+          "Authorization": [
+            "Bearer <TOKEN>"
+          ]
+        }
+      },
+      "response": {
+        "status": {
+          "code": 200,
+          "message": "OK"
+        },
+        "headers": {
+          "date": [
+            "Wed, 30 Oct 2024 22:23:17 GMT"
+          ],
+          "content-type": [
+            "text/event-stream; charset=utf-8"
+          ],
+          "transfer-encoding": [
+            "chunked"
+          ],
+          "connection": [
+            "keep-alive"
+          ],
+          "ratelimitbysize-remaining": [
+            "497994"
+          ],
+          "ratelimitbysize-reset": [
+            "43"
+          ],
+          "ratelimitbysize-limit": [
+            "500000"
+          ],
+          "x-ratelimitbysize-remaining-month": [
+            "999971476"
+          ],
+          "x-ratelimitbysize-limit-minute": [
+            "500000"
+          ],
+          "ratelimitbysize-query-cost": [
+            "150"
+          ],
+          "x-ratelimitbysize-limit-month": [
+            "1000000000"
+          ],
+          "x-ratelimitbysize-remaining-minute": [
+            "497994"
+          ],
+          "x-envoy-upstream-service-time": [
+            "325"
+          ],
+          "access-control-allow-origin": [
+            "*"
+          ],
+          "x-kong-upstream-latency": [
+            "326"
+          ],
+          "x-kong-proxy-latency": [
+            "1"
+          ],
+          "x-kong-request-id": [
+            "5e16080ea3a34578dbdc31603086a82d"
+          ],
+          "cf-cache-status": [
+            "DYNAMIC"
+          ],
+          "server": [
+            "cloudflare"
+          ],
+          "cf-ray": [
+            "<CF-RAY>"
+          ],
+          "alt-svc": [
+            "h3=\":443\"; ma=86400"
+          ]
+        },
+        "body": {
+          "encoding": "UTF-8",
+          "string": "data: {\"id\":\"97d05e444b8b4e8dbfb05ec4919de841\",\"object\":\"chat.completion.chunk\",\"created\":1730326997,\"model\":\"mistral-large-latest\",\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"\"},\"finish_reason\":null}]}\n\ndata: {\"id\":\"97d05e444b8b4e8dbfb05ec4919de841\",\"object\":\"chat.completion.chunk\",\"created\":1730326997,\"model\":\"mistral-large-latest\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"You\"},\"finish_reason\":null}]}\n\ndata: {\"id\":\"97d05e444b8b4e8dbfb05ec4919de841\",\"object\":\"chat.completion.chunk\",\"created\":1730326997,\"model\":\"mistral-large-latest\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\" are\"},\"finish_reason\":null}]}\n\ndata: {\"id\":\"97d05e444b8b4e8dbfb05ec4919de841\",\"object\":\"chat.completion.chunk\",\"created\":1730326997,\"model\":\"mistral-large-latest\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\" located\"},\"finish_reason\":null}]}\n\ndata: {\"id\":\"97d05e444b8b4e8dbfb05ec4919de841\",\"object\":\"chat.completion.chunk\",\"created\":1730326997,\"model\":\"mistral-large-latest\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\" in\"},\"finish_reason\":null}]}\n\ndata: {\"id\":\"97d05e444b8b4e8dbfb05ec4919de841\",\"object\":\"chat.completion.chunk\",\"created\":1730326997,\"model\":\"mistral-large-latest\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\" Seattle\"},\"finish_reason\":null}]}\n\ndata: {\"id\":\"97d05e444b8b4e8dbfb05ec4919de841\",\"object\":\"chat.completion.chunk\",\"created\":1730326997,\"model\":\"mistral-large-latest\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\",\"},\"finish_reason\":null}]}\n\ndata: {\"id\":\"97d05e444b8b4e8dbfb05ec4919de841\",\"object\":\"chat.completion.chunk\",\"created\":1730326997,\"model\":\"mistral-large-latest\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\" WA\"},\"finish_reason\":null}]}\n\ndata: {\"id\":\"97d05e444b8b4e8dbfb05ec4919de841\",\"object\":\"chat.completion.chunk\",\"created\":1730326997,\"model\":\"mistral-large-latest\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\",\"},\"finish_reason\":null}]}\n\ndata: {\"id\":\"97d05e444b8b4e8dbfb05ec4919de841\",\"object\":\"chat.completion.chunk\",\"created\":1730326997,\"model\":\"mistral-large-latest\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\" USA\"},\"finish_reason\":null}]}\n\ndata: {\"id\":\"97d05e444b8b4e8dbfb05ec4919de841\",\"object\":\"chat.completion.chunk\",\"created\":1730326997,\"model\":\"mistral-large-latest\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\".\"},\"finish_reason\":null}]}\n\ndata: {\"id\":\"97d05e444b8b4e8dbfb05ec4919de841\",\"object\":\"chat.completion.chunk\",\"created\":1730326997,\"model\":\"mistral-large-latest\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":125,\"total_tokens\":135,\"completion_tokens\":10}}\n\ndata: [DONE]\n\n"
+        }
+      },
+      "recorded_at": "Wed, 30 Oct 2024 22:23:18 GMT"
+    }
+  ],
+  "recorded_with": "VCR 6.3.1"
+}

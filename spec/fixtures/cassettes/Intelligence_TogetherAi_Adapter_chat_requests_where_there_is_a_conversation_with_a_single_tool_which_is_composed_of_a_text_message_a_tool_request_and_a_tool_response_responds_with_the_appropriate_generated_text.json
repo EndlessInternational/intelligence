@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Tue, 29 Oct 2024 04:25:50 GMT"
+            "Wed, 30 Oct 2024 22:23:49 GMT"
           ],
           "content-type": [
             "application/json; charset=utf-8"
@@ -42,7 +42,7 @@
             "*"
           ],
           "x-api-received": [
-            "2024-10-29T04:25:49.472Z"
+            "2024-10-30T22:23:48.673Z"
           ],
           "x-ratelimit": [
             "false"
@@ -51,13 +51,13 @@
             "10"
           ],
           "x-ratelimit-remaining": [
-            "17"
+            "18"
           ],
           "x-ratelimit-reset": [
-            "0"
+            "1"
           ],
           "x-ratelimit-remaining-tokens": [
-            "1397"
+            "1906"
           ],
           "x-ratelimit-limit-tokens": [
             "3000"
@@ -66,13 +66,13 @@
             "v2"
           ],
           "x-api-call-start": [
-            "2024-10-29T04:25:49.480Z"
+            "2024-10-30T22:23:48.679Z"
           ],
           "x-api-call-end": [
-            "2024-10-29T04:25:50.264Z"
+            "2024-10-30T22:23:49.246Z"
           ],
           "etag": [
-            "W/\"21d-qkq/dThSw9zqSHR8DulUbjvG6G0\""
+            "W/\"21e-5p9pRZqdJiIzBAHi8U6E1lZWlsc\""
           ],
           "cf-cache-status": [
             "DYNAMIC"
@@ -95,10 +95,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "{\n  \"id\": \"8da067642f6f762a-SEA\",\n  \"object\": \"chat.completion\",\n  \"created\": 1730175949,\n  \"model\": \"meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo\",\n  \"prompt\": [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"eos\",\n      \"seed\": 3357135441556591600,\n      \"logprobs\": null,\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": \"You are located in Seattle, WA, USA.\",\n        \"tool_calls\": []\n      }\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 295,\n    \"completion_tokens\": 11,\n    \"total_tokens\": 306\n  }\n}"
+          "string": "{\n  \"id\": \"8daecfd91d2cba03-SEA\",\n  \"object\": \"chat.completion\",\n  \"created\": 1730327028,\n  \"model\": \"meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo\",\n  \"prompt\": [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"eos\",\n      \"seed\": 15751589492639744000,\n      \"logprobs\": null,\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": \"You are located in Seattle, WA, USA.\",\n        \"tool_calls\": []\n      }\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 295,\n    \"completion_tokens\": 11,\n    \"total_tokens\": 306\n  }\n}"
         }
       },
-      "recorded_at": "Tue, 29 Oct 2024 04:25:50 GMT"
+      "recorded_at": "Wed, 30 Oct 2024 22:23:49 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

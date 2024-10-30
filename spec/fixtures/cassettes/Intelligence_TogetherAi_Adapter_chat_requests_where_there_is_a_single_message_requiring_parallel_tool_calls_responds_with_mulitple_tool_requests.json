@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Wed, 30 Oct 2024 04:44:15 GMT"
+            "Wed, 30 Oct 2024 22:23:51 GMT"
           ],
           "content-type": [
             "application/json; charset=utf-8"
@@ -42,7 +42,7 @@
             "*"
           ],
           "x-api-received": [
-            "2024-10-30T04:44:14.577Z"
+            "2024-10-30T22:23:49.911Z"
           ],
           "x-ratelimit": [
             "false"
@@ -57,7 +57,7 @@
             "2"
           ],
           "x-ratelimit-remaining-tokens": [
-            "3000"
+            "2451"
           ],
           "x-ratelimit-limit-tokens": [
             "3000"
@@ -66,13 +66,13 @@
             "v2"
           ],
           "x-api-call-start": [
-            "2024-10-30T04:44:14.584Z"
+            "2024-10-30T22:23:49.917Z"
           ],
           "x-api-call-end": [
-            "2024-10-30T04:44:15.605Z"
+            "2024-10-30T22:23:51.058Z"
           ],
           "etag": [
-            "W/\"560-/hUMa4/HIW+5NBIYt6Sp+veTCRc\""
+            "W/\"560-vNguwk7077ne4R42EzCgiRAjCNc\""
           ],
           "cf-cache-status": [
             "DYNAMIC"
@@ -95,10 +95,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "{\n  \"id\": \"8da8bfbefb69a3b3-SEA\",\n  \"object\": \"chat.completion\",\n  \"created\": 1730263454,\n  \"model\": \"meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo\",\n  \"prompt\": [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"tool_calls\",\n      \"seed\": 16496826492113285000,\n      \"logprobs\": null,\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": null,\n        \"tool_calls\": [\n          {\n            \"index\": 0,\n            \"id\": \"call_ofyb27ks6n5i26xc9gdofgiv\",\n            \"type\": \"function\",\n            \"function\": {\n              \"arguments\": \"{\\\"city\\\":\\\"London\\\",\\\"country\\\":\\\"United Kingdom\\\"}\",\n              \"name\": \"get_weather\"\n            }\n          },\n          {\n            \"index\": 1,\n            \"id\": \"call_fibyawhox49trgfn1rat0kyu\",\n            \"type\": \"function\",\n            \"function\": {\n              \"arguments\": \"{\\\"city\\\":\\\"Paris\\\",\\\"country\\\":\\\"France\\\"}\",\n              \"name\": \"get_weather\"\n            }\n          },\n          {\n            \"index\": 2,\n            \"id\": \"call_ckn1j5gsb3wrez7kx50sre6i\",\n            \"type\": \"function\",\n            \"function\": {\n              \"arguments\": \"{\\\"city\\\":\\\"Rome\\\",\\\"country\\\":\\\"Italy\\\"}\",\n              \"name\": \"get_weather\"\n            }\n          }\n        ]\n      }\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 462,\n    \"completion_tokens\": 58,\n    \"total_tokens\": 520\n  }\n}"
+          "string": "{\n  \"id\": \"8daecfe0ebb06824-SEA\",\n  \"object\": \"chat.completion\",\n  \"created\": 1730327029,\n  \"model\": \"meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo\",\n  \"prompt\": [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"tool_calls\",\n      \"seed\": 16866958389128907000,\n      \"logprobs\": null,\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": null,\n        \"tool_calls\": [\n          {\n            \"index\": 0,\n            \"id\": \"call_jgs3cgu67zier82urszmxns4\",\n            \"type\": \"function\",\n            \"function\": {\n              \"arguments\": \"{\\\"city\\\":\\\"London\\\",\\\"country\\\":\\\"United Kingdom\\\"}\",\n              \"name\": \"get_weather\"\n            }\n          },\n          {\n            \"index\": 1,\n            \"id\": \"call_wpiynt8twqzaxtj1gpazbeqm\",\n            \"type\": \"function\",\n            \"function\": {\n              \"arguments\": \"{\\\"city\\\":\\\"Paris\\\",\\\"country\\\":\\\"France\\\"}\",\n              \"name\": \"get_weather\"\n            }\n          },\n          {\n            \"index\": 2,\n            \"id\": \"call_w42dcouzyel7n02aizmtu3in\",\n            \"type\": \"function\",\n            \"function\": {\n              \"arguments\": \"{\\\"city\\\":\\\"Rome\\\",\\\"country\\\":\\\"Italy\\\"}\",\n              \"name\": \"get_weather\"\n            }\n          }\n        ]\n      }\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 462,\n    \"completion_tokens\": 58,\n    \"total_tokens\": 520\n  }\n}"
         }
       },
-      "recorded_at": "Wed, 30 Oct 2024 04:44:15 GMT"
+      "recorded_at": "Wed, 30 Oct 2024 22:23:50 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

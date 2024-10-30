@@ -81,30 +81,20 @@ module Intelligence
 
         choices.each do | choice |
           choice[ :message ][ :contents ] = choice[ :message ][ :contents ]&.map do | content |
-            case content[ :type ] 
-              when :text 
-                content[ :text ] = ''
-              when :tool_call 
-                content[ :tool_parameters ] = ''
-              else 
-                content.clear 
-            end
-            content
+            { type: content[ :type ] }
           end
         end
 
         buffer += chunk
         while ( eol_index = buffer.index( "\n" ) )
-          
           line = buffer.slice!( 0..eol_index )        
           line = line.strip 
           next if line.empty? || !line.start_with?( 'data:' )
           line = line[ 6..-1 ]
-
           next if line.end_with?( '[DONE]' )
-          data = JSON.parse( line )
+
+          data = JSON.parse( line ) rescue nil
           if data.is_a?( Hash )
-            
             data[ 'choices' ]&.each do | data_choice |
 
               data_choice_index = data_choice[ 'index' ]
@@ -114,35 +104,42 @@ module Intelligence
               choices.fill( { message: {} }, choices.size, data_choice_index + 1 ) \
                 if choices.size <= data_choice_index 
               contents = choices[ data_choice_index ][ :message ][ :contents ] || []
-              last_content = contents&.last 
-              
-              if data_choice_delta.include?( 'content' ) 
-                data_choice_content = data_choice_delta[ 'content' ] || ''
-                if last_content.nil? || last_content[ :type ] == :tool_call
-                  contents.push( { type: :text, text: data_choice_content } )
-                elsif last_content[ :type ] == :text || last_content[ :type ].nil?
-                  last_content[ :type ] = :text 
-                  last_content[ :text ] = ( last_content[ :text ] || '' ) + data_choice_content
+
+              text_content = contents.first&.[]( :type ) == :text ? contents.first : nil 
+              if data_choice_content = data_choice_delta[ 'content' ]
+                if text_content.nil?  
+                  contents.unshift( text_content = { type: :text, text: data_choice_content } )
+                else
+                  text_content[ :text ] = ( text_content[ :text ] || '' ) + data_choice_content
                 end
-              elsif data_choice_delta.include?( 'function_call' )
-                data_choice_tool_call = data_choice_delta[ 'function_call' ] 
-                data_choice_tool_name = data_choice_tool_call[ 'name' ]
-                data_choice_tool_parameters = data_choice_tool_call[ 'arguments' ]
-                if last_content.nil? || last_content[ :type ] == :text
-                  contents.push( { 
-                    type: :tool_call, 
-                    tool_name: data_choice_tool_name,
-                    tool_parameters: data_choice_tool_parameters
-                  } )
-                elsif last_content[ :type ].nil?
-                  last_content[ :type ] = :tool_call 
-                  last_content[ :tool_name ] = data_choice_tool_name \
-                    if data_choice_tool_name.present?
-                  last_content[ :tool_parameters ] = tool_parameters
-                elsif last_content[ :type ] == :tool_call 
-                  last_content[ :tool_parameters ] = 
-                    ( last_content[ :tool_parameters ] || '' ) + data_choice_tool_parameters
-                end
+              end 
+              if data_choice_tool_calls = data_choice_delta[ 'tool_calls' ]
+                data_choice_tool_calls.each_with_index do | data_choice_tool_call, data_choice_tool_call_index |
+                  if data_choice_tool_call_function = data_choice_tool_call[ 'function' ]
+                    data_choice_tool_index = data_choice_tool_call[ 'index' ] || data_choice_tool_call_index
+                    data_choice_tool_id = data_choice_tool_call[ 'id' ]
+                    data_choice_tool_name = data_choice_tool_call_function[ 'name' ]
+                    data_choice_tool_parameters = data_choice_tool_call_function[ 'arguments' ]
+                    
+                    tool_call_content_index = ( text_content.nil? ? 0 : 1 ) + data_choice_tool_index 
+                    if tool_call_content_index >= contents.length 
+                      contents.push( { 
+                        type: :tool_call, 
+                        tool_call_id: data_choice_tool_id,
+                        tool_name: data_choice_tool_name,
+                        tool_parameters: data_choice_tool_parameters
+                      } )
+                    else 
+                      tool_call = contents[ tool_call_content_index ]
+                      tool_call[ :tool_call_id ] = ( tool_call[ :tool_call_id ] || '' ) + data_choice_tool_id \
+                        if data_choice_tool_id 
+                      tool_call[ :tool_name ] = ( tool_call[ :tool_name ] || '' ) + data_choice_tool_name \
+                        if data_choice_tool_name 
+                      tool_call[ :tool_parameters ] = ( tool_call[ :tool_parameters ] || '' ) + data_choice_tool_parameters \
+                        if data_choice_tool_parameters
+                    end 
+                  end 
+                end 
               end
               choices[ data_choice_index ][ :message ][ :contents ] = contents
               choices[ data_choice_index ][ :end_reason ] ||= 
@@ -155,7 +152,7 @@ module Intelligence
               metrics[ :input_tokens ] = usage[ 'prompt_tokens' ] \
                 if usage.include?( 'prompt_tokens' )
               metrics[ :output_tokens ] += usage[ 'completion_tokens' ] \
-                 if usage.include?( 'completion_tokens' )
+                if usage.include?( 'completion_tokens' )
             end 
 
           end
@@ -167,7 +164,6 @@ module Intelligence
         context[ :choices ] = choices
 
         [ context, choices.empty? ? nil : { choices: choices.dup } ]
-
       end
 
       def stream_result_attributes( context )
