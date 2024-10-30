@@ -6,7 +6,7 @@
         "uri": "https://api.anthropic.com/v1/messages",
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"model\":\"claude-3-5-sonnet-20240620\",\"max_tokens\":128,\"temperature\":0.0,\"system\":\"You are a helpfull assistant who answers questions succinctly.\",\"messages\":[{\"role\":\"user\",\"content\":[{\"type\":\"text\",\"text\":\"Where am I located?\"}]},{\"role\":\"assistant\",\"content\":[{\"type\":\"tool_use\",\"id\":\"call_RX1D4jUDUrfi4AePr4ZP7Sqv\",\"name\":\"get_location\",\"input\":{}}]},{\"role\":\"user\",\"content\":[{\"type\":\"tool_result\",\"tool_use_id\":\"call_RX1D4jUDUrfi4AePr4ZP7Sqv\",\"content\":\"Seattle, WA, USA\"}]}],\"tools\":[{\"name\":\"get_location\",\"description\":\"The get_location tool will return the users city, state or province and country.\",\"input_schema\":{\"type\":\"object\"}}]}"
+          "string": "{\"model\":\"claude-3-5-sonnet-20240620\",\"max_tokens\":256,\"temperature\":0.0,\"system\":\"You are a helpfull assistant who answers questions succinctly.\",\"messages\":[{\"role\":\"user\",\"content\":[{\"type\":\"text\",\"text\":\"Where am I located?\"}]},{\"role\":\"assistant\",\"content\":[{\"type\":\"tool_use\",\"id\":\"MpfiuoRaM\",\"name\":\"get_location\",\"input\":{}}]},{\"role\":\"user\",\"content\":[{\"type\":\"tool_result\",\"tool_use_id\":\"MpfiuoRaM\",\"content\":\"Seattle, WA, USA\"}]}],\"tools\":[{\"name\":\"get_location\",\"description\":\"The get_location tool will return the users city, state or province and country.\",\"input_schema\":{\"type\":\"object\"}}]}"
         },
         "headers": {
           "User-Agent": [
@@ -30,7 +30,7 @@
         },
         "headers": {
           "date": [
-            "Sun, 27 Oct 2024 22:28:15 GMT"
+            "Wed, 30 Oct 2024 17:34:37 GMT"
           ],
           "content-type": [
             "application/json"
@@ -48,7 +48,7 @@
             "999"
           ],
           "anthropic-ratelimit-requests-reset": [
-            "2024-10-27T22:28:17Z"
+            "2024-10-30T17:35:17Z"
           ],
           "anthropic-ratelimit-tokens-limit": [
             "80000"
@@ -57,7 +57,7 @@
             "80000"
           ],
           "anthropic-ratelimit-tokens-reset": [
-            "2024-10-27T22:28:15Z"
+            "2024-10-30T17:34:37Z"
           ],
           "request-id": [
             "<REQUEST-ID>"
@@ -83,10 +83,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\"id\":\"msg_01NSh5HTeJhAZN3zi4TfYDZ2\",\"type\":\"message\",\"role\":\"assistant\",\"model\":\"claude-3-5-sonnet-20240620\",\"content\":[{\"type\":\"text\",\"text\":\"Based on the information provided by the get_location tool, you are currently located in Seattle, WA, USA. Seattle is a major city in the state of Washington, located in the Pacific Northwest region of the United States of America.\"}],\"stop_reason\":\"end_turn\",\"stop_sequence\":null,\"usage\":{\"input_tokens\":421,\"output_tokens\":52}}"
+          "string": "{\"id\":\"msg_01SbWo9B16DbVMboodtuEi4p\",\"type\":\"message\",\"role\":\"assistant\",\"model\":\"claude-3-5-sonnet-20240620\",\"content\":[{\"type\":\"text\",\"text\":\"Based on the information provided by the get_location tool, you are currently located in Seattle, WA, USA. Seattle is a major city in the state of Washington, located in the Pacific Northwest region of the United States of America.\"}],\"stop_reason\":\"end_turn\",\"stop_sequence\":null,\"usage\":{\"input_tokens\":421,\"output_tokens\":52}}"
         }
       },
-      "recorded_at": "Sun, 27 Oct 2024 22:28:15 GMT"
+      "recorded_at": "Wed, 30 Oct 2024 17:34:37 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

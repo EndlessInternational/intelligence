@@ -89,15 +89,8 @@ module Intelligence
           output_tokens:  0
         }
 
-        contents.each do | content |
-          case content[ :type ] 
-            when :text 
-              content[ :text ] = ''
-            when :tool_call 
-              content[ :tool_parameters ] = ''
-            else 
-              content.clear 
-          end
+        contents.map! do | content |
+          { type: content[ :type ] }
         end
 
         buffer += chunk
@@ -116,7 +109,7 @@ module Intelligence
               metrics[ :output_tokens ] += data[ 'message' ]&.[]( 'usage' )&.[]( 'output_tokens' ) || 0
             when 'content_block_start'
               index = data[ 'index' ]
-              contents.fill( {}, contents.size, index + 1 ) if contents.size <= index
+              contents.fill( {}, contents.size..index ) if contents.size <= index
               if content_block = data[ 'content_block' ]
                 if content_block[ 'type' ] == 'text'
                   contents[ index ] = {
@@ -134,7 +127,7 @@ module Intelligence
               end
             when 'content_block_delta'
               index = data[ 'index' ]
-              contents.fill( {}, contents.size, index + 1 ) if contents.size <= index
+              contents.fill( {}, contents.size..index ) if contents.size <= index
               if delta = data[ 'delta' ]
                 if delta[ 'type' ] == 'text_delta'
                   contents[ index ][ :type ] = :text 
@@ -142,7 +135,7 @@ module Intelligence
                 elsif delta[ 'type' ] == 'input_json_delta'
                   contents[ index ][ :type ] = :tool_call 
                   contents[ index ][ :tool_parameters ] = 
-                    ( contents[ index ][ :tool_parameters ] || '' ) + delta[ 'input_json_delta' ]                
+                    ( contents[ index ][ :tool_parameters ] || '' ) + delta[ 'partial_json' ]                
                 end
               end
             when 'message_delta'

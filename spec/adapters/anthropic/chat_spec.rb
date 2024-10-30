@@ -8,34 +8,12 @@ RSpec.describe "#{Intelligence::Adapter[ :anthropic ]} chat requests", :anthropi
     raise "An ANTHROPIC_API_KEY must be defined in the environment." unless ENV[ 'ANTHROPIC_API_KEY' ]
   end
 
-  let( :adapter_with_invalid_key ) do
-    Intelligence::Adapter[ :anthropic ].build! do 
-      key                     'this-key-is-not-valid'  
-      chat_options do
-        model                 'claude-3-5-sonnet-20240620'
-        max_tokens            24
-        temperature           0
-      end
-    end
-  end
-
-  let( :adapter_with_invalid_model ) do
-    Intelligence::Adapter[ :anthropic ].build! do 
-      key                     ENV[ 'ANTHROPIC_API_KEY' ]  
-      chat_options do
-        model                 'invalid-model'
-        max_tokens            24
-        temperature           0
-      end
-    end
-  end
-
   let( :adapter ) do
     Intelligence::Adapter[ :anthropic ].build! do   
       key                     ENV[ 'ANTHROPIC_API_KEY' ]
       chat_options do
         model                 'claude-3-5-sonnet-20240620'
-        max_tokens            256
+        max_tokens            256 
         temperature           0
       end
     end
@@ -60,6 +38,28 @@ RSpec.describe "#{Intelligence::Adapter[ :anthropic ]} chat requests", :anthropi
         max_tokens            24
         temperature           0
         stop                  'five'
+      end
+    end
+  end
+
+  let( :adapter_with_invalid_key ) do
+    Intelligence::Adapter[ :anthropic ].build! do 
+      key                     'this-key-is-not-valid'  
+      chat_options do
+        model                 'claude-3-5-sonnet-20240620'
+        max_tokens            24
+        temperature           0
+      end
+    end
+  end
+
+  let( :adapter_with_invalid_model ) do
+    Intelligence::Adapter[ :anthropic ].build! do 
+      key                     ENV[ 'ANTHROPIC_API_KEY' ]  
+      chat_options do
+        model                 'invalid-model'
+        max_tokens            24
+        temperature           0
       end
     end
   end
