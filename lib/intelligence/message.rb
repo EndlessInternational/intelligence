@@ -109,7 +109,7 @@ module Intelligence
     def text  
       result = []
       each_content do | content |
-        result << content.text if content.is_a?( MessageContent::Text )
+        result << content.text if content.is_a?( MessageContent::Text ) && content.text
       end
       result.join( "\n" ) 
     end

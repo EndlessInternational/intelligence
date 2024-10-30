@@ -47,5 +47,6 @@ RSpec.describe "#{Intelligence::Adapter[ :open_ai ]} stream requests", :open_ai 
   include_examples 'stream requests with binary encoded images'
   include_examples 'stream requests with file images'
   include_examples 'stream requests without alternating roles'
+  include_examples 'stream requests with tools'
 
 end

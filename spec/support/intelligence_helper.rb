@@ -67,8 +67,8 @@ module IntelligenceHelper
 
   def message_contents_to_text( message )
     text = ''
-    message.contents.each do | content | 
-      text += content.text if content.is_a?( Intelligence::MessageContent::Text )
+    message.contents.each do | content |
+      text += ( content.text || '' ) if content.is_a?( Intelligence::MessageContent::Text )
     end
     text
   end

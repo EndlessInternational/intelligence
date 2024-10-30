@@ -13,6 +13,14 @@ module Intelligence
         ( text || false ) && text.respond_to?( :empty? ) && !text.empty? 
       end
 
+      def merge( other )
+        other_text = other.text
+        text = @text 
+        text = ( @text || '' ) + other_text if other_text
+
+        self.class.new( text: text )
+      end
+
       def to_h
         { type: :text, text: text }
       end
