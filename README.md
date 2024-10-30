@@ -1,10 +1,10 @@
 # Intelligence
 
 Intelligence is a lightweight yet powerful Ruby gem that provides a uniform interface for 
-interacting with large language and vision model APIs across multiple providers. It allows 
-you to seamlessly integrate with services from OpenAI, Anthropic, Google, Cerebras, Groq, 
-Hyperbolic, Samba Nova, Together AI, and others, while maintaining a consistent API across 
-all providers. 
+interacting with large language and vision model APIs across multiple vendors. It allows 
+you to seamlessly integrate with services from OpenAI, Anthropic, Google, Mistral, Cerebras, 
+Groq, Hyperbolic, Samba Nova, Together AI, and others, while maintaining a consistent API 
+across all providers. 
 
 The gem operates with minimal dependencies and doesn't require vendor SDK installation, 
 making it easy to switch between providers or work with multiple providers simultaneously.
@@ -95,9 +95,10 @@ else
 end
 ```
 
-The `response` object is a Faraday response with an added method: `result`. If a response is 
+The `response` object is a `Faraday` response with an added method: `result`. If a response is 
 successful `result` returns a `ChatResult`. If it is not successful it returns a 
-`ChatErrorResult`. 
+`ChatErrorResult`. You can use the `Faraday` method `success?` to determine if the response is 
+successful.
 
 ### Results
 
@@ -108,11 +109,11 @@ structured access to the model's output.
   `choices` method returns an array of `ChatResultChoice` instances. `ChatResult` also 
   includes a `metrics` methods which provides information about token usage for the request.
 - A `ChatResultChoice` contains a `message` from the assistant and an `end_result` which
-  indicates how the response ended;
+  indicates how the response ended:
   - `:ended` means the model completed its response normally
   - `:token_limit_exceeded` means the response hit the token limit ( `max_tokens` )
   - `:end_sequence_encountered` means the response hit a stop sequence
-  - `:filtered` means the content was filtered by safety settings
+  - `:filtered` means the content was filtered by the vendors safety settings or protocols 
   - `:tool_called` means the model is requesting to use a tool
 - The `Message` in each choice contains one or more content items, typically text but 
   potentially tool calls or other content types.
@@ -165,32 +166,26 @@ end
 The `ChatResult`, `ChatResultChoice` and `Message` all provide the `text` convenience 
 method which return the text. 
 
-A response might end for various reasons, indicated by the `end_reason` in each choice:
-- `:ended` means the model completed its response normally
-- `:token_limit_exceeded` means the response hit the token limit
-- `:end_sequence_encountered` means the response hit a stop sequence
-- `:filtered` means the content was filtered by safety settings
-- `:tool_called` means the model is requesting to use a tool
-
 ### Conversations, Messages, and Content
 
 Intelligence organizes interactions with models using three main components:
 
 - **Conversations** are collections of messages that represent a complete interaction with a 
-  model. A conversation can include an optional system message that sets the context, and a 
-  series of back-and-forth messages between the user and assistant.
+  model. A conversation can include an optional system message that sets the context, a series
+  of back-and-forth messages between the user and assistant and any tools the model may call.
 
 - **Messages** are individual communications within a conversation. Each message has a role 
   (`:system`, `:user`, or `:assistant`) that identifies its sender and can contain multiple 
   pieces of content.
 
 - **Content** represents the actual data within a message. This can be text 
-  (`MessageContent::Text`), binary data like images (`MessageContent::Binary`), or references 
-  to files (`MessageContent::File`).
+  ( `MessageContent::Text` ), binary data like images ( `MessageContent::Binary` ), references 
+  to files ( `MessageContent::File` ) or tool calls or tool results ( `MessageContent::ToolCall`
+  or `MessageContent::ToolResult` respectivelly ).
 
 In the previous examples we used a simple string as an argument to `chat`. As a convenience,
 the `chat` methods builds a coversation for you from a String but, typically, you will construct
-a coversation instance (`Coversation`) and pass that to the chat or stream methods. 
+a coversation instance ( `Coversation` ) and pass that to the chat or stream methods. 
 
 The following example expands the minimal example, building a conversation, messages and content:
 
@@ -454,12 +449,15 @@ own descriptions and requirements. Once defined, tools are added to conversation
 used by the model during its response. 
 
 Note that not all providers support tools, and the specific tool capabilities may vary between 
-providers. Check your provider's documentation for details on tool support and requirements.
+providers. Today, OpenAI, Anthropic, Google, Mistral, and Together AI support tools. In general
+all these providers support tools in an identical manner but as of this writing Google does not
+support 'complex' tools which take object parameters.
 
 ## Streaming Responses
 
-Once you're familiar with basic requests, you might want to use streaming for real-time 
-responses. Streaming delivers the model's response in chunks as it's generated:
+The `chat` method, while straightforward in implementation, can be time consuming ( especially 
+when using modern 'reasoning' models like OpenAI O1 ). The alternative is to use the `stream` 
+method which will receive results as these are generated by the model. 
 
 ```ruby
 adapter = Intelligence::Adapter.build! :anthropic do
@@ -473,44 +471,67 @@ end
 
 request = Intelligence::ChatRequest.new(adapter: adapter)
 
-response = request.stream("Tell me a story about a robot.") do |request|
-  request.receive_result do |result|
+response = request.stream( "Tell me a story about a robot." ) do | request |
+  request.receive_result do | result |
     # result is a ChatResult object with partial content
-    print result.text
+    print result.text 
     print "\n" if result.choices.first.end_reason
   end
 end
 ```
 
-Streaming also works with complex conversations and binary content:
+Notice that in this approach you will receive multiple results ( `ChatResult` instances )
+each with a fragment of the generation. The result always includes a `message` and will 
+include `contents` as soon as any content is received. The `contents` is always positionally 
+consitent, meaning that if a model is, for example, generating text followed by several 
+tool calls you may receive a single text content initially, then the text content and a tool, 
+and then subsequent tools, even after the text has been completely generated. 
+
+Remember that every `result` contains only a fragment of content and it is possible that 
+any given fragment is completely blank ( that is, it is possible for the content to be 
+present in the result but all of it's fields are nil ). 
+
+While you will likelly want to immediatelly output any generated text but, as practical matter, 
+tool calls are not useful until full generated. To assemble tool calls ( or the text ) from
+the text fragments you may use the content items `merge` method. 
 
 ```ruby
-conversation = Intelligence::Conversation.build do
-  system_message do
-    content text: "You are an image analysis expert."
-  end
-  
-  message do
-    role :user
-    content text: "Describe this image in detail"
-    content do
-      type :binary
-      content_type 'image/jpeg'
-      bytes File.binread('path/to/image.jpg')
-    end
-  end
-end
+request = Intelligence::ChatRequest.new( adapter: adapter )
 
-response = request.stream(conversation) do |request|
-  request.receive_result do |result|
-    result.choices.each do |choice|
-      choice.message.each_content do |content|
-        print content.text if content.is_a?(Intelligence::MessageContent::Text)
-      end
+contents = []
+response = request.stream( "Tell me a story about a robot." ) do | request |
+  request.receive_result do | result |
+    choice = result.choices.first
+    contents_fragments = choice.message.contents 
+    contents.fill( nil, contents.length..(contents_fragments.length - 1) )
+
+    contents_fragments.each_with_index do | contents_fragment, index |
+      if contents_fragment.is_a?( Intelligence::MessageContent::Text )
+        # here we need the `|| ''` because the text of the fragment may be nil 
+        print contents_fragment.text 
+      else 
+        contents[ index ] = contents[ index ].nil? ? 
+          contents_fragment : 
+          contents[ index ].merge( contents_fragment )
+      end 
     end
+
   end
 end
 ```
+
+In the above example we construct an array to receive the content. As the content fragments 
+are streamed we will immediatelly output generated text but other types of content ( today 
+it could only be instances of `Intelligence::MessageContent::ToolCall' ) are individualy 
+combined in the `contents` array. You can simply iterate though the array and then retrieve 
+and take action for any of the tool calls. 
+
+Note also that the `result` will only include a non-nil `end_reason` as the last ( or one 
+of the last, `result` instances to be received ).
+
+Finally note that the streamed `result` is always a `ChatResult`, never a `ChatErrorResult`. 
+If an error occurs, the request itself will fail and you will receive this as part of 
+`response.result`. 
 
 ## Provider Switching
 
