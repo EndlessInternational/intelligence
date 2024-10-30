@@ -117,7 +117,6 @@ module Intelligence
                 else
                   text_content[ :text ] = ( text_content[ :text ] || '' ) + data_choice_content
                 end
-                binding.break if text_content[ :text ].nil?
               end 
               if data_choice_tool_calls = data_choice_delta[ 'tool_calls' ]
                 data_choice_tool_calls.each do | data_choice_tool_call |
