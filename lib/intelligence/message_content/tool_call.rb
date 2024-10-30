@@ -12,13 +12,27 @@ module Intelligence
       attr_reader :tool_call_id 
       attr_reader :tool_name
 
-      def tool_parameters 
-        @tool_parameters.is_a?( Hash ) ?
-          @tool_parameters : 
-          @tool_parameters.nil? || @tool_parameters.empty? ?
-            {} :
-            JSON.parse( @tool_parameters, symbolize_names: true ) rescue @tool_parameters 
-      end      
+      def tool_parameters( options = nil )
+        return @tool_parameters if @tool_parameters.nil? || @tool_parameters.is_a?( Hash )
+        
+        options = options || {}
+        parse = options.key?( :parse ) ? options[ :parse ] : true 
+
+        return @parsed_tool_parameters if @parsed_tool_parameters && parse 
+        
+        tool_parameters = ( options.key?( :repair ) ? options[ :repair ] : true ) ? 
+            JSON.repair( @tool_parameters ) : @tool_parameters 
+
+        if parse 
+          @parsed_tool_parameters = tool_parameters = 
+            JSON.parse( 
+              tool_parameters, 
+              parse.is_a?( Hash ) ? parse : { symbolize_names: true } 
+            ) 
+        end
+
+        tool_parameters 
+      end
 
       def valid?
         tool_name && !tool_name.empty?
@@ -27,12 +41,12 @@ module Intelligence
       def merge( other_tool_call ) 
         other_tool_call_id = other_tool_call.tool_call_id 
         other_tool_name = other_tool_call.tool_name 
-        other_tool_parameters = other_tool_call.instance_variable_get( "@tool_parameters" )
+        other_tool_parameters = other_tool_call.tool_parameters( repair: false, parse: false )
         
         raise ArgumentError, 
-              "The given tool call parameters are incompative with this tool's parameters" \
-              unless @tool_parameters.nil? || other_tool_parameters.nil? || 
-                     @tool_parameters.is_a?( other_tool_parameters.class )
+              "The given tool call parameters are incompative with this tool's parameters." \
+          unless @tool_parameters.nil? || other_tool_parameters.nil? || 
+                 @tool_parameters.is_a?( other_tool_parameters.class )
         
         tool_call_id = other_tool_call_id.nil? ? 
           @tool_call_id : @tool_call_id || '' + other_tool_call_id 

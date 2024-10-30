@@ -4,6 +4,7 @@ require 'base64'
 require 'faraday'
 require 'dynamic_schema'
 require 'mime-types'
+require 'json/repair'
 
 require 'intelligence/version'
 
