@@ -50,6 +50,7 @@ RSpec.shared_examples 'chat requests with complex tools' do | options = {} |
         expect( choice.message.contents.last ).to be_a( Intelligence::MessageContent::ToolCall )
 
         tool_call = choice.message.contents.last
+        expect( tool_call.tool_name ).to eq( 'get_weather' ) 
         expect( tool_call.tool_parameters ).to be_a( Hash )
         expect( tool_call.tool_parameters[ :location ] ).to be_a( Hash )
         expect( tool_call.tool_parameters[ :location ][ :city ] ).to match( /seattle/i )
@@ -84,6 +85,7 @@ RSpec.shared_examples 'chat requests with complex tools' do | options = {} |
         expect( choice.message.contents.last ).to be_a( Intelligence::MessageContent::ToolCall )
        
         tool_call = choice.message.contents.last
+        expect( tool_call.tool_name ).to eq( 'get_weather' ) 
         expect( tool_call.tool_parameters ).to be_a( Hash )
         expect( tool_call.tool_parameters[ :location ] ).to be_a( Hash )
         expect( tool_call.tool_parameters[ :location ][ :city ] ).to match( /seattle/i )

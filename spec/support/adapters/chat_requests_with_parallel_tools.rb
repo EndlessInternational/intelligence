@@ -48,6 +48,7 @@ RSpec.shared_examples 'chat requests with parallel tools' do | options = {} |
       choice.message.contents.last( 3 ).each do | content |
         expect( content ).to be_a( Intelligence::MessageContent::ToolCall )
         expect( content.tool_name ).to eq( 'get_weather' )
+        expect( content.tool_parameters[ :city ] ).to match( /paris|london|rome/i )
       end
      
     end
