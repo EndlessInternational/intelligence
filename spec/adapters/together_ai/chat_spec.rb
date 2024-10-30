@@ -85,6 +85,7 @@ RSpec.describe "#{Intelligence::Adapter[ :together_ai ]} chat requests", :togeth
                    adapter: :vision_adapter
   include_examples 'chat requests with tools'
   include_examples 'chat requests with complex tools'
+  include_examples 'chat requests with parallel tools'
 
   include_examples 'chat requests with invalid key'
   include_examples 'chat requests with invalid model'

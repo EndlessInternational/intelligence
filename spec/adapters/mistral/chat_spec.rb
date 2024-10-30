@@ -20,7 +20,18 @@ RSpec.describe "#{Intelligence::Adapter[ :mistral ]} chat requests", :mistral do
       key                     ENV[ 'MISTRAL_API_KEY' ]
       chat_options do
         model                 'mistral-large-latest'
-        max_tokens            48 
+        max_tokens            128 
+        temperature           0
+      end
+    end
+  end
+
+  let( :adapter_with_limited_max_tokens ) do
+    Intelligence::Adapter[ :mistral ].build! do   
+      key                     ENV[ 'MISTRAL_API_KEY' ]
+      chat_options do
+        model                 'mistral-large-latest'
+        max_tokens            24 
         temperature           0
       end
     end
@@ -72,13 +83,14 @@ RSpec.describe "#{Intelligence::Adapter[ :mistral ]} chat requests", :mistral do
   end
 
   include_examples 'chat requests'
-  include_examples 'chat requests with token limit exceeded'
+  include_examples 'chat requests with token limit exceeded', adapter: :adapter_with_limited_max_tokens
   include_examples 'chat requests with stop sequence', adapter: :adapter_with_stop_sequence 
   include_examples 'chat requests with binary encoded images', adapter: :vision_adapter
   include_examples 'chat requests with file images', adapter: :vision_adapter
   include_examples 'chat requests without alternating roles'
   include_examples 'chat requests with tools'
   include_examples 'chat requests with complex tools'
+  include_examples 'chat requests with parallel tools'
 
   include_examples 'chat requests with invalid key'
   include_examples 'chat requests with invalid model', error_type: 'invalid_request_error'

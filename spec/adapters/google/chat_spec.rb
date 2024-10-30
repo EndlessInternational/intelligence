@@ -97,6 +97,7 @@ RSpec.describe Intelligence::Adapter[ :google ], :google do
   include_examples 'chat requests with binary encoded pdf'
   include_examples 'chat requests with binary encoded audio'
   include_examples 'chat requests with tools'
+  include_examples 'chat requests with parallel tools'
 
   include_examples 'chat requests with invalid key'
   include_examples 'chat requests with invalid model' 
