@@ -13,7 +13,7 @@ RSpec.describe "#{Intelligence::Adapter[ :open_ai ]} stream requests", :open_ai 
       key                     ENV[ 'OPENAI_API_KEY' ]
       chat_options do
         model                 'gpt-4o'
-        max_completion_tokens 24
+        max_completion_tokens 128 
         temperature           0
 
         stream                true
@@ -48,5 +48,6 @@ RSpec.describe "#{Intelligence::Adapter[ :open_ai ]} stream requests", :open_ai 
   include_examples 'stream requests with file images'
   include_examples 'stream requests without alternating roles'
   include_examples 'stream requests with tools'
+  include_examples 'stream requests with parallel tools'
 
 end

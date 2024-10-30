@@ -119,15 +119,15 @@ module Intelligence
                 end
                 binding.break if text_content[ :text ].nil?
               end 
-              
               if data_choice_tool_calls = data_choice_delta[ 'tool_calls' ]
-                data_choice_tool_calls.each_with_index do | data_choice_tool_call, data_choice_tool_call_index |
+                data_choice_tool_calls.each do | data_choice_tool_call |
                   if data_choice_tool_call_function = data_choice_tool_call[ 'function' ]
+                    data_choice_tool_index = data_choice_tool_call[ 'index' ]
                     data_choice_tool_id = data_choice_tool_call[ 'id' ]
                     data_choice_tool_name = data_choice_tool_call_function[ 'name' ]
                     data_choice_tool_parameters = data_choice_tool_call_function[ 'arguments' ]
                     
-                    tool_call_content_index = ( text_content.nil? ? 0 : 1 ) + data_choice_tool_call_index 
+                    tool_call_content_index = ( text_content.nil? ? 0 : 1 ) + data_choice_tool_index 
                     if tool_call_content_index >= contents.length 
                       contents.push( { 
                         type: :tool_call, 

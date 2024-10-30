@@ -14,7 +14,7 @@ RSpec.describe "#{Intelligence::Adapter[ :open_ai ]} chat requests", :open_ai do
       chat_options do
         model                 'gpt-4o'
         temperature           0
-        max_tokens            256 
+        max_tokens            128
       end
     end
   end
