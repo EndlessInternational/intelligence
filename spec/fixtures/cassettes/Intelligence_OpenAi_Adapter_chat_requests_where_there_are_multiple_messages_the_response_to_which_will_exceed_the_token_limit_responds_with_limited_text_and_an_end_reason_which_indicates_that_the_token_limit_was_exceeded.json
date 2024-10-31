@@ -6,7 +6,7 @@
         "uri": "https://api.openai.com/v1/chat/completions",
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"model\":\"gpt-4o\",\"temperature\":0.0,\"max_completion_tokens\":32,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":[{\"type\":\"text\",\"text\":\"count to five in words, all lower case, one word per line\\n\"}]},{\"role\":\"assistant\",\"content\":[{\"type\":\"text\",\"text\":\"one\\ntwo\\nthree\\nfour\\nfive\\n\"}]},{\"role\":\"user\",\"content\":[{\"type\":\"text\",\"text\":\"count to twenty in words, all lower case, one word per line\\n\"}]}]}"
+          "string": "{\"model\":\"gpt-4o\",\"temperature\":0.0,\"max_completion_tokens\":16,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":[{\"type\":\"text\",\"text\":\"count to five in words, all lower case, one word per line\\n\"}]},{\"role\":\"assistant\",\"content\":[{\"type\":\"text\",\"text\":\"one\\ntwo\\nthree\\nfour\\nfive\\n\"}]},{\"role\":\"user\",\"content\":[{\"type\":\"text\",\"text\":\"count to twenty in words, all lower case, one word per line\\n\"}]}]}"
         },
         "headers": {
           "User-Agent": [
@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Tue, 29 Oct 2024 04:03:58 GMT"
+            "Thu, 31 Oct 2024 15:23:09 GMT"
           ],
           "content-type": [
             "application/json"
@@ -45,13 +45,10 @@
             "<OPENAI-ORGANIZATION>"
           ],
           "openai-processing-ms": [
-            "488"
+            "434"
           ],
           "openai-version": [
             "2020-10-01"
-          ],
-          "strict-transport-security": [
-            "max-age=31536000; includeSubDomains; preload"
           ],
           "x-ratelimit-limit-requests": [
             "10000"
@@ -73,6 +70,9 @@
           ],
           "x-request-id": [
             "<X-REQUEST-ID>"
+          ],
+          "strict-transport-security": [
+            "max-age=31536000; includeSubDomains; preload"
           ],
           "cf-cache-status": [
             "DYNAMIC"
@@ -98,10 +98,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\n  \"id\": \"chatcmpl-ANXkUUxtgQBD05mT2phSLIodOoiVn\",\n  \"object\": \"chat.completion\",\n  \"created\": 1730174638,\n  \"model\": \"gpt-4o-2024-08-06\",\n  \"choices\": [\n    {\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": \"one\\ntwo\\nthree\\nfour\\nfive\\nsix\\nseven\\neight\\nnine\\nten\\neleven\\ntwelve\\nthirteen\\nfourteen\\n\",\n        \"refusal\": null\n      },\n      \"logprobs\": null,\n      \"finish_reason\": \"length\"\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 98,\n    \"completion_tokens\": 32,\n    \"total_tokens\": 130,\n    \"prompt_tokens_details\": {\n      \"cached_tokens\": 0\n    },\n    \"completion_tokens_details\": {\n      \"reasoning_tokens\": 0\n    }\n  },\n  \"system_fingerprint\": \"fp_90354628f2\"\n}\n"
+          "string": "{\n  \"id\": \"chatcmpl-AORIr75K324G2BtckpHfBdulNzoyM\",\n  \"object\": \"chat.completion\",\n  \"created\": 1730388189,\n  \"model\": \"gpt-4o-2024-08-06\",\n  \"choices\": [\n    {\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": \"one\\ntwo\\nthree\\nfour\\nfive\\nsix\\nseven\\neight\\n\",\n        \"refusal\": null\n      },\n      \"logprobs\": null,\n      \"finish_reason\": \"length\"\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 98,\n    \"completion_tokens\": 16,\n    \"total_tokens\": 114,\n    \"prompt_tokens_details\": {\n      \"cached_tokens\": 0\n    },\n    \"completion_tokens_details\": {\n      \"reasoning_tokens\": 0\n    }\n  },\n  \"system_fingerprint\": \"fp_45cf54deae\"\n}\n"
         }
       },
-      "recorded_at": "Tue, 29 Oct 2024 04:03:58 GMT"
+      "recorded_at": "Thu, 31 Oct 2024 15:23:09 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

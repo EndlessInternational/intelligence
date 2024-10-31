@@ -19,6 +19,17 @@ RSpec.describe "#{Intelligence::Adapter[ :open_ai ]} chat requests", :open_ai do
     end
   end
 
+  let( :adapter_with_limited_max_tokens ) do
+    Intelligence::Adapter[ :open_ai ].build! do   
+      key                     ENV[ 'OPENAI_API_KEY' ]
+      chat_options do
+        model                 'gpt-4o'
+        temperature           0
+        max_tokens            16
+      end
+    end
+  end
+
   let( :adapter_with_stop_sequence ) do
     Intelligence::Adapter[ :open_ai ].build! do   
       key                     ENV[ 'OPENAI_API_KEY' ]
@@ -52,8 +63,10 @@ RSpec.describe "#{Intelligence::Adapter[ :open_ai ]} chat requests", :open_ai do
   end
 
   include_examples 'chat requests'
-  include_examples 'chat requests with token limit exceeded'
-  include_examples 'chat requests with stop sequence', adapter: :adapter_with_stop_sequence
+  include_examples 'chat requests with token limit exceeded',
+                   adapter: :adapter_with_limited_max_tokens
+  include_examples 'chat requests with stop sequence', 
+                   adapter: :adapter_with_stop_sequence
   include_examples 'chat requests with binary encoded images'
   include_examples 'chat requests with file images'
   include_examples 'chat requests without alternating roles'
