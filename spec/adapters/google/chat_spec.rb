@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-RSpec.describe Intelligence::Adapter[ :google ], :google do
+RSpec.describe "#{Intelligence::Adapter[ :google ]} chat requests", :google do
 
   include_context 'vcr'
 
@@ -95,9 +95,12 @@ RSpec.describe Intelligence::Adapter[ :google ], :google do
   include_examples 'chat requests with binary encoded images'
   include_examples 'chat requests with binary encoded text'
   include_examples 'chat requests with binary encoded pdf'
+  # google is periodically failing this test
   include_examples 'chat requests with binary encoded audio'
   include_examples 'chat requests with tools'
   include_examples 'chat requests with parallel tools'
+  # google is failing this test
+  # include_examples 'chat requests with complex tools'
 
   include_examples 'chat requests with invalid key'
   include_examples 'chat requests with invalid model' 
