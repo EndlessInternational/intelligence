@@ -56,8 +56,9 @@ response = request.stream( ARGV[ 0 ] || 'Hello!' ) do | request |
     message.each_content do | content |
       # finally we can output the text of the content; although we only expect text back from 
       # the model in some cases ( such as when tools are used ) it may respond with other content 
-      # so we check to make sure we are only displaying text content 
-      print content.text if content.is_a?( Intelligence::MessageContent::Text ) 
+      # so we check to make sure we are only displaying text content; remember this content is 
+      # only a fragment of the response and in some cases the fragment will be entirelly empty
+      print content.text || '' if content.is_a?( Intelligence::MessageContent::Text ) 
     end
 
     # if we want to check if the stream is complete we can check the end_reason from the 
