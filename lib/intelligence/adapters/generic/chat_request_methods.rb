@@ -42,7 +42,7 @@ module Intelligence
         result[ :messages ] = []
 
         system_message = chat_request_system_message_attributes( conversation[ :system_message ] )
-        result[ :messages ] << system_message
+        result[ :messages ] << system_message if system_message
 
         conversation[ :messages ]&.each do | message |
           return nil unless message[ :contents ]&.any?
@@ -104,6 +104,7 @@ module Intelligence
 
         tools_attributes = chat_request_tools_attributes( conversation[ :tools ] )
         result[ :tools ] = tools_attributes if tools_attributes && tools_attributes.length > 0
+
         JSON.generate( result )
       end 
 
