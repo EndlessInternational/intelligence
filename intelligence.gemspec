@@ -39,7 +39,7 @@ Gem::Specification.new do | spec |
   spec.add_runtime_dependency 'faraday', '~> 2.7'
   spec.add_runtime_dependency 'dynamicschema', '~> 1.0.0.beta03'
   spec.add_runtime_dependency 'mime-types', '~> 3.6'
-  spec.add_runtime_dependency 'json-replair', '~> 0.2'
+  spec.add_runtime_dependency 'json-repair', '~> 0.2'
 
   spec.add_development_dependency 'rspec', '~> 3.4'
   spec.add_development_dependency 'debug', '~> 1.9'
