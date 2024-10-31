@@ -33,7 +33,7 @@
             "gzip"
           ],
           "date": [
-            "Thu, 31 Oct 2024 19:35:54 GMT"
+            "Thu, 31 Oct 2024 21:17:22 GMT"
           ],
           "server": [
             "scaffolding on HTTPServer2"
@@ -51,7 +51,7 @@
             "nosniff"
           ],
           "server-timing": [
-            "gfet4t7; dur=932"
+            "gfet4t7; dur=952"
           ],
           "alt-svc": [
             "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
@@ -62,10 +62,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "{\n  \"candidates\": [\n    {\n      \"content\": {\n        \"parts\": [\n          {\n            \"functionCall\": {\n              \"name\": \"get_weather\",\n              \"args\": {\n                \"city\": \"Seattle\",\n                \"state\": \"WA\"\n              }\n            }\n          }\n        ],\n        \"role\": \"model\"\n      },\n      \"finishReason\": \"STOP\",\n      \"avgLogprobs\": -8.6858270671135477e-07\n    }\n  ],\n  \"usageMetadata\": {\n    \"promptTokenCount\": 279,\n    \"candidatesTokenCount\": 7,\n    \"totalTokenCount\": 286\n  },\n  \"modelVersion\": \"gemini-1.5-pro-002\"\n}\n"
+          "string": "{\n  \"candidates\": [\n    {\n      \"content\": {\n        \"parts\": [\n          {\n            \"functionCall\": {\n              \"name\": \"get_weather\",\n              \"args\": {\n                \"state\": \"WA\",\n                \"city\": \"Seattle\"\n              }\n            }\n          }\n        ],\n        \"role\": \"model\"\n      },\n      \"finishReason\": \"STOP\",\n      \"avgLogprobs\": -8.344421595601099e-07\n    }\n  ],\n  \"usageMetadata\": {\n    \"promptTokenCount\": 279,\n    \"candidatesTokenCount\": 7,\n    \"totalTokenCount\": 286\n  },\n  \"modelVersion\": \"gemini-1.5-pro-002\"\n}\n"
         }
       },
-      "recorded_at": "Thu, 31 Oct 2024 19:35:54 GMT"
+      "recorded_at": "Thu, 31 Oct 2024 21:17:22 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

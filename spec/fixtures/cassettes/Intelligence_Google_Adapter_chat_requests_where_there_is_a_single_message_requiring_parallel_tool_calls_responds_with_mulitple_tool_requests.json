@@ -33,7 +33,7 @@
             "gzip"
           ],
           "date": [
-            "Thu, 31 Oct 2024 19:36:00 GMT"
+            "Thu, 31 Oct 2024 21:17:25 GMT"
           ],
           "server": [
             "scaffolding on HTTPServer2"
@@ -51,7 +51,7 @@
             "nosniff"
           ],
           "server-timing": [
-            "gfet4t7; dur=3371"
+            "gfet4t7; dur=1455"
           ],
           "alt-svc": [
             "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
@@ -62,10 +62,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "{\n  \"candidates\": [\n    {\n      \"content\": {\n        \"parts\": [\n          {\n            \"functionCall\": {\n              \"name\": \"get_weather\",\n              \"args\": {\n                \"city\": \"London\"\n              }\n            }\n          },\n          {\n            \"functionCall\": {\n              \"name\": \"get_weather\",\n              \"args\": {\n                \"city\": \"Paris\"\n              }\n            }\n          },\n          {\n            \"functionCall\": {\n              \"name\": \"get_weather\",\n              \"args\": {\n                \"city\": \"Rome\"\n              }\n            }\n          }\n        ],\n        \"role\": \"model\"\n      },\n      \"finishReason\": \"STOP\",\n      \"avgLogprobs\": -0.0001630685602625211\n    }\n  ],\n  \"usageMetadata\": {\n    \"promptTokenCount\": 220,\n    \"candidatesTokenCount\": 15,\n    \"totalTokenCount\": 235\n  },\n  \"modelVersion\": \"gemini-1.5-pro-002\"\n}\n"
+          "string": "{\n  \"candidates\": [\n    {\n      \"content\": {\n        \"parts\": [\n          {\n            \"functionCall\": {\n              \"name\": \"get_weather\",\n              \"args\": {\n                \"city\": \"London\"\n              }\n            }\n          },\n          {\n            \"functionCall\": {\n              \"name\": \"get_weather\",\n              \"args\": {\n                \"city\": \"Paris\"\n              }\n            }\n          },\n          {\n            \"functionCall\": {\n              \"name\": \"get_weather\",\n              \"args\": {\n                \"city\": \"Rome\"\n              }\n            }\n          }\n        ],\n        \"role\": \"model\"\n      },\n      \"finishReason\": \"STOP\",\n      \"avgLogprobs\": -0.00011734541816016038\n    }\n  ],\n  \"usageMetadata\": {\n    \"promptTokenCount\": 220,\n    \"candidatesTokenCount\": 15,\n    \"totalTokenCount\": 235\n  },\n  \"modelVersion\": \"gemini-1.5-pro-002\"\n}\n"
         }
       },
-      "recorded_at": "Thu, 31 Oct 2024 19:36:00 GMT"
+      "recorded_at": "Thu, 31 Oct 2024 21:17:25 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

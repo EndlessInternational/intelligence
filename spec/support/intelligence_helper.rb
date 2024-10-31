@@ -12,6 +12,19 @@ module IntelligenceHelper
     end
   end 
 
+  def create_conversation_without_system_message( *texts )
+    Intelligence::Conversation.build do 
+      texts.each_with_index do | _text, index |
+        message do 
+          role index.even? ? :user : :assistant
+          content do 
+            text _text 
+          end 
+        end 
+      end 
+    end 
+  end
+
   def create_conversation( *texts )
     Intelligence::Conversation.build do 
       system_message do  

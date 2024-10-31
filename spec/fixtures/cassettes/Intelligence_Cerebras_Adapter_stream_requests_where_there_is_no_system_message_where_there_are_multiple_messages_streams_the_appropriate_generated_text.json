@@ -1,0 +1,96 @@
+{
+  "http_interactions": [
+    {
+      "request": {
+        "method": "post",
+        "uri": "https://api.cerebras.ai/v1/chat/completions",
+        "body": {
+          "encoding": "UTF-8",
+          "string": "{\"model\":\"llama3.1-70b\",\"max_tokens\":16,\"stream\":true,\"messages\":[{\"role\":\"user\",\"content\":\"this is a test, respond with 'test'\\n\"},{\"role\":\"assistant\",\"content\":\"test\\n\"},{\"role\":\"user\",\"content\":\"what was the previous user message?\\nrespond in less than 16 words\\n\"}]}"
+        },
+        "headers": {
+          "User-Agent": [
+            "Faraday v2.12.0"
+          ],
+          "Content-Type": [
+            "application/json"
+          ],
+          "Authorization": [
+            "Bearer <TOKEN>"
+          ]
+        }
+      },
+      "response": {
+        "status": {
+          "code": 200,
+          "message": "OK"
+        },
+        "headers": {
+          "content-type": [
+            "text/event-stream; charset=utf-8"
+          ],
+          "transfer-encoding": [
+            "chunked"
+          ],
+          "connection": [
+            "keep-alive"
+          ],
+          "date": [
+            "Thu, 31 Oct 2024 22:28:56 GMT"
+          ],
+          "x-content-type-options": [
+            "nosniff"
+          ],
+          "strict-transport-security": [
+            "max-age=3600; includeSubDomains"
+          ],
+          "server": [
+            "uvicorn"
+          ],
+          "x-request-id": [
+            "<X-REQUEST-ID>"
+          ],
+          "x-ratelimit-limit-requests-day": [
+            "14400"
+          ],
+          "x-ratelimit-limit-tokens-minute": [
+            "60000"
+          ],
+          "x-ratelimit-remaining-requests-day": [
+            "14376"
+          ],
+          "x-ratelimit-remaining-tokens-minute": [
+            "59633"
+          ],
+          "x-ratelimit-reset-requests-day": [
+            "5463.079489469528"
+          ],
+          "x-ratelimit-reset-tokens-minute": [
+            "3.0794894695281982"
+          ],
+          "referrer-policy": [
+            "strict-origin-when-cross-origin"
+          ],
+          "x-cache": [
+            "Miss from cloudfront"
+          ],
+          "via": [
+            "1.1 11c8673f8a48dc627eaa83c99e9efedc.cloudfront.net (CloudFront)"
+          ],
+          "x-amz-cf-pop": [
+            "SFO20-C1"
+          ],
+          "x-amz-cf-id": [
+            "pNMXaLmgKIF06djZq8RUKgYLZCwjRysdSBxeDEIat-C-aScdhpajBg=="
+          ]
+        },
+        "body": {
+          "encoding": "UTF-8",
+          "string": "data: {\"id\":\"chatcmpl-50a7f2ad-1fdd-48db-b1ca-8cd19a2fcc69\",\"choices\":[{\"delta\":{\"role\":\"assistant\"},\"index\":0}],\"created\":1730413736,\"model\":\"llama3.1-70b\",\"system_fingerprint\":\"fp_55ebaf7e1e\",\"object\":\"chat.completion.chunk\"}\n\ndata: {\"id\":\"chatcmpl-50a7f2ad-1fdd-48db-b1ca-8cd19a2fcc69\",\"choices\":[{\"delta\":{\"content\":\"This\"},\"index\":0}],\"created\":1730413736,\"model\":\"llama3.1-70b\",\"system_fingerprint\":\"fp_55ebaf7e1e\",\"object\":\"chat.completion.chunk\"}\n\ndata: {\"id\":\"chatcmpl-50a7f2ad-1fdd-48db-b1ca-8cd19a2fcc69\",\"choices\":[{\"delta\":{\"content\":\" is\"},\"index\":0}],\"created\":1730413736,\"model\":\"llama3.1-70b\",\"system_fingerprint\":\"fp_55ebaf7e1e\",\"object\":\"chat.completion.chunk\"}\n\ndata: {\"id\":\"chatcmpl-50a7f2ad-1fdd-48db-b1ca-8cd19a2fcc69\",\"choices\":[{\"delta\":{\"content\":\" a\"},\"index\":0}],\"created\":1730413736,\"model\":\"llama3.1-70b\",\"system_fingerprint\":\"fp_55ebaf7e1e\",\"object\":\"chat.completion.chunk\"}\n\ndata: {\"id\":\"chatcmpl-50a7f2ad-1fdd-48db-b1ca-8cd19a2fcc69\",\"choices\":[{\"delta\":{\"content\":\" test\"},\"index\":0}],\"created\":1730413736,\"model\":\"llama3.1-70b\",\"system_fingerprint\":\"fp_55ebaf7e1e\",\"object\":\"chat.completion.chunk\"}\n\ndata: {\"id\":\"chatcmpl-50a7f2ad-1fdd-48db-b1ca-8cd19a2fcc69\",\"choices\":[{\"delta\":{\"content\":\",\"},\"index\":0}],\"created\":1730413736,\"model\":\"llama3.1-70b\",\"system_fingerprint\":\"fp_55ebaf7e1e\",\"object\":\"chat.completion.chunk\"}\n\ndata: {\"id\":\"chatcmpl-50a7f2ad-1fdd-48db-b1ca-8cd19a2fcc69\",\"choices\":[{\"delta\":{\"content\":\" respond\"},\"index\":0}],\"created\":1730413736,\"model\":\"llama3.1-70b\",\"system_fingerprint\":\"fp_55ebaf7e1e\",\"object\":\"chat.completion.chunk\"}\n\ndata: {\"id\":\"chatcmpl-50a7f2ad-1fdd-48db-b1ca-8cd19a2fcc69\",\"choices\":[{\"delta\":{\"content\":\" with\"},\"index\":0}],\"created\":1730413736,\"model\":\"llama3.1-70b\",\"system_fingerprint\":\"fp_55ebaf7e1e\",\"object\":\"chat.completion.chunk\"}\n\ndata: {\"id\":\"chatcmpl-50a7f2ad-1fdd-48db-b1ca-8cd19a2fcc69\",\"choices\":[{\"delta\":{\"content\":\" '\"},\"index\":0}],\"created\":1730413736,\"model\":\"llama3.1-70b\",\"system_fingerprint\":\"fp_55ebaf7e1e\",\"object\":\"chat.completion.chunk\"}\n\ndata: {\"id\":\"chatcmpl-50a7f2ad-1fdd-48db-b1ca-8cd19a2fcc69\",\"choices\":[{\"delta\":{\"content\":\"test\"},\"index\":0}],\"created\":1730413736,\"model\":\"llama3.1-70b\",\"system_fingerprint\":\"fp_55ebaf7e1e\",\"object\":\"chat.completion.chunk\"}\n\ndata: {\"id\":\"chatcmpl-50a7f2ad-1fdd-48db-b1ca-8cd19a2fcc69\",\"choices\":[{\"delta\":{\"content\":\"'\"},\"index\":0}],\"created\":1730413736,\"model\":\"llama3.1-70b\",\"system_fingerprint\":\"fp_55ebaf7e1e\",\"object\":\"chat.completion.chunk\"}\n\ndata: {\"id\":\"chatcmpl-50a7f2ad-1fdd-48db-b1ca-8cd19a2fcc69\",\"choices\":[{\"delta\":{},\"finish_reason\":\"stop\",\"index\":0}],\"created\":1730413736,\"model\":\"llama3.1-70b\",\"system_fingerprint\":\"fp_55ebaf7e1e\",\"object\":\"chat.completion.chunk\",\"usage\":{\"prompt_tokens\":70,\"completion_tokens\":11,\"total_tokens\":81},\"time_info\":{\"queue_time\":0.000031261,\"prompt_time\":0.0033281226999999996,\"completion_time\":0.0101588773,\"total_time\":0.028438329696655273,\"created\":1730413736}}\n\n"
+        }
+      },
+      "recorded_at": "Thu, 31 Oct 2024 22:28:56 GMT"
+    }
+  ],
+  "recorded_with": "VCR 6.3.1"
+}

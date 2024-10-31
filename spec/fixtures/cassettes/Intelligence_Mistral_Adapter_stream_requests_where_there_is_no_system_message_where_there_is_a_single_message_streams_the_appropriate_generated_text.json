@@ -1,0 +1,102 @@
+{
+  "http_interactions": [
+    {
+      "request": {
+        "method": "post",
+        "uri": "https://api.mistral.ai/v1/chat/completions",
+        "body": {
+          "encoding": "UTF-8",
+          "string": "{\"model\":\"mistral-large-latest\",\"max_tokens\":128,\"temperature\":0.0,\"stream\":true,\"messages\":[{\"role\":\"user\",\"content\":\"respond only with the word 'hello'\\n\"}]}"
+        },
+        "headers": {
+          "User-Agent": [
+            "Faraday v2.12.0"
+          ],
+          "Content-Type": [
+            "application/json"
+          ],
+          "Authorization": [
+            "Bearer <TOKEN>"
+          ]
+        }
+      },
+      "response": {
+        "status": {
+          "code": 200,
+          "message": "OK"
+        },
+        "headers": {
+          "date": [
+            "Thu, 31 Oct 2024 22:29:41 GMT"
+          ],
+          "content-type": [
+            "text/event-stream; charset=utf-8"
+          ],
+          "transfer-encoding": [
+            "chunked"
+          ],
+          "connection": [
+            "keep-alive"
+          ],
+          "ratelimitbysize-query-cost": [
+            "136"
+          ],
+          "ratelimitbysize-limit": [
+            "500000"
+          ],
+          "ratelimitbysize-remaining": [
+            "499201"
+          ],
+          "ratelimitbysize-reset": [
+            "19"
+          ],
+          "x-ratelimitbysize-limit-month": [
+            "1000000000"
+          ],
+          "x-ratelimitbysize-limit-minute": [
+            "500000"
+          ],
+          "x-ratelimitbysize-remaining-month": [
+            "999964042"
+          ],
+          "x-ratelimitbysize-remaining-minute": [
+            "499201"
+          ],
+          "x-envoy-upstream-service-time": [
+            "233"
+          ],
+          "access-control-allow-origin": [
+            "*"
+          ],
+          "x-kong-upstream-latency": [
+            "235"
+          ],
+          "x-kong-proxy-latency": [
+            "0"
+          ],
+          "x-kong-request-id": [
+            "84d36a4b7b4b94133fe93d4aab40292c"
+          ],
+          "cf-cache-status": [
+            "DYNAMIC"
+          ],
+          "server": [
+            "cloudflare"
+          ],
+          "cf-ray": [
+            "<CF-RAY>"
+          ],
+          "alt-svc": [
+            "h3=\":443\"; ma=86400"
+          ]
+        },
+        "body": {
+          "encoding": "UTF-8",
+          "string": "data: {\"id\":\"15ca9f49cee7476792ec2a037c96af44\",\"object\":\"chat.completion.chunk\",\"created\":1730413781,\"model\":\"mistral-large-latest\",\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"\"},\"finish_reason\":null}]}\n\ndata: {\"id\":\"15ca9f49cee7476792ec2a037c96af44\",\"object\":\"chat.completion.chunk\",\"created\":1730413781,\"model\":\"mistral-large-latest\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"Hello\"},\"finish_reason\":null}]}\n\ndata: {\"id\":\"15ca9f49cee7476792ec2a037c96af44\",\"object\":\"chat.completion.chunk\",\"created\":1730413781,\"model\":\"mistral-large-latest\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":11,\"total_tokens\":12,\"completion_tokens\":1}}\n\ndata: [DONE]\n\n"
+        }
+      },
+      "recorded_at": "Thu, 31 Oct 2024 22:29:42 GMT"
+    }
+  ],
+  "recorded_with": "VCR 6.3.1"
+}

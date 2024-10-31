@@ -33,7 +33,7 @@
             "gzip"
           ],
           "date": [
-            "Thu, 31 Oct 2024 19:35:11 GMT"
+            "Thu, 31 Oct 2024 21:16:38 GMT"
           ],
           "server": [
             "scaffolding on HTTPServer2"
@@ -51,7 +51,7 @@
             "nosniff"
           ],
           "server-timing": [
-            "gfet4t7; dur=1100"
+            "gfet4t7; dur=4431"
           ],
           "alt-svc": [
             "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
@@ -62,10 +62,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "{\n  \"candidates\": [\n    {\n      \"content\": {\n        \"parts\": [\n          {\n            \"text\": \"three balloons, yellow, blue, and red\\n\"\n          }\n        ],\n        \"role\": \"model\"\n      },\n      \"finishReason\": \"STOP\",\n      \"avgLogprobs\": -0.18819259405136107\n    }\n  ],\n  \"usageMetadata\": {\n    \"promptTokenCount\": 590,\n    \"candidatesTokenCount\": 10,\n    \"totalTokenCount\": 600\n  },\n  \"modelVersion\": \"gemini-1.5-pro-002\"\n}\n"
+          "string": "{\n  \"candidates\": [\n    {\n      \"content\": {\n        \"parts\": [\n          {\n            \"text\": \"three balloons red yellow blue\\n\"\n          }\n        ],\n        \"role\": \"model\"\n      },\n      \"finishReason\": \"STOP\",\n      \"avgLogprobs\": -0.096526205539703369\n    }\n  ],\n  \"usageMetadata\": {\n    \"promptTokenCount\": 590,\n    \"candidatesTokenCount\": 6,\n    \"totalTokenCount\": 596\n  },\n  \"modelVersion\": \"gemini-1.5-pro-002\"\n}\n"
         }
       },
-      "recorded_at": "Thu, 31 Oct 2024 19:35:11 GMT"
+      "recorded_at": "Thu, 31 Oct 2024 21:16:38 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

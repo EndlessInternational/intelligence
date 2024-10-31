@@ -33,7 +33,7 @@
             "gzip"
           ],
           "date": [
-            "Thu, 31 Oct 2024 19:35:05 GMT"
+            "Thu, 31 Oct 2024 21:16:26 GMT"
           ],
           "server": [
             "scaffolding on HTTPServer2"
@@ -51,7 +51,7 @@
             "nosniff"
           ],
           "server-timing": [
-            "gfet4t7; dur=762"
+            "gfet4t7; dur=746"
           ],
           "alt-svc": [
             "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
@@ -65,7 +65,7 @@
           "string": "{\n  \"candidates\": [\n    {\n      \"content\": {\n        \"parts\": [\n          {\n            \"text\": \"one\\ntwo\\nthree\\nfour\\nfive\\nsix\\nseven\\neight\\n\"\n          }\n        ],\n        \"role\": \"model\"\n      },\n      \"finishReason\": \"MAX_TOKENS\"\n    }\n  ],\n  \"usageMetadata\": {\n    \"promptTokenCount\": 87,\n    \"candidatesTokenCount\": 16,\n    \"totalTokenCount\": 103\n  },\n  \"modelVersion\": \"gemini-1.5-pro-002\"\n}\n"
         }
       },
-      "recorded_at": "Thu, 31 Oct 2024 19:35:05 GMT"
+      "recorded_at": "Thu, 31 Oct 2024 21:16:26 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

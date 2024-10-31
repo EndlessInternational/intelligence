@@ -1,0 +1,54 @@
+{
+  "http_interactions": [
+    {
+      "request": {
+        "method": "post",
+        "uri": "https://api.sambanova.ai/v1/chat/completions",
+        "body": {
+          "encoding": "UTF-8",
+          "string": "{\"model\":\"Meta-Llama-3.1-70B-Instruct\",\"max_tokens\":24,\"temperature\":0.0,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"this is a test, respond with 'test'\\n\"},{\"role\":\"assistant\",\"content\":\"test\\n\"},{\"role\":\"user\",\"content\":\"what was the previous user message?\\nrespond in less than 16 words\\n\"}]}"
+        },
+        "headers": {
+          "User-Agent": [
+            "Faraday v2.12.0"
+          ],
+          "Content-Type": [
+            "application/json"
+          ],
+          "Authorization": [
+            "Bearer <TOKEN>"
+          ]
+        }
+      },
+      "response": {
+        "status": {
+          "code": 200,
+          "message": "OK"
+        },
+        "headers": {
+          "date": [
+            "Thu, 31 Oct 2024 22:30:11 GMT"
+          ],
+          "content-type": [
+            "application/json; charset=utf-8"
+          ],
+          "content-length": [
+            "751"
+          ],
+          "connection": [
+            "keep-alive"
+          ],
+          "strict-transport-security": [
+            "max-age=31536000; includeSubDomains"
+          ]
+        },
+        "body": {
+          "encoding": "UTF-8",
+          "string": "{\"choices\":[{\"finish_reason\":\"stop\",\"index\":0,\"logprobs\":null,\"message\":{\"content\":\"this is a test, respond with 'test'\",\"role\":\"assistant\"}}],\"created\":1730413811,\"id\":\"1b0f8e36-7926-4ae3-8cb1-5beeb3631089\",\"model\":\"Meta-Llama-3.1-70B-Instruct\",\"object\":\"chat.completion\",\"system_fingerprint\":\"fastcoe\",\"usage\":{\"completion_tokens\":10,\"completion_tokens_after_first_per_sec\":370.7945189332548,\"completion_tokens_after_first_per_sec_first_ten\":1772.478289348575,\"completion_tokens_per_sec\":69.56599043495495,\"end_time\":1730413811.3631968,\"is_last_response\":true,\"prompt_tokens\":105,\"start_time\":1730413811.200818,\"time_to_first_token\":0.1381065845489502,\"total_latency\":0.14374840259552002,\"total_tokens\":115,\"total_tokens_per_sec\":800.008890001982}}\n"
+        }
+      },
+      "recorded_at": "Thu, 31 Oct 2024 22:30:11 GMT"
+    }
+  ],
+  "recorded_with": "VCR 6.3.1"
+}

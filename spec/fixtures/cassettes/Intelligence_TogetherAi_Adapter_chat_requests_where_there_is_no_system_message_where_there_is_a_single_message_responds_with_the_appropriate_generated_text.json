@@ -1,0 +1,105 @@
+{
+  "http_interactions": [
+    {
+      "request": {
+        "method": "post",
+        "uri": "https://api.together.xyz/v1/chat/completions",
+        "body": {
+          "encoding": "UTF-8",
+          "string": "{\"model\":\"meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo\",\"max_tokens\":128.0,\"temperature\":0.0,\"messages\":[{\"role\":\"user\",\"content\":\"respond only with the word 'hello'\\n\"}]}"
+        },
+        "headers": {
+          "User-Agent": [
+            "Faraday v2.12.0"
+          ],
+          "Content-Type": [
+            "application/json"
+          ],
+          "Authorization": [
+            "Bearer <TOKEN>"
+          ]
+        }
+      },
+      "response": {
+        "status": {
+          "code": 200,
+          "message": "OK"
+        },
+        "headers": {
+          "date": [
+            "Thu, 31 Oct 2024 22:30:13 GMT"
+          ],
+          "content-type": [
+            "application/json; charset=utf-8"
+          ],
+          "transfer-encoding": [
+            "chunked"
+          ],
+          "connection": [
+            "keep-alive"
+          ],
+          "access-control-allow-origin": [
+            "*"
+          ],
+          "x-api-received": [
+            "2024-10-31T22:30:12.976Z"
+          ],
+          "x-ratelimit": [
+            "false"
+          ],
+          "x-ratelimit-limit": [
+            "10"
+          ],
+          "x-ratelimit-remaining": [
+            "19"
+          ],
+          "x-ratelimit-reset": [
+            "2"
+          ],
+          "x-ratelimit-remaining-tokens": [
+            "3000"
+          ],
+          "x-ratelimit-limit-tokens": [
+            "3000"
+          ],
+          "x-inference-version": [
+            "v2"
+          ],
+          "x-api-call-start": [
+            "2024-10-31T22:30:12.986Z"
+          ],
+          "x-api-call-end": [
+            "2024-10-31T22:30:13.250Z"
+          ],
+          "etag": [
+            "W/\"1fa-TQNPZ1D3vNi85KdzczuhqFowbpU\""
+          ],
+          "cf-cache-status": [
+            "DYNAMIC"
+          ],
+          "strict-transport-security": [
+            "max-age=2592000; includeSubDomains"
+          ],
+          "server": [
+            "cloudflare"
+          ],
+          "cf-ray": [
+            "<CF-RAY>"
+          ],
+          "content-encoding": [
+            "gzip"
+          ],
+          "alt-svc": [
+            "h3=\":443\"; ma=86400"
+          ]
+        },
+        "body": {
+          "encoding": "UTF-8",
+          "string": "{\n  \"id\": \"8db7169b0ce1283a-SEA\",\n  \"object\": \"chat.completion\",\n  \"created\": 1730413812,\n  \"model\": \"meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo\",\n  \"prompt\": [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"eos\",\n      \"seed\": 668979113461366400,\n      \"logprobs\": null,\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": \"hello\",\n        \"tool_calls\": []\n      }\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 44,\n    \"completion_tokens\": 2,\n    \"total_tokens\": 46\n  }\n}"
+        }
+      },
+      "recorded_at": "Thu, 31 Oct 2024 22:30:13 GMT"
+    }
+  ],
+  "recorded_with": "VCR 6.3.1"
+}
