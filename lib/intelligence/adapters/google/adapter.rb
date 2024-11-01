@@ -35,6 +35,19 @@ module Intelligence
           response_mime_type String,  as: :responseMimeType
           response_schema             as: :responseSchema
 
+          # google tools setup 
+          tools                       do 
+            google_search             as: :google_search_retrieval do 
+              dynamic_retrieval       as: :dynamic_retrieval_config, default: {} do 
+                mode                  String, default: 'MODE_DYNAMIC'
+                threshold             Float, as: :dynamic_threshold, in: 0..1, default: 0.3
+              end
+            end
+            
+            code_execution            do 
+            end
+          end 
+
           # google specific tool configuration
           tool_configuration          as: :tool_config do
             function_calling          as: :function_calling_config do 

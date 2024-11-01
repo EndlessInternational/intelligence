@@ -61,16 +61,33 @@ module Intelligence
         # discard properties not part of the google generationConfig schema
         gc.delete( :model )
         gc.delete( :stream )
-        
+
+        # googlify tools 
+        tools = gc.delete( :tools )
+        if tools&.any?
+          tools = tools.then do | tools_object |
+            tools_array ||= []
+            tools_object.each { | key, value | tools_array << { key => value } } 
+            tools_array
+          end 
+        end 
+        tool_functions = to_google_tools( conversation[ :tools ] )
+        if tool_functions&.any?
+          tools ||= {}
+          tools[ :function_declarations ] ||= []
+          tools[ :function_declarations ].concat( tool_functions )
+        end 
+
         # googlify tool configuration 
         if tool_config = gc.delete( :tool_config )
           mode = tool_config[ :function_calling_config ]&.[]( :mode )
           tool_config[ :function_calling_config ][ :mode ] = mode.to_s.upcase if mode 
         end 
-      
+
         result = {}
         result[ :generationConfig ] = gc
-        result[ :tool_config ] = tool_config if tool_config
+        result[ :tools ] = tools if tools 
+        result[ :tool_config ] = tool_config if tools && tool_config
 
         # construct the system prompt in the form of the google schema
         system_instructions = to_google_system_message( conversation[ :system_message ] )
@@ -162,10 +179,6 @@ module Intelligence
           result[ :contents ] << result_message
 
         end 
-
-        tools_attributes = to_google_tools( conversation[ :tools ] )
-        result[ :tools ] = [ { function_declarations: tools_attributes } ] \
-          if tools_attributes&.any?
 
         JSON.generate( result )
       end 

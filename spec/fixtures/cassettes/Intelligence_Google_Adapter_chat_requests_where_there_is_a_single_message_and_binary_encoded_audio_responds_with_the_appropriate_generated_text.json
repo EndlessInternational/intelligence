@@ -33,7 +33,7 @@
             "gzip"
           ],
           "date": [
-            "Thu, 31 Oct 2024 21:17:16 GMT"
+            "Fri, 01 Nov 2024 21:06:56 GMT"
           ],
           "server": [
             "scaffolding on HTTPServer2"
@@ -51,7 +51,7 @@
             "nosniff"
           ],
           "server-timing": [
-            "gfet4t7; dur=814"
+            "gfet4t7; dur=1970"
           ],
           "alt-svc": [
             "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
@@ -62,10 +62,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "{\n  \"candidates\": [\n    {\n      \"content\": {\n        \"parts\": [\n          {\n            \"text\": \"This is a test.\\n\"\n          }\n        ],\n        \"role\": \"model\"\n      },\n      \"finishReason\": \"STOP\",\n      \"avgLogprobs\": -0.0023248616295556226\n    }\n  ],\n  \"usageMetadata\": {\n    \"promptTokenCount\": 151,\n    \"candidatesTokenCount\": 6,\n    \"totalTokenCount\": 157\n  },\n  \"modelVersion\": \"gemini-1.5-pro-002\"\n}\n"
+          "string": "{\n  \"candidates\": [\n    {\n      \"content\": {\n        \"parts\": [\n          {\n            \"text\": \"This is a test.\\n\"\n          }\n        ],\n        \"role\": \"model\"\n      },\n      \"finishReason\": \"STOP\",\n      \"avgLogprobs\": -0.0011993376538157463\n    }\n  ],\n  \"usageMetadata\": {\n    \"promptTokenCount\": 151,\n    \"candidatesTokenCount\": 6,\n    \"totalTokenCount\": 157\n  },\n  \"modelVersion\": \"gemini-1.5-pro-002\"\n}\n"
         }
       },
-      "recorded_at": "Thu, 31 Oct 2024 21:17:16 GMT"
+      "recorded_at": "Fri, 01 Nov 2024 21:06:56 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"
