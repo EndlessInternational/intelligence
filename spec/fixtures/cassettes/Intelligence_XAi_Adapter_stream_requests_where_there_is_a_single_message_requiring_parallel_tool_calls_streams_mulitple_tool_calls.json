@@ -1,0 +1,75 @@
+{
+  "http_interactions": [
+    {
+      "request": {
+        "method": "post",
+        "uri": "https://api.x.ai/v1/chat/completions",
+        "body": {
+          "encoding": "UTF-8",
+          "string": "{\"model\":\"grok-beta\",\"max_tokens\":128,\"temperature\":0.0,\"stream\":true,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"What is the weather in London, Paris and Rome right now?\\n\"}],\"tools\":[{\"type\":\"function\",\"function\":{\"name\":\"get_weather\",\"description\":\"The get_weather tool will return the current weather in a given locality.\",\"parameters\":{\"type\":\"object\",\"properties\":{\"city\":{\"type\":\"string\",\"description\":\"The city or town for which the current weather should be returned.\"},\"state\":{\"type\":\"string\",\"description\":\"The state or province for which the current weather should be returned. If this is not provided the largest or most prominent city with the given name, in the given country or in the worldi, will be assumed.\"},\"country\":{\"type\":\"string\",\"description\":\"The country for which the given weather should be returned. If this is not provided the largest or most prominent city with the given name will be returned.\"}},\"required\":[\"city\"]}}}]}"
+        },
+        "headers": {
+          "User-Agent": [
+            "Faraday v2.12.0"
+          ],
+          "Content-Type": [
+            "application/json"
+          ],
+          "Authorization": [
+            "Bearer <TOKEN>"
+          ]
+        }
+      },
+      "response": {
+        "status": {
+          "code": 200,
+          "message": "OK"
+        },
+        "headers": {
+          "date": [
+            "Mon, 04 Nov 2024 20:31:27 GMT"
+          ],
+          "content-type": [
+            "text/event-stream"
+          ],
+          "transfer-encoding": [
+            "chunked"
+          ],
+          "connection": [
+            "keep-alive"
+          ],
+          "cache-control": [
+            "no-cache"
+          ],
+          "vary": [
+            "origin, access-control-request-method, access-control-request-headers"
+          ],
+          "access-control-allow-origin": [
+            "*"
+          ],
+          "access-control-expose-headers": [
+            "*"
+          ],
+          "cf-cache-status": [
+            "DYNAMIC"
+          ],
+          "strict-transport-security": [
+            "max-age=31536000"
+          ],
+          "server": [
+            "cloudflare"
+          ],
+          "cf-ray": [
+            "<CF-RAY>"
+          ]
+        },
+        "body": {
+          "encoding": "UTF-8",
+          "string": "data: {\"id\":\"1114ea8c-cb63-43aa-a3ec-3c224bb230e4\",\"object\":\"chat.completion.chunk\",\"created\":1730752287,\"model\":\"grok-beta\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"I\",\"role\":\"assistant\"}}],\"usage\":{\"prompt_tokens\":314,\"completion_tokens\":1,\"total_tokens\":315},\"system_fingerprint\":\"fp_15c3499eda\"}\n\ndata: {\"id\":\"1114ea8c-cb63-43aa-a3ec-3c224bb230e4\",\"object\":\"chat.completion.chunk\",\"created\":1730752287,\"model\":\"grok-beta\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\" can\",\"role\":\"assistant\"}}],\"usage\":{\"prompt_tokens\":314,\"completion_tokens\":2,\"total_tokens\":316},\"system_fingerprint\":\"fp_15c3499eda\"}\n\ndata: {\"id\":\"1114ea8c-cb63-43aa-a3ec-3c224bb230e4\",\"object\":\"chat.completion.chunk\",\"created\":1730752287,\"model\":\"grok-beta\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\" check\",\"role\":\"assistant\"}}],\"usage\":{\"prompt_tokens\":314,\"completion_tokens\":3,\"total_tokens\":317},\"system_fingerprint\":\"fp_15c3499eda\"}\n\ndata: {\"id\":\"1114ea8c-cb63-43aa-a3ec-3c224bb230e4\",\"object\":\"chat.completion.chunk\",\"created\":1730752287,\"model\":\"grok-beta\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\" the\",\"role\":\"assistant\"}}],\"usage\":{\"prompt_tokens\":314,\"completion_tokens\":4,\"total_tokens\":318},\"system_fingerprint\":\"fp_15c3499eda\"}\n\ndata: {\"id\":\"1114ea8c-cb63-43aa-a3ec-3c224bb230e4\",\"object\":\"chat.completion.chunk\",\"created\":1730752287,\"model\":\"grok-beta\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\" weather\",\"role\":\"assistant\"}}],\"usage\":{\"prompt_tokens\":314,\"completion_tokens\":5,\"total_tokens\":319},\"system_fingerprint\":\"fp_15c3499eda\"}\n\ndata: {\"id\":\"1114ea8c-cb63-43aa-a3ec-3c224bb230e4\",\"object\":\"chat.completion.chunk\",\"created\":1730752287,\"model\":\"grok-beta\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\" for\",\"role\":\"assistant\"}}],\"usage\":{\"prompt_tokens\":314,\"completion_tokens\":6,\"total_tokens\":320},\"system_fingerprint\":\"fp_15c3499eda\"}\n\ndata: {\"id\":\"1114ea8c-cb63-43aa-a3ec-3c224bb230e4\",\"object\":\"chat.completion.chunk\",\"created\":1730752287,\"model\":\"grok-beta\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\" one\",\"role\":\"assistant\"}}],\"usage\":{\"prompt_tokens\":314,\"completion_tokens\":7,\"total_tokens\":321},\"system_fingerprint\":\"fp_15c3499eda\"}\n\ndata: {\"id\":\"1114ea8c-cb63-43aa-a3ec-3c224bb230e4\",\"object\":\"chat.completion.chunk\",\"created\":1730752287,\"model\":\"grok-beta\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\" city\",\"role\":\"assistant\"}}],\"usage\":{\"prompt_tokens\":314,\"completion_tokens\":8,\"total_tokens\":322},\"system_fingerprint\":\"fp_15c3499eda\"}\n\ndata: {\"id\":\"1114ea8c-cb63-43aa-a3ec-3c224bb230e4\",\"object\":\"chat.completion.chunk\",\"created\":1730752287,\"model\":\"grok-beta\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\" at\",\"role\":\"assistant\"}}],\"usage\":{\"prompt_tokens\":314,\"completion_tokens\":9,\"total_tokens\":323},\"system_fingerprint\":\"fp_15c3499eda\"}\n\ndata: {\"id\":\"1114ea8c-cb63-43aa-a3ec-3c224bb230e4\",\"object\":\"chat.completion.chunk\",\"created\":1730752287,\"model\":\"grok-beta\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\" a\",\"role\":\"assistant\"}}],\"usage\":{\"prompt_tokens\":314,\"completion_tokens\":10,\"total_tokens\":324},\"system_fingerprint\":\"fp_15c3499eda\"}\n\ndata: {\"id\":\"1114ea8c-cb63-43aa-a3ec-3c224bb230e4\",\"object\":\"chat.completion.chunk\",\"created\":1730752287,\"model\":\"grok-beta\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\" time\",\"role\":\"assistant\"}}],\"usage\":{\"prompt_tokens\":314,\"completion_tokens\":11,\"total_tokens\":325},\"system_fingerprint\":\"fp_15c3499eda\"}\n\ndata: {\"id\":\"1114ea8c-cb63-43aa-a3ec-3c224bb230e4\",\"object\":\"chat.completion.chunk\",\"created\":1730752287,\"model\":\"grok-beta\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\".\",\"role\":\"assistant\"}}],\"usage\":{\"prompt_tokens\":314,\"completion_tokens\":12,\"total_tokens\":326},\"system_fingerprint\":\"fp_15c3499eda\"}\n\ndata: {\"id\":\"1114ea8c-cb63-43aa-a3ec-3c224bb230e4\",\"object\":\"chat.completion.chunk\",\"created\":1730752287,\"model\":\"grok-beta\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\" Which\",\"role\":\"assistant\"}}],\"usage\":{\"prompt_tokens\":314,\"completion_tokens\":13,\"total_tokens\":327},\"system_fingerprint\":\"fp_15c3499eda\"}\n\ndata: {\"id\":\"1114ea8c-cb63-43aa-a3ec-3c224bb230e4\",\"object\":\"chat.completion.chunk\",\"created\":1730752287,\"model\":\"grok-beta\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\" city\",\"role\":\"assistant\"}}],\"usage\":{\"prompt_tokens\":314,\"completion_tokens\":14,\"total_tokens\":328},\"system_fingerprint\":\"fp_15c3499eda\"}\n\ndata: {\"id\":\"1114ea8c-cb63-43aa-a3ec-3c224bb230e4\",\"object\":\"chat.completion.chunk\",\"created\":1730752287,\"model\":\"grok-beta\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\" would\",\"role\":\"assistant\"}}],\"usage\":{\"prompt_tokens\":314,\"completion_tokens\":15,\"total_tokens\":329},\"system_fingerprint\":\"fp_15c3499eda\"}\n\ndata: {\"id\":\"1114ea8c-cb63-43aa-a3ec-3c224bb230e4\",\"object\":\"chat.completion.chunk\",\"created\":1730752287,\"model\":\"grok-beta\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\" you\",\"role\":\"assistant\"}}],\"usage\":{\"prompt_tokens\":314,\"completion_tokens\":16,\"total_tokens\":330},\"system_fingerprint\":\"fp_15c3499eda\"}\n\ndata: {\"id\":\"1114ea8c-cb63-43aa-a3ec-3c224bb230e4\",\"object\":\"chat.completion.chunk\",\"created\":1730752287,\"model\":\"grok-beta\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\" like\",\"role\":\"assistant\"}}],\"usage\":{\"prompt_tokens\":314,\"completion_tokens\":17,\"total_tokens\":331},\"system_fingerprint\":\"fp_15c3499eda\"}\n\ndata: {\"id\":\"1114ea8c-cb63-43aa-a3ec-3c224bb230e4\",\"object\":\"chat.completion.chunk\",\"created\":1730752287,\"model\":\"grok-beta\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\" me\",\"role\":\"assistant\"}}],\"usage\":{\"prompt_tokens\":314,\"completion_tokens\":18,\"total_tokens\":332},\"system_fingerprint\":\"fp_15c3499eda\"}\n\ndata: {\"id\":\"1114ea8c-cb63-43aa-a3ec-3c224bb230e4\",\"object\":\"chat.completion.chunk\",\"created\":1730752287,\"model\":\"grok-beta\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\" to\",\"role\":\"assistant\"}}],\"usage\":{\"prompt_tokens\":314,\"completion_tokens\":19,\"total_tokens\":333},\"system_fingerprint\":\"fp_15c3499eda\"}\n\ndata: {\"id\":\"1114ea8c-cb63-43aa-a3ec-3c224bb230e4\",\"object\":\"chat.completion.chunk\",\"created\":1730752287,\"model\":\"grok-beta\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\" start\",\"role\":\"assistant\"}}],\"usage\":{\"prompt_tokens\":314,\"completion_tokens\":20,\"total_tokens\":334},\"system_fingerprint\":\"fp_15c3499eda\"}\n\ndata: {\"id\":\"1114ea8c-cb63-43aa-a3ec-3c224bb230e4\",\"object\":\"chat.completion.chunk\",\"created\":1730752287,\"model\":\"grok-beta\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\" with\",\"role\":\"assistant\"}}],\"usage\":{\"prompt_tokens\":314,\"completion_tokens\":21,\"total_tokens\":335},\"system_fingerprint\":\"fp_15c3499eda\"}\n\ndata: {\"id\":\"1114ea8c-cb63-43aa-a3ec-3c224bb230e4\",\"object\":\"chat.completion.chunk\",\"created\":1730752288,\"model\":\"grok-beta\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"?\",\"role\":\"assistant\"}}],\"usage\":{\"prompt_tokens\":314,\"completion_tokens\":22,\"total_tokens\":336},\"system_fingerprint\":\"fp_15c3499eda\"}\n\ndata: {\"id\":\"1114ea8c-cb63-43aa-a3ec-3c224bb230e4\",\"object\":\"chat.completion.chunk\",\"created\":1730752288,\"model\":\"grok-beta\",\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":314,\"completion_tokens\":23,\"total_tokens\":337},\"system_fingerprint\":\"fp_15c3499eda\"}\n\ndata: [DONE]\n\n"
+        }
+      },
+      "recorded_at": "Mon, 04 Nov 2024 20:31:28 GMT"
+    }
+  ],
+  "recorded_with": "VCR 6.3.1"
+}

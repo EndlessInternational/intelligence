@@ -1,0 +1,75 @@
+{
+  "http_interactions": [
+    {
+      "request": {
+        "method": "post",
+        "uri": "https://api.x.ai/v1/chat/completions",
+        "body": {
+          "encoding": "UTF-8",
+          "string": "{\"model\":\"grok-beta\",\"max_tokens\":128,\"temperature\":0.0,\"stream\":true,\"messages\":[{\"role\":\"system\",\"content\":\"You are a helpfull assistant who answers questions succinctly.\"},{\"role\":\"user\",\"content\":\"Where am I located?\"},{\"role\":\"assistant\",\"tool_calls\":[{\"id\":\"MpfiuoRaM\",\"type\":\"function\",\"function\":{\"name\":\"get_location\",\"arguments\":\"{}\"}}],\"content\":\"\"},{\"role\":\"tool\",\"tool_call_id\":\"MpfiuoRaM\",\"content\":\"Seattle, WA, USA\"}],\"tools\":[{\"type\":\"function\",\"function\":{\"name\":\"get_location\",\"description\":\"The get_location tool will return the users city, state or province and country.\",\"parameters\":{}}}]}"
+        },
+        "headers": {
+          "User-Agent": [
+            "Faraday v2.12.0"
+          ],
+          "Content-Type": [
+            "application/json"
+          ],
+          "Authorization": [
+            "Bearer <TOKEN>"
+          ]
+        }
+      },
+      "response": {
+        "status": {
+          "code": 200,
+          "message": "OK"
+        },
+        "headers": {
+          "date": [
+            "Mon, 04 Nov 2024 20:55:48 GMT"
+          ],
+          "content-type": [
+            "text/event-stream"
+          ],
+          "transfer-encoding": [
+            "chunked"
+          ],
+          "connection": [
+            "keep-alive"
+          ],
+          "cache-control": [
+            "no-cache"
+          ],
+          "vary": [
+            "origin, access-control-request-method, access-control-request-headers"
+          ],
+          "access-control-allow-origin": [
+            "*"
+          ],
+          "access-control-expose-headers": [
+            "*"
+          ],
+          "cf-cache-status": [
+            "DYNAMIC"
+          ],
+          "strict-transport-security": [
+            "max-age=31536000"
+          ],
+          "server": [
+            "cloudflare"
+          ],
+          "cf-ray": [
+            "<CF-RAY>"
+          ]
+        },
+        "body": {
+          "encoding": "UTF-8",
+          "string": "data: {\"id\":\"eebb5fdb-59f3-427d-8edf-5cb5f831196b\",\"object\":\"chat.completion.chunk\",\"created\":1730753748,\"model\":\"grok-beta\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"You\",\"role\":\"assistant\"}}],\"usage\":{\"prompt_tokens\":121,\"completion_tokens\":1,\"total_tokens\":122},\"system_fingerprint\":\"fp_15c3499eda\"}\n\ndata: {\"id\":\"eebb5fdb-59f3-427d-8edf-5cb5f831196b\",\"object\":\"chat.completion.chunk\",\"created\":1730753748,\"model\":\"grok-beta\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\" are\",\"role\":\"assistant\"}}],\"usage\":{\"prompt_tokens\":121,\"completion_tokens\":2,\"total_tokens\":123},\"system_fingerprint\":\"fp_15c3499eda\"}\n\ndata: {\"id\":\"eebb5fdb-59f3-427d-8edf-5cb5f831196b\",\"object\":\"chat.completion.chunk\",\"created\":1730753748,\"model\":\"grok-beta\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\" located\",\"role\":\"assistant\"}}],\"usage\":{\"prompt_tokens\":121,\"completion_tokens\":3,\"total_tokens\":124},\"system_fingerprint\":\"fp_15c3499eda\"}\n\ndata: {\"id\":\"eebb5fdb-59f3-427d-8edf-5cb5f831196b\",\"object\":\"chat.completion.chunk\",\"created\":1730753748,\"model\":\"grok-beta\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\" in\",\"role\":\"assistant\"}}],\"usage\":{\"prompt_tokens\":121,\"completion_tokens\":4,\"total_tokens\":125},\"system_fingerprint\":\"fp_15c3499eda\"}\n\ndata: {\"id\":\"eebb5fdb-59f3-427d-8edf-5cb5f831196b\",\"object\":\"chat.completion.chunk\",\"created\":1730753748,\"model\":\"grok-beta\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\" Seattle\",\"role\":\"assistant\"}}],\"usage\":{\"prompt_tokens\":121,\"completion_tokens\":5,\"total_tokens\":126},\"system_fingerprint\":\"fp_15c3499eda\"}\n\ndata: {\"id\":\"eebb5fdb-59f3-427d-8edf-5cb5f831196b\",\"object\":\"chat.completion.chunk\",\"created\":1730753748,\"model\":\"grok-beta\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\",\",\"role\":\"assistant\"}}],\"usage\":{\"prompt_tokens\":121,\"completion_tokens\":6,\"total_tokens\":127},\"system_fingerprint\":\"fp_15c3499eda\"}\n\ndata: {\"id\":\"eebb5fdb-59f3-427d-8edf-5cb5f831196b\",\"object\":\"chat.completion.chunk\",\"created\":1730753748,\"model\":\"grok-beta\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\" WA\",\"role\":\"assistant\"}}],\"usage\":{\"prompt_tokens\":121,\"completion_tokens\":7,\"total_tokens\":128},\"system_fingerprint\":\"fp_15c3499eda\"}\n\ndata: {\"id\":\"eebb5fdb-59f3-427d-8edf-5cb5f831196b\",\"object\":\"chat.completion.chunk\",\"created\":1730753748,\"model\":\"grok-beta\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\",\",\"role\":\"assistant\"}}],\"usage\":{\"prompt_tokens\":121,\"completion_tokens\":8,\"total_tokens\":129},\"system_fingerprint\":\"fp_15c3499eda\"}\n\ndata: {\"id\":\"eebb5fdb-59f3-427d-8edf-5cb5f831196b\",\"object\":\"chat.completion.chunk\",\"created\":1730753748,\"model\":\"grok-beta\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\" USA\",\"role\":\"assistant\"}}],\"usage\":{\"prompt_tokens\":121,\"completion_tokens\":9,\"total_tokens\":130},\"system_fingerprint\":\"fp_15c3499eda\"}\n\ndata: {\"id\":\"eebb5fdb-59f3-427d-8edf-5cb5f831196b\",\"object\":\"chat.completion.chunk\",\"created\":1730753748,\"model\":\"grok-beta\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\".\",\"role\":\"assistant\"}}],\"usage\":{\"prompt_tokens\":121,\"completion_tokens\":10,\"total_tokens\":131},\"system_fingerprint\":\"fp_15c3499eda\"}\n\ndata: {\"id\":\"eebb5fdb-59f3-427d-8edf-5cb5f831196b\",\"object\":\"chat.completion.chunk\",\"created\":1730753748,\"model\":\"grok-beta\",\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":121,\"completion_tokens\":11,\"total_tokens\":132},\"system_fingerprint\":\"fp_15c3499eda\"}\n\ndata: [DONE]\n\n"
+        }
+      },
+      "recorded_at": "Mon, 04 Nov 2024 20:55:48 GMT"
+    }
+  ],
+  "recorded_with": "VCR 6.3.1"
+}
