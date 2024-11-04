@@ -41,7 +41,7 @@ RSpec.shared_examples 'stream requests' do
         conversation =  create_conversation_without_system_message( 
           "this is a test, respond with 'test'\n",
           "test\n",
-          "what was the previous user message?\nrespond in less than 16 words\n"
+          "what was the user message before this one?\nrespond in less than 16 words\n"
         )
         
         text = ''
@@ -111,7 +111,7 @@ RSpec.shared_examples 'stream requests' do
         conversation =  create_conversation( 
           "this is a test, respond with 'test'\n",
           "test\n",
-          "what was the previous user message?\nrespond in less than 16 words\n"
+          "what was the user message before this one?\nrespond in less than 16 words\n"
         )
         
         text = ''

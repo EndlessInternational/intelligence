@@ -38,7 +38,7 @@ RSpec.shared_examples 'chat requests' do
           create_conversation_without_system_message( 
             "this is a test, respond with 'test'\n",
             "test\n",
-            "what was the previous user message?\nrespond in less than 16 words\n"
+            "what was the user message before this one?\nrespond in less than 16 words\n"
           )
         )
         
@@ -98,7 +98,7 @@ RSpec.shared_examples 'chat requests' do
           create_conversation( 
             "this is a test, respond with 'test'\n",
             "test\n",
-            "what was the previous user message?\nrespond in less than 16 words\n"
+            "what was the user message before this one?\nrespond in less than 16 words\n"
           )
         )
         
