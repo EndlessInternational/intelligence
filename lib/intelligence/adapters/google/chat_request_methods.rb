@@ -57,7 +57,7 @@ module Intelligence
       def chat_request_body( conversation, options = {} )
         options = @options.merge( build_options( options ) )
 
-        gc = options[ :generationConfig ]
+        gc = options[ :generationConfig ]&.dup || {}
         # discard properties not part of the google generationConfig schema
         gc.delete( :model )
         gc.delete( :stream )
