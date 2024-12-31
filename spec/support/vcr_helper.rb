@@ -51,10 +51,14 @@ CASSETTE_OPTIONS = {
 RSpec.shared_context 'vcr' do 
   
   around( :each ) do | example |
-    options = CASSETTE_OPTIONS
-    options[ :record ] = :all if example.metadata[ :record_cassettes ]
-    VCR.use_cassette( example.metadata[ :full_description ], options )  do 
+    if example.metadata[ :ignore_cassettes ]
       example.run
+    else
+      options = CASSETTE_OPTIONS.dup
+      options[ :record ] = :all if example.metadata[ :record_cassettes ]
+      VCR.use_cassette( example.metadata[ :full_description ], options ) do
+        example.run
+      end
     end
   end
 

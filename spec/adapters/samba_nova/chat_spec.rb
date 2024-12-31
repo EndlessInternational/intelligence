@@ -4,6 +4,12 @@ RSpec.describe "#{Intelligence::Adapter[ :samba_nova ]} chat requests", :samba_n
 
   include_context 'vcr'
 
+  # this is needed for samba nova test to avoid the rate limit
+  after( :each ) do | example |
+    cassette = VCR.current_cassette
+    sleep 5 if cassette && cassette.new_recorded_interactions.any? 
+  end
+
   before do
     raise "A SAMBANOVA_API_KEY must be defined in the environment." unless ENV[ 'SAMBANOVA_API_KEY' ]
   end

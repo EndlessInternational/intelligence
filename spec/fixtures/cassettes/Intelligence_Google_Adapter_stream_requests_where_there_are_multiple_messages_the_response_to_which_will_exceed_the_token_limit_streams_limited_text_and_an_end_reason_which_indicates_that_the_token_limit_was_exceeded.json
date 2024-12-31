@@ -36,7 +36,7 @@
             "chunked"
           ],
           "date": [
-            "Fri, 01 Nov 2024 21:07:13 GMT"
+            "Fri, 08 Nov 2024 01:20:06 GMT"
           ],
           "server": [
             "scaffolding on HTTPServer2"
@@ -51,7 +51,7 @@
             "nosniff"
           ],
           "server-timing": [
-            "gfet4t7; dur=452"
+            "gfet4t7; dur=640"
           ],
           "alt-svc": [
             "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
@@ -62,7 +62,71 @@
           "string": "data: {\"candidates\": [{\"content\": {\"parts\": [{\"text\": \"one\"}],\"role\": \"model\"}}],\"usageMetadata\": {\"promptTokenCount\": 87,\"totalTokenCount\": 87},\"modelVersion\": \"gemini-1.5-pro-002\"}\r\n\r\ndata: {\"candidates\": [{\"content\": {\"parts\": [{\"text\": \"\\ntwo\\nthree\\nfour\\nfive\\nsix\\nseven\\neight\\n\"}],\"role\": \"model\"},\"finishReason\": \"MAX_TOKENS\"}],\"usageMetadata\": {\"promptTokenCount\": 87,\"candidatesTokenCount\": 16,\"totalTokenCount\": 103},\"modelVersion\": \"gemini-1.5-pro-002\"}\r\n\r\n"
         }
       },
-      "recorded_at": "Fri, 01 Nov 2024 21:07:13 GMT"
+      "recorded_at": "Fri, 08 Nov 2024 01:20:06 GMT"
+    },
+    {
+      "request": {
+        "method": "post",
+        "uri": "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:streamGenerateContent?alt=sse&key=<KEY>",
+        "body": {
+          "encoding": "UTF-8",
+          "string": "{\"generationConfig\":{\"maxOutputTokens\":16,\"temperature\":0.0},\"systemInstruction\":{\"role\":\"user\",\"parts\":[{\"text\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"}]},\"contents\":[{\"role\":\"user\",\"parts\":[{\"text\":\"count to five in words, all lower case, one word per line\\n\"}]},{\"role\":\"model\",\"parts\":[{\"text\":\"one\\ntwo\\nthree\\nfour\\nfive\\n\"}]},{\"role\":\"user\",\"parts\":[{\"text\":\"count to twenty in words, all lower case, one word per line\\n\"}]}]}"
+        },
+        "headers": {
+          "User-Agent": [
+            "Faraday v2.12.0"
+          ],
+          "Content-Type": [
+            "application/json"
+          ]
+        }
+      },
+      "response": {
+        "status": {
+          "code": 200,
+          "message": "OK"
+        },
+        "headers": {
+          "content-type": [
+            "text/event-stream"
+          ],
+          "content-disposition": [
+            "attachment"
+          ],
+          "vary": [
+            "Origin, X-Origin, Referer"
+          ],
+          "transfer-encoding": [
+            "chunked"
+          ],
+          "date": [
+            "Tue, 31 Dec 2024 01:11:11 GMT"
+          ],
+          "server": [
+            "scaffolding on HTTPServer2"
+          ],
+          "x-xss-protection": [
+            "0"
+          ],
+          "x-frame-options": [
+            "SAMEORIGIN"
+          ],
+          "x-content-type-options": [
+            "nosniff"
+          ],
+          "server-timing": [
+            "gfet4t7; dur=421"
+          ],
+          "alt-svc": [
+            "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+          ]
+        },
+        "body": {
+          "encoding": "UTF-8",
+          "string": "data: {\"candidates\": [{\"content\": {\"parts\": [{\"text\": \"one\"}],\"role\": \"model\"}}],\"usageMetadata\": {\"promptTokenCount\": 87,\"totalTokenCount\": 87},\"modelVersion\": \"gemini-1.5-pro-002\"}\r\n\r\ndata: {\"candidates\": [{\"content\": {\"parts\": [{\"text\": \"\\ntwo\\nthree\\nfour\\nfive\\nsix\\nseven\\neight\\n\"}],\"role\": \"model\"},\"finishReason\": \"MAX_TOKENS\"}],\"usageMetadata\": {\"promptTokenCount\": 87,\"candidatesTokenCount\": 16,\"totalTokenCount\": 103},\"modelVersion\": \"gemini-1.5-pro-002\"}\r\n\r\n"
+        }
+      },
+      "recorded_at": "Tue, 31 Dec 2024 01:11:11 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

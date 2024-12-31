@@ -39,9 +39,9 @@ RSpec.shared_examples 'stream requests' do
       it 'streams the appropriate generated text' do
       
         conversation =  create_conversation_without_system_message( 
-          "this is a test, respond with 'test'\n",
-          "test\n",
-          "what was the user message before this one?\nrespond in less than 16 words\n"
+          "the secret word is 'blue'\n",
+          "ok\n",
+          "what is the secret word?\nrespond with the word only\n" 
         )
         
         text = ''
@@ -66,7 +66,7 @@ RSpec.shared_examples 'stream requests' do
         expect( response.result.choices.first ).to be_a( Intelligence::ChatResultChoice )
         expect( response.result.choices.first.end_reason ).to eq( :ended )
 
-        expect( text ).to match( /this is a test|respond with/i )
+        expect( text ).to match( /blue/i )
 
       end
     end
@@ -109,9 +109,9 @@ RSpec.shared_examples 'stream requests' do
       it 'streams the appropriate generated text' do
       
         conversation =  create_conversation( 
-          "this is a test, respond with 'test'\n",
-          "test\n",
-          "what was the user message before this one?\nrespond in less than 16 words\n"
+          "the secret word is 'blue'\n",
+          "ok\n",
+          "what is the secret word?\nrespond with the word only\n" 
         )
         
         text = ''
@@ -136,7 +136,7 @@ RSpec.shared_examples 'stream requests' do
         expect( response.result.choices.first ).to be_a( Intelligence::ChatResultChoice )
         expect( response.result.choices.first.end_reason ).to eq( :ended )
 
-        expect( text ).to match( /this is a test|respond with/i )
+        expect( text ).to match( /blue/i )
 
       end
     end

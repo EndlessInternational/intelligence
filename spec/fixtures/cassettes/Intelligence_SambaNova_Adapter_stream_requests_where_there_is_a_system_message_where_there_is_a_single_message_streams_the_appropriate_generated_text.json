@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Thu, 31 Oct 2024 22:30:12 GMT"
+            "Tue, 31 Dec 2024 01:32:47 GMT"
           ],
           "content-type": [
             "text/event-stream; charset=utf-8"
@@ -44,10 +44,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "data: {\"choices\":[{\"delta\":{\"content\":\"\",\"role\":\"assistant\"},\"finish_reason\":null,\"index\":0,\"logprobs\":null}],\"created\":1730413812,\"id\":\"ffdb1f39-80a3-4c04-82d5-847655d91384\",\"model\":\"Meta-Llama-3.1-70B-Instruct\",\"object\":\"chat.completion.chunk\",\"system_fingerprint\":\"fastcoe\"}\n\ndata: {\"choices\":[{\"delta\":{\"content\":\"hello\",\"role\":\"assistant\"},\"finish_reason\":null,\"index\":0,\"logprobs\":null}],\"created\":1730413812,\"id\":\"ffdb1f39-80a3-4c04-82d5-847655d91384\",\"model\":\"Meta-Llama-3.1-70B-Instruct\",\"object\":\"chat.completion.chunk\",\"system_fingerprint\":\"fastcoe\"}\n\ndata: {\"choices\":[{\"delta\":{\"content\":\"\"},\"finish_reason\":\"stop\",\"index\":0,\"logprobs\":null}],\"created\":1730413812,\"id\":\"ffdb1f39-80a3-4c04-82d5-847655d91384\",\"model\":\"Meta-Llama-3.1-70B-Instruct\",\"object\":\"chat.completion.chunk\",\"system_fingerprint\":\"fastcoe\"}\n\ndata: [DONE]\n\n"
+          "string": "data: {\"choices\":[{\"delta\":{\"content\":\"\",\"role\":\"assistant\"},\"finish_reason\":null,\"index\":0,\"logprobs\":null}],\"created\":1735608767,\"id\":\"24ba12ab-a51e-4636-abad-f5520f836620\",\"model\":\"Meta-Llama-3.1-70B-Instruct\",\"object\":\"chat.completion.chunk\",\"system_fingerprint\":\"fastcoe\"}\n\ndata: {\"choices\":[{\"delta\":{\"content\":\"hello\",\"role\":\"assistant\"},\"finish_reason\":null,\"index\":0,\"logprobs\":null}],\"created\":1735608767,\"id\":\"24ba12ab-a51e-4636-abad-f5520f836620\",\"model\":\"Meta-Llama-3.1-70B-Instruct\",\"object\":\"chat.completion.chunk\",\"system_fingerprint\":\"fastcoe\"}\n\ndata: {\"choices\":[{\"delta\":{\"content\":\"\"},\"finish_reason\":\"stop\",\"index\":0,\"logprobs\":null}],\"created\":1735608767,\"id\":\"24ba12ab-a51e-4636-abad-f5520f836620\",\"model\":\"Meta-Llama-3.1-70B-Instruct\",\"object\":\"chat.completion.chunk\",\"system_fingerprint\":\"fastcoe\"}\n\ndata: [DONE]\n\n"
         }
       },
-      "recorded_at": "Thu, 31 Oct 2024 22:30:12 GMT"
+      "recorded_at": "Tue, 31 Dec 2024 01:32:47 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

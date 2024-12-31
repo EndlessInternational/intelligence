@@ -6,7 +6,7 @@
         "uri": "https://api.together.xyz/v1/chat/completions",
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"model\":\"meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo\",\"max_tokens\":128.0,\"temperature\":0.0,\"messages\":[{\"role\":\"user\",\"content\":\"this is a test, respond with 'test'\\n\"},{\"role\":\"assistant\",\"content\":\"test\\n\"},{\"role\":\"user\",\"content\":\"what was the previous user message?\\nrespond in less than 16 words\\n\"}]}"
+          "string": "{\"model\":\"meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo\",\"max_tokens\":128.0,\"temperature\":0.0,\"messages\":[{\"role\":\"user\",\"content\":\"the secret word is 'red'\\n\"},{\"role\":\"assistant\",\"content\":\"ok\\n\"},{\"role\":\"user\",\"content\":\"what is the exact secret word? answer with the word only\\n\"}]}"
         },
         "headers": {
           "User-Agent": [
@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Thu, 31 Oct 2024 22:30:13 GMT"
+            "Tue, 31 Dec 2024 01:38:29 GMT"
           ],
           "content-type": [
             "application/json; charset=utf-8"
@@ -42,7 +42,7 @@
             "*"
           ],
           "x-api-received": [
-            "2024-10-31T22:30:13.364Z"
+            "2024-12-31T01:38:29.516Z"
           ],
           "x-ratelimit": [
             "false"
@@ -56,6 +56,9 @@
           "x-ratelimit-reset": [
             "2"
           ],
+          "retry-after": [
+            "2"
+          ],
           "x-ratelimit-remaining-tokens": [
             "3000"
           ],
@@ -66,19 +69,19 @@
             "v2"
           ],
           "x-api-call-start": [
-            "2024-10-31T22:30:13.379Z"
+            "2024-12-31T01:38:29.538Z"
           ],
           "x-api-call-end": [
-            "2024-10-31T22:30:13.765Z"
+            "2024-12-31T01:38:29.717Z"
           ],
           "etag": [
-            "W/\"21a-NTXj/PWJINKWwEY59j6Ur2/+1wQ\""
+            "W/\"1f9-xyHy0pX8BZLq2uEXqf7RcWypCF8\""
           ],
           "cf-cache-status": [
             "DYNAMIC"
           ],
           "strict-transport-security": [
-            "max-age=2592000; includeSubDomains"
+            "max-age=15552000; includeSubDomains"
           ],
           "server": [
             "cloudflare"
@@ -95,10 +98,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "{\n  \"id\": \"8db7169d7fa2df1d-SEA\",\n  \"object\": \"chat.completion\",\n  \"created\": 1730413813,\n  \"model\": \"meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo\",\n  \"prompt\": [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"eos\",\n      \"seed\": 8073420627232951000,\n      \"logprobs\": null,\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": \"this is a test, respond with 'test'\",\n        \"tool_calls\": []\n      }\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 71,\n    \"completion_tokens\": 11,\n    \"total_tokens\": 82\n  }\n}"
+          "string": "{\n  \"id\": \"8fa68ce64d2ba324-SEA\",\n  \"object\": \"chat.completion\",\n  \"created\": 1735609109,\n  \"model\": \"meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo\",\n  \"prompt\": [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"eos\",\n      \"seed\": 3183596758458272300,\n      \"logprobs\": null,\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": \"red\",\n        \"tool_calls\": []\n      }\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 65,\n    \"completion_tokens\": 2,\n    \"total_tokens\": 67\n  }\n}"
         }
       },
-      "recorded_at": "Thu, 31 Oct 2024 22:30:13 GMT"
+      "recorded_at": "Tue, 31 Dec 2024 01:38:29 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

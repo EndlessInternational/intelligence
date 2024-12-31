@@ -6,7 +6,7 @@
         "uri": "https://api.hyperbolic.xyz/v1/chat/completions",
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"model\":\"meta-llama/Meta-Llama-3.1-70B-Instruct\",\"max_tokens\":16,\"temperature\":0.0,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"this is a test, respond with 'test'\\n\"},{\"role\":\"assistant\",\"content\":\"test\\n\"},{\"role\":\"user\",\"content\":\"what was the previous user message?\\nrespond in less than 16 words\\n\"}]}"
+          "string": "{\"model\":\"meta-llama/Meta-Llama-3.1-70B-Instruct\",\"max_tokens\":16,\"temperature\":0.0,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"the secret word is 'blue'\\n\"},{\"role\":\"assistant\",\"content\":\"ok\\n\"},{\"role\":\"user\",\"content\":\"what is the secret word?\\nrespond with the word only\\n\"}]}"
         },
         "headers": {
           "User-Agent": [
@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Thu, 31 Oct 2024 22:29:23 GMT"
+            "Tue, 31 Dec 2024 01:17:53 GMT"
           ],
           "content-type": [
             "application/json"
@@ -53,10 +53,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\"id\":\"chat-79792ceec80c4f6d9896fb3cb67fc748\",\"object\":\"chat.completion\",\"created\":1730413762,\"model\":\"meta-llama/Meta-Llama-3.1-70B-Instruct\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"this is a test, respond with 'test'\"},\"finish_reason\":\"stop\",\"logprobs\":null}],\"usage\":{\"prompt_tokens\":85,\"total_tokens\":96,\"completion_tokens\":11}}"
+          "string": "{\"id\":\"chat-c4ef80671fac42bfad2596545c83eb9d\",\"object\":\"chat.completion\",\"created\":1735607873,\"model\":\"meta-llama/Meta-Llama-3.1-70B-Instruct\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"blue\"},\"finish_reason\":\"stop\",\"logprobs\":null}],\"usage\":{\"prompt_tokens\":99,\"total_tokens\":101,\"completion_tokens\":2}}"
         }
       },
-      "recorded_at": "Thu, 31 Oct 2024 22:29:23 GMT"
+      "recorded_at": "Tue, 31 Dec 2024 01:17:53 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

@@ -30,7 +30,7 @@
         },
         "headers": {
           "date": [
-            "Wed, 30 Oct 2024 17:34:54 GMT"
+            "Tue, 31 Dec 2024 01:14:42 GMT"
           ],
           "content-type": [
             "text/event-stream; charset=utf-8"
@@ -51,16 +51,34 @@
             "999"
           ],
           "anthropic-ratelimit-requests-reset": [
-            "2024-10-30T17:35:17Z"
+            "2024-12-31T01:14:41Z"
           ],
-          "anthropic-ratelimit-tokens-limit": [
+          "anthropic-ratelimit-input-tokens-limit": [
             "80000"
           ],
-          "anthropic-ratelimit-tokens-remaining": [
+          "anthropic-ratelimit-input-tokens-remaining": [
             "79000"
           ],
+          "anthropic-ratelimit-input-tokens-reset": [
+            "2024-12-31T01:14:41Z"
+          ],
+          "anthropic-ratelimit-output-tokens-limit": [
+            "16000"
+          ],
+          "anthropic-ratelimit-output-tokens-remaining": [
+            "16000"
+          ],
+          "anthropic-ratelimit-output-tokens-reset": [
+            "2024-12-31T01:14:41Z"
+          ],
+          "anthropic-ratelimit-tokens-limit": [
+            "96000"
+          ],
+          "anthropic-ratelimit-tokens-remaining": [
+            "95000"
+          ],
           "anthropic-ratelimit-tokens-reset": [
-            "2024-10-30T17:34:53Z"
+            "2024-12-31T01:14:41Z"
           ],
           "request-id": [
             "<REQUEST-ID>"
@@ -83,10 +101,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "event: message_start\ndata: {\"type\":\"message_start\",\"message\":{\"id\":\"msg_017axReMAMvgjRFB1yBWYaVw\",\"type\":\"message\",\"role\":\"assistant\",\"model\":\"claude-3-5-sonnet-20240620\",\"content\":[],\"stop_reason\":null,\"stop_sequence\":null,\"usage\":{\"input_tokens\":558,\"output_tokens\":9}}        }\n\nevent: content_block_start\ndata: {\"type\":\"content_block_start\",\"index\":0,\"content_block\":{\"type\":\"text\",\"text\":\"\"}   }\n\nevent: ping\ndata: {\"type\": \"ping\"}\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":0,\"delta\":{\"type\":\"text_delta\",\"text\":\"Certainly! I'll use the get_\"}    }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":0,\"delta\":{\"type\":\"text_delta\",\"text\":\"weather tool to check\"}            }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":0,\"delta\":{\"type\":\"text_delta\",\"text\":\" the current weather in Seattle\"}       }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":0,\"delta\":{\"type\":\"text_delta\",\"text\":\", Washington for you.\"}      }\n\nevent: content_block_stop\ndata: {\"type\":\"content_block_stop\",\"index\":0          }\n\nevent: content_block_start\ndata: {\"type\":\"content_block_start\",\"index\":1,\"content_block\":{\"type\":\"tool_use\",\"id\":\"toolu_01CrhVLEznP2wYfKNvU3m7Ei\",\"name\":\"get_weather\",\"input\":{}}              }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":1,\"delta\":{\"type\":\"input_json_delta\",\"partial_json\":\"\"}  }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":1,\"delta\":{\"type\":\"input_json_delta\",\"partial_json\":\"{\\\"c\"}   }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":1,\"delta\":{\"type\":\"input_json_delta\",\"partial_json\":\"ity\\\": \"}             }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":1,\"delta\":{\"type\":\"input_json_delta\",\"partial_json\":\"\\\"Seat\"}    }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":1,\"delta\":{\"type\":\"input_json_delta\",\"partial_json\":\"tle\\\"\"}               }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":1,\"delta\":{\"type\":\"input_json_delta\",\"partial_json\":\", \\\"stat\"}           }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":1,\"delta\":{\"type\":\"input_json_delta\",\"partial_json\":\"e\\\": \\\"WA\\\"}\"}               }\n\nevent: content_block_stop\ndata: {\"type\":\"content_block_stop\",\"index\":1   }\n\nevent: message_delta\ndata: {\"type\":\"message_delta\",\"delta\":{\"stop_reason\":\"tool_use\",\"stop_sequence\":null},\"usage\":{\"output_tokens\":95}    }\n\nevent: message_stop\ndata: {\"type\":\"message_stop\"      }\n\n"
+          "string": "event: message_start\ndata: {\"type\":\"message_start\",\"message\":{\"id\":\"msg_01LLca858mxa19KjxaZ5ec41\",\"type\":\"message\",\"role\":\"assistant\",\"model\":\"claude-3-5-sonnet-20240620\",\"content\":[],\"stop_reason\":null,\"stop_sequence\":null,\"usage\":{\"input_tokens\":558,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":5}}        }\n\nevent: content_block_start\ndata: {\"type\":\"content_block_start\",\"index\":0,\"content_block\":{\"type\":\"text\",\"text\":\"\"}             }\n\nevent: ping\ndata: {\"type\": \"ping\"}\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":0,\"delta\":{\"type\":\"text_delta\",\"text\":\"Certainly! I'll\"}        }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":0,\"delta\":{\"type\":\"text_delta\",\"text\":\" use the get_weather tool to check\"}               }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":0,\"delta\":{\"type\":\"text_delta\",\"text\":\" the current weather in Seattle, Washington\"}  }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":0,\"delta\":{\"type\":\"text_delta\",\"text\":\" for you.\"}      }\n\nevent: content_block_stop\ndata: {\"type\":\"content_block_stop\",\"index\":0}\n\nevent: content_block_start\ndata: {\"type\":\"content_block_start\",\"index\":1,\"content_block\":{\"type\":\"tool_use\",\"id\":\"toolu_01QsqcZDmJVJPzmyjLL1s3nR\",\"name\":\"get_weather\",\"input\":{}}               }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":1,\"delta\":{\"type\":\"input_json_delta\",\"partial_json\":\"\"}      }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":1,\"delta\":{\"type\":\"input_json_delta\",\"partial_json\":\"{\\\"city\\\": \\\"S\"}   }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":1,\"delta\":{\"type\":\"input_json_delta\",\"partial_json\":\"eattle\\\"\"}             }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":1,\"delta\":{\"type\":\"input_json_delta\",\"partial_json\":\", \"}             }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":1,\"delta\":{\"type\":\"input_json_delta\",\"partial_json\":\"\\\"state\\\": \\\"\"}       }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":1,\"delta\":{\"type\":\"input_json_delta\",\"partial_json\":\"WA\\\"}\"}            }\n\nevent: content_block_stop\ndata: {\"type\":\"content_block_stop\",\"index\":1         }\n\nevent: message_delta\ndata: {\"type\":\"message_delta\",\"delta\":{\"stop_reason\":\"tool_use\",\"stop_sequence\":null},\"usage\":{\"output_tokens\":95}           }\n\nevent: message_stop\ndata: {\"type\":\"message_stop\"   }\n\n"
         }
       },
-      "recorded_at": "Wed, 30 Oct 2024 17:34:55 GMT"
+      "recorded_at": "Tue, 31 Dec 2024 01:14:43 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

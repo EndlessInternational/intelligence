@@ -7,7 +7,7 @@ RSpec.describe "#{Intelligence::Adapter[ :cerebras ]} stream requests", :cerebra
   # this is needed for cerebras test to avoid the rate limit
   after( :each ) do | example |
     cassette = VCR.current_cassette
-    sleep 5 if cassette && cassette.new_recorded_interactions.any? 
+    sleep 10 if cassette && cassette.new_recorded_interactions.any? 
   end
 
 

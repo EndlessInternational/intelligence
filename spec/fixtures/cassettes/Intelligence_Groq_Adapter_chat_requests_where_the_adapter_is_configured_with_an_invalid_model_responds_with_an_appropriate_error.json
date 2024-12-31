@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Tue, 29 Oct 2024 18:24:04 GMT"
+            "Tue, 31 Dec 2024 01:37:37 GMT"
           ],
           "content-type": [
             "application/json"
@@ -38,14 +38,17 @@
           "connection": [
             "keep-alive"
           ],
+          "cf-ray": [
+            "<CF-RAY>"
+          ],
+          "cf-cache-status": [
+            "DYNAMIC"
+          ],
           "cache-control": [
             "private, max-age=0, no-store, no-cache, must-revalidate"
           ],
           "vary": [
-            "Origin"
-          ],
-          "x-request-id": [
-            "<X-REQUEST-ID>"
+            "Origin, Accept-Encoding"
           ],
           "via": [
             "1.1 google"
@@ -53,17 +56,17 @@
           "alt-svc": [
             "h3=\":443\"; ma=86400"
           ],
-          "cf-cache-status": [
-            "DYNAMIC"
+          "x-groq-region": [
+            "us-west-1"
+          ],
+          "x-request-id": [
+            "<X-REQUEST-ID>"
           ],
           "set-cookie": [
             "<SET-COOKIE>"
           ],
           "server": [
             "cloudflare"
-          ],
-          "cf-ray": [
-            "<CF-RAY>"
           ],
           "content-encoding": [
             "gzip"
@@ -74,7 +77,7 @@
           "string": "{\"error\":{\"message\":\"The model `invalid-model` does not exist or you do not have access to it.\",\"type\":\"invalid_request_error\",\"code\":\"model_not_found\"}}\n"
         }
       },
-      "recorded_at": "Tue, 29 Oct 2024 18:24:04 GMT"
+      "recorded_at": "Tue, 31 Dec 2024 01:37:37 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

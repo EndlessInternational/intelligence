@@ -6,11 +6,11 @@ RSpec.shared_examples 'chat requests without alternating roles' do
     it 'responds with the appropriate generated text' do 
 
       conversation = create_conversation( 
-        "this is a test, respond with 'test'\n",
-        "test\n"
+        "the secret word is 'blue'\n",
+        "ok\n"
       )
-      conversation.messages << build_text_message( :user, "hello!\n" )
-      conversation.messages << build_text_message( :user, "what was the previous user message?\n" )
+      conversation.messages << build_text_message( :user, "the secret word has been changed to 'red'!\n" )
+      conversation.messages << build_text_message( :user, "what is the secret word?\n" )
      
       response = create_and_make_chat_request( adapter, conversation )
       expect( response.success? ).to be( true ), response_error_description( response )
@@ -25,7 +25,7 @@ RSpec.shared_examples 'chat requests without alternating roles' do
       expect( choice.message.contents ).not_to be_nil
       expect( choice.message.contents.length ).to eq( 1 )
       expect( message_contents_to_text( choice.message ) ).to( 
-        match( /this is a test|hello/i )
+        match( /red/i )
       )
 
     end

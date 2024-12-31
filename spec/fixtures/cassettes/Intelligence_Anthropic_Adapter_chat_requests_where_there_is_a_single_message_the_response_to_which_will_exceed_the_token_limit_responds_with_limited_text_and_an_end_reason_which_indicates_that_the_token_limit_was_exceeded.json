@@ -6,7 +6,7 @@
         "uri": "https://api.anthropic.com/v1/messages",
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"model\":\"claude-3-5-sonnet-20240620\",\"max_tokens\":32,\"temperature\":0.0,\"system\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \",\"messages\":[{\"role\":\"user\",\"content\":[{\"type\":\"text\",\"text\":\"count to twenty in words, all lower case, one word per line\\n\"}]}]}"
+          "string": "{\"model\":\"claude-3-5-sonnet-20240620\",\"max_tokens\":24,\"temperature\":0.0,\"system\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \",\"messages\":[{\"role\":\"user\",\"content\":[{\"type\":\"text\",\"text\":\"count to twenty in words, all lower case, one word per line\\n\"}]}]}"
         },
         "headers": {
           "User-Agent": [
@@ -30,7 +30,7 @@
         },
         "headers": {
           "date": [
-            "Fri, 25 Oct 2024 17:47:43 GMT"
+            "Tue, 31 Dec 2024 01:13:48 GMT"
           ],
           "content-type": [
             "application/json"
@@ -48,16 +48,34 @@
             "999"
           ],
           "anthropic-ratelimit-requests-reset": [
-            "2024-10-25T17:48:17Z"
+            "2024-12-31T01:13:48Z"
+          ],
+          "anthropic-ratelimit-input-tokens-limit": [
+            "80000"
+          ],
+          "anthropic-ratelimit-input-tokens-remaining": [
+            "80000"
+          ],
+          "anthropic-ratelimit-input-tokens-reset": [
+            "2024-12-31T01:13:48Z"
+          ],
+          "anthropic-ratelimit-output-tokens-limit": [
+            "16000"
+          ],
+          "anthropic-ratelimit-output-tokens-remaining": [
+            "16000"
+          ],
+          "anthropic-ratelimit-output-tokens-reset": [
+            "2024-12-31T01:13:48Z"
           ],
           "anthropic-ratelimit-tokens-limit": [
-            "80000"
+            "96000"
           ],
           "anthropic-ratelimit-tokens-remaining": [
-            "80000"
+            "96000"
           ],
           "anthropic-ratelimit-tokens-reset": [
-            "2024-10-25T17:47:43Z"
+            "2024-12-31T01:13:48Z"
           ],
           "request-id": [
             "<REQUEST-ID>"
@@ -83,10 +101,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\"id\":\"msg_01QsUZCtxBwii7JJdk2MYZWJ\",\"type\":\"message\",\"role\":\"assistant\",\"model\":\"claude-3-5-sonnet-20240620\",\"content\":[{\"type\":\"text\",\"text\":\"one\\ntwo\\nthree\\nfour\\nfive\\nsix\\nseven\\neight\\nnine\\nten\\neleven\\ntwelve\\nthirteen\\nfourteen\\nfifteen\\nsixteen\"}],\"stop_reason\":\"max_tokens\",\"stop_sequence\":null,\"usage\":{\"input_tokens\":60,\"output_tokens\":32}}"
+          "string": "{\"id\":\"msg_01Wru23jUszuJKQKLtTKE1z6\",\"type\":\"message\",\"role\":\"assistant\",\"model\":\"claude-3-5-sonnet-20240620\",\"content\":[{\"type\":\"text\",\"text\":\"one\\ntwo\\nthree\\nfour\\nfive\\nsix\\nseven\\neight\\nnine\\nten\\neleven\\ntwelve\"}],\"stop_reason\":\"max_tokens\",\"stop_sequence\":null,\"usage\":{\"input_tokens\":60,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":24}}"
         }
       },
-      "recorded_at": "Fri, 25 Oct 2024 17:47:43 GMT"
+      "recorded_at": "Tue, 31 Dec 2024 01:13:48 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

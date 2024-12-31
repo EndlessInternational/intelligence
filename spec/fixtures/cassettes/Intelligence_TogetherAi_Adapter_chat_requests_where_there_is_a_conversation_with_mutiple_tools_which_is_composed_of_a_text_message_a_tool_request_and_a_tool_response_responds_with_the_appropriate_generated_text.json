@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Wed, 30 Oct 2024 22:23:49 GMT"
+            "Tue, 31 Dec 2024 01:38:39 GMT"
           ],
           "content-type": [
             "application/json; charset=utf-8"
@@ -42,7 +42,7 @@
             "*"
           ],
           "x-api-received": [
-            "2024-10-30T22:23:49.361Z"
+            "2024-12-31T01:38:39.204Z"
           ],
           "x-ratelimit": [
             "false"
@@ -51,13 +51,16 @@
             "10"
           ],
           "x-ratelimit-remaining": [
-            "17"
+            "19"
           ],
           "x-ratelimit-reset": [
-            "0"
+            "2"
+          ],
+          "retry-after": [
+            "2"
           ],
           "x-ratelimit-remaining-tokens": [
-            "1600"
+            "3000"
           ],
           "x-ratelimit-limit-tokens": [
             "3000"
@@ -66,19 +69,19 @@
             "v2"
           ],
           "x-api-call-start": [
-            "2024-10-30T22:23:49.368Z"
+            "2024-12-31T01:38:39.218Z"
           ],
           "x-api-call-end": [
-            "2024-10-30T22:23:49.800Z"
+            "2024-12-31T01:38:39.512Z"
           ],
           "etag": [
-            "W/\"335-SjF9GPxJJAvujAUUul6HEpcwm+4\""
+            "W/\"334-F4/kBBK5jS6y8zAORVMktvQyGpI\""
           ],
           "cf-cache-status": [
             "DYNAMIC"
           ],
           "strict-transport-security": [
-            "max-age=2592000; includeSubDomains"
+            "max-age=15552000; includeSubDomains"
           ],
           "server": [
             "cloudflare"
@@ -95,10 +98,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "{\n  \"id\": \"8daecfdd6bef13a2-SEA\",\n  \"object\": \"chat.completion\",\n  \"created\": 1730327029,\n  \"model\": \"meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo\",\n  \"prompt\": [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"tool_calls\",\n      \"seed\": 10843832109531021000,\n      \"logprobs\": null,\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": null,\n        \"tool_calls\": [\n          {\n            \"index\": 0,\n            \"id\": \"call_awwiuunugcg2oc6jiqm1k1zw\",\n            \"type\": \"function\",\n            \"function\": {\n              \"arguments\": \"{\\\"city\\\":\\\"Seattle\\\",\\\"state\\\":\\\"WA\\\",\\\"country\\\":\\\"USA\\\"}\",\n              \"name\": \"get_weather\"\n            }\n          }\n        ]\n      }\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 523,\n    \"completion_tokens\": 26,\n    \"total_tokens\": 549\n  }\n}"
+          "string": "{\n  \"id\": \"8fa68d22ebbb7675-SEA\",\n  \"object\": \"chat.completion\",\n  \"created\": 1735609119,\n  \"model\": \"meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo\",\n  \"prompt\": [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"tool_calls\",\n      \"seed\": 3828960675058210000,\n      \"logprobs\": null,\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": null,\n        \"tool_calls\": [\n          {\n            \"index\": 0,\n            \"id\": \"call_jn3h0koeix8hovrv8tv6eklk\",\n            \"type\": \"function\",\n            \"function\": {\n              \"arguments\": \"{\\\"city\\\":\\\"Seattle\\\",\\\"state\\\":\\\"WA\\\",\\\"country\\\":\\\"USA\\\"}\",\n              \"name\": \"get_weather\"\n            }\n          }\n        ]\n      }\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 522,\n    \"completion_tokens\": 26,\n    \"total_tokens\": 548\n  }\n}"
         }
       },
-      "recorded_at": "Wed, 30 Oct 2024 22:23:49 GMT"
+      "recorded_at": "Tue, 31 Dec 2024 01:38:39 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

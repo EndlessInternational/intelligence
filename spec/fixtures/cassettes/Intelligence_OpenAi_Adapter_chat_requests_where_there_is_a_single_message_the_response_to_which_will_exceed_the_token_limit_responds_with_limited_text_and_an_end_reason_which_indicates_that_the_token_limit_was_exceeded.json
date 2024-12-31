@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Thu, 31 Oct 2024 15:23:09 GMT"
+            "Tue, 31 Dec 2024 01:12:18 GMT"
           ],
           "content-type": [
             "application/json"
@@ -45,7 +45,7 @@
             "<OPENAI-ORGANIZATION>"
           ],
           "openai-processing-ms": [
-            "408"
+            "305"
           ],
           "openai-version": [
             "2020-10-01"
@@ -98,10 +98,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\n  \"id\": \"chatcmpl-AORIqOJx36zFBmXjI4GJgBzX84ZLK\",\n  \"object\": \"chat.completion\",\n  \"created\": 1730388188,\n  \"model\": \"gpt-4o-2024-08-06\",\n  \"choices\": [\n    {\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": \"one  \\ntwo  \\nthree  \\nfour  \\nfive  \\nsix  \\nseven  \\neight  \\n\",\n        \"refusal\": null\n      },\n      \"logprobs\": null,\n      \"finish_reason\": \"length\"\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 65,\n    \"completion_tokens\": 16,\n    \"total_tokens\": 81,\n    \"prompt_tokens_details\": {\n      \"cached_tokens\": 0\n    },\n    \"completion_tokens_details\": {\n      \"reasoning_tokens\": 0\n    }\n  },\n  \"system_fingerprint\": \"fp_9e15ccd6a4\"\n}\n"
+          "string": "{\n  \"id\": \"chatcmpl-AkL5ucX1nFUuAzy9glUPJJ7rqhupk\",\n  \"object\": \"chat.completion\",\n  \"created\": 1735607538,\n  \"model\": \"gpt-4o-2024-08-06\",\n  \"choices\": [\n    {\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": \"one  \\ntwo  \\nthree  \\nfour  \\nfive  \\nsix  \\nseven  \\neight  \\n\",\n        \"refusal\": null\n      },\n      \"logprobs\": null,\n      \"finish_reason\": \"length\"\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 65,\n    \"completion_tokens\": 16,\n    \"total_tokens\": 81,\n    \"prompt_tokens_details\": {\n      \"cached_tokens\": 0,\n      \"audio_tokens\": 0\n    },\n    \"completion_tokens_details\": {\n      \"reasoning_tokens\": 0,\n      \"audio_tokens\": 0,\n      \"accepted_prediction_tokens\": 0,\n      \"rejected_prediction_tokens\": 0\n    }\n  },\n  \"system_fingerprint\": \"fp_e161c81bbd\"\n}\n"
         }
       },
-      "recorded_at": "Thu, 31 Oct 2024 15:23:08 GMT"
+      "recorded_at": "Tue, 31 Dec 2024 01:12:18 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

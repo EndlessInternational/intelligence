@@ -6,7 +6,7 @@
         "uri": "https://api.mistral.ai/v1/chat/completions",
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"model\":\"mistral-large-latest\",\"max_tokens\":128,\"temperature\":0.0,\"stream\":true,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"this is a test, respond with 'test'\\n\"},{\"role\":\"assistant\",\"content\":\"test\\n\"},{\"role\":\"user\",\"content\":\"hello!\\n\"},{\"role\":\"user\",\"content\":\"what was the previous user message?\\n\"}]}"
+          "string": "{\"model\":\"mistral-large-latest\",\"max_tokens\":128,\"temperature\":0.0,\"stream\":true,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"the secret word is 'blue'\\n\"},{\"role\":\"assistant\",\"content\":\"ok\\n\"},{\"role\":\"user\",\"content\":\"the secret word has been changed to 'red'!\\n\"},{\"role\":\"user\",\"content\":\"what is the secret word?\\n\"}]}"
         },
         "headers": {
           "User-Agent": [
@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Wed, 30 Oct 2024 19:02:23 GMT"
+            "Tue, 31 Dec 2024 01:09:52 GMT"
           ],
           "content-type": [
             "text/event-stream; charset=utf-8"
@@ -38,44 +38,44 @@
           "connection": [
             "keep-alive"
           ],
-          "ratelimitbysize-query-cost": [
-            "188"
-          ],
-          "x-ratelimitbysize-limit-minute": [
-            "500000"
-          ],
-          "ratelimitbysize-remaining": [
-            "498839"
-          ],
-          "ratelimitbysize-limit": [
-            "500000"
-          ],
-          "ratelimitbysize-reset": [
-            "38"
+          "x-ratelimitbysize-limit-month": [
+            "10000000000"
           ],
           "x-ratelimitbysize-remaining-month": [
-            "999991599"
+            "9999951753"
+          ],
+          "ratelimitbysize-reset": [
+            "9"
           ],
           "x-ratelimitbysize-remaining-minute": [
-            "498839"
+            "1993010"
           ],
-          "x-ratelimitbysize-limit-month": [
-            "1000000000"
+          "ratelimitbysize-query-cost": [
+            "194"
+          ],
+          "ratelimitbysize-limit": [
+            "2000000"
+          ],
+          "ratelimitbysize-remaining": [
+            "1993010"
+          ],
+          "x-ratelimitbysize-limit-minute": [
+            "2000000"
           ],
           "x-envoy-upstream-service-time": [
-            "205"
+            "52"
           ],
           "access-control-allow-origin": [
             "*"
           ],
           "x-kong-upstream-latency": [
-            "206"
+            "53"
           ],
           "x-kong-proxy-latency": [
-            "1"
+            "0"
           ],
           "x-kong-request-id": [
-            "44527433d72b372c7a69cb1a0daeec0f"
+            "0a2b2658131bff3a2c51e94d14d7624e"
           ],
           "cf-cache-status": [
             "DYNAMIC"
@@ -92,10 +92,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "data: {\"id\":\"9531df4d80c64017886339d08d957e54\",\"object\":\"chat.completion.chunk\",\"created\":1730314943,\"model\":\"mistral-large-latest\",\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"\"},\"finish_reason\":null}]}\n\ndata: {\"id\":\"9531df4d80c64017886339d08d957e54\",\"object\":\"chat.completion.chunk\",\"created\":1730314943,\"model\":\"mistral-large-latest\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"hell\"},\"finish_reason\":null}]}\n\ndata: {\"id\":\"9531df4d80c64017886339d08d957e54\",\"object\":\"chat.completion.chunk\",\"created\":1730314943,\"model\":\"mistral-large-latest\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"o\"},\"finish_reason\":null}]}\n\ndata: {\"id\":\"9531df4d80c64017886339d08d957e54\",\"object\":\"chat.completion.chunk\",\"created\":1730314943,\"model\":\"mistral-large-latest\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"!\"},\"finish_reason\":null}]}\n\ndata: {\"id\":\"9531df4d80c64017886339d08d957e54\",\"object\":\"chat.completion.chunk\",\"created\":1730314943,\"model\":\"mistral-large-latest\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":72,\"total_tokens\":75,\"completion_tokens\":3}}\n\ndata: [DONE]\n\n"
+          "string": "data: {\"id\":\"ae8a477f5c9b4de5a066acc57b3388fd\",\"object\":\"chat.completion.chunk\",\"created\":1735607391,\"model\":\"mistral-large-latest\",\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"\"},\"finish_reason\":null}]}\n\ndata: {\"id\":\"ae8a477f5c9b4de5a066acc57b3388fd\",\"object\":\"chat.completion.chunk\",\"created\":1735607391,\"model\":\"mistral-large-latest\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"red\"},\"finish_reason\":null}]}\n\ndata: {\"id\":\"ae8a477f5c9b4de5a066acc57b3388fd\",\"object\":\"chat.completion.chunk\",\"created\":1735607391,\"model\":\"mistral-large-latest\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":77,\"total_tokens\":78,\"completion_tokens\":1}}\n\ndata: [DONE]\n\n"
         }
       },
-      "recorded_at": "Wed, 30 Oct 2024 19:02:23 GMT"
+      "recorded_at": "Tue, 31 Dec 2024 01:09:51 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Tue, 29 Oct 2024 04:15:14 GMT"
+            "Tue, 31 Dec 2024 01:37:32 GMT"
           ],
           "content-type": [
             "application/json"
@@ -38,11 +38,26 @@
           "connection": [
             "keep-alive"
           ],
+          "cf-ray": [
+            "<CF-RAY>"
+          ],
+          "cf-cache-status": [
+            "DYNAMIC"
+          ],
           "cache-control": [
             "private, max-age=0, no-store, no-cache, must-revalidate"
           ],
           "vary": [
-            "Origin"
+            "Origin, Accept-Encoding"
+          ],
+          "via": [
+            "1.1 google"
+          ],
+          "alt-svc": [
+            "h3=\":443\"; ma=86400"
+          ],
+          "x-groq-region": [
+            "us-west-1"
           ],
           "x-ratelimit-limit-requests": [
             "14400"
@@ -51,28 +66,19 @@
             "6000"
           ],
           "x-ratelimit-remaining-requests": [
-            "14397"
+            "14387"
           ],
           "x-ratelimit-remaining-tokens": [
-            "5752"
+            "5840"
           ],
           "x-ratelimit-reset-requests": [
-            "17.795s"
+            "1m15.511999999s"
           ],
           "x-ratelimit-reset-tokens": [
-            "2.473999999s"
+            "1.595s"
           ],
           "x-request-id": [
             "<X-REQUEST-ID>"
-          ],
-          "via": [
-            "1.1 google"
-          ],
-          "alt-svc": [
-            "h3=\":443\"; ma=86400"
-          ],
-          "cf-cache-status": [
-            "DYNAMIC"
           ],
           "set-cookie": [
             "<SET-COOKIE>"
@@ -80,19 +86,16 @@
           "server": [
             "cloudflare"
           ],
-          "cf-ray": [
-            "<CF-RAY>"
-          ],
           "content-encoding": [
             "gzip"
           ]
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\"id\":\"chatcmpl-6a85424f-c204-4a61-8676-6e1aac3b3b5e\",\"object\":\"chat.completion\",\"created\":1730175314,\"model\":\"llama-3.1-70b-versatile\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"one\\ntwo\\nthree\\nfour\\nfive\\nsix\\nseven\\neight\\n\"},\"logprobs\":null,\"finish_reason\":\"length\"}],\"usage\":{\"queue_time\":0.005641218999999999,\"prompt_tokens\":85,\"prompt_time\":0.020011979,\"completion_tokens\":16,\"completion_time\":0.064387935,\"total_tokens\":101,\"total_time\":0.084399914},\"system_fingerprint\":\"fp_b6828be2c9\",\"x_groq\":{\"id\":\"req_01jbb7ranhe4m9j0rnjgwg37ek\"}}\n"
+          "string": "{\"id\":\"chatcmpl-b6019db9-f08d-43d8-867d-01baeec1bcb9\",\"object\":\"chat.completion\",\"created\":1735609052,\"model\":\"llama-3.1-70b-versatile\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"one\\ntwo\\nthree\\nfour\\nfive\\nsix\\nseven\\neight\\n\"},\"logprobs\":null,\"finish_reason\":\"length\"}],\"usage\":{\"queue_time\":1.389292887,\"prompt_tokens\":85,\"prompt_time\":0.022155955,\"completion_tokens\":16,\"completion_time\":0.078728044,\"total_tokens\":101,\"total_time\":0.100883999},\"system_fingerprint\":\"fp_c0cfa69934\",\"x_groq\":{\"id\":\"req_01jgd5rsqqfvsrheyx4wk4zz1f\"}}\n"
         }
       },
-      "recorded_at": "Tue, 29 Oct 2024 04:15:14 GMT"
+      "recorded_at": "Tue, 31 Dec 2024 01:37:32 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Wed, 30 Oct 2024 18:45:06 GMT"
+            "Tue, 31 Dec 2024 01:19:32 GMT"
           ],
           "content-type": [
             "text/event-stream"
@@ -38,38 +38,23 @@
           "connection": [
             "keep-alive"
           ],
-          "access-control-allow-credentials": [
-            "true"
-          ],
-          "access-control-allow-headers": [
-            "Authorization, User-Agent, X-Api-Key, X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version, HTTP-Referer, X-Windowai-Title, X-Openrouter-Title, X-Title, X-Stainless-Lang, X-Stainless-Package-Version, X-Stainless-OS, X-Stainless-Arch, X-Stainless-Runtime, X-Stainless-Runtime-Version, X-Stainless-Retry-Count, Protection-Key"
-          ],
-          "access-control-allow-methods": [
-            "GET,OPTIONS,PATCH,DELETE,POST,PUT"
-          ],
           "access-control-allow-origin": [
             "*"
           ],
           "cache-control": [
             "no-cache"
           ],
-          "content-security-policy": [
-            "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline' https://clerk.openrouter.ai https://cunning-heron-18.clerk.accounts.dev https://challenges.cloudflare.com https://checkout.stripe.com https://connect-js.stripe.com https://js.stripe.com https://maps.googleapis.com https://www.googletagmanager.com https://*.ingest.sentry.io; connect-src 'self' https://clerk.openrouter.ai https://cunning-heron-18.clerk.accounts.dev https://checkout.stripe.com https://api.stripe.com https://maps.googleapis.com *.google-analytics.com https://www.googletagmanager.com https://raw.githubusercontent.com wss://www.walletlink.org/rpc https://*.ingest.sentry.io; frame-src 'self' https://challenges.cloudflare.com https://checkout.stripe.com https://connect-js.stripe.com https://js.stripe.com https://hooks.stripe.com https://us5.datadoghq.com https://*.ingest.sentry.io; img-src 'self' data: blob: https://img.clerk.com https://*.stripe.com https://www.googletagmanager.com https://t0.gstatic.com; worker-src 'self' blob:; style-src 'self' 'unsafe-inline' sha256-0hAheEzaMe6uXIKV4EehS9pu1am1lj/KnnzrOYqckXk=; upgrade-insecure-requests"
+          "x-clerk-auth-message": [
+            "Invalid JWT form. A JWT consists of three parts separated by dots. (reason=token-invalid, token-carrier=header)"
           ],
-          "strict-transport-security": [
-            "max-age=63072000"
+          "x-clerk-auth-reason": [
+            "token-invalid"
           ],
-          "x-matched-path": [
-            "/api/v1/chat/completions"
+          "x-clerk-auth-status": [
+            "signed-out"
           ],
-          "x-vercel-cache": [
-            "MISS"
-          ],
-          "x-vercel-id": [
-            "pdx1::jrbz9-1730313906724-9d8a021ac806"
-          ],
-          "cf-cache-status": [
-            "DYNAMIC"
+          "vary": [
+            "Accept-Encoding"
           ],
           "server": [
             "cloudflare"
@@ -80,10 +65,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "data: {\"id\":\"gen-1730313906-CS3JHkQDq8rlMIHegFyU\",\"provider\":\"Hyperbolic\",\"model\":\"qwen/qwen-2-vl-7b-instruct\",\"object\":\"chat.completion.chunk\",\"created\":1730313906,\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"\"},\"finish_reason\":null,\"logprobs\":null}]}\n\ndata: {\"id\":\"gen-1730313906-CS3JHkQDq8rlMIHegFyU\",\"provider\":\"Hyperbolic\",\"model\":\"qwen/qwen-2-vl-7b-instruct\",\"object\":\"chat.completion.chunk\",\"created\":1730313906,\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"\"},\"finish_reason\":null,\"logprobs\":null}]}\n\ndata: {\"id\":\"gen-1730313906-CS3JHkQDq8rlMIHegFyU\",\"provider\":\"Hyperbolic\",\"model\":\"qwen/qwen-2-vl-7b-instruct\",\"object\":\"chat.completion.chunk\",\"created\":1730313906,\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"th\"},\"finish_reason\":null,\"logprobs\":null}]}\n\ndata: {\"id\":\"gen-1730313906-CS3JHkQDq8rlMIHegFyU\",\"provider\":\"Hyperbolic\",\"model\":\"qwen/qwen-2-vl-7b-instruct\",\"object\":\"chat.completion.chunk\",\"created\":1730313906,\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"r\"},\"finish_reason\":null,\"logprobs\":null}]}\n\ndata: {\"id\":\"gen-1730313906-CS3JHkQDq8rlMIHegFyU\",\"provider\":\"Hyperbolic\",\"model\":\"qwen/qwen-2-vl-7b-instruct\",\"object\":\"chat.completion.chunk\",\"created\":1730313906,\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"ee b\"},\"finish_reason\":null,\"logprobs\":null}]}\n\ndata: {\"id\":\"gen-1730313906-CS3JHkQDq8rlMIHegFyU\",\"provider\":\"Hyperbolic\",\"model\":\"qwen/qwen-2-vl-7b-instruct\",\"object\":\"chat.completion.chunk\",\"created\":1730313906,\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"a\"},\"finish_reason\":null,\"logprobs\":null}]}\n\ndata: {\"id\":\"gen-1730313906-CS3JHkQDq8rlMIHegFyU\",\"provider\":\"Hyperbolic\",\"model\":\"qwen/qwen-2-vl-7b-instruct\",\"object\":\"chat.completion.chunk\",\"created\":1730313906,\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"lloon\"},\"finish_reason\":null,\"logprobs\":null}]}\n\ndata: {\"id\":\"gen-1730313906-CS3JHkQDq8rlMIHegFyU\",\"provider\":\"Hyperbolic\",\"model\":\"qwen/qwen-2-vl-7b-instruct\",\"object\":\"chat.completion.chunk\",\"created\":1730313906,\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"s\"},\"finish_reason\":null,\"logprobs\":null}]}\n\ndata: {\"id\":\"gen-1730313906-CS3JHkQDq8rlMIHegFyU\",\"provider\":\"Hyperbolic\",\"model\":\"qwen/qwen-2-vl-7b-instruct\",\"object\":\"chat.completion.chunk\",\"created\":1730313906,\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\": red, \"},\"finish_reason\":null,\"logprobs\":null}]}\n\ndata: {\"id\":\"gen-1730313906-CS3JHkQDq8rlMIHegFyU\",\"provider\":\"Hyperbolic\",\"model\":\"qwen/qwen-2-vl-7b-instruct\",\"object\":\"chat.completion.chunk\",\"created\":1730313906,\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"blue, yellow\"},\"finish_reason\":\"stop\",\"logprobs\":null}]}\n\ndata: {\"id\":\"gen-1730313906-CS3JHkQDq8rlMIHegFyU\",\"provider\":\"Hyperbolic\",\"model\":\"qwen/qwen-2-vl-7b-instruct\",\"object\":\"chat.completion.chunk\",\"created\":1730313906,\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"\"},\"finish_reason\":null,\"logprobs\":null}],\"usage\":{\"prompt_tokens\":82,\"completion_tokens\":10,\"total_tokens\":92}}\n\ndata: [DONE]\n\n"
+          "string": ": OPENROUTER PROCESSING\n\ndata: {\"id\":\"gen-1735607972-9XCUrVbU2FqcciWuUJeB\",\"provider\":\"Hyperbolic\",\"model\":\"qwen/qwen-2-vl-7b-instruct\",\"object\":\"chat.completion.chunk\",\"created\":1735607972,\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"\"},\"finish_reason\":null,\"logprobs\":null}]}\n\ndata: {\"id\":\"gen-1735607972-9XCUrVbU2FqcciWuUJeB\",\"provider\":\"Hyperbolic\",\"model\":\"qwen/qwen-2-vl-7b-instruct\",\"object\":\"chat.completion.chunk\",\"created\":1735607972,\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"three\"},\"finish_reason\":null,\"logprobs\":null}]}\n\ndata: {\"id\":\"gen-1735607972-9XCUrVbU2FqcciWuUJeB\",\"provider\":\"Hyperbolic\",\"model\":\"qwen/qwen-2-vl-7b-instruct\",\"object\":\"chat.completion.chunk\",\"created\":1735607972,\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\" balloons\"},\"finish_reason\":null,\"logprobs\":null}]}\n\ndata: {\"id\":\"gen-1735607972-9XCUrVbU2FqcciWuUJeB\",\"provider\":\"Hyperbolic\",\"model\":\"qwen/qwen-2-vl-7b-instruct\",\"object\":\"chat.completion.chunk\",\"created\":1735607972,\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"\"},\"finish_reason\":\"stop\",\"logprobs\":null}]}\n\ndata: {\"id\":\"gen-1735607972-9XCUrVbU2FqcciWuUJeB\",\"provider\":\"Hyperbolic\",\"model\":\"qwen/qwen-2-vl-7b-instruct\",\"object\":\"chat.completion.chunk\",\"created\":1735607972,\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"\"},\"finish_reason\":null,\"logprobs\":null}],\"usage\":{\"prompt_tokens\":91,\"completion_tokens\":4,\"total_tokens\":95}}\n\ndata: [DONE]\n\n"
         }
       },
-      "recorded_at": "Wed, 30 Oct 2024 18:45:07 GMT"
+      "recorded_at": "Tue, 31 Dec 2024 01:19:32 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

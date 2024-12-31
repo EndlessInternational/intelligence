@@ -6,7 +6,7 @@
         "uri": "https://api.cerebras.ai/v1/chat/completions",
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"model\":\"llama3.1-70b\",\"max_tokens\":16,\"stream\":true,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"this is a test, respond with 'test'\\n\"},{\"role\":\"assistant\",\"content\":\"test\\n\"},{\"role\":\"user\",\"content\":\"hello!\\n\"},{\"role\":\"user\",\"content\":\"what was the previous user message?\\n\"}]}"
+          "string": "{\"model\":\"llama3.1-70b\",\"max_tokens\":16,\"stream\":true,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"the secret word is 'blue'\\n\"},{\"role\":\"assistant\",\"content\":\"ok\\n\"},{\"role\":\"user\",\"content\":\"the secret word has been changed to 'red'!\\n\"},{\"role\":\"user\",\"content\":\"what is the secret word?\\n\"}]}"
         },
         "headers": {
           "User-Agent": [
@@ -36,7 +36,7 @@
             "keep-alive"
           ],
           "date": [
-            "Wed, 30 Oct 2024 18:39:31 GMT"
+            "Tue, 31 Dec 2024 01:28:26 GMT"
           ],
           "x-content-type-options": [
             "nosniff"
@@ -57,16 +57,16 @@
             "60000"
           ],
           "x-ratelimit-remaining-requests-day": [
-            "14393"
+            "14374"
           ],
           "x-ratelimit-remaining-tokens-minute": [
-            "59327"
+            "59751"
           ],
           "x-ratelimit-reset-requests-day": [
-            "19228.093985319138"
+            "81093.95737361908"
           ],
           "x-ratelimit-reset-tokens-minute": [
-            "28.093985319137573"
+            "33.95737361907959"
           ],
           "referrer-policy": [
             "strict-origin-when-cross-origin"
@@ -75,21 +75,24 @@
             "Miss from cloudfront"
           ],
           "via": [
-            "1.1 d643c18c094f3cd17f1bf4efe422c294.cloudfront.net (CloudFront)"
+            "1.1 0d4ebcaa87ba94709def0eaac9371e5a.cloudfront.net (CloudFront)"
           ],
           "x-amz-cf-pop": [
-            "SFO20-C1"
+            "SEA73-P1"
+          ],
+          "alt-svc": [
+            "h3=\":443\"; ma=86400"
           ],
           "x-amz-cf-id": [
-            "-GC2gftT7uzzyp5-_sKkOe6cOunktT7xztBIttiFloeV16pGcK6urg=="
+            "jnHyWkJx3NCpyqpZ2tklch-3QTXxAxarCn26z1N-HnvQGTTiyPjs8A=="
           ]
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "data: {\"id\":\"chatcmpl-b8aa522e-be2d-41c4-96bd-168569f35397\",\"choices\":[{\"delta\":{\"role\":\"assistant\"},\"index\":0}],\"created\":1730313571,\"model\":\"llama3.1-70b\",\"system_fingerprint\":\"fp_55ebaf7e1e\",\"object\":\"chat.completion.chunk\"}\n\ndata: {\"id\":\"chatcmpl-b8aa522e-be2d-41c4-96bd-168569f35397\",\"choices\":[{\"delta\":{\"content\":\"hello\"},\"index\":0}],\"created\":1730313571,\"model\":\"llama3.1-70b\",\"system_fingerprint\":\"fp_55ebaf7e1e\",\"object\":\"chat.completion.chunk\"}\n\ndata: {\"id\":\"chatcmpl-b8aa522e-be2d-41c4-96bd-168569f35397\",\"choices\":[{\"delta\":{\"content\":\"!\"},\"index\":0}],\"created\":1730313571,\"model\":\"llama3.1-70b\",\"system_fingerprint\":\"fp_55ebaf7e1e\",\"object\":\"chat.completion.chunk\"}\n\ndata: {\"id\":\"chatcmpl-b8aa522e-be2d-41c4-96bd-168569f35397\",\"choices\":[{\"delta\":{},\"finish_reason\":\"stop\",\"index\":0}],\"created\":1730313571,\"model\":\"llama3.1-70b\",\"system_fingerprint\":\"fp_55ebaf7e1e\",\"object\":\"chat.completion.chunk\",\"usage\":{\"prompt_tokens\":105,\"completion_tokens\":3,\"total_tokens\":108},\"time_info\":{\"queue_time\":0.00002669,\"prompt_time\":0.0039452345,\"completion_time\":0.0048252555,\"total_time\":0.010613679885864258,\"created\":1730313571}}\n\n"
+          "string": "data: {\"id\":\"chatcmpl-25f7a565-5381-4a81-a8e1-3df755775fa9\",\"choices\":[{\"delta\":{\"role\":\"assistant\"},\"index\":0}],\"created\":1735608506,\"model\":\"llama3.1-70b\",\"system_fingerprint\":\"fp_2e2a2a083c\",\"object\":\"chat.completion.chunk\"}\n\ndata: {\"id\":\"chatcmpl-25f7a565-5381-4a81-a8e1-3df755775fa9\",\"choices\":[{\"delta\":{\"content\":\"red\"},\"index\":0}],\"created\":1735608506,\"model\":\"llama3.1-70b\",\"system_fingerprint\":\"fp_2e2a2a083c\",\"object\":\"chat.completion.chunk\"}\n\ndata: {\"id\":\"chatcmpl-25f7a565-5381-4a81-a8e1-3df755775fa9\",\"choices\":[{\"delta\":{},\"index\":0}],\"created\":1735608506,\"model\":\"llama3.1-70b\",\"system_fingerprint\":\"fp_2e2a2a083c\",\"object\":\"chat.completion.chunk\"}\n\ndata: {\"id\":\"chatcmpl-25f7a565-5381-4a81-a8e1-3df755775fa9\",\"choices\":[{\"delta\":{},\"finish_reason\":\"stop\",\"index\":0}],\"created\":1735608506,\"model\":\"llama3.1-70b\",\"system_fingerprint\":\"fp_2e2a2a083c\",\"object\":\"chat.completion.chunk\",\"usage\":{\"prompt_tokens\":110,\"completion_tokens\":2,\"total_tokens\":112},\"time_info\":{\"queue_time\":0.00009279,\"prompt_time\":0.003970074,\"completion_time\":0.003128326,\"total_time\":0.00915074348449707,\"created\":1735608506}}\n\n"
         }
       },
-      "recorded_at": "Wed, 30 Oct 2024 18:39:31 GMT"
+      "recorded_at": "Tue, 31 Dec 2024 01:28:25 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

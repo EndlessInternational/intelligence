@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Tue, 29 Oct 2024 04:25:44 GMT"
+            "Tue, 31 Dec 2024 01:38:36 GMT"
           ],
           "content-type": [
             "application/json; charset=utf-8"
@@ -42,7 +42,7 @@
             "*"
           ],
           "x-api-received": [
-            "2024-10-29T04:25:44.600Z"
+            "2024-12-31T01:38:35.732Z"
           ],
           "x-ratelimit": [
             "false"
@@ -51,13 +51,16 @@
             "10"
           ],
           "x-ratelimit-remaining": [
-            "17"
+            "19"
           ],
           "x-ratelimit-reset": [
-            "1"
+            "2"
+          ],
+          "retry-after": [
+            "2"
           ],
           "x-ratelimit-remaining-tokens": [
-            "2698"
+            "3000"
           ],
           "x-ratelimit-limit-tokens": [
             "3000"
@@ -66,19 +69,19 @@
             "v2"
           ],
           "x-api-call-start": [
-            "2024-10-29T04:25:44.607Z"
+            "2024-12-31T01:38:35.740Z"
           ],
           "x-api-call-end": [
-            "2024-10-29T04:25:44.979Z"
+            "2024-12-31T01:38:36.096Z"
           ],
           "etag": [
-            "W/\"202-qhRuPnhj2YJM7HEgq8Btj0YPm0U\""
+            "W/\"202-Ebbq4Fy24YqIHhVcI7yHMZ1CKO0\""
           ],
           "cf-cache-status": [
             "DYNAMIC"
           ],
           "strict-transport-security": [
-            "max-age=2592000; includeSubDomains"
+            "max-age=15552000; includeSubDomains"
           ],
           "server": [
             "cloudflare"
@@ -95,10 +98,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "{\n  \"id\": \"8da067456f428380-SEA\",\n  \"object\": \"chat.completion\",\n  \"created\": 1730175944,\n  \"model\": \"meta-llama/Llama-3.2-11B-Vision-Instruct-Turbo\",\n  \"prompt_logprobs\": null,\n  \"prompt\": [],\n  \"choices\": [\n    {\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": \"The color is red.\",\n        \"tool_calls\": []\n      },\n      \"logprobs\": null,\n      \"finish_reason\": \"stop\"\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 86,\n    \"total_tokens\": 92,\n    \"completion_tokens\": 6\n  }\n}"
+          "string": "{\n  \"id\": \"8fa68d0cf9b275c1-SEA\",\n  \"object\": \"chat.completion\",\n  \"created\": 1735609115,\n  \"model\": \"meta-llama/Llama-3.2-11B-Vision-Instruct-Turbo\",\n  \"prompt_logprobs\": null,\n  \"prompt\": [],\n  \"choices\": [\n    {\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": \"The color is red.\",\n        \"tool_calls\": []\n      },\n      \"logprobs\": null,\n      \"finish_reason\": \"stop\"\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 86,\n    \"total_tokens\": 92,\n    \"completion_tokens\": 6\n  }\n}"
         }
       },
-      "recorded_at": "Tue, 29 Oct 2024 04:25:44 GMT"
+      "recorded_at": "Tue, 31 Dec 2024 01:38:36 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

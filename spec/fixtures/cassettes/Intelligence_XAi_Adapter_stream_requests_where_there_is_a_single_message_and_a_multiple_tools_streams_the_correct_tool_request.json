@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Mon, 04 Nov 2024 20:55:46 GMT"
+            "Tue, 31 Dec 2024 01:48:11 GMT"
           ],
           "content-type": [
             "text/event-stream"
@@ -65,10 +65,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "data: {\"id\":\"46fd937d-c907-42d7-a737-458f55fbd3e7\",\"object\":\"chat.completion.chunk\",\"created\":1730753746,\"model\":\"grok-beta\",\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"tool_calls\":[{\"id\":\"0\",\"function\":{\"name\":\"get_location\",\"arguments\":\"{}\"},\"index\":0,\"type\":\"function\"}]}}],\"usage\":{\"prompt_tokens\":342,\"completion_tokens\":1,\"total_tokens\":343},\"system_fingerprint\":\"fp_15c3499eda\"}\n\ndata: {\"id\":\"46fd937d-c907-42d7-a737-458f55fbd3e7\",\"object\":\"chat.completion.chunk\",\"created\":1730753746,\"model\":\"grok-beta\",\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":342,\"completion_tokens\":2,\"total_tokens\":344},\"system_fingerprint\":\"fp_15c3499eda\"}\n\ndata: [DONE]\n\n"
+          "string": "data: {\"id\":\"b48b4014-4913-4007-aea8-becf7f7f9f73\",\"object\":\"chat.completion.chunk\",\"created\":1735609691,\"model\":\"grok-beta\",\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"tool_calls\":[{\"id\":\"0\",\"function\":{\"name\":\"get_location\",\"arguments\":\"{}\"},\"index\":0,\"type\":\"function\"}]},\"finish_reason\":\"tool_calls\"}],\"usage\":{\"prompt_tokens\":342,\"completion_tokens\":1,\"total_tokens\":343,\"prompt_tokens_details\":{\"text_tokens\":342,\"audio_tokens\":0,\"image_tokens\":0,\"cached_tokens\":0}},\"system_fingerprint\":\"fp_fcf8a93867\"}\n\ndata: [DONE]\n\n"
         }
       },
-      "recorded_at": "Mon, 04 Nov 2024 20:55:46 GMT"
+      "recorded_at": "Tue, 31 Dec 2024 01:48:11 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

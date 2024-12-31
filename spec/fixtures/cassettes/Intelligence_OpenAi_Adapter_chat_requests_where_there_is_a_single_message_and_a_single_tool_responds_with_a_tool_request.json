@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Wed, 30 Oct 2024 17:21:52 GMT"
+            "Tue, 31 Dec 2024 01:12:30 GMT"
           ],
           "content-type": [
             "application/json"
@@ -45,7 +45,7 @@
             "<OPENAI-ORGANIZATION>"
           ],
           "openai-processing-ms": [
-            "300"
+            "480"
           ],
           "openai-version": [
             "2020-10-01"
@@ -98,10 +98,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\n  \"id\": \"chatcmpl-AO6gCdKGmFffb3739EPcK8g5UGlzT\",\n  \"object\": \"chat.completion\",\n  \"created\": 1730308912,\n  \"model\": \"gpt-4o-2024-08-06\",\n  \"choices\": [\n    {\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": null,\n        \"tool_calls\": [\n          {\n            \"id\": \"call_TZ9MxpWDsc4JbanuDWwY1w5u\",\n            \"type\": \"function\",\n            \"function\": {\n              \"name\": \"get_location\",\n              \"arguments\": \"{}\"\n            }\n          }\n        ],\n        \"refusal\": null\n      },\n      \"logprobs\": null,\n      \"finish_reason\": \"tool_calls\"\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 92,\n    \"completion_tokens\": 10,\n    \"total_tokens\": 102,\n    \"prompt_tokens_details\": {\n      \"cached_tokens\": 0\n    },\n    \"completion_tokens_details\": {\n      \"reasoning_tokens\": 0\n    }\n  },\n  \"system_fingerprint\": \"fp_159d8341cc\"\n}\n"
+          "string": "{\n  \"id\": \"chatcmpl-AkL66FH3YqKm72huM3TkpUkrrzHvj\",\n  \"object\": \"chat.completion\",\n  \"created\": 1735607550,\n  \"model\": \"gpt-4o-2024-08-06\",\n  \"choices\": [\n    {\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": null,\n        \"tool_calls\": [\n          {\n            \"id\": \"call_ivXgtyZICRLG5zZ2tjpRsLHH\",\n            \"type\": \"function\",\n            \"function\": {\n              \"name\": \"get_location\",\n              \"arguments\": \"{}\"\n            }\n          }\n        ],\n        \"refusal\": null\n      },\n      \"logprobs\": null,\n      \"finish_reason\": \"tool_calls\"\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 92,\n    \"completion_tokens\": 11,\n    \"total_tokens\": 103,\n    \"prompt_tokens_details\": {\n      \"cached_tokens\": 0,\n      \"audio_tokens\": 0\n    },\n    \"completion_tokens_details\": {\n      \"reasoning_tokens\": 0,\n      \"audio_tokens\": 0,\n      \"accepted_prediction_tokens\": 0,\n      \"rejected_prediction_tokens\": 0\n    }\n  },\n  \"system_fingerprint\": \"fp_5f20662549\"\n}\n"
         }
       },
-      "recorded_at": "Wed, 30 Oct 2024 17:21:52 GMT"
+      "recorded_at": "Tue, 31 Dec 2024 01:12:30 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

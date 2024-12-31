@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Tue, 29 Oct 2024 18:24:13 GMT"
+            "Tue, 31 Dec 2024 01:38:40 GMT"
           ],
           "content-type": [
             "application/json; charset=utf-8"
@@ -42,7 +42,7 @@
             "*"
           ],
           "x-api-received": [
-            "2024-10-29T18:24:13.857Z"
+            "2024-12-31T01:38:40.421Z"
           ],
           "etag": [
             "W/\"f8-dKpme2yYJvy37iBfgpFew+opp6A\""
@@ -51,7 +51,7 @@
             "DYNAMIC"
           ],
           "strict-transport-security": [
-            "max-age=2592000; includeSubDomains"
+            "max-age=15552000; includeSubDomains"
           ],
           "server": [
             "cloudflare"
@@ -71,7 +71,7 @@
           "string": "{\n  \"error\": {\n    \"message\": \"Unable to access model invalid_model. Please visit https://api.together.ai/models to view the list of supported models.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"model_not_available\"\n  }\n}"
         }
       },
-      "recorded_at": "Tue, 29 Oct 2024 18:24:13 GMT"
+      "recorded_at": "Tue, 31 Dec 2024 01:38:40 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

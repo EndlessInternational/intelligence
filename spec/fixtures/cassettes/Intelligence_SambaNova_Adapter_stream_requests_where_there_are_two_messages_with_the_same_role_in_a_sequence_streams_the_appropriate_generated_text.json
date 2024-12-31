@@ -6,7 +6,7 @@
         "uri": "https://api.sambanova.ai/v1/chat/completions",
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"model\":\"Meta-Llama-3.1-70B-Instruct\",\"max_tokens\":16,\"temperature\":0.0,\"stream\":true,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"this is a test, respond with 'test'\\n\"},{\"role\":\"assistant\",\"content\":\"test\\n\"},{\"role\":\"user\",\"content\":\"hello!\\n\"},{\"role\":\"user\",\"content\":\"what was the previous user message?\\n\"}]}"
+          "string": "{\"model\":\"Meta-Llama-3.1-70B-Instruct\",\"max_tokens\":16,\"temperature\":0.0,\"stream\":true,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"the secret word is 'blue'\\n\"},{\"role\":\"assistant\",\"content\":\"ok\\n\"},{\"role\":\"user\",\"content\":\"the secret word has been changed to 'red'!\\n\"},{\"role\":\"user\",\"content\":\"what is the secret word?\\n\"}]}"
         },
         "headers": {
           "User-Agent": [
@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Wed, 30 Oct 2024 18:45:16 GMT"
+            "Tue, 31 Dec 2024 01:33:59 GMT"
           ],
           "content-type": [
             "text/event-stream; charset=utf-8"
@@ -44,10 +44,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "data: {\"choices\":[{\"delta\":{\"content\":\"\",\"role\":\"assistant\"},\"finish_reason\":null,\"index\":0,\"logprobs\":null}],\"created\":1730313915,\"id\":\"9d0c5348-b4bc-4008-b07b-5765223cf1a2\",\"model\":\"Meta-Llama-3.1-70B-Instruct\",\"object\":\"chat.completion.chunk\",\"system_fingerprint\":\"fastcoe\"}\n\ndata: {\"choices\":[{\"delta\":{\"content\":\"\",\"role\":\"assistant\"},\"finish_reason\":null,\"index\":0,\"logprobs\":null}],\"created\":1730313915,\"id\":\"9d0c5348-b4bc-4008-b07b-5765223cf1a2\",\"model\":\"Meta-Llama-3.1-70B-Instruct\",\"object\":\"chat.completion.chunk\",\"system_fingerprint\":\"fastcoe\"}\n\ndata: {\"choices\":[{\"delta\":{\"content\":\"hello!\",\"role\":\"assistant\"},\"finish_reason\":null,\"index\":0,\"logprobs\":null}],\"created\":1730313915,\"id\":\"9d0c5348-b4bc-4008-b07b-5765223cf1a2\",\"model\":\"Meta-Llama-3.1-70B-Instruct\",\"object\":\"chat.completion.chunk\",\"system_fingerprint\":\"fastcoe\"}\n\ndata: {\"choices\":[{\"delta\":{\"content\":\"\"},\"finish_reason\":\"stop\",\"index\":0,\"logprobs\":null}],\"created\":1730313915,\"id\":\"9d0c5348-b4bc-4008-b07b-5765223cf1a2\",\"model\":\"Meta-Llama-3.1-70B-Instruct\",\"object\":\"chat.completion.chunk\",\"system_fingerprint\":\"fastcoe\"}\n\ndata: [DONE]\n\n"
+          "string": "data: {\"choices\":[{\"delta\":{\"content\":\"\",\"role\":\"assistant\"},\"finish_reason\":null,\"index\":0,\"logprobs\":null}],\"created\":1735608839,\"id\":\"127f322b-6a1f-46c6-b714-adfd17cf7d91\",\"model\":\"Meta-Llama-3.1-70B-Instruct\",\"object\":\"chat.completion.chunk\",\"system_fingerprint\":\"fastcoe\"}\n\ndata: {\"choices\":[{\"delta\":{\"content\":\"red\",\"role\":\"assistant\"},\"finish_reason\":null,\"index\":0,\"logprobs\":null}],\"created\":1735608839,\"id\":\"127f322b-6a1f-46c6-b714-adfd17cf7d91\",\"model\":\"Meta-Llama-3.1-70B-Instruct\",\"object\":\"chat.completion.chunk\",\"system_fingerprint\":\"fastcoe\"}\n\ndata: {\"choices\":[{\"delta\":{\"content\":\"\"},\"finish_reason\":\"stop\",\"index\":0,\"logprobs\":null}],\"created\":1735608839,\"id\":\"127f322b-6a1f-46c6-b714-adfd17cf7d91\",\"model\":\"Meta-Llama-3.1-70B-Instruct\",\"object\":\"chat.completion.chunk\",\"system_fingerprint\":\"fastcoe\"}\n\ndata: [DONE]\n\n"
         }
       },
-      "recorded_at": "Wed, 30 Oct 2024 18:45:16 GMT"
+      "recorded_at": "Tue, 31 Dec 2024 01:33:59 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

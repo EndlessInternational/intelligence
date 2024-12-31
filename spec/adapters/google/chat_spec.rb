@@ -12,7 +12,7 @@ RSpec.describe "#{Intelligence::Adapter[ :google ]} chat requests", :google do
     Intelligence::Adapter[ :google ].build! do   
       key                     ENV[ 'GOOGLE_API_KEY' ]
       chat_options do
-        model                 'gemini-1.5-pro-002'
+        model                 'gemini-1.5-pro'
         max_tokens            64 
         temperature           0
       end
@@ -23,7 +23,7 @@ RSpec.describe "#{Intelligence::Adapter[ :google ]} chat requests", :google do
     Intelligence::Adapter[ :google ].build! do   
       key                     ENV[ 'GOOGLE_API_KEY' ]
       chat_options do
-        model                 'gemini-1.5-pro-002'
+        model                 'gemini-1.5-pro'
         max_tokens            16 
         temperature           0
       end
@@ -34,7 +34,7 @@ RSpec.describe "#{Intelligence::Adapter[ :google ]} chat requests", :google do
     Intelligence::Adapter[ :google ].build! do   
       key                     ENV[ 'GOOGLE_API_KEY' ]
       chat_options do
-        model                 'gemini-1.5-pro-002'
+        model                 'gemini-1.5-pro'
         max_tokens            32 
         temperature           0
       end
@@ -45,7 +45,7 @@ RSpec.describe "#{Intelligence::Adapter[ :google ]} chat requests", :google do
     Intelligence::Adapter[ :google ].build! do   
       key                     ENV[ 'GOOGLE_API_KEY' ]
       chat_options do
-        model                 'gemini-1.5-pro-002'
+        model                 'gemini-1.5-pro'
         max_tokens            16
         temperature           0
         stop                  'five'
@@ -57,7 +57,7 @@ RSpec.describe "#{Intelligence::Adapter[ :google ]} chat requests", :google do
     Intelligence::Adapter[ :google ].build! do   
       key                     ENV[ 'GOOGLE_API_KEY' ]
       chat_options do
-        model                 'gemini-1.5-pro-002'
+        model                 'gemini-1.5-pro'
         max_tokens            32
         temperature           0
       end
@@ -68,7 +68,7 @@ RSpec.describe "#{Intelligence::Adapter[ :google ]} chat requests", :google do
     Intelligence::Adapter[ :google ].build! do 
       key                     'this-key-is-not-valid'  
       chat_options do
-        model                 'gemini-1.5-pro-002'
+        model                 'gemini-1.5-pro'
         max_tokens            16
         temperature           0
       end

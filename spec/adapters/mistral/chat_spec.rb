@@ -8,12 +8,6 @@ RSpec.describe "#{Intelligence::Adapter[ :mistral ]} chat requests", :mistral do
     raise "A MISTRAL_API_KEY must be defined in the environment." unless ENV[ 'MISTRAL_API_KEY' ]
   end
 
-  # this is needed for mistral test to avoid the rate limit
-  after( :each ) do | example |
-    cassette = VCR.current_cassette
-    sleep 3 if cassette && cassette.new_recorded_interactions.any? 
-  end
-
 
   let( :adapter ) do
     Intelligence::Adapter[ :mistral ].build! do   

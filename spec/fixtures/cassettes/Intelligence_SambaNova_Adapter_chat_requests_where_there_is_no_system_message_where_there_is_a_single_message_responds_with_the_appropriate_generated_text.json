@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Thu, 31 Oct 2024 22:30:10 GMT"
+            "Tue, 31 Dec 2024 01:30:36 GMT"
           ],
           "content-type": [
             "application/json; charset=utf-8"
@@ -44,10 +44,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"choices\":[{\"finish_reason\":\"stop\",\"index\":0,\"logprobs\":null,\"message\":{\"content\":\"hello\",\"role\":\"assistant\"}}],\"created\":1730413810,\"id\":\"d7219123-75f0-4a8c-bea1-969ccab22771\",\"model\":\"Meta-Llama-3.1-70B-Instruct\",\"object\":\"chat.completion\",\"system_fingerprint\":\"fastcoe\",\"usage\":{\"completion_tokens\":1,\"completion_tokens_after_first_per_sec\":0,\"completion_tokens_after_first_per_sec_first_ten\":0,\"completion_tokens_per_sec\":6.580931430848744,\"end_time\":1730413810.2186625,\"is_last_response\":true,\"prompt_tokens\":43,\"start_time\":1730413810.0667083,\"time_to_first_token\":0.13870716094970703,\"total_latency\":0.15195417404174805,\"total_tokens\":44,\"total_tokens_per_sec\":289.5609829573447}}\n"
+          "string": "{\"choices\":[{\"finish_reason\":\"stop\",\"index\":0,\"logprobs\":null,\"message\":{\"content\":\"hello\",\"role\":\"assistant\"}}],\"created\":1735608636,\"id\":\"f143290f-fce6-42a2-b3eb-f986d1e0e389\",\"model\":\"Meta-Llama-3.1-70B-Instruct\",\"object\":\"chat.completion\",\"system_fingerprint\":\"fastcoe\",\"usage\":{\"completion_tokens\":1,\"completion_tokens_after_first_per_sec\":0,\"completion_tokens_after_first_per_sec_first_ten\":0,\"completion_tokens_per_sec\":10.584860758854777,\"end_time\":1735608636.3050716,\"is_last_response\":true,\"prompt_tokens\":43,\"start_time\":1735608636.210597,\"time_to_first_token\":0.08023262023925781,\"total_latency\":0.09447455406188965,\"total_tokens\":44,\"total_tokens_per_sec\":465.7338733896102}}\n"
         }
       },
-      "recorded_at": "Thu, 31 Oct 2024 22:30:10 GMT"
+      "recorded_at": "Tue, 31 Dec 2024 01:30:36 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

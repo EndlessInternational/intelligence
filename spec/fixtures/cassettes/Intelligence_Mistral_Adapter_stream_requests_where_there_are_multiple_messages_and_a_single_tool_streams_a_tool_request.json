@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Wed, 30 Oct 2024 22:23:04 GMT"
+            "Tue, 31 Dec 2024 01:09:53 GMT"
           ],
           "content-type": [
             "text/event-stream; charset=utf-8"
@@ -38,44 +38,44 @@
           "connection": [
             "keep-alive"
           ],
-          "ratelimitbysize-limit": [
-            "500000"
-          ],
-          "x-ratelimitbysize-limit-month": [
-            "1000000000"
-          ],
           "x-ratelimitbysize-remaining-minute": [
-            "498118"
-          ],
-          "ratelimitbysize-reset": [
-            "57"
+            "1993087"
           ],
           "ratelimitbysize-remaining": [
-            "498118"
+            "1993087"
+          ],
+          "ratelimitbysize-limit": [
+            "2000000"
+          ],
+          "ratelimitbysize-reset": [
+            "8"
           ],
           "x-ratelimitbysize-remaining-month": [
-            "999972003"
+            "9999951743"
           ],
           "x-ratelimitbysize-limit-minute": [
-            "500000"
+            "2000000"
           ],
           "ratelimitbysize-query-cost": [
             "204"
           ],
+          "x-ratelimitbysize-limit-month": [
+            "10000000000"
+          ],
           "x-envoy-upstream-service-time": [
-            "373"
+            "673"
           ],
           "access-control-allow-origin": [
             "*"
           ],
           "x-kong-upstream-latency": [
-            "374"
+            "674"
           ],
           "x-kong-proxy-latency": [
-            "4"
+            "0"
           ],
           "x-kong-request-id": [
-            "8bbf4b5ed68858377afdf83a85104d22"
+            "fe14c64c81fbc3191dddf86312cd595d"
           ],
           "cf-cache-status": [
             "DYNAMIC"
@@ -92,10 +92,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "data: {\"id\":\"4d979724dda34f4397a285028b56fd7b\",\"object\":\"chat.completion.chunk\",\"created\":1730326983,\"model\":\"mistral-large-latest\",\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"\"},\"finish_reason\":null}]}\n\ndata: {\"id\":\"4d979724dda34f4397a285028b56fd7b\",\"object\":\"chat.completion.chunk\",\"created\":1730326983,\"model\":\"mistral-large-latest\",\"choices\":[{\"index\":0,\"delta\":{\"content\":null,\"tool_calls\":[{\"id\":\"vQCuwS658\",\"function\":{\"name\":\"get_weather\",\"arguments\":\"{\\\"city\\\": \\\"Seattle\\\", \\\"state\\\": \\\"WA\\\"}\"}}]},\"finish_reason\":\"tool_calls\"}],\"usage\":{\"prompt_tokens\":270,\"total_tokens\":299,\"completion_tokens\":29}}\n\ndata: [DONE]\n\n"
+          "string": "data: {\"id\":\"454c2cb5f4d642c7bb94cc640020397c\",\"object\":\"chat.completion.chunk\",\"created\":1735607392,\"model\":\"mistral-large-latest\",\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"\"},\"finish_reason\":null}]}\n\ndata: {\"id\":\"454c2cb5f4d642c7bb94cc640020397c\",\"object\":\"chat.completion.chunk\",\"created\":1735607392,\"model\":\"mistral-large-latest\",\"choices\":[{\"index\":0,\"delta\":{\"tool_calls\":[{\"id\":\"RskuL7sJY\",\"function\":{\"name\":\"get_weather\",\"arguments\":\"{\\\"city\\\": \\\"Seattle\\\", \\\"state\\\": \\\"WA\\\"}\"}}]},\"finish_reason\":\"tool_calls\"}],\"usage\":{\"prompt_tokens\":270,\"total_tokens\":299,\"completion_tokens\":29}}\n\ndata: [DONE]\n\n"
         }
       },
-      "recorded_at": "Wed, 30 Oct 2024 22:23:05 GMT"
+      "recorded_at": "Tue, 31 Dec 2024 01:09:53 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

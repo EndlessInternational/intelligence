@@ -30,7 +30,7 @@
         },
         "headers": {
           "date": [
-            "Wed, 30 Oct 2024 17:34:30 GMT"
+            "Tue, 31 Dec 2024 01:13:58 GMT"
           ],
           "content-type": [
             "application/json"
@@ -48,16 +48,34 @@
             "999"
           ],
           "anthropic-ratelimit-requests-reset": [
-            "2024-10-30T17:35:17Z"
+            "2024-12-31T01:13:57Z"
+          ],
+          "anthropic-ratelimit-input-tokens-limit": [
+            "80000"
+          ],
+          "anthropic-ratelimit-input-tokens-remaining": [
+            "80000"
+          ],
+          "anthropic-ratelimit-input-tokens-reset": [
+            "2024-12-31T01:13:58Z"
+          ],
+          "anthropic-ratelimit-output-tokens-limit": [
+            "16000"
+          ],
+          "anthropic-ratelimit-output-tokens-remaining": [
+            "16000"
+          ],
+          "anthropic-ratelimit-output-tokens-reset": [
+            "2024-12-31T01:13:58Z"
           ],
           "anthropic-ratelimit-tokens-limit": [
-            "80000"
+            "96000"
           ],
           "anthropic-ratelimit-tokens-remaining": [
-            "80000"
+            "96000"
           ],
           "anthropic-ratelimit-tokens-reset": [
-            "2024-10-30T17:34:29Z"
+            "2024-12-31T01:13:58Z"
           ],
           "request-id": [
             "<REQUEST-ID>"
@@ -83,10 +101,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\"id\":\"msg_01MRuyLWhTZzRNVLhuEnpbQD\",\"type\":\"message\",\"role\":\"assistant\",\"model\":\"claude-3-5-sonnet-20240620\",\"content\":[{\"type\":\"text\",\"text\":\"To answer your question about your location, I'll need to use the get_location tool. Let me retrieve that information for you.\"},{\"type\":\"tool_use\",\"id\":\"toolu_01PA1oi3gsnQ2tCZx2pGa32R\",\"name\":\"get_location\",\"input\":{}}],\"stop_reason\":\"tool_use\",\"stop_sequence\":null,\"usage\":{\"input_tokens\":391,\"output_tokens\":68}}"
+          "string": "{\"id\":\"msg_01WWpTtuuaUkK2bw24QPFbv7\",\"type\":\"message\",\"role\":\"assistant\",\"model\":\"claude-3-5-sonnet-20240620\",\"content\":[{\"type\":\"text\",\"text\":\"To answer your question about your location, I'll need to use the get_location tool. Let me retrieve that information for you.\"},{\"type\":\"tool_use\",\"id\":\"toolu_01Dhc6BDy8x48FEXPJZ3uTsA\",\"name\":\"get_location\",\"input\":{}}],\"stop_reason\":\"tool_use\",\"stop_sequence\":null,\"usage\":{\"input_tokens\":391,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":64}}"
         }
       },
-      "recorded_at": "Wed, 30 Oct 2024 17:34:30 GMT"
+      "recorded_at": "Tue, 31 Dec 2024 01:13:58 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

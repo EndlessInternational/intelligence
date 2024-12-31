@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Tue, 29 Oct 2024 18:24:05 GMT"
+            "Tue, 31 Dec 2024 01:09:42 GMT"
           ],
           "content-type": [
             "application/json; charset=utf-8"
@@ -45,10 +45,10 @@
             "*"
           ],
           "x-kong-response-latency": [
-            "1"
+            "0"
           ],
           "x-kong-request-id": [
-            "b792ea39118ed742849cd21747597443"
+            "ce8c301b31ec65237c0ade157599c248"
           ],
           "cf-cache-status": [
             "DYNAMIC"
@@ -65,10 +65,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "{\n  \"message\":\"Unauthorized\",\n  \"request_id\":\"b792ea39118ed742849cd21747597443\"\n}"
+          "string": "{\n  \"message\":\"Unauthorized\",\n  \"request_id\":\"ce8c301b31ec65237c0ade157599c248\"\n}"
         }
       },
-      "recorded_at": "Tue, 29 Oct 2024 18:24:05 GMT"
+      "recorded_at": "Tue, 31 Dec 2024 01:09:42 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

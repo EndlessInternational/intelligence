@@ -21,8 +21,10 @@ RSpec.configure do | config |
     mocks.syntax = :expect
   end
 
+  ignore_cassettes = ( config.inclusion_filter.delete( :'ignore-cassettes' ) ? true : false )
   record_cassettes = ( config.inclusion_filter.delete( :'record-cassettes' ) ? true : false )
   config.define_derived_metadata do | metadata |
+    metadata[ :ignore_cassettes ] = true if ignore_cassettes
     metadata[ :record_cassettes ] = true if record_cassettes
   end 
 

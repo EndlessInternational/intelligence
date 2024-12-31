@@ -30,13 +30,13 @@
             "application/json"
           ],
           "content-length": [
-            "533"
+            "522"
           ],
           "connection": [
             "keep-alive"
           ],
           "date": [
-            "Tue, 29 Oct 2024 04:07:47 GMT"
+            "Tue, 31 Dec 2024 01:26:03 GMT"
           ],
           "strict-transport-security": [
             "max-age=3600; includeSubDomains"
@@ -54,16 +54,16 @@
             "60000"
           ],
           "x-ratelimit-remaining-requests-day": [
-            "14383"
+            "14387"
           ],
           "x-ratelimit-remaining-tokens-minute": [
-            "59427"
+            "60000"
           ],
           "x-ratelimit-reset-requests-day": [
-            "71532.32099962234"
+            "81236.80479669571"
           ],
           "x-ratelimit-reset-tokens-minute": [
-            "12.32099962234497"
+            "56.80479669570923"
           ],
           "referrer-policy": [
             "strict-origin-when-cross-origin"
@@ -75,21 +75,24 @@
             "Miss from cloudfront"
           ],
           "via": [
-            "1.1 0ee59da61923d229aa7d17cdea2474a8.cloudfront.net (CloudFront)"
+            "1.1 c1caaceb6655a57ae014aef7bc8ec388.cloudfront.net (CloudFront)"
           ],
           "x-amz-cf-pop": [
             "SFO20-C1"
           ],
+          "alt-svc": [
+            "h3=\":443\"; ma=86400"
+          ],
           "x-amz-cf-id": [
-            "3rkFhA7-f9YY2ZJZ66BHYte_yiHZ-SpvZWuJoP265KAPc3LqCa02kQ=="
+            "6W9y0EoU3_ifgoW1ecHiG2bjbmVaFELO15NuhH9S5KZw3p-pIsQU3w=="
           ]
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"id\":\"chatcmpl-617d6e70-370c-487e-acfd-1c837c5ea5ce\",\"choices\":[{\"finish_reason\":\"length\",\"index\":0,\"message\":{\"content\":\"one\\ntwo\\nthree\\nfour\\nfive\\nsix\\nseven\\neight\\n\",\"role\":\"assistant\"}}],\"created\":1730174867,\"model\":\"llama3.1-70b\",\"system_fingerprint\":\"fp_55ebaf7e1e\",\"object\":\"chat.completion\",\"usage\":{\"prompt_tokens\":117,\"completion_tokens\":16,\"total_tokens\":133},\"time_info\":{\"queue_time\":2.745e-05,\"prompt_time\":0.0055779714,\"completion_time\":0.0068650175999999995,\"total_time\":0.02648639678955078,\"created\":1730174867}}"
+          "string": "{\"id\":\"chatcmpl-a3c36604-fa84-4b15-96d2-6fee85c2ab12\",\"choices\":[{\"finish_reason\":\"length\",\"index\":0,\"message\":{\"content\":\"one\\ntwo\\nthree\\nfour\\nfive\\nsix\\nseven\\neight\\n\",\"role\":\"assistant\"}}],\"created\":1735608363,\"model\":\"llama3.1-70b\",\"system_fingerprint\":\"fp_2e2a2a083c\",\"object\":\"chat.completion\",\"usage\":{\"prompt_tokens\":117,\"completion_tokens\":16,\"total_tokens\":133},\"time_info\":{\"queue_time\":9.307e-05,\"prompt_time\":0.005616882,\"completion_time\":0.00275484,\"total_time\":0.011149168014526367,\"created\":1735608363}}"
         }
       },
-      "recorded_at": "Tue, 29 Oct 2024 04:07:47 GMT"
+      "recorded_at": "Tue, 31 Dec 2024 01:26:03 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

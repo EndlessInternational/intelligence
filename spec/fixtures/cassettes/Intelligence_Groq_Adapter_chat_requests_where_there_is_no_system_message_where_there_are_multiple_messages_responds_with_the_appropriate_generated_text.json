@@ -6,7 +6,7 @@
         "uri": "https://api.groq.com/openai/v1/chat/completions",
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"model\":\"llama-3.1-70b-versatile\",\"max_tokens\":16,\"temperature\":0.0,\"messages\":[{\"role\":\"user\",\"content\":\"this is a test, respond with 'test'\\n\"},{\"role\":\"assistant\",\"content\":\"test\\n\"},{\"role\":\"user\",\"content\":\"what was the previous user message?\\nrespond in less than 16 words\\n\"}]}"
+          "string": "{\"model\":\"llama-3.1-70b-versatile\",\"max_tokens\":16,\"temperature\":0.0,\"messages\":[{\"role\":\"user\",\"content\":\"the secret word is 'red'\\n\"},{\"role\":\"assistant\",\"content\":\"ok\\n\"},{\"role\":\"user\",\"content\":\"what is the exact secret word? answer with the word only\\n\"}]}"
         },
         "headers": {
           "User-Agent": [
@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Thu, 31 Oct 2024 22:29:19 GMT"
+            "Tue, 31 Dec 2024 01:37:21 GMT"
           ],
           "content-type": [
             "application/json"
@@ -38,11 +38,26 @@
           "connection": [
             "keep-alive"
           ],
+          "cf-ray": [
+            "<CF-RAY>"
+          ],
+          "cf-cache-status": [
+            "DYNAMIC"
+          ],
           "cache-control": [
             "private, max-age=0, no-store, no-cache, must-revalidate"
           ],
           "vary": [
-            "Origin"
+            "Origin, Accept-Encoding"
+          ],
+          "via": [
+            "1.1 google"
+          ],
+          "alt-svc": [
+            "h3=\":443\"; ma=86400"
+          ],
+          "x-groq-region": [
+            "us-west-1"
           ],
           "x-ratelimit-limit-requests": [
             "14400"
@@ -54,25 +69,16 @@
             "14398"
           ],
           "x-ratelimit-remaining-tokens": [
-            "5924"
+            "5939"
           ],
           "x-ratelimit-reset-requests": [
-            "11.64s"
+            "9.324s"
           ],
           "x-ratelimit-reset-tokens": [
-            "751ms"
+            "603ms"
           ],
           "x-request-id": [
             "<X-REQUEST-ID>"
-          ],
-          "via": [
-            "1.1 google"
-          ],
-          "alt-svc": [
-            "h3=\":443\"; ma=86400"
-          ],
-          "cf-cache-status": [
-            "DYNAMIC"
           ],
           "set-cookie": [
             "<SET-COOKIE>"
@@ -80,19 +86,16 @@
           "server": [
             "cloudflare"
           ],
-          "cf-ray": [
-            "<CF-RAY>"
-          ],
           "content-encoding": [
             "gzip"
           ]
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\"id\":\"chatcmpl-ed54f54b-7597-473b-b4cc-6cb84a142a27\",\"object\":\"chat.completion\",\"created\":1730413759,\"model\":\"llama-3.1-70b-versatile\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"this is a test, respond with 'test'\"},\"logprobs\":null,\"finish_reason\":\"stop\"}],\"usage\":{\"queue_time\":0.0036207210000000004,\"prompt_tokens\":72,\"prompt_time\":0.012307156,\"completion_tokens\":11,\"completion_time\":0.044,\"total_tokens\":83,\"total_time\":0.056307156},\"system_fingerprint\":\"fp_b6828be2c9\",\"x_groq\":{\"id\":\"req_01jbjb534degy8twn433jt93cn\"}}\n"
+          "string": "{\"id\":\"chatcmpl-a0395525-91df-4c06-b61c-633d1d1d2d30\",\"object\":\"chat.completion\",\"created\":1735609041,\"model\":\"llama-3.1-70b-versatile\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"red\"},\"logprobs\":null,\"finish_reason\":\"stop\"}],\"usage\":{\"queue_time\":1.3547652840000002,\"prompt_tokens\":67,\"prompt_time\":0.01850216,\"completion_tokens\":2,\"completion_time\":0.009832224,\"total_tokens\":69,\"total_time\":0.028334384},\"system_fingerprint\":\"fp_c0cfa69934\",\"x_groq\":{\"id\":\"req_01jgd5rf70fcdbw2e5gy6a02ma\"}}\n"
         }
       },
-      "recorded_at": "Thu, 31 Oct 2024 22:29:19 GMT"
+      "recorded_at": "Tue, 31 Dec 2024 01:37:21 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

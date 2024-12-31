@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Thu, 31 Oct 2024 22:29:19 GMT"
+            "Tue, 31 Dec 2024 01:37:21 GMT"
           ],
           "content-type": [
             "application/json"
@@ -38,11 +38,26 @@
           "connection": [
             "keep-alive"
           ],
+          "cf-ray": [
+            "<CF-RAY>"
+          ],
+          "cf-cache-status": [
+            "DYNAMIC"
+          ],
           "cache-control": [
             "private, max-age=0, no-store, no-cache, must-revalidate"
           ],
           "vary": [
-            "Origin"
+            "Origin, Accept-Encoding"
+          ],
+          "via": [
+            "1.1 google"
+          ],
+          "alt-svc": [
+            "h3=\":443\"; ma=86400"
+          ],
+          "x-groq-region": [
+            "us-west-1"
           ],
           "x-ratelimit-limit-requests": [
             "14400"
@@ -54,25 +69,16 @@
             "14397"
           ],
           "x-ratelimit-remaining-tokens": [
-            "5828"
+            "5869"
           ],
           "x-ratelimit-reset-requests": [
-            "17.813999999s"
+            "16.502s"
           ],
           "x-ratelimit-reset-tokens": [
-            "1.716s"
+            "1.301s"
           ],
           "x-request-id": [
             "<X-REQUEST-ID>"
-          ],
-          "via": [
-            "1.1 google"
-          ],
-          "alt-svc": [
-            "h3=\":443\"; ma=86400"
-          ],
-          "cf-cache-status": [
-            "DYNAMIC"
           ],
           "set-cookie": [
             "<SET-COOKIE>"
@@ -80,19 +86,16 @@
           "server": [
             "cloudflare"
           ],
-          "cf-ray": [
-            "<CF-RAY>"
-          ],
           "content-encoding": [
             "gzip"
           ]
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\"id\":\"chatcmpl-1401c863-4f0d-448f-8dbb-0e64018a3c05\",\"object\":\"chat.completion\",\"created\":1730413759,\"model\":\"llama-3.1-70b-versatile\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"hello\"},\"logprobs\":null,\"finish_reason\":\"stop\"}],\"usage\":{\"queue_time\":0.0031020310000000016,\"prompt_tokens\":78,\"prompt_time\":0.013765916,\"completion_tokens\":2,\"completion_time\":0.008,\"total_tokens\":80,\"total_time\":0.021765916},\"system_fingerprint\":\"fp_b3ae7e594e\",\"x_groq\":{\"id\":\"req_01jbjb53a8fvtt5tnrj7nc60a3\"}}\n"
+          "string": "{\"id\":\"chatcmpl-e8a1acce-a46e-4b57-9610-4434570dea92\",\"object\":\"chat.completion\",\"created\":1735609041,\"model\":\"llama-3.1-70b-versatile\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"hello\"},\"logprobs\":null,\"finish_reason\":\"stop\"}],\"usage\":{\"queue_time\":0.018422196000000002,\"prompt_tokens\":78,\"prompt_time\":0.012890023,\"completion_tokens\":2,\"completion_time\":0.007272727,\"total_tokens\":80,\"total_time\":0.02016275},\"system_fingerprint\":\"fp_fcc3b74982\",\"x_groq\":{\"id\":\"req_01jgd5rgnvfcdb87jta2qqt8ff\"}}\n"
         }
       },
-      "recorded_at": "Thu, 31 Oct 2024 22:29:19 GMT"
+      "recorded_at": "Tue, 31 Dec 2024 01:37:21 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

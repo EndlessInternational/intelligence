@@ -6,11 +6,11 @@ RSpec.shared_examples 'stream requests without alternating roles' do
     it 'streams the appropriate generated text' do 
 
       conversation = create_conversation( 
-        "this is a test, respond with 'test'\n",
-        "test\n"
+        "the secret word is 'blue'\n",
+        "ok\n"
       )
-      conversation.messages << build_text_message( :user, "hello!\n" )
-      conversation.messages << build_text_message( :user, "what was the previous user message?\n" )
+      conversation.messages << build_text_message( :user, "the secret word has been changed to 'red'!\n" )
+      conversation.messages << build_text_message( :user, "what is the secret word?\n" )
 
       text = ''
       response = create_and_make_stream_request( adapter, conversation ) do | result | 
@@ -36,7 +36,7 @@ RSpec.shared_examples 'stream requests without alternating roles' do
       choice = response.result.choices.first
       expect( choice.end_reason ).to eq( :ended )
 
-      expect( text ).to( match( /this is a test|hello/i ) )
+      expect( text ).to( match( /red/i ) )
 
     end
   end

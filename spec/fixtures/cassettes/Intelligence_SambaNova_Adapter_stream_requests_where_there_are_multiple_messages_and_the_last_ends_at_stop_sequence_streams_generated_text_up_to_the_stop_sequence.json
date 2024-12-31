@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Wed, 30 Oct 2024 18:45:15 GMT"
+            "Tue, 31 Dec 2024 01:33:49 GMT"
           ],
           "content-type": [
             "text/event-stream; charset=utf-8"
@@ -44,10 +44,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "data: {\"choices\":[{\"delta\":{\"content\":\"\",\"role\":\"assistant\"},\"finish_reason\":null,\"index\":0,\"logprobs\":null}],\"created\":1730313914,\"id\":\"6dc43ded-77ae-4c6e-b581-7c82815578c3\",\"model\":\"Meta-Llama-3.1-70B-Instruct\",\"object\":\"chat.completion.chunk\",\"system_fingerprint\":\"fastcoe\"}\n\ndata: {\"choices\":[{\"delta\":{\"content\":\"\",\"role\":\"assistant\"},\"finish_reason\":null,\"index\":0,\"logprobs\":null}],\"created\":1730313914,\"id\":\"6dc43ded-77ae-4c6e-b581-7c82815578c3\",\"model\":\"Meta-Llama-3.1-70B-Instruct\",\"object\":\"chat.completion.chunk\",\"system_fingerprint\":\"fastcoe\"}\n\ndata: {\"choices\":[{\"delta\":{\"content\":\"one\\ntwo\\nthree\\nfour\\n\",\"role\":\"assistant\"},\"finish_reason\":null,\"index\":0,\"logprobs\":null}],\"created\":1730313914,\"id\":\"6dc43ded-77ae-4c6e-b581-7c82815578c3\",\"model\":\"Meta-Llama-3.1-70B-Instruct\",\"object\":\"chat.completion.chunk\",\"system_fingerprint\":\"fastcoe\"}\n\ndata: {\"choices\":[{\"delta\":{\"content\":\"\"},\"finish_reason\":\"stop\",\"index\":0,\"logprobs\":null}],\"created\":1730313914,\"id\":\"6dc43ded-77ae-4c6e-b581-7c82815578c3\",\"model\":\"Meta-Llama-3.1-70B-Instruct\",\"object\":\"chat.completion.chunk\",\"system_fingerprint\":\"fastcoe\"}\n\ndata: [DONE]\n\n"
+          "string": "data: {\"choices\":[{\"delta\":{\"content\":\"\",\"role\":\"assistant\"},\"finish_reason\":null,\"index\":0,\"logprobs\":null}],\"created\":1735608829,\"id\":\"168922ef-dff9-4a88-9d73-359dca8fe190\",\"model\":\"Meta-Llama-3.1-70B-Instruct\",\"object\":\"chat.completion.chunk\",\"system_fingerprint\":\"fastcoe\"}\n\ndata: {\"choices\":[{\"delta\":{\"content\":\"\",\"role\":\"assistant\"},\"finish_reason\":null,\"index\":0,\"logprobs\":null}],\"created\":1735608829,\"id\":\"168922ef-dff9-4a88-9d73-359dca8fe190\",\"model\":\"Meta-Llama-3.1-70B-Instruct\",\"object\":\"chat.completion.chunk\",\"system_fingerprint\":\"fastcoe\"}\n\ndata: {\"choices\":[{\"delta\":{\"content\":\"one\\ntwo\\nthree\\nfour\\n\",\"role\":\"assistant\"},\"finish_reason\":null,\"index\":0,\"logprobs\":null}],\"created\":1735608829,\"id\":\"168922ef-dff9-4a88-9d73-359dca8fe190\",\"model\":\"Meta-Llama-3.1-70B-Instruct\",\"object\":\"chat.completion.chunk\",\"system_fingerprint\":\"fastcoe\"}\n\ndata: {\"choices\":[{\"delta\":{\"content\":\"\"},\"finish_reason\":\"stop\",\"index\":0,\"logprobs\":null}],\"created\":1735608829,\"id\":\"168922ef-dff9-4a88-9d73-359dca8fe190\",\"model\":\"Meta-Llama-3.1-70B-Instruct\",\"object\":\"chat.completion.chunk\",\"system_fingerprint\":\"fastcoe\"}\n\ndata: [DONE]\n\n"
         }
       },
-      "recorded_at": "Wed, 30 Oct 2024 18:45:15 GMT"
+      "recorded_at": "Tue, 31 Dec 2024 01:33:49 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

@@ -6,7 +6,7 @@
         "uri": "https://api.sambanova.ai/v1/chat/completions",
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"model\":\"Meta-Llama-3.1-70B-Instruct\",\"max_tokens\":24,\"temperature\":0.0,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"this is a test, respond with 'test'\\n\"},{\"role\":\"assistant\",\"content\":\"test\\n\"},{\"role\":\"user\",\"content\":\"hello!\\n\"},{\"role\":\"user\",\"content\":\"what was the previous user message?\\n\"}]}"
+          "string": "{\"model\":\"Meta-Llama-3.1-70B-Instruct\",\"max_tokens\":24,\"temperature\":0.0,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"the secret word is 'blue'\\n\"},{\"role\":\"assistant\",\"content\":\"ok\\n\"},{\"role\":\"user\",\"content\":\"the secret word has been changed to 'red'!\\n\"},{\"role\":\"user\",\"content\":\"what is the secret word?\\n\"}]}"
         },
         "headers": {
           "User-Agent": [
@@ -27,13 +27,13 @@
         },
         "headers": {
           "date": [
-            "Tue, 29 Oct 2024 04:18:32 GMT"
+            "Tue, 31 Dec 2024 01:32:07 GMT"
           ],
           "content-type": [
             "application/json; charset=utf-8"
           ],
           "content-length": [
-            "706"
+            "689"
           ],
           "connection": [
             "keep-alive"
@@ -44,10 +44,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"choices\":[{\"finish_reason\":\"stop\",\"index\":0,\"logprobs\":null,\"message\":{\"content\":\"hello!\",\"role\":\"assistant\"}}],\"created\":1730175512,\"id\":\"0ace8cbe-b2c1-4d26-89a4-53011a044c4a\",\"model\":\"Meta-Llama-3.1-70B-Instruct\",\"object\":\"chat.completion\",\"system_fingerprint\":\"fastcoe\",\"usage\":{\"completion_tokens\":2,\"completion_tokens_after_first_per_sec\":57.40117695360613,\"completion_tokens_after_first_per_sec_first_ten\":0,\"completion_tokens_per_sec\":8.486929073314347,\"end_time\":1730175512.27425,\"is_last_response\":true,\"prompt_tokens\":105,\"start_time\":1730175512.0385935,\"time_to_first_token\":0.21823525428771973,\"total_latency\":0.2356564998626709,\"total_tokens\":107,\"total_tokens_per_sec\":454.05070542231755}}\n"
+          "string": "{\"choices\":[{\"finish_reason\":\"stop\",\"index\":0,\"logprobs\":null,\"message\":{\"content\":\"red\",\"role\":\"assistant\"}}],\"created\":1735608727,\"id\":\"f5fd700b-cc05-4b67-955a-676e3a0bec61\",\"model\":\"Meta-Llama-3.1-70B-Instruct\",\"object\":\"chat.completion\",\"system_fingerprint\":\"fastcoe\",\"usage\":{\"completion_tokens\":1,\"completion_tokens_after_first_per_sec\":0,\"completion_tokens_after_first_per_sec_first_ten\":0,\"completion_tokens_per_sec\":10.721526364761097,\"end_time\":1735608727.54426,\"is_last_response\":true,\"prompt_tokens\":110,\"start_time\":1735608727.4509897,\"time_to_first_token\":0.07907962799072266,\"total_latency\":0.09327030181884766,\"total_tokens\":111,\"total_tokens_per_sec\":1190.0894264884816}}\n"
         }
       },
-      "recorded_at": "Tue, 29 Oct 2024 04:18:32 GMT"
+      "recorded_at": "Tue, 31 Dec 2024 01:32:07 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

@@ -33,7 +33,7 @@
             "gzip"
           ],
           "date": [
-            "Fri, 01 Nov 2024 21:07:07 GMT"
+            "Fri, 08 Nov 2024 01:20:01 GMT"
           ],
           "server": [
             "scaffolding on HTTPServer2"
@@ -51,7 +51,7 @@
             "nosniff"
           ],
           "server-timing": [
-            "gfet4t7; dur=2047"
+            "gfet4t7; dur=1653"
           ],
           "alt-svc": [
             "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
@@ -62,10 +62,74 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "{\n  \"candidates\": [\n    {\n      \"content\": {\n        \"parts\": [\n          {\n            \"functionCall\": {\n              \"name\": \"get_weather\",\n              \"args\": {\n                \"city\": \"London\"\n              }\n            }\n          },\n          {\n            \"functionCall\": {\n              \"name\": \"get_weather\",\n              \"args\": {\n                \"city\": \"Paris\"\n              }\n            }\n          },\n          {\n            \"functionCall\": {\n              \"name\": \"get_weather\",\n              \"args\": {\n                \"city\": \"Rome\"\n              }\n            }\n          }\n        ],\n        \"role\": \"model\"\n      },\n      \"finishReason\": \"STOP\",\n      \"avgLogprobs\": -0.00059793498367071156\n    }\n  ],\n  \"usageMetadata\": {\n    \"promptTokenCount\": 220,\n    \"candidatesTokenCount\": 15,\n    \"totalTokenCount\": 235\n  },\n  \"modelVersion\": \"gemini-1.5-pro-002\"\n}\n"
+          "string": "{\n  \"candidates\": [\n    {\n      \"content\": {\n        \"parts\": [\n          {\n            \"functionCall\": {\n              \"name\": \"get_weather\",\n              \"args\": {\n                \"city\": \"London\"\n              }\n            }\n          },\n          {\n            \"functionCall\": {\n              \"name\": \"get_weather\",\n              \"args\": {\n                \"city\": \"Paris\"\n              }\n            }\n          },\n          {\n            \"functionCall\": {\n              \"name\": \"get_weather\",\n              \"args\": {\n                \"city\": \"Rome\"\n              }\n            }\n          }\n        ],\n        \"role\": \"model\"\n      },\n      \"finishReason\": \"STOP\",\n      \"avgLogprobs\": -0.00036022746935486792\n    }\n  ],\n  \"usageMetadata\": {\n    \"promptTokenCount\": 220,\n    \"candidatesTokenCount\": 15,\n    \"totalTokenCount\": 235\n  },\n  \"modelVersion\": \"gemini-1.5-pro-002\"\n}\n"
         }
       },
-      "recorded_at": "Fri, 01 Nov 2024 21:07:07 GMT"
+      "recorded_at": "Fri, 08 Nov 2024 01:20:01 GMT"
+    },
+    {
+      "request": {
+        "method": "post",
+        "uri": "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent?key=<KEY>",
+        "body": {
+          "encoding": "UTF-8",
+          "string": "{\"generationConfig\":{\"maxOutputTokens\":64,\"temperature\":0.0},\"tools\":{\"function_declarations\":[{\"name\":\"get_weather\",\"description\":\"The get_weather tool will return the current weather in a given locality.\",\"parameters\":{\"type\":\"object\",\"properties\":{\"city\":{\"type\":\"string\",\"description\":\"The city or town for which the current weather should be returned.\"},\"state\":{\"type\":\"string\",\"description\":\"The state or province for which the current weather should be returned. If this is not provided the largest or most prominent city with the given name, in the given country or in the worldi, will be assumed.\"},\"country\":{\"type\":\"string\",\"description\":\"The country for which the given weather should be returned. If this is not provided the largest or most prominent city with the given name will be returned.\"}},\"required\":[\"city\"]}}]},\"systemInstruction\":{\"role\":\"user\",\"parts\":[{\"text\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"}]},\"contents\":[{\"role\":\"user\",\"parts\":[{\"text\":\"What is the weather in London, Paris and Rome right now?\\n\"}]}]}"
+        },
+        "headers": {
+          "User-Agent": [
+            "Faraday v2.12.0"
+          ],
+          "Content-Type": [
+            "application/json"
+          ]
+        }
+      },
+      "response": {
+        "status": {
+          "code": 200,
+          "message": "OK"
+        },
+        "headers": {
+          "content-type": [
+            "application/json; charset=UTF-8"
+          ],
+          "vary": [
+            "Origin, X-Origin, Referer"
+          ],
+          "content-encoding": [
+            "gzip"
+          ],
+          "date": [
+            "Tue, 31 Dec 2024 01:11:06 GMT"
+          ],
+          "server": [
+            "scaffolding on HTTPServer2"
+          ],
+          "x-xss-protection": [
+            "0"
+          ],
+          "x-frame-options": [
+            "SAMEORIGIN"
+          ],
+          "x-content-type-options": [
+            "nosniff"
+          ],
+          "server-timing": [
+            "gfet4t7; dur=1395"
+          ],
+          "alt-svc": [
+            "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+          ],
+          "transfer-encoding": [
+            "chunked"
+          ]
+        },
+        "body": {
+          "encoding": "UTF-8",
+          "string": "{\n  \"candidates\": [\n    {\n      \"content\": {\n        \"parts\": [\n          {\n            \"functionCall\": {\n              \"name\": \"get_weather\",\n              \"args\": {\n                \"city\": \"London\"\n              }\n            }\n          },\n          {\n            \"functionCall\": {\n              \"name\": \"get_weather\",\n              \"args\": {\n                \"city\": \"Paris\"\n              }\n            }\n          },\n          {\n            \"functionCall\": {\n              \"name\": \"get_weather\",\n              \"args\": {\n                \"city\": \"Rome\"\n              }\n            }\n          }\n        ],\n        \"role\": \"model\"\n      },\n      \"finishReason\": \"STOP\",\n      \"avgLogprobs\": -0.0010764834781487782\n    }\n  ],\n  \"usageMetadata\": {\n    \"promptTokenCount\": 220,\n    \"candidatesTokenCount\": 15,\n    \"totalTokenCount\": 235\n  },\n  \"modelVersion\": \"gemini-1.5-pro-002\"\n}\n"
+        }
+      },
+      "recorded_at": "Tue, 31 Dec 2024 01:11:06 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

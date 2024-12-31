@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Wed, 30 Oct 2024 22:22:41 GMT"
+            "Tue, 31 Dec 2024 01:09:37 GMT"
           ],
           "content-type": [
             "application/json"
@@ -38,44 +38,44 @@
           "connection": [
             "keep-alive"
           ],
-          "ratelimitbysize-limit": [
-            "500000"
+          "x-ratelimitbysize-limit-month": [
+            "10000000000"
           ],
-          "ratelimitbysize-remaining": [
-            "498944"
+          "x-ratelimitbysize-remaining-month": [
+            "9999954013"
+          ],
+          "ratelimitbysize-reset": [
+            "23"
+          ],
+          "x-ratelimitbysize-remaining-minute": [
+            "1993784"
           ],
           "ratelimitbysize-query-cost": [
             "152"
           ],
+          "ratelimitbysize-limit": [
+            "2000000"
+          ],
+          "ratelimitbysize-remaining": [
+            "1993784"
+          ],
           "x-ratelimitbysize-limit-minute": [
-            "500000"
-          ],
-          "x-ratelimitbysize-remaining-minute": [
-            "498944"
-          ],
-          "x-ratelimitbysize-remaining-month": [
-            "999972943"
-          ],
-          "ratelimitbysize-reset": [
-            "21"
-          ],
-          "x-ratelimitbysize-limit-month": [
-            "1000000000"
+            "2000000"
           ],
           "x-envoy-upstream-service-time": [
-            "2343"
+            "465"
           ],
           "access-control-allow-origin": [
             "*"
           ],
           "x-kong-upstream-latency": [
-            "2344"
+            "466"
           ],
           "x-kong-proxy-latency": [
-            "3"
+            "0"
           ],
           "x-kong-request-id": [
-            "9ce7c8022a17a24d88a2a01a3207166b"
+            "68a55b4a6aa61c4cd3264b1f63734d38"
           ],
           "cf-cache-status": [
             "DYNAMIC"
@@ -95,10 +95,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\"id\":\"438064ac800a418594694d3c5d88142a\",\"object\":\"chat.completion\",\"created\":1730326959,\"model\":\"mistral-large-latest\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"\",\"tool_calls\":[{\"id\":\"8QbXRW8Q9\",\"type\":\"function\",\"function\":{\"name\":\"get_weather\",\"arguments\":\"{\\\"city\\\": \\\"Seattle\\\", \\\"state\\\": \\\"WA\\\", \\\"country\\\": \\\"USA\\\"}\"}}]},\"finish_reason\":\"tool_calls\"}],\"usage\":{\"prompt_tokens\":313,\"total_tokens\":348,\"completion_tokens\":35}}"
+          "string": "{\"id\":\"65b569fbfbbd4bdf88090aa652ecdaeb\",\"object\":\"chat.completion\",\"created\":1735607377,\"model\":\"mistral-large-latest\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"tool_calls\":[{\"id\":\"JAjn4SUUA\",\"type\":\"function\",\"function\":{\"name\":\"get_weather\",\"arguments\":\"{\\\"city\\\": \\\"Seattle\\\", \\\"state\\\": \\\"WA\\\", \\\"country\\\": \\\"USA\\\"}\"}}],\"content\":\"\"},\"finish_reason\":\"tool_calls\"}],\"usage\":{\"prompt_tokens\":301,\"total_tokens\":336,\"completion_tokens\":35}}"
         }
       },
-      "recorded_at": "Wed, 30 Oct 2024 22:22:41 GMT"
+      "recorded_at": "Tue, 31 Dec 2024 01:09:37 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

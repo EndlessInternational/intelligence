@@ -36,7 +36,7 @@
             "keep-alive"
           ],
           "date": [
-            "Tue, 29 Oct 2024 18:23:54 GMT"
+            "Tue, 31 Dec 2024 01:26:44 GMT"
           ],
           "strict-transport-security": [
             "max-age=3600; includeSubDomains"
@@ -54,13 +54,16 @@
             "Error from cloudfront"
           ],
           "via": [
-            "1.1 18d8a69a30308aa071168e8aed30be36.cloudfront.net (CloudFront)"
+            "1.1 3d33f952c2b7fe5b0308385e96c9263c.cloudfront.net (CloudFront)"
           ],
           "x-amz-cf-pop": [
             "SFO20-C1"
           ],
+          "alt-svc": [
+            "h3=\":443\"; ma=86400"
+          ],
           "x-amz-cf-id": [
-            "qx0PxQTVrMFU9GvDjkcrNTfEYDO5yHFFobZDTBMOndF-Ff12OUP-zg=="
+            "X7KqWWX3JLAvxdH1QR_3MCdp0g7iP8wZfCgUVS2gMLBNd9Ti61gM5A=="
           ]
         },
         "body": {
@@ -68,7 +71,7 @@
           "string": "{\"message\":\"Wrong API Key\",\"type\":\"invalid_request_error\",\"param\":\"api_key\",\"code\":\"wrong_api_key\"}"
         }
       },
-      "recorded_at": "Tue, 29 Oct 2024 18:23:53 GMT"
+      "recorded_at": "Tue, 31 Dec 2024 01:26:44 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

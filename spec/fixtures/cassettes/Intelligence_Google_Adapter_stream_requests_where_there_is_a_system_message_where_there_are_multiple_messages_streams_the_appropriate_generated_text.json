@@ -6,7 +6,7 @@
         "uri": "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro-002:streamGenerateContent?alt=sse&key=<KEY>",
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"generationConfig\":{\"maxOutputTokens\":16,\"temperature\":0.0},\"systemInstruction\":{\"role\":\"user\",\"parts\":[{\"text\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"}]},\"contents\":[{\"role\":\"user\",\"parts\":[{\"text\":\"this is a test, respond with 'test'\\n\"}]},{\"role\":\"model\",\"parts\":[{\"text\":\"test\\n\"}]},{\"role\":\"user\",\"parts\":[{\"text\":\"what was the previous user message?\\nrespond in less than 16 words\\n\"}]}]}"
+          "string": "{\"generationConfig\":{\"maxOutputTokens\":16,\"temperature\":0.0},\"systemInstruction\":{\"role\":\"user\",\"parts\":[{\"text\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"}]},\"contents\":[{\"role\":\"user\",\"parts\":[{\"text\":\"this is a test, respond with 'test'\\n\"}]},{\"role\":\"model\",\"parts\":[{\"text\":\"test\\n\"}]},{\"role\":\"user\",\"parts\":[{\"text\":\"what was the user message before this one?\\nrespond in less than 16 words\\n\"}]}]}"
         },
         "headers": {
           "User-Agent": [
@@ -36,7 +36,7 @@
             "chunked"
           ],
           "date": [
-            "Fri, 01 Nov 2024 21:07:11 GMT"
+            "Fri, 08 Nov 2024 01:20:04 GMT"
           ],
           "server": [
             "scaffolding on HTTPServer2"
@@ -51,7 +51,7 @@
             "nosniff"
           ],
           "server-timing": [
-            "gfet4t7; dur=615"
+            "gfet4t7; dur=461"
           ],
           "alt-svc": [
             "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
@@ -59,10 +59,74 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "data: {\"candidates\": [{\"content\": {\"parts\": [{\"text\": \"this\"}],\"role\": \"model\"}}],\"usageMetadata\": {\"promptTokenCount\": 77,\"totalTokenCount\": 77},\"modelVersion\": \"gemini-1.5-pro-002\"}\r\n\r\ndata: {\"candidates\": [{\"content\": {\"parts\": [{\"text\": \" is a test, respond with 'test'\\n\"}],\"role\": \"model\"}}],\"usageMetadata\": {\"promptTokenCount\": 77,\"totalTokenCount\": 77},\"modelVersion\": \"gemini-1.5-pro-002\"}\r\n\r\ndata: {\"candidates\": [{\"content\": {\"parts\": [{\"text\": \"\"}],\"role\": \"model\"},\"finishReason\": \"STOP\"}],\"usageMetadata\": {\"promptTokenCount\": 77,\"candidatesTokenCount\": 11,\"totalTokenCount\": 88},\"modelVersion\": \"gemini-1.5-pro-002\"}\r\n\r\n"
+          "string": "data: {\"candidates\": [{\"content\": {\"parts\": [{\"text\": \"this\"}],\"role\": \"model\"}}],\"usageMetadata\": {\"promptTokenCount\": 79,\"totalTokenCount\": 79},\"modelVersion\": \"gemini-1.5-pro-002\"}\r\n\r\ndata: {\"candidates\": [{\"content\": {\"parts\": [{\"text\": \" is a test, respond with 'test'\\n\"}],\"role\": \"model\"}}],\"usageMetadata\": {\"promptTokenCount\": 79,\"totalTokenCount\": 79},\"modelVersion\": \"gemini-1.5-pro-002\"}\r\n\r\ndata: {\"candidates\": [{\"content\": {\"parts\": [{\"text\": \"\"}],\"role\": \"model\"},\"finishReason\": \"STOP\"}],\"usageMetadata\": {\"promptTokenCount\": 79,\"candidatesTokenCount\": 11,\"totalTokenCount\": 90},\"modelVersion\": \"gemini-1.5-pro-002\"}\r\n\r\n"
         }
       },
-      "recorded_at": "Fri, 01 Nov 2024 21:07:11 GMT"
+      "recorded_at": "Fri, 08 Nov 2024 01:20:04 GMT"
+    },
+    {
+      "request": {
+        "method": "post",
+        "uri": "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:streamGenerateContent?alt=sse&key=<KEY>",
+        "body": {
+          "encoding": "UTF-8",
+          "string": "{\"generationConfig\":{\"maxOutputTokens\":16,\"temperature\":0.0},\"systemInstruction\":{\"role\":\"user\",\"parts\":[{\"text\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"}]},\"contents\":[{\"role\":\"user\",\"parts\":[{\"text\":\"the secret word is 'blue'\\n\"}]},{\"role\":\"model\",\"parts\":[{\"text\":\"ok\\n\"}]},{\"role\":\"user\",\"parts\":[{\"text\":\"what is the secret word?\\nrespond with the word only\\n\"}]}]}"
+        },
+        "headers": {
+          "User-Agent": [
+            "Faraday v2.12.0"
+          ],
+          "Content-Type": [
+            "application/json"
+          ]
+        }
+      },
+      "response": {
+        "status": {
+          "code": 200,
+          "message": "OK"
+        },
+        "headers": {
+          "content-type": [
+            "text/event-stream"
+          ],
+          "content-disposition": [
+            "attachment"
+          ],
+          "vary": [
+            "Origin, X-Origin, Referer"
+          ],
+          "transfer-encoding": [
+            "chunked"
+          ],
+          "date": [
+            "Tue, 31 Dec 2024 01:11:09 GMT"
+          ],
+          "server": [
+            "scaffolding on HTTPServer2"
+          ],
+          "x-xss-protection": [
+            "0"
+          ],
+          "x-frame-options": [
+            "SAMEORIGIN"
+          ],
+          "x-content-type-options": [
+            "nosniff"
+          ],
+          "server-timing": [
+            "gfet4t7; dur=427"
+          ],
+          "alt-svc": [
+            "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+          ]
+        },
+        "body": {
+          "encoding": "UTF-8",
+          "string": "data: {\"candidates\": [{\"content\": {\"parts\": [{\"text\": \"blue\"}],\"role\": \"model\"}}],\"usageMetadata\": {\"promptTokenCount\": 70,\"totalTokenCount\": 70},\"modelVersion\": \"gemini-1.5-pro-002\"}\r\n\r\ndata: {\"candidates\": [{\"content\": {\"parts\": [{\"text\": \"\\n\"}],\"role\": \"model\"},\"finishReason\": \"STOP\"}],\"usageMetadata\": {\"promptTokenCount\": 70,\"candidatesTokenCount\": 2,\"totalTokenCount\": 72},\"modelVersion\": \"gemini-1.5-pro-002\"}\r\n\r\n"
+        }
+      },
+      "recorded_at": "Tue, 31 Dec 2024 01:11:09 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

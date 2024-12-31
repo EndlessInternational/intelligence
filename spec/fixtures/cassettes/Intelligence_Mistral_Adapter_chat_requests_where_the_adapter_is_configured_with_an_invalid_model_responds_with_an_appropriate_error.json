@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Tue, 29 Oct 2024 18:24:09 GMT"
+            "Tue, 31 Dec 2024 01:09:42 GMT"
           ],
           "content-type": [
             "application/json"
@@ -38,44 +38,44 @@
           "connection": [
             "keep-alive"
           ],
+          "x-ratelimitbysize-limit-month": [
+            "10000000000"
+          ],
+          "x-ratelimitbysize-remaining-month": [
+            "9999953386"
+          ],
+          "ratelimitbysize-reset": [
+            "18"
+          ],
+          "x-ratelimitbysize-remaining-minute": [
+            "1993708"
+          ],
           "ratelimitbysize-query-cost": [
             "64"
           ],
           "ratelimitbysize-limit": [
-            "500000"
+            "2000000"
           ],
           "ratelimitbysize-remaining": [
-            "499936"
-          ],
-          "x-ratelimitbysize-limit-day": [
-            "150000000"
-          ],
-          "x-ratelimitbysize-remaining-day": [
-            "149973210"
-          ],
-          "ratelimitbysize-reset": [
-            "51"
+            "1993708"
           ],
           "x-ratelimitbysize-limit-minute": [
-            "500000"
-          ],
-          "x-ratelimitbysize-remaining-minute": [
-            "499936"
+            "2000000"
           ],
           "x-envoy-upstream-service-time": [
-            "94"
+            "27"
           ],
           "access-control-allow-origin": [
             "*"
           ],
           "x-kong-upstream-latency": [
-            "109"
+            "28"
           ],
           "x-kong-proxy-latency": [
-            "1"
+            "0"
           ],
           "x-kong-request-id": [
-            "5ccc7f1cf0a75b6c7442c844268a7a13"
+            "95ecd51787b70d177e03d858da683425"
           ],
           "cf-cache-status": [
             "DYNAMIC"
@@ -95,7 +95,7 @@
           "string": "{\"object\":\"error\",\"message\":\"Invalid model: invalid\",\"type\":\"invalid_model\",\"param\":null,\"code\":\"1500\"}"
         }
       },
-      "recorded_at": "Tue, 29 Oct 2024 18:24:09 GMT"
+      "recorded_at": "Tue, 31 Dec 2024 01:09:42 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

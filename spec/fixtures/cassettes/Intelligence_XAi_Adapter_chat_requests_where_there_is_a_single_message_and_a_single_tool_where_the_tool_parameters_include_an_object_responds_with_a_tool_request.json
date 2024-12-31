@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Mon, 04 Nov 2024 20:55:38 GMT"
+            "Tue, 31 Dec 2024 01:48:03 GMT"
           ],
           "content-type": [
             "application/json"
@@ -65,10 +65,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\"id\":\"47e88e6c-728d-467f-b550-bd70cfe52ec8\",\"object\":\"chat.completion\",\"created\":1730753737,\"model\":\"grok-beta\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"\",\"tool_calls\":[{\"id\":\"0\",\"function\":{\"name\":\"get_weather\",\"arguments\":\"{\\\"location\\\":{\\\"city\\\":\\\"Seattle\\\"}}\"},\"type\":\"function\"}],\"refusal\":null},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":353,\"completion_tokens\":2,\"total_tokens\":355},\"system_fingerprint\":\"fp_15c3499eda\"}"
+          "string": "{\"id\":\"0682aabd-f28f-4e0a-86a6-a82191056daf\",\"object\":\"chat.completion\",\"created\":1735609683,\"model\":\"grok-beta\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"\",\"tool_calls\":[{\"id\":\"0\",\"function\":{\"name\":\"get_weather\",\"arguments\":\"{\\\"location\\\":{\\\"city\\\":\\\"Seattle\\\"}}\"},\"type\":\"function\"}],\"refusal\":null},\"finish_reason\":\"tool_calls\"}],\"usage\":{\"prompt_tokens\":353,\"completion_tokens\":1,\"total_tokens\":354,\"prompt_tokens_details\":{\"text_tokens\":353,\"audio_tokens\":0,\"image_tokens\":0,\"cached_tokens\":0}},\"system_fingerprint\":\"fp_fcf8a93867\"}"
         }
       },
-      "recorded_at": "Mon, 04 Nov 2024 20:55:38 GMT"
+      "recorded_at": "Tue, 31 Dec 2024 01:48:03 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

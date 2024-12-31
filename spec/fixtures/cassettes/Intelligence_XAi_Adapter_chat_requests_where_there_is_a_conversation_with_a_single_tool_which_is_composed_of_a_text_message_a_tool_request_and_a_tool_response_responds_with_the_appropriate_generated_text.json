@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Mon, 04 Nov 2024 20:55:35 GMT"
+            "Tue, 31 Dec 2024 01:48:00 GMT"
           ],
           "content-type": [
             "application/json"
@@ -65,10 +65,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\"id\":\"fea7e5d0-9654-43dc-8f28-63e5d1d1370b\",\"object\":\"chat.completion\",\"created\":1730753735,\"model\":\"grok-beta\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"You are located in Seattle, WA, USA.\",\"refusal\":null},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":121,\"completion_tokens\":11,\"total_tokens\":132},\"system_fingerprint\":\"fp_15c3499eda\"}"
+          "string": "{\"id\":\"a2b33926-bd4e-49b5-aa83-2cd0ca7f6d9f\",\"object\":\"chat.completion\",\"created\":1735609680,\"model\":\"grok-beta\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"You are located in Seattle, WA, USA.\",\"refusal\":null},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":121,\"completion_tokens\":11,\"total_tokens\":132,\"prompt_tokens_details\":{\"text_tokens\":121,\"audio_tokens\":0,\"image_tokens\":0,\"cached_tokens\":0}},\"system_fingerprint\":\"fp_fcf8a93867\"}"
         }
       },
-      "recorded_at": "Mon, 04 Nov 2024 20:55:35 GMT"
+      "recorded_at": "Tue, 31 Dec 2024 01:48:00 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

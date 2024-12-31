@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Tue, 29 Oct 2024 16:39:25 GMT"
+            "Tue, 31 Dec 2024 01:09:32 GMT"
           ],
           "content-type": [
             "application/json"
@@ -38,44 +38,44 @@
           "connection": [
             "keep-alive"
           ],
-          "ratelimitbysize-reset": [
-            "37"
+          "ratelimitbysize-limit": [
+            "2000000"
           ],
-          "x-ratelimitbysize-limit-day": [
-            "150000000"
+          "ratelimitbysize-remaining": [
+            "1994549"
+          ],
+          "x-ratelimitbysize-remaining-month": [
+            "9999955338"
+          ],
+          "ratelimitbysize-reset": [
+            "29"
+          ],
+          "x-ratelimitbysize-limit-minute": [
+            "2000000"
+          ],
+          "x-ratelimitbysize-remaining-minute": [
+            "1994549"
+          ],
+          "x-ratelimitbysize-limit-month": [
+            "10000000000"
           ],
           "ratelimitbysize-query-cost": [
             "75"
           ],
-          "ratelimitbysize-limit": [
-            "500000"
-          ],
-          "ratelimitbysize-remaining": [
-            "499174"
-          ],
-          "x-ratelimitbysize-remaining-day": [
-            "149974975"
-          ],
-          "x-ratelimitbysize-limit-minute": [
-            "500000"
-          ],
-          "x-ratelimitbysize-remaining-minute": [
-            "499174"
-          ],
           "x-envoy-upstream-service-time": [
-            "1424"
+            "985"
           ],
           "access-control-allow-origin": [
             "*"
           ],
           "x-kong-upstream-latency": [
-            "1425"
+            "986"
           ],
           "x-kong-proxy-latency": [
-            "1"
+            "3"
           ],
           "x-kong-request-id": [
-            "46b51e70d76270308abd0716694f926c"
+            "48a33b497041140ab068415f209f5d09"
           ],
           "cf-cache-status": [
             "DYNAMIC"
@@ -95,10 +95,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\"id\":\"9ecc1c000e3745c4afccbe2d9e02c672\",\"object\":\"chat.completion\",\"created\":1730219964,\"model\":\"pixtral-12b-2409\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"three balloons\",\"tool_calls\":null},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":1394,\"total_tokens\":1397,\"completion_tokens\":3}}"
+          "string": "{\"id\":\"a249b55ac2704affaddc373c7dac1787\",\"object\":\"chat.completion\",\"created\":1735607372,\"model\":\"pixtral-12b-2409\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"tool_calls\":null,\"content\":\"three balloons\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":1394,\"total_tokens\":1397,\"completion_tokens\":3}}"
         }
       },
-      "recorded_at": "Tue, 29 Oct 2024 16:39:25 GMT"
+      "recorded_at": "Tue, 31 Dec 2024 01:09:32 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

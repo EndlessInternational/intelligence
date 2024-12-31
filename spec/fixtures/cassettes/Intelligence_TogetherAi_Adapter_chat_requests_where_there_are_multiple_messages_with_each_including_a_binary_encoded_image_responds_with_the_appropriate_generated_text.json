@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Tue, 29 Oct 2024 04:25:45 GMT"
+            "Tue, 31 Dec 2024 01:38:37 GMT"
           ],
           "content-type": [
             "application/json; charset=utf-8"
@@ -42,7 +42,7 @@
             "*"
           ],
           "x-api-received": [
-            "2024-10-29T04:25:45.156Z"
+            "2024-12-31T01:38:36.284Z"
           ],
           "x-ratelimit": [
             "false"
@@ -51,13 +51,16 @@
             "10"
           ],
           "x-ratelimit-remaining": [
-            "16"
+            "18"
           ],
           "x-ratelimit-reset": [
-            "0"
+            "1"
+          ],
+          "retry-after": [
+            "1"
           ],
           "x-ratelimit-remaining-tokens": [
-            "2606"
+            "2908"
           ],
           "x-ratelimit-limit-tokens": [
             "3000"
@@ -66,19 +69,19 @@
             "v2"
           ],
           "x-api-call-start": [
-            "2024-10-29T04:25:45.165Z"
+            "2024-12-31T01:38:36.292Z"
           ],
           "x-api-call-end": [
-            "2024-10-29T04:25:45.533Z"
+            "2024-12-31T01:38:37.019Z"
           ],
           "etag": [
-            "W/\"213-cTA3PWNqM7mDRqBreqhf2nzl0tg\""
+            "W/\"213-dUiQEvbYYPTZ9qvhL0gb1rB2BQI\""
           ],
           "cf-cache-status": [
             "DYNAMIC"
           ],
           "strict-transport-security": [
-            "max-age=2592000; includeSubDomains"
+            "max-age=15552000; includeSubDomains"
           ],
           "server": [
             "cloudflare"
@@ -95,10 +98,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "{\n  \"id\": \"8da067489cbe76c1-SEA\",\n  \"object\": \"chat.completion\",\n  \"created\": 1730175945,\n  \"model\": \"meta-llama/Llama-3.2-11B-Vision-Instruct-Turbo\",\n  \"prompt_logprobs\": null,\n  \"prompt\": [],\n  \"choices\": [\n    {\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": \"It is a picture of three balloons.\",\n        \"tool_calls\": []\n      },\n      \"logprobs\": null,\n      \"finish_reason\": \"stop\"\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 89,\n    \"total_tokens\": 98,\n    \"completion_tokens\": 9\n  }\n}"
+          "string": "{\n  \"id\": \"8fa68d1048c8a33a-SEA\",\n  \"object\": \"chat.completion\",\n  \"created\": 1735609116,\n  \"model\": \"meta-llama/Llama-3.2-11B-Vision-Instruct-Turbo\",\n  \"prompt_logprobs\": null,\n  \"prompt\": [],\n  \"choices\": [\n    {\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": \"It is a picture of three balloons.\",\n        \"tool_calls\": []\n      },\n      \"logprobs\": null,\n      \"finish_reason\": \"stop\"\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 89,\n    \"total_tokens\": 98,\n    \"completion_tokens\": 9\n  }\n}"
         }
       },
-      "recorded_at": "Tue, 29 Oct 2024 04:25:45 GMT"
+      "recorded_at": "Tue, 31 Dec 2024 01:38:36 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

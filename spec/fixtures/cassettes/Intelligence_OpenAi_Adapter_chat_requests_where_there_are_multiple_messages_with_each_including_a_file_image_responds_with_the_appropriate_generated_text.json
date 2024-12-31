@@ -6,7 +6,7 @@
         "uri": "https://api.openai.com/v1/chat/completions",
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"model\":\"gpt-4o\",\"temperature\":0.0,\"max_completion_tokens\":32,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":[{\"type\":\"text\",\"text\":\"identify this image; all lower case\\n\"},{\"type\":\"image_url\",\"image_url\":{\"url\":\"https://github.com/EndlessInternational/intelligence/blob/main/spec/fixtures/files/single-red-balloon.png?raw=true\"}}]},{\"role\":\"assistant\",\"content\":[{\"type\":\"text\",\"text\":\"one red balloon\\n\"}]},{\"role\":\"user\",\"content\":[{\"type\":\"text\",\"text\":\"what about this image?\\n\"},{\"type\":\"image_url\",\"image_url\":{\"url\":\"https://github.com/EndlessInternational/intelligence/blob/main/spec/fixtures/files/three-balloons.png?raw=true\"}}]}]}"
+          "string": "{\"model\":\"gpt-4o\",\"temperature\":0.0,\"max_completion_tokens\":128,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":[{\"type\":\"text\",\"text\":\"identify this image; all lower case\\n\"},{\"type\":\"image_url\",\"image_url\":{\"url\":\"https://github.com/EndlessInternational/intelligence/blob/main/spec/fixtures/files/single-red-balloon.png?raw=true\"}}]},{\"role\":\"assistant\",\"content\":[{\"type\":\"text\",\"text\":\"one red balloon\\n\"}]},{\"role\":\"user\",\"content\":[{\"type\":\"text\",\"text\":\"what about this image?\\n\"},{\"type\":\"image_url\",\"image_url\":{\"url\":\"https://github.com/EndlessInternational/intelligence/blob/main/spec/fixtures/files/three-balloons.png?raw=true\"}}]}]}"
         },
         "headers": {
           "User-Agent": [
@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Tue, 29 Oct 2024 04:04:10 GMT"
+            "Tue, 31 Dec 2024 01:12:29 GMT"
           ],
           "content-type": [
             "application/json"
@@ -45,13 +45,13 @@
             "<OPENAI-ORGANIZATION>"
           ],
           "openai-processing-ms": [
-            "2191"
+            "1758"
           ],
           "openai-version": [
             "2020-10-01"
           ],
-          "strict-transport-security": [
-            "max-age=31536000; includeSubDomains; preload"
+          "x-ratelimit-limit-input-images": [
+            "50000"
           ],
           "x-ratelimit-limit-requests": [
             "10000"
@@ -59,11 +59,17 @@
           "x-ratelimit-limit-tokens": [
             "30000000"
           ],
+          "x-ratelimit-remaining-input-images": [
+            "49998"
+          ],
           "x-ratelimit-remaining-requests": [
             "9999"
           ],
           "x-ratelimit-remaining-tokens": [
             "29998375"
+          ],
+          "x-ratelimit-reset-input-images": [
+            "2ms"
           ],
           "x-ratelimit-reset-requests": [
             "6ms"
@@ -73,6 +79,9 @@
           ],
           "x-request-id": [
             "<X-REQUEST-ID>"
+          ],
+          "strict-transport-security": [
+            "max-age=31536000; includeSubDomains; preload"
           ],
           "cf-cache-status": [
             "DYNAMIC"
@@ -98,10 +107,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\n  \"id\": \"chatcmpl-ANXkgKwykfU3UQvX8T8fkPcUbjkm9\",\n  \"object\": \"chat.completion\",\n  \"created\": 1730174650,\n  \"model\": \"gpt-4o-2024-08-06\",\n  \"choices\": [\n    {\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": \"three balloons: yellow, red, and blue\",\n        \"refusal\": null\n      },\n      \"logprobs\": null,\n      \"finish_reason\": \"stop\"\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 584,\n    \"completion_tokens\": 9,\n    \"total_tokens\": 593,\n    \"prompt_tokens_details\": {\n      \"cached_tokens\": 0\n    },\n    \"completion_tokens_details\": {\n      \"reasoning_tokens\": 0\n    }\n  },\n  \"system_fingerprint\": \"fp_45c6de4934\"\n}\n"
+          "string": "{\n  \"id\": \"chatcmpl-AkL65eGOZyMRmrSSC2xJtzIS5Q80x\",\n  \"object\": \"chat.completion\",\n  \"created\": 1735607549,\n  \"model\": \"gpt-4o-2024-08-06\",\n  \"choices\": [\n    {\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": \"three balloons: red, blue, and yellow\",\n        \"refusal\": null\n      },\n      \"logprobs\": null,\n      \"finish_reason\": \"stop\"\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 735,\n    \"completion_tokens\": 10,\n    \"total_tokens\": 745,\n    \"prompt_tokens_details\": {\n      \"cached_tokens\": 0,\n      \"audio_tokens\": 0\n    },\n    \"completion_tokens_details\": {\n      \"reasoning_tokens\": 0,\n      \"audio_tokens\": 0,\n      \"accepted_prediction_tokens\": 0,\n      \"rejected_prediction_tokens\": 0\n    }\n  },\n  \"system_fingerprint\": \"fp_5f20662549\"\n}\n"
         }
       },
-      "recorded_at": "Tue, 29 Oct 2024 04:04:10 GMT"
+      "recorded_at": "Tue, 31 Dec 2024 01:12:29 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

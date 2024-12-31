@@ -6,7 +6,7 @@
         "uri": "https://api.sambanova.ai/v1/chat/completions",
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"model\":\"Meta-Llama-3.1-70B-Instruct\",\"max_tokens\":16,\"temperature\":0.0,\"stream\":true,\"messages\":[{\"role\":\"user\",\"content\":\"this is a test, respond with 'test'\\n\"},{\"role\":\"assistant\",\"content\":\"test\\n\"},{\"role\":\"user\",\"content\":\"what was the previous user message?\\nrespond in less than 16 words\\n\"}]}"
+          "string": "{\"model\":\"Meta-Llama-3.1-70B-Instruct\",\"max_tokens\":16,\"temperature\":0.0,\"stream\":true,\"messages\":[{\"role\":\"user\",\"content\":\"the secret word is 'blue'\\n\"},{\"role\":\"assistant\",\"content\":\"ok\\n\"},{\"role\":\"user\",\"content\":\"what is the secret word?\\nrespond with the word only\\n\"}]}"
         },
         "headers": {
           "User-Agent": [
@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Thu, 31 Oct 2024 22:30:12 GMT"
+            "Tue, 31 Dec 2024 01:32:36 GMT"
           ],
           "content-type": [
             "text/event-stream; charset=utf-8"
@@ -44,10 +44,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "data: {\"choices\":[{\"delta\":{\"content\":\"\",\"role\":\"assistant\"},\"finish_reason\":null,\"index\":0,\"logprobs\":null}],\"created\":1730413811,\"id\":\"101ec786-13f2-423c-bd80-876d1f8a8d33\",\"model\":\"Meta-Llama-3.1-70B-Instruct\",\"object\":\"chat.completion.chunk\",\"system_fingerprint\":\"fastcoe\"}\n\ndata: {\"choices\":[{\"delta\":{\"content\":\"this is a test, respond \",\"role\":\"assistant\"},\"finish_reason\":null,\"index\":0,\"logprobs\":null}],\"created\":1730413811,\"id\":\"101ec786-13f2-423c-bd80-876d1f8a8d33\",\"model\":\"Meta-Llama-3.1-70B-Instruct\",\"object\":\"chat.completion.chunk\",\"system_fingerprint\":\"fastcoe\"}\n\ndata: {\"choices\":[{\"delta\":{\"content\":\"with 'test'\",\"role\":\"assistant\"},\"finish_reason\":null,\"index\":0,\"logprobs\":null}],\"created\":1730413811,\"id\":\"101ec786-13f2-423c-bd80-876d1f8a8d33\",\"model\":\"Meta-Llama-3.1-70B-Instruct\",\"object\":\"chat.completion.chunk\",\"system_fingerprint\":\"fastcoe\"}\n\ndata: {\"choices\":[{\"delta\":{\"content\":\"\"},\"finish_reason\":\"stop\",\"index\":0,\"logprobs\":null}],\"created\":1730413811,\"id\":\"101ec786-13f2-423c-bd80-876d1f8a8d33\",\"model\":\"Meta-Llama-3.1-70B-Instruct\",\"object\":\"chat.completion.chunk\",\"system_fingerprint\":\"fastcoe\"}\n\ndata: [DONE]\n\n"
+          "string": "data: {\"choices\":[{\"delta\":{\"content\":\"\",\"role\":\"assistant\"},\"finish_reason\":null,\"index\":0,\"logprobs\":null}],\"created\":1735608756,\"id\":\"db709f86-2348-4a3c-b961-1f313f99cc4a\",\"model\":\"Meta-Llama-3.1-70B-Instruct\",\"object\":\"chat.completion.chunk\",\"system_fingerprint\":\"fastcoe\"}\n\ndata: {\"choices\":[{\"delta\":{\"content\":\"blue\",\"role\":\"assistant\"},\"finish_reason\":null,\"index\":0,\"logprobs\":null}],\"created\":1735608756,\"id\":\"db709f86-2348-4a3c-b961-1f313f99cc4a\",\"model\":\"Meta-Llama-3.1-70B-Instruct\",\"object\":\"chat.completion.chunk\",\"system_fingerprint\":\"fastcoe\"}\n\ndata: {\"choices\":[{\"delta\":{\"content\":\"\"},\"finish_reason\":\"stop\",\"index\":0,\"logprobs\":null}],\"created\":1735608756,\"id\":\"db709f86-2348-4a3c-b961-1f313f99cc4a\",\"model\":\"Meta-Llama-3.1-70B-Instruct\",\"object\":\"chat.completion.chunk\",\"system_fingerprint\":\"fastcoe\"}\n\ndata: [DONE]\n\n"
         }
       },
-      "recorded_at": "Thu, 31 Oct 2024 22:30:12 GMT"
+      "recorded_at": "Tue, 31 Dec 2024 01:32:36 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

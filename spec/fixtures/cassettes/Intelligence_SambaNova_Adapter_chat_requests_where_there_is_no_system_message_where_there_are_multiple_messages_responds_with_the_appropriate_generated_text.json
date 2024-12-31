@@ -6,7 +6,7 @@
         "uri": "https://api.sambanova.ai/v1/chat/completions",
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"model\":\"Meta-Llama-3.1-70B-Instruct\",\"max_tokens\":24,\"temperature\":0.0,\"messages\":[{\"role\":\"user\",\"content\":\"this is a test, respond with 'test'\\n\"},{\"role\":\"assistant\",\"content\":\"test\\n\"},{\"role\":\"user\",\"content\":\"what was the previous user message?\\nrespond in less than 16 words\\n\"}]}"
+          "string": "{\"model\":\"Meta-Llama-3.1-70B-Instruct\",\"max_tokens\":24,\"temperature\":0.0,\"messages\":[{\"role\":\"user\",\"content\":\"the secret word is 'red'\\n\"},{\"role\":\"assistant\",\"content\":\"ok\\n\"},{\"role\":\"user\",\"content\":\"what is the exact secret word? answer with the word only\\n\"}]}"
         },
         "headers": {
           "User-Agent": [
@@ -27,13 +27,13 @@
         },
         "headers": {
           "date": [
-            "Thu, 31 Oct 2024 22:30:10 GMT"
+            "Tue, 31 Dec 2024 01:30:44 GMT"
           ],
           "content-type": [
             "application/json; charset=utf-8"
           ],
           "content-length": [
-            "748"
+            "687"
           ],
           "connection": [
             "keep-alive"
@@ -44,10 +44,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"choices\":[{\"finish_reason\":\"stop\",\"index\":0,\"logprobs\":null,\"message\":{\"content\":\"this is a test, respond with 'test'\",\"role\":\"assistant\"}}],\"created\":1730413810,\"id\":\"b4646961-e525-4d5a-98fc-05232e19e53f\",\"model\":\"Meta-Llama-3.1-70B-Instruct\",\"object\":\"chat.completion\",\"system_fingerprint\":\"fastcoe\",\"usage\":{\"completion_tokens\":10,\"completion_tokens_after_first_per_sec\":373.1476527979597,\"completion_tokens_after_first_per_sec_first_ten\":1411.4513103100155,\"completion_tokens_per_sec\":69.68031860569721,\"end_time\":1730413810.632923,\"is_last_response\":true,\"prompt_tokens\":70,\"start_time\":1730413810.472376,\"time_to_first_token\":0.136427640914917,\"total_latency\":0.1435125470161438,\"total_tokens\":80,\"total_tokens_per_sec\":557.4425488455777}}\n"
+          "string": "{\"choices\":[{\"finish_reason\":\"stop\",\"index\":0,\"logprobs\":null,\"message\":{\"content\":\"red\",\"role\":\"assistant\"}}],\"created\":1735608644,\"id\":\"52182038-ebe3-4157-917a-3421ae71ef7d\",\"model\":\"Meta-Llama-3.1-70B-Instruct\",\"object\":\"chat.completion\",\"system_fingerprint\":\"fastcoe\",\"usage\":{\"completion_tokens\":1,\"completion_tokens_after_first_per_sec\":0,\"completion_tokens_after_first_per_sec_first_ten\":0,\"completion_tokens_per_sec\":10.501433389333581,\"end_time\":1735608644.8384836,\"is_last_response\":true,\"prompt_tokens\":65,\"start_time\":1735608644.7432585,\"time_to_first_token\":0.0807342529296875,\"total_latency\":0.09522509574890137,\"total_tokens\":66,\"total_tokens_per_sec\":693.0946036960163}}\n"
         }
       },
-      "recorded_at": "Thu, 31 Oct 2024 22:30:10 GMT"
+      "recorded_at": "Tue, 31 Dec 2024 01:30:44 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"
