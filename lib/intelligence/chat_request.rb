@@ -87,7 +87,7 @@ module Intelligence
 
       # conversation and tools are presented as simple Hashes to the adapter
       conversation = conversation.to_h
-      options[ :tools ]&.map!( &:to_h )
+      options[ :tools ] = options[ :tools ].to_a.map!( &:to_h ) if options[ :tools ]
 
       uri = @adapter.chat_request_uri( options )
       headers = @adapter.chat_request_headers( @options.merge( options ) )
@@ -124,7 +124,7 @@ module Intelligence
       
       # conversation and tools are presented as simple Hashes to the adapter
       conversation = conversation.to_h
-      options[ :tools ]&.map!( &:to_h )
+      options[ :tools ] = options[ :tools ].to_a.map!( &:to_h ) if options[ :tools ]
 
       uri = @adapter.chat_request_uri( options )
       headers = @adapter.chat_request_headers( @options.merge( options ) )

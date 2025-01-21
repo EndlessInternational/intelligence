@@ -405,9 +405,6 @@ conversation = Intelligence::Conversation.build do
     content text: "You can help users check weather conditions."
   end
   
-  # Add the tool to the conversation
-  tools << weather_tool
-  
   message do
     role :user
     content text: "What's the weather like in Paris, France?"
@@ -415,7 +412,7 @@ conversation = Intelligence::Conversation.build do
 end
 
 request = Intelligence::ChatRequest.new( adapter: adapter )
-response = request.chat( conversation )
+response = request.chat( conversation, tools: [ weather_tool ] )
 
 # Handle tool calls in the response
 if response.success?
