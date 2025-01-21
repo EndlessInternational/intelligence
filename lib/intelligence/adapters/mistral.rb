@@ -22,6 +22,8 @@ module Intelligence
           response_format do 
             type              String 
           end
+
+          tool                array: true, as: :tools, &Tool.schema 
           tool_choice do 
             type              String 
             function do 

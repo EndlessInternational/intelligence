@@ -31,9 +31,12 @@ RSpec.shared_examples 'chat requests with parallel tools' do | options = {} |
       conversation = create_conversation( 
         "What is the weather in London, Paris and Rome right now?\n" 
       )
-      conversation.append_tool( get_weather_tool )
-      response = create_and_make_chat_request( send( options[ :adapter ] || :adapter ), conversation ) 
-      
+      response = create_and_make_chat_request( 
+        send( options[ :adapter ] || :adapter ), 
+        conversation, 
+        tools: [ get_weather_tool ]
+      )    
+          
       expect( response.success? ).to be( true ), response_error_description( response )
       expect( response.result ).to be_a( Intelligence::ChatResult )
       expect( response.result.choices ).not_to be_nil

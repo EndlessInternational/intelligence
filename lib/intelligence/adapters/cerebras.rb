@@ -21,6 +21,7 @@ module Intelligence
           stream          [ TrueClass, FalseClass ]
           temperature     Float
           top_p           Float
+          tool            array: true, as: :tools, &Tool.schema 
           tool_choice do 
             type          String 
             mame          String

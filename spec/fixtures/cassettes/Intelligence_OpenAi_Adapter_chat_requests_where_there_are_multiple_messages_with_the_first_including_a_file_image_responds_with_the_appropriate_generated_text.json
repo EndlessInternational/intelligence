@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Tue, 31 Dec 2024 01:12:28 GMT"
+            "Mon, 20 Jan 2025 22:16:31 GMT"
           ],
           "content-type": [
             "application/json"
@@ -45,7 +45,7 @@
             "<OPENAI-ORGANIZATION>"
           ],
           "openai-processing-ms": [
-            "1219"
+            "1375"
           ],
           "openai-version": [
             "2020-10-01"
@@ -107,10 +107,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\n  \"id\": \"chatcmpl-AkL63DtNeP7W3wZQfX4zPb7P4WtA3\",\n  \"object\": \"chat.completion\",\n  \"created\": 1735607547,\n  \"model\": \"gpt-4o-2024-08-06\",\n  \"choices\": [\n    {\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": \"red\",\n        \"refusal\": null\n      },\n      \"logprobs\": null,\n      \"finish_reason\": \"stop\"\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 522,\n    \"completion_tokens\": 2,\n    \"total_tokens\": 524,\n    \"prompt_tokens_details\": {\n      \"cached_tokens\": 0,\n      \"audio_tokens\": 0\n    },\n    \"completion_tokens_details\": {\n      \"reasoning_tokens\": 0,\n      \"audio_tokens\": 0,\n      \"accepted_prediction_tokens\": 0,\n      \"rejected_prediction_tokens\": 0\n    }\n  },\n  \"system_fingerprint\": \"fp_e161c81bbd\"\n}\n"
+          "string": "{\n  \"id\": \"chatcmpl-AruMJlrBoUfW3gFPViyFL1nunUcck\",\n  \"object\": \"chat.completion\",\n  \"created\": 1737411391,\n  \"model\": \"gpt-4o-2024-08-06\",\n  \"choices\": [\n    {\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": \"red\",\n        \"refusal\": null\n      },\n      \"logprobs\": null,\n      \"finish_reason\": \"stop\"\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 522,\n    \"completion_tokens\": 2,\n    \"total_tokens\": 524,\n    \"prompt_tokens_details\": {\n      \"cached_tokens\": 0,\n      \"audio_tokens\": 0\n    },\n    \"completion_tokens_details\": {\n      \"reasoning_tokens\": 0,\n      \"audio_tokens\": 0,\n      \"accepted_prediction_tokens\": 0,\n      \"rejected_prediction_tokens\": 0\n    }\n  },\n  \"service_tier\": \"default\",\n  \"system_fingerprint\": \"fp_4691090a87\"\n}\n"
         }
       },
-      "recorded_at": "Tue, 31 Dec 2024 01:12:27 GMT"
+      "recorded_at": "Mon, 20 Jan 2025 22:16:31 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

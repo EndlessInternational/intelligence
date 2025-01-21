@@ -37,10 +37,10 @@ RSpec.shared_examples 'stream requests with tools' do | options = {} |
 
       response = nil
       conversation = create_conversation( "Where am I located?\n" )
-      conversation.append_tool( get_location_tool )
 
       contents = []
-      response = create_and_make_stream_request( send( options[ :adapter ] || :adapter ), conversation ) do | result |    
+      adapter = send( options[ :adapter ] || :adapter ) 
+      response = create_and_make_stream_request( adapter, conversation, tools: [ get_location_tool ] ) do | result |
         expect( result ).to be_a( Intelligence::ChatResult )
         expect( result.choices ).not_to be_nil
         expect( result.choices.length ).to eq( 1 )
@@ -82,10 +82,10 @@ RSpec.shared_examples 'stream requests with tools' do | options = {} |
         "Got it! Let me know if you need any local insights or information related to Seattle!\n",
         "What is the current weather?\n"
       )
-      conversation.append_tool( get_weather_tool )
 
       contents = []
-      response = create_and_make_stream_request( send( options[ :adapter ] || :adapter ), conversation ) do | result |    
+      adapter = send( options[ :adapter ] || :adapter ) 
+      response = create_and_make_stream_request( adapter, conversation, tools: [ get_weather_tool ] ) do | result |
         expect( result ).to be_a( Intelligence::ChatResult )
         expect( result.choices ).not_to be_nil
         expect( result.choices.length ).to eq( 1 )
@@ -126,11 +126,11 @@ RSpec.shared_examples 'stream requests with tools' do | options = {} |
     it 'streams the correct tool request' do
 
       conversation = create_conversation( "Where am I located?" )
-      conversation.append_tool( get_location_tool )
-      conversation.append_tool( get_weather_tool )
       
       contents = []
-      response = create_and_make_stream_request( send( options[ :adapter ] || :adapter ), conversation ) do | result |    
+      adapter = send( options[ :adapter ] || :adapter ) 
+      tools =  [ get_location_tool, get_weather_tool ]
+      response = create_and_make_stream_request( adapter, conversation, tools: tools ) do | result |
         expect( result ).to be_a( Intelligence::ChatResult )
         expect( result.choices ).not_to be_nil
         expect( result.choices.length ).to eq( 1 )
@@ -172,11 +172,12 @@ RSpec.shared_examples 'stream requests with tools' do | options = {} |
         "Got it! Let me know if you need any local insights or information related to Seattle!\n",
         "What is the current weather?\n"
       )
-      conversation.append_tool( get_location_tool )
-      conversation.append_tool( get_weather_tool )
       
       contents = []
-      response = create_and_make_stream_request( send( options[ :adapter ] || :adapter ), conversation ) do | result |    
+      adapter = send( options[ :adapter ] || :adapter ) 
+      tools = [ get_location_tool, get_weather_tool ]
+      response = create_and_make_stream_request( adapter, conversation, tools: tools ) do | result |
+
         expect( result ).to be_a( Intelligence::ChatResult )
         expect( result.choices ).not_to be_nil
         expect( result.choices.length ).to eq( 1 )
@@ -240,36 +241,37 @@ RSpec.shared_examples 'stream requests with tools' do | options = {} |
           end 
         end 
     
-        conversation.append_tool( get_location_tool )
-      contents = []
-      response = create_and_make_stream_request( send( options[ :adapter ] || :adapter ), conversation ) do | result |    
-        expect( result ).to be_a( Intelligence::ChatResult )
-        expect( result.choices ).not_to be_nil
-        expect( result.choices.length ).to eq( 1 )
-        expect( result.choices.first ).to be_a( Intelligence::ChatResultChoice )
+        contents = []
+        adapter = send( options[ :adapter ] || :adapter ) 
+        tools = [ get_location_tool ]
+        response = create_and_make_stream_request( adapter, conversation, tools: tools ) do | result |
+          expect( result ).to be_a( Intelligence::ChatResult )
+          expect( result.choices ).not_to be_nil
+          expect( result.choices.length ).to eq( 1 )
+          expect( result.choices.first ).to be_a( Intelligence::ChatResultChoice )
 
-        choice = result.choices.first
-        expect( choice.message ).to be_a( Intelligence::Message )
-        expect( choice.message.contents ).not_to be_nil
-     
-        contents_fragments = choice.message.contents 
-        contents.fill( nil, contents.length..(contents_fragments.length - 1) )
+          choice = result.choices.first
+          expect( choice.message ).to be_a( Intelligence::Message )
+          expect( choice.message.contents ).not_to be_nil
+       
+          contents_fragments = choice.message.contents 
+          contents.fill( nil, contents.length..(contents_fragments.length - 1) )
 
-        contents_fragments.each_with_index do | contents_fragment, index |
-          contents[ index ] = contents[ index ].nil? ? 
-            contents_fragment : 
-            contents[ index ].merge( contents_fragment )
+          contents_fragments.each_with_index do | contents_fragment, index |
+            contents[ index ] = contents[ index ].nil? ? 
+              contents_fragment : 
+              contents[ index ].merge( contents_fragment )
+          end
         end
-      end
 
-      expect( response.success? ).to be( true ), response_error_description( response )
-      
-      choice = response.result.choices.first 
-      expect( choice.end_reason ).to eq( :ended )
+        expect( response.success? ).to be( true ), response_error_description( response )
+        
+        choice = response.result.choices.first 
+        expect( choice.end_reason ).to eq( :ended )
 
-      expect( contents.length ).to be > 0
-      expect( contents.last ).to be_a( Intelligence::MessageContent::Text )
-      expect( contents.last.text ).to match( /seattle/i )
+        expect( contents.length ).to be > 0
+        expect( contents.last ).to be_a( Intelligence::MessageContent::Text )
+        expect( contents.last.text ).to match( /seattle/i )
 
       end
     end
@@ -301,11 +303,12 @@ RSpec.shared_examples 'stream requests with tools' do | options = {} |
             end 
           end 
         end 
-        conversation.append_tool( get_location_tool )
-        conversation.append_tool( get_weather_tool )
        
         contents = []
-        response = create_and_make_stream_request( send( options[ :adapter ] || :adapter ), conversation ) do | result |    
+        adapter = send( options[ :adapter ] || :adapter ) 
+        tools =  [ get_location_tool, get_weather_tool ]
+        response = create_and_make_stream_request( adapter, conversation, tools: tools ) do | result |
+
           expect( result ).to be_a( Intelligence::ChatResult )
           expect( result.choices ).not_to be_nil
           expect( result.choices.length ).to eq( 1 )

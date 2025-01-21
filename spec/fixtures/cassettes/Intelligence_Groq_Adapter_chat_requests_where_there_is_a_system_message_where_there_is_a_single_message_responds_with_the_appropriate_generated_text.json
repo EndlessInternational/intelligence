@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Tue, 31 Dec 2024 01:37:21 GMT"
+            "Mon, 20 Jan 2025 22:29:02 GMT"
           ],
           "content-type": [
             "application/json"
@@ -69,13 +69,13 @@
             "14397"
           ],
           "x-ratelimit-remaining-tokens": [
-            "5869"
+            "5870"
           ],
           "x-ratelimit-reset-requests": [
-            "16.502s"
+            "17.591s"
           ],
           "x-ratelimit-reset-tokens": [
-            "1.301s"
+            "1.291s"
           ],
           "x-request-id": [
             "<X-REQUEST-ID>"
@@ -92,10 +92,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\"id\":\"chatcmpl-e8a1acce-a46e-4b57-9610-4434570dea92\",\"object\":\"chat.completion\",\"created\":1735609041,\"model\":\"llama-3.1-70b-versatile\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"hello\"},\"logprobs\":null,\"finish_reason\":\"stop\"}],\"usage\":{\"queue_time\":0.018422196000000002,\"prompt_tokens\":78,\"prompt_time\":0.012890023,\"completion_tokens\":2,\"completion_time\":0.007272727,\"total_tokens\":80,\"total_time\":0.02016275},\"system_fingerprint\":\"fp_fcc3b74982\",\"x_groq\":{\"id\":\"req_01jgd5rgnvfcdb87jta2qqt8ff\"}}\n"
+          "string": "{\"id\":\"chatcmpl-909d08df-feed-48ae-8d40-962e880a7f91\",\"object\":\"chat.completion\",\"created\":1737412142,\"model\":\"llama-3.1-70b-versatile\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"hello\"},\"logprobs\":null,\"finish_reason\":\"stop\"}],\"usage\":{\"queue_time\":0.246095595,\"prompt_tokens\":78,\"prompt_time\":0.012305075,\"completion_tokens\":2,\"completion_time\":0.007272727,\"total_tokens\":80,\"total_time\":0.019577802},\"system_fingerprint\":\"fp_76dc6cf67d\",\"x_groq\":{\"id\":\"req_01jj2xaskxe1faeqmgs4mv32mm\"}}\n"
         }
       },
-      "recorded_at": "Tue, 31 Dec 2024 01:37:21 GMT"
+      "recorded_at": "Mon, 20 Jan 2025 22:29:02 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

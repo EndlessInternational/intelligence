@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Tue, 31 Dec 2024 01:32:17 GMT"
+            "Mon, 20 Jan 2025 23:29:43 GMT"
           ],
           "content-type": [
             "text/plain; charset=utf-8"
@@ -43,6 +43,21 @@
           ],
           "strict-transport-security": [
             "max-age=31536000; includeSubDomains"
+          ],
+          "access-control-allow-origin": [
+            "*"
+          ],
+          "access-control-allow-credentials": [
+            "true"
+          ],
+          "access-control-allow-methods": [
+            "GET, PUT, POST, DELETE, PATCH, OPTIONS"
+          ],
+          "access-control-allow-headers": [
+            "DNT,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range,Authorization"
+          ],
+          "access-control-max-age": [
+            "1728000"
           ]
         },
         "body": {
@@ -50,7 +65,7 @@
           "string": "Unknown model: invalid_model\n"
         }
       },
-      "recorded_at": "Tue, 31 Dec 2024 01:32:17 GMT"
+      "recorded_at": "Mon, 20 Jan 2025 23:29:43 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

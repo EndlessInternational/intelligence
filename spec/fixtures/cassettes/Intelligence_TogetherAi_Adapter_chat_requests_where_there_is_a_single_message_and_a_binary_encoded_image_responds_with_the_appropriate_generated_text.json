@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Tue, 31 Dec 2024 01:38:35 GMT"
+            "Tue, 21 Jan 2025 01:55:20 GMT"
           ],
           "content-type": [
             "application/json; charset=utf-8"
@@ -38,11 +38,38 @@
           "connection": [
             "keep-alive"
           ],
+          "cf-ray": [
+            "<CF-RAY>"
+          ],
+          "cf-cache-status": [
+            "DYNAMIC"
+          ],
+          "retry-after": [
+            "2"
+          ],
           "access-control-allow-origin": [
             "*"
           ],
+          "etag": [
+            "W/\"20d-XTPJRGU1Wz6CBsn/RMUxWTec4sQ\""
+          ],
+          "strict-transport-security": [
+            "max-age=15552000; includeSubDomains"
+          ],
+          "x-amzn-trace-id": [
+            "a3e596b6-41d6-47a5-9e85-32d533aa20d4-noamzn"
+          ],
+          "x-api-call-end": [
+            "2025-01-21T01:55:20.939Z"
+          ],
+          "x-api-call-start": [
+            "2025-01-21T01:55:20.657Z"
+          ],
           "x-api-received": [
-            "2024-12-31T01:38:35.203Z"
+            "2025-01-21T01:55:20.522Z"
+          ],
+          "x-inference-version": [
+            "v2"
           ],
           "x-ratelimit": [
             "false"
@@ -50,44 +77,23 @@
           "x-ratelimit-limit": [
             "10"
           ],
-          "x-ratelimit-remaining": [
-            "15"
-          ],
-          "x-ratelimit-reset": [
-            "0"
-          ],
-          "retry-after": [
-            "0"
-          ],
-          "x-ratelimit-remaining-tokens": [
-            "2428"
-          ],
           "x-ratelimit-limit-tokens": [
             "3000"
           ],
-          "x-inference-version": [
-            "v2"
+          "x-ratelimit-remaining": [
+            "19"
           ],
-          "x-api-call-start": [
-            "2024-12-31T01:38:35.214Z"
+          "x-ratelimit-remaining-tokens": [
+            "3000"
           ],
-          "x-api-call-end": [
-            "2024-12-31T01:38:35.591Z"
+          "x-ratelimit-reset": [
+            "2"
           ],
-          "etag": [
-            "W/\"211-jCGfpkvqf9+z3Mreig6tZolyBdQ\""
-          ],
-          "cf-cache-status": [
-            "DYNAMIC"
-          ],
-          "strict-transport-security": [
-            "max-age=15552000; includeSubDomains"
+          "vary": [
+            "Accept-Encoding"
           ],
           "server": [
             "cloudflare"
-          ],
-          "cf-ray": [
-            "<CF-RAY>"
           ],
           "content-encoding": [
             "gzip"
@@ -98,10 +104,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "{\n  \"id\": \"8fa68d09be8debee-SEA\",\n  \"object\": \"chat.completion\",\n  \"created\": 1735609115,\n  \"model\": \"meta-llama/Llama-3.2-11B-Vision-Instruct-Turbo\",\n  \"prompt_logprobs\": null,\n  \"prompt\": [],\n  \"choices\": [\n    {\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": \"The image depicts a red balloon.\",\n        \"tool_calls\": []\n      },\n      \"logprobs\": null,\n      \"finish_reason\": \"stop\"\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 66,\n    \"total_tokens\": 74,\n    \"completion_tokens\": 8\n  }\n}"
+          "string": "{\n  \"id\": \"9053ae73ea11ec80\",\n  \"object\": \"chat.completion\",\n  \"created\": 1737424520,\n  \"model\": \"meta-llama/Llama-3.2-11B-Vision-Instruct-Turbo\",\n  \"prompt_logprobs\": null,\n  \"prompt\": [],\n  \"choices\": [\n    {\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": \"The image depicts a red balloon.\",\n        \"tool_calls\": []\n      },\n      \"logprobs\": null,\n      \"finish_reason\": \"stop\"\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 66,\n    \"total_tokens\": 74,\n    \"completion_tokens\": 8\n  }\n}"
         }
       },
-      "recorded_at": "Tue, 31 Dec 2024 01:38:35 GMT"
+      "recorded_at": "Tue, 21 Jan 2025 01:55:20 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

@@ -75,21 +75,23 @@ module Intelligence
     # === arguments 
     # * +conversation+ - an instance of +Intelligence::Conversation+ or String; this encapsulates 
     #                    the content to be sent to the LLM
-    # * +options+      - a Hash with options; these options overide any of the configuration 
-    #                    options used to configure the adapter; you can, for example, pass 
-    #                    +{ chat_options: { max_tokens: 1024 }+ to limit the response to 1024 
-    #                    tokens.
-    def chat( conversation, options = {} )
+    # * +options+      - one or more Hashes with options; these options overide any of the 
+    #                    configuration options used to configure the adapter; you can, for 
+    #                    example, pass +{ chat_options: { max_tokens: 1024 }+ to limit the 
+    #                    response to 1024 tokens.
+    def chat( conversation, *options )
 
       conversation = build_quick_conversation( conversation ) if conversation.is_a?( String )
+      options = options.compact.reduce( {} ) { | accumulator, o | accumulator.merge( o ) }
       options = @options.merge( options )
+
+      # conversation and tools are presented as simple Hashes to the adapter
+      conversation = conversation.to_h
+      options[ :tools ]&.map!( &:to_h )
 
       uri = @adapter.chat_request_uri( options )
       headers = @adapter.chat_request_headers( @options.merge( options ) )
-      payload = @adapter.chat_request_body( 
-        conversation.to_h, 
-        options 
-      )
+      payload = @adapter.chat_request_body( conversation, options )
 
       result_callback = nil 
       response = @connection.post( uri ) do | request |
@@ -100,6 +102,7 @@ module Intelligence
       end
 
       result = nil 
+
       if response.success?  
         chat_result_attributes = @adapter.chat_result_attributes( response )
         result = ChatResult.new( chat_result_attributes )
@@ -113,14 +116,19 @@ module Intelligence
     
     end
 
-    def stream( conversation, options = {} )
+    def stream( conversation, *options )
 
       conversation = build_quick_conversation( conversation ) if conversation.is_a?( String )
+      options = options.compact.reduce( {} ) { | accumulator, o | accumulator.merge( o ) }
       options = @options.merge( options )
+      
+      # conversation and tools are presented as simple Hashes to the adapter
+      conversation = conversation.to_h
+      options[ :tools ]&.map!( &:to_h )
 
       uri = @adapter.chat_request_uri( options )
       headers = @adapter.chat_request_headers( @options.merge( options ) )
-      payload = @adapter.chat_request_body( conversation.to_h, options )
+      payload = @adapter.chat_request_body( conversation, options )
 
       context = nil
       response = @connection.post( uri ) do | request |

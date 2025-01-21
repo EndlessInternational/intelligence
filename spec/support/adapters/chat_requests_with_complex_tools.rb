@@ -33,9 +33,12 @@ RSpec.shared_examples 'chat requests with complex tools' do | options = {} |
 
         response = nil
         conversation = create_conversation( "Tell me the weather in Seattle.\n" )
-        conversation.append_tool( get_complex_weather_tool )
-        response = create_and_make_chat_request( send( options[ :adapter ] || :adapter ), conversation ) 
-        
+        response = create_and_make_chat_request( 
+          send( options[ :adapter ] || :adapter ), 
+          conversation, 
+          tools: [ get_complex_weather_tool ]
+        )       
+
         expect( response.success? ).to be( true ), response_error_description( response )
         expect( response.result ).to be_a( Intelligence::ChatResult )
         expect( response.result.choices ).not_to be_nil
@@ -68,8 +71,12 @@ RSpec.shared_examples 'chat requests with complex tools' do | options = {} |
           "Got it! Let me know if you need any local insights or information related to Seattle!\n",
           "What is the current weather?\n"
         )
-        conversation.append_tool( get_complex_weather_tool )
-        response = create_and_make_chat_request( send( options[ :adapter ] || :adapter ), conversation )
+        
+        response = create_and_make_chat_request( 
+          send( options[ :adapter ] || :adapter ), 
+          conversation, 
+          tools: [ get_complex_weather_tool ]
+        )  
 
         expect( response.success? ).to be( true ), response_error_description( response )
         expect( response.result ).to be_a( Intelligence::ChatResult )

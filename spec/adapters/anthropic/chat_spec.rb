@@ -42,6 +42,24 @@ RSpec.describe "#{Intelligence::Adapter[ :anthropic ]} chat requests", :anthropi
     end
   end
 
+  let ( :adapter_with_tool ) do 
+    Intelligence::Adapter[ :anthropic ].build! do 
+      key                     ENV[ 'ANTHROPIC_API_KEY' ]
+      chat_options do
+        model                 'claude-3-5-sonnet-20240620'
+        max_tokens            128
+        temperature           0
+
+        tool do     
+          name :get_location 
+          description \
+            "The get_location tool will return the users city, state or province and country."
+        end
+      
+      end
+    end 
+  end       
+
   let( :adapter_with_invalid_key ) do
     Intelligence::Adapter[ :anthropic ].build! do 
       key                     'this-key-is-not-valid'  
@@ -73,6 +91,7 @@ RSpec.describe "#{Intelligence::Adapter[ :anthropic ]} chat requests", :anthropi
   include_examples 'chat requests without alternating roles'
   include_examples 'chat requests with binary encoded images'
   include_examples 'chat requests with tools'
+  include_examples 'chat requests with adapter tools'
   include_examples 'chat requests with complex tools'
   include_examples 'chat requests with parallel tools'
 

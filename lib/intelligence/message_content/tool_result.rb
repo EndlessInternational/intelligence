@@ -26,6 +26,7 @@ module Intelligence
           tool_result:      tool_result 
         }.compact
       end
+      
     end 
 
   end

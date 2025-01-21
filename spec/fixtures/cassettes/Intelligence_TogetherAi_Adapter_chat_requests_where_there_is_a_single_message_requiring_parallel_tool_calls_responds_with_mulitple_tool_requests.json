@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Tue, 31 Dec 2024 01:38:40 GMT"
+            "Tue, 21 Jan 2025 01:55:24 GMT"
           ],
           "content-type": [
             "application/json; charset=utf-8"
@@ -38,56 +38,62 @@
           "connection": [
             "keep-alive"
           ],
+          "cf-ray": [
+            "<CF-RAY>"
+          ],
+          "cf-cache-status": [
+            "DYNAMIC"
+          ],
+          "retry-after": [
+            "2"
+          ],
           "access-control-allow-origin": [
             "*"
           ],
+          "etag": [
+            "W/\"55c-WLSer5Dvmt02ob80f8ogJTXvOmQ\""
+          ],
+          "strict-transport-security": [
+            "max-age=15552000; includeSubDomains"
+          ],
+          "x-amzn-trace-id": [
+            "6dc8b4ac-9e6b-4782-be88-8cb4c73ecb6a-noamzn"
+          ],
+          "x-api-call-end": [
+            "2025-01-21T01:55:24.663Z"
+          ],
+          "x-api-call-start": [
+            "2025-01-21T01:55:24.401Z"
+          ],
           "x-api-received": [
-            "2024-12-31T01:38:39.619Z"
+            "2025-01-21T01:55:24.394Z"
+          ],
+          "x-inference-version": [
+            "v2"
           ],
           "x-ratelimit": [
             "false"
           ],
           "x-ratelimit-limit": [
-            "10"
-          ],
-          "x-ratelimit-remaining": [
-            "18"
-          ],
-          "x-ratelimit-reset": [
-            "2"
-          ],
-          "retry-after": [
-            "2"
-          ],
-          "x-ratelimit-remaining-tokens": [
-            "3000"
+            "30"
           ],
           "x-ratelimit-limit-tokens": [
             "3000"
           ],
-          "x-inference-version": [
-            "v2"
+          "x-ratelimit-remaining": [
+            "59"
           ],
-          "x-api-call-start": [
-            "2024-12-31T01:38:39.631Z"
+          "x-ratelimit-remaining-tokens": [
+            "3000"
           ],
-          "x-api-call-end": [
-            "2024-12-31T01:38:40.147Z"
+          "x-ratelimit-reset": [
+            "2"
           ],
-          "etag": [
-            "W/\"55f-60ueM5yQrbmH8HV35Wday2vZV2s\""
-          ],
-          "cf-cache-status": [
-            "DYNAMIC"
-          ],
-          "strict-transport-security": [
-            "max-age=15552000; includeSubDomains"
+          "vary": [
+            "Accept-Encoding"
           ],
           "server": [
             "cloudflare"
-          ],
-          "cf-ray": [
-            "<CF-RAY>"
           ],
           "content-encoding": [
             "gzip"
@@ -98,10 +104,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "{\n  \"id\": \"8fa68d258dce7675-SEA\",\n  \"object\": \"chat.completion\",\n  \"created\": 1735609119,\n  \"model\": \"meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo\",\n  \"prompt\": [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"tool_calls\",\n      \"seed\": 9452603861883160000,\n      \"logprobs\": null,\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": null,\n        \"tool_calls\": [\n          {\n            \"index\": 0,\n            \"id\": \"call_cek4b0o803si2tsox4tp3cut\",\n            \"type\": \"function\",\n            \"function\": {\n              \"arguments\": \"{\\\"city\\\":\\\"London\\\",\\\"country\\\":\\\"United Kingdom\\\"}\",\n              \"name\": \"get_weather\"\n            }\n          },\n          {\n            \"index\": 1,\n            \"id\": \"call_atpylbq0wnh37td7lvvecrgn\",\n            \"type\": \"function\",\n            \"function\": {\n              \"arguments\": \"{\\\"city\\\":\\\"Paris\\\",\\\"country\\\":\\\"France\\\"}\",\n              \"name\": \"get_weather\"\n            }\n          },\n          {\n            \"index\": 2,\n            \"id\": \"call_knu77bc70i7t6wmxz9zfpgfy\",\n            \"type\": \"function\",\n            \"function\": {\n              \"arguments\": \"{\\\"city\\\":\\\"Rome\\\",\\\"country\\\":\\\"Italy\\\"}\",\n              \"name\": \"get_weather\"\n            }\n          }\n        ]\n      }\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 461,\n    \"completion_tokens\": 58,\n    \"total_tokens\": 519\n  }\n}"
+          "string": "{\n  \"id\": \"9053ae8cee38b9d0\",\n  \"object\": \"chat.completion\",\n  \"created\": 1737424524,\n  \"model\": \"meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo\",\n  \"prompt\": [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"tool_calls\",\n      \"seed\": 16574088246742567000,\n      \"logprobs\": null,\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": null,\n        \"tool_calls\": [\n          {\n            \"index\": 0,\n            \"id\": \"call_mxq383830r77tuy0cc13x3sv\",\n            \"type\": \"function\",\n            \"function\": {\n              \"arguments\": \"{\\\"city\\\":\\\"London\\\",\\\"country\\\":\\\"United Kingdom\\\"}\",\n              \"name\": \"get_weather\"\n            }\n          },\n          {\n            \"index\": 1,\n            \"id\": \"call_hqjk1cd3k2ujimo50orxiw2c\",\n            \"type\": \"function\",\n            \"function\": {\n              \"arguments\": \"{\\\"city\\\":\\\"Paris\\\",\\\"country\\\":\\\"France\\\"}\",\n              \"name\": \"get_weather\"\n            }\n          },\n          {\n            \"index\": 2,\n            \"id\": \"call_10sry3hg1xwoxz3qcnggkfjb\",\n            \"type\": \"function\",\n            \"function\": {\n              \"arguments\": \"{\\\"city\\\":\\\"Rome\\\",\\\"country\\\":\\\"Italy\\\"}\",\n              \"name\": \"get_weather\"\n            }\n          }\n        ]\n      }\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 461,\n    \"completion_tokens\": 58,\n    \"total_tokens\": 519\n  }\n}"
         }
       },
-      "recorded_at": "Tue, 31 Dec 2024 01:38:40 GMT"
+      "recorded_at": "Tue, 21 Jan 2025 01:55:24 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

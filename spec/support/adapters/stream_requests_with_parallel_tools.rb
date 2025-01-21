@@ -31,10 +31,11 @@ RSpec.shared_examples 'stream requests with parallel tools' do | options = {} |
       conversation = create_conversation( 
         "What is the weather in London, Paris and Rome right now?\n" 
       )
-      conversation.append_tool( get_weather_tool )
       
       contents = []
-      response = create_and_make_stream_request( send( options[ :adapter ] || :adapter ), conversation ) do | result |    
+      adapter = send( options[ :adapter ] || :adapter ) 
+      tools = [ get_weather_tool ]
+      response = create_and_make_stream_request( adapter, conversation, tools: tools ) do | result |
         expect( result ).to be_a( Intelligence::ChatResult )
         expect( result.choices ).not_to be_nil
         expect( result.choices.length ).to eq( 1 )

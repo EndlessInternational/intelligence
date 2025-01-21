@@ -30,6 +30,7 @@ module Intelligence
             include_usage     [ TrueClass, FalseClass ]
           end
           temperature         Float
+          tool                array: true, as: :tools, &Tool.schema 
           tool_choice do 
             # one of 'auto', 'none' or 'function'
             type              Symbol, in: [ :auto, :none, :function ]

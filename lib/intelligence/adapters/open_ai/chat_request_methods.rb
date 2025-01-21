@@ -11,7 +11,7 @@ module Intelligence
       end
 
       def chat_request_headers( options = {} )
-        options = @options.merge( build_options( options )  )
+        options = merge_options( @options, build_options( options ) )
         result = {}
 
         key = options[ :key ] 
@@ -30,7 +30,10 @@ module Intelligence
       end
 
       def chat_request_body( conversation, options = {} )
-        options = @options.merge( build_options( options )  )
+
+        tools = options.delete( :tools ) || []
+
+        options = merge_options( @options, build_options( options ) )
         result = options[ :chat_options ]&.compact || {}
         result[ :messages ] = []
 
@@ -120,7 +123,9 @@ module Intelligence
 
         end
  
-        tools_attributes = chat_request_tools_attributes( conversation[ :tools ] )
+        tools_attributes = chat_request_tools_attributes( 
+          ( result[ :tools ] || [] ).concat( tools ) 
+        )
         result[ :tools ] = tools_attributes if tools_attributes && tools_attributes.length > 0
        
         JSON.generate( result )

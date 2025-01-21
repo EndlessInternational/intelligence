@@ -1,0 +1,199 @@
+{
+  "http_interactions": [
+    {
+      "request": {
+        "method": "post",
+        "uri": "https://api.groq.com/openai/v1/chat/completions",
+        "body": {
+          "encoding": "UTF-8",
+          "string": "{\"model\":\"llama-3.1-70b-versatile\",\"max_tokens\":16,\"temperature\":0.0,\"messages\":[{\"role\":\"user\",\"content\":\"respond only with the word 'hello'\\n\"}]}"
+        },
+        "headers": {
+          "User-Agent": [
+            "Faraday v2.12.0"
+          ],
+          "Content-Type": [
+            "application/json"
+          ],
+          "Authorization": [
+            "Bearer <TOKEN>"
+          ]
+        }
+      },
+      "response": {
+        "status": {
+          "code": 200,
+          "message": "OK"
+        },
+        "headers": {
+          "date": [
+            "Mon, 20 Jan 2025 22:29:03 GMT"
+          ],
+          "content-type": [
+            "application/json"
+          ],
+          "transfer-encoding": [
+            "chunked"
+          ],
+          "connection": [
+            "keep-alive"
+          ],
+          "cf-ray": [
+            "<CF-RAY>"
+          ],
+          "cf-cache-status": [
+            "DYNAMIC"
+          ],
+          "cache-control": [
+            "private, max-age=0, no-store, no-cache, must-revalidate"
+          ],
+          "vary": [
+            "Origin, Accept-Encoding"
+          ],
+          "via": [
+            "1.1 google"
+          ],
+          "alt-svc": [
+            "h3=\":443\"; ma=86400"
+          ],
+          "x-groq-region": [
+            "us-west-1"
+          ],
+          "x-ratelimit-limit-requests": [
+            "14400"
+          ],
+          "x-ratelimit-limit-tokens": [
+            "6000"
+          ],
+          "x-ratelimit-remaining-requests": [
+            "14395"
+          ],
+          "x-ratelimit-remaining-tokens": [
+            "5794"
+          ],
+          "x-ratelimit-reset-requests": [
+            "29.870999999s"
+          ],
+          "x-ratelimit-reset-tokens": [
+            "2.056999999s"
+          ],
+          "x-request-id": [
+            "<X-REQUEST-ID>"
+          ],
+          "set-cookie": [
+            "<SET-COOKIE>"
+          ],
+          "server": [
+            "cloudflare"
+          ],
+          "content-encoding": [
+            "gzip"
+          ]
+        },
+        "body": {
+          "encoding": "ASCII-8BIT",
+          "string": "{\"id\":\"chatcmpl-22fab2f7-593a-4646-abeb-7eb644fee7f9\",\"object\":\"chat.completion\",\"created\":1737412143,\"model\":\"llama-3.1-70b-versatile\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"hello\"},\"logprobs\":null,\"finish_reason\":\"stop\"}],\"usage\":{\"queue_time\":0.018278508000000002,\"prompt_tokens\":43,\"prompt_time\":0.008179902,\"completion_tokens\":2,\"completion_time\":0.007272727,\"total_tokens\":45,\"total_time\":0.015452629},\"system_fingerprint\":\"fp_fcc3b74982\",\"x_groq\":{\"id\":\"req_01jj2xat2mf36tz4k80s1a6ghp\"}}\n"
+        }
+      },
+      "recorded_at": "Mon, 20 Jan 2025 22:29:03 GMT"
+    },
+    {
+      "request": {
+        "method": "post",
+        "uri": "https://api.groq.com/openai/v1/chat/completions",
+        "body": {
+          "encoding": "UTF-8",
+          "string": "{\"model\":\"llama-3.1-70b-versatile\",\"max_tokens\":16,\"temperature\":0.0,\"messages\":[{\"role\":\"user\",\"content\":\"respond only with the word 'hello'\\n\"}]}"
+        },
+        "headers": {
+          "User-Agent": [
+            "Faraday v2.12.0"
+          ],
+          "Content-Type": [
+            "application/json"
+          ],
+          "Authorization": [
+            "Bearer <TOKEN>"
+          ]
+        }
+      },
+      "response": {
+        "status": {
+          "code": 200,
+          "message": "OK"
+        },
+        "headers": {
+          "date": [
+            "Mon, 20 Jan 2025 22:29:03 GMT"
+          ],
+          "content-type": [
+            "application/json"
+          ],
+          "transfer-encoding": [
+            "chunked"
+          ],
+          "connection": [
+            "keep-alive"
+          ],
+          "cf-ray": [
+            "<CF-RAY>"
+          ],
+          "cf-cache-status": [
+            "DYNAMIC"
+          ],
+          "cache-control": [
+            "private, max-age=0, no-store, no-cache, must-revalidate"
+          ],
+          "vary": [
+            "Origin, Accept-Encoding"
+          ],
+          "via": [
+            "1.1 google"
+          ],
+          "alt-svc": [
+            "h3=\":443\"; ma=86400"
+          ],
+          "x-groq-region": [
+            "us-west-1"
+          ],
+          "x-ratelimit-limit-requests": [
+            "14400"
+          ],
+          "x-ratelimit-limit-tokens": [
+            "6000"
+          ],
+          "x-ratelimit-remaining-requests": [
+            "14394"
+          ],
+          "x-ratelimit-remaining-tokens": [
+            "5759"
+          ],
+          "x-ratelimit-reset-requests": [
+            "35.896s"
+          ],
+          "x-ratelimit-reset-tokens": [
+            "2.406999999s"
+          ],
+          "x-request-id": [
+            "<X-REQUEST-ID>"
+          ],
+          "set-cookie": [
+            "<SET-COOKIE>"
+          ],
+          "server": [
+            "cloudflare"
+          ],
+          "content-encoding": [
+            "gzip"
+          ]
+        },
+        "body": {
+          "encoding": "ASCII-8BIT",
+          "string": "{\"id\":\"chatcmpl-8ae0fc04-f9de-4414-b003-1023deb35f00\",\"object\":\"chat.completion\",\"created\":1737412143,\"model\":\"llama-3.1-70b-versatile\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"hello\"},\"logprobs\":null,\"finish_reason\":\"stop\"}],\"usage\":{\"queue_time\":0.12898151,\"prompt_tokens\":43,\"prompt_time\":0.008286969,\"completion_tokens\":2,\"completion_time\":0.007272727,\"total_tokens\":45,\"total_time\":0.015559696},\"system_fingerprint\":\"fp_4e32347616\",\"x_groq\":{\"id\":\"req_01jj2xat5xf0frwyb4etpej5zp\"}}\n"
+        }
+      },
+      "recorded_at": "Mon, 20 Jan 2025 22:29:03 GMT"
+    }
+  ],
+  "recorded_with": "VCR 6.3.1"
+}

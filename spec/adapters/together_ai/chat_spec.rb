@@ -19,6 +19,23 @@ RSpec.describe "#{Intelligence::Adapter[ :together_ai ]} chat requests", :togeth
     end
   end 
 
+  let( :adapter_with_tool ) do
+    Intelligence::Adapter[ :open_ai ].build! do   
+      key                     ENV[ 'TOGETHERAI_API_KEY' ]
+      chat_options do
+        model                 'meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo'
+        max_tokens            128 
+        temperature           0
+
+        tool do     
+          name :get_location 
+          description \
+            "The get_location tool will return the users city, state or province and country."
+        end
+      end
+    end
+  end
+
   let( :adapter_with_limited_max_tokens ) do
     Intelligence::Adapter[ :together_ai ].build! do   
       key                     ENV[ 'TOGETHERAI_API_KEY' ]

@@ -8,11 +8,11 @@ module Intelligence
       schema do 
 
         # normalized properties for all endpoints
-        key               String
+        key                         String
         
         # openai properties for all endpoints
-        organization      String 
-        project           String 
+        organization                String 
+        project                     String 
         
         # properties for generative text endpoints
         chat_options do 
@@ -40,9 +40,8 @@ module Intelligence
           end
           logit_bias
           logprobs                  [ TrueClass, FalseClass ]
+          top_logprobs              Integer
           modalities                String, array: true 
-          # the parallel_tool_calls parameter is only allowed when 'tools' are specified
-          parallel_tool_calls       [ TrueClass, FalseClass ]
           response_format do 
             # 'text' and 'json_schema' are the only supported types
             type                    Symbol, in: [ :text, :json_schema ]
@@ -52,9 +51,27 @@ module Intelligence
           stream_options do
             include_usage           [ TrueClass, FalseClass ]
           end
-          tool_choice
-          top_logprobs              Integer
-          user
+          user 
+          
+          # open ai tools
+          tool                      array: true, as: :tools, &Tool.schema 
+          # open ai tool choice configuration 
+          #
+          # `tool_choice :none` 
+          # or 
+          # ```
+          # tool_choice :function do 
+          #   function :my_function 
+          # end  
+          # ```
+          tool_choice               arguments: :type do 
+            type                    Symbol, in: [ :none, :auto, :required ]
+            function                arguments: :name do 
+              name                  Symbol 
+            end 
+          end 
+          # the parallel_tool_calls parameter is only allowed when 'tools' are specified
+          parallel_tool_calls       [ TrueClass, FalseClass ]
 
         end
 

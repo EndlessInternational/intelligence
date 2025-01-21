@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Tue, 31 Dec 2024 01:38:43 GMT"
+            "Tue, 21 Jan 2025 01:55:27 GMT"
           ],
           "content-type": [
             "text/event-stream;charset=utf-8"
@@ -38,53 +38,59 @@
           "connection": [
             "keep-alive"
           ],
+          "cf-ray": [
+            "<CF-RAY>"
+          ],
+          "cf-cache-status": [
+            "DYNAMIC"
+          ],
+          "retry-after": [
+            "1"
+          ],
           "access-control-allow-origin": [
             "*"
           ],
+          "cache-control": [
+            "no-cache, no-transform"
+          ],
+          "strict-transport-security": [
+            "max-age=15552000; includeSubDomains"
+          ],
+          "x-amzn-trace-id": [
+            "54be49f4-de00-49ec-9c9c-fc394f2ccac8-noamzn"
+          ],
+          "x-api-call-start": [
+            "2025-01-21T01:55:27.712Z"
+          ],
           "x-api-received": [
-            "2024-12-31T01:38:43.639Z"
+            "2025-01-21T01:55:27.699Z"
+          ],
+          "x-inference-version": [
+            "v2"
           ],
           "x-ratelimit": [
             "false"
           ],
           "x-ratelimit-limit": [
-            "10"
-          ],
-          "x-ratelimit-remaining": [
-            "19"
-          ],
-          "x-ratelimit-reset": [
-            "2"
-          ],
-          "retry-after": [
-            "2"
-          ],
-          "x-ratelimit-remaining-tokens": [
-            "3000"
+            "30"
           ],
           "x-ratelimit-limit-tokens": [
             "3000"
           ],
-          "x-inference-version": [
-            "v2"
+          "x-ratelimit-remaining": [
+            "56"
           ],
-          "x-api-call-start": [
-            "2024-12-31T01:38:43.656Z"
+          "x-ratelimit-remaining-tokens": [
+            "3000"
           ],
-          "cache-control": [
-            "no-cache, no-transform"
+          "x-ratelimit-reset": [
+            "1"
           ],
-          "cf-cache-status": [
-            "DYNAMIC"
-          ],
-          "strict-transport-security": [
-            "max-age=15552000; includeSubDomains"
+          "vary": [
+            "Accept-Encoding"
           ],
           "server": [
             "cloudflare"
-          ],
-          "cf-ray": [
-            "<CF-RAY>"
           ],
           "alt-svc": [
             "h3=\":443\"; ma=86400"
@@ -92,10 +98,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "data: {\"id\":\"8fa68d3eae9ba334-SEA\",\"object\":\"chat.completion.chunk\",\"created\":1735609123,\"choices\":[{\"index\":0,\"text\":\"red\",\"logprobs\":null,\"finish_reason\":null,\"seed\":null,\"delta\":{\"token_id\":1171,\"role\":\"assistant\",\"content\":\"red\",\"tool_calls\":null}}],\"model\":\"meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo\",\"usage\":null}\n\ndata: {\"id\":\"8fa68d3eae9ba334-SEA\",\"object\":\"chat.completion.chunk\",\"created\":1735609123,\"choices\":[{\"index\":0,\"text\":\"\",\"logprobs\":null,\"finish_reason\":\"eos\",\"seed\":7452587751778805000,\"delta\":{\"token_id\":128009,\"role\":\"assistant\",\"content\":\"\",\"tool_calls\":null}}],\"model\":\"meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo\",\"usage\":{\"prompt_tokens\":110,\"completion_tokens\":2,\"total_tokens\":112}}\n\ndata: [DONE]\n\n"
+          "string": "data: {\"id\":\"9053aea0ed15a336\",\"object\":\"chat.completion.chunk\",\"created\":1737424527,\"choices\":[{\"index\":0,\"text\":\"red\",\"logprobs\":null,\"finish_reason\":null,\"seed\":null,\"delta\":{\"token_id\":1171,\"role\":\"assistant\",\"content\":\"red\",\"tool_calls\":null}}],\"model\":\"meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo\",\"usage\":null}\n\ndata: {\"id\":\"9053aea0ed15a336\",\"object\":\"chat.completion.chunk\",\"created\":1737424527,\"choices\":[{\"index\":0,\"text\":\"\",\"logprobs\":null,\"finish_reason\":\"eos\",\"seed\":13223267690755084000,\"delta\":{\"token_id\":128009,\"role\":\"assistant\",\"content\":\"\",\"tool_calls\":null}}],\"model\":\"meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo\",\"usage\":{\"prompt_tokens\":110,\"completion_tokens\":2,\"total_tokens\":112}}\n\ndata: [DONE]\n\n"
         }
       },
-      "recorded_at": "Tue, 31 Dec 2024 01:38:43 GMT"
+      "recorded_at": "Tue, 21 Jan 2025 01:55:27 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

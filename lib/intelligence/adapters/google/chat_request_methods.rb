@@ -27,7 +27,7 @@ module Intelligence
       ]
 
       def chat_request_uri( options )
-        options = @options.merge( build_options( options ) )
+        options = merge_options( @options, build_options( options ) )
 
         key = options[ :key ] 
         gc = options[ :generationConfig ] || {}
@@ -55,27 +55,22 @@ module Intelligence
       end
 
       def chat_request_body( conversation, options = {} )
-        options = @options.merge( build_options( options ) )
+        tools = options.delete( :tools ) || []
+        options = merge_options( @options, build_options( options ) )
 
         gc = options[ :generationConfig ]&.dup || {}
         # discard properties not part of the google generationConfig schema
         gc.delete( :model )
         gc.delete( :stream )
 
-        # googlify tools 
-        tools = gc.delete( :tools )
-        if tools&.any?
-          tools = tools.then do | tools_object |
-            tools_array ||= []
-            tools_object.each { | key, value | tools_array << { key => value } } 
-            tools_array
-          end 
-        end 
-        tool_functions = to_google_tools( conversation[ :tools ] )
+        # googlify tools
+        tools_object = gc.delete( :abilities )
+        tool_functions = to_google_tools( ( gc.delete( :tools ) || [] ).concat( tools ) )
+
         if tool_functions&.any?
-          tools ||= {}
-          tools[ :function_declarations ] ||= []
-          tools[ :function_declarations ].concat( tool_functions )
+          tools_object ||= {}
+          tools_object[ :function_declarations ] ||= []
+          tools_object[ :function_declarations ].concat( tool_functions )
         end 
 
         # googlify tool configuration 
@@ -86,7 +81,7 @@ module Intelligence
 
         result = {}
         result[ :generationConfig ] = gc
-        result[ :tools ] = tools if tools 
+        result[ :tools ] = tools_object if tools_object 
         result[ :tool_config ] = tool_config if tools && tool_config
 
         # construct the system prompt in the form of the google schema

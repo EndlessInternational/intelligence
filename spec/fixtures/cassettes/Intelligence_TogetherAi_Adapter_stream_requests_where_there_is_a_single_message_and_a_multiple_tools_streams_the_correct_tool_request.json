@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Tue, 31 Dec 2024 01:38:46 GMT"
+            "Tue, 21 Jan 2025 01:55:30 GMT"
           ],
           "content-type": [
             "text/event-stream;charset=utf-8"
@@ -38,53 +38,59 @@
           "connection": [
             "keep-alive"
           ],
+          "cf-ray": [
+            "<CF-RAY>"
+          ],
+          "cf-cache-status": [
+            "DYNAMIC"
+          ],
+          "retry-after": [
+            "1"
+          ],
           "access-control-allow-origin": [
             "*"
           ],
+          "cache-control": [
+            "no-cache, no-transform"
+          ],
+          "strict-transport-security": [
+            "max-age=15552000; includeSubDomains"
+          ],
+          "x-amzn-trace-id": [
+            "1f6f3c1c-48e8-47cc-bb1b-2db78a50ccd1-noamzn"
+          ],
+          "x-api-call-start": [
+            "2025-01-21T01:55:30.442Z"
+          ],
           "x-api-received": [
-            "2024-12-31T01:38:46.446Z"
+            "2025-01-21T01:55:30.433Z"
+          ],
+          "x-inference-version": [
+            "v2"
           ],
           "x-ratelimit": [
             "false"
           ],
           "x-ratelimit-limit": [
-            "10"
-          ],
-          "x-ratelimit-remaining": [
-            "17"
-          ],
-          "x-ratelimit-reset": [
-            "1"
-          ],
-          "retry-after": [
-            "1"
-          ],
-          "x-ratelimit-remaining-tokens": [
-            "3000"
+            "30"
           ],
           "x-ratelimit-limit-tokens": [
             "3000"
           ],
-          "x-inference-version": [
-            "v2"
+          "x-ratelimit-remaining": [
+            "57"
           ],
-          "x-api-call-start": [
-            "2024-12-31T01:38:46.459Z"
+          "x-ratelimit-remaining-tokens": [
+            "3000"
           ],
-          "cache-control": [
-            "no-cache, no-transform"
+          "x-ratelimit-reset": [
+            "1"
           ],
-          "cf-cache-status": [
-            "DYNAMIC"
-          ],
-          "strict-transport-security": [
-            "max-age=15552000; includeSubDomains"
+          "vary": [
+            "Accept-Encoding"
           ],
           "server": [
             "cloudflare"
-          ],
-          "cf-ray": [
-            "<CF-RAY>"
           ],
           "alt-svc": [
             "h3=\":443\"; ma=86400"
@@ -92,10 +98,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "data: {\"id\":\"8fa68d502fa2dee5-SEA\",\"object\":\"chat.completion.chunk\",\"created\":1735609126,\"model\":\"meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo\",\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":null},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"8fa68d502fa2dee5-SEA\",\"object\":\"chat.completion.chunk\",\"created\":1735609126,\"model\":\"meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo\",\"choices\":[{\"index\":0,\"delta\":{\"tool_calls\":[{\"index\":0,\"id\":\"call_ntqlzfgtoglo6pwskyvsx8ce\",\"type\":\"function\",\"function\":{\"name\":\"get_location\",\"arguments\":\"\"}}]},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"8fa68d502fa2dee5-SEA\",\"object\":\"chat.completion.chunk\",\"created\":1735609126,\"model\":\"meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo\",\"choices\":[{\"index\":0,\"delta\":{\"tool_calls\":[{\"index\":0,\"function\":{\"arguments\":\"{\"}}]},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"8fa68d502fa2dee5-SEA\",\"object\":\"chat.completion.chunk\",\"created\":1735609126,\"model\":\"meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo\",\"choices\":[{\"index\":0,\"delta\":{\"tool_calls\":[{\"index\":0,\"function\":{\"arguments\":\"}\"}}]},\"logprobs\":null,\"finish_reason\":\"tool_calls\"}]}\n\ndata: [DONE]\n\n"
+          "string": "data: {\"id\":\"9053aeb2dd9675d9\",\"object\":\"chat.completion.chunk\",\"created\":1737424530,\"model\":\"meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo\",\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":null},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"9053aeb2dd9675d9\",\"object\":\"chat.completion.chunk\",\"created\":1737424530,\"model\":\"meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo\",\"choices\":[{\"index\":0,\"delta\":{\"tool_calls\":[{\"index\":0,\"id\":\"call_tu2208pg19t6iqnh6x8pe0sn\",\"type\":\"function\",\"function\":{\"name\":\"get_location\",\"arguments\":\"\"}}]},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"9053aeb2dd9675d9\",\"object\":\"chat.completion.chunk\",\"created\":1737424530,\"model\":\"meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo\",\"choices\":[{\"index\":0,\"delta\":{\"tool_calls\":[{\"index\":0,\"function\":{\"arguments\":\"{\"}}]},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"9053aeb2dd9675d9\",\"object\":\"chat.completion.chunk\",\"created\":1737424530,\"model\":\"meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo\",\"choices\":[{\"index\":0,\"delta\":{\"tool_calls\":[{\"index\":0,\"function\":{\"arguments\":\"}\"}}]},\"logprobs\":null,\"finish_reason\":\"tool_calls\"}]}\n\ndata: [DONE]\n\n"
         }
       },
-      "recorded_at": "Tue, 31 Dec 2024 01:38:46 GMT"
+      "recorded_at": "Tue, 21 Jan 2025 01:55:30 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

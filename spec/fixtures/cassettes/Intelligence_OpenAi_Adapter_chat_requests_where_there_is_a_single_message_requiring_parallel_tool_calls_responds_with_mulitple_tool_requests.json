@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Tue, 31 Dec 2024 01:12:37 GMT"
+            "Mon, 20 Jan 2025 22:16:44 GMT"
           ],
           "content-type": [
             "application/json"
@@ -45,7 +45,7 @@
             "<OPENAI-ORGANIZATION>"
           ],
           "openai-processing-ms": [
-            "1089"
+            "1319"
           ],
           "openai-version": [
             "2020-10-01"
@@ -98,10 +98,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\n  \"id\": \"chatcmpl-AkL6CqhnVUnTFX1csXPKp2aWfBt65\",\n  \"object\": \"chat.completion\",\n  \"created\": 1735607556,\n  \"model\": \"gpt-4o-2024-08-06\",\n  \"choices\": [\n    {\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": null,\n        \"tool_calls\": [\n          {\n            \"id\": \"call_cnDcIlD2guyNTzVLPVXOc2LU\",\n            \"type\": \"function\",\n            \"function\": {\n              \"name\": \"get_weather\",\n              \"arguments\": \"{\\\"city\\\": \\\"London\\\", \\\"country\\\": \\\"UK\\\"}\"\n            }\n          },\n          {\n            \"id\": \"call_4RMVBNl6YWMHTtd5o3VlDKhr\",\n            \"type\": \"function\",\n            \"function\": {\n              \"name\": \"get_weather\",\n              \"arguments\": \"{\\\"city\\\": \\\"Paris\\\", \\\"country\\\": \\\"France\\\"}\"\n            }\n          },\n          {\n            \"id\": \"call_xoREc8tc4vni1aIaNNArec1e\",\n            \"type\": \"function\",\n            \"function\": {\n              \"name\": \"get_weather\",\n              \"arguments\": \"{\\\"city\\\": \\\"Rome\\\", \\\"country\\\": \\\"Italy\\\"}\"\n            }\n          }\n        ],\n        \"refusal\": null\n      },\n      \"logprobs\": null,\n      \"finish_reason\": \"tool_calls\"\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 199,\n    \"completion_tokens\": 71,\n    \"total_tokens\": 270,\n    \"prompt_tokens_details\": {\n      \"cached_tokens\": 0,\n      \"audio_tokens\": 0\n    },\n    \"completion_tokens_details\": {\n      \"reasoning_tokens\": 0,\n      \"audio_tokens\": 0,\n      \"accepted_prediction_tokens\": 0,\n      \"rejected_prediction_tokens\": 0\n    }\n  },\n  \"system_fingerprint\": \"fp_d28bcae782\"\n}\n"
+          "string": "{\n  \"id\": \"chatcmpl-AruMVhzNiA9IhXdYQxhMf8M9z2rlv\",\n  \"object\": \"chat.completion\",\n  \"created\": 1737411403,\n  \"model\": \"gpt-4o-2024-08-06\",\n  \"choices\": [\n    {\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": null,\n        \"tool_calls\": [\n          {\n            \"id\": \"call_EGEfKQhMAajniGaRjw4GT2Uu\",\n            \"type\": \"function\",\n            \"function\": {\n              \"name\": \"get_weather\",\n              \"arguments\": \"{\\\"city\\\": \\\"London\\\", \\\"country\\\": \\\"UK\\\"}\"\n            }\n          },\n          {\n            \"id\": \"call_MocSJT3vg5L70f1TwGqFlc0R\",\n            \"type\": \"function\",\n            \"function\": {\n              \"name\": \"get_weather\",\n              \"arguments\": \"{\\\"city\\\": \\\"Paris\\\", \\\"country\\\": \\\"France\\\"}\"\n            }\n          },\n          {\n            \"id\": \"call_aGBGXSPtDLzhlMJPavXfm8mB\",\n            \"type\": \"function\",\n            \"function\": {\n              \"name\": \"get_weather\",\n              \"arguments\": \"{\\\"city\\\": \\\"Rome\\\", \\\"country\\\": \\\"Italy\\\"}\"\n            }\n          }\n        ],\n        \"refusal\": null\n      },\n      \"logprobs\": null,\n      \"finish_reason\": \"tool_calls\"\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 199,\n    \"completion_tokens\": 71,\n    \"total_tokens\": 270,\n    \"prompt_tokens_details\": {\n      \"cached_tokens\": 0,\n      \"audio_tokens\": 0\n    },\n    \"completion_tokens_details\": {\n      \"reasoning_tokens\": 0,\n      \"audio_tokens\": 0,\n      \"accepted_prediction_tokens\": 0,\n      \"rejected_prediction_tokens\": 0\n    }\n  },\n  \"service_tier\": \"default\",\n  \"system_fingerprint\": \"fp_50cad350e4\"\n}\n"
         }
       },
-      "recorded_at": "Tue, 31 Dec 2024 01:12:37 GMT"
+      "recorded_at": "Mon, 20 Jan 2025 22:16:44 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

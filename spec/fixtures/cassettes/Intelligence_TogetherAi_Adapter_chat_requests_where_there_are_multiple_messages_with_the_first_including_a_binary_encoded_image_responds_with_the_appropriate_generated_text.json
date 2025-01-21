@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Tue, 31 Dec 2024 01:38:36 GMT"
+            "Tue, 21 Jan 2025 01:55:21 GMT"
           ],
           "content-type": [
             "application/json; charset=utf-8"
@@ -38,11 +38,38 @@
           "connection": [
             "keep-alive"
           ],
+          "cf-ray": [
+            "<CF-RAY>"
+          ],
+          "cf-cache-status": [
+            "DYNAMIC"
+          ],
+          "retry-after": [
+            "0"
+          ],
           "access-control-allow-origin": [
             "*"
           ],
+          "etag": [
+            "W/\"1fe-TpMFOZ68rS027q37n+3feBocWIk\""
+          ],
+          "strict-transport-security": [
+            "max-age=15552000; includeSubDomains"
+          ],
+          "x-amzn-trace-id": [
+            "66f7b367-a552-489b-9bae-9e2bf4e6ef63-noamzn"
+          ],
+          "x-api-call-end": [
+            "2025-01-21T01:55:21.245Z"
+          ],
+          "x-api-call-start": [
+            "2025-01-21T01:55:21.068Z"
+          ],
           "x-api-received": [
-            "2024-12-31T01:38:35.732Z"
+            "2025-01-21T01:55:21.066Z"
+          ],
+          "x-inference-version": [
+            "v2"
           ],
           "x-ratelimit": [
             "false"
@@ -50,44 +77,23 @@
           "x-ratelimit-limit": [
             "10"
           ],
-          "x-ratelimit-remaining": [
-            "19"
-          ],
-          "x-ratelimit-reset": [
-            "2"
-          ],
-          "retry-after": [
-            "2"
-          ],
-          "x-ratelimit-remaining-tokens": [
-            "3000"
-          ],
           "x-ratelimit-limit-tokens": [
             "3000"
           ],
-          "x-inference-version": [
-            "v2"
+          "x-ratelimit-remaining": [
+            "18"
           ],
-          "x-api-call-start": [
-            "2024-12-31T01:38:35.740Z"
+          "x-ratelimit-remaining-tokens": [
+            "2907"
           ],
-          "x-api-call-end": [
-            "2024-12-31T01:38:36.096Z"
+          "x-ratelimit-reset": [
+            "0"
           ],
-          "etag": [
-            "W/\"202-Ebbq4Fy24YqIHhVcI7yHMZ1CKO0\""
-          ],
-          "cf-cache-status": [
-            "DYNAMIC"
-          ],
-          "strict-transport-security": [
-            "max-age=15552000; includeSubDomains"
+          "vary": [
+            "Accept-Encoding"
           ],
           "server": [
             "cloudflare"
-          ],
-          "cf-ray": [
-            "<CF-RAY>"
           ],
           "content-encoding": [
             "gzip"
@@ -98,10 +104,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "{\n  \"id\": \"8fa68d0cf9b275c1-SEA\",\n  \"object\": \"chat.completion\",\n  \"created\": 1735609115,\n  \"model\": \"meta-llama/Llama-3.2-11B-Vision-Instruct-Turbo\",\n  \"prompt_logprobs\": null,\n  \"prompt\": [],\n  \"choices\": [\n    {\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": \"The color is red.\",\n        \"tool_calls\": []\n      },\n      \"logprobs\": null,\n      \"finish_reason\": \"stop\"\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 86,\n    \"total_tokens\": 92,\n    \"completion_tokens\": 6\n  }\n}"
+          "string": "{\n  \"id\": \"9053ae785c72c38b\",\n  \"object\": \"chat.completion\",\n  \"created\": 1737424521,\n  \"model\": \"meta-llama/Llama-3.2-11B-Vision-Instruct-Turbo\",\n  \"prompt_logprobs\": null,\n  \"prompt\": [],\n  \"choices\": [\n    {\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": \"The color is red.\",\n        \"tool_calls\": []\n      },\n      \"logprobs\": null,\n      \"finish_reason\": \"stop\"\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 86,\n    \"total_tokens\": 92,\n    \"completion_tokens\": 6\n  }\n}"
         }
       },
-      "recorded_at": "Tue, 31 Dec 2024 01:38:36 GMT"
+      "recorded_at": "Tue, 21 Jan 2025 01:55:21 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

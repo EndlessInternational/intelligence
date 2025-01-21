@@ -27,37 +27,43 @@
         },
         "headers": {
           "date": [
-            "Tue, 31 Dec 2024 01:38:40 GMT"
+            "Tue, 21 Jan 2025 01:55:24 GMT"
           ],
           "content-type": [
             "application/json; charset=utf-8"
           ],
           "content-length": [
-            "223"
+            "251"
           ],
           "connection": [
             "keep-alive"
           ],
-          "access-control-allow-origin": [
-            "*"
-          ],
-          "x-api-received": [
-            "2024-12-31T01:38:40.280Z"
-          ],
-          "etag": [
-            "W/\"df-6s8BSl0JQ2GyuM0w36y8DPCzex4\""
+          "cf-ray": [
+            "<CF-RAY>"
           ],
           "cf-cache-status": [
             "DYNAMIC"
           ],
+          "access-control-allow-origin": [
+            "*"
+          ],
+          "etag": [
+            "W/\"fb-+v83tIjBONudqWy1FDtUUuH73zw\""
+          ],
           "strict-transport-security": [
             "max-age=15552000; includeSubDomains"
           ],
+          "x-amzn-trace-id": [
+            "47c6518c-bd2b-4c36-a3c1-19e3eea0f326-noamzn"
+          ],
+          "x-api-received": [
+            "2025-01-21T01:55:24.779Z"
+          ],
+          "vary": [
+            "Accept-Encoding"
+          ],
           "server": [
             "cloudflare"
-          ],
-          "cf-ray": [
-            "<CF-RAY>"
           ],
           "alt-svc": [
             "h3=\":443\"; ma=86400"
@@ -65,10 +71,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "{\n  \"error\": {\n    \"message\": \"Invalid API key provided. You can find your API key at https://api.together.xyz/settings/api-keys.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"invalid_api_key\"\n  }\n}"
+          "string": "{\n  \"id\": \"9053ae8fadf20879\",\n  \"error\": {\n    \"message\": \"Invalid API key provided. You can find your API key at https://api.together.xyz/settings/api-keys.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"invalid_api_key\"\n  }\n}"
         }
       },
-      "recorded_at": "Tue, 31 Dec 2024 01:38:40 GMT"
+      "recorded_at": "Tue, 21 Jan 2025 01:55:24 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

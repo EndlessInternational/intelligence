@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Tue, 31 Dec 2024 01:09:33 GMT"
+            "Mon, 20 Jan 2025 22:26:13 GMT"
           ],
           "content-type": [
             "application/json"
@@ -38,47 +38,50 @@
           "connection": [
             "keep-alive"
           ],
-          "ratelimitbysize-limit": [
-            "2000000"
-          ],
-          "ratelimitbysize-remaining": [
-            "1994406"
-          ],
-          "x-ratelimitbysize-remaining-month": [
-            "9999955069"
-          ],
-          "ratelimitbysize-reset": [
-            "28"
-          ],
-          "x-ratelimitbysize-limit-minute": [
-            "2000000"
-          ],
           "x-ratelimitbysize-remaining-minute": [
-            "1994406"
+            "1998304"
           ],
           "x-ratelimitbysize-limit-month": [
             "10000000000"
           ],
+          "x-ratelimitbysize-remaining-month": [
+            "9999989812"
+          ],
           "ratelimitbysize-query-cost": [
             "194"
           ],
+          "ratelimitbysize-limit": [
+            "2000000"
+          ],
+          "ratelimitbysize-remaining": [
+            "1998304"
+          ],
+          "ratelimitbysize-reset": [
+            "48"
+          ],
+          "x-ratelimitbysize-limit-minute": [
+            "2000000"
+          ],
           "x-envoy-upstream-service-time": [
-            "81"
+            "277"
           ],
           "access-control-allow-origin": [
             "*"
           ],
           "x-kong-upstream-latency": [
-            "81"
+            "278"
           ],
           "x-kong-proxy-latency": [
-            "1"
+            "0"
           ],
           "x-kong-request-id": [
-            "a99b0a67336d2c0222a9ec41636c4554"
+            "4cf98979b8416851787f7a05800afa62"
           ],
           "cf-cache-status": [
             "DYNAMIC"
+          ],
+          "set-cookie": [
+            "<SET-COOKIE>"
           ],
           "server": [
             "cloudflare"
@@ -95,10 +98,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\"id\":\"6895a95a32d74ba7b9e962e8533922bc\",\"object\":\"chat.completion\",\"created\":1735607372,\"model\":\"mistral-large-latest\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"tool_calls\":null,\"content\":\"red\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":77,\"total_tokens\":78,\"completion_tokens\":1}}"
+          "string": "{\"id\":\"2ede5c9eaa45437f9f9331950f9c5152\",\"object\":\"chat.completion\",\"created\":1737411973,\"model\":\"mistral-large-latest\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"tool_calls\":null,\"content\":\"red\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":77,\"total_tokens\":78,\"completion_tokens\":1}}"
         }
       },
-      "recorded_at": "Tue, 31 Dec 2024 01:09:32 GMT"
+      "recorded_at": "Mon, 20 Jan 2025 22:26:13 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

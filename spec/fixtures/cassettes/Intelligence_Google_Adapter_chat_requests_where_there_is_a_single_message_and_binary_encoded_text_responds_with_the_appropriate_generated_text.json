@@ -3,73 +3,6 @@
     {
       "request": {
         "method": "post",
-        "uri": "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro-002:generateContent?key=<KEY>",
-        "body": {
-          "encoding": "UTF-8",
-          "string": "{\"generationConfig\":{\"maxOutputTokens\":32,\"temperature\":0.0},\"systemInstruction\":{\"role\":\"user\",\"parts\":[{\"text\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"}]},\"contents\":[{\"role\":\"user\",\"parts\":[{\"text\":\"what is the text in the attached file?\\n\"},{\"inline_data\":{\"mime_type\":\"text/plain\",\"data\":\"dGhpcyBpcyBhIHRlc3QK\"}}]}]}"
-        },
-        "headers": {
-          "User-Agent": [
-            "Faraday v2.12.0"
-          ],
-          "Content-Type": [
-            "application/json"
-          ]
-        }
-      },
-      "response": {
-        "status": {
-          "code": 200,
-          "message": "OK"
-        },
-        "headers": {
-          "content-type": [
-            "application/json; charset=UTF-8"
-          ],
-          "vary": [
-            "Origin, X-Origin, Referer"
-          ],
-          "content-encoding": [
-            "gzip"
-          ],
-          "date": [
-            "Fri, 08 Nov 2024 01:19:21 GMT"
-          ],
-          "server": [
-            "scaffolding on HTTPServer2"
-          ],
-          "cache-control": [
-            "private"
-          ],
-          "x-xss-protection": [
-            "0"
-          ],
-          "x-frame-options": [
-            "SAMEORIGIN"
-          ],
-          "x-content-type-options": [
-            "nosniff"
-          ],
-          "server-timing": [
-            "gfet4t7; dur=593"
-          ],
-          "alt-svc": [
-            "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
-          ],
-          "transfer-encoding": [
-            "chunked"
-          ]
-        },
-        "body": {
-          "encoding": "UTF-8",
-          "string": "{\n  \"candidates\": [\n    {\n      \"content\": {\n        \"parts\": [\n          {\n            \"text\": \"this is a test\\n\"\n          }\n        ],\n        \"role\": \"model\"\n      },\n      \"finishReason\": \"STOP\",\n      \"avgLogprobs\": -0.0857488453388214\n    }\n  ],\n  \"usageMetadata\": {\n    \"promptTokenCount\": 60,\n    \"candidatesTokenCount\": 5,\n    \"totalTokenCount\": 65\n  },\n  \"modelVersion\": \"gemini-1.5-pro-002\"\n}\n"
-        }
-      },
-      "recorded_at": "Fri, 08 Nov 2024 01:19:21 GMT"
-    },
-    {
-      "request": {
-        "method": "post",
         "uri": "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent?key=<KEY>",
         "body": {
           "encoding": "UTF-8",
@@ -100,7 +33,7 @@
             "gzip"
           ],
           "date": [
-            "Tue, 31 Dec 2024 01:10:25 GMT"
+            "Tue, 21 Jan 2025 02:55:29 GMT"
           ],
           "server": [
             "scaffolding on HTTPServer2"
@@ -115,7 +48,7 @@
             "nosniff"
           ],
           "server-timing": [
-            "gfet4t7; dur=627"
+            "gfet4t7; dur=631"
           ],
           "alt-svc": [
             "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
@@ -126,10 +59,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "{\n  \"candidates\": [\n    {\n      \"content\": {\n        \"parts\": [\n          {\n            \"text\": \"```text\\nthis is a test\\n```\\n\"\n          }\n        ],\n        \"role\": \"model\"\n      },\n      \"finishReason\": \"STOP\",\n      \"avgLogprobs\": -0.047563806176185608\n    }\n  ],\n  \"usageMetadata\": {\n    \"promptTokenCount\": 60,\n    \"candidatesTokenCount\": 10,\n    \"totalTokenCount\": 70\n  },\n  \"modelVersion\": \"gemini-1.5-pro-002\"\n}\n"
+          "string": "{\n  \"candidates\": [\n    {\n      \"content\": {\n        \"parts\": [\n          {\n            \"text\": \"```text\\nthis is a test\\n```\\n\"\n          }\n        ],\n        \"role\": \"model\"\n      },\n      \"finishReason\": \"STOP\",\n      \"avgLogprobs\": -0.047534167766571045\n    }\n  ],\n  \"usageMetadata\": {\n    \"promptTokenCount\": 60,\n    \"candidatesTokenCount\": 10,\n    \"totalTokenCount\": 70\n  },\n  \"modelVersion\": \"gemini-1.5-pro-002\"\n}\n"
         }
       },
-      "recorded_at": "Tue, 31 Dec 2024 01:10:25 GMT"
+      "recorded_at": "Tue, 21 Jan 2025 02:55:29 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

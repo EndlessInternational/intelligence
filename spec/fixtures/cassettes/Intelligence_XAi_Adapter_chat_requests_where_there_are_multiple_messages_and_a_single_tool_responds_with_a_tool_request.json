@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Tue, 31 Dec 2024 01:47:57 GMT"
+            "Tue, 21 Jan 2025 03:38:38 GMT"
           ],
           "content-type": [
             "application/json"
@@ -65,10 +65,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\"id\":\"0ba0dc86-c953-4088-92df-793be169f2ad\",\"object\":\"chat.completion\",\"created\":1735609676,\"model\":\"grok-beta\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"\",\"tool_calls\":[{\"id\":\"0\",\"function\":{\"name\":\"get_weather\",\"arguments\":\"{\\\"city\\\":\\\"Seattle\\\",\\\"state\\\":\\\"WA\\\"}\"},\"type\":\"function\"}],\"refusal\":null},\"finish_reason\":\"tool_calls\"}],\"usage\":{\"prompt_tokens\":340,\"completion_tokens\":1,\"total_tokens\":341,\"prompt_tokens_details\":{\"text_tokens\":340,\"audio_tokens\":0,\"image_tokens\":0,\"cached_tokens\":0}},\"system_fingerprint\":\"fp_fcf8a93867\"}"
+          "string": "{\"id\":\"e7b5c772-cdbd-4a78-b074-7099caa48737\",\"object\":\"chat.completion\",\"created\":1737430717,\"model\":\"grok-beta\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"I am retrieving the current weather for Seattle, WA.\",\"tool_calls\":[{\"id\":\"call_58763307\",\"function\":{\"name\":\"get_weather\",\"arguments\":\"{\\\"city\\\":\\\"Seattle\\\",\\\"state\\\":\\\"WA\\\"}\"},\"type\":\"function\"}],\"refusal\":null},\"finish_reason\":\"tool_calls\"}],\"usage\":{\"prompt_tokens\":340,\"completion_tokens\":12,\"total_tokens\":352,\"prompt_tokens_details\":{\"text_tokens\":340,\"audio_tokens\":0,\"image_tokens\":0,\"cached_tokens\":0}},\"system_fingerprint\":\"fp_18e99db1fc\"}"
         }
       },
-      "recorded_at": "Tue, 31 Dec 2024 01:47:57 GMT"
+      "recorded_at": "Tue, 21 Jan 2025 03:38:38 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

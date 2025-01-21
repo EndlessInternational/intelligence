@@ -1,0 +1,193 @@
+{
+  "http_interactions": [
+    {
+      "request": {
+        "method": "post",
+        "uri": "https://api.cerebras.ai/v1/chat/completions",
+        "body": {
+          "encoding": "UTF-8",
+          "string": "{\"model\":\"llama3.1-70b\",\"max_tokens\":16,\"messages\":[{\"role\":\"user\",\"content\":\"respond only with the word 'hello'\\n\"}]}"
+        },
+        "headers": {
+          "User-Agent": [
+            "Faraday v2.12.0"
+          ],
+          "Content-Type": [
+            "application/json"
+          ],
+          "Authorization": [
+            "Bearer <TOKEN>"
+          ]
+        }
+      },
+      "response": {
+        "status": {
+          "code": 200,
+          "message": "OK"
+        },
+        "headers": {
+          "content-type": [
+            "application/json"
+          ],
+          "content-length": [
+            "476"
+          ],
+          "connection": [
+            "keep-alive"
+          ],
+          "date": [
+            "Tue, 31 Dec 2024 01:25:21 GMT"
+          ],
+          "strict-transport-security": [
+            "max-age=3600; includeSubDomains"
+          ],
+          "server": [
+            "uvicorn"
+          ],
+          "x-request-id": [
+            "<X-REQUEST-ID>"
+          ],
+          "x-ratelimit-limit-requests-day": [
+            "14400"
+          ],
+          "x-ratelimit-limit-tokens-minute": [
+            "60000"
+          ],
+          "x-ratelimit-remaining-requests-day": [
+            "14394"
+          ],
+          "x-ratelimit-remaining-tokens-minute": [
+            "59809"
+          ],
+          "x-ratelimit-reset-requests-day": [
+            "81278.56276655197"
+          ],
+          "x-ratelimit-reset-tokens-minute": [
+            "38.562766551971436"
+          ],
+          "referrer-policy": [
+            "strict-origin-when-cross-origin"
+          ],
+          "x-content-type-options": [
+            "nosniff"
+          ],
+          "x-cache": [
+            "Miss from cloudfront"
+          ],
+          "via": [
+            "1.1 36cc13280ef76bb2fee6ae5eed6fec2e.cloudfront.net (CloudFront)"
+          ],
+          "x-amz-cf-pop": [
+            "SFO20-C1"
+          ],
+          "alt-svc": [
+            "h3=\":443\"; ma=86400"
+          ],
+          "x-amz-cf-id": [
+            "CtJyThk19ak5B728xB1vCIdGJ7Ot_CG-5otS6bAkl8JtkI5MOxomUQ=="
+          ]
+        },
+        "body": {
+          "encoding": "UTF-8",
+          "string": "{\"id\":\"chatcmpl-af46faaf-93a8-478c-9db8-34db3bd324f4\",\"choices\":[{\"finish_reason\":\"stop\",\"index\":0,\"message\":{\"content\":\"hello\",\"role\":\"assistant\"}}],\"created\":1735608321,\"model\":\"llama3.1-70b\",\"system_fingerprint\":\"fp_2e2a2a083c\",\"object\":\"chat.completion\",\"usage\":{\"prompt_tokens\":43,\"completion_tokens\":2,\"total_tokens\":45},\"time_info\":{\"queue_time\":9.1841e-05,\"prompt_time\":0.001529912,\"completion_time\":0.003135104,\"total_time\":0.006547689437866211,\"created\":1735608321}}"
+        }
+      },
+      "recorded_at": "Tue, 31 Dec 2024 01:25:21 GMT"
+    },
+    {
+      "request": {
+        "method": "post",
+        "uri": "https://api.cerebras.ai/v1/chat/completions",
+        "body": {
+          "encoding": "UTF-8",
+          "string": "{\"model\":\"llama3.1-70b\",\"max_tokens\":16,\"messages\":[{\"role\":\"user\",\"content\":\"the secret word is 'blue'\\n\"},{\"role\":\"assistant\",\"content\":\"ok\\n\"},{\"role\":\"user\",\"content\":\"what is the secret word?\\nrespond with the word only\\n\"}]}"
+        },
+        "headers": {
+          "User-Agent": [
+            "Faraday v2.12.0"
+          ],
+          "Content-Type": [
+            "application/json"
+          ],
+          "Authorization": [
+            "Bearer <TOKEN>"
+          ]
+        }
+      },
+      "response": {
+        "status": {
+          "code": 200,
+          "message": "OK"
+        },
+        "headers": {
+          "content-type": [
+            "application/json"
+          ],
+          "content-length": [
+            "474"
+          ],
+          "connection": [
+            "keep-alive"
+          ],
+          "date": [
+            "Tue, 31 Dec 2024 01:25:21 GMT"
+          ],
+          "strict-transport-security": [
+            "max-age=3600; includeSubDomains"
+          ],
+          "server": [
+            "uvicorn"
+          ],
+          "x-request-id": [
+            "<X-REQUEST-ID>"
+          ],
+          "x-ratelimit-limit-requests-day": [
+            "14400"
+          ],
+          "x-ratelimit-limit-tokens-minute": [
+            "60000"
+          ],
+          "x-ratelimit-remaining-requests-day": [
+            "14393"
+          ],
+          "x-ratelimit-remaining-tokens-minute": [
+            "59764"
+          ],
+          "x-ratelimit-reset-requests-day": [
+            "81278.33019971848"
+          ],
+          "x-ratelimit-reset-tokens-minute": [
+            "38.33019971847534"
+          ],
+          "referrer-policy": [
+            "strict-origin-when-cross-origin"
+          ],
+          "x-content-type-options": [
+            "nosniff"
+          ],
+          "x-cache": [
+            "Miss from cloudfront"
+          ],
+          "via": [
+            "1.1 3ac908fbf7ece372aa92fb8586b6b0cc.cloudfront.net (CloudFront)"
+          ],
+          "x-amz-cf-pop": [
+            "SFO20-C1"
+          ],
+          "alt-svc": [
+            "h3=\":443\"; ma=86400"
+          ],
+          "x-amz-cf-id": [
+            "VQwQnY6gDPjupBPuCSxhJT2-jS713keKZaljiuxXx9ru6C77gk8x6Q=="
+          ]
+        },
+        "body": {
+          "encoding": "UTF-8",
+          "string": "{\"id\":\"chatcmpl-73fa1f59-10ff-4e45-9fe0-0229b4185f50\",\"choices\":[{\"finish_reason\":\"stop\",\"index\":0,\"message\":{\"content\":\"Blue\",\"role\":\"assistant\"}}],\"created\":1735608321,\"model\":\"llama3.1-70b\",\"system_fingerprint\":\"fp_2e2a2a083c\",\"object\":\"chat.completion\",\"usage\":{\"prompt_tokens\":64,\"completion_tokens\":2,\"total_tokens\":66},\"time_info\":{\"queue_time\":9.146e-05,\"prompt_time\":0.002296813,\"completion_time\":0.003128964,\"total_time\":0.007224559783935547,\"created\":1735608321}}"
+        }
+      },
+      "recorded_at": "Tue, 31 Dec 2024 01:25:21 GMT"
+    }
+  ],
+  "recorded_with": "VCR 6.3.1"
+}

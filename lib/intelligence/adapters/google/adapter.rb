@@ -10,7 +10,7 @@ module Intelligence
         # normalized properties for all endpoints
         key               String  
 
-        chat_options      as: :generationConfig do
+        chat_options                  as: :generationConfig do
 
           # normalized properties for google generative text endpoint
           model           String
@@ -35,20 +35,8 @@ module Intelligence
           response_mime_type String,  as: :responseMimeType
           response_schema             as: :responseSchema
 
-          # google tools setup 
-          tools                       do 
-            google_search             as: :google_search_retrieval do 
-              dynamic_retrieval       as: :dynamic_retrieval_config, default: {} do 
-                mode                  String, default: 'MODE_DYNAMIC'
-                threshold             Float, as: :dynamic_threshold, in: 0..1, default: 0.3
-              end
-            end
-            
-            code_execution            do 
-            end
-          end 
-
           # google specific tool configuration
+          tool                        array: true, as: :tools, &Tool.schema 
           tool_configuration          as: :tool_config do
             function_calling          as: :function_calling_config do 
               mode                    Symbol, in: [ :auto, :any, :none ]
@@ -56,6 +44,25 @@ module Intelligence
             end
           end 
 
+          # build-in tools are called 'abilities' in Intelligence so as not to conflic with the
+          # caller defined tools  
+          abilities do 
+            # this appears to be a ( now ) legacy argument and is no longer supported
+            # with the 2.0 models
+            google_search_retrieval do 
+              dynamic_retrieval       as: :dynamic_retrieval_config, default: {} do 
+                mode      String,     default: 'MODE_DYNAMIC'
+                threshold Float,      as: :dynamic_threshold, in: 0..1, default: 0.3
+              end
+            end
+
+            # this argument and is only supported with the 2.0 or later models
+            google_search do 
+            end 
+
+            code_execution do 
+            end
+          end 
 
         end
 

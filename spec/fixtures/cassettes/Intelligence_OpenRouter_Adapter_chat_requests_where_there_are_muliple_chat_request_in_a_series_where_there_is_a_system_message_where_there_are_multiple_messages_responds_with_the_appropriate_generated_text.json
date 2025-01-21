@@ -1,0 +1,145 @@
+{
+  "http_interactions": [
+    {
+      "request": {
+        "method": "post",
+        "uri": "https://openrouter.ai/api/v1/chat/completions",
+        "body": {
+          "encoding": "UTF-8",
+          "string": "{\"model\":\"meta-llama/llama-3.2-11b-vision-instruct\",\"max_tokens\":24,\"temperature\":0.0,\"messages\":[{\"role\":\"user\",\"content\":\"respond only with the word 'hello'\\n\"}]}"
+        },
+        "headers": {
+          "User-Agent": [
+            "Faraday v2.12.0"
+          ],
+          "Content-Type": [
+            "application/json"
+          ],
+          "Authorization": [
+            "Bearer <TOKEN>"
+          ]
+        }
+      },
+      "response": {
+        "status": {
+          "code": 200,
+          "message": "OK"
+        },
+        "headers": {
+          "date": [
+            "Mon, 20 Jan 2025 22:41:53 GMT"
+          ],
+          "content-type": [
+            "application/json"
+          ],
+          "transfer-encoding": [
+            "chunked"
+          ],
+          "connection": [
+            "keep-alive"
+          ],
+          "access-control-allow-origin": [
+            "*"
+          ],
+          "x-clerk-auth-message": [
+            "Invalid JWT form. A JWT consists of three parts separated by dots. (reason=token-invalid, token-carrier=header)"
+          ],
+          "x-clerk-auth-reason": [
+            "token-invalid"
+          ],
+          "x-clerk-auth-status": [
+            "signed-out"
+          ],
+          "vary": [
+            "Accept-Encoding"
+          ],
+          "server": [
+            "cloudflare"
+          ],
+          "cf-ray": [
+            "<CF-RAY>"
+          ],
+          "content-encoding": [
+            "gzip"
+          ]
+        },
+        "body": {
+          "encoding": "ASCII-8BIT",
+          "string": "\n         \n\n         \n\n         \n\n         \n\n         \n{\"id\":\"gen-1737412913-atBKEo3nG5FYEAENTz6G\",\"provider\":\"DeepInfra\",\"model\":\"meta-llama/llama-3.2-11b-vision-instruct\",\"object\":\"chat.completion\",\"created\":1737412913,\"choices\":[{\"logprobs\":null,\"finish_reason\":\"stop\",\"native_finish_reason\":\"stop\",\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"Hello\",\"refusal\":\"\"}}],\"usage\":{\"prompt_tokens\":18,\"completion_tokens\":1,\"total_tokens\":19}}"
+        }
+      },
+      "recorded_at": "Mon, 20 Jan 2025 22:41:53 GMT"
+    },
+    {
+      "request": {
+        "method": "post",
+        "uri": "https://openrouter.ai/api/v1/chat/completions",
+        "body": {
+          "encoding": "UTF-8",
+          "string": "{\"model\":\"meta-llama/llama-3.2-11b-vision-instruct\",\"max_tokens\":24,\"temperature\":0.0,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"the secret word is 'blue'\\n\"},{\"role\":\"assistant\",\"content\":\"ok\\n\"},{\"role\":\"user\",\"content\":\"what is the secret word?\\nrespond with the word only\\n\"}]}"
+        },
+        "headers": {
+          "User-Agent": [
+            "Faraday v2.12.0"
+          ],
+          "Content-Type": [
+            "application/json"
+          ],
+          "Authorization": [
+            "Bearer <TOKEN>"
+          ]
+        }
+      },
+      "response": {
+        "status": {
+          "code": 200,
+          "message": "OK"
+        },
+        "headers": {
+          "date": [
+            "Mon, 20 Jan 2025 22:41:53 GMT"
+          ],
+          "content-type": [
+            "application/json"
+          ],
+          "transfer-encoding": [
+            "chunked"
+          ],
+          "connection": [
+            "keep-alive"
+          ],
+          "access-control-allow-origin": [
+            "*"
+          ],
+          "x-clerk-auth-message": [
+            "Invalid JWT form. A JWT consists of three parts separated by dots. (reason=token-invalid, token-carrier=header)"
+          ],
+          "x-clerk-auth-reason": [
+            "token-invalid"
+          ],
+          "x-clerk-auth-status": [
+            "signed-out"
+          ],
+          "vary": [
+            "Accept-Encoding"
+          ],
+          "server": [
+            "cloudflare"
+          ],
+          "cf-ray": [
+            "<CF-RAY>"
+          ],
+          "content-encoding": [
+            "gzip"
+          ]
+        },
+        "body": {
+          "encoding": "ASCII-8BIT",
+          "string": "\n         \n\n         \n\n         \n{\"id\":\"gen-1737412913-tRqRvtBIfrArmEZSxQfH\",\"provider\":\"Novita\",\"model\":\"meta-llama/llama-3.2-11b-vision-instruct\",\"object\":\"chat.completion\",\"created\":1737412913,\"choices\":[{\"logprobs\":null,\"finish_reason\":\"stop\",\"native_finish_reason\":\"stop\",\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"blue\",\"refusal\":\"\"}}],\"usage\":{\"prompt_tokens\":0,\"completion_tokens\":0,\"total_tokens\":0}}"
+        }
+      },
+      "recorded_at": "Mon, 20 Jan 2025 22:41:54 GMT"
+    }
+  ],
+  "recorded_with": "VCR 6.3.1"
+}

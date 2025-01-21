@@ -66,12 +66,14 @@ module IntelligenceHelper
     Intelligence::MessageContent::Binary.build!( content_type: content_type, bytes: bytes  )
   end
 
-  def create_and_make_chat_request( adapter, conversation )
-    Intelligence::ChatRequest.new( connection: adapter_connection, adapter: adapter ).chat( conversation )
+  def create_and_make_chat_request( adapter, conversation, options = nil )
+    request = Intelligence::ChatRequest.new( connection: adapter_connection, adapter: adapter )
+    request.chat( conversation, options )
   end
 
-  def create_and_make_stream_request( adapter, conversation, &block )
-    Intelligence::ChatRequest.new( connection: adapter_connection, adapter: adapter ).stream( conversation ) do | request |
+  def create_and_make_stream_request( adapter, conversation, options = nil, &block )
+    request = Intelligence::ChatRequest.new( connection: adapter_connection, adapter: adapter )
+    request.stream( conversation, options ) do | request |
       request.receive_result do | result |
         block.call( result )
       end

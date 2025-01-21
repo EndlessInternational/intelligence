@@ -8,6 +8,12 @@ RSpec.describe "#{Intelligence::Adapter[ :x_ai ]} stream requests", :x_ai do
     raise "An XAI_API_KEY must be defined in the environment." unless ENV[ 'XAI_API_KEY' ]
   end
 
+  # this is needed for x-AI test to avoid the rate limit
+  after( :each ) do | example |
+    cassette = VCR.current_cassette
+    sleep 1 if cassette && cassette.new_recorded_interactions.any? 
+  end
+
   let( :adapter ) do
     Intelligence::Adapter[ :x_ai ].build! do   
       key                     ENV[ 'XAI_API_KEY' ]

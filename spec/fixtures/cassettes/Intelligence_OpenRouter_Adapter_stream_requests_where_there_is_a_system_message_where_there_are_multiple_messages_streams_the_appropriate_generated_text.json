@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Tue, 31 Dec 2024 01:19:24 GMT"
+            "Mon, 20 Jan 2025 22:42:13 GMT"
           ],
           "content-type": [
             "text/event-stream"
@@ -65,10 +65,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "data: {\"id\":\"gen-1735607964-qYUxyZH3oxXBzCyg8xrc\",\"provider\":\"Novita\",\"model\":\"meta-llama/llama-3.2-11b-vision-instruct\",\"object\":\"chat.completion.chunk\",\"created\":1735607964,\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"\"},\"finish_reason\":null,\"logprobs\":null}]}\n\ndata: {\"id\":\"gen-1735607964-qYUxyZH3oxXBzCyg8xrc\",\"provider\":\"Novita\",\"model\":\"meta-llama/llama-3.2-11b-vision-instruct\",\"object\":\"chat.completion.chunk\",\"created\":1735607964,\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"blue\"},\"finish_reason\":\"stop\",\"logprobs\":null}]}\n\ndata: {\"id\":\"gen-1735607964-qYUxyZH3oxXBzCyg8xrc\",\"provider\":\"Novita\",\"model\":\"meta-llama/llama-3.2-11b-vision-instruct\",\"object\":\"chat.completion.chunk\",\"created\":1735607964,\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"\"},\"finish_reason\":null,\"logprobs\":null}],\"usage\":{\"prompt_tokens\":0,\"completion_tokens\":0,\"total_tokens\":0}}\n\ndata: [DONE]\n\n"
+          "string": "data: {\"id\":\"gen-1737412933-rBctgC7cO6cuG8nLWjRl\",\"provider\":\"Novita\",\"model\":\"meta-llama/llama-3.2-11b-vision-instruct\",\"object\":\"chat.completion.chunk\",\"created\":1737412933,\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"\"},\"finish_reason\":null,\"native_finish_reason\":null,\"logprobs\":null}]}\n\ndata: {\"id\":\"gen-1737412933-rBctgC7cO6cuG8nLWjRl\",\"provider\":\"Novita\",\"model\":\"meta-llama/llama-3.2-11b-vision-instruct\",\"object\":\"chat.completion.chunk\",\"created\":1737412933,\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"blue\"},\"finish_reason\":\"stop\",\"native_finish_reason\":\"stop\",\"logprobs\":null}]}\n\ndata: {\"id\":\"gen-1737412933-rBctgC7cO6cuG8nLWjRl\",\"provider\":\"Novita\",\"model\":\"meta-llama/llama-3.2-11b-vision-instruct\",\"object\":\"chat.completion.chunk\",\"created\":1737412933,\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"\"},\"finish_reason\":null,\"native_finish_reason\":null,\"logprobs\":null}],\"usage\":{\"prompt_tokens\":0,\"completion_tokens\":0,\"total_tokens\":0}}\n\ndata: [DONE]\n\n"
         }
       },
-      "recorded_at": "Tue, 31 Dec 2024 01:19:24 GMT"
+      "recorded_at": "Mon, 20 Jan 2025 22:42:13 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

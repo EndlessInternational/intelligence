@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Tue, 31 Dec 2024 01:38:38 GMT"
+            "Tue, 21 Jan 2025 01:55:23 GMT"
           ],
           "content-type": [
             "application/json; charset=utf-8"
@@ -38,56 +38,62 @@
           "connection": [
             "keep-alive"
           ],
+          "cf-ray": [
+            "<CF-RAY>"
+          ],
+          "cf-cache-status": [
+            "DYNAMIC"
+          ],
+          "retry-after": [
+            "1"
+          ],
           "access-control-allow-origin": [
             "*"
           ],
+          "etag": [
+            "W/\"31d-RkbjbKKyKupfu130x4LhtUx3pQI\""
+          ],
+          "strict-transport-security": [
+            "max-age=15552000; includeSubDomains"
+          ],
+          "x-amzn-trace-id": [
+            "c7224c3b-da92-4e05-9422-23b5937e3662-noamzn"
+          ],
+          "x-api-call-end": [
+            "2025-01-21T01:55:23.556Z"
+          ],
+          "x-api-call-start": [
+            "2025-01-21T01:55:23.407Z"
+          ],
           "x-api-received": [
-            "2024-12-31T01:38:38.358Z"
+            "2025-01-21T01:55:23.401Z"
+          ],
+          "x-inference-version": [
+            "v2"
           ],
           "x-ratelimit": [
             "false"
           ],
           "x-ratelimit-limit": [
-            "10"
-          ],
-          "x-ratelimit-remaining": [
-            "16"
-          ],
-          "x-ratelimit-reset": [
-            "1"
-          ],
-          "retry-after": [
-            "1"
-          ],
-          "x-ratelimit-remaining-tokens": [
-            "3000"
+            "30"
           ],
           "x-ratelimit-limit-tokens": [
             "3000"
           ],
-          "x-inference-version": [
-            "v2"
+          "x-ratelimit-remaining": [
+            "56"
           ],
-          "x-api-call-start": [
-            "2024-12-31T01:38:38.380Z"
+          "x-ratelimit-remaining-tokens": [
+            "3000"
           ],
-          "x-api-call-end": [
-            "2024-12-31T01:38:38.632Z"
+          "x-ratelimit-reset": [
+            "1"
           ],
-          "etag": [
-            "W/\"321-eCLji35i3Rcec3rQI2SXQcu0juQ\""
-          ],
-          "cf-cache-status": [
-            "DYNAMIC"
-          ],
-          "strict-transport-security": [
-            "max-age=15552000; includeSubDomains"
+          "vary": [
+            "Accept-Encoding"
           ],
           "server": [
             "cloudflare"
-          ],
-          "cf-ray": [
-            "<CF-RAY>"
           ],
           "content-encoding": [
             "gzip"
@@ -98,10 +104,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "{\n  \"id\": \"8fa68d1da86676ca-SEA\",\n  \"object\": \"chat.completion\",\n  \"created\": 1735609118,\n  \"model\": \"meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo\",\n  \"prompt\": [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"tool_calls\",\n      \"seed\": 17560829536500273000,\n      \"logprobs\": null,\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": null,\n        \"tool_calls\": [\n          {\n            \"index\": 0,\n            \"id\": \"call_eq77i3ttwl0r9lczvs24p34e\",\n            \"type\": \"function\",\n            \"function\": {\n              \"arguments\": \"{\\\"city\\\":\\\"Seattle\\\",\\\"state\\\":\\\"WA\\\"}\",\n              \"name\": \"get_weather\"\n            }\n          }\n        ]\n      }\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 549,\n    \"completion_tokens\": 20,\n    \"total_tokens\": 569\n  }\n}"
+          "string": "{\n  \"id\": \"9053ae86be7c7699\",\n  \"object\": \"chat.completion\",\n  \"created\": 1737424523,\n  \"model\": \"meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo\",\n  \"prompt\": [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"tool_calls\",\n      \"seed\": 15234738838086142000,\n      \"logprobs\": null,\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": null,\n        \"tool_calls\": [\n          {\n            \"index\": 0,\n            \"id\": \"call_v6chaizdiu11sor0my3p9kzg\",\n            \"type\": \"function\",\n            \"function\": {\n              \"arguments\": \"{\\\"city\\\":\\\"Seattle\\\",\\\"state\\\":\\\"WA\\\"}\",\n              \"name\": \"get_weather\"\n            }\n          }\n        ]\n      }\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 549,\n    \"completion_tokens\": 20,\n    \"total_tokens\": 569\n  }\n}"
         }
       },
-      "recorded_at": "Tue, 31 Dec 2024 01:38:38 GMT"
+      "recorded_at": "Tue, 21 Jan 2025 01:55:23 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Tue, 31 Dec 2024 01:37:32 GMT"
+            "Mon, 20 Jan 2025 22:29:08 GMT"
           ],
           "content-type": [
             "application/json"
@@ -69,13 +69,13 @@
             "14386"
           ],
           "x-ratelimit-remaining-tokens": [
-            "5802"
+            "5434"
           ],
           "x-ratelimit-reset-requests": [
-            "1m22.379999999s"
+            "1m23.593s"
           ],
           "x-ratelimit-reset-tokens": [
-            "1.975s"
+            "5.656s"
           ],
           "x-request-id": [
             "<X-REQUEST-ID>"
@@ -92,10 +92,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\"id\":\"chatcmpl-d6c246d0-62ed-4061-af76-6b5868443c0b\",\"object\":\"chat.completion\",\"created\":1735609052,\"model\":\"llama-3.1-70b-versatile\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"one\\ntwo\\nthree\\nfour\\nfive\\nsix\\nseven\\neight\\n\"},\"logprobs\":null,\"finish_reason\":\"length\"}],\"usage\":{\"queue_time\":0.035077855,\"prompt_tokens\":120,\"prompt_time\":0.031324475,\"completion_tokens\":16,\"completion_time\":0.075841593,\"total_tokens\":136,\"total_time\":0.107166068},\"system_fingerprint\":\"fp_c0cfa69934\",\"x_groq\":{\"id\":\"req_01jgd5rvafesdv52dmky4xey1g\"}}\n"
+          "string": "{\"id\":\"chatcmpl-b79d8d8f-f56f-4f53-b2a3-8a3497c21948\",\"object\":\"chat.completion\",\"created\":1737412148,\"model\":\"llama-3.1-70b-versatile\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"one\\ntwo\\nthree\\nfour\\nfive\\nsix\\nseven\\neight\\n\"},\"logprobs\":null,\"finish_reason\":\"length\"}],\"usage\":{\"queue_time\":1.7141091430000002,\"prompt_tokens\":120,\"prompt_time\":0.01916777,\"completion_tokens\":16,\"completion_time\":0.058181818,\"total_tokens\":136,\"total_time\":0.077349588},\"system_fingerprint\":\"fp_4e32347616\",\"x_groq\":{\"id\":\"req_01jj2xax68fjv9064j40xneczc\"}}\n"
         }
       },
-      "recorded_at": "Tue, 31 Dec 2024 01:37:32 GMT"
+      "recorded_at": "Mon, 20 Jan 2025 22:29:08 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

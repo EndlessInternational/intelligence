@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Tue, 31 Dec 2024 01:09:33 GMT"
+            "Mon, 20 Jan 2025 22:26:13 GMT"
           ],
           "content-type": [
             "application/json"
@@ -38,23 +38,23 @@
           "connection": [
             "keep-alive"
           ],
-          "ratelimitbysize-limit": [
-            "2000000"
-          ],
-          "ratelimitbysize-remaining": [
-            "1994268"
-          ],
-          "x-ratelimitbysize-remaining-month": [
-            "9999954896"
-          ],
-          "ratelimitbysize-reset": [
-            "27"
-          ],
           "x-ratelimitbysize-limit-minute": [
             "2000000"
           ],
           "x-ratelimitbysize-remaining-minute": [
-            "1994268"
+            "1998257"
+          ],
+          "ratelimitbysize-remaining": [
+            "1998257"
+          ],
+          "ratelimitbysize-reset": [
+            "47"
+          ],
+          "ratelimitbysize-limit": [
+            "2000000"
+          ],
+          "x-ratelimitbysize-remaining-month": [
+            "9999989758"
           ],
           "x-ratelimitbysize-limit-month": [
             "10000000000"
@@ -63,22 +63,25 @@
             "173"
           ],
           "x-envoy-upstream-service-time": [
-            "401"
+            "417"
           ],
           "access-control-allow-origin": [
             "*"
           ],
           "x-kong-upstream-latency": [
-            "402"
+            "418"
           ],
           "x-kong-proxy-latency": [
             "0"
           ],
           "x-kong-request-id": [
-            "a5b64231a6b249511ec51a61bae16d40"
+            "a814c92fdcfd701a334abe1a7c08a95c"
           ],
           "cf-cache-status": [
             "DYNAMIC"
+          ],
+          "set-cookie": [
+            "<SET-COOKIE>"
           ],
           "server": [
             "cloudflare"
@@ -95,10 +98,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\"id\":\"075b98013a4e46d5b3bdcf96c025a7da\",\"object\":\"chat.completion\",\"created\":1735607373,\"model\":\"mistral-large-latest\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"tool_calls\":[{\"id\":\"8WJCfOgKB\",\"type\":\"function\",\"function\":{\"name\":\"get_location\",\"arguments\":\"{}\"}}],\"content\":\"\"},\"finish_reason\":\"tool_calls\"}],\"usage\":{\"prompt_tokens\":98,\"total_tokens\":114,\"completion_tokens\":16}}"
+          "string": "{\"id\":\"0a504b9de10d4291ab42f2bc89d11a50\",\"object\":\"chat.completion\",\"created\":1737411973,\"model\":\"mistral-large-latest\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"tool_calls\":[{\"id\":\"TQeAAhnhO\",\"function\":{\"name\":\"get_location\",\"arguments\":\"{}\"},\"index\":0}],\"content\":\"\"},\"finish_reason\":\"tool_calls\"}],\"usage\":{\"prompt_tokens\":98,\"total_tokens\":114,\"completion_tokens\":16}}"
         }
       },
-      "recorded_at": "Tue, 31 Dec 2024 01:09:33 GMT"
+      "recorded_at": "Mon, 20 Jan 2025 22:26:13 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

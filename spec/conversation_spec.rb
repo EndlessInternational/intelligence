@@ -8,7 +8,6 @@ RSpec.describe Intelligence::Conversation, :unit do
         conversation = described_class.build 
         expect( conversation.has_system_message? ).to be false
         expect( conversation.has_messages? ).to be false 
-        expect( conversation.has_tools? ).to be false 
       end 
     end
   
@@ -158,7 +157,6 @@ RSpec.describe Intelligence::Conversation, :unit do
       expected_hash = {
         system_message: system_message.to_h,
         messages: [ message1.to_h, message2.to_h ],
-        tools: []
       }
 
       expect( conversation.to_h ).to eq( expected_hash )
@@ -166,7 +164,7 @@ RSpec.describe Intelligence::Conversation, :unit do
 
     it 'handles nil system_message' do
       conversation = described_class.new
-      expect( conversation.to_h ).to eq( { messages: [], tools: [] } )
+      expect( conversation.to_h ).to eq( { messages: [] } )
     end
 
     it 'handles empty messages' do
@@ -177,7 +175,6 @@ RSpec.describe Intelligence::Conversation, :unit do
       expected_hash = {
         system_message: system_message.to_h,
         messages: [],
-        tools: []
       }
 
       expect( conversation.to_h ).to eq( expected_hash )

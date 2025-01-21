@@ -1,0 +1,217 @@
+{
+  "http_interactions": [
+    {
+      "request": {
+        "method": "post",
+        "uri": "https://api.anthropic.com/v1/messages",
+        "body": {
+          "encoding": "UTF-8",
+          "string": "{\"model\":\"claude-3-5-sonnet-20240620\",\"max_tokens\":256,\"temperature\":0.0,\"messages\":[{\"role\":\"user\",\"content\":[{\"type\":\"text\",\"text\":\"respond only with the word 'hello'\\n\"}]}]}"
+        },
+        "headers": {
+          "User-Agent": [
+            "Faraday v2.12.0"
+          ],
+          "content-type": [
+            "application/json"
+          ],
+          "x-api-key": [
+            "<X-API-KEY>"
+          ],
+          "anthropic-version": [
+            "2023-06-01"
+          ]
+        }
+      },
+      "response": {
+        "status": {
+          "code": 200,
+          "message": "OK"
+        },
+        "headers": {
+          "date": [
+            "Tue, 21 Jan 2025 03:29:35 GMT"
+          ],
+          "content-type": [
+            "application/json"
+          ],
+          "transfer-encoding": [
+            "chunked"
+          ],
+          "connection": [
+            "keep-alive"
+          ],
+          "anthropic-ratelimit-requests-limit": [
+            "1000"
+          ],
+          "anthropic-ratelimit-requests-remaining": [
+            "999"
+          ],
+          "anthropic-ratelimit-requests-reset": [
+            "2025-01-21T03:29:34Z"
+          ],
+          "anthropic-ratelimit-input-tokens-limit": [
+            "80000"
+          ],
+          "anthropic-ratelimit-input-tokens-remaining": [
+            "80000"
+          ],
+          "anthropic-ratelimit-input-tokens-reset": [
+            "2025-01-21T03:29:35Z"
+          ],
+          "anthropic-ratelimit-output-tokens-limit": [
+            "16000"
+          ],
+          "anthropic-ratelimit-output-tokens-remaining": [
+            "16000"
+          ],
+          "anthropic-ratelimit-output-tokens-reset": [
+            "2025-01-21T03:29:35Z"
+          ],
+          "anthropic-ratelimit-tokens-limit": [
+            "96000"
+          ],
+          "anthropic-ratelimit-tokens-remaining": [
+            "96000"
+          ],
+          "anthropic-ratelimit-tokens-reset": [
+            "2025-01-21T03:29:35Z"
+          ],
+          "request-id": [
+            "<REQUEST-ID>"
+          ],
+          "via": [
+            "1.1 google"
+          ],
+          "cf-cache-status": [
+            "DYNAMIC"
+          ],
+          "x-robots-tag": [
+            "none"
+          ],
+          "server": [
+            "cloudflare"
+          ],
+          "cf-ray": [
+            "<CF-RAY>"
+          ],
+          "content-encoding": [
+            "gzip"
+          ]
+        },
+        "body": {
+          "encoding": "ASCII-8BIT",
+          "string": "{\"id\":\"msg_01X9JHAc9ZwbqfVP7de3bgTj\",\"type\":\"message\",\"role\":\"assistant\",\"model\":\"claude-3-5-sonnet-20240620\",\"content\":[{\"type\":\"text\",\"text\":\"hello\"}],\"stop_reason\":\"end_turn\",\"stop_sequence\":null,\"usage\":{\"input_tokens\":16,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":4}}"
+        }
+      },
+      "recorded_at": "Tue, 21 Jan 2025 03:29:35 GMT"
+    },
+    {
+      "request": {
+        "method": "post",
+        "uri": "https://api.anthropic.com/v1/messages",
+        "body": {
+          "encoding": "UTF-8",
+          "string": "{\"model\":\"claude-3-5-sonnet-20240620\",\"max_tokens\":256,\"temperature\":0.0,\"system\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \",\"messages\":[{\"role\":\"user\",\"content\":[{\"type\":\"text\",\"text\":\"respond only with the word 'hello'\\n\"}]}]}"
+        },
+        "headers": {
+          "User-Agent": [
+            "Faraday v2.12.0"
+          ],
+          "content-type": [
+            "application/json"
+          ],
+          "x-api-key": [
+            "<X-API-KEY>"
+          ],
+          "anthropic-version": [
+            "2023-06-01"
+          ]
+        }
+      },
+      "response": {
+        "status": {
+          "code": 200,
+          "message": "OK"
+        },
+        "headers": {
+          "date": [
+            "Tue, 21 Jan 2025 03:29:35 GMT"
+          ],
+          "content-type": [
+            "application/json"
+          ],
+          "transfer-encoding": [
+            "chunked"
+          ],
+          "connection": [
+            "keep-alive"
+          ],
+          "anthropic-ratelimit-requests-limit": [
+            "1000"
+          ],
+          "anthropic-ratelimit-requests-remaining": [
+            "999"
+          ],
+          "anthropic-ratelimit-requests-reset": [
+            "2025-01-21T03:29:35Z"
+          ],
+          "anthropic-ratelimit-input-tokens-limit": [
+            "80000"
+          ],
+          "anthropic-ratelimit-input-tokens-remaining": [
+            "80000"
+          ],
+          "anthropic-ratelimit-input-tokens-reset": [
+            "2025-01-21T03:29:35Z"
+          ],
+          "anthropic-ratelimit-output-tokens-limit": [
+            "16000"
+          ],
+          "anthropic-ratelimit-output-tokens-remaining": [
+            "16000"
+          ],
+          "anthropic-ratelimit-output-tokens-reset": [
+            "2025-01-21T03:29:35Z"
+          ],
+          "anthropic-ratelimit-tokens-limit": [
+            "96000"
+          ],
+          "anthropic-ratelimit-tokens-remaining": [
+            "96000"
+          ],
+          "anthropic-ratelimit-tokens-reset": [
+            "2025-01-21T03:29:35Z"
+          ],
+          "request-id": [
+            "<REQUEST-ID>"
+          ],
+          "via": [
+            "1.1 google"
+          ],
+          "cf-cache-status": [
+            "DYNAMIC"
+          ],
+          "x-robots-tag": [
+            "none"
+          ],
+          "server": [
+            "cloudflare"
+          ],
+          "cf-ray": [
+            "<CF-RAY>"
+          ],
+          "content-encoding": [
+            "gzip"
+          ]
+        },
+        "body": {
+          "encoding": "ASCII-8BIT",
+          "string": "{\"id\":\"msg_019NienRNw4ZYnCuQsKRmG5n\",\"type\":\"message\",\"role\":\"assistant\",\"model\":\"claude-3-5-sonnet-20240620\",\"content\":[{\"type\":\"text\",\"text\":\"hello\"}],\"stop_reason\":\"end_turn\",\"stop_sequence\":null,\"usage\":{\"input_tokens\":55,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":4}}"
+        }
+      },
+      "recorded_at": "Tue, 21 Jan 2025 03:29:35 GMT"
+    }
+  ],
+  "recorded_with": "VCR 6.3.1"
+}

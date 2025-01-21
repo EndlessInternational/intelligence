@@ -23,9 +23,13 @@ module Intelligence
           stream                  [ TrueClass, FalseClass ]
           stream_options 
           temperature             Float, in: 0..2
+
+          tool                    array: true, as: :tools, &Tool.schema 
           tool_choice 
+
           top_logprobs            Integer, in: 0..20
           top_p                   Float 
+          
           user                    String 
         end
       end

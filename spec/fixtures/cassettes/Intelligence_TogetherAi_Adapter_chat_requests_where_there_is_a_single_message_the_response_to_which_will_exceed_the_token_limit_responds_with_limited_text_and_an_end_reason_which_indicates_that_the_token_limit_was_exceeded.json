@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Tue, 31 Dec 2024 01:38:33 GMT"
+            "Tue, 21 Jan 2025 01:55:18 GMT"
           ],
           "content-type": [
             "application/json; charset=utf-8"
@@ -38,56 +38,62 @@
           "connection": [
             "keep-alive"
           ],
+          "cf-ray": [
+            "<CF-RAY>"
+          ],
+          "cf-cache-status": [
+            "DYNAMIC"
+          ],
+          "retry-after": [
+            "0"
+          ],
           "access-control-allow-origin": [
             "*"
           ],
+          "etag": [
+            "W/\"23d-H807ntGWCddr3F7WlVDZibKgpEc\""
+          ],
+          "strict-transport-security": [
+            "max-age=15552000; includeSubDomains"
+          ],
+          "x-amzn-trace-id": [
+            "cfb267a7-55d2-4ed9-8577-840320d327a2-noamzn"
+          ],
+          "x-api-call-end": [
+            "2025-01-21T01:55:18.875Z"
+          ],
+          "x-api-call-start": [
+            "2025-01-21T01:55:18.718Z"
+          ],
           "x-api-received": [
-            "2024-12-31T01:38:33.189Z"
+            "2025-01-21T01:55:18.710Z"
+          ],
+          "x-inference-version": [
+            "v2"
           ],
           "x-ratelimit": [
             "false"
           ],
           "x-ratelimit-limit": [
-            "10"
-          ],
-          "x-ratelimit-remaining": [
-            "13"
-          ],
-          "x-ratelimit-reset": [
-            "0"
-          ],
-          "retry-after": [
-            "0"
-          ],
-          "x-ratelimit-remaining-tokens": [
-            "3000"
+            "30"
           ],
           "x-ratelimit-limit-tokens": [
             "3000"
           ],
-          "x-inference-version": [
-            "v2"
+          "x-ratelimit-remaining": [
+            "53"
           ],
-          "x-api-call-start": [
-            "2024-12-31T01:38:33.202Z"
+          "x-ratelimit-remaining-tokens": [
+            "3000"
           ],
-          "x-api-call-end": [
-            "2024-12-31T01:38:33.582Z"
+          "x-ratelimit-reset": [
+            "0"
           ],
-          "etag": [
-            "W/\"241-kIKfbrljD60EkviKgJP8/1ZqBVg\""
-          ],
-          "cf-cache-status": [
-            "DYNAMIC"
-          ],
-          "strict-transport-security": [
-            "max-age=15552000; includeSubDomains"
+          "vary": [
+            "Accept-Encoding"
           ],
           "server": [
             "cloudflare"
-          ],
-          "cf-ray": [
-            "<CF-RAY>"
           ],
           "content-encoding": [
             "gzip"
@@ -98,10 +104,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "{\n  \"id\": \"8fa68cfd5efb30ab-SEA\",\n  \"object\": \"chat.completion\",\n  \"created\": 1735609113,\n  \"model\": \"meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo\",\n  \"prompt\": [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"length\",\n      \"seed\": 17443130410195690000,\n      \"logprobs\": null,\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": \"one\\ntwo\\nthree\\nfour\\nfive\\nsix\\nseven\\neight\\nnine\\nten\\neleven\\ntw\",\n        \"tool_calls\": []\n      }\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 84,\n    \"completion_tokens\": 24,\n    \"total_tokens\": 108\n  }\n}"
+          "string": "{\n  \"id\": \"9053ae698fe6751e\",\n  \"object\": \"chat.completion\",\n  \"created\": 1737424518,\n  \"model\": \"meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo\",\n  \"prompt\": [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"length\",\n      \"seed\": 18170210521661389000,\n      \"logprobs\": null,\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": \"one\\ntwo\\nthree\\nfour\\nfive\\nsix\\nseven\\neight\\nnine\\nten\\neleven\\ntw\",\n        \"tool_calls\": []\n      }\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 84,\n    \"completion_tokens\": 24,\n    \"total_tokens\": 108\n  }\n}"
         }
       },
-      "recorded_at": "Tue, 31 Dec 2024 01:38:33 GMT"
+      "recorded_at": "Tue, 21 Jan 2025 01:55:18 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

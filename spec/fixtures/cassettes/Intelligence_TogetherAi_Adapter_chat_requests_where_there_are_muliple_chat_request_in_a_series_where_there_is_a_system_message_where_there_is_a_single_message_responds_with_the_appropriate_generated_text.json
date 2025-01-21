@@ -1,0 +1,223 @@
+{
+  "http_interactions": [
+    {
+      "request": {
+        "method": "post",
+        "uri": "https://api.together.xyz/v1/chat/completions",
+        "body": {
+          "encoding": "UTF-8",
+          "string": "{\"model\":\"meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo\",\"max_tokens\":128.0,\"temperature\":0.0,\"messages\":[{\"role\":\"user\",\"content\":\"respond only with the word 'hello'\\n\"}]}"
+        },
+        "headers": {
+          "User-Agent": [
+            "Faraday v2.12.0"
+          ],
+          "Content-Type": [
+            "application/json"
+          ],
+          "Authorization": [
+            "Bearer <TOKEN>"
+          ]
+        }
+      },
+      "response": {
+        "status": {
+          "code": 200,
+          "message": "OK"
+        },
+        "headers": {
+          "date": [
+            "Tue, 21 Jan 2025 01:55:17 GMT"
+          ],
+          "content-type": [
+            "application/json; charset=utf-8"
+          ],
+          "transfer-encoding": [
+            "chunked"
+          ],
+          "connection": [
+            "keep-alive"
+          ],
+          "cf-ray": [
+            "<CF-RAY>"
+          ],
+          "cf-cache-status": [
+            "DYNAMIC"
+          ],
+          "retry-after": [
+            "1"
+          ],
+          "access-control-allow-origin": [
+            "*"
+          ],
+          "etag": [
+            "W/\"1f7-YOYcdw6bhGUJUv3vV8dEIAUAIGs\""
+          ],
+          "strict-transport-security": [
+            "max-age=15552000; includeSubDomains"
+          ],
+          "x-amzn-trace-id": [
+            "f692777d-c290-4853-85de-5bbf95e2eb9f-noamzn"
+          ],
+          "x-api-call-end": [
+            "2025-01-21T01:55:17.537Z"
+          ],
+          "x-api-call-start": [
+            "2025-01-21T01:55:17.389Z"
+          ],
+          "x-api-received": [
+            "2025-01-21T01:55:17.378Z"
+          ],
+          "x-inference-version": [
+            "v2"
+          ],
+          "x-ratelimit": [
+            "false"
+          ],
+          "x-ratelimit-limit": [
+            "30"
+          ],
+          "x-ratelimit-limit-tokens": [
+            "3000"
+          ],
+          "x-ratelimit-remaining": [
+            "57"
+          ],
+          "x-ratelimit-remaining-tokens": [
+            "3000"
+          ],
+          "x-ratelimit-reset": [
+            "1"
+          ],
+          "vary": [
+            "Accept-Encoding"
+          ],
+          "server": [
+            "cloudflare"
+          ],
+          "content-encoding": [
+            "gzip"
+          ],
+          "alt-svc": [
+            "h3=\":443\"; ma=86400"
+          ]
+        },
+        "body": {
+          "encoding": "UTF-8",
+          "string": "{\n  \"id\": \"9053ae613b8db9e8\",\n  \"object\": \"chat.completion\",\n  \"created\": 1737424517,\n  \"model\": \"meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo\",\n  \"prompt\": [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"eos\",\n      \"seed\": 6883111282696386000,\n      \"logprobs\": null,\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": \"hello\",\n        \"tool_calls\": []\n      }\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 43,\n    \"completion_tokens\": 2,\n    \"total_tokens\": 45\n  }\n}"
+        }
+      },
+      "recorded_at": "Tue, 21 Jan 2025 01:55:17 GMT"
+    },
+    {
+      "request": {
+        "method": "post",
+        "uri": "https://api.together.xyz/v1/chat/completions",
+        "body": {
+          "encoding": "UTF-8",
+          "string": "{\"model\":\"meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo\",\"max_tokens\":128.0,\"temperature\":0.0,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"respond only with the word 'hello'\\n\"}]}"
+        },
+        "headers": {
+          "User-Agent": [
+            "Faraday v2.12.0"
+          ],
+          "Content-Type": [
+            "application/json"
+          ],
+          "Authorization": [
+            "Bearer <TOKEN>"
+          ]
+        }
+      },
+      "response": {
+        "status": {
+          "code": 200,
+          "message": "OK"
+        },
+        "headers": {
+          "date": [
+            "Tue, 21 Jan 2025 01:55:17 GMT"
+          ],
+          "content-type": [
+            "application/json; charset=utf-8"
+          ],
+          "transfer-encoding": [
+            "chunked"
+          ],
+          "connection": [
+            "keep-alive"
+          ],
+          "cf-ray": [
+            "<CF-RAY>"
+          ],
+          "cf-cache-status": [
+            "DYNAMIC"
+          ],
+          "retry-after": [
+            "1"
+          ],
+          "access-control-allow-origin": [
+            "*"
+          ],
+          "etag": [
+            "W/\"1f7-o5xjAKbi6PyrphN66cNlyZ3FlOk\""
+          ],
+          "strict-transport-security": [
+            "max-age=15552000; includeSubDomains"
+          ],
+          "x-amzn-trace-id": [
+            "5cccceb0-879f-4ef1-8d9a-aab762f92aee-noamzn"
+          ],
+          "x-api-call-end": [
+            "2025-01-21T01:55:17.911Z"
+          ],
+          "x-api-call-start": [
+            "2025-01-21T01:55:17.744Z"
+          ],
+          "x-api-received": [
+            "2025-01-21T01:55:17.706Z"
+          ],
+          "x-inference-version": [
+            "v2"
+          ],
+          "x-ratelimit": [
+            "false"
+          ],
+          "x-ratelimit-limit": [
+            "30"
+          ],
+          "x-ratelimit-limit-tokens": [
+            "3000"
+          ],
+          "x-ratelimit-remaining": [
+            "56"
+          ],
+          "x-ratelimit-remaining-tokens": [
+            "3000"
+          ],
+          "x-ratelimit-reset": [
+            "1"
+          ],
+          "vary": [
+            "Accept-Encoding"
+          ],
+          "server": [
+            "cloudflare"
+          ],
+          "content-encoding": [
+            "gzip"
+          ],
+          "alt-svc": [
+            "h3=\":443\"; ma=86400"
+          ]
+        },
+        "body": {
+          "encoding": "UTF-8",
+          "string": "{\n  \"id\": \"9053ae631820868b\",\n  \"object\": \"chat.completion\",\n  \"created\": 1737424517,\n  \"model\": \"meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo\",\n  \"prompt\": [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"eos\",\n      \"seed\": 3134579615351282700,\n      \"logprobs\": null,\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": \"hello\",\n        \"tool_calls\": []\n      }\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 78,\n    \"completion_tokens\": 2,\n    \"total_tokens\": 80\n  }\n}"
+        }
+      },
+      "recorded_at": "Tue, 21 Jan 2025 01:55:17 GMT"
+    }
+  ],
+  "recorded_with": "VCR 6.3.1"
+}

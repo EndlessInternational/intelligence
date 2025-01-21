@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Tue, 31 Dec 2024 01:09:36 GMT"
+            "Mon, 20 Jan 2025 22:26:18 GMT"
           ],
           "content-type": [
             "application/json"
@@ -38,20 +38,20 @@
           "connection": [
             "keep-alive"
           ],
-          "x-ratelimitbysize-remaining-minute": [
-            "1993928"
-          ],
-          "ratelimitbysize-reset": [
-            "25"
-          ],
-          "ratelimitbysize-remaining": [
-            "1993928"
-          ],
           "x-ratelimitbysize-limit-minute": [
             "2000000"
           ],
+          "x-ratelimitbysize-limit-month": [
+            "10000000000"
+          ],
           "x-ratelimitbysize-remaining-month": [
-            "9999954315"
+            "9999988983"
+          ],
+          "ratelimitbysize-reset": [
+            "44"
+          ],
+          "x-ratelimitbysize-remaining-minute": [
+            "1997525"
           ],
           "ratelimitbysize-query-cost": [
             "204"
@@ -59,26 +59,29 @@
           "ratelimitbysize-limit": [
             "2000000"
           ],
-          "x-ratelimitbysize-limit-month": [
-            "10000000000"
+          "ratelimitbysize-remaining": [
+            "1997525"
           ],
           "x-envoy-upstream-service-time": [
-            "769"
+            "1621"
           ],
           "access-control-allow-origin": [
             "*"
           ],
           "x-kong-upstream-latency": [
-            "812"
+            "1621"
           ],
           "x-kong-proxy-latency": [
-            "0"
+            "1"
           ],
           "x-kong-request-id": [
-            "e962d922e78e380d13371471cc246e75"
+            "5fd5c30b39a81310c9d8402b7e0be567"
           ],
           "cf-cache-status": [
             "DYNAMIC"
+          ],
+          "set-cookie": [
+            "<SET-COOKIE>"
           ],
           "server": [
             "cloudflare"
@@ -95,10 +98,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\"id\":\"22f92ea25e784ee8a20f0e22cc6b4e6b\",\"object\":\"chat.completion\",\"created\":1735607375,\"model\":\"mistral-large-latest\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"tool_calls\":[{\"id\":\"4VCzlw5Q1\",\"type\":\"function\",\"function\":{\"name\":\"get_weather\",\"arguments\":\"{\\\"city\\\": \\\"Seattle\\\", \\\"state\\\": \\\"WA\\\", \\\"country\\\": \\\"USA\\\"}\"}}],\"content\":\"\"},\"finish_reason\":\"tool_calls\"}],\"usage\":{\"prompt_tokens\":314,\"total_tokens\":349,\"completion_tokens\":35}}"
+          "string": "{\"id\":\"91c68d43eeb84ec987c9314057f43107\",\"object\":\"chat.completion\",\"created\":1737411977,\"model\":\"mistral-large-latest\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"tool_calls\":[{\"id\":\"Ms5q0noqd\",\"function\":{\"name\":\"get_weather\",\"arguments\":\"{\\\"city\\\": \\\"Seattle\\\", \\\"state\\\": \\\"WA\\\", \\\"country\\\": \\\"USA\\\"}\"},\"index\":0}],\"content\":\"\"},\"finish_reason\":\"tool_calls\"}],\"usage\":{\"prompt_tokens\":314,\"total_tokens\":349,\"completion_tokens\":35}}"
         }
       },
-      "recorded_at": "Tue, 31 Dec 2024 01:09:36 GMT"
+      "recorded_at": "Mon, 20 Jan 2025 22:26:18 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

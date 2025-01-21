@@ -21,6 +21,24 @@ module Intelligence
           frequency_penalty       Float
           presence_penalty        Float
           repetition_penalty      Float
+
+          # together ai tools
+          tool                    array: true, as: :tools, &Tool.schema 
+          # together ai tool choice configuration 
+          #
+          # `tool_choice :auto` 
+          # or 
+          # ```
+          # tool_choice :function do 
+          #   function :my_function 
+          # end  
+          # ```
+          tool_choice             arguments: :type do 
+            type                  Symbol, in: [ :none, :auto, :function ]
+            function              arguments: :name do 
+              name                Symbol 
+            end 
+          end
           user                    String
         end
       end

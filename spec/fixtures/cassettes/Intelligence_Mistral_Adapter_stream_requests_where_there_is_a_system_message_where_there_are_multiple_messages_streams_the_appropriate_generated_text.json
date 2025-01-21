@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Tue, 31 Dec 2024 01:09:44 GMT"
+            "Mon, 20 Jan 2025 22:26:30 GMT"
           ],
           "content-type": [
             "text/event-stream; charset=utf-8"
@@ -38,14 +38,14 @@
           "connection": [
             "keep-alive"
           ],
-          "x-ratelimitbysize-limit-minute": [
-            "2000000"
-          ],
           "x-ratelimitbysize-remaining-minute": [
-            "1993566"
+            "1996103"
+          ],
+          "x-ratelimitbysize-limit-month": [
+            "10000000000"
           ],
           "x-ratelimitbysize-remaining-month": [
-            "9999953060"
+            "9999987402"
           ],
           "ratelimitbysize-query-cost": [
             "190"
@@ -54,31 +54,34 @@
             "2000000"
           ],
           "ratelimitbysize-remaining": [
-            "1993566"
-          ],
-          "x-ratelimitbysize-limit-month": [
-            "10000000000"
+            "1996103"
           ],
           "ratelimitbysize-reset": [
-            "16"
+            "31"
+          ],
+          "x-ratelimitbysize-limit-minute": [
+            "2000000"
           ],
           "x-envoy-upstream-service-time": [
-            "60"
+            "760"
           ],
           "access-control-allow-origin": [
             "*"
           ],
           "x-kong-upstream-latency": [
-            "61"
+            "760"
           ],
           "x-kong-proxy-latency": [
-            "0"
+            "1"
           ],
           "x-kong-request-id": [
-            "83ebb949edf0d74af3d92e2f8d6c2d66"
+            "1fd46451733d9d0a3dc67b38d9f7ff01"
           ],
           "cf-cache-status": [
             "DYNAMIC"
+          ],
+          "set-cookie": [
+            "<SET-COOKIE>"
           ],
           "server": [
             "cloudflare"
@@ -92,10 +95,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "data: {\"id\":\"37d33bd800914366afb42d5a35ec47c7\",\"object\":\"chat.completion.chunk\",\"created\":1735607384,\"model\":\"mistral-large-latest\",\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"\"},\"finish_reason\":null}]}\n\ndata: {\"id\":\"37d33bd800914366afb42d5a35ec47c7\",\"object\":\"chat.completion.chunk\",\"created\":1735607384,\"model\":\"mistral-large-latest\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"blue\"},\"finish_reason\":null}]}\n\ndata: {\"id\":\"37d33bd800914366afb42d5a35ec47c7\",\"object\":\"chat.completion.chunk\",\"created\":1735607384,\"model\":\"mistral-large-latest\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":70,\"total_tokens\":71,\"completion_tokens\":1}}\n\ndata: [DONE]\n\n"
+          "string": "data: {\"id\":\"6d75208b6b6141faa4c99af248ca3c93\",\"object\":\"chat.completion.chunk\",\"created\":1737411990,\"model\":\"mistral-large-latest\",\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"\"},\"finish_reason\":null}]}\n\ndata: {\"id\":\"6d75208b6b6141faa4c99af248ca3c93\",\"object\":\"chat.completion.chunk\",\"created\":1737411990,\"model\":\"mistral-large-latest\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"blue\"},\"finish_reason\":null}]}\n\ndata: {\"id\":\"6d75208b6b6141faa4c99af248ca3c93\",\"object\":\"chat.completion.chunk\",\"created\":1737411990,\"model\":\"mistral-large-latest\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":70,\"total_tokens\":71,\"completion_tokens\":1}}\n\ndata: [DONE]\n\n"
         }
       },
-      "recorded_at": "Tue, 31 Dec 2024 01:09:44 GMT"
+      "recorded_at": "Mon, 20 Jan 2025 22:26:30 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

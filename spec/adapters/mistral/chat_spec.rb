@@ -20,6 +20,23 @@ RSpec.describe "#{Intelligence::Adapter[ :mistral ]} chat requests", :mistral do
     end
   end
 
+  let( :adapter_with_tool ) do
+    Intelligence::Adapter[ :mistral ].build! do   
+      key                     ENV[ 'MISTRAL_API_KEY' ]
+      chat_options do
+        model                 'mistral-large-latest'
+        max_tokens            128 
+        temperature           0
+
+        tool do     
+          name :get_location 
+          description \
+            "The get_location tool will return the users city, state or province and country."
+        end
+      end
+    end
+  end
+
   let( :adapter_with_limited_max_tokens ) do
     Intelligence::Adapter[ :mistral ].build! do   
       key                     ENV[ 'MISTRAL_API_KEY' ]
@@ -83,6 +100,7 @@ RSpec.describe "#{Intelligence::Adapter[ :mistral ]} chat requests", :mistral do
   include_examples 'chat requests with file images', adapter: :vision_adapter
   include_examples 'chat requests without alternating roles'
   include_examples 'chat requests with tools'
+  include_examples 'chat requests with adapter tools'
   include_examples 'chat requests with complex tools'
   include_examples 'chat requests with parallel tools'
 
