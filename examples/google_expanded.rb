@@ -8,7 +8,7 @@ adapter = Intelligence::Adapter.build! :google do
                                                         # retrieved from the envionment
   chat_options do                                       
 
-    model         'gemini-1.5-flash-002'                # this is the google model we want to use
+    model         'gemini-1.5-pro'                      # this is the google model we want to use
     max_tokens    256                                   # this is the maximum number of tokens we
                                                         # want the model to generate
   end

@@ -6,7 +6,7 @@ require_relative '../lib/intelligence'
 # plus setting the model, in this case gemini flash, and limiting tokens to 256
 adapter_options = {
   key: ENV[ 'GOOGLE_API_KEY' ],
-  chat_options: { model: 'gemini-1.5-flash-002', max_tokens: 256 }
+  chat_options: { model: 'gemini-1.5-pro', max_tokens: 256 }
 }
 
 # this code builds and configures your adapter; in this case we have chosen google to match 
