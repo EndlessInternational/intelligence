@@ -38,6 +38,13 @@ module Intelligence
         end
       end
 
+      def chat_request_body( conversation, options = nil )
+        tools = options&.delete( :tools ) || []
+        options = merge_options( @options, build_options( options ) )
+
+        super( conversation, { tools: tools }.merge( options ) )
+      end
+
     end
 
   end

@@ -2,8 +2,8 @@
 
 Intelligence is a lightweight yet powerful Ruby gem that provides a uniform interface for 
 interacting with large language and vision model APIs across multiple vendors. It allows 
-you to seamlessly integrate with services from OpenAI, Anthropic, Google, Mistral, Cerebras, 
-Groq, Hyperbolic, Samba Nova, Together AI, and others, while maintaining a consistent API 
+you to seamlessly integrate with services from OpenAI, Azure OpenAI, Anthropic, Google, Mistral, Cerebras, 
+Groq, Hyperbolic, Samba Nova, Together AI, Ollama, and others, while maintaining a consistent API 
 across all providers. 
 
 The gem operates with minimal dependencies and doesn't require vendor SDK installation, 
@@ -550,6 +550,26 @@ anthropic = create_adapter(:anthropic, ENV['ANTHROPIC_API_KEY'], 'claude-3-5-son
 google = create_adapter(:google, ENV['GOOGLE_API_KEY'], 'gemini-1.5-pro-002')
 openai = create_adapter(:open_ai, ENV['OPENAI_API_KEY'], 'gpt-4o')
 
+# Azure OpenAI requires additional configuration
+azure_openai = Intelligence::Adapter.build! :azure_open_ai do
+  key ENV['AZURE_OPENAI_API_KEY']
+  endpoint ENV['AZURE_OPENAI_ENDPOINT']
+  api_version '2024-02-01'
+  chat_options do
+    model 'gpt-4o'  # This should match your Azure deployment name
+    max_tokens 256
+  end
+end
+
+# Ollama runs locally and doesn't require an API key
+ollama = Intelligence::Adapter.build! :ollama do
+  base_url 'http://localhost:11434'  # default Ollama URL
+  chat_options do
+    model 'llama2'  # or any model you have pulled with 'ollama pull'
+    max_tokens 256
+  end
+end
+
 # Use the same conversation with different providers
 conversation = Intelligence::Conversation.build do
   system_message do
@@ -561,7 +581,7 @@ conversation = Intelligence::Conversation.build do
   end
 end
 
-[anthropic, google, open_ai].each do |adapter|
+[anthropic, google, openai, azure_openai, ollama].each do |adapter|
   request = Intelligence::ChatRequest.new(adapter: adapter)
   response = request.chat(conversation)
   puts "#{adapter.class.name} response: #{response.result.text}"

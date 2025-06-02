@@ -36,6 +36,14 @@ module Intelligence
         self.[]( adapter_type ).build!( attributes, &block )
       end
 
+      def available_adapters
+        adapters_path = File.expand_path( "../../adapters", __FILE__ )
+        
+        Dir.glob( File.join( adapters_path, "*.rb" ) ).map do |file|
+          File.basename( file, ".rb" )
+        end.reject { |adapter| adapter == "generic" }.sort
+      end
+
     end
   end
 end  

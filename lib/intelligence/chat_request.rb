@@ -85,14 +85,15 @@ module Intelligence
       options = options.compact.reduce( {} ) { | accumulator, o | accumulator.merge( o ) }
       options = @options.merge( options )
 
+      
       # conversation and tools are presented as simple Hashes to the adapter
       conversation = conversation.to_h
       options[ :tools ] = options[ :tools ].to_a.map!( &:to_h ) if options[ :tools ]
-
+      
       uri = @adapter.chat_request_uri( options )
       headers = @adapter.chat_request_headers( @options.merge( options ) )
       payload = @adapter.chat_request_body( conversation, options )
-
+      
       result_callback = nil 
       response = @connection.post( uri ) do | request |
         headers.each { | key, value | request.headers[ key ] = value }
