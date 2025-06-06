@@ -10,7 +10,7 @@
         },
         "headers": {
           "User-Agent": [
-            "Faraday v2.12.0"
+            "Faraday v2.13.1"
           ],
           "Content-Type": [
             "application/json"
@@ -36,7 +36,7 @@
             "chunked"
           ],
           "date": [
-            "Tue, 21 Jan 2025 02:56:31 GMT"
+            "Fri, 06 Jun 2025 18:34:17 GMT"
           ],
           "server": [
             "scaffolding on HTTPServer2"
@@ -51,7 +51,7 @@
             "nosniff"
           ],
           "server-timing": [
-            "gfet4t7; dur=594"
+            "gfet4t7; dur=453"
           ],
           "alt-svc": [
             "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
@@ -59,10 +59,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "data: {\"candidates\": [{\"content\": {\"parts\": [{\"text\": \"```\"}],\"role\": \"model\"}}],\"usageMetadata\": {\"promptTokenCount\": 60,\"totalTokenCount\": 60},\"modelVersion\": \"gemini-1.5-pro-002\"}\r\n\r\ndata: {\"candidates\": [{\"content\": {\"parts\": [{\"text\": \"text\\nthis is a test\\n```\\n\"}],\"role\": \"model\"},\"finishReason\": \"STOP\"}],\"usageMetadata\": {\"promptTokenCount\": 60,\"candidatesTokenCount\": 10,\"totalTokenCount\": 70},\"modelVersion\": \"gemini-1.5-pro-002\"}\r\n\r\n"
+          "string": "data: {\"candidates\": [{\"content\": {\"parts\": [{\"text\": \"this\"}],\"role\": \"model\"}}],\"usageMetadata\": {\"promptTokenCount\": 60,\"totalTokenCount\": 60,\"promptTokensDetails\": [{\"modality\": \"TEXT\",\"tokenCount\": 60}]},\"modelVersion\": \"gemini-1.5-pro-002\",\"responseId\": \"qTRDaKW3FNW2mNAPoKfzoAs\"}\r\n\r\ndata: {\"candidates\": [{\"content\": {\"parts\": [{\"text\": \" is a test\"}],\"role\": \"model\"}}],\"usageMetadata\": {\"promptTokenCount\": 60,\"totalTokenCount\": 60,\"promptTokensDetails\": [{\"modality\": \"TEXT\",\"tokenCount\": 60}]},\"modelVersion\": \"gemini-1.5-pro-002\",\"responseId\": \"qTRDaKW3FNW2mNAPoKfzoAs\"}\r\n\r\ndata: {\"candidates\": [{\"content\": {\"parts\": [{\"text\": \"\\n\"}],\"role\": \"model\"},\"finishReason\": \"STOP\"}],\"usageMetadata\": {\"promptTokenCount\": 58,\"candidatesTokenCount\": 5,\"totalTokenCount\": 63,\"promptTokensDetails\": [{\"modality\": \"TEXT\",\"tokenCount\": 58}],\"candidatesTokensDetails\": [{\"modality\": \"TEXT\",\"tokenCount\": 5}]},\"modelVersion\": \"gemini-1.5-pro-002\",\"responseId\": \"qTRDaKW3FNW2mNAPoKfzoAs\"}\r\n\r\n"
         }
       },
-      "recorded_at": "Tue, 21 Jan 2025 02:56:31 GMT"
+      "recorded_at": "Fri, 06 Jun 2025 18:34:17 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

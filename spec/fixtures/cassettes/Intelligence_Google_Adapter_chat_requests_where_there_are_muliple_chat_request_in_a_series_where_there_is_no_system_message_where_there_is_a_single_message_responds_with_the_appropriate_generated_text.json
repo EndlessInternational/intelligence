@@ -3,14 +3,14 @@
     {
       "request": {
         "method": "post",
-        "uri": "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent?key=<KEY>",
+        "uri": "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=<KEY>",
         "body": {
           "encoding": "UTF-8",
           "string": "{\"generationConfig\":{\"maxOutputTokens\":64,\"temperature\":0.0},\"contents\":[{\"role\":\"user\",\"parts\":[{\"text\":\"respond only with the word 'hello'\\n\"}]}]}"
         },
         "headers": {
           "User-Agent": [
-            "Faraday v2.12.0"
+            "Faraday v2.13.1"
           ],
           "Content-Type": [
             "application/json"
@@ -33,7 +33,7 @@
             "gzip"
           ],
           "date": [
-            "Tue, 21 Jan 2025 02:55:18 GMT"
+            "Fri, 06 Jun 2025 18:31:47 GMT"
           ],
           "server": [
             "scaffolding on HTTPServer2"
@@ -48,7 +48,7 @@
             "nosniff"
           ],
           "server-timing": [
-            "gfet4t7; dur=487"
+            "gfet4t7; dur=330"
           ],
           "alt-svc": [
             "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
@@ -59,22 +59,22 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "{\n  \"candidates\": [\n    {\n      \"content\": {\n        \"parts\": [\n          {\n            \"text\": \"hello\\n\"\n          }\n        ],\n        \"role\": \"model\"\n      },\n      \"finishReason\": \"STOP\"\n    }\n  ],\n  \"usageMetadata\": {\n    \"promptTokenCount\": 10,\n    \"candidatesTokenCount\": 2,\n    \"totalTokenCount\": 12\n  },\n  \"modelVersion\": \"gemini-1.5-pro-002\"\n}\n"
+          "string": "{\n  \"candidates\": [\n    {\n      \"content\": {\n        \"parts\": [\n          {\n            \"text\": \"hello\\n\"\n          }\n        ],\n        \"role\": \"model\"\n      },\n      \"finishReason\": \"STOP\",\n      \"avgLogprobs\": -0.00092338118702173233\n    }\n  ],\n  \"usageMetadata\": {\n    \"promptTokenCount\": 9,\n    \"candidatesTokenCount\": 2,\n    \"totalTokenCount\": 11,\n    \"promptTokensDetails\": [\n      {\n        \"modality\": \"TEXT\",\n        \"tokenCount\": 9\n      }\n    ],\n    \"candidatesTokensDetails\": [\n      {\n        \"modality\": \"TEXT\",\n        \"tokenCount\": 2\n      }\n    ]\n  },\n  \"modelVersion\": \"gemini-2.0-flash\",\n  \"responseId\": \"EjRDaMLeN-6bnvgPg9KK4A8\"\n}\n"
         }
       },
-      "recorded_at": "Tue, 21 Jan 2025 02:55:18 GMT"
+      "recorded_at": "Fri, 06 Jun 2025 18:31:47 GMT"
     },
     {
       "request": {
         "method": "post",
-        "uri": "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent?key=<KEY>",
+        "uri": "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=<KEY>",
         "body": {
           "encoding": "UTF-8",
           "string": "{\"generationConfig\":{\"maxOutputTokens\":64,\"temperature\":0.0},\"contents\":[{\"role\":\"user\",\"parts\":[{\"text\":\"respond only with the word 'hello'\\n\"}]}]}"
         },
         "headers": {
           "User-Agent": [
-            "Faraday v2.12.0"
+            "Faraday v2.13.1"
           ],
           "Content-Type": [
             "application/json"
@@ -97,7 +97,7 @@
             "gzip"
           ],
           "date": [
-            "Tue, 21 Jan 2025 02:55:18 GMT"
+            "Fri, 06 Jun 2025 18:31:47 GMT"
           ],
           "server": [
             "scaffolding on HTTPServer2"
@@ -112,7 +112,7 @@
             "nosniff"
           ],
           "server-timing": [
-            "gfet4t7; dur=476"
+            "gfet4t7; dur=322"
           ],
           "alt-svc": [
             "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
@@ -123,10 +123,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "{\n  \"candidates\": [\n    {\n      \"content\": {\n        \"parts\": [\n          {\n            \"text\": \"hello\\n\"\n          }\n        ],\n        \"role\": \"model\"\n      },\n      \"finishReason\": \"STOP\"\n    }\n  ],\n  \"usageMetadata\": {\n    \"promptTokenCount\": 10,\n    \"candidatesTokenCount\": 2,\n    \"totalTokenCount\": 12\n  },\n  \"modelVersion\": \"gemini-1.5-pro-002\"\n}\n"
+          "string": "{\n  \"candidates\": [\n    {\n      \"content\": {\n        \"parts\": [\n          {\n            \"text\": \"hello\\n\"\n          }\n        ],\n        \"role\": \"model\"\n      },\n      \"finishReason\": \"STOP\",\n      \"avgLogprobs\": -0.00092338118702173233\n    }\n  ],\n  \"usageMetadata\": {\n    \"promptTokenCount\": 9,\n    \"candidatesTokenCount\": 2,\n    \"totalTokenCount\": 11,\n    \"promptTokensDetails\": [\n      {\n        \"modality\": \"TEXT\",\n        \"tokenCount\": 9\n      }\n    ],\n    \"candidatesTokensDetails\": [\n      {\n        \"modality\": \"TEXT\",\n        \"tokenCount\": 2\n      }\n    ]\n  },\n  \"modelVersion\": \"gemini-2.0-flash\",\n  \"responseId\": \"EzRDaLiPEpK3nvgProrugAE\"\n}\n"
         }
       },
-      "recorded_at": "Tue, 21 Jan 2025 02:55:18 GMT"
+      "recorded_at": "Fri, 06 Jun 2025 18:31:47 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

@@ -6,11 +6,11 @@
         "uri": "https://api.hyperbolic.xyz/v1/chat/completions",
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"model\":\"meta-llama/Meta-Llama-3.1-70B-Instruct\",\"max_tokens\":16,\"temperature\":0.0,\"messages\":[{\"role\":\"user\",\"content\":\"the secret word is 'red'\\n\"},{\"role\":\"assistant\",\"content\":\"ok\\n\"},{\"role\":\"user\",\"content\":\"what is the exact secret word? answer with the word only\\n\"}]}"
+          "string": "{\"model\":\"Qwen/Qwen2.5-VL-7B-Instruct\",\"max_tokens\":16,\"temperature\":0.0,\"messages\":[{\"role\":\"user\",\"content\":\"the secret word is 'red'\\n\"},{\"role\":\"assistant\",\"content\":\"ok\\n\"},{\"role\":\"user\",\"content\":\"what is the exact secret word? answer with the word only\\n\"}]}"
         },
         "headers": {
           "User-Agent": [
-            "Faraday v2.12.0"
+            "Faraday v2.13.1"
           ],
           "Content-Type": [
             "application/json"
@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Mon, 20 Jan 2025 22:21:41 GMT"
+            "Fri, 06 Jun 2025 18:47:13 GMT"
           ],
           "content-type": [
             "application/json"
@@ -37,6 +37,9 @@
           ],
           "connection": [
             "keep-alive"
+          ],
+          "x-inference-request-id": [
+            "c113a669-e2b2-494e-a72e-97c38ad181f7"
           ],
           "cf-cache-status": [
             "DYNAMIC"
@@ -53,10 +56,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\"id\":\"chat-18d8b025efaa412fbcbcc0e98ae2352a\",\"object\":\"chat.completion\",\"created\":1737411700,\"model\":\"meta-llama/Meta-Llama-3.1-70B-Instruct\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"red\"},\"finish_reason\":\"stop\",\"logprobs\":null}],\"usage\":{\"prompt_tokens\":65,\"total_tokens\":67,\"completion_tokens\":2}}"
+          "string": "{\"id\":\"chatcmpl-cc3af4eeedc84dc9a592a8e6ca1a123f\",\"object\":\"chat.completion\",\"created\":1749235632,\"model\":\"Qwen/Qwen2.5-VL-7B-Instruct\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"reasoning_content\":null,\"content\":\"red\",\"tool_calls\":[]},\"logprobs\":null,\"finish_reason\":\"stop\",\"stop_reason\":null}],\"usage\":{\"prompt_tokens\":51,\"total_tokens\":53,\"completion_tokens\":2,\"prompt_tokens_details\":null},\"prompt_logprobs\":null}"
         }
       },
-      "recorded_at": "Mon, 20 Jan 2025 22:21:41 GMT"
+      "recorded_at": "Fri, 06 Jun 2025 18:47:12 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

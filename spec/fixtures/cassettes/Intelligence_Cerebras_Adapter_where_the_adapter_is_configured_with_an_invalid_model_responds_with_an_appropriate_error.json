@@ -10,7 +10,7 @@
         },
         "headers": {
           "User-Agent": [
-            "Faraday v2.12.0"
+            "Faraday v2.13.1"
           ],
           "Content-Type": [
             "application/json"
@@ -26,23 +26,17 @@
           "message": "Not Found"
         },
         "headers": {
+          "date": [
+            "Fri, 06 Jun 2025 18:54:20 GMT"
+          ],
           "content-type": [
             "application/json"
           ],
-          "content-length": [
-            "147"
+          "transfer-encoding": [
+            "chunked"
           ],
           "connection": [
             "keep-alive"
-          ],
-          "date": [
-            "Tue, 31 Dec 2024 01:26:54 GMT"
-          ],
-          "strict-transport-security": [
-            "max-age=3600; includeSubDomains"
-          ],
-          "server": [
-            "uvicorn"
           ],
           "referrer-policy": [
             "strict-origin-when-cross-origin"
@@ -50,28 +44,34 @@
           "x-content-type-options": [
             "nosniff"
           ],
-          "x-cache": [
-            "Error from cloudfront"
+          "strict-transport-security": [
+            "max-age=3600; includeSubDomains"
           ],
-          "via": [
-            "1.1 1343d20bdb50193b4d08099f66c57450.cloudfront.net (CloudFront)"
+          "cf-cache-status": [
+            "DYNAMIC"
           ],
-          "x-amz-cf-pop": [
-            "SFO20-C1"
+          "set-cookie": [
+            "<SET-COOKIE>"
+          ],
+          "server": [
+            "cloudflare"
+          ],
+          "cf-ray": [
+            "<CF-RAY>"
+          ],
+          "content-encoding": [
+            "gzip"
           ],
           "alt-svc": [
             "h3=\":443\"; ma=86400"
-          ],
-          "x-amz-cf-id": [
-            "KK4iVv9SbHTod0UHbT652gVIzRoRYX8t8KupQPv_XHI4xqf69AenUQ=="
           ]
         },
         "body": {
-          "encoding": "UTF-8",
+          "encoding": "ASCII-8BIT",
           "string": "{\"message\":\"Model invalid model does not exist or you do not have access to it.\",\"type\":\"not_found_error\",\"param\":\"model\",\"code\":\"model_not_found\"}"
         }
       },
-      "recorded_at": "Tue, 31 Dec 2024 01:26:54 GMT"
+      "recorded_at": "Fri, 06 Jun 2025 18:54:20 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

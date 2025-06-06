@@ -6,11 +6,11 @@
         "uri": "https://api.x.ai/v1/chat/completions",
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"model\":\"grok-beta\",\"max_tokens\":128,\"temperature\":0.0,\"stream\":true,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"I am in Seattle, WA\\n\"},{\"role\":\"assistant\",\"content\":\"Got it! Let me know if you need any local insights or information related to Seattle!\\n\"},{\"role\":\"user\",\"content\":\"What is the current weather?\\n\"}],\"tools\":[{\"type\":\"function\",\"function\":{\"name\":\"get_location\",\"description\":\"The get_location tool will return the users city, state or province and country.\",\"parameters\":{}}},{\"type\":\"function\",\"function\":{\"name\":\"get_weather\",\"description\":\"The get_weather tool will return the current weather in a given locality.\",\"parameters\":{\"type\":\"object\",\"properties\":{\"city\":{\"type\":\"string\",\"description\":\"The city or town for which the current weather should be returned.\"},\"state\":{\"type\":\"string\",\"description\":\"The state or province for which the current weather should be returned. If this is not provided the largest or most prominent city with the given name, in the given country or in the worldi, will be assumed.\"},\"country\":{\"type\":\"string\",\"description\":\"The country for which the given weather should be returned. If this is not provided the largest or most prominent city with the given name will be returned.\"}},\"required\":[\"city\"]}}}]}"
+          "string": "{\"model\":\"grok-3\",\"max_tokens\":128,\"temperature\":0.0,\"stream\":true,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"I am in Seattle, WA\\n\"},{\"role\":\"assistant\",\"content\":\"Got it! Let me know if you need any local insights or information related to Seattle!\\n\"},{\"role\":\"user\",\"content\":\"What is the current weather?\\n\"}],\"tools\":[{\"type\":\"function\",\"function\":{\"name\":\"get_location\",\"description\":\"The get_location tool will return the users city, state or province and country.\",\"parameters\":{}}},{\"type\":\"function\",\"function\":{\"name\":\"get_weather\",\"description\":\"The get_weather tool will return the current weather in a given locality.\",\"parameters\":{\"type\":\"object\",\"properties\":{\"city\":{\"type\":\"string\",\"description\":\"The city or town for which the current weather should be returned.\"},\"state\":{\"type\":\"string\",\"description\":\"The state or province for which the current weather should be returned. If this is not provided the largest or most prominent city with the given name, in the given country or in the worldi, will be assumed.\"},\"country\":{\"type\":\"string\",\"description\":\"The country for which the given weather should be returned. If this is not provided the largest or most prominent city with the given name will be returned.\"}},\"required\":[\"city\"]}}}]}"
         },
         "headers": {
           "User-Agent": [
-            "Faraday v2.12.0"
+            "Faraday v2.13.1"
           ],
           "Content-Type": [
             "application/json"
@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Tue, 21 Jan 2025 03:39:11 GMT"
+            "Fri, 06 Jun 2025 19:44:38 GMT"
           ],
           "content-type": [
             "text/event-stream"
@@ -41,6 +41,12 @@
           "cache-control": [
             "no-cache"
           ],
+          "x-zero-data-retention": [
+            "false"
+          ],
+          "x-request-id": [
+            "<X-REQUEST-ID>"
+          ],
           "vary": [
             "origin, access-control-request-method, access-control-request-headers"
           ],
@@ -52,6 +58,9 @@
           ],
           "cf-cache-status": [
             "DYNAMIC"
+          ],
+          "set-cookie": [
+            "<SET-COOKIE>"
           ],
           "strict-transport-security": [
             "max-age=31536000"
@@ -65,10 +74,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "data: {\"id\":\"3f0e725e-cd21-4d43-a2c1-130a22436127\",\"object\":\"chat.completion.chunk\",\"created\":1737430751,\"model\":\"grok-beta\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"I\",\"role\":\"assistant\"}}],\"usage\":{\"prompt_tokens\":376,\"completion_tokens\":1,\"total_tokens\":377,\"prompt_tokens_details\":{\"text_tokens\":376,\"audio_tokens\":0,\"image_tokens\":0,\"cached_tokens\":0}},\"system_fingerprint\":\"fp_18e99db1fc\"}\n\ndata: {\"id\":\"3f0e725e-cd21-4d43-a2c1-130a22436127\",\"object\":\"chat.completion.chunk\",\"created\":1737430751,\"model\":\"grok-beta\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\" am\",\"role\":\"assistant\"}}],\"usage\":{\"prompt_tokens\":376,\"completion_tokens\":2,\"total_tokens\":378,\"prompt_tokens_details\":{\"text_tokens\":376,\"audio_tokens\":0,\"image_tokens\":0,\"cached_tokens\":0}},\"system_fingerprint\":\"fp_18e99db1fc\"}\n\ndata: {\"id\":\"3f0e725e-cd21-4d43-a2c1-130a22436127\",\"object\":\"chat.completion.chunk\",\"created\":1737430751,\"model\":\"grok-beta\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\" retrieving\",\"role\":\"assistant\"}}],\"usage\":{\"prompt_tokens\":376,\"completion_tokens\":3,\"total_tokens\":379,\"prompt_tokens_details\":{\"text_tokens\":376,\"audio_tokens\":0,\"image_tokens\":0,\"cached_tokens\":0}},\"system_fingerprint\":\"fp_18e99db1fc\"}\n\ndata: {\"id\":\"3f0e725e-cd21-4d43-a2c1-130a22436127\",\"object\":\"chat.completion.chunk\",\"created\":1737430751,\"model\":\"grok-beta\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\" the\",\"role\":\"assistant\"}}],\"usage\":{\"prompt_tokens\":376,\"completion_tokens\":4,\"total_tokens\":380,\"prompt_tokens_details\":{\"text_tokens\":376,\"audio_tokens\":0,\"image_tokens\":0,\"cached_tokens\":0}},\"system_fingerprint\":\"fp_18e99db1fc\"}\n\ndata: {\"id\":\"3f0e725e-cd21-4d43-a2c1-130a22436127\",\"object\":\"chat.completion.chunk\",\"created\":1737430751,\"model\":\"grok-beta\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\" current\",\"role\":\"assistant\"}}],\"usage\":{\"prompt_tokens\":376,\"completion_tokens\":5,\"total_tokens\":381,\"prompt_tokens_details\":{\"text_tokens\":376,\"audio_tokens\":0,\"image_tokens\":0,\"cached_tokens\":0}},\"system_fingerprint\":\"fp_18e99db1fc\"}\n\ndata: {\"id\":\"3f0e725e-cd21-4d43-a2c1-130a22436127\",\"object\":\"chat.completion.chunk\",\"created\":1737430751,\"model\":\"grok-beta\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\" weather\",\"role\":\"assistant\"}}],\"usage\":{\"prompt_tokens\":376,\"completion_tokens\":6,\"total_tokens\":382,\"prompt_tokens_details\":{\"text_tokens\":376,\"audio_tokens\":0,\"image_tokens\":0,\"cached_tokens\":0}},\"system_fingerprint\":\"fp_18e99db1fc\"}\n\ndata: {\"id\":\"3f0e725e-cd21-4d43-a2c1-130a22436127\",\"object\":\"chat.completion.chunk\",\"created\":1737430751,\"model\":\"grok-beta\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\" for\",\"role\":\"assistant\"}}],\"usage\":{\"prompt_tokens\":376,\"completion_tokens\":7,\"total_tokens\":383,\"prompt_tokens_details\":{\"text_tokens\":376,\"audio_tokens\":0,\"image_tokens\":0,\"cached_tokens\":0}},\"system_fingerprint\":\"fp_18e99db1fc\"}\n\ndata: {\"id\":\"3f0e725e-cd21-4d43-a2c1-130a22436127\",\"object\":\"chat.completion.chunk\",\"created\":1737430751,\"model\":\"grok-beta\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\" Seattle\",\"role\":\"assistant\"}}],\"usage\":{\"prompt_tokens\":376,\"completion_tokens\":8,\"total_tokens\":384,\"prompt_tokens_details\":{\"text_tokens\":376,\"audio_tokens\":0,\"image_tokens\":0,\"cached_tokens\":0}},\"system_fingerprint\":\"fp_18e99db1fc\"}\n\ndata: {\"id\":\"3f0e725e-cd21-4d43-a2c1-130a22436127\",\"object\":\"chat.completion.chunk\",\"created\":1737430751,\"model\":\"grok-beta\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\",\",\"role\":\"assistant\"}}],\"usage\":{\"prompt_tokens\":376,\"completion_tokens\":9,\"total_tokens\":385,\"prompt_tokens_details\":{\"text_tokens\":376,\"audio_tokens\":0,\"image_tokens\":0,\"cached_tokens\":0}},\"system_fingerprint\":\"fp_18e99db1fc\"}\n\ndata: {\"id\":\"3f0e725e-cd21-4d43-a2c1-130a22436127\",\"object\":\"chat.completion.chunk\",\"created\":1737430751,\"model\":\"grok-beta\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\" WA\",\"role\":\"assistant\"}}],\"usage\":{\"prompt_tokens\":376,\"completion_tokens\":10,\"total_tokens\":386,\"prompt_tokens_details\":{\"text_tokens\":376,\"audio_tokens\":0,\"image_tokens\":0,\"cached_tokens\":0}},\"system_fingerprint\":\"fp_18e99db1fc\"}\n\ndata: {\"id\":\"3f0e725e-cd21-4d43-a2c1-130a22436127\",\"object\":\"chat.completion.chunk\",\"created\":1737430751,\"model\":\"grok-beta\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\".\",\"role\":\"assistant\"}}],\"usage\":{\"prompt_tokens\":376,\"completion_tokens\":11,\"total_tokens\":387,\"prompt_tokens_details\":{\"text_tokens\":376,\"audio_tokens\":0,\"image_tokens\":0,\"cached_tokens\":0}},\"system_fingerprint\":\"fp_18e99db1fc\"}\n\ndata: {\"id\":\"3f0e725e-cd21-4d43-a2c1-130a22436127\",\"object\":\"chat.completion.chunk\",\"created\":1737430752,\"model\":\"grok-beta\",\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"tool_calls\":[{\"id\":\"call_27797285\",\"function\":{\"name\":\"get_weather\",\"arguments\":\"{\\\"city\\\":\\\"Seattle\\\",\\\"state\\\":\\\"WA\\\"}\"},\"index\":0,\"type\":\"function\"}]},\"finish_reason\":\"tool_calls\"}],\"usage\":{\"prompt_tokens\":376,\"completion_tokens\":12,\"total_tokens\":388,\"prompt_tokens_details\":{\"text_tokens\":376,\"audio_tokens\":0,\"image_tokens\":0,\"cached_tokens\":0}},\"system_fingerprint\":\"fp_18e99db1fc\"}\n\ndata: [DONE]\n\n"
+          "string": "data: {\"id\":\"9fe33692-5e11-49eb-8780-4c9a0feb1820\",\"object\":\"chat.completion.chunk\",\"created\":1749239079,\"model\":\"grok-3\",\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"tool_calls\":[{\"id\":\"call_95287855\",\"function\":{\"name\":\"get_weather\",\"arguments\":\"{\\\"city\\\":\\\"Seattle\\\",\\\"state\\\":\\\"WA\\\",\\\"country\\\":\\\"USA\\\"}\"},\"index\":0,\"type\":\"function\"}]}}],\"system_fingerprint\":\"fp_d8d6e9f7d0\"}\n\ndata: {\"id\":\"9fe33692-5e11-49eb-8780-4c9a0feb1820\",\"object\":\"chat.completion.chunk\",\"created\":1749239079,\"model\":\"grok-3\",\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\"},\"finish_reason\":\"tool_calls\"}],\"system_fingerprint\":\"fp_d8d6e9f7d0\"}\n\ndata: [DONE]\n\n"
         }
       },
-      "recorded_at": "Tue, 21 Jan 2025 03:39:12 GMT"
+      "recorded_at": "Fri, 06 Jun 2025 19:44:38 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

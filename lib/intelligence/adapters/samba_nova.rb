@@ -42,12 +42,10 @@ module Intelligence
         }
 
         parsed_body = JSON.parse( response.body, symbolize_names: true ) rescue nil 
-        if parsed_body && parsed_body.respond_to?( :include? ) && parsed_body.include?( :error )
-          result = {
-            error_type: error_type.to_s,
-            error: parsed_body[ :error ][ :code ] || error_type.to_s,
-            error_description: parsed_body[ :error ][ :message ] || error_description
-          }
+        if parsed_body && 
+           parsed_body.respond_to?( :include? ) && parsed_body.include?( :error ) && 
+           parsed_body[ :error ].is_a?( String )
+          result[ :error_description ] = parsed_body[ :error ]
         elsif response.headers[ 'content-type' ].start_with?( 'text/plain' ) &&
               response.body && response.body.length > 0
           result[ :error_description ] = response.body

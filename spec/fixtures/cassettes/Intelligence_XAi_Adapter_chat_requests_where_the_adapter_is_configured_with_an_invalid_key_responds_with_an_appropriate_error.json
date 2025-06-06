@@ -10,7 +10,7 @@
         },
         "headers": {
           "User-Agent": [
-            "Faraday v2.12.0"
+            "Faraday v2.13.1"
           ],
           "Content-Type": [
             "application/json"
@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Tue, 21 Jan 2025 03:38:53 GMT"
+            "Fri, 06 Jun 2025 19:44:21 GMT"
           ],
           "content-type": [
             "application/json"
@@ -50,6 +50,9 @@
           "cf-cache-status": [
             "DYNAMIC"
           ],
+          "set-cookie": [
+            "<SET-COOKIE>"
+          ],
           "strict-transport-security": [
             "max-age=31536000"
           ],
@@ -65,7 +68,7 @@
           "string": "{\"code\":\"Client specified an invalid argument\",\"error\":\"Incorrect API key provided: th***id. You can obtain an API key from https://console.x.ai.\"}"
         }
       },
-      "recorded_at": "Tue, 21 Jan 2025 03:38:53 GMT"
+      "recorded_at": "Fri, 06 Jun 2025 19:44:20 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

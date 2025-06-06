@@ -4,11 +4,6 @@ RSpec.describe "#{Intelligence::Adapter[ :samba_nova ]} chat requests", :samba_n
 
   include_context 'vcr'
 
-  # this is needed for samba nova test to avoid the rate limit
-  after( :each ) do | example |
-    cassette = VCR.current_cassette
-    sleep 5 if cassette && cassette.new_recorded_interactions.any? 
-  end
 
   before do
     raise "A SAMBANOVA_API_KEY must be defined in the environment." unless ENV[ 'SAMBANOVA_API_KEY' ]
@@ -18,7 +13,7 @@ RSpec.describe "#{Intelligence::Adapter[ :samba_nova ]} chat requests", :samba_n
     Intelligence::Adapter[ :samba_nova ].build! do   
       key   ENV[ 'SAMBANOVA_API_KEY' ]
       chat_options do
-        model                 'Meta-Llama-3.1-70B-Instruct'
+        model                 'Meta-Llama-3.3-70B-Instruct'
         max_tokens            24 
         temperature           0
       end
@@ -29,7 +24,7 @@ RSpec.describe "#{Intelligence::Adapter[ :samba_nova ]} chat requests", :samba_n
     Intelligence::Adapter[ :samba_nova ].build! do   
       key                     ENV[ 'SAMBANOVA_API_KEY' ]
       chat_options do
-        model                 'Meta-Llama-3.1-70B-Instruct'
+        model                 'Meta-Llama-3.3-70B-Instruct'
         max_tokens            24
         temperature           0
         stop                  'five'
@@ -41,7 +36,7 @@ RSpec.describe "#{Intelligence::Adapter[ :samba_nova ]} chat requests", :samba_n
     Intelligence::Adapter[ :samba_nova ].build! do 
       key                     'this-key-is-not-valid'  
       chat_options do
-        model                 'Meta-Llama-3.1-70B-Instruct'
+        model                 'Meta-Llama-3.3-70B-Instruct'
         max_tokens            16
         temperature           0
       end
@@ -65,5 +60,5 @@ RSpec.describe "#{Intelligence::Adapter[ :samba_nova ]} chat requests", :samba_n
   include_examples 'chat requests without alternating roles'
 
   include_examples 'chat requests with invalid key'
-  include_examples 'chat requests with invalid model', error_type: 'invalid_request_error'
+  include_examples 'chat requests with invalid model'
 end

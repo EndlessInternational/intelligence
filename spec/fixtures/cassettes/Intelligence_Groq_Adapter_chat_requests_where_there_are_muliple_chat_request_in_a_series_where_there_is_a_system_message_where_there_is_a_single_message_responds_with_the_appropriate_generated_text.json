@@ -6,11 +6,11 @@
         "uri": "https://api.groq.com/openai/v1/chat/completions",
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"model\":\"llama-3.1-70b-versatile\",\"max_tokens\":16,\"temperature\":0.0,\"messages\":[{\"role\":\"user\",\"content\":\"respond only with the word 'hello'\\n\"}]}"
+          "string": "{\"model\":\"mistral-saba-24b\",\"max_tokens\":16,\"temperature\":0.0,\"messages\":[{\"role\":\"user\",\"content\":\"respond only with the word 'hello'\\n\"}]}"
         },
         "headers": {
           "User-Agent": [
-            "Faraday v2.12.0"
+            "Faraday v2.13.1"
           ],
           "Content-Type": [
             "application/json"
@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Mon, 20 Jan 2025 22:29:04 GMT"
+            "Fri, 06 Jun 2025 19:50:36 GMT"
           ],
           "content-type": [
             "application/json"
@@ -38,17 +38,35 @@
           "connection": [
             "keep-alive"
           ],
-          "cf-ray": [
-            "<CF-RAY>"
-          ],
-          "cf-cache-status": [
-            "DYNAMIC"
-          ],
           "cache-control": [
             "private, max-age=0, no-store, no-cache, must-revalidate"
           ],
           "vary": [
-            "Origin, Accept-Encoding"
+            "Origin"
+          ],
+          "x-groq-region": [
+            "us-west-1"
+          ],
+          "x-ratelimit-limit-requests": [
+            "1000"
+          ],
+          "x-ratelimit-limit-tokens": [
+            "6000"
+          ],
+          "x-ratelimit-remaining-requests": [
+            "991"
+          ],
+          "x-ratelimit-remaining-tokens": [
+            "5942"
+          ],
+          "x-ratelimit-reset-requests": [
+            "12m57.283999999s"
+          ],
+          "x-ratelimit-reset-tokens": [
+            "580ms"
+          ],
+          "x-request-id": [
+            "<X-REQUEST-ID>"
           ],
           "via": [
             "1.1 google"
@@ -56,29 +74,8 @@
           "alt-svc": [
             "h3=\":443\"; ma=86400"
           ],
-          "x-groq-region": [
-            "us-west-1"
-          ],
-          "x-ratelimit-limit-requests": [
-            "14400"
-          ],
-          "x-ratelimit-limit-tokens": [
-            "6000"
-          ],
-          "x-ratelimit-remaining-requests": [
-            "14391"
-          ],
-          "x-ratelimit-remaining-tokens": [
-            "5670"
-          ],
-          "x-ratelimit-reset-requests": [
-            "53.872999999s"
-          ],
-          "x-ratelimit-reset-tokens": [
-            "3.295s"
-          ],
-          "x-request-id": [
-            "<X-REQUEST-ID>"
+          "cf-cache-status": [
+            "DYNAMIC"
           ],
           "set-cookie": [
             "<SET-COOKIE>"
@@ -86,16 +83,19 @@
           "server": [
             "cloudflare"
           ],
+          "cf-ray": [
+            "<CF-RAY>"
+          ],
           "content-encoding": [
             "gzip"
           ]
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\"id\":\"chatcmpl-b9223037-2c00-4955-a05e-6c93bd188ee0\",\"object\":\"chat.completion\",\"created\":1737412144,\"model\":\"llama-3.1-70b-versatile\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"hello\"},\"logprobs\":null,\"finish_reason\":\"stop\"}],\"usage\":{\"queue_time\":0.017245666,\"prompt_tokens\":43,\"prompt_time\":0.007925544,\"completion_tokens\":2,\"completion_time\":0.007272727,\"total_tokens\":45,\"total_time\":0.015198271},\"system_fingerprint\":\"fp_4e32347616\",\"x_groq\":{\"id\":\"req_01jj2xatvxens85mbj079y3wv5\"}}\n"
+          "string": "{\"id\":\"chatcmpl-3078b64f-f525-4203-871a-7851802ef432\",\"object\":\"chat.completion\",\"created\":1749239436,\"model\":\"mistral-saba-24b\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"Hello\"},\"logprobs\":null,\"finish_reason\":\"stop\"}],\"usage\":{\"queue_time\":0.218938375,\"prompt_tokens\":12,\"prompt_time\":0.002067964,\"completion_tokens\":2,\"completion_time\":0.006060606,\"total_tokens\":14,\"total_time\":0.00812857},\"usage_breakdown\":{\"models\":null},\"system_fingerprint\":\"fp_07e680a590\",\"x_groq\":{\"id\":\"req_01jx3cq5bzfj8td33ya274134p\"}}\n"
         }
       },
-      "recorded_at": "Mon, 20 Jan 2025 22:29:03 GMT"
+      "recorded_at": "Fri, 06 Jun 2025 19:50:36 GMT"
     },
     {
       "request": {
@@ -103,11 +103,11 @@
         "uri": "https://api.groq.com/openai/v1/chat/completions",
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"model\":\"llama-3.1-70b-versatile\",\"max_tokens\":16,\"temperature\":0.0,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"respond only with the word 'hello'\\n\"}]}"
+          "string": "{\"model\":\"mistral-saba-24b\",\"max_tokens\":16,\"temperature\":0.0,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"respond only with the word 'hello'\\n\"}]}"
         },
         "headers": {
           "User-Agent": [
-            "Faraday v2.12.0"
+            "Faraday v2.13.1"
           ],
           "Content-Type": [
             "application/json"
@@ -124,7 +124,7 @@
         },
         "headers": {
           "date": [
-            "Mon, 20 Jan 2025 22:29:04 GMT"
+            "Fri, 06 Jun 2025 19:50:37 GMT"
           ],
           "content-type": [
             "application/json"
@@ -135,17 +135,35 @@
           "connection": [
             "keep-alive"
           ],
-          "cf-ray": [
-            "<CF-RAY>"
-          ],
-          "cf-cache-status": [
-            "DYNAMIC"
-          ],
           "cache-control": [
             "private, max-age=0, no-store, no-cache, must-revalidate"
           ],
           "vary": [
-            "Origin, Accept-Encoding"
+            "Origin"
+          ],
+          "x-groq-region": [
+            "us-west-1"
+          ],
+          "x-ratelimit-limit-requests": [
+            "1000"
+          ],
+          "x-ratelimit-limit-tokens": [
+            "6000"
+          ],
+          "x-ratelimit-remaining-requests": [
+            "990"
+          ],
+          "x-ratelimit-remaining-tokens": [
+            "5897"
+          ],
+          "x-ratelimit-reset-requests": [
+            "14m23.697999999s"
+          ],
+          "x-ratelimit-reset-tokens": [
+            "1.023s"
+          ],
+          "x-request-id": [
+            "<X-REQUEST-ID>"
           ],
           "via": [
             "1.1 google"
@@ -153,29 +171,8 @@
           "alt-svc": [
             "h3=\":443\"; ma=86400"
           ],
-          "x-groq-region": [
-            "us-west-1"
-          ],
-          "x-ratelimit-limit-requests": [
-            "14400"
-          ],
-          "x-ratelimit-limit-tokens": [
-            "6000"
-          ],
-          "x-ratelimit-remaining-requests": [
-            "14390"
-          ],
-          "x-ratelimit-remaining-tokens": [
-            "5575"
-          ],
-          "x-ratelimit-reset-requests": [
-            "59.897s"
-          ],
-          "x-ratelimit-reset-tokens": [
-            "4.246s"
-          ],
-          "x-request-id": [
-            "<X-REQUEST-ID>"
+          "cf-cache-status": [
+            "DYNAMIC"
           ],
           "set-cookie": [
             "<SET-COOKIE>"
@@ -183,16 +180,19 @@
           "server": [
             "cloudflare"
           ],
+          "cf-ray": [
+            "<CF-RAY>"
+          ],
           "content-encoding": [
             "gzip"
           ]
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\"id\":\"chatcmpl-008b73bd-d551-4378-af10-0459ac3f8aa2\",\"object\":\"chat.completion\",\"created\":1737412144,\"model\":\"llama-3.1-70b-versatile\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"hello\"},\"logprobs\":null,\"finish_reason\":\"stop\"}],\"usage\":{\"queue_time\":0.017688809,\"prompt_tokens\":78,\"prompt_time\":0.017306608,\"completion_tokens\":2,\"completion_time\":0.009787383,\"total_tokens\":80,\"total_time\":0.027093991},\"system_fingerprint\":\"fp_c0cfa69934\",\"x_groq\":{\"id\":\"req_01jj2xatz6fjtv80em3n1sgthm\"}}\n"
+          "string": "{\"id\":\"chatcmpl-78554dc7-1c54-46f5-b942-9af725054ead\",\"object\":\"chat.completion\",\"created\":1749239437,\"model\":\"mistral-saba-24b\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"hello\"},\"logprobs\":null,\"finish_reason\":\"stop\"}],\"usage\":{\"queue_time\":0.218880295,\"prompt_tokens\":56,\"prompt_time\":0.003579499,\"completion_tokens\":2,\"completion_time\":0.006060606,\"total_tokens\":58,\"total_time\":0.009640105},\"usage_breakdown\":{\"models\":null},\"system_fingerprint\":\"fp_07e680a590\",\"x_groq\":{\"id\":\"req_01jx3cq5nbfjc9gzf9p88v7jja\"}}\n"
         }
       },
-      "recorded_at": "Mon, 20 Jan 2025 22:29:04 GMT"
+      "recorded_at": "Fri, 06 Jun 2025 19:50:37 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

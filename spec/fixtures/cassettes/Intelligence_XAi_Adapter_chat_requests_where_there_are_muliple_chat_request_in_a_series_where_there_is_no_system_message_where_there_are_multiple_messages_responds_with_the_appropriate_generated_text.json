@@ -6,11 +6,11 @@
         "uri": "https://api.x.ai/v1/chat/completions",
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"model\":\"grok-beta\",\"max_tokens\":128,\"temperature\":0.0,\"messages\":[{\"role\":\"user\",\"content\":\"respond only with the word 'hello'\\n\"}]}"
+          "string": "{\"model\":\"grok-3\",\"max_tokens\":128,\"temperature\":0.0,\"messages\":[{\"role\":\"user\",\"content\":\"respond only with the word 'hello'\\n\"}]}"
         },
         "headers": {
           "User-Agent": [
-            "Faraday v2.12.0"
+            "Faraday v2.13.1"
           ],
           "Content-Type": [
             "application/json"
@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Tue, 21 Jan 2025 03:38:26 GMT"
+            "Fri, 06 Jun 2025 19:43:49 GMT"
           ],
           "content-type": [
             "application/json"
@@ -37,6 +37,12 @@
           ],
           "connection": [
             "keep-alive"
+          ],
+          "x-zero-data-retention": [
+            "false"
+          ],
+          "x-request-id": [
+            "<X-REQUEST-ID>"
           ],
           "vary": [
             "origin, access-control-request-method, access-control-request-headers"
@@ -49,6 +55,9 @@
           ],
           "cf-cache-status": [
             "DYNAMIC"
+          ],
+          "set-cookie": [
+            "<SET-COOKIE>"
           ],
           "strict-transport-security": [
             "max-age=31536000"
@@ -65,10 +74,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\"id\":\"9d51b8db-c771-4b63-a6b2-59e709dc651d\",\"object\":\"chat.completion\",\"created\":1737430705,\"model\":\"grok-beta\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"hello\",\"refusal\":null},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":14,\"completion_tokens\":2,\"total_tokens\":16,\"prompt_tokens_details\":{\"text_tokens\":14,\"audio_tokens\":0,\"image_tokens\":0,\"cached_tokens\":0}},\"system_fingerprint\":\"fp_18e99db1fc\"}"
+          "string": "{\"id\":\"1c3b7d14-aa8d-4584-8abf-6989e12fcf71\",\"object\":\"chat.completion\",\"created\":1749239029,\"model\":\"grok-3\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"hello\",\"refusal\":null},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":14,\"completion_tokens\":1,\"total_tokens\":15,\"prompt_tokens_details\":{\"text_tokens\":14,\"audio_tokens\":0,\"image_tokens\":0,\"cached_tokens\":2},\"completion_tokens_details\":{\"reasoning_tokens\":0,\"audio_tokens\":0,\"accepted_prediction_tokens\":0,\"rejected_prediction_tokens\":0},\"num_sources_used\":0},\"system_fingerprint\":\"fp_d8d6e9f7d0\"}"
         }
       },
-      "recorded_at": "Tue, 21 Jan 2025 03:38:26 GMT"
+      "recorded_at": "Fri, 06 Jun 2025 19:43:49 GMT"
     },
     {
       "request": {
@@ -76,11 +85,11 @@
         "uri": "https://api.x.ai/v1/chat/completions",
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"model\":\"grok-beta\",\"max_tokens\":128,\"temperature\":0.0,\"messages\":[{\"role\":\"user\",\"content\":\"the secret word is 'blue'\\n\"},{\"role\":\"assistant\",\"content\":\"ok\\n\"},{\"role\":\"user\",\"content\":\"what is the secret word?\\nrespond with the word only\\n\"}]}"
+          "string": "{\"model\":\"grok-3\",\"max_tokens\":128,\"temperature\":0.0,\"messages\":[{\"role\":\"user\",\"content\":\"the secret word is 'blue'\\n\"},{\"role\":\"assistant\",\"content\":\"ok\\n\"},{\"role\":\"user\",\"content\":\"what is the secret word?\\nrespond with the word only\\n\"}]}"
         },
         "headers": {
           "User-Agent": [
-            "Faraday v2.12.0"
+            "Faraday v2.13.1"
           ],
           "Content-Type": [
             "application/json"
@@ -97,7 +106,7 @@
         },
         "headers": {
           "date": [
-            "Tue, 21 Jan 2025 03:38:26 GMT"
+            "Fri, 06 Jun 2025 19:43:50 GMT"
           ],
           "content-type": [
             "application/json"
@@ -107,6 +116,12 @@
           ],
           "connection": [
             "keep-alive"
+          ],
+          "x-zero-data-retention": [
+            "false"
+          ],
+          "x-request-id": [
+            "<X-REQUEST-ID>"
           ],
           "vary": [
             "origin, access-control-request-method, access-control-request-headers"
@@ -119,6 +134,9 @@
           ],
           "cf-cache-status": [
             "DYNAMIC"
+          ],
+          "set-cookie": [
+            "<SET-COOKIE>"
           ],
           "strict-transport-security": [
             "max-age=31536000"
@@ -135,10 +153,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\"id\":\"547fc85e-ae04-4e28-a9c6-0972943d9597\",\"object\":\"chat.completion\",\"created\":1737430706,\"model\":\"grok-beta\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"blue\",\"refusal\":null},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":35,\"completion_tokens\":2,\"total_tokens\":37,\"prompt_tokens_details\":{\"text_tokens\":35,\"audio_tokens\":0,\"image_tokens\":0,\"cached_tokens\":0}},\"system_fingerprint\":\"fp_18e99db1fc\"}"
+          "string": "{\"id\":\"70defbf1-db7b-4526-a7fb-619cd965085b\",\"object\":\"chat.completion\",\"created\":1749239029,\"model\":\"grok-3\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"blue\",\"refusal\":null},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":35,\"completion_tokens\":1,\"total_tokens\":36,\"prompt_tokens_details\":{\"text_tokens\":35,\"audio_tokens\":0,\"image_tokens\":0,\"cached_tokens\":2},\"completion_tokens_details\":{\"reasoning_tokens\":0,\"audio_tokens\":0,\"accepted_prediction_tokens\":0,\"rejected_prediction_tokens\":0},\"num_sources_used\":0},\"system_fingerprint\":\"fp_d8d6e9f7d0\"}"
         }
       },
-      "recorded_at": "Tue, 21 Jan 2025 03:38:26 GMT"
+      "recorded_at": "Fri, 06 Jun 2025 19:43:50 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

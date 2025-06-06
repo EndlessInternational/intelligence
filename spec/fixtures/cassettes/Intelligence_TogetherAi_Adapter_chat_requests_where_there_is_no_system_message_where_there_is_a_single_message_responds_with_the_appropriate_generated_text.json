@@ -6,11 +6,11 @@
         "uri": "https://api.together.xyz/v1/chat/completions",
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"model\":\"meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo\",\"max_tokens\":128.0,\"temperature\":0.0,\"messages\":[{\"role\":\"user\",\"content\":\"respond only with the word 'hello'\\n\"}]}"
+          "string": "{\"model\":\"meta-llama/Llama-3.3-70B-Instruct-Turbo\",\"max_tokens\":128.0,\"temperature\":0.0,\"messages\":[{\"role\":\"user\",\"content\":\"respond only with the word 'hello'\\n\"}]}"
         },
         "headers": {
           "User-Agent": [
-            "Faraday v2.12.0"
+            "Faraday v2.13.1"
           ],
           "Content-Type": [
             "application/json"
@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Tue, 21 Jan 2025 01:55:14 GMT"
+            "Fri, 06 Jun 2025 19:37:06 GMT"
           ],
           "content-type": [
             "application/json; charset=utf-8"
@@ -51,22 +51,22 @@
             "*"
           ],
           "etag": [
-            "W/\"1f7-sfeU2Mu4KwViVF6xpK/IGb96vvo\""
+            "W/\"21a-W9qfMCWv0n8FRLGGLJ1cXmZ6WGo\""
           ],
           "strict-transport-security": [
             "max-age=15552000; includeSubDomains"
           ],
           "x-amzn-trace-id": [
-            "716ec9d4-8a03-4066-ae0b-5c5295c4e3d6-noamzn"
+            "0ff3c573-39a8-49ec-a79a-f2b37263172f-noamzn"
           ],
           "x-api-call-end": [
-            "2025-01-21T01:55:14.861Z"
+            "2025-06-06T19:37:06.277Z"
           ],
           "x-api-call-start": [
-            "2025-01-21T01:55:14.736Z"
+            "2025-06-06T19:37:06.000Z"
           ],
           "x-api-received": [
-            "2025-01-21T01:55:14.592Z"
+            "2025-06-06T19:37:05.970Z"
           ],
           "x-inference-version": [
             "v2"
@@ -75,19 +75,22 @@
             "false"
           ],
           "x-ratelimit-limit": [
-            "30"
+            "10"
           ],
           "x-ratelimit-limit-tokens": [
             "3000"
           ],
           "x-ratelimit-remaining": [
-            "59"
+            "19"
           ],
           "x-ratelimit-remaining-tokens": [
             "3000"
           ],
           "x-ratelimit-reset": [
             "2"
+          ],
+          "x-request-id": [
+            "<X-REQUEST-ID>"
           ],
           "vary": [
             "Accept-Encoding"
@@ -104,10 +107,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "{\n  \"id\": \"9053ae4fcecf0881\",\n  \"object\": \"chat.completion\",\n  \"created\": 1737424514,\n  \"model\": \"meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo\",\n  \"prompt\": [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"eos\",\n      \"seed\": 3058564926585005600,\n      \"logprobs\": null,\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": \"hello\",\n        \"tool_calls\": []\n      }\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 43,\n    \"completion_tokens\": 2,\n    \"total_tokens\": 45\n  }\n}"
+          "string": "{\n  \"id\": \"nx5EBwf-4Yz4kd-94ba5cc3dffaa3bf\",\n  \"object\": \"chat.completion\",\n  \"created\": 1749238625,\n  \"model\": \"meta-llama/Llama-3.3-70B-Instruct-Turbo\",\n  \"prompt\": [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"stop\",\n      \"seed\": 7276690552380902000,\n      \"logprobs\": null,\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": \"hello\",\n        \"tool_calls\": []\n      }\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 43,\n    \"completion_tokens\": 2,\n    \"total_tokens\": 45,\n    \"cached_tokens\": 0\n  }\n}"
         }
       },
-      "recorded_at": "Tue, 21 Jan 2025 01:55:14 GMT"
+      "recorded_at": "Fri, 06 Jun 2025 19:37:06 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

@@ -4,12 +4,6 @@ RSpec.describe "#{Intelligence::Adapter[ :samba_nova ]} stream requests", :samba
 
   include_context 'vcr'
 
-  # this is needed for samba nova test to avoid the rate limit
-  after( :each ) do | example |
-    cassette = VCR.current_cassette
-    sleep 10 if cassette && cassette.new_recorded_interactions.any? 
-  end
-
   before do 
     raise "An SAMBANOVA_API_KEY must be defined in the environment." unless ENV[ 'SAMBANOVA_API_KEY' ]
   end
@@ -18,7 +12,7 @@ RSpec.describe "#{Intelligence::Adapter[ :samba_nova ]} stream requests", :samba
     Intelligence::Adapter[ :samba_nova ].build! do   
       key                     ENV[ 'SAMBANOVA_API_KEY' ]
       chat_options do
-        model                 'Meta-Llama-3.1-70B-Instruct'
+        model                 'Meta-Llama-3.3-70B-Instruct'
         max_tokens            16
         temperature           0
 
@@ -31,7 +25,7 @@ RSpec.describe "#{Intelligence::Adapter[ :samba_nova ]} stream requests", :samba
     Intelligence::Adapter[ :samba_nova ].build! do   
       key   ENV[ 'SAMBANOVA_API_KEY' ]
       chat_options do
-        model                 'Meta-Llama-3.1-70B-Instruct'
+        model                 'Meta-Llama-3.3-70B-Instruct'
         max_tokens            16
         temperature           0
         stop                  'five'

@@ -6,11 +6,11 @@
         "uri": "https://api.together.xyz/v1/chat/completions",
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"model\":\"meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo\",\"max_tokens\":128.0,\"temperature\":0.0,\"stream\":true,\"messages\":[{\"role\":\"user\",\"content\":\"respond only with the word 'hello'\\n\"}]}"
+          "string": "{\"model\":\"meta-llama/Llama-3.3-70B-Instruct-Turbo\",\"max_tokens\":128.0,\"temperature\":0.0,\"stream\":true,\"messages\":[{\"role\":\"user\",\"content\":\"respond only with the word 'hello'\\n\"}]}"
         },
         "headers": {
           "User-Agent": [
-            "Faraday v2.12.0"
+            "Faraday v2.13.1"
           ],
           "Content-Type": [
             "application/json"
@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Tue, 21 Jan 2025 01:55:25 GMT"
+            "Fri, 06 Jun 2025 19:37:27 GMT"
           ],
           "content-type": [
             "text/event-stream;charset=utf-8"
@@ -57,13 +57,13 @@
             "max-age=15552000; includeSubDomains"
           ],
           "x-amzn-trace-id": [
-            "28025428-7d38-434e-ae03-5747d0c38ebc-noamzn"
+            "f5da52a6-d6f0-4ebc-a5ed-a3dc6566d86d-noamzn"
           ],
           "x-api-call-start": [
-            "2025-01-21T01:55:25.157Z"
+            "2025-06-06T19:37:28.009Z"
           ],
           "x-api-received": [
-            "2025-01-21T01:55:25.148Z"
+            "2025-06-06T19:37:27.999Z"
           ],
           "x-inference-version": [
             "v2"
@@ -72,19 +72,22 @@
             "false"
           ],
           "x-ratelimit-limit": [
-            "30"
+            "10"
           ],
           "x-ratelimit-limit-tokens": [
             "3000"
           ],
           "x-ratelimit-remaining": [
-            "58"
+            "18"
           ],
           "x-ratelimit-remaining-tokens": [
-            "3000"
+            "2381"
           ],
           "x-ratelimit-reset": [
             "1"
+          ],
+          "x-request-id": [
+            "<X-REQUEST-ID>"
           ],
           "vary": [
             "Accept-Encoding"
@@ -98,10 +101,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "data: {\"id\":\"9053ae91c9887577\",\"object\":\"chat.completion.chunk\",\"created\":1737424525,\"choices\":[{\"index\":0,\"text\":\"hello\",\"logprobs\":null,\"finish_reason\":null,\"seed\":null,\"delta\":{\"token_id\":15339,\"role\":\"assistant\",\"content\":\"hello\",\"tool_calls\":null}}],\"model\":\"meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo\",\"usage\":null}\n\ndata: {\"id\":\"9053ae91c9887577\",\"object\":\"chat.completion.chunk\",\"created\":1737424525,\"choices\":[{\"index\":0,\"text\":\"\",\"logprobs\":null,\"finish_reason\":\"eos\",\"seed\":16039470868862816000,\"delta\":{\"token_id\":128009,\"role\":\"assistant\",\"content\":\"\",\"tool_calls\":null}}],\"model\":\"meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo\",\"usage\":{\"prompt_tokens\":43,\"completion_tokens\":2,\"total_tokens\":45}}\n\ndata: [DONE]\n\n"
+          "string": "data: {\"id\":\"nx5EJVU-3NKUce-94ba5d498bd4ba36\",\"object\":\"chat.completion.chunk\",\"created\":1749238647,\"choices\":[{\"index\":0,\"text\":\"hello\",\"logprobs\":null,\"finish_reason\":null,\"seed\":null,\"delta\":{\"token_id\":15339,\"role\":\"assistant\",\"content\":\"hello\",\"tool_calls\":null}}],\"model\":\"meta-llama/Llama-3.3-70B-Instruct-Turbo\",\"usage\":null}\n\ndata: {\"id\":\"nx5EJVU-3NKUce-94ba5d498bd4ba36\",\"object\":\"chat.completion.chunk\",\"created\":1749238647,\"choices\":[{\"index\":0,\"text\":\"\",\"logprobs\":null,\"finish_reason\":\"stop\",\"seed\":658494118846049300,\"delta\":{\"token_id\":128009,\"role\":\"assistant\",\"content\":\"\",\"tool_calls\":null}}],\"model\":\"meta-llama/Llama-3.3-70B-Instruct-Turbo\",\"usage\":{\"prompt_tokens\":43,\"completion_tokens\":2,\"total_tokens\":45,\"cached_tokens\":0}}\n\ndata: [DONE]\n\n"
         }
       },
-      "recorded_at": "Tue, 21 Jan 2025 01:55:25 GMT"
+      "recorded_at": "Fri, 06 Jun 2025 19:37:27 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

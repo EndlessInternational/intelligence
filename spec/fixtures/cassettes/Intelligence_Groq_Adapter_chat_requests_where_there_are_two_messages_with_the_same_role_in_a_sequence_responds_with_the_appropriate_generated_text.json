@@ -6,11 +6,11 @@
         "uri": "https://api.groq.com/openai/v1/chat/completions",
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"model\":\"llama-3.1-70b-versatile\",\"max_tokens\":16,\"temperature\":0.0,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"the secret word is 'blue'\\n\"},{\"role\":\"assistant\",\"content\":\"ok\\n\"},{\"role\":\"user\",\"content\":\"the secret word has been changed to 'red'!\\n\"},{\"role\":\"user\",\"content\":\"what is the secret word?\\n\"}]}"
+          "string": "{\"model\":\"mistral-saba-24b\",\"max_tokens\":16,\"temperature\":0.0,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"the secret word is 'blue'\\n\"},{\"role\":\"assistant\",\"content\":\"ok\\n\"},{\"role\":\"user\",\"content\":\"the secret word has been changed to 'red'!\\n\"},{\"role\":\"user\",\"content\":\"what is the secret word?\\n\"}]}"
         },
         "headers": {
           "User-Agent": [
-            "Faraday v2.12.0"
+            "Faraday v2.13.1"
           ],
           "Content-Type": [
             "application/json"
@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Mon, 20 Jan 2025 22:29:12 GMT"
+            "Fri, 06 Jun 2025 19:50:39 GMT"
           ],
           "content-type": [
             "application/json"
@@ -38,17 +38,35 @@
           "connection": [
             "keep-alive"
           ],
-          "cf-ray": [
-            "<CF-RAY>"
-          ],
-          "cf-cache-status": [
-            "DYNAMIC"
-          ],
           "cache-control": [
             "private, max-age=0, no-store, no-cache, must-revalidate"
           ],
           "vary": [
-            "Origin, Accept-Encoding"
+            "Origin"
+          ],
+          "x-groq-region": [
+            "us-west-1"
+          ],
+          "x-ratelimit-limit-requests": [
+            "1000"
+          ],
+          "x-ratelimit-limit-tokens": [
+            "6000"
+          ],
+          "x-ratelimit-remaining-requests": [
+            "983"
+          ],
+          "x-ratelimit-remaining-tokens": [
+            "5583"
+          ],
+          "x-ratelimit-reset-requests": [
+            "24m28.398999999s"
+          ],
+          "x-ratelimit-reset-tokens": [
+            "4.17s"
+          ],
+          "x-request-id": [
+            "<X-REQUEST-ID>"
           ],
           "via": [
             "1.1 google"
@@ -56,29 +74,8 @@
           "alt-svc": [
             "h3=\":443\"; ma=86400"
           ],
-          "x-groq-region": [
-            "us-west-1"
-          ],
-          "x-ratelimit-limit-requests": [
-            "14400"
-          ],
-          "x-ratelimit-limit-tokens": [
-            "6000"
-          ],
-          "x-ratelimit-remaining-requests": [
-            "14383"
-          ],
-          "x-ratelimit-remaining-tokens": [
-            "5520"
-          ],
-          "x-ratelimit-reset-requests": [
-            "1m40.157999999s"
-          ],
-          "x-ratelimit-reset-tokens": [
-            "4.791s"
-          ],
-          "x-request-id": [
-            "<X-REQUEST-ID>"
+          "cf-cache-status": [
+            "DYNAMIC"
           ],
           "set-cookie": [
             "<SET-COOKIE>"
@@ -86,16 +83,19 @@
           "server": [
             "cloudflare"
           ],
+          "cf-ray": [
+            "<CF-RAY>"
+          ],
           "content-encoding": [
             "gzip"
           ]
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\"id\":\"chatcmpl-9184cee7-1f25-4573-80b1-54ed46f6d575\",\"object\":\"chat.completion\",\"created\":1737412152,\"model\":\"llama-3.1-70b-versatile\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"red\"},\"logprobs\":null,\"finish_reason\":\"stop\"}],\"usage\":{\"queue_time\":1.33553443,\"prompt_tokens\":111,\"prompt_time\":0.015908162,\"completion_tokens\":2,\"completion_time\":0.007272727,\"total_tokens\":113,\"total_time\":0.023180889},\"system_fingerprint\":\"fp_76dc6cf67d\",\"x_groq\":{\"id\":\"req_01jj2xb1kvf0ft4jz7r5p4hptz\"}}\n"
+          "string": "{\"id\":\"chatcmpl-6e68c8b0-94ca-41ff-a145-601c7d926678\",\"object\":\"chat.completion\",\"created\":1749239439,\"model\":\"mistral-saba-24b\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"red\"},\"logprobs\":null,\"finish_reason\":\"stop\"}],\"usage\":{\"queue_time\":0.220405804,\"prompt_tokens\":80,\"prompt_time\":0.004269414,\"completion_tokens\":2,\"completion_time\":0.006060606,\"total_tokens\":82,\"total_time\":0.01033002},\"usage_breakdown\":{\"models\":null},\"system_fingerprint\":\"fp_07e680a590\",\"x_groq\":{\"id\":\"req_01jx3cq80mfatrkg2vrhmx3yg4\"}}\n"
         }
       },
-      "recorded_at": "Mon, 20 Jan 2025 22:29:12 GMT"
+      "recorded_at": "Fri, 06 Jun 2025 19:50:39 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

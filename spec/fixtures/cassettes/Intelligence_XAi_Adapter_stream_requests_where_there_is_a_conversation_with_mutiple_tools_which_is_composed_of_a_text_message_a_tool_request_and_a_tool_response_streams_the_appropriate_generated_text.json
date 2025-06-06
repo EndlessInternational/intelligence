@@ -6,11 +6,11 @@
         "uri": "https://api.x.ai/v1/chat/completions",
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"model\":\"grok-beta\",\"max_tokens\":128,\"temperature\":0.0,\"stream\":true,\"messages\":[{\"role\":\"system\",\"content\":\"You are a helpfull assistant who answers questions succinctly.\"},{\"role\":\"user\",\"content\":\"What is the current weather?\"},{\"role\":\"assistant\",\"tool_calls\":[{\"id\":\"MpfiuoRaM\",\"type\":\"function\",\"function\":{\"name\":\"get_location\",\"arguments\":\"{}\"}}],\"content\":\"\"},{\"role\":\"tool\",\"tool_call_id\":\"MpfiuoRaM\",\"content\":\"Seattle, WA, USA\"}],\"tools\":[{\"type\":\"function\",\"function\":{\"name\":\"get_location\",\"description\":\"The get_location tool will return the users city, state or province and country.\",\"parameters\":{}}},{\"type\":\"function\",\"function\":{\"name\":\"get_weather\",\"description\":\"The get_weather tool will return the current weather in a given locality.\",\"parameters\":{\"type\":\"object\",\"properties\":{\"city\":{\"type\":\"string\",\"description\":\"The city or town for which the current weather should be returned.\"},\"state\":{\"type\":\"string\",\"description\":\"The state or province for which the current weather should be returned. If this is not provided the largest or most prominent city with the given name, in the given country or in the worldi, will be assumed.\"},\"country\":{\"type\":\"string\",\"description\":\"The country for which the given weather should be returned. If this is not provided the largest or most prominent city with the given name will be returned.\"}},\"required\":[\"city\"]}}}]}"
+          "string": "{\"model\":\"grok-3\",\"max_tokens\":128,\"temperature\":0.0,\"stream\":true,\"messages\":[{\"role\":\"system\",\"content\":\"You are a helpfull assistant who answers questions succinctly.\"},{\"role\":\"user\",\"content\":\"What is the current weather?\"},{\"role\":\"assistant\",\"tool_calls\":[{\"id\":\"MpfiuoRaM\",\"type\":\"function\",\"function\":{\"name\":\"get_location\",\"arguments\":\"{}\"}}],\"content\":\"\"},{\"role\":\"tool\",\"tool_call_id\":\"MpfiuoRaM\",\"content\":\"Seattle, WA, USA\"}],\"tools\":[{\"type\":\"function\",\"function\":{\"name\":\"get_location\",\"description\":\"The get_location tool will return the users city, state or province and country.\",\"parameters\":{}}},{\"type\":\"function\",\"function\":{\"name\":\"get_weather\",\"description\":\"The get_weather tool will return the current weather in a given locality.\",\"parameters\":{\"type\":\"object\",\"properties\":{\"city\":{\"type\":\"string\",\"description\":\"The city or town for which the current weather should be returned.\"},\"state\":{\"type\":\"string\",\"description\":\"The state or province for which the current weather should be returned. If this is not provided the largest or most prominent city with the given name, in the given country or in the worldi, will be assumed.\"},\"country\":{\"type\":\"string\",\"description\":\"The country for which the given weather should be returned. If this is not provided the largest or most prominent city with the given name will be returned.\"}},\"required\":[\"city\"]}}}]}"
         },
         "headers": {
           "User-Agent": [
-            "Faraday v2.12.0"
+            "Faraday v2.13.1"
           ],
           "Content-Type": [
             "application/json"
@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Tue, 21 Jan 2025 03:39:15 GMT"
+            "Fri, 06 Jun 2025 19:44:42 GMT"
           ],
           "content-type": [
             "text/event-stream"
@@ -41,6 +41,12 @@
           "cache-control": [
             "no-cache"
           ],
+          "x-zero-data-retention": [
+            "false"
+          ],
+          "x-request-id": [
+            "<X-REQUEST-ID>"
+          ],
           "vary": [
             "origin, access-control-request-method, access-control-request-headers"
           ],
@@ -52,6 +58,9 @@
           ],
           "cf-cache-status": [
             "DYNAMIC"
+          ],
+          "set-cookie": [
+            "<SET-COOKIE>"
           ],
           "strict-transport-security": [
             "max-age=31536000"
@@ -65,10 +74,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "data: {\"id\":\"f6d13a8b-bd3b-4b44-825d-9241f44d56ca\",\"object\":\"chat.completion.chunk\",\"created\":1737430756,\"model\":\"grok-beta\",\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"tool_calls\":[{\"id\":\"call_96092432\",\"function\":{\"name\":\"get_weather\",\"arguments\":\"{\\\"city\\\":\\\"Seattle\\\",\\\"state\\\":\\\"WA\\\",\\\"country\\\":\\\"USA\\\"}\"},\"index\":0,\"type\":\"function\"}]},\"finish_reason\":\"tool_calls\"}],\"usage\":{\"prompt_tokens\":351,\"completion_tokens\":1,\"total_tokens\":352,\"prompt_tokens_details\":{\"text_tokens\":351,\"audio_tokens\":0,\"image_tokens\":0,\"cached_tokens\":0}},\"system_fingerprint\":\"fp_18e99db1fc\"}\n\ndata: [DONE]\n\n"
+          "string": "data: {\"id\":\"27bd5d2f-f450-4d5a-bb1c-10995d5d9bdf\",\"object\":\"chat.completion.chunk\",\"created\":1749239082,\"model\":\"grok-3\",\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"tool_calls\":[{\"id\":\"call_24266538\",\"function\":{\"name\":\"get_weather\",\"arguments\":\"{\\\"city\\\":\\\"Seattle\\\",\\\"state\\\":\\\"WA\\\",\\\"country\\\":\\\"USA\\\"}\"},\"index\":0,\"type\":\"function\"}]}}],\"system_fingerprint\":\"fp_d8d6e9f7d0\"}\n\ndata: {\"id\":\"27bd5d2f-f450-4d5a-bb1c-10995d5d9bdf\",\"object\":\"chat.completion.chunk\",\"created\":1749239082,\"model\":\"grok-3\",\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\"},\"finish_reason\":\"tool_calls\"}],\"system_fingerprint\":\"fp_d8d6e9f7d0\"}\n\ndata: [DONE]\n\n"
         }
       },
-      "recorded_at": "Tue, 21 Jan 2025 03:39:16 GMT"
+      "recorded_at": "Fri, 06 Jun 2025 19:44:42 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

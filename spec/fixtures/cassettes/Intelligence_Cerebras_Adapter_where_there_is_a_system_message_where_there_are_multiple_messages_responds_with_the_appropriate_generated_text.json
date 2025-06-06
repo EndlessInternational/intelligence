@@ -6,11 +6,11 @@
         "uri": "https://api.cerebras.ai/v1/chat/completions",
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"model\":\"llama3.1-70b\",\"max_tokens\":16,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"the secret word is 'blue'\\n\"},{\"role\":\"assistant\",\"content\":\"ok\\n\"},{\"role\":\"user\",\"content\":\"what is the secret word?\\nrespond with the word only\\n\"}]}"
+          "string": "{\"model\":\"llama-3.3-70b\",\"max_tokens\":16,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"the secret word is 'blue'\\n\"},{\"role\":\"assistant\",\"content\":\"ok\\n\"},{\"role\":\"user\",\"content\":\"what is the secret word?\\nrespond with the word only\\n\"}]}"
         },
         "headers": {
           "User-Agent": [
-            "Faraday v2.12.0"
+            "Faraday v2.13.1"
           ],
           "Content-Type": [
             "application/json"
@@ -26,23 +26,17 @@
           "message": "OK"
         },
         "headers": {
+          "date": [
+            "Fri, 06 Jun 2025 18:52:27 GMT"
+          ],
           "content-type": [
             "application/json"
           ],
-          "content-length": [
-            "475"
+          "transfer-encoding": [
+            "chunked"
           ],
           "connection": [
             "keep-alive"
-          ],
-          "date": [
-            "Tue, 31 Dec 2024 01:25:00 GMT"
-          ],
-          "strict-transport-security": [
-            "max-age=3600; includeSubDomains"
-          ],
-          "server": [
-            "uvicorn"
           ],
           "x-request-id": [
             "<X-REQUEST-ID>"
@@ -54,16 +48,19 @@
             "60000"
           ],
           "x-ratelimit-remaining-requests-day": [
-            "14397"
+            "14385"
           ],
           "x-ratelimit-remaining-tokens-minute": [
-            "60000"
+            "59853"
           ],
           "x-ratelimit-reset-requests-day": [
-            "81299.2097337246"
+            "18452.04123854637"
           ],
           "x-ratelimit-reset-tokens-minute": [
-            "59.209733724594116"
+            "32.04123854637146"
+          ],
+          "inference-id": [
+            "chatcmpl-609d69e6-a4c6-4fca-b468-65573b5e5f3b"
           ],
           "referrer-policy": [
             "strict-origin-when-cross-origin"
@@ -71,28 +68,34 @@
           "x-content-type-options": [
             "nosniff"
           ],
-          "x-cache": [
-            "Miss from cloudfront"
+          "strict-transport-security": [
+            "max-age=3600; includeSubDomains"
           ],
-          "via": [
-            "1.1 18d8a69a30308aa071168e8aed30be36.cloudfront.net (CloudFront)"
+          "cf-cache-status": [
+            "DYNAMIC"
           ],
-          "x-amz-cf-pop": [
-            "SFO20-C1"
+          "set-cookie": [
+            "<SET-COOKIE>"
+          ],
+          "server": [
+            "cloudflare"
+          ],
+          "cf-ray": [
+            "<CF-RAY>"
+          ],
+          "content-encoding": [
+            "gzip"
           ],
           "alt-svc": [
             "h3=\":443\"; ma=86400"
-          ],
-          "x-amz-cf-id": [
-            "fIyk85NnPoHsDK6P7F4fmtyqAlCm6elXe1wuIDv4CG7r9fCUDLBL-A=="
           ]
         },
         "body": {
-          "encoding": "UTF-8",
-          "string": "{\"id\":\"chatcmpl-5eaecddc-e76f-429f-a663-00a7d464384b\",\"choices\":[{\"finish_reason\":\"stop\",\"index\":0,\"message\":{\"content\":\"blue\",\"role\":\"assistant\"}}],\"created\":1735608300,\"model\":\"llama3.1-70b\",\"system_fingerprint\":\"fp_2e2a2a083c\",\"object\":\"chat.completion\",\"usage\":{\"prompt_tokens\":99,\"completion_tokens\":2,\"total_tokens\":101},\"time_info\":{\"queue_time\":9.6251e-05,\"prompt_time\":0.003581911,\"completion_time\":0.00314872,\"total_time\":0.008570194244384766,\"created\":1735608300}}"
+          "encoding": "ASCII-8BIT",
+          "string": "{\"id\":\"chatcmpl-609d69e6-a4c6-4fca-b468-65573b5e5f3b\",\"choices\":[{\"finish_reason\":\"stop\",\"index\":0,\"message\":{\"content\":\"blue\",\"role\":\"assistant\"}}],\"created\":1749235947,\"model\":\"llama-3.3-70b\",\"system_fingerprint\":\"fp_cb820b267e7b1a0390cd\",\"object\":\"chat.completion\",\"usage\":{\"prompt_tokens\":99,\"completion_tokens\":2,\"total_tokens\":101,\"prompt_tokens_details\":{\"cached_tokens\":0}},\"time_info\":{\"queue_time\":0.000825141,\"prompt_time\":0.003525594,\"completion_time\":5.0022e-05,\"total_time\":0.006337881088256836,\"created\":1749235947}}"
         }
       },
-      "recorded_at": "Tue, 31 Dec 2024 01:25:00 GMT"
+      "recorded_at": "Fri, 06 Jun 2025 18:52:27 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

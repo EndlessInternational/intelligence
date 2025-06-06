@@ -18,7 +18,7 @@ RSpec.describe "#{Intelligence::Adapter[ :x_ai ]} chat requests", :x_ai do
     Intelligence::Adapter[ :x_ai ].build! do   
       key                     ENV[ 'XAI_API_KEY' ]
       chat_options do
-        model                 'grok-beta'
+        model                 'grok-3'
         max_tokens            128 
         temperature           0
       end
@@ -29,7 +29,7 @@ RSpec.describe "#{Intelligence::Adapter[ :x_ai ]} chat requests", :x_ai do
     Intelligence::Adapter[ :x_ai ].build! do   
       key                     ENV[ 'XAI_API_KEY' ]
       chat_options do
-        model                 'grok-beta'
+        model                 'grok-3'
         max_tokens            128 
         temperature           0
 
@@ -46,7 +46,7 @@ RSpec.describe "#{Intelligence::Adapter[ :x_ai ]} chat requests", :x_ai do
     Intelligence::Adapter[ :x_ai ].build! do   
       key                     ENV[ 'XAI_API_KEY' ]
       chat_options do
-        model                 'grok-beta'
+        model                 'grok-3'
         max_tokens            24 
         temperature           0
       end
@@ -57,7 +57,7 @@ RSpec.describe "#{Intelligence::Adapter[ :x_ai ]} chat requests", :x_ai do
     Intelligence::Adapter[ :x_ai ].build! do   
       key                     ENV[ 'XAI_API_KEY' ]
       chat_options do
-        model                 'grok-beta'
+        model                 'grok-3'
         max_tokens            24
         temperature           0
         stop                  'five'
@@ -69,7 +69,7 @@ RSpec.describe "#{Intelligence::Adapter[ :x_ai ]} chat requests", :x_ai do
     Intelligence::Adapter[ :x_ai ].build! do   
       key                     ENV[ 'XAI_API_KEY' ]
       chat_options do
-        model                 'grok-beta'
+        model                 'grok-3'
         max_tokens            24
         temperature           0
       end

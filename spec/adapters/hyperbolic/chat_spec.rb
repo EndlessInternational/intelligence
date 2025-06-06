@@ -12,7 +12,7 @@ RSpec.describe "#{Intelligence::Adapter[ :hyperbolic ]} chat requests", :hyperbo
     Intelligence::Adapter[ :hyperbolic ].build! do   
       key                     ENV[ 'HYPERBOLIC_API_KEY' ]
       chat_options do
-        model                 'meta-llama/Meta-Llama-3.1-70B-Instruct'
+        model                 'Qwen/Qwen2.5-VL-7B-Instruct'
         max_tokens            16
         temperature           0
       end
@@ -23,7 +23,7 @@ RSpec.describe "#{Intelligence::Adapter[ :hyperbolic ]} chat requests", :hyperbo
     Intelligence::Adapter[ :hyperbolic ].build! do   
       key                     ENV[ 'HYPERBOLIC_API_KEY' ]
       chat_options do
-        model                 'meta-llama/Meta-Llama-3.1-70B-Instruct'
+        model                 'Qwen/Qwen2.5-VL-7B-Instruct'
         max_tokens            24
         temperature           0
         stop                  'five'
@@ -35,7 +35,7 @@ RSpec.describe "#{Intelligence::Adapter[ :hyperbolic ]} chat requests", :hyperbo
     Intelligence::Adapter[ :hyperbolic ].build! do   
       key                     ENV[ 'HYPERBOLIC_API_KEY' ]
       chat_options do
-        model                 'Qwen/Qwen2-VL-7B-Instruct'
+        model                 'Qwen/Qwen2.5-VL-7B-Instruct'
         max_tokens            32
         temperature           0
       end
@@ -46,7 +46,7 @@ RSpec.describe "#{Intelligence::Adapter[ :hyperbolic ]} chat requests", :hyperbo
     Intelligence::Adapter[ :hyperbolic ].build! do 
       key                     'this-key-is-not-valid'  
       chat_options do
-        model                 'meta-llama/Meta-Llama-3.1-70B-Instruct'
+        model                 'Qwen/Qwen2.5-VL-7B-Instruct'
         max_tokens            16
         temperature           0
       end

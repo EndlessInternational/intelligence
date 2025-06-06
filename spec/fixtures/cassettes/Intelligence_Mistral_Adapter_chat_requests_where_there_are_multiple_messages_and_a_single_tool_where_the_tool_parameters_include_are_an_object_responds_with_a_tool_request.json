@@ -10,7 +10,7 @@
         },
         "headers": {
           "User-Agent": [
-            "Faraday v2.12.0"
+            "Faraday v2.13.1"
           ],
           "Content-Type": [
             "application/json"
@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Mon, 20 Jan 2025 22:26:23 GMT"
+            "Fri, 06 Jun 2025 18:38:18 GMT"
           ],
           "content-type": [
             "application/json"
@@ -38,44 +38,41 @@
           "connection": [
             "keep-alive"
           ],
-          "x-ratelimitbysize-limit-minute": [
+          "x-envoy-upstream-service-time": [
+            "400"
+          ],
+          "x-ratelimit-limit-tokens-minute": [
             "2000000"
           ],
-          "x-ratelimitbysize-remaining-minute": [
-            "1996909"
+          "x-ratelimit-remaining-tokens-minute": [
+            "1992622"
           ],
-          "ratelimitbysize-remaining": [
-            "1996909"
-          ],
-          "ratelimitbysize-reset": [
-            "38"
-          ],
-          "ratelimitbysize-limit": [
-            "2000000"
-          ],
-          "x-ratelimitbysize-remaining-month": [
-            "9999988301"
-          ],
-          "x-ratelimitbysize-limit-month": [
+          "x-ratelimit-limit-tokens-month": [
             "10000000000"
           ],
-          "ratelimitbysize-query-cost": [
-            "204"
+          "x-ratelimit-remaining-tokens-month": [
+            "9999992622"
           ],
-          "x-envoy-upstream-service-time": [
-            "1059"
+          "x-ratelimit-tokens-query-cost": [
+            "336"
+          ],
+          "x-ratelimit-limit-req-10-second": [
+            "60"
+          ],
+          "x-ratelimit-remaining-req-10-second": [
+            "50"
           ],
           "access-control-allow-origin": [
             "*"
           ],
           "x-kong-upstream-latency": [
-            "1060"
+            "401"
           ],
           "x-kong-proxy-latency": [
-            "0"
+            "6"
           ],
           "x-kong-request-id": [
-            "ceb92e74fbc70e4fcbafc42bd96b4207"
+            "9d6215559922af0e571ece1328acd750"
           ],
           "cf-cache-status": [
             "DYNAMIC"
@@ -98,10 +95,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\"id\":\"2f62092317d7408e90044b2f436c2935\",\"object\":\"chat.completion\",\"created\":1737411982,\"model\":\"mistral-large-latest\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"tool_calls\":[{\"id\":\"eYTgTLQl8\",\"function\":{\"name\":\"get_weather\",\"arguments\":\"{\\\"location\\\": {\\\"city\\\": \\\"Seattle\\\", \\\"state\\\": \\\"WA\\\", \\\"country\\\": \\\"USA\\\"}}\"},\"index\":0}],\"content\":\"\"},\"finish_reason\":\"tool_calls\"}],\"usage\":{\"prompt_tokens\":302,\"total_tokens\":340,\"completion_tokens\":38}}"
+          "string": "{\"id\":\"f79f263de98c4b4ea71ecf1dc1eff935\",\"object\":\"chat.completion\",\"created\":1749235098,\"model\":\"mistral-large-latest\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"tool_calls\":[{\"id\":\"J5pUGPYXc\",\"function\":{\"name\":\"get_weather\",\"arguments\":\"{\\\"location\\\": {\\\"city\\\": \\\"Seattle\\\", \\\"state\\\": \\\"Washington\\\"}}\"},\"index\":0}],\"content\":\"\"},\"finish_reason\":\"tool_calls\"}],\"usage\":{\"prompt_tokens\":302,\"total_tokens\":336,\"completion_tokens\":34}}"
         }
       },
-      "recorded_at": "Mon, 20 Jan 2025 22:26:23 GMT"
+      "recorded_at": "Fri, 06 Jun 2025 18:38:18 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

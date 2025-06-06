@@ -10,7 +10,7 @@
         },
         "headers": {
           "User-Agent": [
-            "Faraday v2.12.0"
+            "Faraday v2.13.1"
           ],
           "Content-Type": [
             "application/json"
@@ -27,13 +27,13 @@
         },
         "headers": {
           "date": [
-            "Tue, 21 Jan 2025 01:55:24 GMT"
+            "Fri, 06 Jun 2025 19:37:27 GMT"
           ],
           "content-type": [
             "application/json; charset=utf-8"
           ],
           "content-length": [
-            "251"
+            "266"
           ],
           "connection": [
             "keep-alive"
@@ -48,16 +48,19 @@
             "*"
           ],
           "etag": [
-            "W/\"fb-+v83tIjBONudqWy1FDtUUuH73zw\""
+            "W/\"10a-f0swCbOxnpMAGA/yfNcwZwMmhBo\""
           ],
           "strict-transport-security": [
             "max-age=15552000; includeSubDomains"
           ],
           "x-amzn-trace-id": [
-            "47c6518c-bd2b-4c36-a3c1-19e3eea0f326-noamzn"
+            "09510cf5-5b4d-4585-8f89-bf80648b69d1-noamzn"
           ],
           "x-api-received": [
-            "2025-01-21T01:55:24.779Z"
+            "2025-06-06T19:37:27.008Z"
+          ],
+          "x-request-id": [
+            "<X-REQUEST-ID>"
           ],
           "vary": [
             "Accept-Encoding"
@@ -71,10 +74,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "{\n  \"id\": \"9053ae8fadf20879\",\n  \"error\": {\n    \"message\": \"Invalid API key provided. You can find your API key at https://api.together.xyz/settings/api-keys.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"invalid_api_key\"\n  }\n}"
+          "string": "{\n  \"id\": \"nx5EJCP-2j9zxn-94ba5d477c6376b2\",\n  \"error\": {\n    \"message\": \"Invalid API key provided. You can find your API key at https://api.together.xyz/settings/api-keys.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"invalid_api_key\"\n  }\n}"
         }
       },
-      "recorded_at": "Tue, 21 Jan 2025 01:55:24 GMT"
+      "recorded_at": "Fri, 06 Jun 2025 19:37:26 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

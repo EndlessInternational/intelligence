@@ -10,7 +10,7 @@
         },
         "headers": {
           "User-Agent": [
-            "Faraday v2.12.0"
+            "Faraday v2.13.1"
           ],
           "Content-Type": [
             "application/json"
@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Mon, 20 Jan 2025 22:26:09 GMT"
+            "Fri, 06 Jun 2025 18:38:05 GMT"
           ],
           "content-type": [
             "application/json"
@@ -38,44 +38,41 @@
           "connection": [
             "keep-alive"
           ],
-          "x-ratelimitbysize-remaining-minute": [
-            "1998519"
+          "x-envoy-upstream-service-time": [
+            "845"
           ],
-          "x-ratelimitbysize-remaining-month": [
-            "9999990081"
-          ],
-          "ratelimitbysize-remaining": [
-            "1998519"
-          ],
-          "ratelimitbysize-reset": [
-            "52"
-          ],
-          "ratelimitbysize-limit": [
+          "x-ratelimit-limit-tokens-minute": [
             "2000000"
           ],
-          "x-ratelimitbysize-limit-minute": [
-            "2000000"
+          "x-ratelimit-remaining-tokens-minute": [
+            "1996841"
           ],
-          "x-ratelimitbysize-limit-month": [
+          "x-ratelimit-limit-tokens-month": [
             "10000000000"
           ],
-          "ratelimitbysize-query-cost": [
-            "71"
+          "x-ratelimit-remaining-tokens-month": [
+            "9999996841"
           ],
-          "x-envoy-upstream-service-time": [
-            "1315"
+          "x-ratelimit-tokens-query-cost": [
+            "329"
+          ],
+          "x-ratelimit-limit-req-10-second": [
+            "60"
+          ],
+          "x-ratelimit-remaining-req-10-second": [
+            "46"
           ],
           "access-control-allow-origin": [
             "*"
           ],
           "x-kong-upstream-latency": [
-            "1316"
+            "846"
           ],
           "x-kong-proxy-latency": [
-            "1"
+            "6"
           ],
           "x-kong-request-id": [
-            "18780d591592b57ed00c8255460ef55a"
+            "25f47846b85f62147693f66544f48131"
           ],
           "cf-cache-status": [
             "DYNAMIC"
@@ -98,10 +95,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\"id\":\"3afadb137693473294f14b7e9d41a6f7\",\"object\":\"chat.completion\",\"created\":1737411969,\"model\":\"pixtral-12b-2409\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"tool_calls\":null,\"content\":\"balloon\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":326,\"total_tokens\":328,\"completion_tokens\":2}}"
+          "string": "{\"id\":\"ff30f8c0faf04939b39c5cfb602ecef8\",\"object\":\"chat.completion\",\"created\":1749235085,\"model\":\"pixtral-12b-2409\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"tool_calls\":null,\"content\":\"balloon\"},\"finish_reason\":\"stop\",\"logprobs\":null}],\"usage\":{\"prompt_tokens\":326,\"total_tokens\":329,\"completion_tokens\":3}}"
         }
       },
-      "recorded_at": "Mon, 20 Jan 2025 22:26:09 GMT"
+      "recorded_at": "Fri, 06 Jun 2025 18:38:05 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

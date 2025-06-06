@@ -6,11 +6,11 @@
         "uri": "https://api.groq.com/openai/v1/chat/completions",
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"model\":\"llama-3.1-70b-versatile\",\"max_tokens\":16,\"temperature\":0.0,\"messages\":[{\"role\":\"user\",\"content\":\"respond only with the word 'hello'\\n\"}]}"
+          "string": "{\"model\":\"mistral-saba-24b\",\"max_tokens\":16,\"temperature\":0.0,\"messages\":[{\"role\":\"user\",\"content\":\"respond only with the word 'hello'\\n\"}]}"
         },
         "headers": {
           "User-Agent": [
-            "Faraday v2.12.0"
+            "Faraday v2.13.1"
           ],
           "Content-Type": [
             "application/json"
@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Mon, 20 Jan 2025 22:29:02 GMT"
+            "Fri, 06 Jun 2025 19:50:34 GMT"
           ],
           "content-type": [
             "application/json"
@@ -38,41 +38,29 @@
           "connection": [
             "keep-alive"
           ],
-          "cf-ray": [
-            "<CF-RAY>"
-          ],
-          "cf-cache-status": [
-            "DYNAMIC"
-          ],
           "cache-control": [
             "private, max-age=0, no-store, no-cache, must-revalidate"
           ],
           "vary": [
-            "Origin, Accept-Encoding"
-          ],
-          "via": [
-            "1.1 google"
-          ],
-          "alt-svc": [
-            "h3=\":443\"; ma=86400"
+            "Origin"
           ],
           "x-groq-region": [
             "us-west-1"
           ],
           "x-ratelimit-limit-requests": [
-            "14400"
+            "1000"
           ],
           "x-ratelimit-limit-tokens": [
             "6000"
           ],
           "x-ratelimit-remaining-requests": [
-            "14399"
+            "999"
           ],
           "x-ratelimit-remaining-tokens": [
             "5987"
           ],
           "x-ratelimit-reset-requests": [
-            "6s"
+            "1m26.4s"
           ],
           "x-ratelimit-reset-tokens": [
             "130ms"
@@ -80,11 +68,23 @@
           "x-request-id": [
             "<X-REQUEST-ID>"
           ],
+          "via": [
+            "1.1 google"
+          ],
+          "alt-svc": [
+            "h3=\":443\"; ma=86400"
+          ],
+          "cf-cache-status": [
+            "DYNAMIC"
+          ],
           "set-cookie": [
             "<SET-COOKIE>"
           ],
           "server": [
             "cloudflare"
+          ],
+          "cf-ray": [
+            "<CF-RAY>"
           ],
           "content-encoding": [
             "gzip"
@@ -92,10 +92,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\"id\":\"chatcmpl-120ec91f-36b6-45e8-a8ed-68bd8dc96c32\",\"object\":\"chat.completion\",\"created\":1737412142,\"model\":\"llama-3.1-70b-versatile\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"hello\"},\"logprobs\":null,\"finish_reason\":\"stop\"}],\"usage\":{\"queue_time\":0.247435776,\"prompt_tokens\":43,\"prompt_time\":0.008229363,\"completion_tokens\":2,\"completion_time\":0.007272727,\"total_tokens\":45,\"total_time\":0.01550209},\"system_fingerprint\":\"fp_76dc6cf67d\",\"x_groq\":{\"id\":\"req_01jj2xarsfe6w8h654mq80awmm\"}}\n"
+          "string": "{\"id\":\"chatcmpl-b9065e7a-a67e-4134-b685-588054b5fa05\",\"object\":\"chat.completion\",\"created\":1749239434,\"model\":\"mistral-saba-24b\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"Hello\"},\"logprobs\":null,\"finish_reason\":\"stop\"}],\"usage\":{\"queue_time\":0.21906614500000002,\"prompt_tokens\":12,\"prompt_time\":0.002055184,\"completion_tokens\":2,\"completion_time\":0.006060606,\"total_tokens\":14,\"total_time\":0.00811579},\"usage_breakdown\":{\"models\":null},\"system_fingerprint\":\"fp_07e680a590\",\"x_groq\":{\"id\":\"req_01jx3cq2w9fatb13y3e0z10aqq\"}}\n"
         }
       },
-      "recorded_at": "Mon, 20 Jan 2025 22:29:02 GMT"
+      "recorded_at": "Fri, 06 Jun 2025 19:50:34 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

@@ -3,87 +3,14 @@
     {
       "request": {
         "method": "post",
-        "uri": "https://api.openai.com/v1/chat/completions",
-        "body": {
-          "encoding": "UTF-8",
-          "string": "{\"model\":\"grok-beta\",\"max_completion_tokens\":128,\"temperature\":0.0,\"tools\":[{\"type\":\"function\",\"function\":{\"name\":\"get_location\",\"description\":\"The get_location tool will return the users city, state or province and country.\"}}],\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":[{\"type\":\"text\",\"text\":\"Where am I located?\\n\"}]}]}"
-        },
-        "headers": {
-          "User-Agent": [
-            "Faraday v2.12.0"
-          ],
-          "Content-Type": [
-            "application/json"
-          ],
-          "Authorization": [
-            "Bearer <TOKEN>"
-          ]
-        }
-      },
-      "response": {
-        "status": {
-          "code": 401,
-          "message": "Unauthorized"
-        },
-        "headers": {
-          "date": [
-            "Tue, 21 Jan 2025 03:37:08 GMT"
-          ],
-          "content-type": [
-            "application/json; charset=utf-8"
-          ],
-          "content-length": [
-            "334"
-          ],
-          "connection": [
-            "keep-alive"
-          ],
-          "vary": [
-            "Origin"
-          ],
-          "x-request-id": [
-            "<X-REQUEST-ID>"
-          ],
-          "strict-transport-security": [
-            "max-age=31536000; includeSubDomains; preload"
-          ],
-          "cf-cache-status": [
-            "DYNAMIC"
-          ],
-          "set-cookie": [
-            "<SET-COOKIE>"
-          ],
-          "x-content-type-options": [
-            "nosniff"
-          ],
-          "server": [
-            "cloudflare"
-          ],
-          "cf-ray": [
-            "<CF-RAY>"
-          ],
-          "alt-svc": [
-            "h3=\":443\"; ma=86400"
-          ]
-        },
-        "body": {
-          "encoding": "UTF-8",
-          "string": "{\n    \"error\": {\n        \"message\": \"Incorrect API key provided: xai-DE0Y************************************************************************Pf7m. You can find your API key at https://platform.openai.com/account/api-keys.\",\n        \"type\": \"invalid_request_error\",\n        \"param\": null,\n        \"code\": \"invalid_api_key\"\n    }\n}\n"
-        }
-      },
-      "recorded_at": "Tue, 21 Jan 2025 03:37:08 GMT"
-    },
-    {
-      "request": {
-        "method": "post",
         "uri": "https://api.x.ai/v1/chat/completions",
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"model\":\"grok-beta\",\"max_tokens\":128,\"temperature\":0.0,\"tools\":[{\"type\":\"function\",\"function\":{\"name\":\"get_location\",\"description\":\"The get_location tool will return the users city, state or province and country.\",\"parameters\":{}}}],\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"Where am I located?\\n\"}]}"
+          "string": "{\"model\":\"grok-3\",\"max_tokens\":128,\"temperature\":0.0,\"tools\":[{\"type\":\"function\",\"function\":{\"name\":\"get_location\",\"description\":\"The get_location tool will return the users city, state or province and country.\",\"parameters\":{}}}],\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"Where am I located?\\n\"}]}"
         },
         "headers": {
           "User-Agent": [
-            "Faraday v2.12.0"
+            "Faraday v2.13.1"
           ],
           "Content-Type": [
             "application/json"
@@ -100,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Tue, 21 Jan 2025 03:38:47 GMT"
+            "Fri, 06 Jun 2025 19:44:14 GMT"
           ],
           "content-type": [
             "application/json"
@@ -110,6 +37,12 @@
           ],
           "connection": [
             "keep-alive"
+          ],
+          "x-zero-data-retention": [
+            "false"
+          ],
+          "x-request-id": [
+            "<X-REQUEST-ID>"
           ],
           "vary": [
             "origin, access-control-request-method, access-control-request-headers"
@@ -122,6 +55,9 @@
           ],
           "cf-cache-status": [
             "DYNAMIC"
+          ],
+          "set-cookie": [
+            "<SET-COOKIE>"
           ],
           "strict-transport-security": [
             "max-age=31536000"
@@ -138,10 +74,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\"id\":\"45a207cd-022c-4ba4-bf1c-bb65f2cc1866\",\"object\":\"chat.completion\",\"created\":1737430726,\"model\":\"grok-beta\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"\",\"tool_calls\":[{\"id\":\"call_74837573\",\"function\":{\"name\":\"get_location\",\"arguments\":\"{}\"},\"type\":\"function\"}],\"refusal\":null},\"finish_reason\":\"tool_calls\"}],\"usage\":{\"prompt_tokens\":136,\"completion_tokens\":1,\"total_tokens\":137,\"prompt_tokens_details\":{\"text_tokens\":136,\"audio_tokens\":0,\"image_tokens\":0,\"cached_tokens\":0}},\"system_fingerprint\":\"fp_18e99db1fc\"}"
+          "string": "{\"id\":\"cd4cc201-792e-4c9d-8fb8-95e19cff19a0\",\"object\":\"chat.completion\",\"created\":1749239053,\"model\":\"grok-3\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"\",\"tool_calls\":[{\"id\":\"call_51328801\",\"function\":{\"name\":\"get_location\",\"arguments\":\"{}\"},\"type\":\"function\"}],\"refusal\":null},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":293,\"completion_tokens\":21,\"total_tokens\":314,\"prompt_tokens_details\":{\"text_tokens\":293,\"audio_tokens\":0,\"image_tokens\":0,\"cached_tokens\":292},\"completion_tokens_details\":{\"reasoning_tokens\":0,\"audio_tokens\":0,\"accepted_prediction_tokens\":0,\"rejected_prediction_tokens\":0},\"num_sources_used\":0},\"system_fingerprint\":\"fp_d8d6e9f7d0\"}"
         }
       },
-      "recorded_at": "Tue, 21 Jan 2025 03:38:47 GMT"
+      "recorded_at": "Fri, 06 Jun 2025 19:44:14 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

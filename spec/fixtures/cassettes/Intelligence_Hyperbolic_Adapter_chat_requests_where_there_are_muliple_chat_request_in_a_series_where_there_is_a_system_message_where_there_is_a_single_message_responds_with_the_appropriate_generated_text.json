@@ -6,11 +6,11 @@
         "uri": "https://api.hyperbolic.xyz/v1/chat/completions",
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"model\":\"meta-llama/Meta-Llama-3.1-70B-Instruct\",\"max_tokens\":16,\"temperature\":0.0,\"messages\":[{\"role\":\"user\",\"content\":\"respond only with the word 'hello'\\n\"}]}"
+          "string": "{\"model\":\"Qwen/Qwen2.5-VL-7B-Instruct\",\"max_tokens\":16,\"temperature\":0.0,\"messages\":[{\"role\":\"user\",\"content\":\"respond only with the word 'hello'\\n\"}]}"
         },
         "headers": {
           "User-Agent": [
-            "Faraday v2.12.0"
+            "Faraday v2.13.1"
           ],
           "Content-Type": [
             "application/json"
@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Mon, 20 Jan 2025 22:21:44 GMT"
+            "Fri, 06 Jun 2025 18:47:16 GMT"
           ],
           "content-type": [
             "application/json"
@@ -37,6 +37,9 @@
           ],
           "connection": [
             "keep-alive"
+          ],
+          "x-inference-request-id": [
+            "909a4958-dea2-4900-9b85-d50bce5982a6"
           ],
           "cf-cache-status": [
             "DYNAMIC"
@@ -53,10 +56,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\"id\":\"chat-bad775e288fc4ff0b06a670cb8c98ad5\",\"object\":\"chat.completion\",\"created\":1737411704,\"model\":\"meta-llama/Meta-Llama-3.1-70B-Instruct\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"hello\"},\"finish_reason\":\"stop\",\"logprobs\":null}],\"usage\":{\"prompt_tokens\":43,\"total_tokens\":45,\"completion_tokens\":2}}"
+          "string": "{\"id\":\"chatcmpl-1e4aef6c14514b2fb4066772951ba73f\",\"object\":\"chat.completion\",\"created\":1749235635,\"model\":\"Qwen/Qwen2.5-VL-7B-Instruct\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"reasoning_content\":null,\"content\":\"hello\",\"tool_calls\":[]},\"logprobs\":null,\"finish_reason\":\"stop\",\"stop_reason\":null}],\"usage\":{\"prompt_tokens\":27,\"total_tokens\":29,\"completion_tokens\":2,\"prompt_tokens_details\":null},\"prompt_logprobs\":null}"
         }
       },
-      "recorded_at": "Mon, 20 Jan 2025 22:21:44 GMT"
+      "recorded_at": "Fri, 06 Jun 2025 18:47:15 GMT"
     },
     {
       "request": {
@@ -64,11 +67,11 @@
         "uri": "https://api.hyperbolic.xyz/v1/chat/completions",
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"model\":\"meta-llama/Meta-Llama-3.1-70B-Instruct\",\"max_tokens\":16,\"temperature\":0.0,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"respond only with the word 'hello'\\n\"}]}"
+          "string": "{\"model\":\"Qwen/Qwen2.5-VL-7B-Instruct\",\"max_tokens\":16,\"temperature\":0.0,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"respond only with the word 'hello'\\n\"}]}"
         },
         "headers": {
           "User-Agent": [
-            "Faraday v2.12.0"
+            "Faraday v2.13.1"
           ],
           "Content-Type": [
             "application/json"
@@ -85,7 +88,7 @@
         },
         "headers": {
           "date": [
-            "Mon, 20 Jan 2025 22:21:44 GMT"
+            "Fri, 06 Jun 2025 18:47:16 GMT"
           ],
           "content-type": [
             "application/json"
@@ -95,6 +98,9 @@
           ],
           "connection": [
             "keep-alive"
+          ],
+          "x-inference-request-id": [
+            "d9d8157b-f03a-4946-9fa3-ede50c9985cc"
           ],
           "cf-cache-status": [
             "DYNAMIC"
@@ -111,10 +117,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\"id\":\"chat-58661d20ce9e4c30a4c30be64c938e15\",\"object\":\"chat.completion\",\"created\":1737411704,\"model\":\"meta-llama/Meta-Llama-3.1-70B-Instruct\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"hello\"},\"finish_reason\":\"stop\",\"logprobs\":null}],\"usage\":{\"prompt_tokens\":78,\"total_tokens\":80,\"completion_tokens\":2}}"
+          "string": "{\"id\":\"chatcmpl-ef54e7b861f2479a868139511ec02faf\",\"object\":\"chat.completion\",\"created\":1749235636,\"model\":\"Qwen/Qwen2.5-VL-7B-Instruct\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"reasoning_content\":null,\"content\":\"hello\",\"tool_calls\":[]},\"logprobs\":null,\"finish_reason\":\"stop\",\"stop_reason\":null}],\"usage\":{\"prompt_tokens\":59,\"total_tokens\":61,\"completion_tokens\":2,\"prompt_tokens_details\":null},\"prompt_logprobs\":null}"
         }
       },
-      "recorded_at": "Mon, 20 Jan 2025 22:21:44 GMT"
+      "recorded_at": "Fri, 06 Jun 2025 18:47:16 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

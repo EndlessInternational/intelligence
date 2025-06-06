@@ -6,11 +6,11 @@
         "uri": "https://api.groq.com/openai/v1/chat/completions",
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"model\":\"llama-3.1-70b-versatile\",\"max_tokens\":64,\"stop\":[\"five\"],\"temperature\":0.0,\"stream\":true,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"count to twenty in words, all lower case, one word per line\\n\"}]}"
+          "string": "{\"model\":\"mistral-saba-24b\",\"max_tokens\":64,\"stop\":[\"five\"],\"temperature\":0.0,\"stream\":true,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"count to twenty in words, all lower case, one word per line\\n\"}]}"
         },
         "headers": {
           "User-Agent": [
-            "Faraday v2.12.0"
+            "Faraday v2.13.1"
           ],
           "Content-Type": [
             "application/json"
@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Mon, 20 Jan 2025 22:29:15 GMT"
+            "Fri, 06 Jun 2025 19:50:42 GMT"
           ],
           "content-type": [
             "text/event-stream"
@@ -38,17 +38,35 @@
           "connection": [
             "keep-alive"
           ],
-          "cf-ray": [
-            "<CF-RAY>"
-          ],
-          "cf-cache-status": [
-            "DYNAMIC"
-          ],
           "cache-control": [
             "no-cache"
           ],
           "vary": [
-            "Origin, Accept-Encoding"
+            "Origin"
+          ],
+          "x-groq-region": [
+            "us-west-1"
+          ],
+          "x-ratelimit-limit-requests": [
+            "1000"
+          ],
+          "x-ratelimit-limit-tokens": [
+            "6000"
+          ],
+          "x-ratelimit-remaining-requests": [
+            "976"
+          ],
+          "x-ratelimit-remaining-tokens": [
+            "5449"
+          ],
+          "x-ratelimit-reset-requests": [
+            "34m33.232999999s"
+          ],
+          "x-ratelimit-reset-tokens": [
+            "5.508999999s"
+          ],
+          "x-request-id": [
+            "<X-REQUEST-ID>"
           ],
           "via": [
             "1.1 google"
@@ -56,43 +74,25 @@
           "alt-svc": [
             "h3=\":443\"; ma=86400"
           ],
-          "x-groq-region": [
-            "us-west-1"
-          ],
-          "x-ratelimit-limit-requests": [
-            "14400"
-          ],
-          "x-ratelimit-limit-tokens": [
-            "6000"
-          ],
-          "x-ratelimit-remaining-requests": [
-            "14376"
-          ],
-          "x-ratelimit-remaining-tokens": [
-            "5365"
-          ],
-          "x-ratelimit-reset-requests": [
-            "2m23.799s"
-          ],
-          "x-ratelimit-reset-tokens": [
-            "6.348999999s"
-          ],
-          "x-request-id": [
-            "<X-REQUEST-ID>"
+          "cf-cache-status": [
+            "DYNAMIC"
           ],
           "set-cookie": [
             "<SET-COOKIE>"
           ],
           "server": [
             "cloudflare"
+          ],
+          "cf-ray": [
+            "<CF-RAY>"
           ]
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "data: {\"id\":\"chatcmpl-a4d6816e-2f1b-4e9c-92d3-378b2b8e3eb4\",\"object\":\"chat.completion.chunk\",\"created\":1737412155,\"model\":\"llama-3.1-70b-versatile\",\"system_fingerprint\":\"fp_4196e754db\",\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"\"},\"logprobs\":null,\"finish_reason\":null}],\"x_groq\":{\"id\":\"req_01jj2xb6c0e6xtcrhkyx6h3f4p\"}}\n\ndata: {\"id\":\"chatcmpl-a4d6816e-2f1b-4e9c-92d3-378b2b8e3eb4\",\"object\":\"chat.completion.chunk\",\"created\":1737412155,\"model\":\"llama-3.1-70b-versatile\",\"system_fingerprint\":\"fp_4196e754db\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"one\"},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"chatcmpl-a4d6816e-2f1b-4e9c-92d3-378b2b8e3eb4\",\"object\":\"chat.completion.chunk\",\"created\":1737412155,\"model\":\"llama-3.1-70b-versatile\",\"system_fingerprint\":\"fp_4196e754db\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"\\n\"},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"chatcmpl-a4d6816e-2f1b-4e9c-92d3-378b2b8e3eb4\",\"object\":\"chat.completion.chunk\",\"created\":1737412155,\"model\":\"llama-3.1-70b-versatile\",\"system_fingerprint\":\"fp_4196e754db\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"two\"},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"chatcmpl-a4d6816e-2f1b-4e9c-92d3-378b2b8e3eb4\",\"object\":\"chat.completion.chunk\",\"created\":1737412155,\"model\":\"llama-3.1-70b-versatile\",\"system_fingerprint\":\"fp_4196e754db\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"\\n\"},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"chatcmpl-a4d6816e-2f1b-4e9c-92d3-378b2b8e3eb4\",\"object\":\"chat.completion.chunk\",\"created\":1737412155,\"model\":\"llama-3.1-70b-versatile\",\"system_fingerprint\":\"fp_4196e754db\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"three\"},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"chatcmpl-a4d6816e-2f1b-4e9c-92d3-378b2b8e3eb4\",\"object\":\"chat.completion.chunk\",\"created\":1737412155,\"model\":\"llama-3.1-70b-versatile\",\"system_fingerprint\":\"fp_4196e754db\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"\\n\"},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"chatcmpl-a4d6816e-2f1b-4e9c-92d3-378b2b8e3eb4\",\"object\":\"chat.completion.chunk\",\"created\":1737412155,\"model\":\"llama-3.1-70b-versatile\",\"system_fingerprint\":\"fp_4196e754db\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"four\"},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"chatcmpl-a4d6816e-2f1b-4e9c-92d3-378b2b8e3eb4\",\"object\":\"chat.completion.chunk\",\"created\":1737412155,\"model\":\"llama-3.1-70b-versatile\",\"system_fingerprint\":\"fp_4196e754db\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"\\n\"},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"chatcmpl-a4d6816e-2f1b-4e9c-92d3-378b2b8e3eb4\",\"object\":\"chat.completion.chunk\",\"created\":1737412156,\"model\":\"llama-3.1-70b-versatile\",\"system_fingerprint\":\"fp_4196e754db\",\"choices\":[{\"index\":0,\"delta\":{},\"logprobs\":null,\"finish_reason\":\"stop\"}],\"x_groq\":{\"id\":\"req_01jj2xb6c0e6xtcrhkyx6h3f4p\",\"usage\":{\"queue_time\":0.026335775,\"prompt_tokens\":85,\"prompt_time\":0.014529095,\"completion_tokens\":52,\"completion_time\":0.189090909,\"total_tokens\":137,\"total_time\":0.203620004}}}\n\ndata: [DONE]\n\n"
+          "string": "data: {\"id\":\"chatcmpl-760d266f-21b0-4655-a1ee-21af665d86fa\",\"object\":\"chat.completion.chunk\",\"created\":1749239442,\"model\":\"mistral-saba-24b\",\"system_fingerprint\":\"fp_07e680a590\",\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"\"},\"logprobs\":null,\"finish_reason\":null}],\"x_groq\":{\"id\":\"req_01jx3cqb0vfj98qmn5kpz8974g\"}}\n\ndata: {\"id\":\"chatcmpl-760d266f-21b0-4655-a1ee-21af665d86fa\",\"object\":\"chat.completion.chunk\",\"created\":1749239442,\"model\":\"mistral-saba-24b\",\"system_fingerprint\":\"fp_07e680a590\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"one\"},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"chatcmpl-760d266f-21b0-4655-a1ee-21af665d86fa\",\"object\":\"chat.completion.chunk\",\"created\":1749239442,\"model\":\"mistral-saba-24b\",\"system_fingerprint\":\"fp_07e680a590\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"\\n\"},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"chatcmpl-760d266f-21b0-4655-a1ee-21af665d86fa\",\"object\":\"chat.completion.chunk\",\"created\":1749239442,\"model\":\"mistral-saba-24b\",\"system_fingerprint\":\"fp_07e680a590\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"two\"},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"chatcmpl-760d266f-21b0-4655-a1ee-21af665d86fa\",\"object\":\"chat.completion.chunk\",\"created\":1749239442,\"model\":\"mistral-saba-24b\",\"system_fingerprint\":\"fp_07e680a590\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"\\n\"},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"chatcmpl-760d266f-21b0-4655-a1ee-21af665d86fa\",\"object\":\"chat.completion.chunk\",\"created\":1749239442,\"model\":\"mistral-saba-24b\",\"system_fingerprint\":\"fp_07e680a590\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"three\"},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"chatcmpl-760d266f-21b0-4655-a1ee-21af665d86fa\",\"object\":\"chat.completion.chunk\",\"created\":1749239442,\"model\":\"mistral-saba-24b\",\"system_fingerprint\":\"fp_07e680a590\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"\\n\"},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"chatcmpl-760d266f-21b0-4655-a1ee-21af665d86fa\",\"object\":\"chat.completion.chunk\",\"created\":1749239442,\"model\":\"mistral-saba-24b\",\"system_fingerprint\":\"fp_07e680a590\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"four\"},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"chatcmpl-760d266f-21b0-4655-a1ee-21af665d86fa\",\"object\":\"chat.completion.chunk\",\"created\":1749239442,\"model\":\"mistral-saba-24b\",\"system_fingerprint\":\"fp_07e680a590\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"\\n\"},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"chatcmpl-760d266f-21b0-4655-a1ee-21af665d86fa\",\"object\":\"chat.completion.chunk\",\"created\":1749239442,\"model\":\"mistral-saba-24b\",\"system_fingerprint\":\"fp_07e680a590\",\"choices\":[{\"index\":0,\"delta\":{},\"logprobs\":null,\"finish_reason\":\"stop\"}],\"x_groq\":{\"id\":\"req_01jx3cqb0vfj98qmn5kpz8974g\",\"usage\":{\"queue_time\":0.220042723,\"prompt_tokens\":63,\"prompt_time\":0.003767175,\"completion_tokens\":58,\"completion_time\":0.175757576,\"total_tokens\":121,\"total_time\":0.179524751}}}\n\ndata: [DONE]\n\n"
         }
       },
-      "recorded_at": "Mon, 20 Jan 2025 22:29:15 GMT"
+      "recorded_at": "Fri, 06 Jun 2025 19:50:42 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

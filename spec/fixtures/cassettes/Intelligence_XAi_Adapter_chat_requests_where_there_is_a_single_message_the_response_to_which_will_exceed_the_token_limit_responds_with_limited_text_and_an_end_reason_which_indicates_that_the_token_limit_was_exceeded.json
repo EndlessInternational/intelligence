@@ -6,11 +6,11 @@
         "uri": "https://api.x.ai/v1/chat/completions",
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"model\":\"grok-beta\",\"max_tokens\":24,\"temperature\":0.0,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"count to twenty in words, all lower case, one word per line\\n\"}]}"
+          "string": "{\"model\":\"grok-3\",\"max_tokens\":24,\"temperature\":0.0,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"count to twenty in words, all lower case, one word per line\\n\"}]}"
         },
         "headers": {
           "User-Agent": [
-            "Faraday v2.12.0"
+            "Faraday v2.13.1"
           ],
           "Content-Type": [
             "application/json"
@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Tue, 21 Jan 2025 03:38:31 GMT"
+            "Fri, 06 Jun 2025 19:43:55 GMT"
           ],
           "content-type": [
             "application/json"
@@ -37,6 +37,12 @@
           ],
           "connection": [
             "keep-alive"
+          ],
+          "x-zero-data-retention": [
+            "false"
+          ],
+          "x-request-id": [
+            "<X-REQUEST-ID>"
           ],
           "vary": [
             "origin, access-control-request-method, access-control-request-headers"
@@ -49,6 +55,9 @@
           ],
           "cf-cache-status": [
             "DYNAMIC"
+          ],
+          "set-cookie": [
+            "<SET-COOKIE>"
           ],
           "strict-transport-security": [
             "max-age=31536000"
@@ -65,10 +74,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\"id\":\"ec1f89f9-97e1-4837-9c7f-e70e515aa301\",\"object\":\"chat.completion\",\"created\":1737430710,\"model\":\"grok-beta\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"one\\ntwo\\nthree\\nfour\\nfive\\nsix\\nseven\\neight\\nnine\\nten\\neleven\\ntw\",\"refusal\":null},\"finish_reason\":\"length\"}],\"usage\":{\"prompt_tokens\":64,\"completion_tokens\":24,\"total_tokens\":88,\"prompt_tokens_details\":{\"text_tokens\":64,\"audio_tokens\":0,\"image_tokens\":0,\"cached_tokens\":0}},\"system_fingerprint\":\"fp_18e99db1fc\"}"
+          "string": "{\"id\":\"4d688cfa-3d54-4028-ae4c-27c43c0923f9\",\"object\":\"chat.completion\",\"created\":1749239034,\"model\":\"grok-3\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"one\\ntwo\\nthree\\nfour\\nfive\\nsix\\nseven\\neight\\nnine\\nten\\neleven\\ntw\",\"refusal\":null},\"finish_reason\":\"length\"}],\"usage\":{\"prompt_tokens\":63,\"completion_tokens\":24,\"total_tokens\":87,\"prompt_tokens_details\":{\"text_tokens\":63,\"audio_tokens\":0,\"image_tokens\":0,\"cached_tokens\":3},\"completion_tokens_details\":{\"reasoning_tokens\":0,\"audio_tokens\":0,\"accepted_prediction_tokens\":0,\"rejected_prediction_tokens\":0},\"num_sources_used\":0},\"system_fingerprint\":\"fp_d8d6e9f7d0\"}"
         }
       },
-      "recorded_at": "Tue, 21 Jan 2025 03:38:31 GMT"
+      "recorded_at": "Fri, 06 Jun 2025 19:43:55 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

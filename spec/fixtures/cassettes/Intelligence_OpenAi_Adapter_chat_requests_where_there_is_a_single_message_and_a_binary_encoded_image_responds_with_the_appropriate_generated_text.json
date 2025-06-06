@@ -10,7 +10,7 @@
         },
         "headers": {
           "User-Agent": [
-            "Faraday v2.12.0"
+            "Faraday v2.13.1"
           ],
           "Content-Type": [
             "application/json"
@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Mon, 20 Jan 2025 22:16:21 GMT"
+            "Fri, 06 Jun 2025 18:34:28 GMT"
           ],
           "content-type": [
             "application/json"
@@ -45,13 +45,16 @@
             "<OPENAI-ORGANIZATION>"
           ],
           "openai-processing-ms": [
-            "1179"
+            "674"
           ],
           "openai-version": [
             "2020-10-01"
           ],
+          "x-envoy-upstream-service-time": [
+            "641"
+          ],
           "x-ratelimit-limit-input-images": [
-            "50000"
+            "250000"
           ],
           "x-ratelimit-limit-requests": [
             "10000"
@@ -60,16 +63,16 @@
             "30000000"
           ],
           "x-ratelimit-remaining-input-images": [
-            "49999"
+            "249999"
           ],
           "x-ratelimit-remaining-requests": [
             "9999"
           ],
           "x-ratelimit-remaining-tokens": [
-            "29999149"
+            "29999164"
           ],
           "x-ratelimit-reset-input-images": [
-            "1ms"
+            "0s"
           ],
           "x-ratelimit-reset-requests": [
             "6ms"
@@ -107,10 +110,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\n  \"id\": \"chatcmpl-AruM87Q1cfzb4WvlSwCnoYNLCuf5c\",\n  \"object\": \"chat.completion\",\n  \"created\": 1737411380,\n  \"model\": \"gpt-4o-2024-08-06\",\n  \"choices\": [\n    {\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": \"A red balloon with a string attached.\",\n        \"refusal\": null\n      },\n      \"logprobs\": null,\n      \"finish_reason\": \"stop\"\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 512,\n    \"completion_tokens\": 9,\n    \"total_tokens\": 521,\n    \"prompt_tokens_details\": {\n      \"cached_tokens\": 0,\n      \"audio_tokens\": 0\n    },\n    \"completion_tokens_details\": {\n      \"reasoning_tokens\": 0,\n      \"audio_tokens\": 0,\n      \"accepted_prediction_tokens\": 0,\n      \"rejected_prediction_tokens\": 0\n    }\n  },\n  \"service_tier\": \"default\",\n  \"system_fingerprint\": \"fp_4691090a87\"\n}\n"
+          "string": "{\n  \"id\": \"chatcmpl-BfWBYAfT2qUNS8wbfVojEq4UM1w4V\",\n  \"object\": \"chat.completion\",\n  \"created\": 1749234868,\n  \"model\": \"gpt-4o-2024-08-06\",\n  \"choices\": [\n    {\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": \"A red balloon with a string attached.\",\n        \"refusal\": null,\n        \"annotations\": []\n      },\n      \"logprobs\": null,\n      \"finish_reason\": \"stop\"\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 316,\n    \"completion_tokens\": 8,\n    \"total_tokens\": 324,\n    \"prompt_tokens_details\": {\n      \"cached_tokens\": 0,\n      \"audio_tokens\": 0\n    },\n    \"completion_tokens_details\": {\n      \"reasoning_tokens\": 0,\n      \"audio_tokens\": 0,\n      \"accepted_prediction_tokens\": 0,\n      \"rejected_prediction_tokens\": 0\n    }\n  },\n  \"service_tier\": \"default\",\n  \"system_fingerprint\": \"fp_a288987b44\"\n}\n"
         }
       },
-      "recorded_at": "Mon, 20 Jan 2025 22:16:21 GMT"
+      "recorded_at": "Fri, 06 Jun 2025 18:34:28 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

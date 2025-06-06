@@ -6,11 +6,11 @@
         "uri": "https://api.together.xyz/v1/chat/completions",
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"model\":\"meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo\",\"max_tokens\":24.0,\"temperature\":0.0,\"stop\":[\"five\"],\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"count to ten in words, all lower case, one word per line\\n\"}]}"
+          "string": "{\"model\":\"meta-llama/Llama-3.3-70B-Instruct-Turbo\",\"max_tokens\":24.0,\"temperature\":0.0,\"stop\":[\"five\"],\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"count to ten in words, all lower case, one word per line\\n\"}]}"
         },
         "headers": {
           "User-Agent": [
-            "Faraday v2.12.0"
+            "Faraday v2.13.1"
           ],
           "Content-Type": [
             "application/json"
@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Tue, 21 Jan 2025 01:55:19 GMT"
+            "Fri, 06 Jun 2025 19:37:16 GMT"
           ],
           "content-type": [
             "application/json; charset=utf-8"
@@ -45,28 +45,28 @@
             "DYNAMIC"
           ],
           "retry-after": [
-            "2"
+            "1"
           ],
           "access-control-allow-origin": [
             "*"
           ],
           "etag": [
-            "W/\"20a-ugRDma3VmIith6iiZz+oJ4eN3iM\""
+            "W/\"22c-7o+MelK0pSBdUda9O3+0zQNbTAU\""
           ],
           "strict-transport-security": [
             "max-age=15552000; includeSubDomains"
           ],
           "x-amzn-trace-id": [
-            "beeb7c87-3836-48ce-9659-1e88c97bcbd8-noamzn"
+            "27f8090b-f7fc-4cae-b786-29308f6dbdbf-noamzn"
           ],
           "x-api-call-end": [
-            "2025-01-21T01:55:19.660Z"
+            "2025-06-06T19:37:16.627Z"
           ],
           "x-api-call-start": [
-            "2025-01-21T01:55:19.541Z"
+            "2025-06-06T19:37:16.382Z"
           ],
           "x-api-received": [
-            "2025-01-21T01:55:19.428Z"
+            "2025-06-06T19:37:16.372Z"
           ],
           "x-inference-version": [
             "v2"
@@ -75,19 +75,22 @@
             "false"
           ],
           "x-ratelimit-limit": [
-            "30"
+            "10"
           ],
           "x-ratelimit-limit-tokens": [
             "3000"
           ],
           "x-ratelimit-remaining": [
-            "59"
+            "18"
           ],
           "x-ratelimit-remaining-tokens": [
-            "3000"
+            "2847"
           ],
           "x-ratelimit-reset": [
-            "2"
+            "1"
+          ],
+          "x-request-id": [
+            "<X-REQUEST-ID>"
           ],
           "vary": [
             "Accept-Encoding"
@@ -104,10 +107,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "{\n  \"id\": \"9053ae6e1b3e936c\",\n  \"object\": \"chat.completion\",\n  \"created\": 1737424519,\n  \"model\": \"meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo\",\n  \"prompt\": [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"stop\",\n      \"seed\": 5650495337746743000,\n      \"logprobs\": null,\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": \"one\\ntwo\\nthree\\nfour\\n\",\n        \"tool_calls\": []\n      }\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 84,\n    \"completion_tokens\": 9,\n    \"total_tokens\": 93\n  }\n}"
+          "string": "{\n  \"id\": \"nx5EF31-3NKUce-94ba5d015b83c3a3\",\n  \"object\": \"chat.completion\",\n  \"created\": 1749238636,\n  \"model\": \"meta-llama/Llama-3.3-70B-Instruct-Turbo\",\n  \"prompt\": [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"stop\",\n      \"seed\": 6537358500130150000,\n      \"logprobs\": null,\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": \"one\\ntwo\\nthree\\nfour\\n\",\n        \"tool_calls\": []\n      }\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 84,\n    \"completion_tokens\": 9,\n    \"total_tokens\": 93,\n    \"cached_tokens\": 0\n  }\n}"
         }
       },
-      "recorded_at": "Tue, 21 Jan 2025 01:55:19 GMT"
+      "recorded_at": "Fri, 06 Jun 2025 19:37:15 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

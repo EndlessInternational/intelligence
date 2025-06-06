@@ -6,11 +6,11 @@
         "uri": "https://api.together.xyz/v1/chat/completions",
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"model\":\"meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo\",\"max_tokens\":128.0,\"temperature\":0.0,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"What is the weather in London, Paris and Rome right now?\\n\"}],\"tools\":[{\"type\":\"function\",\"function\":{\"name\":\"get_weather\",\"description\":\"The get_weather tool will return the current weather in a given locality.\",\"parameters\":{\"type\":\"object\",\"properties\":{\"city\":{\"type\":\"string\",\"description\":\"The city or town for which the current weather should be returned.\"},\"state\":{\"type\":\"string\",\"description\":\"The state or province for which the current weather should be returned. If this is not provided the largest or most prominent city with the given name, in the given country or in the worldi, will be assumed.\"},\"country\":{\"type\":\"string\",\"description\":\"The country for which the given weather should be returned. If this is not provided the largest or most prominent city with the given name will be returned.\"}},\"required\":[\"city\"]}}}]}"
+          "string": "{\"model\":\"meta-llama/Llama-3.3-70B-Instruct-Turbo\",\"max_tokens\":128.0,\"temperature\":0.0,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"What is the weather in London, Paris and Rome right now?\\n\"}],\"tools\":[{\"type\":\"function\",\"function\":{\"name\":\"get_weather\",\"description\":\"The get_weather tool will return the current weather in a given locality.\",\"parameters\":{\"type\":\"object\",\"properties\":{\"city\":{\"type\":\"string\",\"description\":\"The city or town for which the current weather should be returned.\"},\"state\":{\"type\":\"string\",\"description\":\"The state or province for which the current weather should be returned. If this is not provided the largest or most prominent city with the given name, in the given country or in the worldi, will be assumed.\"},\"country\":{\"type\":\"string\",\"description\":\"The country for which the given weather should be returned. If this is not provided the largest or most prominent city with the given name will be returned.\"}},\"required\":[\"city\"]}}}]}"
         },
         "headers": {
           "User-Agent": [
-            "Faraday v2.12.0"
+            "Faraday v2.13.1"
           ],
           "Content-Type": [
             "application/json"
@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Tue, 21 Jan 2025 01:55:24 GMT"
+            "Fri, 06 Jun 2025 19:37:26 GMT"
           ],
           "content-type": [
             "application/json; charset=utf-8"
@@ -51,22 +51,22 @@
             "*"
           ],
           "etag": [
-            "W/\"55c-WLSer5Dvmt02ob80f8ogJTXvOmQ\""
+            "W/\"573-cM6THGKcDkaHU8AcCpYIoUa7wz0\""
           ],
           "strict-transport-security": [
             "max-age=15552000; includeSubDomains"
           ],
           "x-amzn-trace-id": [
-            "6dc8b4ac-9e6b-4782-be88-8cb4c73ecb6a-noamzn"
+            "24c4b6a4-1c1f-40c6-b51a-920507281546-noamzn"
           ],
           "x-api-call-end": [
-            "2025-01-21T01:55:24.663Z"
+            "2025-06-06T19:37:27.164Z"
           ],
           "x-api-call-start": [
-            "2025-01-21T01:55:24.401Z"
+            "2025-06-06T19:37:26.490Z"
           ],
           "x-api-received": [
-            "2025-01-21T01:55:24.394Z"
+            "2025-06-06T19:37:26.473Z"
           ],
           "x-inference-version": [
             "v2"
@@ -75,19 +75,22 @@
             "false"
           ],
           "x-ratelimit-limit": [
-            "30"
+            "10"
           ],
           "x-ratelimit-limit-tokens": [
             "3000"
           ],
           "x-ratelimit-remaining": [
-            "59"
+            "19"
           ],
           "x-ratelimit-remaining-tokens": [
-            "3000"
+            "2806"
           ],
           "x-ratelimit-reset": [
             "2"
+          ],
+          "x-request-id": [
+            "<X-REQUEST-ID>"
           ],
           "vary": [
             "Accept-Encoding"
@@ -104,10 +107,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "{\n  \"id\": \"9053ae8cee38b9d0\",\n  \"object\": \"chat.completion\",\n  \"created\": 1737424524,\n  \"model\": \"meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo\",\n  \"prompt\": [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"tool_calls\",\n      \"seed\": 16574088246742567000,\n      \"logprobs\": null,\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": null,\n        \"tool_calls\": [\n          {\n            \"index\": 0,\n            \"id\": \"call_mxq383830r77tuy0cc13x3sv\",\n            \"type\": \"function\",\n            \"function\": {\n              \"arguments\": \"{\\\"city\\\":\\\"London\\\",\\\"country\\\":\\\"United Kingdom\\\"}\",\n              \"name\": \"get_weather\"\n            }\n          },\n          {\n            \"index\": 1,\n            \"id\": \"call_hqjk1cd3k2ujimo50orxiw2c\",\n            \"type\": \"function\",\n            \"function\": {\n              \"arguments\": \"{\\\"city\\\":\\\"Paris\\\",\\\"country\\\":\\\"France\\\"}\",\n              \"name\": \"get_weather\"\n            }\n          },\n          {\n            \"index\": 2,\n            \"id\": \"call_10sry3hg1xwoxz3qcnggkfjb\",\n            \"type\": \"function\",\n            \"function\": {\n              \"arguments\": \"{\\\"city\\\":\\\"Rome\\\",\\\"country\\\":\\\"Italy\\\"}\",\n              \"name\": \"get_weather\"\n            }\n          }\n        ]\n      }\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 461,\n    \"completion_tokens\": 58,\n    \"total_tokens\": 519\n  }\n}"
+          "string": "{\n  \"id\": \"nx5EJ3A-3NKUce-94ba5d407c52def0\",\n  \"object\": \"chat.completion\",\n  \"created\": 1749238646,\n  \"model\": \"meta-llama/Llama-3.3-70B-Instruct-Turbo\",\n  \"prompt\": [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"tool_calls\",\n      \"seed\": 5924303012865167000,\n      \"logprobs\": null,\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": null,\n        \"tool_calls\": [\n          {\n            \"index\": 0,\n            \"id\": \"call_yz0d08lny3948kv4qlsoyadn\",\n            \"type\": \"function\",\n            \"function\": {\n              \"arguments\": \"{\\\"city\\\":\\\"London\\\",\\\"country\\\":\\\"UK\\\"}\",\n              \"name\": \"get_weather\"\n            }\n          },\n          {\n            \"index\": 1,\n            \"id\": \"call_id5ss2bq10u5mai5odnsybv8\",\n            \"type\": \"function\",\n            \"function\": {\n              \"arguments\": \"{\\\"city\\\":\\\"Paris\\\",\\\"country\\\":\\\"France\\\"}\",\n              \"name\": \"get_weather\"\n            }\n          },\n          {\n            \"index\": 2,\n            \"id\": \"call_rqzn850grrdled6ug47qxu2j\",\n            \"type\": \"function\",\n            \"function\": {\n              \"arguments\": \"{\\\"city\\\":\\\"Rome\\\",\\\"country\\\":\\\"Italy\\\"}\",\n              \"name\": \"get_weather\"\n            }\n          }\n        ]\n      }\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 357,\n    \"completion_tokens\": 68,\n    \"total_tokens\": 425,\n    \"cached_tokens\": 256\n  }\n}"
         }
       },
-      "recorded_at": "Tue, 21 Jan 2025 01:55:24 GMT"
+      "recorded_at": "Fri, 06 Jun 2025 19:37:26 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

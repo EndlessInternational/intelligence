@@ -6,11 +6,11 @@
         "uri": "https://api.x.ai/v1/chat/completions",
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"model\":\"grok-beta\",\"max_tokens\":128,\"temperature\":0.0,\"stream\":true,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"the secret word is 'blue'\\n\"},{\"role\":\"assistant\",\"content\":\"ok\\n\"},{\"role\":\"user\",\"content\":\"what is the secret word?\\nrespond with the word only\\n\"}]}"
+          "string": "{\"model\":\"grok-3\",\"max_tokens\":128,\"temperature\":0.0,\"stream\":true,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"the secret word is 'blue'\\n\"},{\"role\":\"assistant\",\"content\":\"ok\\n\"},{\"role\":\"user\",\"content\":\"what is the secret word?\\nrespond with the word only\\n\"}]}"
         },
         "headers": {
           "User-Agent": [
-            "Faraday v2.12.0"
+            "Faraday v2.13.1"
           ],
           "Content-Type": [
             "application/json"
@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Tue, 21 Jan 2025 03:39:00 GMT"
+            "Fri, 06 Jun 2025 19:44:27 GMT"
           ],
           "content-type": [
             "text/event-stream"
@@ -41,6 +41,12 @@
           "cache-control": [
             "no-cache"
           ],
+          "x-zero-data-retention": [
+            "false"
+          ],
+          "x-request-id": [
+            "<X-REQUEST-ID>"
+          ],
           "vary": [
             "origin, access-control-request-method, access-control-request-headers"
           ],
@@ -52,6 +58,9 @@
           ],
           "cf-cache-status": [
             "DYNAMIC"
+          ],
+          "set-cookie": [
+            "<SET-COOKIE>"
           ],
           "strict-transport-security": [
             "max-age=31536000"
@@ -65,10 +74,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "data: {\"id\":\"087fd14b-e359-44cc-91f4-afcd280ac077\",\"object\":\"chat.completion.chunk\",\"created\":1737430740,\"model\":\"grok-beta\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"blue\",\"role\":\"assistant\"}}],\"usage\":{\"prompt_tokens\":78,\"completion_tokens\":1,\"total_tokens\":79,\"prompt_tokens_details\":{\"text_tokens\":78,\"audio_tokens\":0,\"image_tokens\":0,\"cached_tokens\":0}},\"system_fingerprint\":\"fp_18e99db1fc\"}\n\ndata: {\"id\":\"087fd14b-e359-44cc-91f4-afcd280ac077\",\"object\":\"chat.completion.chunk\",\"created\":1737430740,\"model\":\"grok-beta\",\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":78,\"completion_tokens\":2,\"total_tokens\":80,\"prompt_tokens_details\":{\"text_tokens\":78,\"audio_tokens\":0,\"image_tokens\":0,\"cached_tokens\":0}},\"system_fingerprint\":\"fp_18e99db1fc\"}\n\ndata: [DONE]\n\n"
+          "string": "data: {\"id\":\"95452a09-ab25-433b-8ac0-74a05ab095c9\",\"object\":\"chat.completion.chunk\",\"created\":1749239067,\"model\":\"grok-3\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"blue\",\"role\":\"assistant\"}}],\"system_fingerprint\":\"fp_d8d6e9f7d0\"}\n\ndata: {\"id\":\"95452a09-ab25-433b-8ac0-74a05ab095c9\",\"object\":\"chat.completion.chunk\",\"created\":1749239067,\"model\":\"grok-3\",\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\"},\"finish_reason\":\"stop\"}],\"system_fingerprint\":\"fp_d8d6e9f7d0\"}\n\ndata: [DONE]\n\n"
         }
       },
-      "recorded_at": "Tue, 21 Jan 2025 03:39:00 GMT"
+      "recorded_at": "Fri, 06 Jun 2025 19:44:27 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

@@ -3,14 +3,14 @@
     {
       "request": {
         "method": "post",
-        "uri": "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent?key=<KEY>",
+        "uri": "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=<KEY>",
         "body": {
           "encoding": "UTF-8",
           "string": "{\"generationConfig\":{\"maxOutputTokens\":16,\"temperature\":0.0,\"stopSequences\":[\"five\"]},\"systemInstruction\":{\"role\":\"user\",\"parts\":[{\"text\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"}]},\"contents\":[{\"role\":\"user\",\"parts\":[{\"text\":\"count to ten in words, all lower case, one word per line\\n\"}]}]}"
         },
         "headers": {
           "User-Agent": [
-            "Faraday v2.12.0"
+            "Faraday v2.13.1"
           ],
           "Content-Type": [
             "application/json"
@@ -33,7 +33,7 @@
             "gzip"
           ],
           "date": [
-            "Tue, 21 Jan 2025 02:55:24 GMT"
+            "Fri, 06 Jun 2025 18:31:51 GMT"
           ],
           "server": [
             "scaffolding on HTTPServer2"
@@ -48,7 +48,7 @@
             "nosniff"
           ],
           "server-timing": [
-            "gfet4t7; dur=741"
+            "gfet4t7; dur=437"
           ],
           "alt-svc": [
             "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
@@ -59,10 +59,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "{\n  \"candidates\": [\n    {\n      \"content\": {\n        \"parts\": [\n          {\n            \"text\": \"one\\ntwo\\nthree\\nfour\\n\"\n          }\n        ],\n        \"role\": \"model\"\n      },\n      \"finishReason\": \"STOP\",\n      \"avgLogprobs\": -1.4902980183251202e-08\n    }\n  ],\n  \"usageMetadata\": {\n    \"promptTokenCount\": 60,\n    \"candidatesTokenCount\": 8,\n    \"totalTokenCount\": 68\n  },\n  \"modelVersion\": \"gemini-1.5-pro-002\"\n}\n"
+          "string": "{\n  \"candidates\": [\n    {\n      \"content\": {\n        \"parts\": [\n          {\n            \"text\": \"one\\ntwo\\nthree\\nfour\\n\"\n          }\n        ],\n        \"role\": \"model\"\n      },\n      \"finishReason\": \"STOP\",\n      \"avgLogprobs\": -0.00028625514823943377\n    }\n  ],\n  \"usageMetadata\": {\n    \"promptTokenCount\": 58,\n    \"candidatesTokenCount\": 8,\n    \"totalTokenCount\": 66,\n    \"promptTokensDetails\": [\n      {\n        \"modality\": \"TEXT\",\n        \"tokenCount\": 58\n      }\n    ],\n    \"candidatesTokensDetails\": [\n      {\n        \"modality\": \"TEXT\",\n        \"tokenCount\": 8\n      }\n    ]\n  },\n  \"modelVersion\": \"gemini-2.0-flash\",\n  \"responseId\": \"FzRDaM3jH_2SmNAPlJmAmQs\"\n}\n"
         }
       },
-      "recorded_at": "Tue, 21 Jan 2025 02:55:24 GMT"
+      "recorded_at": "Fri, 06 Jun 2025 18:31:51 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

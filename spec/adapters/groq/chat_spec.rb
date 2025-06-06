@@ -12,7 +12,7 @@ RSpec.describe "#{Intelligence::Adapter[ :groq ]} chat requests", :groq do
     Intelligence::Adapter[ :groq ].build! do   
       key                     ENV[ 'GROQ_API_KEY' ]
       chat_options do
-        model                 'llama-3.1-70b-versatile'
+        model                 'mistral-saba-24b'
         max_tokens            16
         temperature           0
       end
@@ -23,7 +23,7 @@ RSpec.describe "#{Intelligence::Adapter[ :groq ]} chat requests", :groq do
     Intelligence::Adapter[ :groq ].build! do   
       key                     ENV[ 'GROQ_API_KEY' ]
       chat_options do
-        model                 'llama-3.1-70b-versatile'
+        model                 'mistral-saba-24b'
         max_tokens            32 
         stop                  'five'
         temperature           0
@@ -35,7 +35,7 @@ RSpec.describe "#{Intelligence::Adapter[ :groq ]} chat requests", :groq do
     Intelligence::Adapter[ :groq ].build! do 
       key                     'this-key-is-not-valid'  
       chat_options do
-        model                 'llama-3.1-70b-versatile'
+        model                 'mistral-saba-24b'
         max_tokens            16
         temperature           0
       end

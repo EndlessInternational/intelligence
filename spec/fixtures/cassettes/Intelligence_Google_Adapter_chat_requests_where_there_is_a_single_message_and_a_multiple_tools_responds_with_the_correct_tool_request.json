@@ -3,14 +3,14 @@
     {
       "request": {
         "method": "post",
-        "uri": "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent?key=<KEY>",
+        "uri": "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=<KEY>",
         "body": {
           "encoding": "UTF-8",
           "string": "{\"generationConfig\":{\"maxOutputTokens\":64,\"temperature\":0.0},\"tools\":{\"function_declarations\":[{\"name\":\"get_location\",\"description\":\"The get_location tool will return the users city, state or province and country.\"},{\"name\":\"get_weather\",\"description\":\"The get_weather tool will return the current weather in a given locality.\",\"parameters\":{\"type\":\"object\",\"properties\":{\"city\":{\"type\":\"string\",\"description\":\"The city or town for which the current weather should be returned.\"},\"state\":{\"type\":\"string\",\"description\":\"The state or province for which the current weather should be returned. If this is not provided the largest or most prominent city with the given name, in the given country or in the worldi, will be assumed.\"},\"country\":{\"type\":\"string\",\"description\":\"The country for which the given weather should be returned. If this is not provided the largest or most prominent city with the given name will be returned.\"}},\"required\":[\"city\"]}}]},\"systemInstruction\":{\"role\":\"user\",\"parts\":[{\"text\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"}]},\"contents\":[{\"role\":\"user\",\"parts\":[{\"text\":\"Where am I located?\"}]}]}"
         },
         "headers": {
           "User-Agent": [
-            "Faraday v2.12.0"
+            "Faraday v2.13.1"
           ],
           "Content-Type": [
             "application/json"
@@ -33,7 +33,7 @@
             "gzip"
           ],
           "date": [
-            "Tue, 21 Jan 2025 02:55:55 GMT"
+            "Fri, 06 Jun 2025 18:33:40 GMT"
           ],
           "server": [
             "scaffolding on HTTPServer2"
@@ -48,7 +48,7 @@
             "nosniff"
           ],
           "server-timing": [
-            "gfet4t7; dur=771"
+            "gfet4t7; dur=439"
           ],
           "alt-svc": [
             "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
@@ -59,10 +59,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "{\n  \"candidates\": [\n    {\n      \"content\": {\n        \"parts\": [\n          {\n            \"functionCall\": {\n              \"name\": \"get_location\",\n              \"args\": {}\n            }\n          }\n        ],\n        \"role\": \"model\"\n      },\n      \"finishReason\": \"STOP\"\n    }\n  ],\n  \"usageMetadata\": {\n    \"promptTokenCount\": 249,\n    \"candidatesTokenCount\": 3,\n    \"totalTokenCount\": 252\n  },\n  \"modelVersion\": \"gemini-1.5-pro-002\"\n}\n"
+          "string": "{\n  \"candidates\": [\n    {\n      \"content\": {\n        \"parts\": [\n          {\n            \"functionCall\": {\n              \"name\": \"get_location\",\n              \"args\": {}\n            }\n          }\n        ],\n        \"role\": \"model\"\n      },\n      \"finishReason\": \"STOP\",\n      \"avgLogprobs\": 7.1101821959018707e-06\n    }\n  ],\n  \"usageMetadata\": {\n    \"promptTokenCount\": 181,\n    \"candidatesTokenCount\": 3,\n    \"totalTokenCount\": 184,\n    \"promptTokensDetails\": [\n      {\n        \"modality\": \"TEXT\",\n        \"tokenCount\": 181\n      }\n    ],\n    \"candidatesTokensDetails\": [\n      {\n        \"modality\": \"TEXT\",\n        \"tokenCount\": 3\n      }\n    ]\n  },\n  \"modelVersion\": \"gemini-2.0-flash\",\n  \"responseId\": \"hDRDaOWmFe2cnvgP0pW0qAg\"\n}\n"
         }
       },
-      "recorded_at": "Tue, 21 Jan 2025 02:55:55 GMT"
+      "recorded_at": "Fri, 06 Jun 2025 18:33:40 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

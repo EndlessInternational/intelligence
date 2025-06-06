@@ -10,7 +10,7 @@
         },
         "headers": {
           "User-Agent": [
-            "Faraday v2.12.0"
+            "Faraday v2.13.1"
           ],
           "Content-Type": [
             "application/json"
@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Tue, 21 Jan 2025 01:55:25 GMT"
+            "Fri, 06 Jun 2025 19:37:27 GMT"
           ],
           "content-type": [
             "application/json; charset=utf-8"
@@ -48,16 +48,19 @@
             "*"
           ],
           "etag": [
-            "W/\"114-3Skw8qBlJBgG44Mlf7uuugCzh9Q\""
+            "W/\"123-jFCfOiPxQhhunbNAPf0tRPsrmuo\""
           ],
           "strict-transport-security": [
             "max-age=15552000; includeSubDomains"
           ],
           "x-api-received": [
-            "2025-01-21T01:55:25.012Z"
+            "2025-06-06T19:37:27.226Z"
           ],
           "x-content-type-options": [
             "nosniff"
+          ],
+          "x-request-id": [
+            "<X-REQUEST-ID>"
           ],
           "vary": [
             "Accept-Encoding"
@@ -74,10 +77,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "{\n  \"id\": \"9053ae906c4aeb39\",\n  \"error\": {\n    \"message\": \"Unable to access model invalid_model. Please visit https://api.together.ai/models to view the list of supported models.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"model_not_available\"\n  }\n}"
+          "string": "{\n  \"id\": \"nx5EJG9-4yUbBN-94ba5d484afd7624\",\n  \"error\": {\n    \"message\": \"Unable to access model invalid_model. Please visit https://api.together.ai/models to view the list of supported models.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"model_not_available\"\n  }\n}"
         }
       },
-      "recorded_at": "Tue, 21 Jan 2025 01:55:25 GMT"
+      "recorded_at": "Fri, 06 Jun 2025 19:37:27 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

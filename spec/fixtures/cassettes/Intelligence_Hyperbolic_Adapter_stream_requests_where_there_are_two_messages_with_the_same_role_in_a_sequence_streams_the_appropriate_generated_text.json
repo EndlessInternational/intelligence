@@ -6,11 +6,11 @@
         "uri": "https://api.hyperbolic.xyz/v1/chat/completions",
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"model\":\"meta-llama/Meta-Llama-3.1-70B-Instruct\",\"max_tokens\":16,\"temperature\":0.0,\"stream\":true,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"the secret word is 'blue'\\n\"},{\"role\":\"assistant\",\"content\":\"ok\\n\"},{\"role\":\"user\",\"content\":\"the secret word has been changed to 'red'!\\n\"},{\"role\":\"user\",\"content\":\"what is the secret word?\\n\"}]}"
+          "string": "{\"model\":\"Qwen/Qwen2.5-VL-7B-Instruct\",\"max_tokens\":16,\"temperature\":0.0,\"stream\":true,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"the secret word is 'blue'\\n\"},{\"role\":\"assistant\",\"content\":\"ok\\n\"},{\"role\":\"user\",\"content\":\"the secret word has been changed to 'red'!\\n\"},{\"role\":\"user\",\"content\":\"what is the secret word?\\n\"}]}"
         },
         "headers": {
           "User-Agent": [
-            "Faraday v2.12.0"
+            "Faraday v2.13.1"
           ],
           "Content-Type": [
             "application/json"
@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Mon, 20 Jan 2025 22:22:03 GMT"
+            "Fri, 06 Jun 2025 18:47:31 GMT"
           ],
           "content-type": [
             "text/event-stream; charset=utf-8"
@@ -37,6 +37,9 @@
           ],
           "connection": [
             "keep-alive"
+          ],
+          "x-inference-request-id": [
+            "4f776feb-569c-4d94-9fb0-6a6186a07c04"
           ],
           "cf-cache-status": [
             "DYNAMIC"
@@ -50,10 +53,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "data: {\"id\": \"chat-ab06231e8860401c8a7729bee3e01890\", \"object\": \"chat.completion.chunk\", \"created\": 1737411723, \"model\": \"meta-llama/Meta-Llama-3.1-70B-Instruct\", \"choices\": [{\"index\": 0, \"delta\": {\"role\": \"assistant\"}, \"logprobs\": null, \"finish_reason\": null}], \"usage\": {\"prompt_tokens\": 110, \"total_tokens\": 111, \"completion_tokens\": 1}}\n\ndata: {\"id\": \"chat-ab06231e8860401c8a7729bee3e01890\", \"object\": \"chat.completion.chunk\", \"created\": 1737411723, \"model\": \"meta-llama/Meta-Llama-3.1-70B-Instruct\", \"choices\": [{\"index\": 0, \"delta\": {\"content\": \"red\"}, \"logprobs\": null, \"finish_reason\": null}], \"usage\": {\"prompt_tokens\": 110, \"total_tokens\": 112, \"completion_tokens\": 2}}\n\ndata: {\"id\": \"chat-ab06231e8860401c8a7729bee3e01890\", \"object\": \"chat.completion.chunk\", \"created\": 1737411723, \"model\": \"meta-llama/Meta-Llama-3.1-70B-Instruct\", \"choices\": [{\"index\": 0, \"delta\": {\"content\": \"\"}, \"logprobs\": null, \"finish_reason\": \"stop\", \"stop_reason\": null}], \"usage\": {\"prompt_tokens\": 110, \"total_tokens\": 113, \"completion_tokens\": 3}}\n\ndata: [DONE]\n\n"
+          "string": "data: {\"id\": \"chatcmpl-3398470d48a342a5b03d7489bc609c99\", \"object\": \"chat.completion.chunk\", \"created\": 1749235651, \"model\": \"Qwen/Qwen2.5-VL-7B-Instruct\", \"choices\": [{\"index\": 0, \"delta\": {\"role\": \"assistant\", \"content\": \"\"}, \"logprobs\": null, \"finish_reason\": null}], \"usage\": {\"prompt_tokens\": 92, \"total_tokens\": 93, \"completion_tokens\": 1}}\n\ndata: {\"id\": \"chatcmpl-3398470d48a342a5b03d7489bc609c99\", \"object\": \"chat.completion.chunk\", \"created\": 1749235651, \"model\": \"Qwen/Qwen2.5-VL-7B-Instruct\", \"choices\": [{\"index\": 0, \"delta\": {\"content\": \"red\"}, \"logprobs\": null, \"finish_reason\": null}], \"usage\": {\"prompt_tokens\": 92, \"total_tokens\": 94, \"completion_tokens\": 2}}\n\ndata: {\"id\": \"chatcmpl-3398470d48a342a5b03d7489bc609c99\", \"object\": \"chat.completion.chunk\", \"created\": 1749235651, \"model\": \"Qwen/Qwen2.5-VL-7B-Instruct\", \"choices\": [{\"index\": 0, \"delta\": {\"content\": \"\"}, \"logprobs\": null, \"finish_reason\": \"stop\", \"stop_reason\": null}], \"usage\": {\"prompt_tokens\": 92, \"total_tokens\": 95, \"completion_tokens\": 3}}\n\ndata: [DONE]\n\n"
         }
       },
-      "recorded_at": "Mon, 20 Jan 2025 22:22:03 GMT"
+      "recorded_at": "Fri, 06 Jun 2025 18:47:31 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

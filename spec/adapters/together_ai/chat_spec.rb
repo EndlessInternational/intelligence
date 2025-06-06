@@ -12,7 +12,7 @@ RSpec.describe "#{Intelligence::Adapter[ :together_ai ]} chat requests", :togeth
     Intelligence::Adapter[ :together_ai ].build! do   
       key                     ENV[ 'TOGETHERAI_API_KEY' ]
       chat_options do
-        model                 'meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo'
+        model                 'meta-llama/Llama-3.3-70B-Instruct-Turbo'
         max_tokens            128 
         temperature           0
       end
@@ -23,7 +23,7 @@ RSpec.describe "#{Intelligence::Adapter[ :together_ai ]} chat requests", :togeth
     Intelligence::Adapter[ :open_ai ].build! do   
       key                     ENV[ 'TOGETHERAI_API_KEY' ]
       chat_options do
-        model                 'meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo'
+        model                 'meta-llama/Llama-3.3-70B-Instruct-Turbo'
         max_tokens            128 
         temperature           0
 
@@ -40,7 +40,7 @@ RSpec.describe "#{Intelligence::Adapter[ :together_ai ]} chat requests", :togeth
     Intelligence::Adapter[ :together_ai ].build! do   
       key                     ENV[ 'TOGETHERAI_API_KEY' ]
       chat_options do
-        model                 'meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo'
+        model                 'meta-llama/Llama-3.3-70B-Instruct-Turbo'
         max_tokens            24 
         temperature           0
       end
@@ -51,7 +51,7 @@ RSpec.describe "#{Intelligence::Adapter[ :together_ai ]} chat requests", :togeth
     Intelligence::Adapter[ :together_ai ].build! do   
       key                     ENV[ 'TOGETHERAI_API_KEY' ]
       chat_options do
-        model                 'meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo'
+        model                 'meta-llama/Llama-3.3-70B-Instruct-Turbo'
         max_tokens            24
         temperature           0
         stop                  'five'

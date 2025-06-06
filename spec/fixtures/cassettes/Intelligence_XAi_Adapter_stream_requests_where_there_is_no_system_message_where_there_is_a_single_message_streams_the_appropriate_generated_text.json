@@ -6,11 +6,11 @@
         "uri": "https://api.x.ai/v1/chat/completions",
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"model\":\"grok-beta\",\"max_tokens\":128,\"temperature\":0.0,\"stream\":true,\"messages\":[{\"role\":\"user\",\"content\":\"respond only with the word 'hello'\\n\"}]}"
+          "string": "{\"model\":\"grok-3\",\"max_tokens\":128,\"temperature\":0.0,\"stream\":true,\"messages\":[{\"role\":\"user\",\"content\":\"respond only with the word 'hello'\\n\"}]}"
         },
         "headers": {
           "User-Agent": [
-            "Faraday v2.12.0"
+            "Faraday v2.13.1"
           ],
           "Content-Type": [
             "application/json"
@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Tue, 21 Jan 2025 03:38:56 GMT"
+            "Fri, 06 Jun 2025 19:44:23 GMT"
           ],
           "content-type": [
             "text/event-stream"
@@ -41,6 +41,12 @@
           "cache-control": [
             "no-cache"
           ],
+          "x-zero-data-retention": [
+            "false"
+          ],
+          "x-request-id": [
+            "<X-REQUEST-ID>"
+          ],
           "vary": [
             "origin, access-control-request-method, access-control-request-headers"
           ],
@@ -52,6 +58,15 @@
           ],
           "cf-cache-status": [
             "DYNAMIC"
+          ],
+          "set-cookie": [
+            "<SET-COOKIE>"
+          ],
+          "report-to": [
+            "{\"endpoints\":[{\"url\":\"https:\\/\\/csp-reporting.cloudflare.com\\/cdn-cgi\\/script_monitor\\/report?m=fbX5f4asvMdkhIVeqw63wFvt8rdtIAIYTbHyotDpT5U-1749239063-1.0.1.1-By.wfEutkMcRCNGn.4Rv5U7RM_6OMg.EBTFkO6ef2IuyIvu4o5PccGLrwJ38q_jmYILT44rOXZudwqznTpA42qvrDo8LQ_zlFymQeMFxbCTtYLft.GIq63jtKM1SbrWDU5Qx9mzZFuH1tucj0NinqQ\"}],\"group\":\"cf-csp-endpoint\",\"max_age\":86400}"
+          ],
+          "content-security-policy-report-only": [
+            "script-src 'none'; connect-src 'none'; report-uri https://csp-reporting.cloudflare.com/cdn-cgi/script_monitor/report?m=fbX5f4asvMdkhIVeqw63wFvt8rdtIAIYTbHyotDpT5U-1749239063-1.0.1.1-By.wfEutkMcRCNGn.4Rv5U7RM_6OMg.EBTFkO6ef2IuyIvu4o5PccGLrwJ38q_jmYILT44rOXZudwqznTpA42qvrDo8LQ_zlFymQeMFxbCTtYLft.GIq63jtKM1SbrWDU5Qx9mzZFuH1tucj0NinqQ; report-to cf-csp-endpoint"
           ],
           "strict-transport-security": [
             "max-age=31536000"
@@ -65,10 +80,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "data: {\"id\":\"b84a02fe-4534-47ca-934d-fbaf658ecceb\",\"object\":\"chat.completion.chunk\",\"created\":1737430736,\"model\":\"grok-beta\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"hello\",\"role\":\"assistant\"}}],\"usage\":{\"prompt_tokens\":14,\"completion_tokens\":1,\"total_tokens\":15,\"prompt_tokens_details\":{\"text_tokens\":14,\"audio_tokens\":0,\"image_tokens\":0,\"cached_tokens\":0}},\"system_fingerprint\":\"fp_18e99db1fc\"}\n\ndata: {\"id\":\"b84a02fe-4534-47ca-934d-fbaf658ecceb\",\"object\":\"chat.completion.chunk\",\"created\":1737430736,\"model\":\"grok-beta\",\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":14,\"completion_tokens\":2,\"total_tokens\":16,\"prompt_tokens_details\":{\"text_tokens\":14,\"audio_tokens\":0,\"image_tokens\":0,\"cached_tokens\":0}},\"system_fingerprint\":\"fp_18e99db1fc\"}\n\ndata: [DONE]\n\n"
+          "string": "data: {\"id\":\"4d81b116-8f22-453f-83de-6e2072586490\",\"object\":\"chat.completion.chunk\",\"created\":1749239063,\"model\":\"grok-3\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"hello\",\"role\":\"assistant\"}}],\"system_fingerprint\":\"fp_d8d6e9f7d0\"}\n\ndata: {\"id\":\"4d81b116-8f22-453f-83de-6e2072586490\",\"object\":\"chat.completion.chunk\",\"created\":1749239063,\"model\":\"grok-3\",\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\"},\"finish_reason\":\"stop\"}],\"system_fingerprint\":\"fp_d8d6e9f7d0\"}\n\ndata: [DONE]\n\n"
         }
       },
-      "recorded_at": "Tue, 21 Jan 2025 03:38:56 GMT"
+      "recorded_at": "Fri, 06 Jun 2025 19:44:23 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

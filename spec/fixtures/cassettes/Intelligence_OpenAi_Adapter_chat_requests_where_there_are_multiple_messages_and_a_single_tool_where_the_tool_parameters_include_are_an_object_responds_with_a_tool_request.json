@@ -10,7 +10,7 @@
         },
         "headers": {
           "User-Agent": [
-            "Faraday v2.12.0"
+            "Faraday v2.13.1"
           ],
           "Content-Type": [
             "application/json"
@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Mon, 20 Jan 2025 22:16:42 GMT"
+            "Fri, 06 Jun 2025 18:34:46 GMT"
           ],
           "content-type": [
             "application/json"
@@ -45,10 +45,13 @@
             "<OPENAI-ORGANIZATION>"
           ],
           "openai-processing-ms": [
-            "693"
+            "1376"
           ],
           "openai-version": [
             "2020-10-01"
+          ],
+          "x-envoy-upstream-service-time": [
+            "1379"
           ],
           "x-ratelimit-limit-requests": [
             "10000"
@@ -60,7 +63,7 @@
             "9999"
           ],
           "x-ratelimit-remaining-tokens": [
-            "29999890"
+            "29999906"
           ],
           "x-ratelimit-reset-requests": [
             "6ms"
@@ -98,10 +101,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\n  \"id\": \"chatcmpl-AruMUmUZp463XyCycPcmbjilaXl0P\",\n  \"object\": \"chat.completion\",\n  \"created\": 1737411402,\n  \"model\": \"gpt-4o-2024-08-06\",\n  \"choices\": [\n    {\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": null,\n        \"tool_calls\": [\n          {\n            \"id\": \"call_VCLpjuEdPLweppWwLjovItfm\",\n            \"type\": \"function\",\n            \"function\": {\n              \"name\": \"get_weather\",\n              \"arguments\": \"{\\\"location\\\":{\\\"city\\\":\\\"Seattle\\\",\\\"state\\\":\\\"WA\\\"}}\"\n            }\n          }\n        ],\n        \"refusal\": null\n      },\n      \"logprobs\": null,\n      \"finish_reason\": \"tool_calls\"\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 237,\n    \"completion_tokens\": 21,\n    \"total_tokens\": 258,\n    \"prompt_tokens_details\": {\n      \"cached_tokens\": 0,\n      \"audio_tokens\": 0\n    },\n    \"completion_tokens_details\": {\n      \"reasoning_tokens\": 0,\n      \"audio_tokens\": 0,\n      \"accepted_prediction_tokens\": 0,\n      \"rejected_prediction_tokens\": 0\n    }\n  },\n  \"service_tier\": \"default\",\n  \"system_fingerprint\": \"fp_50cad350e4\"\n}\n"
+          "string": "{\n  \"id\": \"chatcmpl-BfWBoyEHBYtlLHiErO7BFAgF0bwZk\",\n  \"object\": \"chat.completion\",\n  \"created\": 1749234884,\n  \"model\": \"gpt-4o-2024-08-06\",\n  \"choices\": [\n    {\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": null,\n        \"tool_calls\": [\n          {\n            \"id\": \"call_37EboKl1WfyPVWdYpUzYHiyM\",\n            \"type\": \"function\",\n            \"function\": {\n              \"name\": \"get_weather\",\n              \"arguments\": \"{\\\"location\\\":{\\\"city\\\":\\\"Seattle\\\",\\\"state\\\":\\\"WA\\\"}}\"\n            }\n          }\n        ],\n        \"refusal\": null,\n        \"annotations\": []\n      },\n      \"logprobs\": null,\n      \"finish_reason\": \"tool_calls\"\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 237,\n    \"completion_tokens\": 20,\n    \"total_tokens\": 257,\n    \"prompt_tokens_details\": {\n      \"cached_tokens\": 0,\n      \"audio_tokens\": 0\n    },\n    \"completion_tokens_details\": {\n      \"reasoning_tokens\": 0,\n      \"audio_tokens\": 0,\n      \"accepted_prediction_tokens\": 0,\n      \"rejected_prediction_tokens\": 0\n    }\n  },\n  \"service_tier\": \"default\",\n  \"system_fingerprint\": \"fp_a288987b44\"\n}\n"
         }
       },
-      "recorded_at": "Mon, 20 Jan 2025 22:16:42 GMT"
+      "recorded_at": "Fri, 06 Jun 2025 18:34:46 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"
