@@ -3,11 +3,11 @@ require 'spec_helper'
 RSpec.shared_examples 'chat requests with binary encoded audio' do 
 
   let( :binary_content_of_test_audio_file ) {
-    build_binary_content( fixture_file_path( 'this-is-a-test.m4a'  ) )
+    build_binary_content( fixture_file_path( 'this-is-a-test.mp3'  ) )
   }
 
   let( :binary_content_of_hello_world_audio_file ) {
-    build_binary_content( fixture_file_path( 'hello-world.m4a'  ) )
+    build_binary_content( fixture_file_path( 'hello-world.mp3'  ) )
   }
 
   context 'where there is a single message and binary encoded audio' do 
