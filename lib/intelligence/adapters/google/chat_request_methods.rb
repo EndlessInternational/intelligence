@@ -17,7 +17,6 @@ module Intelligence
 
       SUPPORTED_FILE_MEDIA_TYPES = %w[ text ]
 
-      SUPPORTED_CONTENT_TYPES = %w[
       SUPPORTED_FILE_CONTENT_TYPES = %w[
         image/png image/jpeg image/webp image/heic image/heif 
         video/x-flv video/quicktime video/mpeg video/mpegps video/mpg video/mp4 video/webm 
