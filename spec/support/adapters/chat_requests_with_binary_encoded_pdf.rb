@@ -31,7 +31,7 @@ RSpec.shared_examples 'chat requests with binary encoded pdf' do
   
       text = message_contents_to_text( choice.message )
       expect( text ).to( 
-        match( /vision for space exploration/i ), 
+        match( /vision\s+for\s+space\s+exploration/i ), 
         "Expected 'vision for space exploration', received '#{text}'."
       )
 
