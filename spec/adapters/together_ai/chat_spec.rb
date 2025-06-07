@@ -100,11 +100,12 @@ RSpec.describe "#{Intelligence::Adapter[ :together_ai ]} chat requests", :togeth
   include_examples 'chat requests without alternating roles'
   include_examples 'chat requests with binary encoded images', 
                    adapter: :vision_adapter
-  include_examples 'chat requests with tools'
-  # parallel tools actually sort of work with together ai but the model returns the request 
-  # as part of a text content payload so this is disabled for now
+  
+  # tools no longer work with together ai although they did historically; this may 
+  # be a model problem but I cannot find a working model
+  # include_examples 'chat requests with tools'
   # include_examples 'chat requests with complex tools'
-  include_examples 'chat requests with parallel tools'
+  # include_examples 'chat requests with parallel tools'
 
   include_examples 'chat requests with invalid key'
   include_examples 'chat requests with invalid model'

@@ -5,11 +5,15 @@ module Intelligence
 
     class Adapter < Generic::Adapter
       
-      chat_request_uri 'https://api.groq.com/openai/v1/chat/completions'
+      DEFAULT_BASE_URI        = 'https://api.groq.com/openai/v1'
 
       schema do 
+
+        base_uri              String, default: DEFAULT_BASE_URI
         key                   String
+        
         chat_options do 
+
           frequency_penalty   Float
           logit_bias
           logprobs            [ TrueClass, FalseClass ]
@@ -25,10 +29,12 @@ module Intelligence
           end
           seed                Integer
           stop                String, array: true
+          
           stream              [ TrueClass, FalseClass ]
           stream_options do
             include_usage     [ TrueClass, FalseClass ]
           end
+
           temperature         Float
           tool                array: true, as: :tools, &Tool.schema 
           tool_choice do 
@@ -39,10 +45,13 @@ module Intelligence
               name            String 
             end
           end
+        
           top_logprobs        Integer
           top_p               Float
           user                String
+        
         end
+
       end
 
     end

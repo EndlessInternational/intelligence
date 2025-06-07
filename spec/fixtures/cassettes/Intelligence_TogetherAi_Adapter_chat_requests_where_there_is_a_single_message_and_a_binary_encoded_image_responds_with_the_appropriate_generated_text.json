@@ -12,7 +12,7 @@
           "User-Agent": [
             "Faraday v2.13.1"
           ],
-          "Content-Type": [
+          "Content-type": [
             "application/json"
           ],
           "Authorization": [
@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Fri, 06 Jun 2025 19:37:18 GMT"
+            "Sat, 07 Jun 2025 16:56:29 GMT"
           ],
           "content-type": [
             "application/json; charset=utf-8"
@@ -51,22 +51,22 @@
             "*"
           ],
           "etag": [
-            "W/\"215-6IL6/hornvTtCJbaOqG3Ghdtj9c\""
+            "W/\"215-gNw/+gWpt9tuLBqNE2tLxuAuqrs\""
           ],
           "strict-transport-security": [
             "max-age=15552000; includeSubDomains"
           ],
           "x-amzn-trace-id": [
-            "50e0fc26-a2d3-42ff-8daa-1beece8a3913-noamzn"
+            "aff5da62-1886-4c60-ac25-ad86037ebf71-noamzn"
           ],
           "x-api-call-end": [
-            "2025-06-06T19:37:18.746Z"
+            "2025-06-07T16:56:29.536Z"
           ],
           "x-api-call-start": [
-            "2025-06-06T19:37:18.547Z"
+            "2025-06-07T16:56:29.348Z"
           ],
           "x-api-received": [
-            "2025-06-06T19:37:18.539Z"
+            "2025-06-07T16:56:29.323Z"
           ],
           "x-inference-version": [
             "v2"
@@ -84,7 +84,7 @@
             "19"
           ],
           "x-ratelimit-remaining-tokens": [
-            "2882"
+            "3000"
           ],
           "x-ratelimit-reset": [
             "2"
@@ -107,10 +107,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "{\n  \"id\": \"nx5EFgN-3NKUce-94ba5d0e8d8fdeff\",\n  \"object\": \"chat.completion\",\n  \"created\": 1749238638,\n  \"model\": \"meta-llama/Llama-3.2-11B-Vision-Instruct-Turbo\",\n  \"prompt\": [],\n  \"choices\": [\n    {\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": \"The image depicts a red balloon.\",\n        \"tool_calls\": []\n      },\n      \"logprobs\": null,\n      \"finish_reason\": \"stop\",\n      \"seed\": null\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 66,\n    \"total_tokens\": 74,\n    \"completion_tokens\": 8\n  }\n}"
+          "string": "{\n  \"id\": \"nxC1d1k-4Yz4kd-94c1aede4f84a36e\",\n  \"object\": \"chat.completion\",\n  \"created\": 1749315389,\n  \"model\": \"meta-llama/Llama-3.2-11B-Vision-Instruct-Turbo\",\n  \"prompt\": [],\n  \"choices\": [\n    {\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": \"The image depicts a red balloon.\",\n        \"tool_calls\": []\n      },\n      \"logprobs\": null,\n      \"finish_reason\": \"stop\",\n      \"seed\": null\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 66,\n    \"total_tokens\": 74,\n    \"completion_tokens\": 8\n  }\n}"
         }
       },
-      "recorded_at": "Fri, 06 Jun 2025 19:37:18 GMT"
+      "recorded_at": "Sat, 07 Jun 2025 16:56:29 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

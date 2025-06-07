@@ -12,7 +12,7 @@
           "User-Agent": [
             "Faraday v2.13.1"
           ],
-          "Content-Type": [
+          "Content-type": [
             "application/json"
           ],
           "Authorization": [
@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Fri, 06 Jun 2025 19:37:19 GMT"
+            "Sat, 07 Jun 2025 16:56:29 GMT"
           ],
           "content-type": [
             "application/json; charset=utf-8"
@@ -45,28 +45,28 @@
             "DYNAMIC"
           ],
           "retry-after": [
-            "0"
+            "2"
           ],
           "access-control-allow-origin": [
             "*"
           ],
           "etag": [
-            "W/\"206-Z6nRC9dOLe8U3B/8xXMQAO4cN6s\""
+            "W/\"206-IKOKZBhjBHbEWX46fji3lmCjxhI\""
           ],
           "strict-transport-security": [
             "max-age=15552000; includeSubDomains"
           ],
           "x-amzn-trace-id": [
-            "0867d366-e424-4d6d-aa5a-8884901db336-noamzn"
+            "7dbceb71-b5c7-4fa8-9f9c-7ace96083549-noamzn"
           ],
           "x-api-call-end": [
-            "2025-06-06T19:37:18.985Z"
+            "2025-06-07T16:56:29.929Z"
           ],
           "x-api-call-start": [
-            "2025-06-06T19:37:18.546Z"
+            "2025-06-07T16:56:29.699Z"
           ],
           "x-api-received": [
-            "2025-06-06T19:37:18.518Z"
+            "2025-06-07T16:56:29.676Z"
           ],
           "x-inference-version": [
             "v2"
@@ -84,10 +84,10 @@
             "18"
           ],
           "x-ratelimit-remaining-tokens": [
-            "2747"
+            "2926"
           ],
           "x-ratelimit-reset": [
-            "0"
+            "2"
           ],
           "x-request-id": [
             "<X-REQUEST-ID>"
@@ -107,10 +107,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "{\n  \"id\": \"nx5EFg1-4Yz4kd-94ba5d113d2b344c\",\n  \"object\": \"chat.completion\",\n  \"created\": 1749238638,\n  \"model\": \"meta-llama/Llama-3.2-11B-Vision-Instruct-Turbo\",\n  \"prompt\": [],\n  \"choices\": [\n    {\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": \"The color is red.\",\n        \"tool_calls\": []\n      },\n      \"logprobs\": null,\n      \"finish_reason\": \"stop\",\n      \"seed\": null\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 86,\n    \"total_tokens\": 92,\n    \"completion_tokens\": 6\n  }\n}"
+          "string": "{\n  \"id\": \"nxC1d7q-4Yz4kd-94c1aee0fd2dded0\",\n  \"object\": \"chat.completion\",\n  \"created\": 1749315389,\n  \"model\": \"meta-llama/Llama-3.2-11B-Vision-Instruct-Turbo\",\n  \"prompt\": [],\n  \"choices\": [\n    {\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": \"The color is red.\",\n        \"tool_calls\": []\n      },\n      \"logprobs\": null,\n      \"finish_reason\": \"stop\",\n      \"seed\": null\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 86,\n    \"total_tokens\": 92,\n    \"completion_tokens\": 6\n  }\n}"
         }
       },
-      "recorded_at": "Fri, 06 Jun 2025 19:37:18 GMT"
+      "recorded_at": "Sat, 07 Jun 2025 16:56:29 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

@@ -5,11 +5,14 @@ module Intelligence
 
     class Adapter < Generic::Adapter
 
-      chat_request_uri "https://openrouter.ai/api/v1/chat/completions"
+      DEFAULT_BASE_URI          = 'https://openrouter.ai/api/v1'
       
       schema do 
+        base_uri                String, default: DEFAULT_BASE_URI
         key                     String 
+
         chat_options do 
+          
           model                 String
           temperature           Float
           top_k                 Integer
@@ -27,7 +30,9 @@ module Intelligence
             require_parameters  [ TrueClass, FalseClass ]
             allow_fallbacks     [ TrueClass, FalseClass ]
           end
+        
         end
+
       end
 
       # def chat_result_error_attributes( response )

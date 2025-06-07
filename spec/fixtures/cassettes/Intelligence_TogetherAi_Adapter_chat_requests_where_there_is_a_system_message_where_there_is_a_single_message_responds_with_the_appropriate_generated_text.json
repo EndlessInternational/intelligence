@@ -12,7 +12,7 @@
           "User-Agent": [
             "Faraday v2.13.1"
           ],
-          "Content-Type": [
+          "Content-type": [
             "application/json"
           ],
           "Authorization": [
@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Fri, 06 Jun 2025 19:37:07 GMT"
+            "Sat, 07 Jun 2025 16:56:16 GMT"
           ],
           "content-type": [
             "application/json; charset=utf-8"
@@ -45,28 +45,28 @@
             "DYNAMIC"
           ],
           "retry-after": [
-            "1"
+            "2"
           ],
           "access-control-allow-origin": [
             "*"
           ],
           "etag": [
-            "W/\"21a-b/N8G8N+j4hH/eEnQ+Aohyhg9WU\""
+            "W/\"21b-Ji51QGJKu7zlLSkp88auu8YWOq8\""
           ],
           "strict-transport-security": [
             "max-age=15552000; includeSubDomains"
           ],
           "x-amzn-trace-id": [
-            "b4b4a6fc-09a7-4140-9af8-224ff91c1395-noamzn"
+            "0a55a188-9bdc-4a5e-a128-7dda7e0208a2-noamzn"
           ],
           "x-api-call-end": [
-            "2025-06-06T19:37:07.844Z"
+            "2025-06-07T16:56:16.675Z"
           ],
           "x-api-call-start": [
-            "2025-06-06T19:37:07.004Z"
+            "2025-06-07T16:56:16.491Z"
           ],
           "x-api-received": [
-            "2025-06-06T19:37:06.962Z"
+            "2025-06-07T16:56:16.477Z"
           ],
           "x-inference-version": [
             "v2"
@@ -81,13 +81,13 @@
             "3000"
           ],
           "x-ratelimit-remaining": [
-            "17"
+            "19"
           ],
           "x-ratelimit-remaining-tokens": [
-            "2888"
+            "3000"
           ],
           "x-ratelimit-reset": [
-            "1"
+            "2"
           ],
           "x-request-id": [
             "<X-REQUEST-ID>"
@@ -107,10 +107,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "{\n  \"id\": \"nx5ECEm-4Yz4kd-94ba5cca2dbb495b\",\n  \"object\": \"chat.completion\",\n  \"created\": 1749238626,\n  \"model\": \"meta-llama/Llama-3.3-70B-Instruct-Turbo\",\n  \"prompt\": [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"stop\",\n      \"seed\": 6226357937266243000,\n      \"logprobs\": null,\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": \"hello\",\n        \"tool_calls\": []\n      }\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 78,\n    \"completion_tokens\": 2,\n    \"total_tokens\": 80,\n    \"cached_tokens\": 0\n  }\n}"
+          "string": "{\n  \"id\": \"nxC1ZCG-3NKUce-94c1ae8bcdb5b9eb\",\n  \"object\": \"chat.completion\",\n  \"created\": 1749315376,\n  \"model\": \"meta-llama/Llama-3.3-70B-Instruct-Turbo\",\n  \"prompt\": [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"stop\",\n      \"seed\": 12162912214229570000,\n      \"logprobs\": null,\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": \"hello\",\n        \"tool_calls\": []\n      }\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 78,\n    \"completion_tokens\": 2,\n    \"total_tokens\": 80,\n    \"cached_tokens\": 0\n  }\n}"
         }
       },
-      "recorded_at": "Fri, 06 Jun 2025 19:37:07 GMT"
+      "recorded_at": "Sat, 07 Jun 2025 16:56:16 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

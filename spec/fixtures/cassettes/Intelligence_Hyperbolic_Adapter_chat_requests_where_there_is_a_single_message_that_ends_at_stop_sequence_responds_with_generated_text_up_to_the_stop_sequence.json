@@ -12,7 +12,7 @@
           "User-Agent": [
             "Faraday v2.13.1"
           ],
-          "Content-Type": [
+          "Content-type": [
             "application/json"
           ],
           "Authorization": [
@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Fri, 06 Jun 2025 18:47:19 GMT"
+            "Sat, 07 Jun 2025 16:57:53 GMT"
           ],
           "content-type": [
             "application/json"
@@ -39,7 +39,7 @@
             "keep-alive"
           ],
           "x-inference-request-id": [
-            "1b43d772-1895-46e5-bdd1-1fe230969305"
+            "bdf73423-490f-4db3-ab6d-89f9d1f24824"
           ],
           "cf-cache-status": [
             "DYNAMIC"
@@ -56,10 +56,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\"id\":\"chatcmpl-73aba28857864990bebe3178f732c7f4\",\"object\":\"chat.completion\",\"created\":1749235639,\"model\":\"Qwen/Qwen2.5-VL-7B-Instruct\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"reasoning_content\":null,\"content\":\"one\\ntwo\\nthree\\nfour\\n\",\"tool_calls\":[]},\"logprobs\":null,\"finish_reason\":\"stop\",\"stop_reason\":\"five\"}],\"usage\":{\"prompt_tokens\":66,\"total_tokens\":75,\"completion_tokens\":9,\"prompt_tokens_details\":null},\"prompt_logprobs\":null}"
+          "string": "{\"id\":\"chatcmpl-263d60c2f6604f56830c0ffaa12d04cb\",\"object\":\"chat.completion\",\"created\":1749315473,\"model\":\"Qwen/Qwen2.5-VL-7B-Instruct\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"reasoning_content\":null,\"content\":\"one\\ntwo\\nthree\\nfour\\n\",\"tool_calls\":[]},\"logprobs\":null,\"finish_reason\":\"stop\",\"stop_reason\":\"five\"}],\"usage\":{\"prompt_tokens\":66,\"total_tokens\":75,\"completion_tokens\":9,\"prompt_tokens_details\":null},\"prompt_logprobs\":null}"
         }
       },
-      "recorded_at": "Fri, 06 Jun 2025 18:47:19 GMT"
+      "recorded_at": "Sat, 07 Jun 2025 16:57:53 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

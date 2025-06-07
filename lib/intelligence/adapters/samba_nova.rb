@@ -5,11 +5,12 @@ module Intelligence
 
     class Adapter < Generic::Adapter
 
-      chat_request_uri "https://api.sambanova.ai/v1/chat/completions"
+      DEFAULT_BASE_URI        = "https://api.sambanova.ai/v1"
       
       schema do 
 
         # normalized properties for all endpoints
+        base_uri              String, default: DEFAULT_BASE_URI        
         key                   String
         
         # properties for generative text endpoints

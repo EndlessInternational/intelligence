@@ -12,7 +12,7 @@
           "User-Agent": [
             "Faraday v2.13.1"
           ],
-          "Content-Type": [
+          "Content-type": [
             "application/json"
           ],
           "Authorization": [
@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Fri, 06 Jun 2025 19:19:58 GMT"
+            "Sat, 07 Jun 2025 16:46:39 GMT"
           ],
           "content-type": [
             "application/json"
@@ -37,12 +37,6 @@
           ],
           "connection": [
             "keep-alive"
-          ],
-          "cf-ray": [
-            "<CF-RAY>"
-          ],
-          "server": [
-            "cloudflare"
           ],
           "content-encoding": [
             "gzip"
@@ -61,14 +55,20 @@
           ],
           "vary": [
             "Accept-Encoding"
+          ],
+          "server": [
+            "cloudflare"
+          ],
+          "cf-ray": [
+            "<CF-RAY>"
           ]
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "\n         \n{\"id\":\"gen-1749237597-Lzn2g7XLlH63NffENLIV\",\"provider\":\"Hyperbolic\",\"model\":\"qwen/qwen-2.5-vl-7b-instruct\",\"object\":\"chat.completion\",\"created\":1749237597,\"choices\":[{\"logprobs\":null,\"finish_reason\":\"stop\",\"native_finish_reason\":\"stop\",\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"hello\",\"refusal\":null,\"reasoning\":null}}],\"usage\":{\"prompt_tokens\":27,\"completion_tokens\":3,\"total_tokens\":30}}"
+          "string": "\n         \n{\"id\":\"gen-1749314799-K2ppoDiRV1WmSAyHfWhE\",\"provider\":\"Hyperbolic\",\"model\":\"qwen/qwen-2.5-vl-7b-instruct\",\"object\":\"chat.completion\",\"created\":1749314799,\"choices\":[{\"logprobs\":null,\"finish_reason\":\"stop\",\"native_finish_reason\":\"stop\",\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"hello\",\"refusal\":null,\"reasoning\":null}}],\"usage\":{\"prompt_tokens\":27,\"completion_tokens\":3,\"total_tokens\":30}}"
         }
       },
-      "recorded_at": "Fri, 06 Jun 2025 19:19:58 GMT"
+      "recorded_at": "Sat, 07 Jun 2025 16:46:39 GMT"
     },
     {
       "request": {
@@ -82,7 +82,7 @@
           "User-Agent": [
             "Faraday v2.13.1"
           ],
-          "Content-Type": [
+          "Content-type": [
             "application/json"
           ],
           "Authorization": [
@@ -97,7 +97,7 @@
         },
         "headers": {
           "date": [
-            "Fri, 06 Jun 2025 19:19:59 GMT"
+            "Sat, 07 Jun 2025 16:46:40 GMT"
           ],
           "content-type": [
             "application/json"
@@ -107,12 +107,6 @@
           ],
           "connection": [
             "keep-alive"
-          ],
-          "cf-ray": [
-            "<CF-RAY>"
-          ],
-          "server": [
-            "cloudflare"
           ],
           "content-encoding": [
             "gzip"
@@ -131,14 +125,20 @@
           ],
           "vary": [
             "Accept-Encoding"
+          ],
+          "server": [
+            "cloudflare"
+          ],
+          "cf-ray": [
+            "<CF-RAY>"
           ]
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\"id\":\"gen-1749237598-NCAg7pZmhzF1pUFwgbyl\",\"provider\":\"Hyperbolic\",\"model\":\"qwen/qwen-2.5-vl-7b-instruct\",\"object\":\"chat.completion\",\"created\":1749237598,\"choices\":[{\"logprobs\":null,\"finish_reason\":\"stop\",\"native_finish_reason\":\"stop\",\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"blue\",\"refusal\":null,\"reasoning\":null}}],\"usage\":{\"prompt_tokens\":50,\"completion_tokens\":3,\"total_tokens\":53}}"
+          "string": "{\"id\":\"gen-1749314799-64Og9LlxH0yaRhnkUkV7\",\"provider\":\"Hyperbolic\",\"model\":\"qwen/qwen-2.5-vl-7b-instruct\",\"object\":\"chat.completion\",\"created\":1749314799,\"choices\":[{\"logprobs\":null,\"finish_reason\":\"stop\",\"native_finish_reason\":\"stop\",\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"blue\",\"refusal\":null,\"reasoning\":null}}],\"usage\":{\"prompt_tokens\":50,\"completion_tokens\":3,\"total_tokens\":53}}"
         }
       },
-      "recorded_at": "Fri, 06 Jun 2025 19:19:59 GMT"
+      "recorded_at": "Sat, 07 Jun 2025 16:46:40 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

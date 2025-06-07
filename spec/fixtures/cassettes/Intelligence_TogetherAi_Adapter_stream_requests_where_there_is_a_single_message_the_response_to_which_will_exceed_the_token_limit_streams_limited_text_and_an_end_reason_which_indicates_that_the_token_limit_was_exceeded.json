@@ -12,7 +12,7 @@
           "User-Agent": [
             "Faraday v2.13.1"
           ],
-          "Content-Type": [
+          "Content-type": [
             "application/json"
           ],
           "Authorization": [
@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Fri, 06 Jun 2025 19:37:30 GMT"
+            "Sat, 07 Jun 2025 16:56:40 GMT"
           ],
           "content-type": [
             "text/event-stream;charset=utf-8"
@@ -45,7 +45,7 @@
             "DYNAMIC"
           ],
           "retry-after": [
-            "1"
+            "0"
           ],
           "access-control-allow-origin": [
             "*"
@@ -57,13 +57,13 @@
             "max-age=15552000; includeSubDomains"
           ],
           "x-amzn-trace-id": [
-            "49ccad3c-e286-4e12-8b3d-8b6fd0457c50-noamzn"
+            "aa75b8be-e46f-4759-aac8-d37582cda8f5-noamzn"
           ],
           "x-api-call-start": [
-            "2025-06-06T19:37:30.527Z"
+            "2025-06-07T16:56:40.103Z"
           ],
           "x-api-received": [
-            "2025-06-06T19:37:30.517Z"
+            "2025-06-07T16:56:40.080Z"
           ],
           "x-inference-version": [
             "v2"
@@ -78,13 +78,13 @@
             "3000"
           ],
           "x-ratelimit-remaining": [
-            "18"
+            "16"
           ],
           "x-ratelimit-remaining-tokens": [
-            "2833"
+            "2690"
           ],
           "x-ratelimit-reset": [
-            "1"
+            "0"
           ],
           "x-request-id": [
             "<X-REQUEST-ID>"
@@ -101,10 +101,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "data: {\"id\":\"nx5EKEt-3NKUce-94ba5d58ec8eba15\",\"object\":\"chat.completion.chunk\",\"created\":1749238650,\"choices\":[{\"index\":0,\"text\":\"one\",\"logprobs\":null,\"finish_reason\":null,\"seed\":null,\"delta\":{\"token_id\":606,\"role\":\"assistant\",\"content\":\"one\",\"tool_calls\":null}}],\"model\":\"meta-llama/Llama-3.3-70B-Instruct-Turbo\",\"usage\":null}\n\ndata: {\"id\":\"nx5EKEt-3NKUce-94ba5d58ec8eba15\",\"object\":\"chat.completion.chunk\",\"created\":1749238650,\"choices\":[{\"index\":0,\"text\":\"\\n\",\"logprobs\":null,\"finish_reason\":null,\"seed\":null,\"delta\":{\"token_id\":198,\"role\":\"assistant\",\"content\":\"\\n\",\"tool_calls\":null}}],\"model\":\"meta-llama/Llama-3.3-70B-Instruct-Turbo\",\"usage\":null}\n\ndata: {\"id\":\"nx5EKEt-3NKUce-94ba5d58ec8eba15\",\"object\":\"chat.completion.chunk\",\"created\":1749238650,\"choices\":[{\"index\":0,\"text\":\"two\",\"logprobs\":null,\"finish_reason\":null,\"seed\":null,\"delta\":{\"token_id\":20375,\"role\":\"assistant\",\"content\":\"two\",\"tool_calls\":null}}],\"model\":\"meta-llama/Llama-3.3-70B-Instruct-Turbo\",\"usage\":null}\n\ndata: {\"id\":\"nx5EKEt-3NKUce-94ba5d58ec8eba15\",\"object\":\"chat.completion.chunk\",\"created\":1749238650,\"choices\":[{\"index\":0,\"text\":\"\\n\",\"logprobs\":null,\"finish_reason\":null,\"seed\":null,\"delta\":{\"token_id\":198,\"role\":\"assistant\",\"content\":\"\\n\",\"tool_calls\":null}}],\"model\":\"meta-llama/Llama-3.3-70B-Instruct-Turbo\",\"usage\":null}\n\ndata: {\"id\":\"nx5EKEt-3NKUce-94ba5d58ec8eba15\",\"object\":\"chat.completion.chunk\",\"created\":1749238650,\"choices\":[{\"index\":0,\"text\":\"three\",\"logprobs\":null,\"finish_reason\":null,\"seed\":null,\"delta\":{\"token_id\":28956,\"role\":\"assistant\",\"content\":\"three\",\"tool_calls\":null}}],\"model\":\"meta-llama/Llama-3.3-70B-Instruct-Turbo\",\"usage\":null}\n\ndata: {\"id\":\"nx5EKEt-3NKUce-94ba5d58ec8eba15\",\"object\":\"chat.completion.chunk\",\"created\":1749238650,\"choices\":[{\"index\":0,\"text\":\"\\n\",\"logprobs\":null,\"finish_reason\":null,\"seed\":null,\"delta\":{\"token_id\":198,\"role\":\"assistant\",\"content\":\"\\n\",\"tool_calls\":null}}],\"model\":\"meta-llama/Llama-3.3-70B-Instruct-Turbo\",\"usage\":null}\n\ndata: {\"id\":\"nx5EKEt-3NKUce-94ba5d58ec8eba15\",\"object\":\"chat.completion.chunk\",\"created\":1749238650,\"choices\":[{\"index\":0,\"text\":\"four\",\"logprobs\":null,\"finish_reason\":null,\"seed\":null,\"delta\":{\"token_id\":35124,\"role\":\"assistant\",\"content\":\"four\",\"tool_calls\":null}}],\"model\":\"meta-llama/Llama-3.3-70B-Instruct-Turbo\",\"usage\":null}\n\ndata: {\"id\":\"nx5EKEt-3NKUce-94ba5d58ec8eba15\",\"object\":\"chat.completion.chunk\",\"created\":1749238650,\"choices\":[{\"index\":0,\"text\":\"\\n\",\"logprobs\":null,\"finish_reason\":null,\"seed\":null,\"delta\":{\"token_id\":198,\"role\":\"assistant\",\"content\":\"\\n\",\"tool_calls\":null}}],\"model\":\"meta-llama/Llama-3.3-70B-Instruct-Turbo\",\"usage\":null}\n\ndata: {\"id\":\"nx5EKEt-3NKUce-94ba5d58ec8eba15\",\"object\":\"chat.completion.chunk\",\"created\":1749238650,\"choices\":[{\"index\":0,\"text\":\"five\",\"logprobs\":null,\"finish_reason\":null,\"seed\":null,\"delta\":{\"token_id\":53770,\"role\":\"assistant\",\"content\":\"five\",\"tool_calls\":null}}],\"model\":\"meta-llama/Llama-3.3-70B-Instruct-Turbo\",\"usage\":null}\n\ndata: {\"id\":\"nx5EKEt-3NKUce-94ba5d58ec8eba15\",\"object\":\"chat.completion.chunk\",\"created\":1749238650,\"choices\":[{\"index\":0,\"text\":\"\\n\",\"logprobs\":null,\"finish_reason\":null,\"seed\":null,\"delta\":{\"token_id\":198,\"role\":\"assistant\",\"content\":\"\\n\",\"tool_calls\":null}}],\"model\":\"meta-llama/Llama-3.3-70B-Instruct-Turbo\",\"usage\":null}\n\ndata: {\"id\":\"nx5EKEt-3NKUce-94ba5d58ec8eba15\",\"object\":\"chat.completion.chunk\",\"created\":1749238650,\"choices\":[{\"index\":0,\"text\":\"six\",\"logprobs\":null,\"finish_reason\":null,\"seed\":null,\"delta\":{\"token_id\":51464,\"role\":\"assistant\",\"content\":\"six\",\"tool_calls\":null}}],\"model\":\"meta-llama/Llama-3.3-70B-Instruct-Turbo\",\"usage\":null}\n\ndata: {\"id\":\"nx5EKEt-3NKUce-94ba5d58ec8eba15\",\"object\":\"chat.completion.chunk\",\"created\":1749238650,\"choices\":[{\"index\":0,\"text\":\"\\n\",\"logprobs\":null,\"finish_reason\":null,\"seed\":null,\"delta\":{\"token_id\":198,\"role\":\"assistant\",\"content\":\"\\n\",\"tool_calls\":null}}],\"model\":\"meta-llama/Llama-3.3-70B-Instruct-Turbo\",\"usage\":null}\n\ndata: {\"id\":\"nx5EKEt-3NKUce-94ba5d58ec8eba15\",\"object\":\"chat.completion.chunk\",\"created\":1749238650,\"choices\":[{\"index\":0,\"text\":\"seven\",\"logprobs\":null,\"finish_reason\":null,\"seed\":null,\"delta\":{\"token_id\":81285,\"role\":\"assistant\",\"content\":\"seven\",\"tool_calls\":null}}],\"model\":\"meta-llama/Llama-3.3-70B-Instruct-Turbo\",\"usage\":null}\n\ndata: {\"id\":\"nx5EKEt-3NKUce-94ba5d58ec8eba15\",\"object\":\"chat.completion.chunk\",\"created\":1749238650,\"choices\":[{\"index\":0,\"text\":\"\\n\",\"logprobs\":null,\"finish_reason\":null,\"seed\":null,\"delta\":{\"token_id\":198,\"role\":\"assistant\",\"content\":\"\\n\",\"tool_calls\":null}}],\"model\":\"meta-llama/Llama-3.3-70B-Instruct-Turbo\",\"usage\":null}\n\ndata: {\"id\":\"nx5EKEt-3NKUce-94ba5d58ec8eba15\",\"object\":\"chat.completion.chunk\",\"created\":1749238650,\"choices\":[{\"index\":0,\"text\":\"eight\",\"logprobs\":null,\"finish_reason\":null,\"seed\":null,\"delta\":{\"token_id\":68632,\"role\":\"assistant\",\"content\":\"eight\",\"tool_calls\":null}}],\"model\":\"meta-llama/Llama-3.3-70B-Instruct-Turbo\",\"usage\":null}\n\ndata: {\"id\":\"nx5EKEt-3NKUce-94ba5d58ec8eba15\",\"object\":\"chat.completion.chunk\",\"created\":1749238650,\"choices\":[{\"index\":0,\"text\":\"\\n\",\"logprobs\":null,\"finish_reason\":\"length\",\"seed\":381423678051195500,\"delta\":{\"token_id\":198,\"role\":\"assistant\",\"content\":\"\\n\",\"tool_calls\":null}}],\"model\":\"meta-llama/Llama-3.3-70B-Instruct-Turbo\",\"usage\":{\"prompt_tokens\":84,\"completion_tokens\":16,\"total_tokens\":100,\"cached_tokens\":0}}\n\ndata: [DONE]\n\n"
+          "string": "data: {\"id\":\"nxC1gDD-3NKUce-94c1af218c7bdf86\",\"object\":\"chat.completion.chunk\",\"created\":1749315400,\"choices\":[{\"index\":0,\"text\":\"one\",\"logprobs\":null,\"finish_reason\":null,\"seed\":null,\"delta\":{\"token_id\":606,\"role\":\"assistant\",\"content\":\"one\",\"tool_calls\":null}}],\"model\":\"meta-llama/Llama-3.3-70B-Instruct-Turbo\",\"usage\":null}\n\ndata: {\"id\":\"nxC1gDD-3NKUce-94c1af218c7bdf86\",\"object\":\"chat.completion.chunk\",\"created\":1749315400,\"choices\":[{\"index\":0,\"text\":\"\\n\",\"logprobs\":null,\"finish_reason\":null,\"seed\":null,\"delta\":{\"token_id\":198,\"role\":\"assistant\",\"content\":\"\\n\",\"tool_calls\":null}}],\"model\":\"meta-llama/Llama-3.3-70B-Instruct-Turbo\",\"usage\":null}\n\ndata: {\"id\":\"nxC1gDD-3NKUce-94c1af218c7bdf86\",\"object\":\"chat.completion.chunk\",\"created\":1749315400,\"choices\":[{\"index\":0,\"text\":\"two\",\"logprobs\":null,\"finish_reason\":null,\"seed\":null,\"delta\":{\"token_id\":20375,\"role\":\"assistant\",\"content\":\"two\",\"tool_calls\":null}}],\"model\":\"meta-llama/Llama-3.3-70B-Instruct-Turbo\",\"usage\":null}\n\ndata: {\"id\":\"nxC1gDD-3NKUce-94c1af218c7bdf86\",\"object\":\"chat.completion.chunk\",\"created\":1749315400,\"choices\":[{\"index\":0,\"text\":\"\\n\",\"logprobs\":null,\"finish_reason\":null,\"seed\":null,\"delta\":{\"token_id\":198,\"role\":\"assistant\",\"content\":\"\\n\",\"tool_calls\":null}}],\"model\":\"meta-llama/Llama-3.3-70B-Instruct-Turbo\",\"usage\":null}\n\ndata: {\"id\":\"nxC1gDD-3NKUce-94c1af218c7bdf86\",\"object\":\"chat.completion.chunk\",\"created\":1749315400,\"choices\":[{\"index\":0,\"text\":\"three\",\"logprobs\":null,\"finish_reason\":null,\"seed\":null,\"delta\":{\"token_id\":28956,\"role\":\"assistant\",\"content\":\"three\",\"tool_calls\":null}}],\"model\":\"meta-llama/Llama-3.3-70B-Instruct-Turbo\",\"usage\":null}\n\ndata: {\"id\":\"nxC1gDD-3NKUce-94c1af218c7bdf86\",\"object\":\"chat.completion.chunk\",\"created\":1749315400,\"choices\":[{\"index\":0,\"text\":\"\\n\",\"logprobs\":null,\"finish_reason\":null,\"seed\":null,\"delta\":{\"token_id\":198,\"role\":\"assistant\",\"content\":\"\\n\",\"tool_calls\":null}}],\"model\":\"meta-llama/Llama-3.3-70B-Instruct-Turbo\",\"usage\":null}\n\ndata: {\"id\":\"nxC1gDD-3NKUce-94c1af218c7bdf86\",\"object\":\"chat.completion.chunk\",\"created\":1749315400,\"choices\":[{\"index\":0,\"text\":\"four\",\"logprobs\":null,\"finish_reason\":null,\"seed\":null,\"delta\":{\"token_id\":35124,\"role\":\"assistant\",\"content\":\"four\",\"tool_calls\":null}}],\"model\":\"meta-llama/Llama-3.3-70B-Instruct-Turbo\",\"usage\":null}\n\ndata: {\"id\":\"nxC1gDD-3NKUce-94c1af218c7bdf86\",\"object\":\"chat.completion.chunk\",\"created\":1749315400,\"choices\":[{\"index\":0,\"text\":\"\\n\",\"logprobs\":null,\"finish_reason\":null,\"seed\":null,\"delta\":{\"token_id\":198,\"role\":\"assistant\",\"content\":\"\\n\",\"tool_calls\":null}}],\"model\":\"meta-llama/Llama-3.3-70B-Instruct-Turbo\",\"usage\":null}\n\ndata: {\"id\":\"nxC1gDD-3NKUce-94c1af218c7bdf86\",\"object\":\"chat.completion.chunk\",\"created\":1749315400,\"choices\":[{\"index\":0,\"text\":\"five\",\"logprobs\":null,\"finish_reason\":null,\"seed\":null,\"delta\":{\"token_id\":53770,\"role\":\"assistant\",\"content\":\"five\",\"tool_calls\":null}}],\"model\":\"meta-llama/Llama-3.3-70B-Instruct-Turbo\",\"usage\":null}\n\ndata: {\"id\":\"nxC1gDD-3NKUce-94c1af218c7bdf86\",\"object\":\"chat.completion.chunk\",\"created\":1749315400,\"choices\":[{\"index\":0,\"text\":\"\\n\",\"logprobs\":null,\"finish_reason\":null,\"seed\":null,\"delta\":{\"token_id\":198,\"role\":\"assistant\",\"content\":\"\\n\",\"tool_calls\":null}}],\"model\":\"meta-llama/Llama-3.3-70B-Instruct-Turbo\",\"usage\":null}\n\ndata: {\"id\":\"nxC1gDD-3NKUce-94c1af218c7bdf86\",\"object\":\"chat.completion.chunk\",\"created\":1749315400,\"choices\":[{\"index\":0,\"text\":\"six\",\"logprobs\":null,\"finish_reason\":null,\"seed\":null,\"delta\":{\"token_id\":51464,\"role\":\"assistant\",\"content\":\"six\",\"tool_calls\":null}}],\"model\":\"meta-llama/Llama-3.3-70B-Instruct-Turbo\",\"usage\":null}\n\ndata: {\"id\":\"nxC1gDD-3NKUce-94c1af218c7bdf86\",\"object\":\"chat.completion.chunk\",\"created\":1749315400,\"choices\":[{\"index\":0,\"text\":\"\\n\",\"logprobs\":null,\"finish_reason\":null,\"seed\":null,\"delta\":{\"token_id\":198,\"role\":\"assistant\",\"content\":\"\\n\",\"tool_calls\":null}}],\"model\":\"meta-llama/Llama-3.3-70B-Instruct-Turbo\",\"usage\":null}\n\ndata: {\"id\":\"nxC1gDD-3NKUce-94c1af218c7bdf86\",\"object\":\"chat.completion.chunk\",\"created\":1749315400,\"choices\":[{\"index\":0,\"text\":\"seven\",\"logprobs\":null,\"finish_reason\":null,\"seed\":null,\"delta\":{\"token_id\":81285,\"role\":\"assistant\",\"content\":\"seven\",\"tool_calls\":null}}],\"model\":\"meta-llama/Llama-3.3-70B-Instruct-Turbo\",\"usage\":null}\n\ndata: {\"id\":\"nxC1gDD-3NKUce-94c1af218c7bdf86\",\"object\":\"chat.completion.chunk\",\"created\":1749315400,\"choices\":[{\"index\":0,\"text\":\"\\n\",\"logprobs\":null,\"finish_reason\":null,\"seed\":null,\"delta\":{\"token_id\":198,\"role\":\"assistant\",\"content\":\"\\n\",\"tool_calls\":null}}],\"model\":\"meta-llama/Llama-3.3-70B-Instruct-Turbo\",\"usage\":null}\n\ndata: {\"id\":\"nxC1gDD-3NKUce-94c1af218c7bdf86\",\"object\":\"chat.completion.chunk\",\"created\":1749315400,\"choices\":[{\"index\":0,\"text\":\"eight\",\"logprobs\":null,\"finish_reason\":null,\"seed\":null,\"delta\":{\"token_id\":68632,\"role\":\"assistant\",\"content\":\"eight\",\"tool_calls\":null}}],\"model\":\"meta-llama/Llama-3.3-70B-Instruct-Turbo\",\"usage\":null}\n\ndata: {\"id\":\"nxC1gDD-3NKUce-94c1af218c7bdf86\",\"object\":\"chat.completion.chunk\",\"created\":1749315400,\"choices\":[{\"index\":0,\"text\":\"\\n\",\"logprobs\":null,\"finish_reason\":\"length\",\"seed\":4444979083343184000,\"delta\":{\"token_id\":198,\"role\":\"assistant\",\"content\":\"\\n\",\"tool_calls\":null}}],\"model\":\"meta-llama/Llama-3.3-70B-Instruct-Turbo\",\"usage\":{\"prompt_tokens\":84,\"completion_tokens\":16,\"total_tokens\":100,\"cached_tokens\":0}}\n\ndata: [DONE]\n\n"
         }
       },
-      "recorded_at": "Fri, 06 Jun 2025 19:37:30 GMT"
+      "recorded_at": "Sat, 07 Jun 2025 16:56:40 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

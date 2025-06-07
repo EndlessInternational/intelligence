@@ -12,7 +12,7 @@
           "User-Agent": [
             "Faraday v2.13.1"
           ],
-          "Content-Type": [
+          "Content-type": [
             "application/json"
           ],
           "Authorization": [
@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Fri, 06 Jun 2025 18:47:29 GMT"
+            "Sat, 07 Jun 2025 16:58:01 GMT"
           ],
           "content-type": [
             "text/event-stream; charset=utf-8"
@@ -39,7 +39,7 @@
             "keep-alive"
           ],
           "x-inference-request-id": [
-            "0a4b3f09-18b7-44a2-8563-b014cdb488f0"
+            "ccf0d623-5c0c-4a58-8612-4f686e3cbc4c"
           ],
           "cf-cache-status": [
             "DYNAMIC"
@@ -53,10 +53,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "data: {\"id\": \"chatcmpl-8a94a0e36093461ba6e0a3726877ee7a\", \"object\": \"chat.completion.chunk\", \"created\": 1749235648, \"model\": \"Qwen/Qwen2.5-VL-7B-Instruct\", \"choices\": [{\"index\": 0, \"delta\": {\"role\": \"assistant\", \"content\": \"\"}, \"logprobs\": null, \"finish_reason\": null}], \"usage\": {\"prompt_tokens\": 59, \"total_tokens\": 60, \"completion_tokens\": 1}}\n\ndata: {\"id\": \"chatcmpl-8a94a0e36093461ba6e0a3726877ee7a\", \"object\": \"chat.completion.chunk\", \"created\": 1749235648, \"model\": \"Qwen/Qwen2.5-VL-7B-Instruct\", \"choices\": [{\"index\": 0, \"delta\": {\"content\": \"bal\"}, \"logprobs\": null, \"finish_reason\": null}], \"usage\": {\"prompt_tokens\": 59, \"total_tokens\": 61, \"completion_tokens\": 2}}\n\ndata: {\"id\": \"chatcmpl-8a94a0e36093461ba6e0a3726877ee7a\", \"object\": \"chat.completion.chunk\", \"created\": 1749235648, \"model\": \"Qwen/Qwen2.5-VL-7B-Instruct\", \"choices\": [{\"index\": 0, \"delta\": {\"content\": \"loon\"}, \"logprobs\": null, \"finish_reason\": null}], \"usage\": {\"prompt_tokens\": 59, \"total_tokens\": 62, \"completion_tokens\": 3}}\n\ndata: {\"id\": \"chatcmpl-8a94a0e36093461ba6e0a3726877ee7a\", \"object\": \"chat.completion.chunk\", \"created\": 1749235648, \"model\": \"Qwen/Qwen2.5-VL-7B-Instruct\", \"choices\": [{\"index\": 0, \"delta\": {\"content\": \"\"}, \"logprobs\": null, \"finish_reason\": \"stop\", \"stop_reason\": null}], \"usage\": {\"prompt_tokens\": 59, \"total_tokens\": 63, \"completion_tokens\": 4}}\n\ndata: [DONE]\n\n"
+          "string": "data: {\"id\": \"chatcmpl-4ecb9de9cb0c41628ccb9b7bd528ce48\", \"object\": \"chat.completion.chunk\", \"created\": 1749315481, \"model\": \"Qwen/Qwen2.5-VL-7B-Instruct\", \"choices\": [{\"index\": 0, \"delta\": {\"role\": \"assistant\", \"content\": \"\"}, \"logprobs\": null, \"finish_reason\": null}], \"usage\": {\"prompt_tokens\": 59, \"total_tokens\": 60, \"completion_tokens\": 1}}\n\ndata: {\"id\": \"chatcmpl-4ecb9de9cb0c41628ccb9b7bd528ce48\", \"object\": \"chat.completion.chunk\", \"created\": 1749315481, \"model\": \"Qwen/Qwen2.5-VL-7B-Instruct\", \"choices\": [{\"index\": 0, \"delta\": {\"content\": \"bal\"}, \"logprobs\": null, \"finish_reason\": null}], \"usage\": {\"prompt_tokens\": 59, \"total_tokens\": 61, \"completion_tokens\": 2}}\n\ndata: {\"id\": \"chatcmpl-4ecb9de9cb0c41628ccb9b7bd528ce48\", \"object\": \"chat.completion.chunk\", \"created\": 1749315481, \"model\": \"Qwen/Qwen2.5-VL-7B-Instruct\", \"choices\": [{\"index\": 0, \"delta\": {\"content\": \"loon\"}, \"logprobs\": null, \"finish_reason\": null}], \"usage\": {\"prompt_tokens\": 59, \"total_tokens\": 62, \"completion_tokens\": 3}}\n\ndata: {\"id\": \"chatcmpl-4ecb9de9cb0c41628ccb9b7bd528ce48\", \"object\": \"chat.completion.chunk\", \"created\": 1749315481, \"model\": \"Qwen/Qwen2.5-VL-7B-Instruct\", \"choices\": [{\"index\": 0, \"delta\": {\"content\": \"\"}, \"logprobs\": null, \"finish_reason\": \"stop\", \"stop_reason\": null}], \"usage\": {\"prompt_tokens\": 59, \"total_tokens\": 63, \"completion_tokens\": 4}}\n\ndata: [DONE]\n\n"
         }
       },
-      "recorded_at": "Fri, 06 Jun 2025 18:47:29 GMT"
+      "recorded_at": "Sat, 07 Jun 2025 16:58:01 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

@@ -12,7 +12,7 @@
           "User-Agent": [
             "Faraday v2.13.1"
           ],
-          "Content-Type": [
+          "Content-type": [
             "application/json"
           ],
           "Authorization": [
@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Fri, 06 Jun 2025 19:37:15 GMT"
+            "Sat, 07 Jun 2025 16:56:25 GMT"
           ],
           "content-type": [
             "application/json; charset=utf-8"
@@ -51,22 +51,22 @@
             "*"
           ],
           "etag": [
-            "W/\"260-EPZIimIQJ0ZFgpMQQRjHZjOfW0Q\""
+            "W/\"25f-WM3Y5a+pwfFx9qqA06uBZRc+udA\""
           ],
           "strict-transport-security": [
             "max-age=15552000; includeSubDomains"
           ],
           "x-amzn-trace-id": [
-            "b5794222-6a50-4204-b5d0-e00a78e2ca04-noamzn"
+            "d3f0b9d2-4820-46ea-8f0a-8d6d28be3951-noamzn"
           ],
           "x-api-call-end": [
-            "2025-06-06T19:37:15.660Z"
+            "2025-06-07T16:56:25.935Z"
           ],
           "x-api-call-start": [
-            "2025-06-06T19:37:15.242Z"
+            "2025-06-07T16:56:24.654Z"
           ],
           "x-api-received": [
-            "2025-06-06T19:37:15.211Z"
+            "2025-06-07T16:56:24.644Z"
           ],
           "x-inference-version": [
             "v2"
@@ -81,10 +81,10 @@
             "3000"
           ],
           "x-ratelimit-remaining": [
-            "18"
+            "17"
           ],
           "x-ratelimit-remaining-tokens": [
-            "2899"
+            "2774"
           ],
           "x-ratelimit-reset": [
             "0"
@@ -107,10 +107,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "{\n  \"id\": \"nx5EEgz-4Yz4kd-94ba5cfdbe30935d\",\n  \"object\": \"chat.completion\",\n  \"created\": 1749238635,\n  \"model\": \"meta-llama/Llama-3.3-70B-Instruct-Turbo\",\n  \"prompt\": [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"length\",\n      \"seed\": 15902365610378267000,\n      \"logprobs\": null,\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": \"one\\ntwo\\nthree\\nfour\\nfive\\nsix\\nseven\\neight\\nnine\\nten\\neleven\\ntw\",\n        \"tool_calls\": []\n      }\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 117,\n    \"completion_tokens\": 24,\n    \"total_tokens\": 141,\n    \"cached_tokens\": 0\n  }\n}"
+          "string": "{\n  \"id\": \"nxC1bd5-3NKUce-94c1aec0ea89ad8d\",\n  \"object\": \"chat.completion\",\n  \"created\": 1749315384,\n  \"model\": \"meta-llama/Llama-3.3-70B-Instruct-Turbo\",\n  \"prompt\": [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"length\",\n      \"seed\": 1078102045514794500,\n      \"logprobs\": null,\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": \"one\\ntwo\\nthree\\nfour\\nfive\\nsix\\nseven\\neight\\nnine\\nten\\neleven\\ntw\",\n        \"tool_calls\": []\n      }\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 117,\n    \"completion_tokens\": 24,\n    \"total_tokens\": 141,\n    \"cached_tokens\": 0\n  }\n}"
         }
       },
-      "recorded_at": "Fri, 06 Jun 2025 19:37:15 GMT"
+      "recorded_at": "Sat, 07 Jun 2025 16:56:25 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

@@ -12,12 +12,24 @@ module Intelligence
         end
       end
 
+      CHAT_COMPLETIONS_PATH = 'chat/completions'
+
       def self.included( base )
         base.extend( ClassMethods )
       end
 
-      def chat_request_uri( options )
-        self.class.chat_request_uri
+      def chat_request_uri( options = nil )
+        options = merge_options( @options, build_options( options ) )
+        self.class.chat_request_uri || begin 
+          base_uri = options[ :base_uri ]
+          if base_uri
+            # because URI join is dumb
+            base_uri = ( base_uri.end_with?( '/' ) ? base_uri : base_uri + '/' ) 
+            URI.join( base_uri, CHAT_COMPLETIONS_PATH )
+          else
+            nil 
+          end
+        end
       end
 
       def chat_request_headers( options = nil )

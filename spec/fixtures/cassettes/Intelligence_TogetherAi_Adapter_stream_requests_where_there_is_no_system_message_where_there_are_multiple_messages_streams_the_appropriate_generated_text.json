@@ -12,7 +12,7 @@
           "User-Agent": [
             "Faraday v2.13.1"
           ],
-          "Content-Type": [
+          "Content-type": [
             "application/json"
           ],
           "Authorization": [
@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Fri, 06 Jun 2025 19:37:28 GMT"
+            "Sat, 07 Jun 2025 16:56:39 GMT"
           ],
           "content-type": [
             "text/event-stream;charset=utf-8"
@@ -45,7 +45,7 @@
             "DYNAMIC"
           ],
           "retry-after": [
-            "0"
+            "1"
           ],
           "access-control-allow-origin": [
             "*"
@@ -57,13 +57,13 @@
             "max-age=15552000; includeSubDomains"
           ],
           "x-amzn-trace-id": [
-            "90db0939-54c0-481e-8a6b-c92a798fb569-noamzn"
+            "0773f6f9-91db-4deb-b147-b23d40e18879-noamzn"
           ],
           "x-api-call-start": [
-            "2025-06-06T19:37:28.477Z"
+            "2025-06-07T16:56:39.108Z"
           ],
           "x-api-received": [
-            "2025-06-06T19:37:28.466Z"
+            "2025-06-07T16:56:39.087Z"
           ],
           "x-inference-version": [
             "v2"
@@ -78,13 +78,13 @@
             "3000"
           ],
           "x-ratelimit-remaining": [
-            "17"
+            "18"
           ],
           "x-ratelimit-remaining-tokens": [
-            "2336"
+            "2857"
           ],
           "x-ratelimit-reset": [
-            "0"
+            "1"
           ],
           "x-request-id": [
             "<X-REQUEST-ID>"
@@ -101,10 +101,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "data: {\"id\":\"nx5EJdX-3NKUce-94ba5d4c2ac0fbe6\",\"object\":\"chat.completion.chunk\",\"created\":1749238648,\"choices\":[{\"index\":0,\"text\":\"blue\",\"logprobs\":null,\"finish_reason\":null,\"seed\":null,\"delta\":{\"token_id\":12481,\"role\":\"assistant\",\"content\":\"blue\",\"tool_calls\":null}}],\"model\":\"meta-llama/Llama-3.3-70B-Instruct-Turbo\",\"usage\":null}\n\ndata: {\"id\":\"nx5EJdX-3NKUce-94ba5d4c2ac0fbe6\",\"object\":\"chat.completion.chunk\",\"created\":1749238648,\"choices\":[{\"index\":0,\"text\":\"\",\"logprobs\":null,\"finish_reason\":\"stop\",\"seed\":15492953586977140000,\"delta\":{\"token_id\":128009,\"role\":\"assistant\",\"content\":\"\",\"tool_calls\":null}}],\"model\":\"meta-llama/Llama-3.3-70B-Instruct-Turbo\",\"usage\":{\"prompt_tokens\":64,\"completion_tokens\":2,\"total_tokens\":66,\"cached_tokens\":0}}\n\ndata: [DONE]\n\n"
+          "string": "data: {\"id\":\"nxC1fv6-3NKUce-94c1af1a3c81868e\",\"object\":\"chat.completion.chunk\",\"created\":1749315399,\"choices\":[{\"index\":0,\"text\":\"blue\",\"logprobs\":null,\"finish_reason\":null,\"seed\":null,\"delta\":{\"token_id\":12481,\"role\":\"assistant\",\"content\":\"blue\",\"tool_calls\":null}}],\"model\":\"meta-llama/Llama-3.3-70B-Instruct-Turbo\",\"usage\":null}\n\ndata: {\"id\":\"nxC1fv6-3NKUce-94c1af1a3c81868e\",\"object\":\"chat.completion.chunk\",\"created\":1749315399,\"choices\":[{\"index\":0,\"text\":\"\",\"logprobs\":null,\"finish_reason\":\"stop\",\"seed\":6872524332454291000,\"delta\":{\"token_id\":128009,\"role\":\"assistant\",\"content\":\"\",\"tool_calls\":null}}],\"model\":\"meta-llama/Llama-3.3-70B-Instruct-Turbo\",\"usage\":{\"prompt_tokens\":64,\"completion_tokens\":2,\"total_tokens\":66,\"cached_tokens\":0}}\n\ndata: [DONE]\n\n"
         }
       },
-      "recorded_at": "Fri, 06 Jun 2025 19:37:28 GMT"
+      "recorded_at": "Sat, 07 Jun 2025 16:56:39 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

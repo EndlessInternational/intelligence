@@ -12,7 +12,7 @@
           "User-Agent": [
             "Faraday v2.13.1"
           ],
-          "Content-Type": [
+          "Content-type": [
             "application/json"
           ],
           "Authorization": [
@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Fri, 06 Jun 2025 18:53:29 GMT"
+            "Sat, 07 Jun 2025 16:42:07 GMT"
           ],
           "content-type": [
             "application/json"
@@ -48,19 +48,19 @@
             "60000"
           ],
           "x-ratelimit-remaining-requests-day": [
-            "14375"
+            "14346"
           ],
           "x-ratelimit-remaining-tokens-minute": [
-            "59754"
+            "60000"
           ],
           "x-ratelimit-reset-requests-day": [
-            "18390.019617795944"
+            "26272.216442108154"
           ],
           "x-ratelimit-reset-tokens-minute": [
-            "30.019617795944214"
+            "52.2164421081543"
           ],
           "inference-id": [
-            "chatcmpl-4774fcae-4a38-4bce-ad8b-648b5a2a11c0"
+            "chatcmpl-5a31e9a5-530e-4725-8c87-a1f3bf5e8497"
           ],
           "referrer-policy": [
             "strict-origin-when-cross-origin"
@@ -92,10 +92,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\"id\":\"chatcmpl-4774fcae-4a38-4bce-ad8b-648b5a2a11c0\",\"choices\":[{\"finish_reason\":\"length\",\"index\":0,\"message\":{\"content\":\"one\\ntwo\\nthree\\nfour\\nfive\\nsix\\nseven\\neight\\n\",\"role\":\"assistant\"}}],\"created\":1749236009,\"model\":\"llama-3.3-70b\",\"system_fingerprint\":\"fp_cb820b267e7b1a0390cd\",\"object\":\"chat.completion\",\"usage\":{\"prompt_tokens\":117,\"completion_tokens\":16,\"total_tokens\":133,\"prompt_tokens_details\":{\"cached_tokens\":0}},\"time_info\":{\"queue_time\":8.821e-05,\"prompt_time\":0.004630962,\"completion_time\":0.002051477,\"total_time\":0.009264945983886719,\"created\":1749236009}}"
+          "string": "{\"id\":\"chatcmpl-5a31e9a5-530e-4725-8c87-a1f3bf5e8497\",\"choices\":[{\"finish_reason\":\"length\",\"index\":0,\"message\":{\"content\":\"one\\ntwo\\nthree\\nfour\\nfive\\nsix\\nseven\\neight\\n\",\"role\":\"assistant\"}}],\"created\":1749314527,\"model\":\"llama-3.3-70b\",\"system_fingerprint\":\"fp_cb820b267e7b1a0390cd\",\"object\":\"chat.completion\",\"usage\":{\"prompt_tokens\":117,\"completion_tokens\":16,\"total_tokens\":133,\"prompt_tokens_details\":{\"cached_tokens\":0}},\"time_info\":{\"queue_time\":0.00010769,\"prompt_time\":0.004237488,\"completion_time\":0.002255253,\"total_time\":0.008142948150634766,\"created\":1749314527}}"
         }
       },
-      "recorded_at": "Fri, 06 Jun 2025 18:53:29 GMT"
+      "recorded_at": "Sat, 07 Jun 2025 16:42:07 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

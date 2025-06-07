@@ -12,7 +12,7 @@
           "User-Agent": [
             "Faraday v2.13.1"
           ],
-          "Content-Type": [
+          "Content-type": [
             "application/json"
           ],
           "Authorization": [
@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Fri, 06 Jun 2025 19:37:27 GMT"
+            "Sat, 07 Jun 2025 16:56:38 GMT"
           ],
           "content-type": [
             "application/json; charset=utf-8"
@@ -48,16 +48,16 @@
             "*"
           ],
           "etag": [
-            "W/\"10a-f0swCbOxnpMAGA/yfNcwZwMmhBo\""
+            "W/\"10a-VsjoualUYDq14nCBIDiwKCpoEks\""
           ],
           "strict-transport-security": [
             "max-age=15552000; includeSubDomains"
           ],
           "x-amzn-trace-id": [
-            "09510cf5-5b4d-4585-8f89-bf80648b69d1-noamzn"
+            "1a645a40-0f55-4c32-97b0-e8e977e13e19-noamzn"
           ],
           "x-api-received": [
-            "2025-06-06T19:37:27.008Z"
+            "2025-06-07T16:56:38.126Z"
           ],
           "x-request-id": [
             "<X-REQUEST-ID>"
@@ -74,10 +74,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "{\n  \"id\": \"nx5EJCP-2j9zxn-94ba5d477c6376b2\",\n  \"error\": {\n    \"message\": \"Invalid API key provided. You can find your API key at https://api.together.xyz/settings/api-keys.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"invalid_api_key\"\n  }\n}"
+          "string": "{\n  \"id\": \"nxC1fdX-2j9zxn-94c1af14afcc0950\",\n  \"error\": {\n    \"message\": \"Invalid API key provided. You can find your API key at https://api.together.xyz/settings/api-keys.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"invalid_api_key\"\n  }\n}"
         }
       },
-      "recorded_at": "Fri, 06 Jun 2025 19:37:26 GMT"
+      "recorded_at": "Sat, 07 Jun 2025 16:56:38 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

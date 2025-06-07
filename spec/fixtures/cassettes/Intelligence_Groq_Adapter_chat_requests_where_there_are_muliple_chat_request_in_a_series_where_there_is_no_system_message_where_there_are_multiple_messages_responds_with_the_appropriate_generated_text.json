@@ -12,7 +12,7 @@
           "User-Agent": [
             "Faraday v2.13.1"
           ],
-          "Content-Type": [
+          "Content-type": [
             "application/json"
           ],
           "Authorization": [
@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Fri, 06 Jun 2025 19:50:36 GMT"
+            "Sat, 07 Jun 2025 16:45:06 GMT"
           ],
           "content-type": [
             "application/json"
@@ -57,13 +57,13 @@
             "993"
           ],
           "x-ratelimit-remaining-tokens": [
-            "5924"
+            "5925"
           ],
           "x-ratelimit-reset-requests": [
-            "10m4.501s"
+            "10m4.488999999s"
           ],
           "x-ratelimit-reset-tokens": [
-            "755ms"
+            "741ms"
           ],
           "x-request-id": [
             "<X-REQUEST-ID>"
@@ -92,10 +92,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\"id\":\"chatcmpl-06b79c62-ba01-4e53-b8ff-50d34e5d6977\",\"object\":\"chat.completion\",\"created\":1749239436,\"model\":\"mistral-saba-24b\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"Hello\"},\"logprobs\":null,\"finish_reason\":\"stop\"}],\"usage\":{\"queue_time\":0.218654065,\"prompt_tokens\":12,\"prompt_time\":0.002089553,\"completion_tokens\":2,\"completion_time\":0.006060606,\"total_tokens\":14,\"total_time\":0.008150159},\"usage_breakdown\":{\"models\":null},\"system_fingerprint\":\"fp_07e680a590\",\"x_groq\":{\"id\":\"req_01jx3cq4rpfm78jyzd7h93ctkw\"}}\n"
+          "string": "{\"id\":\"chatcmpl-5bf4df77-14eb-4d23-b230-9dff9a87bca4\",\"object\":\"chat.completion\",\"created\":1749314706,\"model\":\"mistral-saba-24b\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"Hello\"},\"logprobs\":null,\"finish_reason\":\"stop\"}],\"usage\":{\"queue_time\":0.21391721,\"prompt_tokens\":12,\"prompt_time\":0.002073082,\"completion_tokens\":2,\"completion_time\":0.006060606,\"total_tokens\":14,\"total_time\":0.008133688},\"usage_breakdown\":{\"models\":null},\"system_fingerprint\":\"fp_07e680a590\",\"x_groq\":{\"id\":\"req_01jx5mg6p5ekhs1strfr82gw9d\"}}\n"
         }
       },
-      "recorded_at": "Fri, 06 Jun 2025 19:50:36 GMT"
+      "recorded_at": "Sat, 07 Jun 2025 16:45:06 GMT"
     },
     {
       "request": {
@@ -109,7 +109,7 @@
           "User-Agent": [
             "Faraday v2.13.1"
           ],
-          "Content-Type": [
+          "Content-type": [
             "application/json"
           ],
           "Authorization": [
@@ -124,7 +124,7 @@
         },
         "headers": {
           "date": [
-            "Fri, 06 Jun 2025 19:50:36 GMT"
+            "Sat, 07 Jun 2025 16:45:06 GMT"
           ],
           "content-type": [
             "application/json"
@@ -154,13 +154,13 @@
             "992"
           ],
           "x-ratelimit-remaining-tokens": [
-            "5919"
+            "5921"
           ],
           "x-ratelimit-reset-requests": [
-            "11m30.901s"
+            "11m30.896s"
           ],
           "x-ratelimit-reset-tokens": [
-            "806ms"
+            "786ms"
           ],
           "x-request-id": [
             "<X-REQUEST-ID>"
@@ -189,10 +189,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\"id\":\"chatcmpl-5f7294a6-b068-49cb-8b01-1c4a84adff9b\",\"object\":\"chat.completion\",\"created\":1749239436,\"model\":\"mistral-saba-24b\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"blue\"},\"logprobs\":null,\"finish_reason\":\"stop\"}],\"usage\":{\"queue_time\":0.218390105,\"prompt_tokens\":28,\"prompt_time\":0.002567853,\"completion_tokens\":2,\"completion_time\":0.006060606,\"total_tokens\":30,\"total_time\":0.008628459},\"usage_breakdown\":{\"models\":null},\"system_fingerprint\":\"fp_07e680a590\",\"x_groq\":{\"id\":\"req_01jx3cq521eghr893d1hmj96x1\"}}\n"
+          "string": "{\"id\":\"chatcmpl-6b32bbf8-4320-4f67-bd32-98f646424467\",\"object\":\"chat.completion\",\"created\":1749314706,\"model\":\"mistral-saba-24b\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"blue\"},\"logprobs\":null,\"finish_reason\":\"stop\"}],\"usage\":{\"queue_time\":0.21528698300000002,\"prompt_tokens\":28,\"prompt_time\":0.00257322,\"completion_tokens\":2,\"completion_time\":0.006060606,\"total_tokens\":30,\"total_time\":0.008633826},\"usage_breakdown\":{\"models\":null},\"system_fingerprint\":\"fp_07e680a590\",\"x_groq\":{\"id\":\"req_01jx5mg6zpfm5tv17xxn5zy4eg\"}}\n"
         }
       },
-      "recorded_at": "Fri, 06 Jun 2025 19:50:36 GMT"
+      "recorded_at": "Sat, 07 Jun 2025 16:45:06 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

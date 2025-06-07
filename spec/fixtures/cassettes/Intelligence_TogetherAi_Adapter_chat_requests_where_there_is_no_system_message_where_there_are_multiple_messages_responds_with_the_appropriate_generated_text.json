@@ -12,7 +12,7 @@
           "User-Agent": [
             "Faraday v2.13.1"
           ],
-          "Content-Type": [
+          "Content-type": [
             "application/json"
           ],
           "Authorization": [
@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Fri, 06 Jun 2025 19:37:06 GMT"
+            "Sat, 07 Jun 2025 16:56:15 GMT"
           ],
           "content-type": [
             "application/json; charset=utf-8"
@@ -51,22 +51,22 @@
             "*"
           ],
           "etag": [
-            "W/\"218-FWg59FaUU9m09m0d2y4cPOqIqwc\""
+            "W/\"218-noljCCeHmtSKuG1eP4ozGy2zXW4\""
           ],
           "strict-transport-security": [
             "max-age=15552000; includeSubDomains"
           ],
           "x-amzn-trace-id": [
-            "87c73d98-460e-43b1-99f9-1207720c68d3-noamzn"
+            "1733faa2-8691-4608-b3de-3642f88c7580-noamzn"
           ],
           "x-api-call-end": [
-            "2025-06-06T19:37:06.850Z"
+            "2025-06-07T16:56:16.194Z"
           ],
           "x-api-call-start": [
-            "2025-06-06T19:37:06.483Z"
+            "2025-06-07T16:56:14.288Z"
           ],
           "x-api-received": [
-            "2025-06-06T19:37:06.451Z"
+            "2025-06-07T16:56:14.278Z"
           ],
           "x-inference-version": [
             "v2"
@@ -81,10 +81,10 @@
             "3000"
           ],
           "x-ratelimit-remaining": [
-            "18"
+            "19"
           ],
           "x-ratelimit-remaining-tokens": [
-            "2955"
+            "3000"
           ],
           "x-ratelimit-reset": [
             "2"
@@ -107,10 +107,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "{\n  \"id\": \"nx5EC5x-4Yz4kd-94ba5cc6ebbb7553\",\n  \"object\": \"chat.completion\",\n  \"created\": 1749238626,\n  \"model\": \"meta-llama/Llama-3.3-70B-Instruct-Turbo\",\n  \"prompt\": [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"stop\",\n      \"seed\": 7278755862592547000,\n      \"logprobs\": null,\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": \"red\",\n        \"tool_calls\": []\n      }\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 65,\n    \"completion_tokens\": 2,\n    \"total_tokens\": 67,\n    \"cached_tokens\": 0\n  }\n}"
+          "string": "{\n  \"id\": \"nxC1YYM-3NKUce-94c1ae7efb55091f\",\n  \"object\": \"chat.completion\",\n  \"created\": 1749315374,\n  \"model\": \"meta-llama/Llama-3.3-70B-Instruct-Turbo\",\n  \"prompt\": [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"stop\",\n      \"seed\": 4943354151713735000,\n      \"logprobs\": null,\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": \"red\",\n        \"tool_calls\": []\n      }\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 65,\n    \"completion_tokens\": 2,\n    \"total_tokens\": 67,\n    \"cached_tokens\": 0\n  }\n}"
         }
       },
-      "recorded_at": "Fri, 06 Jun 2025 19:37:06 GMT"
+      "recorded_at": "Sat, 07 Jun 2025 16:56:15 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

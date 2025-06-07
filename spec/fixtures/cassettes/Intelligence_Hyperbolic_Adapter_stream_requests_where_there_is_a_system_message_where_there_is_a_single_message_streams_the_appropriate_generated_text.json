@@ -12,7 +12,7 @@
           "User-Agent": [
             "Faraday v2.13.1"
           ],
-          "Content-Type": [
+          "Content-type": [
             "application/json"
           ],
           "Authorization": [
@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Fri, 06 Jun 2025 18:47:24 GMT"
+            "Sat, 07 Jun 2025 16:57:58 GMT"
           ],
           "content-type": [
             "text/event-stream; charset=utf-8"
@@ -39,7 +39,7 @@
             "keep-alive"
           ],
           "x-inference-request-id": [
-            "134b3fb2-cae9-464a-b347-06a592d76890"
+            "fc040ac1-310b-4fac-9e6a-32c63a5ddddf"
           ],
           "cf-cache-status": [
             "DYNAMIC"
@@ -53,10 +53,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "data: {\"id\": \"chatcmpl-61820c1b32f945289d7d2c9dd698d6d4\", \"object\": \"chat.completion.chunk\", \"created\": 1749235644, \"model\": \"Qwen/Qwen2.5-VL-7B-Instruct\", \"choices\": [{\"index\": 0, \"delta\": {\"role\": \"assistant\", \"content\": \"\"}, \"logprobs\": null, \"finish_reason\": null}], \"usage\": {\"prompt_tokens\": 59, \"total_tokens\": 60, \"completion_tokens\": 1}}\n\ndata: {\"id\": \"chatcmpl-61820c1b32f945289d7d2c9dd698d6d4\", \"object\": \"chat.completion.chunk\", \"created\": 1749235644, \"model\": \"Qwen/Qwen2.5-VL-7B-Instruct\", \"choices\": [{\"index\": 0, \"delta\": {\"content\": \"hello\"}, \"logprobs\": null, \"finish_reason\": null}], \"usage\": {\"prompt_tokens\": 59, \"total_tokens\": 61, \"completion_tokens\": 2}}\n\ndata: {\"id\": \"chatcmpl-61820c1b32f945289d7d2c9dd698d6d4\", \"object\": \"chat.completion.chunk\", \"created\": 1749235644, \"model\": \"Qwen/Qwen2.5-VL-7B-Instruct\", \"choices\": [{\"index\": 0, \"delta\": {\"content\": \"\"}, \"logprobs\": null, \"finish_reason\": \"stop\", \"stop_reason\": null}], \"usage\": {\"prompt_tokens\": 59, \"total_tokens\": 62, \"completion_tokens\": 3}}\n\ndata: [DONE]\n\n"
+          "string": "data: {\"id\": \"chatcmpl-8729b3669da24992a709a18c5c8a92cb\", \"object\": \"chat.completion.chunk\", \"created\": 1749315478, \"model\": \"Qwen/Qwen2.5-VL-7B-Instruct\", \"choices\": [{\"index\": 0, \"delta\": {\"role\": \"assistant\", \"content\": \"\"}, \"logprobs\": null, \"finish_reason\": null}], \"usage\": {\"prompt_tokens\": 59, \"total_tokens\": 60, \"completion_tokens\": 1}}\n\ndata: {\"id\": \"chatcmpl-8729b3669da24992a709a18c5c8a92cb\", \"object\": \"chat.completion.chunk\", \"created\": 1749315478, \"model\": \"Qwen/Qwen2.5-VL-7B-Instruct\", \"choices\": [{\"index\": 0, \"delta\": {\"content\": \"hello\"}, \"logprobs\": null, \"finish_reason\": null}], \"usage\": {\"prompt_tokens\": 59, \"total_tokens\": 61, \"completion_tokens\": 2}}\n\ndata: {\"id\": \"chatcmpl-8729b3669da24992a709a18c5c8a92cb\", \"object\": \"chat.completion.chunk\", \"created\": 1749315478, \"model\": \"Qwen/Qwen2.5-VL-7B-Instruct\", \"choices\": [{\"index\": 0, \"delta\": {\"content\": \"\"}, \"logprobs\": null, \"finish_reason\": \"stop\", \"stop_reason\": null}], \"usage\": {\"prompt_tokens\": 59, \"total_tokens\": 62, \"completion_tokens\": 3}}\n\ndata: [DONE]\n\n"
         }
       },
-      "recorded_at": "Fri, 06 Jun 2025 18:47:24 GMT"
+      "recorded_at": "Sat, 07 Jun 2025 16:57:58 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"
