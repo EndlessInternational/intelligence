@@ -34,15 +34,10 @@ module Intelligence
 
       def chat_request_headers( options = nil )
         options = merge_options( @options, build_options( options ) )
-        result = {}
+        result = { 'Content-Type': 'application/json' }
 
         key = options[ :key ]
-
-        raise ArgumentError.new( "An API key is required to build a chat request." ) \
-          if key.nil?
-
-        result[ 'Content-Type' ] = 'application/json'
-        result[ 'Authorization' ] = "Bearer #{key}"
+        result[ 'Authorization' ] = "Bearer #{key}" if key
 
         result 
       end
