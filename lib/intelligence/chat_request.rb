@@ -90,7 +90,7 @@ module Intelligence
       options[ :tools ] = options[ :tools ].to_a.map!( &:to_h ) if options[ :tools ]
 
       uri = @adapter.chat_request_uri( options )
-      headers = @adapter.chat_request_headers( @options.merge( options ) )
+      headers = @adapter.chat_request_headers( options )
       payload = @adapter.chat_request_body( conversation, options )
 
       result_callback = nil 
