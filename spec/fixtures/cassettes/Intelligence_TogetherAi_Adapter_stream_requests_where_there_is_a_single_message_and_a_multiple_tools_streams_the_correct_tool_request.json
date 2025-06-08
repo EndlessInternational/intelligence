@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Sun, 08 Jun 2025 19:56:12 GMT"
+            "Sun, 08 Jun 2025 22:56:34 GMT"
           ],
           "content-type": [
             "text/event-stream;charset=utf-8"
@@ -57,13 +57,13 @@
             "max-age=15552000; includeSubDomains"
           ],
           "x-amzn-trace-id": [
-            "c283c115-479f-493f-8998-05367b8c59bd-noamzn"
+            "213c7116-ad06-4639-a35d-179327828746-noamzn"
           ],
           "x-api-call-start": [
-            "2025-06-08T19:56:07.495Z"
+            "2025-06-08T22:56:33.662Z"
           ],
           "x-api-received": [
-            "2025-06-08T19:56:07.477Z"
+            "2025-06-08T22:56:33.650Z"
           ],
           "x-inference-version": [
             "v2"
@@ -101,10 +101,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "data: {\"id\":\"nxLbghA-28Eivz-94caf360df2bf8d5\",\"object\":\"chat.completion.chunk\",\"created\":1749412572,\"model\":\"deepseek-ai/DeepSeek-V3\",\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":null},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"nxLbghA-28Eivz-94caf360df2bf8d5\",\"object\":\"chat.completion.chunk\",\"created\":1749412572,\"model\":\"deepseek-ai/DeepSeek-V3\",\"choices\":[{\"index\":0,\"delta\":{\"tool_calls\":[{\"index\":0,\"id\":\"call_kueovis8u8z5s8vcv8hzvza6\",\"type\":\"function\",\"function\":{\"name\":\"get_location\",\"arguments\":\"\"}}]},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"nxLbghA-28Eivz-94caf360df2bf8d5\",\"object\":\"chat.completion.chunk\",\"created\":1749412567,\"choices\":[{\"index\":0,\"text\":\"\",\"logprobs\":null,\"finish_reason\":\"tool_calls\",\"seed\":216824449885714530,\"delta\":{\"token_id\":1,\"role\":\"assistant\",\"content\":\"\",\"tool_calls\":null}}],\"model\":\"deepseek-ai/DeepSeek-V3-p\",\"usage\":{\"prompt_tokens\":409,\"completion_tokens\":21,\"total_tokens\":430,\"cached_tokens\":0}}\n\ndata: [DONE]\n\n"
+          "string": "data: {\"id\":\"nxMZAwK-28Eivz-94cbfbb1fc4750b7\",\"object\":\"chat.completion.chunk\",\"created\":1749423394,\"model\":\"deepseek-ai/DeepSeek-V3\",\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":null},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"nxMZAwK-28Eivz-94cbfbb1fc4750b7\",\"object\":\"chat.completion.chunk\",\"created\":1749423394,\"model\":\"deepseek-ai/DeepSeek-V3\",\"choices\":[{\"index\":0,\"delta\":{\"tool_calls\":[{\"index\":0,\"id\":\"call_rv55n16brohjen6jcz9gn0xm\",\"type\":\"function\",\"function\":{\"name\":\"get_location\",\"arguments\":\"\"}}]},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"nxMZAwK-28Eivz-94cbfbb1fc4750b7\",\"object\":\"chat.completion.chunk\",\"created\":1749423393,\"choices\":[{\"index\":0,\"text\":\"\",\"logprobs\":null,\"finish_reason\":\"tool_calls\",\"seed\":16198132953917415000,\"delta\":{\"token_id\":1,\"role\":\"assistant\",\"content\":\"\",\"tool_calls\":null}}],\"model\":\"deepseek-ai/DeepSeek-V3-p\",\"usage\":{\"prompt_tokens\":409,\"completion_tokens\":21,\"total_tokens\":430,\"cached_tokens\":0}}\n\ndata: [DONE]\n\n"
         }
       },
-      "recorded_at": "Sun, 08 Jun 2025 19:56:12 GMT"
+      "recorded_at": "Sun, 08 Jun 2025 22:56:34 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

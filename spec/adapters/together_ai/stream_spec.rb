@@ -12,7 +12,7 @@ RSpec.describe "#{Intelligence::Adapter[ :together_ai ]} stream requests", :toge
     Intelligence::Adapter[ :together_ai ].build! do   
       key                     ENV[ 'TOGETHERAI_API_KEY' ]
       chat_options do
-        model                 'meta-llama/Llama-3.3-70B-Instruct-Turbo'
+        model                 'deepseek-ai/DeepSeek-V3'
         max_tokens            128
         temperature           0
 
@@ -25,7 +25,7 @@ RSpec.describe "#{Intelligence::Adapter[ :together_ai ]} stream requests", :toge
     Intelligence::Adapter[ :together_ai ].build! do   
       key                     ENV[ 'TOGETHERAI_API_KEY' ]
       chat_options do
-        model                 'meta-llama/Llama-3.3-70B-Instruct-Turbo'
+        model                 'deepseek-ai/DeepSeek-V3'
         max_tokens            16
         temperature           0
 
@@ -39,7 +39,7 @@ RSpec.describe "#{Intelligence::Adapter[ :together_ai ]} stream requests", :toge
     Intelligence::Adapter[ :together_ai ].build! do   
       key   ENV[ 'TOGETHERAI_API_KEY' ]
       chat_options do
-        model                 'meta-llama/Llama-3.3-70B-Instruct-Turbo'
+        model                 'deepseek-ai/DeepSeek-V3'
         max_tokens            16
         temperature           0
         stop                  'five'
@@ -74,7 +74,7 @@ RSpec.describe "#{Intelligence::Adapter[ :together_ai ]} stream requests", :toge
 
   # tools no longer work with together ai although they did historically; this may 
   # be a model problem but I cannot find a working model
-  # include_examples 'stream requests with tools'
-  # include_examples 'stream requests with parallel tools'
+  include_examples 'stream requests with tools'
+  include_examples 'stream requests with parallel tools'
 
 end

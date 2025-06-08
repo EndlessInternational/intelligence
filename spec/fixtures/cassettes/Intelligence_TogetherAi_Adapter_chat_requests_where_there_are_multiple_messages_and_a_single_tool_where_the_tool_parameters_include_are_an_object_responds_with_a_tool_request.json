@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Sun, 08 Jun 2025 19:55:56 GMT"
+            "Sun, 08 Jun 2025 22:56:19 GMT"
           ],
           "content-type": [
             "application/json; charset=utf-8"
@@ -51,22 +51,22 @@
             "*"
           ],
           "etag": [
-            "W/\"33f-pgpRCwh4szGGc5KZ+xy8DSksFkM\""
+            "W/\"33e-EBZBdwgY0HetVRxH5pnIS66CUsM\""
           ],
           "strict-transport-security": [
             "max-age=15552000; includeSubDomains"
           ],
           "x-amzn-trace-id": [
-            "89e891fe-6a53-4aec-a077-b7154f086309-noamzn"
+            "e806540a-c1f5-4bb2-8bad-a3a25d542230-noamzn"
           ],
           "x-api-call-end": [
-            "2025-06-08T19:55:56.450Z"
+            "2025-06-08T22:56:19.363Z"
           ],
           "x-api-call-start": [
-            "2025-06-08T19:55:52.486Z"
+            "2025-06-08T22:56:17.764Z"
           ],
           "x-api-received": [
-            "2025-06-08T19:55:52.474Z"
+            "2025-06-08T22:56:17.753Z"
           ],
           "x-inference-version": [
             "v2"
@@ -107,10 +107,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "{\n  \"id\": \"nxLbcEV-zqrih-94caf304b9b034d4\",\n  \"object\": \"chat.completion\",\n  \"created\": 1749412552,\n  \"model\": \"deepseek-ai/DeepSeek-V3\",\n  \"prompt\": [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"tool_calls\",\n      \"seed\": 11789183822270118000,\n      \"logprobs\": null,\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": null,\n        \"tool_calls\": [\n          {\n            \"index\": 0,\n            \"id\": \"call_p0nex34cokueglxxz0vc1e2p\",\n            \"type\": \"function\",\n            \"function\": {\n              \"arguments\": \"{\\\"location\\\":{\\\"city\\\":\\\"Seattle\\\",\\\"state\\\":\\\"WA\\\"}}\",\n              \"name\": \"get_weather\"\n            }\n          }\n        ]\n      }\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 431,\n    \"completion_tokens\": 38,\n    \"total_tokens\": 469,\n    \"cached_tokens\": 255\n  }\n}"
+          "string": "{\n  \"id\": \"nxMZ6DE-28Eivz-94cbfb4e8bf01fa1\",\n  \"object\": \"chat.completion\",\n  \"created\": 1749423377,\n  \"model\": \"deepseek-ai/DeepSeek-V3\",\n  \"prompt\": [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"tool_calls\",\n      \"seed\": 11965913545821034000,\n      \"logprobs\": null,\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": null,\n        \"tool_calls\": [\n          {\n            \"index\": 0,\n            \"id\": \"call_f1ctbi9rdaz3fgp7n4eodzov\",\n            \"type\": \"function\",\n            \"function\": {\n              \"arguments\": \"{\\\"location\\\":{\\\"city\\\":\\\"Seattle\\\",\\\"state\\\":\\\"WA\\\"}}\",\n              \"name\": \"get_weather\"\n            }\n          }\n        ]\n      }\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 431,\n    \"completion_tokens\": 38,\n    \"total_tokens\": 469,\n    \"cached_tokens\": 0\n  }\n}"
         }
       },
-      "recorded_at": "Sun, 08 Jun 2025 19:55:56 GMT"
+      "recorded_at": "Sun, 08 Jun 2025 22:56:19 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

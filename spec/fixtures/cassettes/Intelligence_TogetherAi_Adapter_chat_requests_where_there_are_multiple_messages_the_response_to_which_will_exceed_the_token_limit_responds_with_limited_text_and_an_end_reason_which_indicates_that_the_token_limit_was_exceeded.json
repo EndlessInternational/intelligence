@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Sun, 08 Jun 2025 19:11:02 GMT"
+            "Sun, 08 Jun 2025 22:56:02 GMT"
           ],
           "content-type": [
             "application/json; charset=utf-8"
@@ -51,22 +51,22 @@
             "*"
           ],
           "etag": [
-            "W/\"264-niMvbsXelXiqAkaq1mk4ID+v4p0\""
+            "W/\"263-VYZoaJF5/+3TDfbkJqE8P8Q9lrY\""
           ],
           "strict-transport-security": [
             "max-age=15552000; includeSubDomains"
           ],
           "x-amzn-trace-id": [
-            "bfe74383-7152-4106-84d3-8b3189328ae3-noamzn"
+            "56149101-8607-4275-aaab-6371da24bd0e-noamzn"
           ],
           "x-api-call-end": [
-            "2025-06-08T19:11:02.562Z"
+            "2025-06-08T22:56:02.123Z"
           ],
           "x-api-call-start": [
-            "2025-06-08T19:11:02.029Z"
+            "2025-06-08T22:56:00.762Z"
           ],
           "x-api-received": [
-            "2025-06-08T19:11:02.017Z"
+            "2025-06-08T22:56:00.749Z"
           ],
           "x-inference-version": [
             "v2"
@@ -107,10 +107,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "{\n  \"id\": \"nxLMpTJ-28Eivz-94cab153197b769c\",\n  \"object\": \"chat.completion\",\n  \"created\": 1749409862,\n  \"model\": \"deepseek-ai/DeepSeek-V3\",\n  \"prompt\": [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"length\",\n      \"seed\": 2398251349680796700,\n      \"logprobs\": null,\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": \"one  \\ntwo  \\nthree  \\nfour  \\nfive  \\nsix  \\nseven  \\neight  \\nnine  \\nten  \\neleven  \\ntw\",\n        \"tool_calls\": []\n      }\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 85,\n    \"completion_tokens\": 24,\n    \"total_tokens\": 109,\n    \"cached_tokens\": 0\n  }\n}"
+          "string": "{\n  \"id\": \"nxMZ1A4-zqrih-94cbfae44eb4d801\",\n  \"object\": \"chat.completion\",\n  \"created\": 1749423360,\n  \"model\": \"deepseek-ai/DeepSeek-V3\",\n  \"prompt\": [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"length\",\n      \"seed\": 6741481049184997000,\n      \"logprobs\": null,\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": \"one  \\ntwo  \\nthree  \\nfour  \\nfive  \\nsix  \\nseven  \\neight  \\nnine  \\nten  \\neleven  \\ntw\",\n        \"tool_calls\": []\n      }\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 85,\n    \"completion_tokens\": 24,\n    \"total_tokens\": 109,\n    \"cached_tokens\": 0\n  }\n}"
         }
       },
-      "recorded_at": "Sun, 08 Jun 2025 19:11:02 GMT"
+      "recorded_at": "Sun, 08 Jun 2025 22:56:02 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"
