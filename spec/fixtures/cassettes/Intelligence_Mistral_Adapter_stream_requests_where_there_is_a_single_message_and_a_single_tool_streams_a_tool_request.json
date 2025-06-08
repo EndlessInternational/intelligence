@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Sun, 08 Jun 2025 19:44:50 GMT"
+            "Sun, 08 Jun 2025 22:54:22 GMT"
           ],
           "content-type": [
             "text/event-stream; charset=utf-8"
@@ -39,19 +39,19 @@
             "keep-alive"
           ],
           "x-envoy-upstream-service-time": [
-            "267"
+            "233"
           ],
           "access-control-allow-origin": [
             "*"
           ],
           "x-kong-upstream-latency": [
-            "268"
+            "233"
           ],
           "x-kong-proxy-latency": [
             "6"
           ],
           "x-kong-request-id": [
-            "22ab24062733de2c860aa86ced94917a"
+            "b283c568bb4ca5153cc17322835fcd4e"
           ],
           "cf-cache-status": [
             "DYNAMIC"
@@ -71,10 +71,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "data: {\"id\":\"301425feb5af4399a9f2eba34ab34203\",\"object\":\"chat.completion.chunk\",\"created\":1749411890,\"model\":\"mistral-large-latest\",\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"\"},\"finish_reason\":null}]}\n\ndata: {\"id\":\"301425feb5af4399a9f2eba34ab34203\",\"object\":\"chat.completion.chunk\",\"created\":1749411890,\"model\":\"mistral-large-latest\",\"choices\":[{\"index\":0,\"delta\":{\"tool_calls\":[{\"id\":\"6WVFlJQNo\",\"function\":{\"name\":\"get_location\",\"arguments\":\"{}\"},\"index\":0}]},\"finish_reason\":\"tool_calls\"}],\"usage\":{\"prompt_tokens\":98,\"total_tokens\":115,\"completion_tokens\":17}}\n\ndata: [DONE]\n\n"
+          "string": "data: {\"id\":\"ba16061962bf47f2824fc4f44f14e118\",\"object\":\"chat.completion.chunk\",\"created\":1749423262,\"model\":\"mistral-large-latest\",\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"\"},\"finish_reason\":null}]}\n\ndata: {\"id\":\"ba16061962bf47f2824fc4f44f14e118\",\"object\":\"chat.completion.chunk\",\"created\":1749423262,\"model\":\"mistral-large-latest\",\"choices\":[{\"index\":0,\"delta\":{\"tool_calls\":[{\"id\":\"rDWSQPYVn\",\"function\":{\"name\":\"get_location\",\"arguments\":\"{}\"},\"index\":0}]},\"finish_reason\":\"tool_calls\"}],\"usage\":{\"prompt_tokens\":98,\"total_tokens\":115,\"completion_tokens\":17}}\n\ndata: [DONE]\n\n"
         }
       },
-      "recorded_at": "Sun, 08 Jun 2025 19:44:50 GMT"
+      "recorded_at": "Sun, 08 Jun 2025 22:54:22 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

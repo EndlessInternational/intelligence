@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Sun, 08 Jun 2025 19:44:13 GMT"
+            "Sun, 08 Jun 2025 22:53:39 GMT"
           ],
           "content-type": [
             "application/json"
@@ -39,19 +39,19 @@
             "keep-alive"
           ],
           "x-envoy-upstream-service-time": [
-            "637"
+            "282"
           ],
           "x-ratelimit-limit-tokens-minute": [
             "2000000"
           ],
           "x-ratelimit-remaining-tokens-minute": [
-            "1998576"
+            "1998970"
           ],
           "x-ratelimit-limit-tokens-month": [
             "10000000000"
           ],
           "x-ratelimit-remaining-tokens-month": [
-            "9999984308"
+            "9999970040"
           ],
           "x-ratelimit-tokens-query-cost": [
             "346"
@@ -66,13 +66,13 @@
             "*"
           ],
           "x-kong-upstream-latency": [
-            "637"
+            "283"
           ],
           "x-kong-proxy-latency": [
-            "174"
+            "86"
           ],
           "x-kong-request-id": [
-            "9ea57d71b0374b073583b85ffd26330f"
+            "ff17e7735d9c191b0eeb6c55375ad609"
           ],
           "cf-cache-status": [
             "DYNAMIC"
@@ -95,10 +95,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\"id\":\"beba56cbbb314cffb1ca87bde510aab1\",\"object\":\"chat.completion\",\"created\":1749411853,\"model\":\"pixtral-12b-2409\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"tool_calls\":null,\"content\":\"red\"},\"finish_reason\":\"stop\",\"logprobs\":null}],\"usage\":{\"prompt_tokens\":344,\"total_tokens\":346,\"completion_tokens\":2}}"
+          "string": "{\"id\":\"26f3def8663e4f81a626c3a367d99fe5\",\"object\":\"chat.completion\",\"created\":1749423219,\"model\":\"pixtral-12b-2409\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"tool_calls\":null,\"content\":\"red\"},\"finish_reason\":\"stop\",\"logprobs\":null}],\"usage\":{\"prompt_tokens\":344,\"total_tokens\":346,\"completion_tokens\":2}}"
         }
       },
-      "recorded_at": "Sun, 08 Jun 2025 19:44:13 GMT"
+      "recorded_at": "Sun, 08 Jun 2025 22:53:39 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

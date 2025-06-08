@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Sun, 08 Jun 2025 19:45:47 GMT"
+            "Sun, 08 Jun 2025 22:54:29 GMT"
           ],
           "content-type": [
             "text/event-stream; charset=utf-8"
@@ -39,19 +39,19 @@
             "keep-alive"
           ],
           "x-envoy-upstream-service-time": [
-            "2494"
+            "3443"
           ],
           "access-control-allow-origin": [
             "*"
           ],
           "x-kong-upstream-latency": [
-            "2495"
+            "3444"
           ],
           "x-kong-proxy-latency": [
-            "7"
+            "4"
           ],
           "x-kong-request-id": [
-            "cb1fee42b04302550f6a1e4e257ef51e"
+            "f6d86c3fb805787040803a3286ff0178"
           ],
           "cf-cache-status": [
             "DYNAMIC"
@@ -71,10 +71,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "data: {\"id\":\"9f5f177ec912479186589621bf6bdfd1\",\"object\":\"chat.completion.chunk\",\"created\":1749411944,\"model\":\"mistral-large-latest\",\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"\"},\"finish_reason\":null}]}\n\ndata: {\"id\":\"9f5f177ec912479186589621bf6bdfd1\",\"object\":\"chat.completion.chunk\",\"created\":1749411944,\"model\":\"mistral-large-latest\",\"choices\":[{\"index\":0,\"delta\":{\"tool_calls\":[{\"id\":\"lmlMAzLCI\",\"function\":{\"name\":\"get_weather\",\"arguments\":\"{\\\"city\\\": \\\"Seattle\\\", \\\"state\\\": \\\"WA\\\", \\\"country\\\": \\\"USA\\\"}\"},\"index\":0}]},\"finish_reason\":\"tool_calls\"}],\"usage\":{\"prompt_tokens\":301,\"total_tokens\":337,\"completion_tokens\":36}}\n\ndata: [DONE]\n\n"
+          "string": "data: {\"id\":\"a82bc6dcb76a4e7aaaee4a84f03f40d2\",\"object\":\"chat.completion.chunk\",\"created\":1749423265,\"model\":\"mistral-large-latest\",\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"\"},\"finish_reason\":null}]}\n\ndata: {\"id\":\"a82bc6dcb76a4e7aaaee4a84f03f40d2\",\"object\":\"chat.completion.chunk\",\"created\":1749423265,\"model\":\"mistral-large-latest\",\"choices\":[{\"index\":0,\"delta\":{\"tool_calls\":[{\"id\":\"KchQBOmda\",\"function\":{\"name\":\"get_weather\",\"arguments\":\"{\\\"city\\\": \\\"Seattle\\\", \\\"state\\\": \\\"WA\\\", \\\"country\\\": \\\"USA\\\"}\"},\"index\":0}]},\"finish_reason\":\"tool_calls\"}],\"usage\":{\"prompt_tokens\":301,\"total_tokens\":337,\"completion_tokens\":36}}\n\ndata: [DONE]\n\n"
         }
       },
-      "recorded_at": "Sun, 08 Jun 2025 19:45:47 GMT"
+      "recorded_at": "Sun, 08 Jun 2025 22:54:29 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

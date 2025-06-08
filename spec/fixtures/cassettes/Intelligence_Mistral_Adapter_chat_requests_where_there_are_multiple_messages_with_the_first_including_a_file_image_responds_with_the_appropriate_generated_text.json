@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Sun, 08 Jun 2025 19:44:17 GMT"
+            "Sun, 08 Jun 2025 22:53:43 GMT"
           ],
           "content-type": [
             "application/json"
@@ -39,19 +39,19 @@
             "keep-alive"
           ],
           "x-envoy-upstream-service-time": [
-            "394"
+            "417"
           ],
           "x-ratelimit-limit-tokens-minute": [
             "2000000"
           ],
           "x-ratelimit-remaining-tokens-minute": [
-            "1996504"
+            "1996898"
           ],
           "x-ratelimit-limit-tokens-month": [
             "10000000000"
           ],
           "x-ratelimit-remaining-tokens-month": [
-            "9999982236"
+            "9999967968"
           ],
           "x-ratelimit-tokens-query-cost": [
             "337"
@@ -60,19 +60,19 @@
             "60"
           ],
           "x-ratelimit-remaining-req-10-second": [
-            "54"
+            "52"
           ],
           "access-control-allow-origin": [
             "*"
           ],
           "x-kong-upstream-latency": [
-            "395"
+            "418"
           ],
           "x-kong-proxy-latency": [
-            "6"
+            "5"
           ],
           "x-kong-request-id": [
-            "eeaaf21de7fbae0e63eb4a1504045538"
+            "9788922a2e3ef956601cb13a125f2933"
           ],
           "cf-cache-status": [
             "DYNAMIC"
@@ -95,10 +95,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\"id\":\"37e54954608740949d095f7114f05c63\",\"object\":\"chat.completion\",\"created\":1749411856,\"model\":\"pixtral-12b-2409\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"tool_calls\":null,\"content\":\"red\"},\"finish_reason\":\"stop\",\"logprobs\":null}],\"usage\":{\"prompt_tokens\":335,\"total_tokens\":337,\"completion_tokens\":2}}"
+          "string": "{\"id\":\"8206a64918154100aa11e427d1f3836a\",\"object\":\"chat.completion\",\"created\":1749423223,\"model\":\"pixtral-12b-2409\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"tool_calls\":null,\"content\":\"red\"},\"finish_reason\":\"stop\",\"logprobs\":null}],\"usage\":{\"prompt_tokens\":335,\"total_tokens\":337,\"completion_tokens\":2}}"
         }
       },
-      "recorded_at": "Sun, 08 Jun 2025 19:44:17 GMT"
+      "recorded_at": "Sun, 08 Jun 2025 22:53:43 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

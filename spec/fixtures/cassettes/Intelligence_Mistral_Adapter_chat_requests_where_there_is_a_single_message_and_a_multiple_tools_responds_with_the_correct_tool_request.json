@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Sun, 08 Jun 2025 19:44:23 GMT"
+            "Sun, 08 Jun 2025 22:54:05 GMT"
           ],
           "content-type": [
             "application/json"
@@ -39,19 +39,19 @@
             "keep-alive"
           ],
           "x-envoy-upstream-service-time": [
-            "2289"
+            "243"
           ],
           "x-ratelimit-limit-tokens-minute": [
             "2000000"
           ],
           "x-ratelimit-remaining-tokens-minute": [
-            "1994310"
+            "1994704"
           ],
           "x-ratelimit-limit-tokens-month": [
             "10000000000"
           ],
           "x-ratelimit-remaining-tokens-month": [
-            "9999980042"
+            "9999965774"
           ],
           "x-ratelimit-tokens-query-cost": [
             "302"
@@ -60,19 +60,19 @@
             "60"
           ],
           "x-ratelimit-remaining-req-10-second": [
-            "52"
+            "57"
           ],
           "access-control-allow-origin": [
             "*"
           ],
           "x-kong-upstream-latency": [
-            "2290"
+            "244"
           ],
           "x-kong-proxy-latency": [
-            "5"
+            "6"
           ],
           "x-kong-request-id": [
-            "bf18ea59bb46d7700a32c929450c3f4e"
+            "83fa8e442c795f7b2b0bcd47ef64265a"
           ],
           "cf-cache-status": [
             "DYNAMIC"
@@ -95,10 +95,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\"id\":\"b5922bcd37de4e6fa597815680bacc7d\",\"object\":\"chat.completion\",\"created\":1749411861,\"model\":\"mistral-large-latest\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"tool_calls\":[{\"id\":\"SwjfNI4KH\",\"function\":{\"name\":\"get_location\",\"arguments\":\"{}\"},\"index\":0}],\"content\":\"\"},\"finish_reason\":\"tool_calls\"}],\"usage\":{\"prompt_tokens\":285,\"total_tokens\":302,\"completion_tokens\":17}}"
+          "string": "{\"id\":\"32153e6ab31c4f158d3e725237ce8efb\",\"object\":\"chat.completion\",\"created\":1749423245,\"model\":\"mistral-large-latest\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"tool_calls\":[{\"id\":\"Q5CFUDCNu\",\"function\":{\"name\":\"get_location\",\"arguments\":\"{}\"},\"index\":0}],\"content\":\"\"},\"finish_reason\":\"tool_calls\"}],\"usage\":{\"prompt_tokens\":285,\"total_tokens\":302,\"completion_tokens\":17}}"
         }
       },
-      "recorded_at": "Sun, 08 Jun 2025 19:44:23 GMT"
+      "recorded_at": "Sun, 08 Jun 2025 22:54:05 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

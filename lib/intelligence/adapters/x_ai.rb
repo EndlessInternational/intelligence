@@ -38,55 +38,6 @@ module Intelligence
         end
       end
 
-      def chat_result_attributes( response )
-        return nil unless response.success?
-        response_json = JSON.parse( response.body, symbolize_names: true ) rescue nil
-        return nil if response_json.nil? || response_json[ :choices ].nil?
-
-        result = {}
-        result[ :choices ] = []
-
-        ( response_json[ :choices ] || [] ).each do | json_choice |
-          end_reason = to_end_reason( json_choice[ :finish_reason ] )
-          if ( json_message = json_choice[ :message ] )
-            result_message = { role: json_message[ :role ] }
-            if json_message[ :content ] 
-              result_message[ :contents ] = [ { type: :text, text: json_message[ :content ] } ]
-            end
-            if json_message[ :tool_calls ] && !json_message[ :tool_calls ].empty?
-              result_message[ :contents ] ||= []
-              end_reason = :tool_called if end_reason == :ended
-              json_message[ :tool_calls ].each do | json_message_tool_call |
-                result_message_tool_call_parameters = 
-                  JSON.parse( json_message_tool_call[ :function ][ :arguments ], symbolize_names: true ) \
-                    rescue json_message_tool_call[ :function ][ :arguments ]
-                result_message[ :contents ] << {
-                  type: :tool_call, 
-                  tool_call_id: json_message_tool_call[ :id ],
-                  tool_name: json_message_tool_call[ :function ][ :name ],
-                  tool_parameters: result_message_tool_call_parameters
-                }
-              end 
-            end
-          end
-          result[ :choices ].push( { end_reason: end_reason, message: result_message } )
-        end
-
-        metrics_json = response_json[ :usage ]
-        unless metrics_json.nil?
-
-          metrics = {}
-          metrics[ :input_tokens ] = metrics_json[ :prompt_tokens ] 
-          metrics[ :output_tokens ] = metrics_json[ :completion_tokens ]
-          metrics = metrics.compact
-
-          result[ :metrics ] = metrics unless metrics.empty?
-
-        end
-
-        result
-      end
-
       def chat_result_error_attributes( response )
         error_type, error_description = to_error_response( response.status )
         error = error_type 

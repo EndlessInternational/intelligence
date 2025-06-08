@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Sun, 08 Jun 2025 19:44:11 GMT"
+            "Sun, 08 Jun 2025 22:53:38 GMT"
           ],
           "content-type": [
             "application/json"
@@ -39,19 +39,19 @@
             "keep-alive"
           ],
           "x-envoy-upstream-service-time": [
-            "126"
+            "134"
           ],
           "x-ratelimit-limit-tokens-minute": [
             "2000000"
           ],
           "x-ratelimit-remaining-tokens-minute": [
-            "1999256"
+            "1999650"
           ],
           "x-ratelimit-limit-tokens-month": [
             "10000000000"
           ],
           "x-ratelimit-remaining-tokens-month": [
-            "9999984988"
+            "9999970720"
           ],
           "x-ratelimit-tokens-query-cost": [
             "87"
@@ -60,19 +60,19 @@
             "60"
           ],
           "x-ratelimit-remaining-req-10-second": [
-            "55"
+            "57"
           ],
           "access-control-allow-origin": [
             "*"
           ],
           "x-kong-upstream-latency": [
-            "127"
+            "135"
           ],
           "x-kong-proxy-latency": [
-            "6"
+            "4"
           ],
           "x-kong-request-id": [
-            "a7008c62e14a1c048bb0b75ed52dd551"
+            "67a1216c86b4b21ecb636e5027160747"
           ],
           "cf-cache-status": [
             "DYNAMIC"
@@ -95,10 +95,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\"id\":\"e01c5f274d0b419c8cb14a71b777237e\",\"object\":\"chat.completion\",\"created\":1749411851,\"model\":\"mistral-large-latest\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"tool_calls\":null,\"content\":\"one\\ntwo\\nthree\\nfour\\n\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":79,\"total_tokens\":87,\"completion_tokens\":8}}"
+          "string": "{\"id\":\"d7d8c94c2cea472e88eec79dffdb46c0\",\"object\":\"chat.completion\",\"created\":1749423218,\"model\":\"mistral-large-latest\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"tool_calls\":null,\"content\":\"one\\ntwo\\nthree\\nfour\\n\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":79,\"total_tokens\":87,\"completion_tokens\":8}}"
         }
       },
-      "recorded_at": "Sun, 08 Jun 2025 19:44:11 GMT"
+      "recorded_at": "Sun, 08 Jun 2025 22:53:38 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

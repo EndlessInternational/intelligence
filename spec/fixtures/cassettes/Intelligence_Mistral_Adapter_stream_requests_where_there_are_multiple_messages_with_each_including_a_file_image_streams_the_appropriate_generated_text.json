@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Sun, 08 Jun 2025 19:44:50 GMT"
+            "Sun, 08 Jun 2025 22:54:21 GMT"
           ],
           "content-type": [
             "text/event-stream; charset=utf-8"
@@ -39,19 +39,19 @@
             "keep-alive"
           ],
           "x-envoy-upstream-service-time": [
-            "509"
+            "768"
           ],
           "access-control-allow-origin": [
             "*"
           ],
           "x-kong-upstream-latency": [
-            "510"
+            "769"
           ],
           "x-kong-proxy-latency": [
-            "6"
+            "5"
           ],
           "x-kong-request-id": [
-            "b3294151f391797464bfb176ff73a80c"
+            "70daf908496dab0b0fe7070e63abc44c"
           ],
           "cf-cache-status": [
             "DYNAMIC"
@@ -71,10 +71,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "data: {\"id\":\"dc23c9a23eb14ddbb1f0f9823fc53456\",\"object\":\"chat.completion.chunk\",\"created\":1749411889,\"model\":\"pixtral-12b-2409\",\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"\"},\"finish_reason\":null,\"logprobs\":null}]}\n\ndata: {\"id\":\"dc23c9a23eb14ddbb1f0f9823fc53456\",\"object\":\"chat.completion.chunk\",\"created\":1749411889,\"model\":\"pixtral-12b-2409\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"three\"},\"finish_reason\":null,\"logprobs\":null}]}\n\ndata: {\"id\":\"dc23c9a23eb14ddbb1f0f9823fc53456\",\"object\":\"chat.completion.chunk\",\"created\":1749411889,\"model\":\"pixtral-12b-2409\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\" ball\"},\"finish_reason\":null,\"logprobs\":null}]}\n\ndata: {\"id\":\"dc23c9a23eb14ddbb1f0f9823fc53456\",\"object\":\"chat.completion.chunk\",\"created\":1749411889,\"model\":\"pixtral-12b-2409\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"oons\"},\"finish_reason\":null,\"logprobs\":null}]}\n\ndata: {\"id\":\"dc23c9a23eb14ddbb1f0f9823fc53456\",\"object\":\"chat.completion.chunk\",\"created\":1749411889,\"model\":\"pixtral-12b-2409\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"\"},\"finish_reason\":\"stop\",\"logprobs\":null}],\"usage\":{\"prompt_tokens\":1394,\"total_tokens\":1398,\"completion_tokens\":4}}\n\ndata: [DONE]\n\n"
+          "string": "data: {\"id\":\"e8fac1cc0f6946abaabc4ebae22763df\",\"object\":\"chat.completion.chunk\",\"created\":1749423261,\"model\":\"pixtral-12b-2409\",\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"\"},\"finish_reason\":null,\"logprobs\":null}]}\n\ndata: {\"id\":\"e8fac1cc0f6946abaabc4ebae22763df\",\"object\":\"chat.completion.chunk\",\"created\":1749423261,\"model\":\"pixtral-12b-2409\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"three\"},\"finish_reason\":null,\"logprobs\":null}]}\n\ndata: {\"id\":\"e8fac1cc0f6946abaabc4ebae22763df\",\"object\":\"chat.completion.chunk\",\"created\":1749423261,\"model\":\"pixtral-12b-2409\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\" ball\"},\"finish_reason\":null,\"logprobs\":null}]}\n\ndata: {\"id\":\"e8fac1cc0f6946abaabc4ebae22763df\",\"object\":\"chat.completion.chunk\",\"created\":1749423261,\"model\":\"pixtral-12b-2409\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"oons\"},\"finish_reason\":null,\"logprobs\":null}]}\n\ndata: {\"id\":\"e8fac1cc0f6946abaabc4ebae22763df\",\"object\":\"chat.completion.chunk\",\"created\":1749423261,\"model\":\"pixtral-12b-2409\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"\"},\"finish_reason\":\"stop\",\"logprobs\":null}],\"usage\":{\"prompt_tokens\":1394,\"total_tokens\":1398,\"completion_tokens\":4}}\n\ndata: [DONE]\n\n"
         }
       },
-      "recorded_at": "Sun, 08 Jun 2025 19:44:50 GMT"
+      "recorded_at": "Sun, 08 Jun 2025 22:54:21 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"
