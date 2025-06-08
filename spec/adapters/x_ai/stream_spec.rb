@@ -80,7 +80,6 @@ RSpec.describe "#{Intelligence::Adapter[ :x_ai ]} stream requests", :x_ai do
   include_examples 'stream requests with file images',
                    adapter: :vision_adapter
   include_examples 'stream requests with tools'
-  # grok is still struggling with this one
-  # include_examples 'stream requests with parallel tools'
+  include_examples 'stream requests with parallel tools'
 
 end
