@@ -59,7 +59,7 @@ RSpec.describe "#{Intelligence::Adapter[ :x_ai ]} stream requests", :x_ai do
     Intelligence::Adapter[ :x_ai ].build! do   
       key                     ENV[ 'XAI_API_KEY' ]
       chat_options do
-        model                 'grok-3'
+        model                 'grok-2-vision-1212'
         max_tokens            16
         temperature           0
 
@@ -72,13 +72,15 @@ RSpec.describe "#{Intelligence::Adapter[ :x_ai ]} stream requests", :x_ai do
   include_examples 'stream requests'
   include_examples 'stream requests with token limit exceeded',
                    adapter: :adapter_with_limited_max_tokens
-  # include_examples 'stream requests with stop sequence', 
-  #                 adapter: :adapter_with_stop_sequence
+  include_examples 'stream requests with stop sequence', 
+                   adapter: :adapter_with_stop_sequence
   include_examples 'stream requests without alternating roles'
-  # include_examples 'stream requests with binary encoded images', 
-  #                 adapter: :vision_adapter
-
+  include_examples 'stream requests with binary encoded images',
+                   adapter: :vision_adapter
+  include_examples 'stream requests with file images',
+                   adapter: :vision_adapter
   include_examples 'stream requests with tools'
+  # grok is still struggling with this one
   # include_examples 'stream requests with parallel tools'
 
 end
