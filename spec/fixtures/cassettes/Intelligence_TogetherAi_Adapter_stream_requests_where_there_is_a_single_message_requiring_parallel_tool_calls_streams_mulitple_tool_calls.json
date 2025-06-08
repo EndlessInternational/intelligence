@@ -1,0 +1,111 @@
+{
+  "http_interactions": [
+    {
+      "request": {
+        "method": "post",
+        "uri": "https://api.together.xyz/v1/chat/completions",
+        "body": {
+          "encoding": "UTF-8",
+          "string": "{\"model\":\"deepseek-ai/DeepSeek-V3\",\"max_tokens\":128.0,\"temperature\":0.0,\"stream\":true,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"What is the weather in London, Paris and Rome right now?\\n\"}],\"tools\":[{\"type\":\"function\",\"function\":{\"name\":\"get_weather\",\"description\":\"The get_weather tool will return the current weather in a given locality.\",\"parameters\":{\"type\":\"object\",\"properties\":{\"city\":{\"type\":\"string\",\"description\":\"The city or town for which the current weather should be returned.\"},\"state\":{\"type\":\"string\",\"description\":\"The state or province for which the current weather should be returned. If this is not provided the largest or most prominent city with the given name, in the given country or in the worldi, will be assumed.\"},\"country\":{\"type\":\"string\",\"description\":\"The country for which the given weather should be returned. If this is not provided the largest or most prominent city with the given name will be returned.\"}},\"required\":[\"city\"]}}}]}"
+        },
+        "headers": {
+          "User-Agent": [
+            "Faraday v2.13.1"
+          ],
+          "Content-type": [
+            "application/json"
+          ],
+          "Authorization": [
+            "Bearer <TOKEN>"
+          ]
+        }
+      },
+      "response": {
+        "status": {
+          "code": 200,
+          "message": "OK"
+        },
+        "headers": {
+          "date": [
+            "Sun, 08 Jun 2025 19:56:27 GMT"
+          ],
+          "content-type": [
+            "text/event-stream;charset=utf-8"
+          ],
+          "transfer-encoding": [
+            "chunked"
+          ],
+          "connection": [
+            "keep-alive"
+          ],
+          "cf-ray": [
+            "<CF-RAY>"
+          ],
+          "cf-cache-status": [
+            "DYNAMIC"
+          ],
+          "retry-after": [
+            "1"
+          ],
+          "access-control-allow-origin": [
+            "*"
+          ],
+          "cache-control": [
+            "no-cache, no-transform"
+          ],
+          "strict-transport-security": [
+            "max-age=15552000; includeSubDomains"
+          ],
+          "x-amzn-trace-id": [
+            "c6aa5104-78b9-4c4e-b972-0e7ff06a0a3c-noamzn"
+          ],
+          "x-api-call-start": [
+            "2025-06-08T19:56:26.505Z"
+          ],
+          "x-api-received": [
+            "2025-06-08T19:56:26.479Z"
+          ],
+          "x-inference-version": [
+            "v2"
+          ],
+          "x-ratelimit": [
+            "false"
+          ],
+          "x-ratelimit-limit": [
+            "2"
+          ],
+          "x-ratelimit-limit-tokens": [
+            "3000"
+          ],
+          "x-ratelimit-remaining": [
+            "2"
+          ],
+          "x-ratelimit-remaining-tokens": [
+            "3000"
+          ],
+          "x-ratelimit-reset": [
+            "1"
+          ],
+          "x-request-id": [
+            "<X-REQUEST-ID>"
+          ],
+          "vary": [
+            "Accept-Encoding"
+          ],
+          "server": [
+            "cloudflare"
+          ],
+          "alt-svc": [
+            "h3=\":443\"; ma=86400"
+          ]
+        },
+        "body": {
+          "encoding": "UTF-8",
+          "string": "data: {\"id\":\"nxLbnLn-28Eivz-94caf3d8a90d7209\",\"object\":\"chat.completion.chunk\",\"created\":1749412587,\"model\":\"deepseek-ai/DeepSeek-V3\",\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":null},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"nxLbnLn-28Eivz-94caf3d8a90d7209\",\"object\":\"chat.completion.chunk\",\"created\":1749412587,\"model\":\"deepseek-ai/DeepSeek-V3\",\"choices\":[{\"index\":0,\"delta\":{\"tool_calls\":[{\"index\":0,\"id\":\"call_64vsdxjgeg76ag4nxurg9jwt\",\"type\":\"function\",\"function\":{\"name\":\"get_weather\",\"arguments\":\"\"}}]},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"nxLbnLn-28Eivz-94caf3d8a90d7209\",\"object\":\"chat.completion.chunk\",\"created\":1749412587,\"model\":\"deepseek-ai/DeepSeek-V3\",\"choices\":[{\"index\":0,\"delta\":{\"tool_calls\":[{\"index\":0,\"function\":{\"arguments\":\"{\\\"city\\\":\\\"London\\\"}\"}}]},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"nxLbnLn-28Eivz-94caf3d8a90d7209\",\"object\":\"chat.completion.chunk\",\"created\":1749412588,\"model\":\"deepseek-ai/DeepSeek-V3\",\"choices\":[{\"index\":0,\"delta\":{\"tool_calls\":[{\"index\":1,\"id\":\"call_e1t70p883xdfz0321457s1r0\",\"type\":\"function\",\"function\":{\"name\":\"get_weather\",\"arguments\":\"\"}}]},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"nxLbnLn-28Eivz-94caf3d8a90d7209\",\"object\":\"chat.completion.chunk\",\"created\":1749412588,\"model\":\"deepseek-ai/DeepSeek-V3\",\"choices\":[{\"index\":0,\"delta\":{\"tool_calls\":[{\"index\":1,\"function\":{\"arguments\":\"{\\\"city\\\":\\\"Paris\\\"}\"}}]},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"nxLbnLn-28Eivz-94caf3d8a90d7209\",\"object\":\"chat.completion.chunk\",\"created\":1749412588,\"model\":\"deepseek-ai/DeepSeek-V3\",\"choices\":[{\"index\":0,\"delta\":{\"tool_calls\":[{\"index\":2,\"id\":\"call_icjfsae2yojakuf2ex68syxy\",\"type\":\"function\",\"function\":{\"name\":\"get_weather\",\"arguments\":\"\"}}]},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"nxLbnLn-28Eivz-94caf3d8a90d7209\",\"object\":\"chat.completion.chunk\",\"created\":1749412588,\"model\":\"deepseek-ai/DeepSeek-V3\",\"choices\":[{\"index\":0,\"delta\":{\"tool_calls\":[{\"index\":2,\"function\":{\"arguments\":\"{\\\"city\\\":\\\"Rome\\\"}\"}}]},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"nxLbnLn-28Eivz-94caf3d8a90d7209\",\"object\":\"chat.completion.chunk\",\"created\":1749412586,\"choices\":[{\"index\":0,\"text\":\"\",\"logprobs\":null,\"finish_reason\":\"tool_calls\",\"seed\":2718961167241569000,\"delta\":{\"token_id\":1,\"role\":\"assistant\",\"content\":\"\",\"tool_calls\":null}}],\"model\":\"deepseek-ai/DeepSeek-V3-p\",\"usage\":{\"prompt_tokens\":365,\"completion_tokens\":79,\"total_tokens\":444,\"cached_tokens\":0}}\n\ndata: [DONE]\n\n"
+        }
+      },
+      "recorded_at": "Sun, 08 Jun 2025 19:56:28 GMT"
+    }
+  ],
+  "recorded_with": "VCR 6.3.1"
+}

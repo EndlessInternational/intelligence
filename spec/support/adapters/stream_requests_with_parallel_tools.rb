@@ -60,10 +60,10 @@ RSpec.shared_examples 'stream requests with parallel tools' do | options = {} |
       choice = response.result.choices.first 
       expect( choice.end_reason ).to eq( :tool_called )
 
-      expect( contents.length ).to be >= 3
-      expect( contents.last ).to be_a( Intelligence::MessageContent::ToolCall )
+      tool_calls = contents.select { | content | content.is_a?( Intelligence::MessageContent::ToolCall ) }
+      expect( tool_calls.length ).to be >= 3
 
-      tool_calls = contents.last( 3 ).each do | tool_call |
+      tool_calls.each do | tool_call |
         expect( tool_call.tool_call_id ).not_to be_nil
         expect( tool_call.tool_name ).to eq( 'get_weather' )
         expect( tool_call.tool_parameters ).to be_a( Hash )

@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Sat, 07 Jun 2025 16:58:03 GMT"
+            "Sun, 08 Jun 2025 19:54:34 GMT"
           ],
           "content-type": [
             "text/event-stream; charset=utf-8"
@@ -39,7 +39,7 @@
             "keep-alive"
           ],
           "x-inference-request-id": [
-            "5167c898-5ec0-4991-a764-4a5f879f4e71"
+            "4c8e5b75-448f-49ab-8bdf-679e1c0ee686"
           ],
           "cf-cache-status": [
             "DYNAMIC"
@@ -53,10 +53,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "data: {\"id\": \"chatcmpl-030407563ed54fd4849b73c0f5c2b69c\", \"object\": \"chat.completion.chunk\", \"created\": 1749315483, \"model\": \"Qwen/Qwen2.5-VL-7B-Instruct\", \"choices\": [{\"index\": 0, \"delta\": {\"role\": \"assistant\", \"content\": \"\"}, \"logprobs\": null, \"finish_reason\": null}], \"usage\": {\"prompt_tokens\": 92, \"total_tokens\": 93, \"completion_tokens\": 1}}\n\ndata: {\"id\": \"chatcmpl-030407563ed54fd4849b73c0f5c2b69c\", \"object\": \"chat.completion.chunk\", \"created\": 1749315483, \"model\": \"Qwen/Qwen2.5-VL-7B-Instruct\", \"choices\": [{\"index\": 0, \"delta\": {\"content\": \"red\"}, \"logprobs\": null, \"finish_reason\": null}], \"usage\": {\"prompt_tokens\": 92, \"total_tokens\": 94, \"completion_tokens\": 2}}\n\ndata: {\"id\": \"chatcmpl-030407563ed54fd4849b73c0f5c2b69c\", \"object\": \"chat.completion.chunk\", \"created\": 1749315483, \"model\": \"Qwen/Qwen2.5-VL-7B-Instruct\", \"choices\": [{\"index\": 0, \"delta\": {\"content\": \"\"}, \"logprobs\": null, \"finish_reason\": \"stop\", \"stop_reason\": null}], \"usage\": {\"prompt_tokens\": 92, \"total_tokens\": 95, \"completion_tokens\": 3}}\n\ndata: [DONE]\n\n"
+          "string": "data: {\"id\": \"chatcmpl-cd2260ab1e2a4bc39a17f50dde6f26ce\", \"object\": \"chat.completion.chunk\", \"created\": 1749412473, \"model\": \"Qwen/Qwen2.5-VL-7B-Instruct\", \"choices\": [{\"index\": 0, \"delta\": {\"role\": \"assistant\", \"content\": \"\"}, \"logprobs\": null, \"finish_reason\": null}], \"usage\": {\"prompt_tokens\": 92, \"total_tokens\": 93, \"completion_tokens\": 1}}\n\ndata: {\"id\": \"chatcmpl-cd2260ab1e2a4bc39a17f50dde6f26ce\", \"object\": \"chat.completion.chunk\", \"created\": 1749412473, \"model\": \"Qwen/Qwen2.5-VL-7B-Instruct\", \"choices\": [{\"index\": 0, \"delta\": {\"content\": \"red\"}, \"logprobs\": null, \"finish_reason\": null}], \"usage\": {\"prompt_tokens\": 92, \"total_tokens\": 94, \"completion_tokens\": 2}}\n\ndata: {\"id\": \"chatcmpl-cd2260ab1e2a4bc39a17f50dde6f26ce\", \"object\": \"chat.completion.chunk\", \"created\": 1749412473, \"model\": \"Qwen/Qwen2.5-VL-7B-Instruct\", \"choices\": [{\"index\": 0, \"delta\": {\"content\": \"\"}, \"logprobs\": null, \"finish_reason\": \"stop\", \"stop_reason\": null}], \"usage\": {\"prompt_tokens\": 92, \"total_tokens\": 95, \"completion_tokens\": 3}}\n\ndata: [DONE]\n\n"
         }
       },
-      "recorded_at": "Sat, 07 Jun 2025 16:58:03 GMT"
+      "recorded_at": "Sun, 08 Jun 2025 19:54:34 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

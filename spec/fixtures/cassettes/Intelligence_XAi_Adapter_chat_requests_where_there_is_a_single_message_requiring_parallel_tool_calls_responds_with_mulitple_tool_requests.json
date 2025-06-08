@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Sun, 08 Jun 2025 17:31:10 GMT"
+            "Sun, 08 Jun 2025 19:51:27 GMT"
           ],
           "content-type": [
             "application/json"
@@ -74,10 +74,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\"id\":\"dc81f945-c3ba-4aef-9939-a060721a33c0\",\"object\":\"chat.completion\",\"created\":1749403869,\"model\":\"grok-3\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"\\n\\n\",\"tool_calls\":[{\"id\":\"call_10631613\",\"function\":{\"name\":\"get_weather\",\"arguments\":\"{\\\"city\\\":\\\"London\\\"}\"},\"type\":\"function\"},{\"id\":\"call_77608440\",\"function\":{\"name\":\"get_weather\",\"arguments\":\"{\\\"city\\\":\\\"Paris\\\"}\"},\"type\":\"function\"},{\"id\":\"call_38249286\",\"function\":{\"name\":\"get_weather\",\"arguments\":\"{\\\"city\\\":\\\"Rome\\\"}\"},\"type\":\"function\"}],\"refusal\":null},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":469,\"completion_tokens\":78,\"total_tokens\":547,\"prompt_tokens_details\":{\"text_tokens\":469,\"audio_tokens\":0,\"image_tokens\":0,\"cached_tokens\":2},\"completion_tokens_details\":{\"reasoning_tokens\":0,\"audio_tokens\":0,\"accepted_prediction_tokens\":0,\"rejected_prediction_tokens\":0},\"num_sources_used\":0},\"system_fingerprint\":\"fp_d8d6e9f7d0\"}"
+          "string": "{\"id\":\"98510abe-1680-443a-863a-a6cebcf58371\",\"object\":\"chat.completion\",\"created\":1749412286,\"model\":\"grok-3\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"\\n\\n\",\"tool_calls\":[{\"id\":\"call_38680884\",\"function\":{\"name\":\"get_weather\",\"arguments\":\"{\\\"city\\\":\\\"London\\\"}\"},\"type\":\"function\"},{\"id\":\"call_70130793\",\"function\":{\"name\":\"get_weather\",\"arguments\":\"{\\\"city\\\":\\\"Paris\\\"}\"},\"type\":\"function\"},{\"id\":\"call_76468487\",\"function\":{\"name\":\"get_weather\",\"arguments\":\"{\\\"city\\\":\\\"Rome\\\"}\"},\"type\":\"function\"}],\"refusal\":null},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":469,\"completion_tokens\":78,\"total_tokens\":547,\"prompt_tokens_details\":{\"text_tokens\":469,\"audio_tokens\":0,\"image_tokens\":0,\"cached_tokens\":2},\"completion_tokens_details\":{\"reasoning_tokens\":0,\"audio_tokens\":0,\"accepted_prediction_tokens\":0,\"rejected_prediction_tokens\":0},\"num_sources_used\":0},\"system_fingerprint\":\"fp_d8d6e9f7d0\"}"
         }
       },
-      "recorded_at": "Sun, 08 Jun 2025 17:31:10 GMT"
+      "recorded_at": "Sun, 08 Jun 2025 19:51:27 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

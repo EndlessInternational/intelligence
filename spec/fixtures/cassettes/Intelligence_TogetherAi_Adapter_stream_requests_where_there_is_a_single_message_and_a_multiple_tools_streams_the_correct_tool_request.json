@@ -1,0 +1,111 @@
+{
+  "http_interactions": [
+    {
+      "request": {
+        "method": "post",
+        "uri": "https://api.together.xyz/v1/chat/completions",
+        "body": {
+          "encoding": "UTF-8",
+          "string": "{\"model\":\"deepseek-ai/DeepSeek-V3\",\"max_tokens\":128.0,\"temperature\":0.0,\"stream\":true,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"Where am I located?\"}],\"tools\":[{\"type\":\"function\",\"function\":{\"name\":\"get_location\",\"description\":\"The get_location tool will return the users city, state or province and country.\",\"parameters\":{}}},{\"type\":\"function\",\"function\":{\"name\":\"get_weather\",\"description\":\"The get_weather tool will return the current weather in a given locality.\",\"parameters\":{\"type\":\"object\",\"properties\":{\"city\":{\"type\":\"string\",\"description\":\"The city or town for which the current weather should be returned.\"},\"state\":{\"type\":\"string\",\"description\":\"The state or province for which the current weather should be returned. If this is not provided the largest or most prominent city with the given name, in the given country or in the worldi, will be assumed.\"},\"country\":{\"type\":\"string\",\"description\":\"The country for which the given weather should be returned. If this is not provided the largest or most prominent city with the given name will be returned.\"}},\"required\":[\"city\"]}}}]}"
+        },
+        "headers": {
+          "User-Agent": [
+            "Faraday v2.13.1"
+          ],
+          "Content-type": [
+            "application/json"
+          ],
+          "Authorization": [
+            "Bearer <TOKEN>"
+          ]
+        }
+      },
+      "response": {
+        "status": {
+          "code": 200,
+          "message": "OK"
+        },
+        "headers": {
+          "date": [
+            "Sun, 08 Jun 2025 19:56:12 GMT"
+          ],
+          "content-type": [
+            "text/event-stream;charset=utf-8"
+          ],
+          "transfer-encoding": [
+            "chunked"
+          ],
+          "connection": [
+            "keep-alive"
+          ],
+          "cf-ray": [
+            "<CF-RAY>"
+          ],
+          "cf-cache-status": [
+            "DYNAMIC"
+          ],
+          "retry-after": [
+            "2"
+          ],
+          "access-control-allow-origin": [
+            "*"
+          ],
+          "cache-control": [
+            "no-cache, no-transform"
+          ],
+          "strict-transport-security": [
+            "max-age=15552000; includeSubDomains"
+          ],
+          "x-amzn-trace-id": [
+            "c283c115-479f-493f-8998-05367b8c59bd-noamzn"
+          ],
+          "x-api-call-start": [
+            "2025-06-08T19:56:07.495Z"
+          ],
+          "x-api-received": [
+            "2025-06-08T19:56:07.477Z"
+          ],
+          "x-inference-version": [
+            "v2"
+          ],
+          "x-ratelimit": [
+            "false"
+          ],
+          "x-ratelimit-limit": [
+            "2"
+          ],
+          "x-ratelimit-limit-tokens": [
+            "3000"
+          ],
+          "x-ratelimit-remaining": [
+            "3"
+          ],
+          "x-ratelimit-remaining-tokens": [
+            "3000"
+          ],
+          "x-ratelimit-reset": [
+            "2"
+          ],
+          "x-request-id": [
+            "<X-REQUEST-ID>"
+          ],
+          "vary": [
+            "Accept-Encoding"
+          ],
+          "server": [
+            "cloudflare"
+          ],
+          "alt-svc": [
+            "h3=\":443\"; ma=86400"
+          ]
+        },
+        "body": {
+          "encoding": "UTF-8",
+          "string": "data: {\"id\":\"nxLbghA-28Eivz-94caf360df2bf8d5\",\"object\":\"chat.completion.chunk\",\"created\":1749412572,\"model\":\"deepseek-ai/DeepSeek-V3\",\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":null},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"nxLbghA-28Eivz-94caf360df2bf8d5\",\"object\":\"chat.completion.chunk\",\"created\":1749412572,\"model\":\"deepseek-ai/DeepSeek-V3\",\"choices\":[{\"index\":0,\"delta\":{\"tool_calls\":[{\"index\":0,\"id\":\"call_kueovis8u8z5s8vcv8hzvza6\",\"type\":\"function\",\"function\":{\"name\":\"get_location\",\"arguments\":\"\"}}]},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"nxLbghA-28Eivz-94caf360df2bf8d5\",\"object\":\"chat.completion.chunk\",\"created\":1749412567,\"choices\":[{\"index\":0,\"text\":\"\",\"logprobs\":null,\"finish_reason\":\"tool_calls\",\"seed\":216824449885714530,\"delta\":{\"token_id\":1,\"role\":\"assistant\",\"content\":\"\",\"tool_calls\":null}}],\"model\":\"deepseek-ai/DeepSeek-V3-p\",\"usage\":{\"prompt_tokens\":409,\"completion_tokens\":21,\"total_tokens\":430,\"cached_tokens\":0}}\n\ndata: [DONE]\n\n"
+        }
+      },
+      "recorded_at": "Sun, 08 Jun 2025 19:56:12 GMT"
+    }
+  ],
+  "recorded_with": "VCR 6.3.1"
+}

@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Sat, 07 Jun 2025 16:45:10 GMT"
+            "Sun, 08 Jun 2025 19:43:28 GMT"
           ],
           "content-type": [
             "application/json"
@@ -54,16 +54,16 @@
             "6000"
           ],
           "x-ratelimit-remaining-requests": [
-            "983"
+            "967"
           ],
           "x-ratelimit-remaining-tokens": [
-            "5631"
+            "5583"
           ],
           "x-ratelimit-reset-requests": [
-            "24m28.378999999s"
+            "47m30.788s"
           ],
           "x-ratelimit-reset-tokens": [
-            "3.688999999s"
+            "4.168s"
           ],
           "x-request-id": [
             "<X-REQUEST-ID>"
@@ -92,10 +92,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\"id\":\"chatcmpl-6072890a-d237-4eb8-80ca-9212c13926c3\",\"object\":\"chat.completion\",\"created\":1749314710,\"model\":\"mistral-saba-24b\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"red\"},\"logprobs\":null,\"finish_reason\":\"stop\"}],\"usage\":{\"queue_time\":0.21447117100000002,\"prompt_tokens\":80,\"prompt_time\":0.00428219,\"completion_tokens\":2,\"completion_time\":0.006060606,\"total_tokens\":82,\"total_time\":0.010342796},\"usage_breakdown\":{\"models\":null},\"system_fingerprint\":\"fp_07e680a590\",\"x_groq\":{\"id\":\"req_01jx5mgak0fbj8vkvxz2q5n7ma\"}}\n"
+          "string": "{\"id\":\"chatcmpl-9d29a9b2-b166-48ef-8c43-28f66bc05983\",\"object\":\"chat.completion\",\"created\":1749411808,\"model\":\"mistral-saba-24b\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"red\"},\"logprobs\":null,\"finish_reason\":\"stop\"}],\"usage\":{\"queue_time\":0.213142742,\"prompt_tokens\":80,\"prompt_time\":0.004270659,\"completion_tokens\":2,\"completion_time\":0.006060606,\"total_tokens\":82,\"total_time\":0.010331265},\"usage_breakdown\":{\"models\":null},\"system_fingerprint\":\"fp_07e680a590\",\"x_groq\":{\"id\":\"req_01jx8h3gxse569k1r0n6cdaeac\"}}\n"
         }
       },
-      "recorded_at": "Sat, 07 Jun 2025 16:45:10 GMT"
+      "recorded_at": "Sun, 08 Jun 2025 19:43:28 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

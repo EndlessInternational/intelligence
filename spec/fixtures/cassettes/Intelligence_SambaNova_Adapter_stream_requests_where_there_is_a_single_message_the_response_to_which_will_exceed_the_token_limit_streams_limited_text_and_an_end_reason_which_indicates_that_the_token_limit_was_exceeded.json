@@ -6,7 +6,7 @@
         "uri": "https://api.sambanova.ai/v1/chat/completions",
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"model\":\"Meta-Llama-3.3-70B-Instruct\",\"max_tokens\":16,\"temperature\":0.0,\"stream\":true,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"count to twenty in words, all lower case, one word per line\\n\"}]}"
+          "string": "{\"model\":\"DeepSeek-V3-0324\",\"max_tokens\":16,\"temperature\":0.0,\"stream\":true,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"count to twenty in words, all lower case, one word per line\\n\"}]}"
         },
         "headers": {
           "User-Agent": [
@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Sat, 07 Jun 2025 16:48:09 GMT"
+            "Sun, 08 Jun 2025 19:48:49 GMT"
           ],
           "content-type": [
             "text/event-stream; charset=utf-8"
@@ -39,25 +39,25 @@
             "keep-alive"
           ],
           "inference-id": [
-            "4eaa1b73-b5a8-4d9f-898f-5ec05f75234c"
+            "a5459ca7-ad1d-4789-9e3f-d640b8508df2"
           ],
           "x-ratelimit-limit-requests": [
-            "80"
+            "10"
           ],
           "x-ratelimit-limit-requests-day": [
-            "12000"
+            "600"
           ],
           "x-ratelimit-remaining-requests": [
-            "58"
+            "5"
           ],
           "x-ratelimit-remaining-requests-day": [
-            "11848"
+            "576"
           ],
           "x-ratelimit-reset-requests": [
-            "1749314949"
+            "1749412188"
           ],
           "x-ratelimit-reset-requests-day": [
-            "1749401289"
+            "1749498528"
           ],
           "strict-transport-security": [
             "max-age=31536000; includeSubDomains"
@@ -80,10 +80,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "data: {\"choices\":[{\"delta\":{\"content\":\"one\",\"role\":\"assistant\"},\"finish_reason\":null,\"index\":0,\"logprobs\":null}],\"created\":1749314889.9874759,\"id\":\"33f19360-8e7a-4a18-ac05-e3f53a525a18\",\"model\":\"Meta-Llama-3.3-70B-Instruct\",\"object\":\"chat.completion.chunk\",\"system_fingerprint\":\"fastcoe\"}\n\ndata: {\"choices\":[{\"delta\":{\"content\":\"\\ntwo\\nthree\\nfour\\nfive\\nsix\",\"role\":\"assistant\"},\"finish_reason\":null,\"index\":0,\"logprobs\":null}],\"created\":1749314889.9943345,\"id\":\"33f19360-8e7a-4a18-ac05-e3f53a525a18\",\"model\":\"Meta-Llama-3.3-70B-Instruct\",\"object\":\"chat.completion.chunk\",\"system_fingerprint\":\"fastcoe\"}\n\ndata: {\"choices\":[{\"delta\":{\"content\":\"\\nseven\\neight\\n\",\"role\":\"assistant\"},\"finish_reason\":null,\"index\":0,\"logprobs\":null}],\"created\":1749314890.0068836,\"id\":\"33f19360-8e7a-4a18-ac05-e3f53a525a18\",\"model\":\"Meta-Llama-3.3-70B-Instruct\",\"object\":\"chat.completion.chunk\",\"system_fingerprint\":\"fastcoe\"}\n\ndata: {\"choices\":[{\"delta\":{\"content\":\"\"},\"finish_reason\":\"length\",\"index\":0,\"logprobs\":null}],\"created\":1749314890.0076292,\"id\":\"33f19360-8e7a-4a18-ac05-e3f53a525a18\",\"model\":\"Meta-Llama-3.3-70B-Instruct\",\"object\":\"chat.completion.chunk\",\"system_fingerprint\":\"fastcoe\"}\n\ndata: [DONE]\n\n"
+          "string": "data: {\"choices\":[{\"delta\":{\"content\":\"one\",\"role\":\"assistant\"},\"finish_reason\":null,\"index\":0,\"logprobs\":null}],\"created\":1749412129.265483,\"id\":\"4e38f78f-8b76-43c8-b65d-4d60d7db0d07\",\"model\":\"DeepSeek-V3-0324\",\"object\":\"chat.completion.chunk\",\"system_fingerprint\":\"fastcoe\"}\n\ndata: {\"choices\":[{\"delta\":{\"content\":\"  \\ntwo  \\nthree  \\nfour  \\nfive  \\nsix  \\n\",\"role\":\"assistant\"},\"finish_reason\":null,\"index\":0,\"logprobs\":null}],\"created\":1749412129.3408902,\"id\":\"4e38f78f-8b76-43c8-b65d-4d60d7db0d07\",\"model\":\"DeepSeek-V3-0324\",\"object\":\"chat.completion.chunk\",\"system_fingerprint\":\"fastcoe\"}\n\ndata: {\"choices\":[{\"delta\":{\"content\":\"seven  \\neight  \\n\",\"role\":\"assistant\"},\"finish_reason\":null,\"index\":0,\"logprobs\":null}],\"created\":1749412129.4163432,\"id\":\"4e38f78f-8b76-43c8-b65d-4d60d7db0d07\",\"model\":\"DeepSeek-V3-0324\",\"object\":\"chat.completion.chunk\",\"system_fingerprint\":\"fastcoe\"}\n\ndata: {\"choices\":[{\"delta\":{\"content\":\"\"},\"finish_reason\":\"length\",\"index\":0,\"logprobs\":null}],\"created\":1749412129.417221,\"id\":\"4e38f78f-8b76-43c8-b65d-4d60d7db0d07\",\"model\":\"DeepSeek-V3-0324\",\"object\":\"chat.completion.chunk\",\"system_fingerprint\":\"fastcoe\"}\n\ndata: [DONE]\n\n"
         }
       },
-      "recorded_at": "Sat, 07 Jun 2025 16:48:09 GMT"
+      "recorded_at": "Sun, 08 Jun 2025 19:48:49 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

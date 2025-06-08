@@ -12,7 +12,7 @@
           "User-Agent": [
             "Faraday v2.13.1"
           ],
-          "Content-Type": [
+          "Content-type": [
             "application/json"
           ],
           "Authorization": [
@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Fri, 06 Jun 2025 18:38:02 GMT"
+            "Sun, 08 Jun 2025 19:44:12 GMT"
           ],
           "content-type": [
             "application/json"
@@ -39,7 +39,7 @@
             "keep-alive"
           ],
           "x-envoy-upstream-service-time": [
-            "326"
+            "304"
           ],
           "x-ratelimit-limit-tokens-minute": [
             "2000000"
@@ -51,7 +51,7 @@
             "10000000000"
           ],
           "x-ratelimit-remaining-tokens-month": [
-            "9999998922"
+            "9999984654"
           ],
           "x-ratelimit-tokens-query-cost": [
             "334"
@@ -60,19 +60,19 @@
             "60"
           ],
           "x-ratelimit-remaining-req-10-second": [
-            "43"
+            "54"
           ],
           "access-control-allow-origin": [
             "*"
           ],
           "x-kong-upstream-latency": [
-            "326"
+            "305"
           ],
           "x-kong-proxy-latency": [
-            "106"
+            "60"
           ],
           "x-kong-request-id": [
-            "bc597e324408bc7794bd2c686820cf17"
+            "1df87e2c91ec2c1b292aff74f2504e27"
           ],
           "cf-cache-status": [
             "DYNAMIC"
@@ -95,10 +95,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\"id\":\"0493520a75a7461da10dc6738f4f6215\",\"object\":\"chat.completion\",\"created\":1749235081,\"model\":\"pixtral-12b-2409\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"tool_calls\":null,\"content\":\"Red balloon\"},\"finish_reason\":\"stop\",\"logprobs\":null}],\"usage\":{\"prompt_tokens\":331,\"total_tokens\":334,\"completion_tokens\":3}}"
+          "string": "{\"id\":\"e0e7aecd13994daebf552216c67970f0\",\"object\":\"chat.completion\",\"created\":1749411852,\"model\":\"pixtral-12b-2409\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"tool_calls\":null,\"content\":\"Red balloon\"},\"finish_reason\":\"stop\",\"logprobs\":null}],\"usage\":{\"prompt_tokens\":331,\"total_tokens\":334,\"completion_tokens\":3}}"
         }
       },
-      "recorded_at": "Fri, 06 Jun 2025 18:38:02 GMT"
+      "recorded_at": "Sun, 08 Jun 2025 19:44:12 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

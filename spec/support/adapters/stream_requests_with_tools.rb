@@ -64,13 +64,11 @@ RSpec.shared_examples 'stream requests with tools' do | options = {} |
       
       choice = response.result.choices.first 
       expect( choice.end_reason ).to eq( :tool_called )
-
       expect( contents.length ).to be > 0
-      expect( contents.last ).to be_a( Intelligence::MessageContent::ToolCall )
 
-      tool_call = contents.last 
-      expect( tool_call.tool_call_id ).not_to be_nil
-      expect( tool_call.tool_name ).to eq( 'get_location' )
+      tool_calls = contents.select { | content | content.is_a?( Intelligence::MessageContent::ToolCall ) }
+      expect( tool_calls.length ).to be 1
+      expect( tool_calls.last.tool_name ).to eq( 'get_location' )
     end
   end 
 
@@ -111,9 +109,11 @@ RSpec.shared_examples 'stream requests with tools' do | options = {} |
       expect( choice.end_reason ).to eq( :tool_called )
 
       expect( contents.length ).to be > 0
-      expect( contents.last ).to be_a( Intelligence::MessageContent::ToolCall )
 
-      tool_call = contents.last 
+      tool_calls = contents.select { | content | content.is_a?( Intelligence::MessageContent::ToolCall ) }
+      expect( tool_calls.length ).to be 1
+
+      tool_call = tool_calls.first
       expect( tool_call.tool_call_id ).not_to be_nil
       expect( tool_call.tool_name ).to eq( 'get_weather' )
       expect( tool_call.tool_parameters ).to be_a( Hash )
@@ -156,9 +156,11 @@ RSpec.shared_examples 'stream requests with tools' do | options = {} |
       expect( choice.end_reason ).to eq( :tool_called )
 
       expect( contents.length ).to be > 0
-      expect( contents.last ).to be_a( Intelligence::MessageContent::ToolCall )
 
-      tool_call = contents.last 
+      tool_calls = contents.select { | content | content.is_a?( Intelligence::MessageContent::ToolCall ) }
+      expect( tool_calls.length ).to be 1
+
+      tool_call = tool_calls.first
       expect( tool_call.tool_call_id ).not_to be_nil
       expect( tool_call.tool_name ).to eq( 'get_location' )
     end
@@ -203,9 +205,11 @@ RSpec.shared_examples 'stream requests with tools' do | options = {} |
       expect( choice.end_reason ).to eq( :tool_called )
 
       expect( contents.length ).to be > 0
-      expect( contents.last ).to be_a( Intelligence::MessageContent::ToolCall )
 
-      tool_call = contents.last 
+      tool_calls = contents.select { | content | content.is_a?( Intelligence::MessageContent::ToolCall ) }
+      expect( tool_calls.length ).to be 1
+
+      tool_call = tool_calls.last 
       expect( tool_call.tool_call_id ).not_to be_nil
       expect( tool_call.tool_name ).to eq( 'get_weather' )
       expect( tool_call.tool_parameters ).to be_a( Hash )

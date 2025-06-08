@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Sat, 07 Jun 2025 16:56:37 GMT"
+            "Sun, 08 Jun 2025 19:11:15 GMT"
           ],
           "content-type": [
             "application/json; charset=utf-8"
@@ -51,22 +51,22 @@
             "*"
           ],
           "etag": [
-            "W/\"217-AbCvBsiwyW+8qW/zFuVGy2vO/Yc\""
+            "W/\"217-sbqY4P7zpSD3ToDQe8vCOFV2TSg\""
           ],
           "strict-transport-security": [
             "max-age=15552000; includeSubDomains"
           ],
           "x-amzn-trace-id": [
-            "8891e6e1-5029-49b0-ba19-ae7b84fdb451-noamzn"
+            "5db200d1-153c-4d67-9d7c-d24371bb4084-noamzn"
           ],
           "x-api-call-end": [
-            "2025-06-07T16:56:37.703Z"
+            "2025-06-08T19:11:15.344Z"
           ],
           "x-api-call-start": [
-            "2025-06-07T16:56:30.224Z"
+            "2025-06-08T19:11:13.929Z"
           ],
           "x-api-received": [
-            "2025-06-07T16:56:30.215Z"
+            "2025-06-08T19:11:13.919Z"
           ],
           "x-inference-version": [
             "v2"
@@ -84,7 +84,7 @@
             "19"
           ],
           "x-ratelimit-remaining-tokens": [
-            "2888"
+            "2908"
           ],
           "x-ratelimit-reset": [
             "2"
@@ -107,10 +107,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "{\n  \"id\": \"nxC1dH8-3NKUce-94c1aee37b8d34d4\",\n  \"object\": \"chat.completion\",\n  \"created\": 1749315390,\n  \"model\": \"meta-llama/Llama-3.2-11B-Vision-Instruct-Turbo\",\n  \"prompt\": [],\n  \"choices\": [\n    {\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": \"It is a picture of three balloons.\",\n        \"tool_calls\": []\n      },\n      \"logprobs\": null,\n      \"finish_reason\": \"stop\",\n      \"seed\": null\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 89,\n    \"total_tokens\": 98,\n    \"completion_tokens\": 9\n  }\n}"
+          "string": "{\n  \"id\": \"nxLMszW-3NKUce-94cab19e8e9c7696\",\n  \"object\": \"chat.completion\",\n  \"created\": 1749409873,\n  \"model\": \"meta-llama/Llama-3.2-11B-Vision-Instruct-Turbo\",\n  \"prompt\": [],\n  \"choices\": [\n    {\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": \"It is a picture of three balloons.\",\n        \"tool_calls\": []\n      },\n      \"logprobs\": null,\n      \"finish_reason\": \"stop\",\n      \"seed\": null\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 89,\n    \"total_tokens\": 98,\n    \"completion_tokens\": 9\n  }\n}"
         }
       },
-      "recorded_at": "Sat, 07 Jun 2025 16:56:37 GMT"
+      "recorded_at": "Sun, 08 Jun 2025 19:11:15 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

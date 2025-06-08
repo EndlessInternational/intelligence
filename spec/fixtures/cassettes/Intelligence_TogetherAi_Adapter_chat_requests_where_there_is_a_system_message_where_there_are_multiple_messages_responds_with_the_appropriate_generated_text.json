@@ -6,7 +6,7 @@
         "uri": "https://api.together.xyz/v1/chat/completions",
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"model\":\"meta-llama/Llama-3.3-70B-Instruct-Turbo\",\"max_tokens\":128.0,\"temperature\":0.0,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"the secret word is 'blue'\\n\"},{\"role\":\"assistant\",\"content\":\"ok\\n\"},{\"role\":\"user\",\"content\":\"what is the secret word?\\nrespond with the word only\\n\"}]}"
+          "string": "{\"model\":\"deepseek-ai/DeepSeek-V3\",\"max_tokens\":128.0,\"temperature\":0.0,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"the secret word is 'blue'\\n\"},{\"role\":\"assistant\",\"content\":\"ok\\n\"},{\"role\":\"user\",\"content\":\"what is the secret word?\\nrespond with the word only\\n\"}]}"
         },
         "headers": {
           "User-Agent": [
@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Sat, 07 Jun 2025 16:56:16 GMT"
+            "Sun, 08 Jun 2025 19:10:50 GMT"
           ],
           "content-type": [
             "application/json; charset=utf-8"
@@ -45,28 +45,28 @@
             "DYNAMIC"
           ],
           "retry-after": [
-            "2"
+            "0"
           ],
           "access-control-allow-origin": [
             "*"
           ],
           "etag": [
-            "W/\"21a-a3hcaMG0ZvEmbFR4fJdwd7W55LA\""
+            "W/\"209-wJdUxBxOG8UjVi1Zs6tDfgLkVoo\""
           ],
           "strict-transport-security": [
             "max-age=15552000; includeSubDomains"
           ],
           "x-amzn-trace-id": [
-            "aae3c112-007e-453e-8ed3-e933187ce149-noamzn"
+            "6dba5c59-6b5f-4865-9109-2f82db0de47c-noamzn"
           ],
           "x-api-call-end": [
-            "2025-06-07T16:56:16.945Z"
+            "2025-06-08T19:10:50.383Z"
           ],
           "x-api-call-start": [
-            "2025-06-07T16:56:16.769Z"
+            "2025-06-08T19:10:49.994Z"
           ],
           "x-api-received": [
-            "2025-06-07T16:56:16.756Z"
+            "2025-06-08T19:10:49.981Z"
           ],
           "x-inference-version": [
             "v2"
@@ -75,19 +75,19 @@
             "false"
           ],
           "x-ratelimit-limit": [
-            "10"
+            "2"
           ],
           "x-ratelimit-limit-tokens": [
             "3000"
           ],
           "x-ratelimit-remaining": [
-            "18"
+            "2"
           ],
           "x-ratelimit-remaining-tokens": [
-            "2920"
+            "3000"
           ],
           "x-ratelimit-reset": [
-            "2"
+            "0"
           ],
           "x-request-id": [
             "<X-REQUEST-ID>"
@@ -107,10 +107,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "{\n  \"id\": \"nxC1ZH5-3NKUce-94c1ae8fce667596\",\n  \"object\": \"chat.completion\",\n  \"created\": 1749315376,\n  \"model\": \"meta-llama/Llama-3.3-70B-Instruct-Turbo\",\n  \"prompt\": [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"stop\",\n      \"seed\": 8239864152083590000,\n      \"logprobs\": null,\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": \"blue\",\n        \"tool_calls\": []\n      }\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 99,\n    \"completion_tokens\": 2,\n    \"total_tokens\": 101,\n    \"cached_tokens\": 0\n  }\n}"
+          "string": "{\n  \"id\": \"nxLMksn-zqrih-94cab10a2b11dcfb\",\n  \"object\": \"chat.completion\",\n  \"created\": 1749409849,\n  \"model\": \"deepseek-ai/DeepSeek-V3\",\n  \"prompt\": [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"stop\",\n      \"seed\": 17034990497064776000,\n      \"logprobs\": null,\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": \"blue\",\n        \"tool_calls\": []\n      }\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 66,\n    \"completion_tokens\": 2,\n    \"total_tokens\": 68,\n    \"cached_tokens\": 0\n  }\n}"
         }
       },
-      "recorded_at": "Sat, 07 Jun 2025 16:56:16 GMT"
+      "recorded_at": "Sun, 08 Jun 2025 19:10:50 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

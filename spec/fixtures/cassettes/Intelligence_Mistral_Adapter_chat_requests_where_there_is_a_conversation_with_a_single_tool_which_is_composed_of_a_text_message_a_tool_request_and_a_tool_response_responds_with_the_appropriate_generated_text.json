@@ -12,7 +12,7 @@
           "User-Agent": [
             "Faraday v2.13.1"
           ],
-          "Content-Type": [
+          "Content-type": [
             "application/json"
           ],
           "Authorization": [
@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Fri, 06 Jun 2025 18:38:15 GMT"
+            "Sun, 08 Jun 2025 19:44:37 GMT"
           ],
           "content-type": [
             "application/json"
@@ -39,7 +39,7 @@
             "keep-alive"
           ],
           "x-envoy-upstream-service-time": [
-            "170"
+            "234"
           ],
           "x-ratelimit-limit-tokens-minute": [
             "2000000"
@@ -51,7 +51,7 @@
             "10000000000"
           ],
           "x-ratelimit-remaining-tokens-month": [
-            "9999993260"
+            "9999978992"
           ],
           "x-ratelimit-tokens-query-cost": [
             "124"
@@ -60,19 +60,19 @@
             "60"
           ],
           "x-ratelimit-remaining-req-10-second": [
-            "49"
+            "56"
           ],
           "access-control-allow-origin": [
             "*"
           ],
           "x-kong-upstream-latency": [
-            "170"
+            "234"
           ],
           "x-kong-proxy-latency": [
-            "6"
+            "8"
           ],
           "x-kong-request-id": [
-            "71657d1757b37b4c59fd7250ed9ec813"
+            "c929da5b7983b343361a2e55212f8d32"
           ],
           "cf-cache-status": [
             "DYNAMIC"
@@ -95,10 +95,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\"id\":\"58ed0e092a5a4de69e446f70198a60f7\",\"object\":\"chat.completion\",\"created\":1749235094,\"model\":\"mistral-large-latest\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"tool_calls\":null,\"content\":\"You are located in Seattle, WA, USA.\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":113,\"total_tokens\":124,\"completion_tokens\":11}}"
+          "string": "{\"id\":\"aeac164465c94eb58dc2a7edc2105ff6\",\"object\":\"chat.completion\",\"created\":1749411876,\"model\":\"mistral-large-latest\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"tool_calls\":null,\"content\":\"You are located in Seattle, WA, USA.\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":113,\"total_tokens\":124,\"completion_tokens\":11}}"
         }
       },
-      "recorded_at": "Fri, 06 Jun 2025 18:38:15 GMT"
+      "recorded_at": "Sun, 08 Jun 2025 19:44:37 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

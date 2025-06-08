@@ -6,7 +6,7 @@
         "uri": "https://api.together.xyz/v1/chat/completions",
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"model\":\"meta-llama/Llama-3.3-70B-Instruct-Turbo\",\"max_tokens\":24.0,\"temperature\":0.0,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"count to five in words, all lower case, one word per line\\n\"},{\"role\":\"assistant\",\"content\":\"one\\ntwo\\nthree\\nfour\\nfive\\n\"},{\"role\":\"user\",\"content\":\"count to twenty in words, all lower case, one word per line\\n\"}]}"
+          "string": "{\"model\":\"deepseek-ai/DeepSeek-V3\",\"max_tokens\":24.0,\"temperature\":0.0,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"count to five in words, all lower case, one word per line\\n\"},{\"role\":\"assistant\",\"content\":\"one\\ntwo\\nthree\\nfour\\nfive\\n\"},{\"role\":\"user\",\"content\":\"count to twenty in words, all lower case, one word per line\\n\"}]}"
         },
         "headers": {
           "User-Agent": [
@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Sat, 07 Jun 2025 16:56:25 GMT"
+            "Sun, 08 Jun 2025 19:11:02 GMT"
           ],
           "content-type": [
             "application/json; charset=utf-8"
@@ -45,28 +45,28 @@
             "DYNAMIC"
           ],
           "retry-after": [
-            "0"
+            "2"
           ],
           "access-control-allow-origin": [
             "*"
           ],
           "etag": [
-            "W/\"25f-WM3Y5a+pwfFx9qqA06uBZRc+udA\""
+            "W/\"264-niMvbsXelXiqAkaq1mk4ID+v4p0\""
           ],
           "strict-transport-security": [
             "max-age=15552000; includeSubDomains"
           ],
           "x-amzn-trace-id": [
-            "d3f0b9d2-4820-46ea-8f0a-8d6d28be3951-noamzn"
+            "bfe74383-7152-4106-84d3-8b3189328ae3-noamzn"
           ],
           "x-api-call-end": [
-            "2025-06-07T16:56:25.935Z"
+            "2025-06-08T19:11:02.562Z"
           ],
           "x-api-call-start": [
-            "2025-06-07T16:56:24.654Z"
+            "2025-06-08T19:11:02.029Z"
           ],
           "x-api-received": [
-            "2025-06-07T16:56:24.644Z"
+            "2025-06-08T19:11:02.017Z"
           ],
           "x-inference-version": [
             "v2"
@@ -75,19 +75,19 @@
             "false"
           ],
           "x-ratelimit-limit": [
-            "10"
+            "2"
           ],
           "x-ratelimit-limit-tokens": [
             "3000"
           ],
           "x-ratelimit-remaining": [
-            "17"
+            "3"
           ],
           "x-ratelimit-remaining-tokens": [
-            "2774"
+            "3000"
           ],
           "x-ratelimit-reset": [
-            "0"
+            "2"
           ],
           "x-request-id": [
             "<X-REQUEST-ID>"
@@ -107,10 +107,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "{\n  \"id\": \"nxC1bd5-3NKUce-94c1aec0ea89ad8d\",\n  \"object\": \"chat.completion\",\n  \"created\": 1749315384,\n  \"model\": \"meta-llama/Llama-3.3-70B-Instruct-Turbo\",\n  \"prompt\": [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"length\",\n      \"seed\": 1078102045514794500,\n      \"logprobs\": null,\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": \"one\\ntwo\\nthree\\nfour\\nfive\\nsix\\nseven\\neight\\nnine\\nten\\neleven\\ntw\",\n        \"tool_calls\": []\n      }\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 117,\n    \"completion_tokens\": 24,\n    \"total_tokens\": 141,\n    \"cached_tokens\": 0\n  }\n}"
+          "string": "{\n  \"id\": \"nxLMpTJ-28Eivz-94cab153197b769c\",\n  \"object\": \"chat.completion\",\n  \"created\": 1749409862,\n  \"model\": \"deepseek-ai/DeepSeek-V3\",\n  \"prompt\": [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"length\",\n      \"seed\": 2398251349680796700,\n      \"logprobs\": null,\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": \"one  \\ntwo  \\nthree  \\nfour  \\nfive  \\nsix  \\nseven  \\neight  \\nnine  \\nten  \\neleven  \\ntw\",\n        \"tool_calls\": []\n      }\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 85,\n    \"completion_tokens\": 24,\n    \"total_tokens\": 109,\n    \"cached_tokens\": 0\n  }\n}"
         }
       },
-      "recorded_at": "Sat, 07 Jun 2025 16:56:25 GMT"
+      "recorded_at": "Sun, 08 Jun 2025 19:11:02 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

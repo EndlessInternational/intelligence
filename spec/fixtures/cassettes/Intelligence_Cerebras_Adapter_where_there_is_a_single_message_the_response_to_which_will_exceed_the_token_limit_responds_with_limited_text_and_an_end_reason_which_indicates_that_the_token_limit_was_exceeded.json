@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Sat, 07 Jun 2025 16:41:57 GMT"
+            "Sun, 08 Jun 2025 19:49:45 GMT"
           ],
           "content-type": [
             "application/json"
@@ -48,19 +48,19 @@
             "60000"
           ],
           "x-ratelimit-remaining-requests-day": [
-            "14347"
+            "14388"
           ],
           "x-ratelimit-remaining-tokens-minute": [
-            "59427"
+            "59528"
           ],
           "x-ratelimit-reset-requests-day": [
-            "26282.38698554039"
+            "15014.143428564072"
           ],
           "x-ratelimit-reset-tokens-minute": [
-            "2.3869855403900146"
+            "14.143428564071655"
           ],
           "inference-id": [
-            "chatcmpl-fe8f0a31-9709-4473-afdf-fda08865962d"
+            "chatcmpl-62c996a8-9347-4762-9bd2-0f66ea39db5f"
           ],
           "referrer-policy": [
             "strict-origin-when-cross-origin"
@@ -92,10 +92,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\"id\":\"chatcmpl-fe8f0a31-9709-4473-afdf-fda08865962d\",\"choices\":[{\"finish_reason\":\"length\",\"index\":0,\"message\":{\"content\":\"one\\ntwo\\nthree\\nfour\\nfive\\nsix\\nseven\\neight\\n\",\"role\":\"assistant\"}}],\"created\":1749314517,\"model\":\"llama-3.3-70b\",\"system_fingerprint\":\"fp_cb820b267e7b1a0390cd\",\"object\":\"chat.completion\",\"usage\":{\"prompt_tokens\":84,\"completion_tokens\":16,\"total_tokens\":100,\"prompt_tokens_details\":{\"cached_tokens\":0}},\"time_info\":{\"queue_time\":0.000182231,\"prompt_time\":0.003219248,\"completion_time\":0.00293482,\"total_time\":0.0081634521484375,\"created\":1749314517}}"
+          "string": "{\"id\":\"chatcmpl-62c996a8-9347-4762-9bd2-0f66ea39db5f\",\"choices\":[{\"finish_reason\":\"length\",\"index\":0,\"message\":{\"content\":\"one\\ntwo\\nthree\\nfour\\nfive\\nsix\\nseven\\neight\\n\",\"role\":\"assistant\"}}],\"created\":1749412185,\"model\":\"llama-3.3-70b\",\"system_fingerprint\":\"fp_cb820b267e7b1a0390cd\",\"object\":\"chat.completion\",\"usage\":{\"prompt_tokens\":84,\"completion_tokens\":16,\"total_tokens\":100,\"prompt_tokens_details\":{\"cached_tokens\":0}},\"time_info\":{\"queue_time\":0.000769982,\"prompt_time\":0.003066708,\"completion_time\":0.003121939,\"total_time\":0.008310794830322266,\"created\":1749412185}}"
         }
       },
-      "recorded_at": "Sat, 07 Jun 2025 16:41:57 GMT"
+      "recorded_at": "Sun, 08 Jun 2025 19:49:45 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

@@ -6,7 +6,7 @@
         "uri": "https://api.sambanova.ai/v1/chat/completions",
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"model\":\"Meta-Llama-3.3-70B-Instruct\",\"max_tokens\":16,\"temperature\":0.0,\"stream\":true,\"messages\":[{\"role\":\"user\",\"content\":\"the secret word is 'blue'\\n\"},{\"role\":\"assistant\",\"content\":\"ok\\n\"},{\"role\":\"user\",\"content\":\"what is the secret word?\\nrespond with the word only\\n\"}]}"
+          "string": "{\"model\":\"DeepSeek-V3-0324\",\"max_tokens\":16,\"temperature\":0.0,\"stream\":true,\"messages\":[{\"role\":\"user\",\"content\":\"the secret word is 'blue'\\n\"},{\"role\":\"assistant\",\"content\":\"ok\\n\"},{\"role\":\"user\",\"content\":\"what is the secret word?\\nrespond with the word only\\n\"}]}"
         },
         "headers": {
           "User-Agent": [
@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Sat, 07 Jun 2025 16:48:09 GMT"
+            "Sun, 08 Jun 2025 19:48:47 GMT"
           ],
           "content-type": [
             "text/event-stream; charset=utf-8"
@@ -39,25 +39,25 @@
             "keep-alive"
           ],
           "inference-id": [
-            "606b5389-f739-4ca1-a8f5-6bc5a541bc43"
+            "4dc81cff-29e3-43d1-8f2d-2dfeeca09d82"
           ],
           "x-ratelimit-limit-requests": [
-            "80"
+            "10"
           ],
           "x-ratelimit-limit-requests-day": [
-            "12000"
+            "600"
           ],
           "x-ratelimit-remaining-requests": [
-            "61"
+            "8"
           ],
           "x-ratelimit-remaining-requests-day": [
-            "11851"
+            "579"
           ],
           "x-ratelimit-reset-requests": [
-            "1749314949"
+            "1749412186"
           ],
           "x-ratelimit-reset-requests-day": [
-            "1749401289"
+            "1749498526"
           ],
           "strict-transport-security": [
             "max-age=31536000; includeSubDomains"
@@ -80,10 +80,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "data: {\"choices\":[{\"delta\":{\"content\":\"blue\",\"role\":\"assistant\"},\"finish_reason\":null,\"index\":0,\"logprobs\":null}],\"created\":1749314889.307292,\"id\":\"8f8e4b9c-58c2-4821-ac41-ab61359a6a9a\",\"model\":\"Meta-Llama-3.3-70B-Instruct\",\"object\":\"chat.completion.chunk\",\"system_fingerprint\":\"fastcoe\"}\n\ndata: {\"choices\":[{\"delta\":{\"content\":\"\"},\"finish_reason\":\"stop\",\"index\":0,\"logprobs\":null}],\"created\":1749314889.3144863,\"id\":\"8f8e4b9c-58c2-4821-ac41-ab61359a6a9a\",\"model\":\"Meta-Llama-3.3-70B-Instruct\",\"object\":\"chat.completion.chunk\",\"system_fingerprint\":\"fastcoe\"}\n\ndata: [DONE]\n\n"
+          "string": "data: {\"choices\":[{\"delta\":{\"content\":\"blue\",\"role\":\"assistant\"},\"finish_reason\":null,\"index\":0,\"logprobs\":null}],\"created\":1749412127.2101235,\"id\":\"36c95a03-4a0f-458e-b7ec-7a97f13dcfd7\",\"model\":\"DeepSeek-V3-0324\",\"object\":\"chat.completion.chunk\",\"system_fingerprint\":\"fastcoe\"}\n\ndata: {\"choices\":[{\"delta\":{\"content\":\"\"},\"finish_reason\":\"stop\",\"index\":0,\"logprobs\":null}],\"created\":1749412127.28568,\"id\":\"36c95a03-4a0f-458e-b7ec-7a97f13dcfd7\",\"model\":\"DeepSeek-V3-0324\",\"object\":\"chat.completion.chunk\",\"system_fingerprint\":\"fastcoe\"}\n\ndata: [DONE]\n\n"
         }
       },
-      "recorded_at": "Sat, 07 Jun 2025 16:48:09 GMT"
+      "recorded_at": "Sun, 08 Jun 2025 19:48:47 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

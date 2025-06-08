@@ -6,7 +6,7 @@
         "uri": "https://api.together.xyz/v1/chat/completions",
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"model\":\"meta-llama/Llama-3.3-70B-Instruct-Turbo\",\"max_tokens\":128.0,\"temperature\":0.0,\"messages\":[{\"role\":\"user\",\"content\":\"the secret word is 'red'\\n\"},{\"role\":\"assistant\",\"content\":\"ok\\n\"},{\"role\":\"user\",\"content\":\"what is the exact secret word? answer with the word only\\n\"}]}"
+          "string": "{\"model\":\"deepseek-ai/DeepSeek-V3\",\"max_tokens\":128.0,\"temperature\":0.0,\"messages\":[{\"role\":\"user\",\"content\":\"the secret word is 'red'\\n\"},{\"role\":\"assistant\",\"content\":\"ok\\n\"},{\"role\":\"user\",\"content\":\"what is the exact secret word? answer with the word only\\n\"}]}"
         },
         "headers": {
           "User-Agent": [
@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Sat, 07 Jun 2025 16:56:15 GMT"
+            "Sun, 08 Jun 2025 19:10:47 GMT"
           ],
           "content-type": [
             "application/json; charset=utf-8"
@@ -45,28 +45,28 @@
             "DYNAMIC"
           ],
           "retry-after": [
-            "2"
+            "1"
           ],
           "access-control-allow-origin": [
             "*"
           ],
           "etag": [
-            "W/\"218-noljCCeHmtSKuG1eP4ozGy2zXW4\""
+            "W/\"209-hp1D0eJ/R2MFJ1Y4jltBKMHv+Bw\""
           ],
           "strict-transport-security": [
             "max-age=15552000; includeSubDomains"
           ],
           "x-amzn-trace-id": [
-            "1733faa2-8691-4608-b3de-3642f88c7580-noamzn"
+            "9583c895-a15b-481b-9219-1707956eeebf-noamzn"
           ],
           "x-api-call-end": [
-            "2025-06-07T16:56:16.194Z"
+            "2025-06-08T19:10:47.952Z"
           ],
           "x-api-call-start": [
-            "2025-06-07T16:56:14.288Z"
+            "2025-06-08T19:10:47.452Z"
           ],
           "x-api-received": [
-            "2025-06-07T16:56:14.278Z"
+            "2025-06-08T19:10:47.437Z"
           ],
           "x-inference-version": [
             "v2"
@@ -75,19 +75,19 @@
             "false"
           ],
           "x-ratelimit-limit": [
-            "10"
+            "2"
           ],
           "x-ratelimit-limit-tokens": [
             "3000"
           ],
           "x-ratelimit-remaining": [
-            "19"
+            "2"
           ],
           "x-ratelimit-remaining-tokens": [
             "3000"
           ],
           "x-ratelimit-reset": [
-            "2"
+            "1"
           ],
           "x-request-id": [
             "<X-REQUEST-ID>"
@@ -107,10 +107,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "{\n  \"id\": \"nxC1YYM-3NKUce-94c1ae7efb55091f\",\n  \"object\": \"chat.completion\",\n  \"created\": 1749315374,\n  \"model\": \"meta-llama/Llama-3.3-70B-Instruct-Turbo\",\n  \"prompt\": [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"stop\",\n      \"seed\": 4943354151713735000,\n      \"logprobs\": null,\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": \"red\",\n        \"tool_calls\": []\n      }\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 65,\n    \"completion_tokens\": 2,\n    \"total_tokens\": 67,\n    \"cached_tokens\": 0\n  }\n}"
+          "string": "{\n  \"id\": \"nxLMk7v-28Eivz-94cab0f9edbb6e7d\",\n  \"object\": \"chat.completion\",\n  \"created\": 1749409847,\n  \"model\": \"deepseek-ai/DeepSeek-V3\",\n  \"prompt\": [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"stop\",\n      \"seed\": 14781473802998315000,\n      \"logprobs\": null,\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": \"red\",\n        \"tool_calls\": []\n      }\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 28,\n    \"completion_tokens\": 2,\n    \"total_tokens\": 30,\n    \"cached_tokens\": 0\n  }\n}"
         }
       },
-      "recorded_at": "Sat, 07 Jun 2025 16:56:15 GMT"
+      "recorded_at": "Sun, 08 Jun 2025 19:10:47 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

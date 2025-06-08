@@ -5,10 +5,13 @@ module Intelligence
 
     class Adapter < Generic::Adapter
 
-      chat_request_uri "https://api.x.ai/v1/chat/completions"
- 
+      DEFAULT_BASE_URI            = "https://api.x.ai/v1"
+
       schema do 
+      
+        base_uri                  String, default: DEFAULT_BASE_URI
         key                       String 
+
         chat_options do 
           model                   String
           frequency_penalty       Float, in: -2..2
@@ -31,6 +34,7 @@ module Intelligence
           top_p                   Float 
           
           user                    String 
+        
         end
       end
 
@@ -81,103 +85,6 @@ module Intelligence
         end
 
         result
-      end
-
-      def stream_result_chunk_attributes( context, chunk )
-        context ||= {}
-        buffer = context[ :buffer ] || ''
-        metrics = context[ :metrics ] || {
-          input_tokens: 0,
-          output_tokens:  0
-        }
-        choices = context[ :choices ] || Array.new( 1 , { message: {} } )
-
-        choices.each do | choice |
-          choice[ :message ][ :contents ] = choice[ :message ][ :contents ]&.map do | content |
-            { type: content[ :type ] }
-          end
-        end
-
-        buffer += chunk
-        while ( eol_index = buffer.index( "\n" ) )
-          line = buffer.slice!( 0..eol_index )        
-          line = line.strip 
-          next if line.empty? || !line.start_with?( 'data:' )
-          line = line[ 6..-1 ]
-          next if line.end_with?( '[DONE]' )
-
-          data = JSON.parse( line ) rescue nil
-          if data.is_a?( Hash )
-            data[ 'choices' ]&.each do | data_choice |
-
-              data_choice_index = data_choice[ 'index' ]
-              data_choice_delta = data_choice[ 'delta' ]
-              end_reason = to_end_reason( data_choice[ 'finish_reason' ] )
-              
-              choices.fill( { message: {} }, choices.size, data_choice_index + 1 ) \
-                if choices.size <= data_choice_index 
-              contents = choices[ data_choice_index ][ :message ][ :contents ] || []
-
-              if data_choice_content = data_choice_delta[ 'content' ]
-                text_content = contents.first&.[]( :type ) == :text ? contents.first : nil 
-                if text_content.nil?  
-                  contents.unshift( text_content = { type: :text, text: data_choice_content } )
-                else
-                  text_content[ :text ] = ( text_content[ :text ] || '' ) + data_choice_content
-                end
-              end 
-
-              if data_choice_tool_calls = data_choice_delta[ 'tool_calls' ]
-                end_reason = :tool_called
-                data_choice_tool_calls.each_with_index do | data_choice_tool_call, data_choice_tool_call_index |
-                  if data_choice_tool_call_function = data_choice_tool_call[ 'function' ]
-                    data_choice_tool_index = data_choice_tool_call[ 'index' ] || data_choice_tool_call_index
-                    data_choice_tool_id = data_choice_tool_call[ 'id' ]
-                    data_choice_tool_name = data_choice_tool_call_function[ 'name' ]
-                    data_choice_tool_parameters = data_choice_tool_call_function[ 'arguments' ]
-                    
-                    tool_call_content_index = contents.find_index do | content | 
-                      content[ :type ] == :tool_call && content[ :tool_call_id ] ==  data_choice_tool_id
-                    end
-                    unless tool_call_content_index 
-                      contents.push( { 
-                        type: :tool_call, 
-                        tool_call_id: data_choice_tool_id,
-                        tool_name: data_choice_tool_name,
-                        tool_parameters: data_choice_tool_parameters
-                      } )
-                    else 
-                      tool_call = contents[ tool_call_content_index ]
-                      tool_call[ :tool_name ] = ( tool_call[ :tool_name ] || '' ) + data_choice_tool_name \
-                        if data_choice_tool_name 
-                      tool_call[ :tool_parameters ] = ( tool_call[ :tool_parameters ] || '' ) + data_choice_tool_parameters \
-                        if data_choice_tool_parameters
-                    end 
-                  end 
-                end 
-              end
-              choices[ data_choice_index ][ :message ][ :contents ] = contents
-              choices[ data_choice_index ][ :end_reason ] ||= end_reason
-            end
-  
-            if usage = data[ 'usage' ]
-              # note: A number of providers will resend the input tokens as part of their usage 
-              #       payload.
-              metrics[ :input_tokens ] = usage[ 'prompt_tokens' ] \
-                if usage.include?( 'prompt_tokens' )
-              metrics[ :output_tokens ] += usage[ 'completion_tokens' ] \
-                if usage.include?( 'completion_tokens' )
-            end 
-
-          end
-
-        end
-
-        context[ :buffer ] = buffer 
-        context[ :metrics ] = metrics
-        context[ :choices ] = choices
-
-        [ context, choices.empty? ? nil : { choices: choices.dup } ]
       end
 
       def chat_result_error_attributes( response )
