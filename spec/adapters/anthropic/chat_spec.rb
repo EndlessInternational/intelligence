@@ -90,6 +90,9 @@ RSpec.describe "#{Intelligence::Adapter[ :anthropic ]} chat requests", :anthropi
                    end_reason: :end_sequence_encountered 
   include_examples 'chat requests without alternating roles'
   include_examples 'chat requests with binary encoded images'
+  include_examples 'chat requests with file images'
+  # include_examples 'chat requests with binary encoded pdf'
+
   include_examples 'chat requests with tools'
   include_examples 'chat requests with adapter tools'
   include_examples 'chat requests with complex tools'

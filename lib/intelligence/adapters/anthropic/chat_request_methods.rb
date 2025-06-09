@@ -4,6 +4,8 @@ module Intelligence
 
       CHAT_REQUEST_URI = "https://api.anthropic.com/v1/messages"
 
+      SUPPORTED_CONTENT_TYPES = %w[ image/jpeg image/png image/gif image/webp application/pdf ]
+
       def chat_request_uri( options )
         CHAT_REQUEST_URI
       end
@@ -75,10 +77,9 @@ module Intelligence
                 content_type = content[ :content_type ]
                 bytes = content[ :bytes ]
                 if content_type && bytes
-                  mime_type = MIME::Types[ content_type ].first
-                  if mime_type&.media_type == 'image'
+                  if SUPPORTED_CONTENT_TYPES.include?( content_type )
                     result_message_content << {
-                      type: 'image',
+                      type: content_type == 'application/pdf' ? 'document' : 'image',
                       source: {
                         type: 'base64',
                         media_type: content_type,
@@ -97,6 +98,30 @@ module Intelligence
                     'requires file content to include content type and (packed) bytes'  
                   )
                 end
+              when :file 
+                content_type = content[ :content_type ]
+                uri = content[ :uri ]
+                if content_type && uri  
+                  if SUPPORTED_CONTENT_TYPES.include?( content_type )
+                    result_message_content << {
+                      type: content_type == 'application/pdf' ? 'document' : 'image',
+                      source: {
+                        type: 'url',
+                        url: uri 
+                      }
+                    }
+                  else 
+                    raise UnsupportedContentError.new( 
+                      :anthropic, 
+                      "only supports content of type #{SUPPORTED_CONTENT_TYPES.join( ', ' )}" 
+                    ) 
+                  end 
+                else 
+                  raise UnsupportedContentError.new(
+                    :anthropic, 
+                    'requires file content to include content type and uri'  
+                  )
+                end 
               when :tool_call 
                 result_message_content << {
                   type: 'tool_use',
@@ -111,7 +136,7 @@ module Intelligence
                   content: content[ :tool_result ]
                 }
               else
-                raise InvalidContentError.new( :anthropic ) 
+                raise UnsupportedContentError.new( :anthropic ) 
               end
             end
             

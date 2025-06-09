@@ -46,13 +46,18 @@ RSpec.describe "#{Intelligence::Adapter[ :anthropic ]} stream requests", :anthro
   end
 
   include_examples 'stream requests'
+  include_examples 'stream requests without alternating roles'
+
   include_examples 'stream requests with token limit exceeded',
                    adapter: :adapter_with_limited_max_tokens
   include_examples 'stream requests with stop sequence',
                    adapter: :adapter_with_stop_sequence, 
                    end_reason: :end_sequence_encountered
+
   include_examples 'stream requests with binary encoded images'
-  include_examples 'stream requests without alternating roles'
+  include_examples 'stream requests with file images'
+  # include_examples 'stream requests with binary encoded pdf'
+
   include_examples 'stream requests with tools'
   include_examples 'stream requests with parallel tools'
 

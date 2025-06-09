@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-RSpec.shared_examples 'stream requests with binary encoded pdf' do 
+RSpec.shared_examples 'stream requests with binary encoded pdf' do | options = {} |
 
   let( :binary_content_of_nasa_pdf_file ) {
     build_binary_content( fixture_file_path( 'nasa.pdf'  ) )
@@ -17,7 +17,7 @@ RSpec.shared_examples 'stream requests with binary encoded pdf' do
       conversation.messages.last.append_content( binary_content_of_nasa_pdf_file )
 
       text = ''
-      response = create_and_make_stream_request( vision_adapter, conversation ) do | result | 
+      response = create_and_make_stream_request( send( options[ :adapter ] || :adapter ), conversation ) do | result | 
         
         expect( result ).to be_a( Intelligence::ChatResult )
         expect( result.choices ).not_to be_nil
@@ -54,7 +54,7 @@ RSpec.shared_examples 'stream requests with binary encoded pdf' do
       conversation.messages << build_text_message( :user, "when was it written?\n" )
 
       text = ''
-      response = create_and_make_stream_request( vision_adapter, conversation ) do | result | 
+      response = create_and_make_stream_request( send( options[ :adapter ] || :adapter ), conversation ) do | result | 
         
         expect( result ).to be_a( Intelligence::ChatResult )
         expect( result.choices ).not_to be_nil
@@ -93,7 +93,7 @@ RSpec.shared_examples 'stream requests with binary encoded pdf' do
       conversation.messages << message 
 
       text = ''
-      response = create_and_make_stream_request( vision_adapter, conversation ) do | result | 
+      response = create_and_make_stream_request( send( options[ :adapter ] || :adapter ), conversation ) do | result | 
         
         expect( result ).to be_a( Intelligence::ChatResult )
         expect( result.choices ).not_to be_nil
