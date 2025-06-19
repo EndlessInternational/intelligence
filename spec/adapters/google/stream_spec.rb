@@ -12,8 +12,21 @@ RSpec.describe "#{Intelligence::Adapter[ :google ]} stream requests", :google do
     Intelligence::Adapter[ :google ].build! do   
       key                     ENV[ 'GOOGLE_API_KEY' ]
       chat_options do
-        model                 'gemini-1.5-pro'
-        max_tokens            16
+        model                 'gemini-2.5-flash'
+        max_tokens            128
+        temperature           0
+
+        stream                true
+      end
+    end
+  end
+
+  let( :adapter_with_limited_max_tokens ) do
+    Intelligence::Adapter[ :google ].build! do   
+      key                     ENV[ 'GOOGLE_API_KEY' ]
+      chat_options do
+        model                 'gemini-2.5-flash'
+        max_tokens            32
         temperature           0
 
         stream                true
@@ -25,8 +38,8 @@ RSpec.describe "#{Intelligence::Adapter[ :google ]} stream requests", :google do
     Intelligence::Adapter[ :google ].build! do   
       key   ENV[ 'GOOGLE_API_KEY' ]
       chat_options do
-        model                 'gemini-1.5-pro'
-        max_tokens            16
+        model                 'gemini-2.5-flash'
+        max_tokens            32
         temperature           0
         stop                  'five'
 
@@ -39,8 +52,8 @@ RSpec.describe "#{Intelligence::Adapter[ :google ]} stream requests", :google do
     Intelligence::Adapter[ :google ].build! do   
       key                     ENV[ 'GOOGLE_API_KEY' ]
       chat_options do
-        model                 'gemini-1.5-pro'
-        max_tokens            24 
+        model                 'gemini-2.5-flash'
+        max_tokens            32 
         temperature           0
 
         stream                true
@@ -49,9 +62,10 @@ RSpec.describe "#{Intelligence::Adapter[ :google ]} stream requests", :google do
   end
 
   include_examples 'stream requests'
-  include_examples 'stream requests with token limit exceeded'
+  include_examples 'stream requests with token limit exceeded', 
+                   adapter: :adapter_with_limited_max_tokens
   include_examples 'stream requests with stop sequence', 
-                   adapter: :adapter_with_stop_sequence  
+                   adapter: :adapter_with_limited_max_tokens  
   include_examples 'stream requests without alternating roles'
   include_examples 'stream requests with binary encoded images'
   include_examples 'stream requests with binary encoded audio'

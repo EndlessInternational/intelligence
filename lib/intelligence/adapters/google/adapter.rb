@@ -35,6 +35,11 @@ module Intelligence
           response_mime_type String,  as: :responseMimeType
           response_schema             as: :responseSchema
 
+          # google specific thinking properies
+          thinking                    as: :thinkingConfig, default: {} do 
+            budget                    as: :thinkingBudget, default: 0
+          end
+
           # google specific tool configuration
           tool                        array: true, as: :tools, &Tool.schema 
           tool_configuration          as: :tool_config do
@@ -44,8 +49,8 @@ module Intelligence
             end
           end 
 
-          # build-in tools are called 'abilities' in Intelligence so as not to conflic with the
-          # caller defined tools  
+          # build-in tools are called 'abilities' in Intelligence so as not to conflic 
+          # with the caller defined tools  
           abilities do 
             # this appears to be a ( now ) legacy argument and is no longer supported
             # with the 2.0 models

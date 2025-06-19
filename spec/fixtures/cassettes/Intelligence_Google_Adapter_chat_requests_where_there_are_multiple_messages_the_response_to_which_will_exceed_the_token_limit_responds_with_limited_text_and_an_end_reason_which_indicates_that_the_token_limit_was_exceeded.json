@@ -63,6 +63,70 @@
         }
       },
       "recorded_at": "Sun, 08 Jun 2025 22:50:22 GMT"
+    },
+    {
+      "request": {
+        "method": "post",
+        "uri": "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=<KEY>",
+        "body": {
+          "encoding": "UTF-8",
+          "string": "{\"generationConfig\":{\"thinkingConfig\":{\"thinkingBudget\":0},\"maxOutputTokens\":16,\"temperature\":0.0},\"systemInstruction\":{\"role\":\"user\",\"parts\":[{\"text\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"}]},\"contents\":[{\"role\":\"user\",\"parts\":[{\"text\":\"count to five in words, all lower case, one word per line\\n\"}]},{\"role\":\"model\",\"parts\":[{\"text\":\"one\\ntwo\\nthree\\nfour\\nfive\\n\"}]},{\"role\":\"user\",\"parts\":[{\"text\":\"count to twenty in words, all lower case, one word per line\\n\"}]}]}"
+        },
+        "headers": {
+          "User-Agent": [
+            "Faraday v2.13.1"
+          ],
+          "Content-Type": [
+            "application/json"
+          ]
+        }
+      },
+      "response": {
+        "status": {
+          "code": 200,
+          "message": "OK"
+        },
+        "headers": {
+          "content-type": [
+            "application/json; charset=UTF-8"
+          ],
+          "vary": [
+            "Origin, X-Origin, Referer"
+          ],
+          "content-encoding": [
+            "gzip"
+          ],
+          "date": [
+            "Thu, 19 Jun 2025 15:40:30 GMT"
+          ],
+          "server": [
+            "scaffolding on HTTPServer2"
+          ],
+          "x-xss-protection": [
+            "0"
+          ],
+          "x-frame-options": [
+            "SAMEORIGIN"
+          ],
+          "x-content-type-options": [
+            "nosniff"
+          ],
+          "server-timing": [
+            "gfet4t7; dur=804"
+          ],
+          "alt-svc": [
+            "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+          ],
+          "transfer-encoding": [
+            "chunked"
+          ]
+        },
+        "body": {
+          "encoding": "UTF-8",
+          "string": "{\n  \"candidates\": [\n    {\n      \"content\": {\n        \"parts\": [\n          {\n            \"text\": \"one\\ntwo\\nthree\\nfour\\nfive\\nsix\\nseven\\neight\\n\"\n          }\n        ],\n        \"role\": \"model\"\n      },\n      \"finishReason\": \"MAX_TOKENS\",\n      \"index\": 0\n    }\n  ],\n  \"usageMetadata\": {\n    \"promptTokenCount\": 87,\n    \"candidatesTokenCount\": 15,\n    \"totalTokenCount\": 102,\n    \"promptTokensDetails\": [\n      {\n        \"modality\": \"TEXT\",\n        \"tokenCount\": 87\n      }\n    ]\n  },\n  \"modelVersion\": \"models/gemini-2.5-flash-preview-05-20\",\n  \"responseId\": \"bi9UaP_5Ktvkz7IP4JuTkAc\"\n}\n"
+        }
+      },
+      "recorded_at": "Thu, 19 Jun 2025 15:40:30 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"
