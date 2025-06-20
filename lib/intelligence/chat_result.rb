@@ -9,11 +9,15 @@ module Intelligence
   #
   class ChatResult
 
+    attr_reader :id 
+    attr_reader :user
     attr_reader :choices
     attr_reader :metrics
 
     def initialize( chat_attributes )
-
+      raise 'A ChatResult must be initialized with attributes but got nil.' unless chat_attributes
+      @id = chat_attributes[ :id ]
+      @user = chat_attributes[ :user ]
       @choices = []
       chat_attributes[ :choices ]&.each do | json_choice |
         @choices.push( ChatResultChoice.new( json_choice ) )
