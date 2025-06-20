@@ -3,10 +3,10 @@
     {
       "request": {
         "method": "post",
-        "uri": "https://api.openai.com/v1/chat/completions",
+        "uri": "https://api.openai.com/v1/responses",
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"model\":\"gpt-4o\",\"temperature\":0.0,\"max_completion_tokens\":128,\"messages\":[{\"role\":\"user\",\"content\":[{\"type\":\"text\",\"text\":\"respond only with the word 'hello'\\n\"}]}]}"
+          "string": "{\"model\":\"gpt-4o\",\"temperature\":0.0,\"max_output_tokens\":128,\"input\":[{\"role\":\"user\",\"content\":[{\"type\":\"input_text\",\"text\":\"respond only with the word 'hello'\\n\"}]}]}"
         },
         "headers": {
           "User-Agent": [
@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Sun, 08 Jun 2025 22:54:37 GMT"
+            "Fri, 20 Jun 2025 19:29:15 GMT"
           ],
           "content-type": [
             "application/json"
@@ -37,21 +37,6 @@
           ],
           "connection": [
             "keep-alive"
-          ],
-          "access-control-expose-headers": [
-            "X-Request-ID"
-          ],
-          "openai-organization": [
-            "<OPENAI-ORGANIZATION>"
-          ],
-          "openai-processing-ms": [
-            "231"
-          ],
-          "openai-version": [
-            "2020-10-01"
-          ],
-          "x-envoy-upstream-service-time": [
-            "236"
           ],
           "x-ratelimit-limit-requests": [
             "10000"
@@ -63,7 +48,7 @@
             "9999"
           ],
           "x-ratelimit-remaining-tokens": [
-            "29999989"
+            "29999965"
           ],
           "x-ratelimit-reset-requests": [
             "6ms"
@@ -71,8 +56,17 @@
           "x-ratelimit-reset-tokens": [
             "0s"
           ],
+          "openai-version": [
+            "2020-10-01"
+          ],
+          "openai-organization": [
+            "<OPENAI-ORGANIZATION>"
+          ],
           "x-request-id": [
             "<X-REQUEST-ID>"
+          ],
+          "openai-processing-ms": [
+            "479"
           ],
           "strict-transport-security": [
             "max-age=31536000; includeSubDomains; preload"
@@ -101,18 +95,18 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\n  \"id\": \"chatcmpl-BgJCPwjZueQ4othzEGOzgSldXIG04\",\n  \"object\": \"chat.completion\",\n  \"created\": 1749423277,\n  \"model\": \"gpt-4o-2024-08-06\",\n  \"choices\": [\n    {\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": \"hello\",\n        \"refusal\": null,\n        \"annotations\": []\n      },\n      \"logprobs\": null,\n      \"finish_reason\": \"stop\"\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 15,\n    \"completion_tokens\": 1,\n    \"total_tokens\": 16,\n    \"prompt_tokens_details\": {\n      \"cached_tokens\": 0,\n      \"audio_tokens\": 0\n    },\n    \"completion_tokens_details\": {\n      \"reasoning_tokens\": 0,\n      \"audio_tokens\": 0,\n      \"accepted_prediction_tokens\": 0,\n      \"rejected_prediction_tokens\": 0\n    }\n  },\n  \"service_tier\": \"default\",\n  \"system_fingerprint\": \"fp_07871e2ad8\"\n}\n"
+          "string": "{\n  \"id\": \"resp_6855b68af438819ca250922b05af94c4035bd745f1abbe47\",\n  \"object\": \"response\",\n  \"created_at\": 1750447754,\n  \"status\": \"completed\",\n  \"background\": false,\n  \"error\": null,\n  \"incomplete_details\": null,\n  \"instructions\": null,\n  \"max_output_tokens\": 128,\n  \"model\": \"gpt-4o-2024-08-06\",\n  \"output\": [\n    {\n      \"id\": \"msg_6855b68b5cdc819caac6a790006293bd035bd745f1abbe47\",\n      \"type\": \"message\",\n      \"status\": \"completed\",\n      \"content\": [\n        {\n          \"type\": \"output_text\",\n          \"annotations\": [],\n          \"text\": \"hello\"\n        }\n      ],\n      \"role\": \"assistant\"\n    }\n  ],\n  \"parallel_tool_calls\": true,\n  \"previous_response_id\": null,\n  \"reasoning\": {\n    \"effort\": null,\n    \"summary\": null\n  },\n  \"service_tier\": \"default\",\n  \"store\": true,\n  \"temperature\": 0.0,\n  \"text\": {\n    \"format\": {\n      \"type\": \"text\"\n    }\n  },\n  \"tool_choice\": \"auto\",\n  \"tools\": [],\n  \"top_p\": 1.0,\n  \"truncation\": \"disabled\",\n  \"usage\": {\n    \"input_tokens\": 15,\n    \"input_tokens_details\": {\n      \"cached_tokens\": 0\n    },\n    \"output_tokens\": 2,\n    \"output_tokens_details\": {\n      \"reasoning_tokens\": 0\n    },\n    \"total_tokens\": 17\n  },\n  \"user\": null,\n  \"metadata\": {}\n}"
         }
       },
-      "recorded_at": "Sun, 08 Jun 2025 22:54:37 GMT"
+      "recorded_at": "Fri, 20 Jun 2025 19:29:15 GMT"
     },
     {
       "request": {
         "method": "post",
-        "uri": "https://api.openai.com/v1/chat/completions",
+        "uri": "https://api.openai.com/v1/responses",
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"model\":\"gpt-4o\",\"temperature\":0.0,\"max_completion_tokens\":128,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":[{\"type\":\"text\",\"text\":\"the secret word is 'blue'\\n\"}]},{\"role\":\"assistant\",\"content\":[{\"type\":\"text\",\"text\":\"ok\\n\"}]},{\"role\":\"user\",\"content\":[{\"type\":\"text\",\"text\":\"what is the secret word?\\nrespond with the word only\\n\"}]}]}"
+          "string": "{\"model\":\"gpt-4o\",\"temperature\":0.0,\"max_output_tokens\":128,\"input\":[{\"role\":\"user\",\"content\":[{\"type\":\"input_text\",\"text\":\"the secret word is 'blue'\\n\"}]},{\"role\":\"assistant\",\"content\":[{\"type\":\"output_text\",\"text\":\"ok\\n\"}]},{\"role\":\"user\",\"content\":[{\"type\":\"input_text\",\"text\":\"what is the secret word?\\nrespond with the word only\\n\"}]}],\"instructions\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"}"
         },
         "headers": {
           "User-Agent": [
@@ -133,7 +127,7 @@
         },
         "headers": {
           "date": [
-            "Sun, 08 Jun 2025 22:54:38 GMT"
+            "Fri, 20 Jun 2025 19:29:16 GMT"
           ],
           "content-type": [
             "application/json"
@@ -143,21 +137,6 @@
           ],
           "connection": [
             "keep-alive"
-          ],
-          "access-control-expose-headers": [
-            "X-Request-ID"
-          ],
-          "openai-organization": [
-            "<OPENAI-ORGANIZATION>"
-          ],
-          "openai-processing-ms": [
-            "384"
-          ],
-          "openai-version": [
-            "2020-10-01"
-          ],
-          "x-envoy-upstream-service-time": [
-            "389"
           ],
           "x-ratelimit-limit-requests": [
             "10000"
@@ -169,7 +148,7 @@
             "9999"
           ],
           "x-ratelimit-remaining-tokens": [
-            "29999918"
+            "29999901"
           ],
           "x-ratelimit-reset-requests": [
             "6ms"
@@ -177,8 +156,17 @@
           "x-ratelimit-reset-tokens": [
             "0s"
           ],
+          "openai-version": [
+            "2020-10-01"
+          ],
+          "openai-organization": [
+            "<OPENAI-ORGANIZATION>"
+          ],
           "x-request-id": [
             "<X-REQUEST-ID>"
+          ],
+          "openai-processing-ms": [
+            "370"
           ],
           "strict-transport-security": [
             "max-age=31536000; includeSubDomains; preload"
@@ -207,10 +195,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\n  \"id\": \"chatcmpl-BgJCQC3WOH48EIbtkPWhmrrwzdXiS\",\n  \"object\": \"chat.completion\",\n  \"created\": 1749423278,\n  \"model\": \"gpt-4o-2024-08-06\",\n  \"choices\": [\n    {\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": \"blue\",\n        \"refusal\": null,\n        \"annotations\": []\n      },\n      \"logprobs\": null,\n      \"finish_reason\": \"stop\"\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 79,\n    \"completion_tokens\": 1,\n    \"total_tokens\": 80,\n    \"prompt_tokens_details\": {\n      \"cached_tokens\": 0,\n      \"audio_tokens\": 0\n    },\n    \"completion_tokens_details\": {\n      \"reasoning_tokens\": 0,\n      \"audio_tokens\": 0,\n      \"accepted_prediction_tokens\": 0,\n      \"rejected_prediction_tokens\": 0\n    }\n  },\n  \"service_tier\": \"default\",\n  \"system_fingerprint\": \"fp_07871e2ad8\"\n}\n"
+          "string": "{\n  \"id\": \"resp_6855b68ba1e481a38788ac1d45ba786f0e3af448c9bc6c35\",\n  \"object\": \"response\",\n  \"created_at\": 1750447755,\n  \"status\": \"completed\",\n  \"background\": false,\n  \"error\": null,\n  \"incomplete_details\": null,\n  \"instructions\": \"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \",\n  \"max_output_tokens\": 128,\n  \"model\": \"gpt-4o-2024-08-06\",\n  \"output\": [\n    {\n      \"id\": \"msg_6855b68be65481a387e3614579bf9d300e3af448c9bc6c35\",\n      \"type\": \"message\",\n      \"status\": \"completed\",\n      \"content\": [\n        {\n          \"type\": \"output_text\",\n          \"annotations\": [],\n          \"text\": \"blue\"\n        }\n      ],\n      \"role\": \"assistant\"\n    }\n  ],\n  \"parallel_tool_calls\": true,\n  \"previous_response_id\": null,\n  \"reasoning\": {\n    \"effort\": null,\n    \"summary\": null\n  },\n  \"service_tier\": \"default\",\n  \"store\": true,\n  \"temperature\": 0.0,\n  \"text\": {\n    \"format\": {\n      \"type\": \"text\"\n    }\n  },\n  \"tool_choice\": \"auto\",\n  \"tools\": [],\n  \"top_p\": 1.0,\n  \"truncation\": \"disabled\",\n  \"usage\": {\n    \"input_tokens\": 79,\n    \"input_tokens_details\": {\n      \"cached_tokens\": 0\n    },\n    \"output_tokens\": 2,\n    \"output_tokens_details\": {\n      \"reasoning_tokens\": 0\n    },\n    \"total_tokens\": 81\n  },\n  \"user\": null,\n  \"metadata\": {}\n}"
         }
       },
-      "recorded_at": "Sun, 08 Jun 2025 22:54:38 GMT"
+      "recorded_at": "Fri, 20 Jun 2025 19:29:16 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

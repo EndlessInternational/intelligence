@@ -2,12 +2,19 @@ module Intelligence
   module OpenAi
     module ChatRequestMethods
 
-      CHAT_REQUEST_URI = "https://api.openai.com/v1/chat/completions"
+      CHAT_COMPLETIONS_PATH = 'responses'
+      SUPPORTED_CONTENT_TYPES = [ 'image/jpeg', 'image/png', 'image/webp' ]
 
-      SUPPORTED_CONTENT_TYPES = [ 'image/jpeg', 'image/png' ]
-
-      def chat_request_uri( options )
-        CHAT_REQUEST_URI
+      def chat_request_uri( options = nil )
+        options = merge_options( @options, build_options( options ) )
+        base_uri = options[ :base_uri ]
+        if base_uri
+          # because URI join is dumb
+          base_uri = ( base_uri.end_with?( '/' ) ? base_uri : base_uri + '/' ) 
+          URI.join( base_uri, CHAT_COMPLETIONS_PATH )
+        else
+          raise 'The OpenAI adapter requires a base_uri.' 
+        end
       end
 
       def chat_request_headers( options = {} )
@@ -35,30 +42,31 @@ module Intelligence
 
         options = merge_options( @options, build_options( options ) )
         result = options[ :chat_options ]&.compact || {}
-        result[ :messages ] = []
+        result[ :input ] = []
 
         system_message = to_open_ai_system_message( conversation[ :system_message ] )
-        result[ :messages ] << { role: 'system', content: system_message } if system_message
+        result[ :instructions ] = system_message if system_message
 
         conversation[ :messages ]&.each do | message |
          
-          result_message = { role: message[ :role ] }
-          result_message_content = []
-          
+          result_message = nil          
           message[ :contents ]&.each do | content |
             case content[ :type ]
             when :text
-              result_message_content << { type: 'text', text: content[ :text ] }
+              result_message = { role: message[ :role ], content: [] } if result_message.nil?
+              result_message[ :content ] << { 
+                type: ( message[ :role ] == :user ? 'input_text' : 'output_text' ), 
+                text: content[ :text ] 
+              }
             when :binary
+              result_message = { role: message[ :role ], content: [] } if result_message.nil?
               content_type = content[ :content_type ]
               bytes = content[ :bytes ]
               if content_type && bytes
                 if SUPPORTED_CONTENT_TYPES.include?( content_type )
-                  result_message_content << {
-                    type: 'image_url',
-                    image_url: {
-                      url: "data:#{content_type};base64,#{Base64.strict_encode64( bytes )}".freeze
-                    }
+                  result_message[ :content ] << {
+                    type: ( message[ :role ] == :user ? 'input_image' : 'output_image' ), 
+                    image_url: "data:#{content_type};base64,#{Base64.strict_encode64( bytes )}".freeze
                   }
                 else
                   raise UnsupportedContentError.new( 
@@ -73,15 +81,14 @@ module Intelligence
                 )
               end
             when :file 
+              result_message = { role: message[ :role ], content: [] } if result_message.nil?
               content_type = content[ :content_type ]
               uri = content[ :uri ]
               if content_type && uri  
                 if SUPPORTED_CONTENT_TYPES.include?( content_type )
-                  result_message_content << {
-                    type: 'image_url',
-                    image_url: {
-                      url: uri 
-                    }
+                  result_message[ :content ] << {
+                    type: ( message[ :role ] == :user ? 'input_image' : 'output_image' ), 
+                    image_url: uri 
                   }
                 else 
                   raise UnsupportedContentError.new( 
@@ -96,19 +103,25 @@ module Intelligence
                 )
               end 
             when :tool_call 
-              tool_calls = result_message[ :tool_calls ] || [] 
-              function = {
-                name: content[ :tool_name ]
-              }
-              function[ :arguments ] = JSON.generate( content[ :tool_parameters ] || {} )
-              tool_calls << { id: content[ :tool_call_id ], type: 'function', function: function }
-              result_message[ :tool_calls ] = tool_calls
+              if result_message
+                result[ :input ] << result_message
+                result_message = nil 
+              end
+              result[ :input ] << {
+                type: 'function_call',
+                call_id: content[ :tool_call_id ],
+                name: content[ :tool_name ],
+                arguments: JSON.generate( content[ :tool_parameters ] || {} )
+              } 
             when :tool_result 
-              # open-ai returns tool results as a message with a role of 'tool'
-              result[ :messages ] << {
-                role: :tool, 
-                tool_call_id: content[ :tool_call_id ],
-                content: content[ :tool_result ]
+              if result_message
+                result[ :input ] << result_message
+                result_message = nil 
+              end
+              result[ :input ] << {
+                type: 'function_call_output',
+                call_id: content[ :tool_call_id ],
+                output: content[ :tool_result ]
               }
             else 
               raise InvalidContentError.new( :open_ai ) 
@@ -116,10 +129,7 @@ module Intelligence
 
           end
 
-          result_message[ :content ] = result_message_content
-          result[ :messages ] << result_message \
-            if result_message[ :content ]&.any? || result_message[ :tool_calls ]&.any? 
-          result
+          result[ :input ] << result_message if result_message
 
         end
  
@@ -127,7 +137,7 @@ module Intelligence
           ( result[ :tools ] || [] ).concat( tools ) 
         )
         result[ :tools ] = tools_attributes if tools_attributes && tools_attributes.length > 0
-       
+        
         JSON.generate( result )
       end 
 
@@ -153,20 +163,18 @@ module Intelligence
         tools&.map do | tool |
           function = { 
             type: 'function',
-            function: {
-              name: tool[ :name ],
-              description: tool[ :description ],
-            }
+            name: tool[ :name ],
+            description: tool[ :description ],
           }
       
           if tool[ :properties ]&.any? 
             properties_object, properties_required = 
               properties_array_to_object.call( tool[ :properties ] ) 
-            function[ :function ][ :parameters ] = {
+            function[ :parameters ] = {
               type: 'object',
               properties: properties_object 
             }
-            function[ :function ][ :parameters ][ :required ] = properties_required \
+            function[ :parameters ][ :required ] = properties_required \
               if properties_required.any?
           end
           function 

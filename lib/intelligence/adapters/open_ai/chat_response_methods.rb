@@ -5,47 +5,52 @@ module Intelligence
       def chat_result_attributes( response )
         return nil unless response.success?
         response_json = JSON.parse( response.body, symbolize_names: true ) rescue nil
-        return nil \
-          if response_json.nil? || response_json[ :choices ].nil?
+        return nil if response_json.nil? 
         
-        result = {}
+        result = { id: response_json[ :id ], user: response_json[ :user ] }
         result[ :choices ] = []
+        end_reason =  translate_end_result( response_json )
 
-        ( response_json[ :choices ] || [] ).each do | json_choice |
-          json_message = json_choice[ :message ]
-          result_message = nil
-          if ( json_message )
-            result_message = { role: json_message[ :role ] }
-            if json_message[ :content ] 
-              result_message[ :contents ] = [ { type: :text, text: json_message[ :content ] } ]
+        json_output = response_json[ :output ]
+        result_message = { role: 'assistant', contents: [] }
+        json_output&.each do | json_payload |
+          case json_payload[ :type ]
+          when 'message'
+            if json_payload[ :content ] 
+              json_payload[ :content ].each do | json_content |
+                case json_content[ :type ]
+                when 'output_text'
+                  result_message[ :contents ] << { type: :text, text: json_content[ :text ] }
+                end
+              end
             end
-            if json_message[ :tool_calls ] && !json_message[ :tool_calls ].empty?
-              result_message[ :contents ] ||= []
-              json_message[ :tool_calls ].each do | json_message_tool_call |
+          when 'function_call'
+            end_reason = :tool_called if end_reason == :ended
+            result_message_tool_call_parameters = nil
+            if json_payload[ :arguments ]
+              result_message_tool_call_parameters = json_payload[ :arguments ]  
+              begin 
                 result_message_tool_call_parameters = 
-                  JSON.parse( json_message_tool_call[ :function ][ :arguments ], symbolize_names: true ) \
-                    rescue json_message_tool_call[ :function ][ :arguments ]
-                result_message[ :contents ] << {
-                  type: :tool_call, 
-                  tool_call_id: json_message_tool_call[ :id ],
-                  tool_name: json_message_tool_call[ :function ][ :name ],
-                  tool_parameters: result_message_tool_call_parameters
-                }
-              end 
+                  JSON.parse( json_payload[ :arguments ], symbolize_names: true ) 
+              rescue 
+              end
             end
+            result_message[ :contents ] << {
+              type: :tool_call, 
+              tool_call_id: json_payload[ :call_id ],
+              tool_name: json_payload[ :name ],
+              tool_parameters: result_message_tool_call_parameters
+            }
           end 
-          result[ :choices ].push( { 
-            end_reason: translate_end_result( json_choice[ :finish_reason ] ), 
-            message: result_message 
-          } )
-        end
+        end 
+        result[ :choices ].push( { end_reason: end_reason, message: result_message } )
 
         metrics_json = response_json[ :usage ]
         unless metrics_json.nil?
 
           metrics = {}
-          metrics[ :input_tokens ] = metrics_json[ :prompt_tokens ] 
-          metrics[ :output_tokens ] = metrics_json[ :completion_tokens ]
+          metrics[ :input_tokens ] = metrics_json[ :input_tokens ] 
+          metrics[ :output_tokens ] = metrics_json[ :output_tokens ]
           metrics = metrics.compact
 
           result[ :metrics ] = metrics unless metrics.empty?
@@ -65,6 +70,8 @@ module Intelligence
         parsed_body = JSON.parse( response.body, symbolize_names: true ) rescue nil 
         if parsed_body && parsed_body.respond_to?( :include? ) && parsed_body.include?( :error )
           result = {
+            id: parsed_body[ :id ],
+            user: parsed_body[ :user ],
             error_type: error_type.to_s,
             error: parsed_body[ :error ][ :code ] || error_type.to_s,
             error_description: parsed_body[ :error ][ :message ] || error_description
@@ -75,19 +82,26 @@ module Intelligence
       end
 
       def stream_result_chunk_attributes( context, chunk )
+        
         context ||= {}
         buffer = context[ :buffer ] || ''
         metrics = context[ :metrics ] || {
           input_tokens: 0,
           output_tokens:  0
         }
-        choices = context[ :choices ] || Array.new( 1 , { message: {} } )
-
+        choices = context[ :choices ] || Array.new( 1 , { message: { contents: [] } } )
+        # purge content items of their content as we only emit content deltas ( while the emited 
+        # structure is always consistent )
         choices.each do | choice |
           choice[ :message ][ :contents ] = choice[ :message ][ :contents ]&.map do | content |
-            { type: content[ :type ] }
+            { item_id: content[ :item_id ], type: content[ :type ] }
           end
         end
+
+        # the open ai responses api only ever return only 1 intelligence choice with 1 message
+        choice = choices.last
+        message = choice[ :message ]
+        contents = message[ :contents ] || []
 
         buffer += chunk
         while ( eol_index = buffer.index( "\n" ) )
@@ -97,64 +111,111 @@ module Intelligence
           line = line[ 6..-1 ]
 
           next if line.end_with?( '[DONE]' )
-          data = JSON.parse( line ) rescue nil
+          # puts line
+          data = JSON.parse( line, symbolize_names: true ) rescue nil
+
+          # empty content is suppressed
+          content = last_content = contents.last
+          content_present = false
 
           if data.is_a?( Hash )
-            data[ 'choices' ]&.each do | data_choice |
-
-              data_choice_index = data_choice[ 'index' ]
-              data_choice_delta = data_choice[ 'delta' ]
-              data_choice_finish_reason = data_choice[ 'finish_reason' ]
-              
-              choices.fill( { message: {} }, choices.size, data_choice_index + 1 ) \
-                if choices.size <= data_choice_index 
-              contents = choices[ data_choice_index ][ :message ][ :contents ] || []
-
-              text_content = contents.first&.[]( :type ) == :text ? contents.first : nil 
-              if data_choice_content = data_choice_delta[ 'content' ]
-                if text_content.nil?  
-                  contents.unshift( text_content = { type: :text, text: data_choice_content } )
-                else
-                  text_content[ :text ] = ( text_content[ :text ] || '' ) + data_choice_content
-                end
-              end 
-              if data_choice_tool_calls = data_choice_delta[ 'tool_calls' ]
-                data_choice_tool_calls.each do | data_choice_tool_call |
-                  if data_choice_tool_call_function = data_choice_tool_call[ 'function' ]
-                    data_choice_tool_index = data_choice_tool_call[ 'index' ]
-                    data_choice_tool_id = data_choice_tool_call[ 'id' ]
-                    data_choice_tool_name = data_choice_tool_call_function[ 'name' ]
-                    data_choice_tool_parameters = data_choice_tool_call_function[ 'arguments' ]
-                    
-                    tool_call_content_index = ( text_content.nil? ? 0 : 1 ) + data_choice_tool_index 
-                    if tool_call_content_index >= contents.length 
-                      contents.push( { 
-                        type: :tool_call, 
-                        tool_call_id: data_choice_tool_id,
-                        tool_name: data_choice_tool_name,
-                        tool_parameters: data_choice_tool_parameters
-                      } )
-                    else 
-                      tool_call = contents[ tool_call_content_index ]
-                      tool_call[ :tool_call_id ] = ( tool_call[ :tool_call_id ] || '' ) + data_choice_tool_id \
-                        if data_choice_tool_id 
-                      tool_call[ :tool_name ] = ( tool_call[ :tool_name ] || '' ) + data_choice_tool_name \
-                        if data_choice_tool_name 
-                      tool_call[ :tool_parameters ] = ( tool_call[ :tool_parameters ] || '' ) + data_choice_tool_parameters \
-                        if data_choice_tool_parameters
-                    end 
-                  end 
-                end 
+            case data[ :type ]
+            # tool 
+            when 'response.output_item.added'
+              response_item = data[ :item ]
+              if response_item[ :type ] == 'function_call'
+                content = {
+                  item_id: response_item[ :id ],
+                  type: 'tool_call',
+                  tool_name: response_item[ :name ],
+                  tool_call_id: response_item[ :call_id ],
+                  tool_parameters: response_item[ :arguments ]
+                }
+                content_present = true
               end
-              choices[ data_choice_index ][ :message ][ :contents ] = contents
-              choices[ data_choice_index ][ :end_reason ] ||= 
-                translate_end_result( data_choice_finish_reason )
+            when 'response.function_call_arguments.delta'
+              raise 'A functiona call argument delta was received but there is not tool content.' \
+                unless content and content[ :type ] == 'tool_call'
+              raise 'A functiona call argument delta was received but item id does not match.' \
+                unless content[ :item_id ] = data[ :item_id ]
+              ( content[ :tool_parameters ] ||= '' ) << data[ :delta ] 
+            when 'response.reasoning_summary_part.added'
+              response_item_id = data[ :item_id ]
+              response_part_json = data[ :part ]
+              raise 'A reasoning content item was created but it is not `summary_text`.' \
+                if response_part_json[ :type ] != 'summary_text'
+              response_text = response_part_json[ :text ]
+              if content.nil? || content[ :item_id ] != response_item_id
+                content = { 
+                  item_id: response_item_id, 
+                  type: 'thought', 
+                  text: response_text || '' 
+                }
+                content_present = response_text && response_text.length > 0
+              end 
+            when 'response.reasoning_summary_text.delta'
+              response_item_id = data[ :item_id ]
+              response_text = data[ :delta ]
+              if content.nil? || content[ :item_id ] != response_item_id
+                content = { 
+                  item_id: response_item_id, 
+                  type: 'thought', 
+                  text: response_text || '' 
+                }
+                content_present = response_text && response_text.length > 0
+              else 
+                content_present = ( ( content[ :text ] ||= '' ) << response_text ).size.positive?
+              end
+            # text
+            when 'response.content_part.added'
+              response_item_id = data[ :item_id ]
+              response_part_json = data[ :part ]
+              raise 'A content item was created but it is not `output_text`.' \
+                if response_part_json[ :type ] != 'output_text'
+              response_text = response_part_json[ :text ]
+              if content.nil? || content[ :item_id ] != response_item_id
+                content = { 
+                  item_id: response_item_id, 
+                  type: 'text', 
+                  text: response_text || '' 
+                }
+                content_present = response_text && response_text.length > 0
+              end 
+            when 'response.output_text.delta'
+              response_item_id = data[ :item_id ]
+              response_text = data[ :delta ]
+              if content.nil? || content[ :item_id ] != response_item_id
+                content = { 
+                  item_id: response_item_id, 
+                  type: 'text', 
+                  text: response_text || '' 
+                }
+                content_present = response_text && response_text.length > 0
+              else 
+                content_present = ( ( content[ :text ] ||= '' ) << response_text ).size.positive?
+              end
+            when 'response.completed', 'response.incomplete'
+              response_json = data[ :response ]
+              end_reason = translate_end_result( response_json )
+              choice[ :end_reason ] = end_reason
+              choice[ :end_reason ] = :tool_called \
+                if end_reason == :ended && last_content[ :type ] == 'tool_call'
+
+              metrics_json = response_json[ :usage ]
+              unless metrics_json.nil?
+
+                metrics = {}
+                metrics[ :input_tokens ] = metrics_json[ :input_tokens ] 
+                metrics[ :output_tokens ] = metrics_json[ :output_tokens ]
+                metrics = metrics.compact
+
+              end
+
             end
-  
-            if usage = data[ 'usage' ]
-              metrics[ :input_tokens ] += usage[ 'prompt_tokens' ]
-              metrics[ :output_tokens ] += usage[ 'completion_tokens' ]
-            end 
+
+            if ( !last_content || last_content[ :item_id ] != content[ :item_id ] ) && content_present
+              contents.push( content )
+            end
 
           end
 
@@ -182,18 +243,14 @@ module Intelligence
 
     private 
 
-      def translate_end_result( end_result )
-        case end_result
-          when 'stop'
-            :ended
-          when 'length'
+      def translate_end_result( response_json )
+        return :ended if response_json[ :status ] == 'completed'
+        case response_json[ :status ]
+        when 'incomplete'
+          case ( response_json[ :incomplete_details ][ :reason ] rescue nil )
+          when 'max_output_tokens'
             :token_limit_exceeded
-          when 'tool_calls'
-            :tool_called
-          when 'content_filter'
-            :filtered
-          else
-            nil
+          end 
         end
       end
 

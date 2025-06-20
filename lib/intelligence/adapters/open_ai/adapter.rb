@@ -5,74 +5,122 @@ module Intelligence
   module OpenAi
     class Adapter < Adapter::Base
 
+      DEFAULT_BASE_URI              = 'https://api.openai.com/v1'
+
       schema do 
 
-        # normalized properties for all endpoints
+        # normalized properties, used by all endpoints
+        base_uri                    String, default: DEFAULT_BASE_URI
         key                         String
         
-        # openai properties for all endpoints
+        # openai properties, used by all endpoints 
         organization                String 
         project                     String 
         
-        # properties for generative text endpoints
         chat_options do 
         
-          # normalized properties for openai generative text endpoint
           model                     String, requried: true 
-          n                         Integer
-          max_tokens                Integer, as: :max_completion_tokens
-          temperature               Float
+          background                [ TrueClass, FalseClass ]
+          include                   String, 
+                                    array: true,
+                                    in: [ 
+                                      'file_search_call.results',
+                                      'message.input_image.image_url',
+                                      'computer_call_output.output.image_url',
+                                      'reasoning.encrypted_content',
+                                      'code_interpreter_call.outputs'
+                                    ]
+
+          instructions              String
+          max_tokens                Integer, as: :max_output_tokens
+          metadata                  Hash
+          previous_response_id      String
+          prompt do 
+            id                      String
+            variables               Hash 
+            version                 String
+          end
+          reasoning do 
+            effort                  Symbol, in: [ :low, :medium, :high ]
+            summary                 Symbol, in: [ :auto, :concise, :detailed ]
+          end
+          service_tier              Symbol, in: [ :auto, :default, :flex ]
+          store                     [ TrueClass, FalseClass ] 
+          stream                    [ TrueClass, FalseClass ] 
+          temperature               Float, in: 0..2
+          text do 
+            format                  Symbol, in: [ :text, :json_schema ]
+            # these fields only apply when format is json_schema
+            json_schema             do 
+              name                  String
+              schema                required: true
+              description           String
+              strict                [ TrueClass, FalseClass ]
+            end  
+          end
           top_p                     Float
-          seed                      Integer
-          stop                      String, array: true
-          stream                    [ TrueClass, FalseClass ]
+          truncation                Symbol, in: [ :auto, :disabled ]
+          user                      String
 
-          frequency_penalty         Float
-          presence_penalty          Float
-
-          # openai variant of normalized properties for openai generative text endpoints
-          max_completion_tokens     Integer
-
-          # openai properties for openai generative text endpoint
-          audio do 
-            voice                   String 
-            format                  String 
-          end
-          logit_bias
-          logprobs                  [ TrueClass, FalseClass ]
-          top_logprobs              Integer
-          modalities                String, array: true 
-          response_format do 
-            # 'text' and 'json_schema' are the only supported types
-            type                    Symbol, in: [ :text, :json_schema ]
-            json_schema
-          end
-          service_tier              String
-          stream_options do
-            include_usage           [ TrueClass, FalseClass ]
-          end
-          user 
-          
-          # open ai tools
-          tool                      array: true, as: :tools, &Tool.schema 
-          # open ai tool choice configuration 
-          #
-          # `tool_choice :none` 
-          # or 
-          # ```
-          # tool_choice :function do 
-          #   function :my_function 
-          # end  
-          # ```
+          parallel_tool_calls       [ TrueClass, FalseClass ]
           tool_choice               arguments: :type do 
             type                    Symbol, in: [ :none, :auto, :required ]
             function                arguments: :name do 
               name                  Symbol 
             end 
           end 
-          # the parallel_tool_calls parameter is only allowed when 'tools' are specified
-          parallel_tool_calls       [ TrueClass, FalseClass ]
+          tool                      array: true, as: :tools, &Tool.schema 
 
+          # build in open ai tools
+          abilities do 
+
+            image_generation do 
+              type                  String, default: 'image_generation'
+              background            in: [ :transparent, :opaque, :auto ]
+              model                 String
+              moderation            String
+              output_compression    Integer
+              output_format         Symbol, in: [ :png, :webp, :jpeg ]
+              partial_images        Integer
+              quality               Symbol, in: [ :auto, :low, :medium, :high ]
+              size                  String, in: [ 'auto', '1024x1024', '1024x1536', '1536x1024' ]
+            end
+
+            local_shell do
+              type                  String, default: 'local_shell'
+            end 
+
+            code_interpreter do 
+              container_id          String
+              container do  
+                type                String, default: 'auto'
+                file_ids            String, array: true
+              end
+            end
+
+            web_search do 
+              type                  String, default: 'web_search_preview'
+              search_context_size   Symbol, in: [ :low, :medium, :high ] 
+              user_location do 
+                type                Symbol, default: :approximate
+                city                String
+                country             String 
+                region              String
+                timezone            String 
+              end
+            end
+
+            computer_use do 
+              type                  default: 'computer_use_preview'
+              display_height        Integer, requried: true 
+              display_width         Integer, requried: true 
+            end
+          
+          end
+
+          # openai variant of normalized properties for openai generative text endpoints
+          max_output_tokens         Integer
+          
         end
 
       end

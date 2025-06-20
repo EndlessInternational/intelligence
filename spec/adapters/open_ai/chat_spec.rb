@@ -47,18 +47,6 @@ RSpec.describe "#{Intelligence::Adapter[ :open_ai ]} chat requests", :open_ai do
     end
   end
 
-  let( :adapter_with_stop_sequence ) do
-    Intelligence::Adapter[ :open_ai ].build! do   
-      key                     ENV[ 'OPENAI_API_KEY' ]
-      chat_options do
-        model                 'gpt-4o'
-        max_tokens            24
-        temperature           0
-        stop                  'five'
-      end
-    end
-  end
-
   let( :adapter_with_invalid_key ) do
     Intelligence::Adapter[ :open_ai ].build! do 
       key                     'this-key-is-not-valid'  
@@ -82,8 +70,6 @@ RSpec.describe "#{Intelligence::Adapter[ :open_ai ]} chat requests", :open_ai do
   include_examples 'chat requests'
   include_examples 'chat requests with token limit exceeded',
                    adapter: :adapter_with_limited_max_tokens
-  include_examples 'chat requests with stop sequence', 
-                   adapter: :adapter_with_stop_sequence
   include_examples 'chat requests with binary encoded images'
   include_examples 'chat requests with file images'
   include_examples 'chat requests without alternating roles'
@@ -93,5 +79,6 @@ RSpec.describe "#{Intelligence::Adapter[ :open_ai ]} chat requests", :open_ai do
   include_examples 'chat requests with parallel tools'
 
   include_examples 'chat requests with invalid key'
-  include_examples 'chat requests with invalid model' 
+  include_examples 'chat requests with invalid model', 
+                   error_type: 'invalid_request_error'
 end
