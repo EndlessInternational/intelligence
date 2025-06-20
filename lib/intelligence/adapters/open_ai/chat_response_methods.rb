@@ -15,13 +15,18 @@ module Intelligence
         result_message = { role: 'assistant', contents: [] }
         json_output&.each do | json_payload |
           case json_payload[ :type ]
+          when 'reasoning'
+            json_payload[ :summary ]&.each do | json_content |
+              case json_content[ :type ]
+              when 'summary_text'
+                result_message[ :contents ] << { type: :thought, text: json_content[ :text ] }
+              end
+            end
           when 'message'
-            if json_payload[ :content ] 
-              json_payload[ :content ].each do | json_content |
-                case json_content[ :type ]
-                when 'output_text'
-                  result_message[ :contents ] << { type: :text, text: json_content[ :text ] }
-                end
+            json_payload[ :content ]&.each do | json_content |
+              case json_content[ :type ]
+              when 'output_text'
+                result_message[ :contents ] << { type: :text, text: json_content[ :text ] }
               end
             end
           when 'function_call'
