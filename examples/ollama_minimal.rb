@@ -3,7 +3,8 @@
 require_relative '../lib/intelligence'
 
 # this code defines the adapter options; we're not using a key as this is a local model but we 
-# have specified an explicit base_uri ( not it's not base_url )
+# have specified an explicit base_uri which you may wish to change if you are runnin ollama on 
+# another port ( note that it's not base_url )
 adapter_options = {
   base_uri: 'http://localhost:11434/v1',
   chat_options: { 
