@@ -39,6 +39,18 @@ module Intelligence
       def chat_request_body( conversation, options = {} )
 
         tools = options.delete( :tools ) || []
+        # open ai abilities are essentially custom tools; when passed as an option they should
+        # be in the open ai tool format ( which is essentially just a hash where the type is 
+        # the custome tool name )   
+        #
+        #  {
+        #    abilities: [
+        #      { type: 'web_search_preview' },
+        #      { type: 'image_generation', background: 'transparent' },
+        #      { type: 'local_shell' } 
+        #    ]
+        #  } 
+        abilities = options.delete( :abilities ) || []
 
         options = merge_options( @options, build_options( options ) )
         result = options[ :chat_options ]&.compact || {}
@@ -136,6 +148,9 @@ module Intelligence
         tools_attributes = chat_request_tools_attributes( 
           ( result[ :tools ] || [] ).concat( tools ) 
         )
+        abilities.concat( result.delete( :abilities )&.values || [] )
+        tools_attributes.concat( abilities ) 
+
         result[ :tools ] = tools_attributes if tools_attributes && tools_attributes.length > 0
         
         JSON.generate( result )
