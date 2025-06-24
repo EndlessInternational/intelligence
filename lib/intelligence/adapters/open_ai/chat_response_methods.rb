@@ -125,7 +125,7 @@ module Intelligence
 
           if data.is_a?( Hash )
             case data[ :type ]
-            # tool 
+            # tool_call 
             when 'response.output_item.added'
               response_item = data[ :item ]
               if response_item[ :type ] == 'function_call'
@@ -144,8 +144,9 @@ module Intelligence
               raise 'A functiona call argument delta was received but item id does not match.' \
                 unless content[ :item_id ] = data[ :item_id ]
               ( content[ :tool_parameters ] ||= '' ) << data[ :delta ] 
+            # thought 
             when 'response.reasoning_summary_part.added'
-              response_item_id = data[ :item_id ]
+              response_item_id = "#{data[ :item_id ]}:#{data[ :summary_index ]}"
               response_part_json = data[ :part ]
               raise 'A reasoning content item was created but it is not `summary_text`.' \
                 if response_part_json[ :type ] != 'summary_text'
@@ -159,7 +160,7 @@ module Intelligence
                 content_present = response_text && response_text.length > 0
               end 
             when 'response.reasoning_summary_text.delta'
-              response_item_id = data[ :item_id ]
+              response_item_id = "#{data[ :item_id ]}:#{data[ :summary_index ]}"
               response_text = data[ :delta ]
               if content.nil? || content[ :item_id ] != response_item_id
                 content = { 
@@ -173,7 +174,7 @@ module Intelligence
               end
             # text
             when 'response.content_part.added'
-              response_item_id = data[ :item_id ]
+              response_item_id = "#{data[ :item_id ]}:#{data[ :content_index ]}"
               response_part_json = data[ :part ]
               raise 'A content item was created but it is not `output_text`.' \
                 if response_part_json[ :type ] != 'output_text'
@@ -187,7 +188,7 @@ module Intelligence
                 content_present = response_text && response_text.length > 0
               end 
             when 'response.output_text.delta'
-              response_item_id = data[ :item_id ]
+              response_item_id = "#{data[ :item_id ]}:#{data[ :content_index ]}"
               response_text = data[ :delta ]
               if content.nil? || content[ :item_id ] != response_item_id
                 content = { 
