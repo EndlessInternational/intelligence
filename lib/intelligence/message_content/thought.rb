@@ -8,6 +8,7 @@ module Intelligence
       end
 
       attr_reader :text 
+      attr_reader :ciphertext
       
       def valid?
         true 
@@ -22,7 +23,7 @@ module Intelligence
       end
 
       def to_h
-        { type: :text, text: text }
+        { type: :thought, text: text, ciphertext: ciphertext }
       end
     end 
 
