@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Sun, 08 Jun 2025 22:57:33 GMT"
+            "Thu, 03 Jul 2025 00:15:38 GMT"
           ],
           "content-type": [
             "application/json"
@@ -74,10 +74,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\"id\":\"d142590f-e201-4faf-9dec-b2d57e1bc008\",\"object\":\"chat.completion\",\"created\":1749423452,\"model\":\"grok-3\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"\\n\\n\",\"tool_calls\":[{\"id\":\"call_80920374\",\"function\":{\"name\":\"get_weather\",\"arguments\":\"{\\\"city\\\":\\\"London\\\",\\\"country\\\":\\\"UK\\\"}\"},\"type\":\"function\"},{\"id\":\"call_95725704\",\"function\":{\"name\":\"get_weather\",\"arguments\":\"{\\\"city\\\":\\\"Paris\\\",\\\"country\\\":\\\"France\\\"}\"},\"type\":\"function\"},{\"id\":\"call_33079246\",\"function\":{\"name\":\"get_weather\",\"arguments\":\"{\\\"city\\\":\\\"Rome\\\",\\\"country\\\":\\\"Italy\\\"}\"},\"type\":\"function\"}],\"refusal\":null},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":469,\"completion_tokens\":96,\"total_tokens\":565,\"prompt_tokens_details\":{\"text_tokens\":469,\"audio_tokens\":0,\"image_tokens\":0,\"cached_tokens\":3},\"completion_tokens_details\":{\"reasoning_tokens\":0,\"audio_tokens\":0,\"accepted_prediction_tokens\":0,\"rejected_prediction_tokens\":0},\"num_sources_used\":0},\"system_fingerprint\":\"fp_d8d6e9f7d0\"}"
+          "string": "{\"id\":\"e51a7a9e-80c7-4fbd-6aba-45fec68c6806\",\"object\":\"chat.completion\",\"created\":1751501737,\"model\":\"grok-3\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"\\n\\n\",\"tool_calls\":[{\"id\":\"call_17491169\",\"function\":{\"name\":\"get_weather\",\"arguments\":\"{\\\"city\\\":\\\"London\\\",\\\"country\\\":\\\"UK\\\"}\"},\"type\":\"function\"},{\"id\":\"call_98692449\",\"function\":{\"name\":\"get_weather\",\"arguments\":\"{\\\"city\\\":\\\"Paris\\\",\\\"country\\\":\\\"France\\\"}\"},\"type\":\"function\"},{\"id\":\"call_16378823\",\"function\":{\"name\":\"get_weather\",\"arguments\":\"{\\\"city\\\":\\\"Rome\\\",\\\"country\\\":\\\"Italy\\\"}\"},\"type\":\"function\"}],\"refusal\":null},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":414,\"completion_tokens\":96,\"total_tokens\":510,\"prompt_tokens_details\":{\"text_tokens\":414,\"audio_tokens\":0,\"image_tokens\":0,\"cached_tokens\":413},\"completion_tokens_details\":{\"reasoning_tokens\":0,\"audio_tokens\":0,\"accepted_prediction_tokens\":0,\"rejected_prediction_tokens\":0},\"num_sources_used\":0},\"system_fingerprint\":\"fp_be0739e203\"}"
         }
       },
-      "recorded_at": "Sun, 08 Jun 2025 22:57:33 GMT"
+      "recorded_at": "Thu, 03 Jul 2025 00:15:38 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

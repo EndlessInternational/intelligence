@@ -76,6 +76,34 @@ RSpec.describe "#{Intelligence::Adapter[ :x_ai ]} chat requests", :x_ai do
     end
   end
 
+  let( :adapter_with_web_search ) do
+    Intelligence::Adapter[ :x_ai ].build! do   
+      key                     ENV[ 'XAI_API_KEY' ]
+      chat_options do
+        model                 'grok-3-latest'
+        max_tokens            1024
+        temperature           0
+        abilities do  
+          web_search do 
+            return_citations  true
+          end
+        end
+      end
+    end
+  end
+
+  let( :adapter_with_thought ) do
+    Intelligence::Adapter[ :x_ai ].build! do   
+      key                     ENV[ 'XAI_API_KEY' ]
+      chat_options do
+        model                 'grok-3-mini'
+        max_tokens            1024
+        temperature           0
+        reasoning_effort      :high
+      end
+    end
+  end
+
   let( :adapter_with_invalid_key ) do
     Intelligence::Adapter[ :x_ai ].build! do 
       key                     'this-key-is-not-valid'  
@@ -109,6 +137,10 @@ RSpec.describe "#{Intelligence::Adapter[ :x_ai ]} chat requests", :x_ai do
   include_examples 'chat requests with file images',
                    adapter: :vision_adapter
   include_examples 'chat requests without alternating roles'
+  include_examples 'chat requests with web search', 
+                   adapter: :adapter_with_web_search
+  include_examples 'chat requests with thought', 
+                   adapter: :adapter_with_thought
 
   include_examples 'chat requests with tools'
   include_examples 'chat requests with adapter tools'
@@ -118,4 +150,5 @@ RSpec.describe "#{Intelligence::Adapter[ :x_ai ]} chat requests", :x_ai do
   include_examples 'chat requests with invalid key', 
                    error_type: 'invalid_request_error'
   include_examples 'chat requests with invalid model'
+
 end

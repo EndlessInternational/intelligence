@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Sun, 08 Jun 2025 22:57:55 GMT"
+            "Thu, 03 Jul 2025 00:16:02 GMT"
           ],
           "content-type": [
             "text/event-stream"
@@ -74,10 +74,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "data: {\"id\":\"ab5201e1-bba2-45ba-8498-a7277b6e21e1\",\"object\":\"chat.completion.chunk\",\"created\":1749423475,\"model\":\"grok-2-vision-1212\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"red\",\"role\":\"assistant\"}}],\"system_fingerprint\":\"fp_b3554c57d2\"}\n\ndata: {\"id\":\"ab5201e1-bba2-45ba-8498-a7277b6e21e1\",\"object\":\"chat.completion.chunk\",\"created\":1749423475,\"model\":\"grok-2-vision-1212\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\" balloon\",\"role\":\"assistant\"}}],\"system_fingerprint\":\"fp_b3554c57d2\"}\n\ndata: {\"id\":\"ab5201e1-bba2-45ba-8498-a7277b6e21e1\",\"object\":\"chat.completion.chunk\",\"created\":1749423475,\"model\":\"grok-2-vision-1212\",\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\"},\"finish_reason\":\"stop\"}],\"system_fingerprint\":\"fp_b3554c57d2\"}\n\ndata: [DONE]\n\n"
+          "string": "data: {\"id\":\"a5b634d9-50e3-a426-738a-35b8a586f3bc\",\"object\":\"chat.completion.chunk\",\"created\":1751501762,\"model\":\"grok-2-vision-1212\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"red\",\"role\":\"assistant\"}}],\"system_fingerprint\":\"fp_b3554c57d2\"}\n\ndata: {\"id\":\"a5b634d9-50e3-a426-738a-35b8a586f3bc\",\"object\":\"chat.completion.chunk\",\"created\":1751501762,\"model\":\"grok-2-vision-1212\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\" balloon\",\"role\":\"assistant\"}}],\"system_fingerprint\":\"fp_b3554c57d2\"}\n\ndata: {\"id\":\"a5b634d9-50e3-a426-738a-35b8a586f3bc\",\"object\":\"chat.completion.chunk\",\"created\":1751501762,\"model\":\"grok-2-vision-1212\",\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\"},\"finish_reason\":\"stop\"}],\"system_fingerprint\":\"fp_b3554c57d2\"}\n\ndata: [DONE]\n\n"
         }
       },
-      "recorded_at": "Sun, 08 Jun 2025 22:57:55 GMT"
+      "recorded_at": "Thu, 03 Jul 2025 00:16:02 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

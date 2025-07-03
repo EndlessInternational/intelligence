@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Sun, 08 Jun 2025 22:57:51 GMT"
+            "Thu, 03 Jul 2025 00:15:59 GMT"
           ],
           "content-type": [
             "text/event-stream"
@@ -74,10 +74,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "data: {\"id\":\"5530c945-9aa0-4668-994c-a084a04dc533\",\"object\":\"chat.completion.chunk\",\"created\":1749423472,\"model\":\"grok-2-vision-1212\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"red\",\"role\":\"assistant\"}}],\"system_fingerprint\":\"fp_b3554c57d2\"}\n\ndata: {\"id\":\"5530c945-9aa0-4668-994c-a084a04dc533\",\"object\":\"chat.completion.chunk\",\"created\":1749423472,\"model\":\"grok-2-vision-1212\",\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\"},\"finish_reason\":\"stop\"}],\"system_fingerprint\":\"fp_b3554c57d2\"}\n\ndata: [DONE]\n\n"
+          "string": "data: {\"id\":\"dc9c7249-d92d-eff4-09c6-8301bc2c9320\",\"object\":\"chat.completion.chunk\",\"created\":1751501759,\"model\":\"grok-2-vision-1212\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"red\",\"role\":\"assistant\"}}],\"system_fingerprint\":\"fp_b3554c57d2\"}\n\ndata: {\"id\":\"dc9c7249-d92d-eff4-09c6-8301bc2c9320\",\"object\":\"chat.completion.chunk\",\"created\":1751501759,\"model\":\"grok-2-vision-1212\",\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\"},\"finish_reason\":\"stop\"}],\"system_fingerprint\":\"fp_b3554c57d2\"}\n\ndata: [DONE]\n\n"
         }
       },
-      "recorded_at": "Sun, 08 Jun 2025 22:57:52 GMT"
+      "recorded_at": "Thu, 03 Jul 2025 00:15:59 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"
