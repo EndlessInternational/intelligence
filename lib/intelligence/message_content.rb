@@ -20,6 +20,25 @@ module Intelligence
       self[ type ].build( attributes, &block )
     end
 
+    def self.merge( this_contents, that_contents )
+      this_contents  ||= []
+      that_contents ||= []
+
+      length = [ this_contents.size, that_contents.size ].max
+
+      Array.new( length ) do | index |
+        
+        this_content = this_contents[ index ] 
+        that_content = that_contents[ index ]
+
+        if this_content && that_content              
+          this_content.merge( that_content )
+        else                    
+          this_content || that_content
+        end
+      end
+    end
+
   end
 end
 
