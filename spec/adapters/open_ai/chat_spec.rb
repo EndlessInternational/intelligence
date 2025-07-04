@@ -47,6 +47,34 @@ RSpec.describe "#{Intelligence::Adapter[ :open_ai ]} chat requests", :open_ai do
     end
   end
 
+  let( :adapter_with_web_search ) do
+    Intelligence::Adapter[ :open_ai ].build! do   
+      key                     ENV[ 'OPENAI_API_KEY' ]
+      chat_options do
+        model                 'gpt-4o'
+        temperature           0
+        max_tokens            1024
+        abilities do 
+          web_search 
+        end
+      end
+    end
+  end
+
+  let( :adapter_with_thought ) do
+    Intelligence::Adapter[ :open_ai ].build! do   
+      key                     ENV[ 'OPENAI_API_KEY' ]
+      chat_options do
+        model                 'o3'
+        max_tokens            4096
+        reasoning do 
+          effort              :medium
+          summary             :detailed
+        end
+      end
+    end
+  end
+
   let( :adapter_with_invalid_key ) do
     Intelligence::Adapter[ :open_ai ].build! do 
       key                     'this-key-is-not-valid'  
@@ -73,10 +101,16 @@ RSpec.describe "#{Intelligence::Adapter[ :open_ai ]} chat requests", :open_ai do
   include_examples 'chat requests with binary encoded images'
   include_examples 'chat requests with file images'
   include_examples 'chat requests without alternating roles'
+  include_examples 'chat requests with thought', 
+                   adapter: :adapter_with_thought
+
   include_examples 'chat requests with tools'
   include_examples 'chat requests with adapter tools'
   include_examples 'chat requests with complex tools'
   include_examples 'chat requests with parallel tools'
+
+  include_examples 'chat requests with web search', 
+                   adapter: :adapter_with_web_search
 
   include_examples 'chat requests with invalid key'
   include_examples 'chat requests with invalid model', 

@@ -27,6 +27,13 @@ module Intelligence
               case json_content[ :type ]
               when 'output_text'
                 result_message[ :contents ] << { type: :text, text: json_content[ :text ] }
+                json_content[ :annotations ]&.each do | json_annotation |
+                  result_message[ :contents ] << { 
+                    type: :web_reference, 
+                    uri: json_annotation[ :url ],
+                    title: json_annotation[ :title ]
+                  }
+                end
               end
             end
           when 'function_call'
@@ -46,7 +53,14 @@ module Intelligence
               tool_name: json_payload[ :name ],
               tool_parameters: result_message_tool_call_parameters
             }
-          end 
+          when 'web_search_call'
+            web_search_action = json_payload[ :action ] || {}
+            result_message[ :contents ] << { 
+              type: :web_search_call, 
+              query: web_search_action[ :query ],
+              status: :complete
+            }
+          end
         end 
         result[ :choices ].push( { end_reason: end_reason, message: result_message } )
 
@@ -107,6 +121,7 @@ module Intelligence
         choice = choices.last
         message = choice[ :message ]
         contents = message[ :contents ] || []
+        annotations = []
 
         buffer += chunk
         while ( eol_index = buffer.index( "\n" ) )
@@ -116,19 +131,19 @@ module Intelligence
           line = line[ 6..-1 ]
 
           next if line.end_with?( '[DONE]' )
-          # puts line
           data = JSON.parse( line, symbolize_names: true ) rescue nil
-
+          # puts line
           # empty content is suppressed
           content = last_content = contents.last
           content_present = false
 
           if data.is_a?( Hash )
             case data[ :type ]
-            # tool_call 
             when 'response.output_item.added'
               response_item = data[ :item ]
-              if response_item[ :type ] == 'function_call'
+              case response_item[ :type ]
+              # tool_call 
+              when 'function_call'
                 content = {
                   item_id: response_item[ :id ],
                   type: 'tool_call',
@@ -136,6 +151,10 @@ module Intelligence
                   tool_call_id: response_item[ :call_id ],
                   tool_parameters: response_item[ :arguments ]
                 }
+                content_present = true
+              # web_search_call 
+              when 'web_search_call'
+                content = { item_id: response_item[ :id ], type: 'web_search_call', status: :searching }
                 content_present = true
               end
             when 'response.function_call_arguments.delta'
@@ -200,6 +219,36 @@ module Intelligence
               else 
                 content_present = ( ( content[ :text ] ||= '' ) << response_text ).size.positive?
               end
+            when 'response.output_item.done'
+              response_item = data[ :item ]
+              case response_item[ :type ]
+              # text 
+              when 'message'
+                if response_item_contents = response_item[ :content ]
+                  response_item_contents.each do | response_item_content |
+                    if response_item_annotations = response_item_content[ :annotations ]
+                      response_item_annotations.each do | response_item_annotation |
+                        if response_item_annotation[ :type ] == 'url_citation'
+                          annotations << {
+                            type: :web_reference,
+                            title: response_item_annotation[ :title ],
+                            uri: response_item_annotation[ :url ]
+                          }
+                        end
+                      end
+                    end
+                  end
+                end
+              # web search complete
+              when 'web_search_call'
+                raise 'A web search call completed but there is web search call content.' \
+                  unless content and content[ :type ] == 'web_search_call'
+                raise 'A web search call completed but item id does not match.' \
+                  unless content[ :item_id ] = response_item[ :id ]
+                web_search_call_action = response_item[ :action ] || {}
+                content[ :query  ] = web_search_call_action[ :query ]
+                content[ :status ] = :complete
+              end
             when 'response.completed', 'response.incomplete'
               response_json = data[ :response ]
               end_reason = translate_end_result( response_json )
@@ -222,6 +271,8 @@ module Intelligence
             if ( !last_content || last_content[ :item_id ] != content[ :item_id ] ) && content_present
               contents.push( content )
             end
+            annotations.each { | annotation | contents.push( annotation ) }
+            annotations = []
 
           end
 

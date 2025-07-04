@@ -1,0 +1,105 @@
+{
+  "http_interactions": [
+    {
+      "request": {
+        "method": "post",
+        "uri": "https://api.openai.com/v1/responses",
+        "body": {
+          "encoding": "UTF-8",
+          "string": "{\"model\":\"o3\",\"max_output_tokens\":4096,\"reasoning\":{\"effort\":\"medium\",\"summary\":\"detailed\"},\"input\":[{\"role\":\"user\",\"content\":[{\"type\":\"input_text\",\"text\":\"In a 30-60-90 triangle, the length of the hypotenuse is 6. What is the length of the shortest side?\\n\"}]}],\"instructions\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"}"
+        },
+        "headers": {
+          "User-Agent": [
+            "Faraday v2.13.1"
+          ],
+          "Content-Type": [
+            "application/json"
+          ],
+          "Authorization": [
+            "Bearer <TOKEN>"
+          ]
+        }
+      },
+      "response": {
+        "status": {
+          "code": 200,
+          "message": "OK"
+        },
+        "headers": {
+          "date": [
+            "Fri, 04 Jul 2025 02:07:11 GMT"
+          ],
+          "content-type": [
+            "application/json"
+          ],
+          "transfer-encoding": [
+            "chunked"
+          ],
+          "connection": [
+            "keep-alive"
+          ],
+          "x-ratelimit-limit-requests": [
+            "10000"
+          ],
+          "x-ratelimit-limit-tokens": [
+            "30000000"
+          ],
+          "x-ratelimit-remaining-requests": [
+            "9999"
+          ],
+          "x-ratelimit-remaining-tokens": [
+            "29999713"
+          ],
+          "x-ratelimit-reset-requests": [
+            "6ms"
+          ],
+          "x-ratelimit-reset-tokens": [
+            "0s"
+          ],
+          "openai-version": [
+            "2020-10-01"
+          ],
+          "openai-organization": [
+            "<OPENAI-ORGANIZATION>"
+          ],
+          "x-request-id": [
+            "<X-REQUEST-ID>"
+          ],
+          "openai-processing-ms": [
+            "4607"
+          ],
+          "strict-transport-security": [
+            "max-age=31536000; includeSubDomains; preload"
+          ],
+          "cf-cache-status": [
+            "DYNAMIC"
+          ],
+          "set-cookie": [
+            "<SET-COOKIE>"
+          ],
+          "x-content-type-options": [
+            "nosniff"
+          ],
+          "server": [
+            "cloudflare"
+          ],
+          "cf-ray": [
+            "<CF-RAY>"
+          ],
+          "content-encoding": [
+            "gzip"
+          ],
+          "alt-svc": [
+            "h3=\":443\"; ma=86400"
+          ]
+        },
+        "body": {
+          "encoding": "ASCII-8BIT",
+          "string": "{\n  \"id\": \"resp_6867374ab54081a0a831cd51177c724005023d03ecf51538\",\n  \"object\": \"response\",\n  \"created_at\": 1751594826,\n  \"status\": \"completed\",\n  \"background\": false,\n  \"error\": null,\n  \"incomplete_details\": null,\n  \"instructions\": \"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \",\n  \"max_output_tokens\": 4096,\n  \"max_tool_calls\": null,\n  \"model\": \"o3-2025-04-16\",\n  \"output\": [\n    {\n      \"id\": \"rs_6867374afe5081a0b61b2626185caa4e05023d03ecf51538\",\n      \"type\": \"reasoning\",\n      \"summary\": [\n        {\n          \"type\": \"summary_text\",\n          \"text\": \"**Providing the answer clearly**\\n\\nI need to give a succinct answer in the right format, even though the user didn\\u2019t specify one. The developer hinted that I should stick to the requested format without added text. For a 30-60-90 triangle, the side ratios are 1 : \\u221a3 : 2. Given the hypotenuse is 6, I find x equals 3 for the shortest side. I\\u2019ll present \\u201c3\\u201d as the answer, with units matching the hypotenuse. So, the answer is \\\"3.\\\"\"\n        }\n      ]\n    },\n    {\n      \"id\": \"msg_6867374f0dfc81a0a64daf78aa2eae6f05023d03ecf51538\",\n      \"type\": \"message\",\n      \"status\": \"completed\",\n      \"content\": [\n        {\n          \"type\": \"output_text\",\n          \"annotations\": [],\n          \"logprobs\": [],\n          \"text\": \"3\"\n        }\n      ],\n      \"role\": \"assistant\"\n    }\n  ],\n  \"parallel_tool_calls\": true,\n  \"previous_response_id\": null,\n  \"reasoning\": {\n    \"effort\": \"medium\",\n    \"summary\": \"detailed\"\n  },\n  \"service_tier\": \"default\",\n  \"store\": true,\n  \"temperature\": 1.0,\n  \"text\": {\n    \"format\": {\n      \"type\": \"text\"\n    }\n  },\n  \"tool_choice\": \"auto\",\n  \"tools\": [],\n  \"top_logprobs\": 0,\n  \"top_p\": 1.0,\n  \"truncation\": \"disabled\",\n  \"usage\": {\n    \"input_tokens\": 79,\n    \"input_tokens_details\": {\n      \"cached_tokens\": 0\n    },\n    \"output_tokens\": 71,\n    \"output_tokens_details\": {\n      \"reasoning_tokens\": 64\n    },\n    \"total_tokens\": 150\n  },\n  \"user\": null,\n  \"metadata\": {}\n}"
+        }
+      },
+      "recorded_at": "Fri, 04 Jul 2025 02:07:11 GMT"
+    }
+  ],
+  "recorded_with": "VCR 6.3.1"
+}

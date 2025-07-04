@@ -1,0 +1,105 @@
+{
+  "http_interactions": [
+    {
+      "request": {
+        "method": "post",
+        "uri": "https://api.openai.com/v1/responses",
+        "body": {
+          "encoding": "UTF-8",
+          "string": "{\"model\":\"gpt-4o\",\"temperature\":0.0,\"max_output_tokens\":1024,\"input\":[{\"role\":\"user\",\"content\":[{\"type\":\"input_text\",\"text\":\"what is the top news item today?\\n\"}]}],\"instructions\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \",\"tools\":[{\"type\":\"web_search_preview\"}]}"
+        },
+        "headers": {
+          "User-Agent": [
+            "Faraday v2.13.1"
+          ],
+          "Content-Type": [
+            "application/json"
+          ],
+          "Authorization": [
+            "Bearer <TOKEN>"
+          ]
+        }
+      },
+      "response": {
+        "status": {
+          "code": 200,
+          "message": "OK"
+        },
+        "headers": {
+          "date": [
+            "Fri, 04 Jul 2025 02:07:37 GMT"
+          ],
+          "content-type": [
+            "application/json"
+          ],
+          "transfer-encoding": [
+            "chunked"
+          ],
+          "connection": [
+            "keep-alive"
+          ],
+          "x-ratelimit-limit-requests": [
+            "10000"
+          ],
+          "x-ratelimit-limit-tokens": [
+            "30000000"
+          ],
+          "x-ratelimit-remaining-requests": [
+            "9999"
+          ],
+          "x-ratelimit-remaining-tokens": [
+            "29999629"
+          ],
+          "x-ratelimit-reset-requests": [
+            "6ms"
+          ],
+          "x-ratelimit-reset-tokens": [
+            "0s"
+          ],
+          "openai-version": [
+            "2020-10-01"
+          ],
+          "openai-organization": [
+            "<OPENAI-ORGANIZATION>"
+          ],
+          "x-request-id": [
+            "<X-REQUEST-ID>"
+          ],
+          "openai-processing-ms": [
+            "12356"
+          ],
+          "strict-transport-security": [
+            "max-age=31536000; includeSubDomains; preload"
+          ],
+          "cf-cache-status": [
+            "DYNAMIC"
+          ],
+          "set-cookie": [
+            "<SET-COOKIE>"
+          ],
+          "x-content-type-options": [
+            "nosniff"
+          ],
+          "server": [
+            "cloudflare"
+          ],
+          "cf-ray": [
+            "<CF-RAY>"
+          ],
+          "content-encoding": [
+            "gzip"
+          ],
+          "alt-svc": [
+            "h3=\":443\"; ma=86400"
+          ]
+        },
+        "body": {
+          "encoding": "ASCII-8BIT",
+          "string": "{\n  \"id\": \"resp_6867375cb384819d978f1c4c801ab339076f756b03974c3b\",\n  \"object\": \"response\",\n  \"created_at\": 1751594844,\n  \"status\": \"completed\",\n  \"background\": false,\n  \"error\": null,\n  \"incomplete_details\": null,\n  \"instructions\": \"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \",\n  \"max_output_tokens\": 1024,\n  \"max_tool_calls\": null,\n  \"model\": \"gpt-4o-2024-08-06\",\n  \"output\": [\n    {\n      \"id\": \"ws_6867375d2a78819da66d14493336a67f076f756b03974c3b\",\n      \"type\": \"web_search_call\",\n      \"status\": \"completed\",\n      \"action\": {\n        \"type\": \"search\",\n        \"query\": \"top news today\"\n      }\n    },\n    {\n      \"id\": \"msg_6867376199b8819da5101efa955a3cdc076f756b03974c3b\",\n      \"type\": \"message\",\n      \"status\": \"completed\",\n      \"content\": [\n        {\n          \"type\": \"output_text\",\n          \"annotations\": [\n            {\n              \"type\": \"url_citation\",\n              \"end_index\": 439,\n              \"start_index\": 346,\n              \"title\": \"Trump kicks off a yearlong celebration of America's 250th anniversary in Iowa\",\n              \"url\": \"https://apnews.com/article/e6fb5df832cdba107ae4e9c62f2577e9?utm_source=openai\"\n            },\n            {\n              \"type\": \"url_citation\",\n              \"end_index\": 767,\n              \"start_index\": 650,\n              \"title\": \"Trump to host UFC fight at White House as part of \\\"America250\\\" celebrations\",\n              \"url\": \"https://www.axios.com/2025/07/04/trump-ufc-white-house-fight-america-250-celebration?utm_source=openai\"\n            },\n            {\n              \"type\": \"url_citation\",\n              \"end_index\": 1143,\n              \"start_index\": 1013,\n              \"title\": \"'Free America': Anti-Trump Administration Protests Planned Across U.S. on July 4\",\n              \"url\": \"https://time.com/7299015/anti-trump-administration-protests-united-states-july-4-independence-day/?utm_source=openai\"\n            },\n            {\n              \"type\": \"url_citation\",\n              \"end_index\": 1513,\n              \"start_index\": 1394,\n              \"title\": \"International News Briefs for Thursday, July 3, 2025 - Havana Times\",\n              \"url\": \"https://havanatimes.org/news/international-news-briefs-for-thursday-july-3-2025/?utm_source=openai\"\n            },\n            {\n              \"type\": \"url_citation\",\n              \"end_index\": 1743,\n              \"start_index\": 1648,\n              \"title\": \"2025 in the United States\",\n              \"url\": \"https://en.wikipedia.org/wiki/2025_in_the_United_States?utm_source=openai\"\n            },\n            {\n              \"type\": \"url_citation\",\n              \"end_index\": 2112,\n              \"start_index\": 1998,\n              \"title\": \"July 4th cookout costs sizzle with tariff pressures\",\n              \"url\": \"https://www.axios.com/2025/07/03/july-4th-barbecue-prices-inflation-trump-tariffs?utm_source=openai\"\n            },\n            {\n              \"type\": \"url_citation\",\n              \"end_index\": 2381,\n              \"start_index\": 2293,\n              \"title\": \"Kiplinger Energy Outlook: July 4 Gas Prices Trend Lower\",\n              \"url\": \"https://www.kiplinger.com/economic-forecasts/energy?utm_source=openai\"\n            }\n          ],\n          \"logprobs\": [],\n          \"text\": \"As of July 4, 2025, the top news items include:\\n\\n**National News:**\\n\\n- **President Trump Launches 'America250' Celebrations:** President Donald Trump initiated a yearlong celebration of America's 250th anniversary at a festival in Des Moines, Iowa. The event highlighted recent political victories, including the passage of a major tax cut bill. ([apnews.com](https://apnews.com/article/e6fb5df832cdba107ae4e9c62f2577e9?utm_source=openai))\\n\\n- **UFC Fight Planned at White House:** As part of the \\\"America250\\\" celebrations, President Trump announced plans to host a UFC fight at the White House, marking a unique approach to the national festivities. ([axios.com](https://www.axios.com/2025/07/04/trump-ufc-white-house-fight-america-250-celebration?utm_source=openai))\\n\\n- **Nationwide Protests on Independence Day:** Protests against the Trump administration, dubbed \\\"Free America Weekend,\\\" are planned across the U.S. on July 4, focusing on issues such as poverty, discrimination, and perceived authoritarianism. ([time.com](https://time.com/7299015/anti-trump-administration-protests-united-states-july-4-independence-day/?utm_source=openai))\\n\\n**International News:**\\n\\n- **Wisconsin Supreme Court Overturns Abortion Ban:** The Wisconsin Supreme Court struck down a 176-year-old law banning abortions, making the procedure legal and accessible in the state for the first 20 weeks of pregnancy. ([havanatimes.org](https://havanatimes.org/news/international-news-briefs-for-thursday-july-3-2025/?utm_source=openai))\\n\\n- **Drive-By Shooting in Chicago:** A mass drive-by shooting outside a nightclub in Chicago resulted in four deaths and 14 injuries. ([en.wikipedia.org](https://en.wikipedia.org/wiki/2025_in_the_United_States?utm_source=openai))\\n\\n**Business News:**\\n\\n- **July 4th Cookout Costs Rise Due to Tariffs:** Tariffs and trade tensions have led to a 12.7% annualized increase in July 4th cookout costs, with items like ground beef and ice cream reaching their highest prices since the 1980s. ([axios.com](https://www.axios.com/2025/07/03/july-4th-barbecue-prices-inflation-trump-tariffs?utm_source=openai))\\n\\n- **Gas Prices Trend Lower:** U.S. national gas prices are trending downward, with the average price of regular unleaded fuel at $3.16 per gallon, 35 cents lower than a year ago. ([kiplinger.com](https://www.kiplinger.com/economic-forecasts/energy?utm_source=openai))\\n\\n**Weather Forecast for Washington, D.C.:**\\n\\n## Weather for District of Columbia:\\nCurrent Conditions: Mostly clear, 85\\u00b0F (29\\u00b0C)\\n\\nDaily Forecast:\\n* Thursday, July 3: Low: 65\\u00b0F (18\\u00b0C), High: 92\\u00b0F (34\\u00b0C), Description: Mostly sunny and hot; possible danger of dehydration and heatstroke while doing strenuous activities\\n* Friday, July 4: Low: 64\\u00b0F (18\\u00b0C), High: 87\\u00b0F (30\\u00b0C), Description: Less humid with plenty of sunshine; nice weather to celebrate Independence Day\\n* Saturday, July 5: Low: 66\\u00b0F (19\\u00b0C), High: 90\\u00b0F (32\\u00b0C), Description: Partly sunny; air quality will be poor\\n* Sunday, July 6: Low: 74\\u00b0F (23\\u00b0C), High: 95\\u00b0F (35\\u00b0C), Description: Mostly sunny and hot; danger of dehydration and heatstroke if outside for extended periods of time\\n* Monday, July 7: Low: 74\\u00b0F (24\\u00b0C), High: 96\\u00b0F (36\\u00b0C), Description: Partly sunny and hot; danger of dehydration and heatstroke if outside for extended periods of time\\n* Tuesday, July 8: Low: 72\\u00b0F (22\\u00b0C), High: 96\\u00b0F (36\\u00b0C), Description: Partly sunny and hot\\n* Wednesday, July 9: Low: 74\\u00b0F (23\\u00b0C), High: 90\\u00b0F (32\\u00b0C), Description: Times of clouds and sun\\n\\n\\n**Sports Schedule for July 4, 2025:**\\n\\n## MLB Schedule\\n- Red Sox @ Nationals on Friday, Jul 04, 2025 at 08:05 AM PDT\\n- Reds @ Phillies on Friday, Jul 04, 2025 at 10:05 AM PDT\\n- Cardinals @ Cubs on Friday, Jul 04, 2025 at 11:20 AM PDT\\n- Yankees @ Mets on Friday, Jul 04, 2025 at 12:10 PM PDT\\n- Pirates @ Mariners on Friday, Jul 04, 2025 at 01:10 PM PDT\\n- Rays @ Twins on Friday, Jul 04, 2025 at 01:10 PM PDT\\n- Rangers @ Padres on Friday, Jul 04, 2025 at 03:40 PM PDT\\n- Angels @ Blue Jays on Friday, Jul 04, 2025 at 04:07 PM PDT\\n- Tigers @ Guardians on Friday, Jul 04, 2025 at 04:10 PM PDT\\n- Brewers @ Marlins on Friday, Jul 04, 2025 at 04:10 PM PDT\\n- Orioles @ Braves on Friday, Jul 04, 2025 at 04:15 PM PDT\\n- White Sox @ Rockies on Friday, Jul 04, 2025 at 05:10 PM PDT\\n- Astros @ Dodgers on Friday, Jul 04, 2025 at 06:10 PM PDT\\n- Royals @ Diamondbacks on Friday, Jul 04, 2025 at 06:40 PM PDT\\n- Giants @ Athletics on Friday, Jul 04, 2025 at 07:05 PM PDT\\n\\n\\n**Financial Markets:**\\n\\n- **SPDR S&P 500 ETF Trust (SPY):** $625.34, up $5.00 (0.81%)\\n\\n- **SPDR Dow Jones Industrial Average ETF (DIA):** $448.09, up $3.37 (0.76%)\\n\\n- **Invesco QQQ Trust Series 1 (QQQ):** $556.22, up $5.40 (0.98%)\\n\\nPlease note that financial markets are closed today in observance of Independence Day. \"\n        }\n      ],\n      \"role\": \"assistant\"\n    }\n  ],\n  \"parallel_tool_calls\": true,\n  \"previous_response_id\": null,\n  \"reasoning\": {\n    \"effort\": null,\n    \"summary\": null\n  },\n  \"service_tier\": \"default\",\n  \"store\": true,\n  \"temperature\": 0.0,\n  \"text\": {\n    \"format\": {\n      \"type\": \"text\"\n    }\n  },\n  \"tool_choice\": \"auto\",\n  \"tools\": [\n    {\n      \"type\": \"web_search_preview\",\n      \"search_context_size\": \"medium\",\n      \"user_location\": {\n        \"type\": \"approximate\",\n        \"city\": null,\n        \"country\": \"US\",\n        \"region\": null,\n        \"timezone\": null\n      }\n    }\n  ],\n  \"top_logprobs\": 0,\n  \"top_p\": 1.0,\n  \"truncation\": \"disabled\",\n  \"usage\": {\n    \"input_tokens\": 352,\n    \"input_tokens_details\": {\n      \"cached_tokens\": 0\n    },\n    \"output_tokens\": 1388,\n    \"output_tokens_details\": {\n      \"reasoning_tokens\": 0\n    },\n    \"total_tokens\": 1740\n  },\n  \"user\": null,\n  \"metadata\": {}\n}"
+        }
+      },
+      "recorded_at": "Fri, 04 Jul 2025 02:07:37 GMT"
+    }
+  ],
+  "recorded_with": "VCR 6.3.1"
+}
