@@ -4,13 +4,18 @@ module Intelligence
     class WebSearchCall < Base
         
       schema do 
+        status Symbol, in: [ :searching, :complete ]
         query String
       end
 
-      attr_reader :query 
+      attr_reader :status, :query 
       
       def valid?
         true 
+      end
+
+      def complete?
+        @status.to_s == 'complete'
       end
 
       def merge( other )
