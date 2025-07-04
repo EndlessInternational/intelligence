@@ -62,6 +62,7 @@ module Intelligence
           truncation                Symbol, in: [ :auto, :disabled ]
           user                      String
 
+          max_tool_calls            Integer, in: (1..)
           parallel_tool_calls       [ TrueClass, FalseClass ]
           tool_choice               arguments: :type do 
             type                    Symbol, in: [ :none, :auto, :required ]
