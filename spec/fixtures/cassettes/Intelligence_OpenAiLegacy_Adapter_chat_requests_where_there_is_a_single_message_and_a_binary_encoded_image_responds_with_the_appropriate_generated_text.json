@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Thu, 19 Jun 2025 14:30:59 GMT"
+            "Sat, 05 Jul 2025 21:30:47 GMT"
           ],
           "content-type": [
             "application/json"
@@ -45,13 +45,13 @@
             "<OPENAI-ORGANIZATION>"
           ],
           "openai-processing-ms": [
-            "804"
+            "1460"
           ],
           "openai-version": [
             "2020-10-01"
           ],
           "x-envoy-upstream-service-time": [
-            "756"
+            "1439"
           ],
           "x-ratelimit-limit-input-images": [
             "250000"
@@ -69,7 +69,7 @@
             "9999"
           ],
           "x-ratelimit-remaining-tokens": [
-            "29999163"
+            "29999164"
           ],
           "x-ratelimit-reset-input-images": [
             "0s"
@@ -110,10 +110,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\n  \"id\": \"chatcmpl-BkAa3nUUfI0aKFH59VicjvFDqwg76\",\n  \"object\": \"chat.completion\",\n  \"created\": 1750343459,\n  \"model\": \"gpt-4o-2024-08-06\",\n  \"choices\": [\n    {\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": \"A red balloon with a string.\",\n        \"refusal\": null,\n        \"annotations\": []\n      },\n      \"logprobs\": null,\n      \"finish_reason\": \"stop\"\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 316,\n    \"completion_tokens\": 7,\n    \"total_tokens\": 323,\n    \"prompt_tokens_details\": {\n      \"cached_tokens\": 0,\n      \"audio_tokens\": 0\n    },\n    \"completion_tokens_details\": {\n      \"reasoning_tokens\": 0,\n      \"audio_tokens\": 0,\n      \"accepted_prediction_tokens\": 0,\n      \"rejected_prediction_tokens\": 0\n    }\n  },\n  \"service_tier\": \"default\",\n  \"system_fingerprint\": \"fp_a288987b44\"\n}\n"
+          "string": "{\n  \"id\": \"chatcmpl-Bq4l4T58L0CGFqGPxzs9xZDaKxIaR\",\n  \"object\": \"chat.completion\",\n  \"created\": 1751751046,\n  \"model\": \"gpt-4o-2024-08-06\",\n  \"choices\": [\n    {\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": \"A red balloon with a string attached.\",\n        \"refusal\": null,\n        \"annotations\": []\n      },\n      \"logprobs\": null,\n      \"finish_reason\": \"stop\"\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 316,\n    \"completion_tokens\": 8,\n    \"total_tokens\": 324,\n    \"prompt_tokens_details\": {\n      \"cached_tokens\": 0,\n      \"audio_tokens\": 0\n    },\n    \"completion_tokens_details\": {\n      \"reasoning_tokens\": 0,\n      \"audio_tokens\": 0,\n      \"accepted_prediction_tokens\": 0,\n      \"rejected_prediction_tokens\": 0\n    }\n  },\n  \"service_tier\": \"default\",\n  \"system_fingerprint\": \"fp_a288987b44\"\n}\n"
         }
       },
-      "recorded_at": "Thu, 19 Jun 2025 14:30:59 GMT"
+      "recorded_at": "Sat, 05 Jul 2025 21:30:46 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

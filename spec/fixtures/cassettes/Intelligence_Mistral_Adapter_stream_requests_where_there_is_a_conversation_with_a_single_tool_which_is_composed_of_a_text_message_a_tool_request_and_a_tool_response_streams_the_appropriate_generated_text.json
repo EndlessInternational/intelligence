@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Sun, 08 Jun 2025 22:54:25 GMT"
+            "Sat, 05 Jul 2025 21:28:49 GMT"
           ],
           "content-type": [
             "text/event-stream; charset=utf-8"
@@ -38,26 +38,32 @@
           "connection": [
             "keep-alive"
           ],
+          "mistral-correlation-id": [
+            "0197dc7d-3c8e-705a-86c0-06d1c9a0ff9e"
+          ],
+          "x-kong-request-id": [
+            "0197dc7d-3c8e-705a-86c0-06d1c9a0ff9e"
+          ],
           "x-envoy-upstream-service-time": [
-            "511"
+            "45294"
           ],
           "access-control-allow-origin": [
             "*"
           ],
           "x-kong-upstream-latency": [
-            "512"
+            "45296"
           ],
           "x-kong-proxy-latency": [
             "5"
-          ],
-          "x-kong-request-id": [
-            "e334fd2d20033239d2ea71616ea6310f"
           ],
           "cf-cache-status": [
             "DYNAMIC"
           ],
           "set-cookie": [
             "<SET-COOKIE>"
+          ],
+          "strict-transport-security": [
+            "max-age=15552000; includeSubDomains"
           ],
           "server": [
             "cloudflare"
@@ -71,10 +77,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "data: {\"id\":\"425b1868b02c4ba3b7bf28582b5040f0\",\"object\":\"chat.completion.chunk\",\"created\":1749423264,\"model\":\"mistral-large-latest\",\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"\"},\"finish_reason\":null}]}\n\ndata: {\"id\":\"425b1868b02c4ba3b7bf28582b5040f0\",\"object\":\"chat.completion.chunk\",\"created\":1749423264,\"model\":\"mistral-large-latest\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"You\"},\"finish_reason\":null}]}\n\ndata: {\"id\":\"425b1868b02c4ba3b7bf28582b5040f0\",\"object\":\"chat.completion.chunk\",\"created\":1749423264,\"model\":\"mistral-large-latest\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\" are located in Seattle\"},\"finish_reason\":null}]}\n\ndata: {\"id\":\"425b1868b02c4ba3b7bf28582b5040f0\",\"object\":\"chat.completion.chunk\",\"created\":1749423264,\"model\":\"mistral-large-latest\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\", WA\"},\"finish_reason\":null}]}\n\ndata: {\"id\":\"425b1868b02c4ba3b7bf28582b5040f0\",\"object\":\"chat.completion.chunk\",\"created\":1749423264,\"model\":\"mistral-large-latest\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\", USA.\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":113,\"total_tokens\":124,\"completion_tokens\":11}}\n\ndata: [DONE]\n\n"
+          "string": "data: {\"id\":\"35e8b7a1ac7d421eb51795c83df35608\",\"object\":\"chat.completion.chunk\",\"created\":1751750929,\"model\":\"mistral-large-latest\",\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"\"},\"finish_reason\":null}]}\n\ndata: {\"id\":\"35e8b7a1ac7d421eb51795c83df35608\",\"object\":\"chat.completion.chunk\",\"created\":1751750929,\"model\":\"mistral-large-latest\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"You\"},\"finish_reason\":null}]}\n\ndata: {\"id\":\"35e8b7a1ac7d421eb51795c83df35608\",\"object\":\"chat.completion.chunk\",\"created\":1751750929,\"model\":\"mistral-large-latest\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\" are located in Seattle\"},\"finish_reason\":null}]}\n\ndata: {\"id\":\"35e8b7a1ac7d421eb51795c83df35608\",\"object\":\"chat.completion.chunk\",\"created\":1751750929,\"model\":\"mistral-large-latest\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\", WA\"},\"finish_reason\":null}]}\n\ndata: {\"id\":\"35e8b7a1ac7d421eb51795c83df35608\",\"object\":\"chat.completion.chunk\",\"created\":1751750929,\"model\":\"mistral-large-latest\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\", USA.\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":113,\"total_tokens\":124,\"completion_tokens\":11}}\n\ndata: [DONE]\n\n"
         }
       },
-      "recorded_at": "Sun, 08 Jun 2025 22:54:25 GMT"
+      "recorded_at": "Sat, 05 Jul 2025 21:28:50 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

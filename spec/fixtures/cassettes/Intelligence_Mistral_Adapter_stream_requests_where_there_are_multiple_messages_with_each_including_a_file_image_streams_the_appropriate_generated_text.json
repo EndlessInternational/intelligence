@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Sun, 08 Jun 2025 22:54:21 GMT"
+            "Sat, 05 Jul 2025 21:27:12 GMT"
           ],
           "content-type": [
             "text/event-stream; charset=utf-8"
@@ -38,26 +38,32 @@
           "connection": [
             "keep-alive"
           ],
+          "mistral-correlation-id": [
+            "0197dc7c-6c36-70eb-aebc-428ffe335357"
+          ],
+          "x-kong-request-id": [
+            "0197dc7c-6c36-70eb-aebc-428ffe335357"
+          ],
           "x-envoy-upstream-service-time": [
-            "768"
+            "752"
           ],
           "access-control-allow-origin": [
             "*"
           ],
           "x-kong-upstream-latency": [
-            "769"
+            "753"
           ],
           "x-kong-proxy-latency": [
-            "5"
-          ],
-          "x-kong-request-id": [
-            "70daf908496dab0b0fe7070e63abc44c"
+            "6"
           ],
           "cf-cache-status": [
             "DYNAMIC"
           ],
           "set-cookie": [
             "<SET-COOKIE>"
+          ],
+          "strict-transport-security": [
+            "max-age=15552000; includeSubDomains"
           ],
           "server": [
             "cloudflare"
@@ -71,10 +77,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "data: {\"id\":\"e8fac1cc0f6946abaabc4ebae22763df\",\"object\":\"chat.completion.chunk\",\"created\":1749423261,\"model\":\"pixtral-12b-2409\",\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"\"},\"finish_reason\":null,\"logprobs\":null}]}\n\ndata: {\"id\":\"e8fac1cc0f6946abaabc4ebae22763df\",\"object\":\"chat.completion.chunk\",\"created\":1749423261,\"model\":\"pixtral-12b-2409\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"three\"},\"finish_reason\":null,\"logprobs\":null}]}\n\ndata: {\"id\":\"e8fac1cc0f6946abaabc4ebae22763df\",\"object\":\"chat.completion.chunk\",\"created\":1749423261,\"model\":\"pixtral-12b-2409\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\" ball\"},\"finish_reason\":null,\"logprobs\":null}]}\n\ndata: {\"id\":\"e8fac1cc0f6946abaabc4ebae22763df\",\"object\":\"chat.completion.chunk\",\"created\":1749423261,\"model\":\"pixtral-12b-2409\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"oons\"},\"finish_reason\":null,\"logprobs\":null}]}\n\ndata: {\"id\":\"e8fac1cc0f6946abaabc4ebae22763df\",\"object\":\"chat.completion.chunk\",\"created\":1749423261,\"model\":\"pixtral-12b-2409\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"\"},\"finish_reason\":\"stop\",\"logprobs\":null}],\"usage\":{\"prompt_tokens\":1394,\"total_tokens\":1398,\"completion_tokens\":4}}\n\ndata: [DONE]\n\n"
+          "string": "data: {\"id\":\"2e6378f7e02c466a8ead1a0ba55cb87c\",\"object\":\"chat.completion.chunk\",\"created\":1751750831,\"model\":\"pixtral-12b-2409\",\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"\"},\"finish_reason\":null}]}\n\ndata: {\"id\":\"2e6378f7e02c466a8ead1a0ba55cb87c\",\"object\":\"chat.completion.chunk\",\"created\":1751750831,\"model\":\"pixtral-12b-2409\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"three\"},\"finish_reason\":null}]}\n\ndata: {\"id\":\"2e6378f7e02c466a8ead1a0ba55cb87c\",\"object\":\"chat.completion.chunk\",\"created\":1751750831,\"model\":\"pixtral-12b-2409\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\" ball\"},\"finish_reason\":null}]}\n\ndata: {\"id\":\"2e6378f7e02c466a8ead1a0ba55cb87c\",\"object\":\"chat.completion.chunk\",\"created\":1751750831,\"model\":\"pixtral-12b-2409\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"oons\"},\"finish_reason\":null}]}\n\ndata: {\"id\":\"2e6378f7e02c466a8ead1a0ba55cb87c\",\"object\":\"chat.completion.chunk\",\"created\":1751750831,\"model\":\"pixtral-12b-2409\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":1394,\"total_tokens\":1398,\"completion_tokens\":4}}\n\ndata: [DONE]\n\n"
         }
       },
-      "recorded_at": "Sun, 08 Jun 2025 22:54:21 GMT"
+      "recorded_at": "Sat, 05 Jul 2025 21:27:12 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

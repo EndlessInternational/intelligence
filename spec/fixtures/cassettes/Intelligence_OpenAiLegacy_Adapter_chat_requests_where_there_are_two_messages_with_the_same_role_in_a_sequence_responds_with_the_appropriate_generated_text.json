@@ -6,7 +6,7 @@
         "uri": "https://api.openai.com/v1/chat/completions",
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"model\":\"gpt-4o\",\"temperature\":0.0,\"max_completion_tokens\":128,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"the secret word is 'blue'\\n\"},{\"role\":\"assistant\",\"content\":\"ok\\n\"},{\"role\":\"user\",\"content\":\"the secret word has been changed to 'red'!\\n\"},{\"role\":\"user\",\"content\":\"what is the secret word?\\n\"}]}"
+          "string": "{\"model\":\"gpt-4o\",\"temperature\":0.0,\"max_completion_tokens\":128,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"the word you should remember is 'blue'\\n\"},{\"role\":\"assistant\",\"content\":\"ok\\n\"},{\"role\":\"user\",\"content\":\"the word has been changed to 'red'!\\n\"},{\"role\":\"user\",\"content\":\"what is the word?\\n\"}]}"
         },
         "headers": {
           "User-Agent": [
@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Thu, 19 Jun 2025 14:31:07 GMT"
+            "Sat, 05 Jul 2025 21:30:53 GMT"
           ],
           "content-type": [
             "application/json"
@@ -45,13 +45,13 @@
             "<OPENAI-ORGANIZATION>"
           ],
           "openai-processing-ms": [
-            "403"
+            "278"
           ],
           "openai-version": [
             "2020-10-01"
           ],
           "x-envoy-upstream-service-time": [
-            "409"
+            "282"
           ],
           "x-ratelimit-limit-requests": [
             "10000"
@@ -63,7 +63,7 @@
             "9999"
           ],
           "x-ratelimit-remaining-tokens": [
-            "29999913"
+            "29999915"
           ],
           "x-ratelimit-reset-requests": [
             "6ms"
@@ -101,10 +101,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\n  \"id\": \"chatcmpl-BkAaBmsgKkX0Fk1Z546n8xsyUXKlQ\",\n  \"object\": \"chat.completion\",\n  \"created\": 1750343467,\n  \"model\": \"gpt-4o-2024-08-06\",\n  \"choices\": [\n    {\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": \"red\",\n        \"refusal\": null,\n        \"annotations\": []\n      },\n      \"logprobs\": null,\n      \"finish_reason\": \"stop\"\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 88,\n    \"completion_tokens\": 1,\n    \"total_tokens\": 89,\n    \"prompt_tokens_details\": {\n      \"cached_tokens\": 0,\n      \"audio_tokens\": 0\n    },\n    \"completion_tokens_details\": {\n      \"reasoning_tokens\": 0,\n      \"audio_tokens\": 0,\n      \"accepted_prediction_tokens\": 0,\n      \"rejected_prediction_tokens\": 0\n    }\n  },\n  \"service_tier\": \"default\",\n  \"system_fingerprint\": \"fp_07871e2ad8\"\n}\n"
+          "string": "{\n  \"id\": \"chatcmpl-Bq4lBZ8JrxYgBQuw58WQQPKdHrakx\",\n  \"object\": \"chat.completion\",\n  \"created\": 1751751053,\n  \"model\": \"gpt-4o-2024-08-06\",\n  \"choices\": [\n    {\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": \"red\",\n        \"refusal\": null,\n        \"annotations\": []\n      },\n      \"logprobs\": null,\n      \"finish_reason\": \"stop\"\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 88,\n    \"completion_tokens\": 1,\n    \"total_tokens\": 89,\n    \"prompt_tokens_details\": {\n      \"cached_tokens\": 0,\n      \"audio_tokens\": 0\n    },\n    \"completion_tokens_details\": {\n      \"reasoning_tokens\": 0,\n      \"audio_tokens\": 0,\n      \"accepted_prediction_tokens\": 0,\n      \"rejected_prediction_tokens\": 0\n    }\n  },\n  \"service_tier\": \"default\",\n  \"system_fingerprint\": \"fp_07871e2ad8\"\n}\n"
         }
       },
-      "recorded_at": "Thu, 19 Jun 2025 14:31:07 GMT"
+      "recorded_at": "Sat, 05 Jul 2025 21:30:53 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

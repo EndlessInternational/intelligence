@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Sun, 08 Jun 2025 22:43:32 GMT"
+            "Sat, 05 Jul 2025 21:19:00 GMT"
           ],
           "content-type": [
             "application/json"
@@ -48,19 +48,19 @@
             "60000"
           ],
           "x-ratelimit-remaining-requests-day": [
-            "14367"
+            "14394"
           ],
           "x-ratelimit-remaining-tokens-minute": [
-            "59729"
+            "60000"
           ],
           "x-ratelimit-reset-requests-day": [
-            "4587.60187792778"
+            "9659.574960708618"
           ],
           "x-ratelimit-reset-tokens-minute": [
-            "27.60187792778015"
+            "59.574960708618164"
           ],
           "inference-id": [
-            "chatcmpl-c591c5b1-b1b5-4d28-89d1-6b7612584369"
+            "chatcmpl-fcb75ffd-df65-479e-9890-5170b150ddd9"
           ],
           "referrer-policy": [
             "strict-origin-when-cross-origin"
@@ -92,10 +92,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\"id\":\"chatcmpl-c591c5b1-b1b5-4d28-89d1-6b7612584369\",\"choices\":[{\"finish_reason\":\"stop\",\"index\":0,\"message\":{\"content\":\"hello\",\"role\":\"assistant\"}}],\"created\":1749422612,\"model\":\"llama-3.3-70b\",\"system_fingerprint\":\"fp_cb820b267e7b1a0390cd\",\"object\":\"chat.completion\",\"usage\":{\"prompt_tokens\":43,\"completion_tokens\":2,\"total_tokens\":45,\"prompt_tokens_details\":{\"cached_tokens\":0}},\"time_info\":{\"queue_time\":0.000922521,\"prompt_time\":0.00170399,\"completion_time\":0.0015227,\"total_time\":0.004958629608154297,\"created\":1749422612}}"
+          "string": "{\"id\":\"chatcmpl-fcb75ffd-df65-479e-9890-5170b150ddd9\",\"choices\":[{\"finish_reason\":\"stop\",\"index\":0,\"message\":{\"content\":\"hello\",\"role\":\"assistant\"}}],\"created\":1751750340,\"model\":\"llama-3.3-70b\",\"system_fingerprint\":\"fp_7707e580790f59a40607\",\"object\":\"chat.completion\",\"usage\":{\"prompt_tokens\":43,\"completion_tokens\":2,\"total_tokens\":45,\"prompt_tokens_details\":{\"cached_tokens\":0}},\"time_info\":{\"queue_time\":0.00045658,\"prompt_time\":0.001771131,\"completion_time\":0.00158998,\"total_time\":0.0050868988037109375,\"created\":1751750340}}"
         }
       },
-      "recorded_at": "Sun, 08 Jun 2025 22:43:32 GMT"
+      "recorded_at": "Sat, 05 Jul 2025 21:19:00 GMT"
     },
     {
       "request": {
@@ -124,7 +124,7 @@
         },
         "headers": {
           "date": [
-            "Sun, 08 Jun 2025 22:43:32 GMT"
+            "Sat, 05 Jul 2025 21:19:00 GMT"
           ],
           "content-type": [
             "application/json"
@@ -145,19 +145,19 @@
             "60000"
           ],
           "x-ratelimit-remaining-requests-day": [
-            "14366"
+            "14394"
           ],
           "x-ratelimit-remaining-tokens-minute": [
-            "59684"
+            "60000"
           ],
           "x-ratelimit-reset-requests-day": [
-            "4587.3946788311005"
+            "9659.437839269638"
           ],
           "x-ratelimit-reset-tokens-minute": [
-            "27.394678831100464"
+            "59.43783926963806"
           ],
           "inference-id": [
-            "chatcmpl-22158bbc-6069-464f-96eb-7e810d3fefd5"
+            "chatcmpl-76f4090e-4279-4583-be24-8b04644c7416"
           ],
           "referrer-policy": [
             "strict-origin-when-cross-origin"
@@ -189,10 +189,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\"id\":\"chatcmpl-22158bbc-6069-464f-96eb-7e810d3fefd5\",\"choices\":[{\"finish_reason\":\"stop\",\"index\":0,\"message\":{\"content\":\"blue\",\"role\":\"assistant\"}}],\"created\":1749422612,\"model\":\"llama-3.3-70b\",\"system_fingerprint\":\"fp_cb820b267e7b1a0390cd\",\"object\":\"chat.completion\",\"usage\":{\"prompt_tokens\":64,\"completion_tokens\":2,\"total_tokens\":66,\"prompt_tokens_details\":{\"cached_tokens\":0}},\"time_info\":{\"queue_time\":8.965e-05,\"prompt_time\":0.002749565,\"completion_time\":0.00041608,\"total_time\":0.0250701904296875,\"created\":1749422612}}"
+          "string": "{\"id\":\"chatcmpl-76f4090e-4279-4583-be24-8b04644c7416\",\"choices\":[{\"finish_reason\":\"stop\",\"index\":0,\"message\":{\"content\":\"blue\",\"role\":\"assistant\"}}],\"created\":1751750340,\"model\":\"llama-3.3-70b\",\"system_fingerprint\":\"fp_7707e580790f59a40607\",\"object\":\"chat.completion\",\"usage\":{\"prompt_tokens\":64,\"completion_tokens\":2,\"total_tokens\":66,\"prompt_tokens_details\":{\"cached_tokens\":0}},\"time_info\":{\"queue_time\":0.00011602,\"prompt_time\":0.002631571,\"completion_time\":0.000728216,\"total_time\":0.0047817230224609375,\"created\":1751750340}}"
         }
       },
-      "recorded_at": "Sun, 08 Jun 2025 22:43:32 GMT"
+      "recorded_at": "Sat, 05 Jul 2025 21:19:00 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

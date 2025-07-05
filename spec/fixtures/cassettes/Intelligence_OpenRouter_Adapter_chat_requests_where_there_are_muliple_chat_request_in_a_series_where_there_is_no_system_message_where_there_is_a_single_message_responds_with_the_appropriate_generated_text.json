@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Sun, 08 Jun 2025 22:55:22 GMT"
+            "Sat, 05 Jul 2025 21:31:21 GMT"
           ],
           "content-type": [
             "application/json"
@@ -38,20 +38,8 @@
           "connection": [
             "keep-alive"
           ],
-          "content-encoding": [
-            "gzip"
-          ],
           "access-control-allow-origin": [
             "*"
-          ],
-          "x-clerk-auth-message": [
-            "Invalid JWT form. A JWT consists of three parts separated by dots. (reason=token-invalid, token-carrier=header)"
-          ],
-          "x-clerk-auth-reason": [
-            "token-invalid"
-          ],
-          "x-clerk-auth-status": [
-            "signed-out"
           ],
           "vary": [
             "Accept-Encoding"
@@ -61,14 +49,17 @@
           ],
           "cf-ray": [
             "<CF-RAY>"
+          ],
+          "content-encoding": [
+            "gzip"
           ]
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\"id\":\"gen-1749423321-89XiNdAOFU4OGUUvvkfT\",\"provider\":\"Hyperbolic\",\"model\":\"qwen/qwen-2.5-vl-7b-instruct\",\"object\":\"chat.completion\",\"created\":1749423321,\"choices\":[{\"logprobs\":null,\"finish_reason\":\"stop\",\"native_finish_reason\":\"stop\",\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"hello\",\"refusal\":null,\"reasoning\":null}}],\"usage\":{\"prompt_tokens\":27,\"completion_tokens\":3,\"total_tokens\":30}}"
+          "string": "\n         \n{\"id\":\"gen-1751751081-P68AGTZoPFJhHHSUFv2n\",\"provider\":\"Hyperbolic\",\"model\":\"qwen/qwen-2.5-vl-7b-instruct\",\"object\":\"chat.completion\",\"created\":1751751081,\"choices\":[{\"logprobs\":null,\"finish_reason\":\"stop\",\"native_finish_reason\":\"stop\",\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"hello\",\"refusal\":null,\"reasoning\":null}}],\"usage\":{\"prompt_tokens\":27,\"completion_tokens\":3,\"total_tokens\":30}}"
         }
       },
-      "recorded_at": "Sun, 08 Jun 2025 22:55:22 GMT"
+      "recorded_at": "Sat, 05 Jul 2025 21:31:21 GMT"
     },
     {
       "request": {
@@ -97,7 +88,7 @@
         },
         "headers": {
           "date": [
-            "Sun, 08 Jun 2025 22:55:22 GMT"
+            "Sat, 05 Jul 2025 21:31:22 GMT"
           ],
           "content-type": [
             "application/json"
@@ -108,20 +99,8 @@
           "connection": [
             "keep-alive"
           ],
-          "content-encoding": [
-            "gzip"
-          ],
           "access-control-allow-origin": [
             "*"
-          ],
-          "x-clerk-auth-message": [
-            "Invalid JWT form. A JWT consists of three parts separated by dots. (reason=token-invalid, token-carrier=header)"
-          ],
-          "x-clerk-auth-reason": [
-            "token-invalid"
-          ],
-          "x-clerk-auth-status": [
-            "signed-out"
           ],
           "vary": [
             "Accept-Encoding"
@@ -131,14 +110,17 @@
           ],
           "cf-ray": [
             "<CF-RAY>"
+          ],
+          "content-encoding": [
+            "gzip"
           ]
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "\n         \n{\"id\":\"gen-1749423322-VV0azPTCvTi3RESfiPgR\",\"provider\":\"Hyperbolic\",\"model\":\"qwen/qwen-2.5-vl-7b-instruct\",\"object\":\"chat.completion\",\"created\":1749423322,\"choices\":[{\"logprobs\":null,\"finish_reason\":\"stop\",\"native_finish_reason\":\"stop\",\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"hello\",\"refusal\":null,\"reasoning\":null}}],\"usage\":{\"prompt_tokens\":27,\"completion_tokens\":3,\"total_tokens\":30}}"
+          "string": "{\"id\":\"gen-1751751081-x47eEtgKnGisLZj301hj\",\"provider\":\"Hyperbolic\",\"model\":\"qwen/qwen-2.5-vl-7b-instruct\",\"object\":\"chat.completion\",\"created\":1751751081,\"choices\":[{\"logprobs\":null,\"finish_reason\":\"stop\",\"native_finish_reason\":\"stop\",\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"hello\",\"refusal\":null,\"reasoning\":null}}],\"usage\":{\"prompt_tokens\":27,\"completion_tokens\":3,\"total_tokens\":30}}"
         }
       },
-      "recorded_at": "Sun, 08 Jun 2025 22:55:22 GMT"
+      "recorded_at": "Sat, 05 Jul 2025 21:31:22 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

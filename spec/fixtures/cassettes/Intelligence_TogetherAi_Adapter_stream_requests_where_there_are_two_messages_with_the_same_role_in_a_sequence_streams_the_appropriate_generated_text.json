@@ -6,7 +6,7 @@
         "uri": "https://api.together.xyz/v1/chat/completions",
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"model\":\"deepseek-ai/DeepSeek-V3\",\"max_tokens\":128.0,\"temperature\":0.0,\"stream\":true,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"the secret word is 'blue'\\n\"},{\"role\":\"assistant\",\"content\":\"ok\\n\"},{\"role\":\"user\",\"content\":\"the secret word has been changed to 'red'!\\n\"},{\"role\":\"user\",\"content\":\"what is the secret word?\\n\"}]}"
+          "string": "{\"model\":\"deepseek-ai/DeepSeek-V3\",\"max_tokens\":128.0,\"temperature\":0.0,\"stream\":true,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"the word to remember is 'blue'\\n\"},{\"role\":\"assistant\",\"content\":\"ok\\n\"},{\"role\":\"user\",\"content\":\"the word has been changed to 'red'!\\n\"},{\"role\":\"user\",\"content\":\"what is the word?\\n\"}]}"
         },
         "headers": {
           "User-Agent": [
@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Sun, 08 Jun 2025 22:56:29 GMT"
+            "Sat, 05 Jul 2025 21:32:13 GMT"
           ],
           "content-type": [
             "text/event-stream;charset=utf-8"
@@ -57,13 +57,13 @@
             "max-age=15552000; includeSubDomains"
           ],
           "x-amzn-trace-id": [
-            "73f78b4c-5a1a-4b7b-a36d-f1507f6f1140-noamzn"
+            "c511ffe4-fa54-44bf-86f9-1bc0529a8d0c-noamzn"
           ],
           "x-api-call-start": [
-            "2025-06-08T22:56:28.759Z"
+            "2025-07-05T21:32:13.184Z"
           ],
           "x-api-received": [
-            "2025-06-08T22:56:28.745Z"
+            "2025-07-05T21:32:13.168Z"
           ],
           "x-inference-version": [
             "v2"
@@ -78,7 +78,7 @@
             "3000"
           ],
           "x-ratelimit-remaining": [
-            "2"
+            "1"
           ],
           "x-ratelimit-remaining-tokens": [
             "3000"
@@ -101,10 +101,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "data: {\"id\":\"nxMZ9Uk-zqrih-94cbfb935951753e\",\"object\":\"chat.completion.chunk\",\"created\":1749423388,\"choices\":[{\"index\":0,\"text\":\"red\",\"logprobs\":null,\"finish_reason\":null,\"seed\":null,\"delta\":{\"token_id\":1157,\"role\":\"assistant\",\"content\":\"red\",\"tool_calls\":null}}],\"model\":\"deepseek-ai/DeepSeek-V3-p\",\"usage\":null}\n\ndata: {\"id\":\"nxMZ9Uk-zqrih-94cbfb935951753e\",\"object\":\"chat.completion.chunk\",\"created\":1749423388,\"choices\":[{\"index\":0,\"text\":\"\",\"logprobs\":null,\"finish_reason\":\"stop\",\"seed\":11108872498715052000,\"delta\":{\"token_id\":1,\"role\":\"assistant\",\"content\":\"\",\"tool_calls\":null}}],\"model\":\"deepseek-ai/DeepSeek-V3-p\",\"usage\":{\"prompt_tokens\":72,\"completion_tokens\":2,\"total_tokens\":74,\"cached_tokens\":0}}\n\ndata: [DONE]\n\n"
+          "string": "data: {\"id\":\"o1uFSoH-zqrih-95a9f94608d2ebbf\",\"object\":\"chat.completion.chunk\",\"created\":1751751133,\"choices\":[{\"index\":0,\"text\":\"red\",\"logprobs\":null,\"finish_reason\":null,\"seed\":null,\"delta\":{\"token_id\":1157,\"role\":\"assistant\",\"content\":\"red\",\"tool_calls\":null}}],\"model\":\"deepseek-ai/DeepSeek-V3-p\",\"usage\":null}\n\ndata: {\"id\":\"o1uFSoH-zqrih-95a9f94608d2ebbf\",\"object\":\"chat.completion.chunk\",\"created\":1751751133,\"choices\":[{\"index\":0,\"text\":\"\",\"logprobs\":null,\"finish_reason\":\"stop\",\"seed\":17186741940402612000,\"delta\":{\"token_id\":1,\"role\":\"assistant\",\"content\":\"\",\"tool_calls\":null}}],\"model\":\"deepseek-ai/DeepSeek-V3-p\",\"usage\":{\"prompt_tokens\":71,\"completion_tokens\":2,\"total_tokens\":73,\"cached_tokens\":0}}\n\ndata: [DONE]\n\n"
         }
       },
-      "recorded_at": "Sun, 08 Jun 2025 22:56:29 GMT"
+      "recorded_at": "Sat, 05 Jul 2025 21:32:13 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

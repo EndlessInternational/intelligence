@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Fri, 04 Jul 2025 02:07:21 GMT"
+            "Sat, 05 Jul 2025 21:29:50 GMT"
           ],
           "content-type": [
             "application/json"
@@ -48,7 +48,7 @@
             "9999"
           ],
           "x-ratelimit-remaining-tokens": [
-            "29999699"
+            "29999700"
           ],
           "x-ratelimit-reset-requests": [
             "6ms"
@@ -66,7 +66,7 @@
             "<X-REQUEST-ID>"
           ],
           "openai-processing-ms": [
-            "497"
+            "541"
           ],
           "strict-transport-security": [
             "max-age=31536000; includeSubDomains; preload"
@@ -95,10 +95,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\n  \"id\": \"resp_68673758faec819ea995685e5161af720f7f10f4acdb904a\",\n  \"object\": \"response\",\n  \"created_at\": 1751594840,\n  \"status\": \"completed\",\n  \"background\": false,\n  \"error\": null,\n  \"incomplete_details\": null,\n  \"instructions\": \"You are a helpfull assistant who answers questions succinctly.\",\n  \"max_output_tokens\": 128,\n  \"max_tool_calls\": null,\n  \"model\": \"gpt-4o-2024-08-06\",\n  \"output\": [\n    {\n      \"id\": \"msg_68673759550c819e8de7bcb761a759870f7f10f4acdb904a\",\n      \"type\": \"message\",\n      \"status\": \"completed\",\n      \"content\": [\n        {\n          \"type\": \"output_text\",\n          \"annotations\": [],\n          \"logprobs\": [],\n          \"text\": \"You are located in Seattle, WA, USA.\"\n        }\n      ],\n      \"role\": \"assistant\"\n    }\n  ],\n  \"parallel_tool_calls\": true,\n  \"previous_response_id\": null,\n  \"reasoning\": {\n    \"effort\": null,\n    \"summary\": null\n  },\n  \"service_tier\": \"default\",\n  \"store\": true,\n  \"temperature\": 0.0,\n  \"text\": {\n    \"format\": {\n      \"type\": \"text\"\n    }\n  },\n  \"tool_choice\": \"auto\",\n  \"tools\": [\n    {\n      \"type\": \"function\",\n      \"description\": \"The get_location tool will return the users city, state or province and country.\",\n      \"name\": \"get_location\",\n      \"parameters\": {\n        \"type\": \"object\",\n        \"properties\": {}\n      },\n      \"strict\": true\n    }\n  ],\n  \"top_logprobs\": 0,\n  \"top_p\": 1.0,\n  \"truncation\": \"disabled\",\n  \"usage\": {\n    \"input_tokens\": 83,\n    \"input_tokens_details\": {\n      \"cached_tokens\": 0\n    },\n    \"output_tokens\": 12,\n    \"output_tokens_details\": {\n      \"reasoning_tokens\": 0\n    },\n    \"total_tokens\": 95\n  },\n  \"user\": null,\n  \"metadata\": {}\n}"
+          "string": "{\n  \"id\": \"resp_6869994da37c81a185f0f7dc91fe9b6100d90e619348f8fd\",\n  \"object\": \"response\",\n  \"created_at\": 1751750989,\n  \"status\": \"completed\",\n  \"background\": false,\n  \"error\": null,\n  \"incomplete_details\": null,\n  \"instructions\": \"You are a helpfull assistant who answers questions succinctly.\",\n  \"max_output_tokens\": 128,\n  \"max_tool_calls\": null,\n  \"model\": \"gpt-4o-2024-08-06\",\n  \"output\": [\n    {\n      \"id\": \"msg_6869994df6f081a1996e0f6bed061bdb00d90e619348f8fd\",\n      \"type\": \"message\",\n      \"status\": \"completed\",\n      \"content\": [\n        {\n          \"type\": \"output_text\",\n          \"annotations\": [],\n          \"logprobs\": [],\n          \"text\": \"You are located in Seattle, WA, USA.\"\n        }\n      ],\n      \"role\": \"assistant\"\n    }\n  ],\n  \"parallel_tool_calls\": true,\n  \"previous_response_id\": null,\n  \"reasoning\": {\n    \"effort\": null,\n    \"summary\": null\n  },\n  \"service_tier\": \"default\",\n  \"store\": true,\n  \"temperature\": 0.0,\n  \"text\": {\n    \"format\": {\n      \"type\": \"text\"\n    }\n  },\n  \"tool_choice\": \"auto\",\n  \"tools\": [\n    {\n      \"type\": \"function\",\n      \"description\": \"The get_location tool will return the users city, state or province and country.\",\n      \"name\": \"get_location\",\n      \"parameters\": {\n        \"type\": \"object\",\n        \"properties\": {}\n      },\n      \"strict\": true\n    }\n  ],\n  \"top_logprobs\": 0,\n  \"top_p\": 1.0,\n  \"truncation\": \"disabled\",\n  \"usage\": {\n    \"input_tokens\": 83,\n    \"input_tokens_details\": {\n      \"cached_tokens\": 0\n    },\n    \"output_tokens\": 12,\n    \"output_tokens_details\": {\n      \"reasoning_tokens\": 0\n    },\n    \"total_tokens\": 95\n  },\n  \"user\": null,\n  \"metadata\": {}\n}"
         }
       },
-      "recorded_at": "Fri, 04 Jul 2025 02:07:21 GMT"
+      "recorded_at": "Sat, 05 Jul 2025 21:29:50 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

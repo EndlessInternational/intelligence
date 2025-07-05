@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Sun, 08 Jun 2025 22:55:44 GMT"
+            "Sat, 05 Jul 2025 21:31:42 GMT"
           ],
           "content-type": [
             "application/json; charset=utf-8"
@@ -39,25 +39,25 @@
             "keep-alive"
           ],
           "inference-id": [
-            "439ccc4d-7e6b-48b7-b8bf-6a082c91aedc"
+            "b68b4bfa-0b8e-4e0c-b7f7-be7d3be4816e"
           ],
           "x-ratelimit-limit-requests": [
-            "80"
+            "120"
           ],
           "x-ratelimit-limit-requests-day": [
             "12000"
           ],
           "x-ratelimit-remaining-requests": [
-            "71"
+            "111"
           ],
           "x-ratelimit-remaining-requests-day": [
-            "11931"
+            "11991"
           ],
           "x-ratelimit-reset-requests": [
-            "1749423404"
+            "1751751162"
           ],
           "x-ratelimit-reset-requests-day": [
-            "1749509744"
+            "1751837502"
           ],
           "strict-transport-security": [
             "max-age=31536000; includeSubDomains"
@@ -80,10 +80,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"choices\":[{\"finish_reason\":\"stop\",\"index\":0,\"logprobs\":null,\"message\":{\"content\":\"hello\",\"role\":\"assistant\"}}],\"created\":1749423344.066036,\"id\":\"b2fe639b-5d0c-4287-afd2-aefae056a6fd\",\"model\":\"Meta-Llama-3.3-70B-Instruct\",\"object\":\"chat.completion\",\"system_fingerprint\":\"fastcoe\",\"usage\":{\"completion_tokens\":1,\"completion_tokens_after_first_per_sec\":0,\"completion_tokens_after_first_per_sec_first_ten\":0,\"completion_tokens_per_sec\":16.590670500888017,\"end_time\":1749423344.066002,\"is_last_response\":true,\"prompt_tokens\":43,\"prompt_tokens_details\":{\"cached_tokens\":0},\"start_time\":1749423344.005727,\"stop_reason\":\"stop\",\"time_to_first_token\":0.047299861907958984,\"total_latency\":0.06027483940124512,\"total_tokens\":44,\"total_tokens_per_sec\":729.9895020390727}}\n"
+          "string": "{\"choices\":[{\"finish_reason\":\"stop\",\"index\":0,\"logprobs\":null,\"message\":{\"content\":\"hello\",\"role\":\"assistant\"}}],\"created\":1751751102.3105664,\"id\":\"f4a3da9f-d22f-4888-8050-09e4e870522e\",\"model\":\"Meta-Llama-3.3-70B-Instruct\",\"object\":\"chat.completion\",\"system_fingerprint\":\"fastcoe\",\"usage\":{\"completion_tokens\":1,\"completion_tokens_after_first_per_sec\":0,\"completion_tokens_after_first_per_sec_first_ten\":0,\"completion_tokens_per_sec\":15.279573339550607,\"end_time\":1751751102.310529,\"is_last_response\":true,\"prompt_tokens\":43,\"prompt_tokens_details\":{\"cached_tokens\":0},\"start_time\":1751751102.2450821,\"stop_reason\":\"stop\",\"time_to_first_token\":0.05230355262756348,\"total_latency\":0.06544685363769531,\"total_tokens\":44,\"total_tokens_per_sec\":672.3012269402267}}\n"
         }
       },
-      "recorded_at": "Sun, 08 Jun 2025 22:55:44 GMT"
+      "recorded_at": "Sat, 05 Jul 2025 21:31:42 GMT"
     },
     {
       "request": {
@@ -112,7 +112,7 @@
         },
         "headers": {
           "date": [
-            "Sun, 08 Jun 2025 22:55:44 GMT"
+            "Sat, 05 Jul 2025 21:31:42 GMT"
           ],
           "content-type": [
             "application/json; charset=utf-8"
@@ -124,25 +124,25 @@
             "keep-alive"
           ],
           "inference-id": [
-            "4d602d9d-8607-4297-93db-ca0cf6c27444"
+            "59a776da-15f3-4172-8933-933a12d7b56a"
           ],
           "x-ratelimit-limit-requests": [
-            "80"
+            "120"
           ],
           "x-ratelimit-limit-requests-day": [
             "12000"
           ],
           "x-ratelimit-remaining-requests": [
-            "70"
+            "110"
           ],
           "x-ratelimit-remaining-requests-day": [
-            "11930"
+            "11990"
           ],
           "x-ratelimit-reset-requests": [
-            "1749423404"
+            "1751751162"
           ],
           "x-ratelimit-reset-requests-day": [
-            "1749509744"
+            "1751837502"
           ],
           "strict-transport-security": [
             "max-age=31536000; includeSubDomains"
@@ -165,10 +165,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"choices\":[{\"finish_reason\":\"stop\",\"index\":0,\"logprobs\":null,\"message\":{\"content\":\"hello\",\"role\":\"assistant\"}}],\"created\":1749423344.300894,\"id\":\"6a06cabd-17b1-4bf2-9430-27d94d51b530\",\"model\":\"Meta-Llama-3.3-70B-Instruct\",\"object\":\"chat.completion\",\"system_fingerprint\":\"fastcoe\",\"usage\":{\"completion_tokens\":1,\"completion_tokens_after_first_per_sec\":0,\"completion_tokens_after_first_per_sec_first_ten\":0,\"completion_tokens_per_sec\":16.401747203028275,\"end_time\":1749423344.3008192,\"is_last_response\":true,\"prompt_tokens\":78,\"prompt_tokens_details\":{\"cached_tokens\":0},\"start_time\":1749423344.23985,\"stop_reason\":\"stop\",\"time_to_first_token\":0.047636985778808594,\"total_latency\":0.06096911430358887,\"total_tokens\":79,\"total_tokens_per_sec\":1295.7380290392339}}\n"
+          "string": "{\"choices\":[{\"finish_reason\":\"stop\",\"index\":0,\"logprobs\":null,\"message\":{\"content\":\"hello\",\"role\":\"assistant\"}}],\"created\":1751751102.5399284,\"id\":\"53d01505-504f-47c6-a8d7-25f39a52cff3\",\"model\":\"Meta-Llama-3.3-70B-Instruct\",\"object\":\"chat.completion\",\"system_fingerprint\":\"fastcoe\",\"usage\":{\"completion_tokens\":1,\"completion_tokens_after_first_per_sec\":0,\"completion_tokens_after_first_per_sec_first_ten\":0,\"completion_tokens_per_sec\":15.89853572741711,\"end_time\":1751751102.5398855,\"is_last_response\":true,\"prompt_tokens\":78,\"prompt_tokens_details\":{\"cached_tokens\":0},\"start_time\":1751751102.4769866,\"stop_reason\":\"stop\",\"time_to_first_token\":0.049533843994140625,\"total_latency\":0.06289887428283691,\"total_tokens\":79,\"total_tokens_per_sec\":1255.9843224659517}}\n"
         }
       },
-      "recorded_at": "Sun, 08 Jun 2025 22:55:44 GMT"
+      "recorded_at": "Sat, 05 Jul 2025 21:31:42 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

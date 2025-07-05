@@ -108,11 +108,12 @@ RSpec.describe "#{Intelligence::Adapter[ :x_ai ]} stream requests", :x_ai do
                    adapter: :vision_adapter
   include_examples 'stream requests with file images',
                    adapter: :vision_adapter
-  include_examples 'stream requests with web search', 
-                   adapter: :adapter_with_web_search
   include_examples 'stream requests with thought', 
                    adapter: :adapter_with_thought
   include_examples 'stream requests with tools'
   include_examples 'stream requests with parallel tools'
+
+  include_examples 'stream requests with web search', 
+                   adapter: :adapter_with_web_search
 
 end

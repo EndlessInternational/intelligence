@@ -109,16 +109,10 @@ module Intelligence
           output_tokens:  0
         }
         choices = context[ :choices ] || Array.new( 1 , { message: { contents: [] } } )
-        # purge content items of their content as we only emit content deltas ( while the emited 
-        # structure is always consistent )
-        choices.each do | choice |
-          choice[ :message ][ :contents ] = choice[ :message ][ :contents ]&.map do | content |
-            { item_id: content[ :item_id ], type: content[ :type ] }
-          end
-        end
+        choices_delta = prune_choices( choices )
 
         # the open ai responses api only ever return only 1 intelligence choice with 1 message
-        choice = choices.last
+        choice = choices_delta.last
         message = choice[ :message ]
         contents = message[ :contents ] || []
         annotations = []
@@ -146,7 +140,7 @@ module Intelligence
               when 'function_call'
                 content = {
                   item_id: response_item[ :id ],
-                  type: 'tool_call',
+                  type: :tool_call,
                   tool_name: response_item[ :name ],
                   tool_call_id: response_item[ :call_id ],
                   tool_parameters: response_item[ :arguments ]
@@ -154,12 +148,12 @@ module Intelligence
                 content_present = true
               # web_search_call 
               when 'web_search_call'
-                content = { item_id: response_item[ :id ], type: 'web_search_call', status: :searching }
+                content = { item_id: response_item[ :id ], type: :web_search_call, status: :searching }
                 content_present = true
               end
             when 'response.function_call_arguments.delta'
               raise 'A functiona call argument delta was received but there is not tool content.' \
-                unless content and content[ :type ] == 'tool_call'
+                unless content and content[ :type ] == :tool_call
               raise 'A functiona call argument delta was received but item id does not match.' \
                 unless content[ :item_id ] = data[ :item_id ]
               ( content[ :tool_parameters ] ||= '' ) << data[ :delta ] 
@@ -173,7 +167,7 @@ module Intelligence
               if content.nil? || content[ :item_id ] != response_item_id
                 content = { 
                   item_id: response_item_id, 
-                  type: 'thought', 
+                  type: :thought, 
                   text: response_text || '' 
                 }
                 content_present = response_text && response_text.length > 0
@@ -184,7 +178,7 @@ module Intelligence
               if content.nil? || content[ :item_id ] != response_item_id
                 content = { 
                   item_id: response_item_id, 
-                  type: 'thought', 
+                  type: :thought, 
                   text: response_text || '' 
                 }
                 content_present = response_text && response_text.length > 0
@@ -201,7 +195,7 @@ module Intelligence
               if content.nil? || content[ :item_id ] != response_item_id
                 content = { 
                   item_id: response_item_id, 
-                  type: 'text', 
+                  type: :text, 
                   text: response_text || '' 
                 }
                 content_present = response_text && response_text.length > 0
@@ -212,7 +206,7 @@ module Intelligence
               if content.nil? || content[ :item_id ] != response_item_id
                 content = { 
                   item_id: response_item_id, 
-                  type: 'text', 
+                  type: :text, 
                   text: response_text || '' 
                 }
                 content_present = response_text && response_text.length > 0
@@ -242,7 +236,7 @@ module Intelligence
               # web search complete
               when 'web_search_call'
                 raise 'A web search call completed but there is web search call content.' \
-                  unless content and content[ :type ] == 'web_search_call'
+                  unless content and content[ :type ] == :web_search_call
                 raise 'A web search call completed but item id does not match.' \
                   unless content[ :item_id ] = response_item[ :id ]
                 web_search_call_action = response_item[ :action ] || {}
@@ -254,7 +248,7 @@ module Intelligence
               end_reason = translate_end_result( response_json )
               choice[ :end_reason ] = end_reason
               choice[ :end_reason ] = :tool_called \
-                if end_reason == :ended && last_content[ :type ] == 'tool_call'
+                if end_reason == :ended && last_content[ :type ] == :tool_call
 
               metrics_json = response_json[ :usage ]
               unless metrics_json.nil?
@@ -280,25 +274,34 @@ module Intelligence
 
         context[ :buffer ] = buffer 
         context[ :metrics ] = metrics
-        context[ :choices ] = choices
+        context[ :choices ] = merge_choices!( choices, choices_delta )
         
-        [ context, choices.empty? ? nil : { choices: choices.dup } ]
+        [ context, choices_delta.empty? ? nil : { choices: choices_delta } ]
       end
 
       def stream_result_attributes( context )
-        choices = context[ :choices ]
-        metrics = context[ :metrics ]
-
-        choices = choices.map do | choice |
-          { end_reason: choice[ :end_reason ] }
-        end
-
-        { choices: choices, metrics: context[ :metrics ] }
+        context
       end
 
       alias_method :stream_result_error_attributes, :chat_result_error_attributes
 
     private 
+
+      def prune_choices( choices )
+        choices.map do | original_choice |
+          pruned_choice    = original_choice.dup
+
+          original_message = original_choice[ :message ] || { }
+          pruned_message   = original_message.dup
+
+          pruned_message[ :contents ] = original_message[ :contents ]&.map do | content |
+            { type: content[ :type ], item_id: content[ :item_id ] }
+          end
+
+          pruned_choice[ :message ] = pruned_message
+          pruned_choice
+        end
+      end
 
       def translate_end_result( response_json )
         return :ended if response_json[ :status ] == 'completed'

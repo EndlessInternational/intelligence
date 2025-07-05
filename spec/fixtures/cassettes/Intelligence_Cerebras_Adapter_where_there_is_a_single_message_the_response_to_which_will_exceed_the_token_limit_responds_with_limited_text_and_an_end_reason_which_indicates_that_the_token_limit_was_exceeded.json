@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Sun, 08 Jun 2025 22:44:03 GMT"
+            "Sat, 05 Jul 2025 21:19:31 GMT"
           ],
           "content-type": [
             "application/json"
@@ -48,19 +48,19 @@
             "60000"
           ],
           "x-ratelimit-remaining-requests-day": [
-            "14361"
+            "14388"
           ],
           "x-ratelimit-remaining-tokens-minute": [
-            "60000"
+            "59618"
           ],
           "x-ratelimit-reset-requests-day": [
-            "4556.145850658417"
+            "9628.415100336075"
           ],
           "x-ratelimit-reset-tokens-minute": [
-            "56.14585065841675"
+            "28.41510033607483"
           ],
           "inference-id": [
-            "chatcmpl-1dd2d464-d58c-477b-8e10-7875d68275dc"
+            "chatcmpl-b93fd5ec-7f76-4fec-a606-bb868b51708e"
           ],
           "referrer-policy": [
             "strict-origin-when-cross-origin"
@@ -92,10 +92,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\"id\":\"chatcmpl-1dd2d464-d58c-477b-8e10-7875d68275dc\",\"choices\":[{\"finish_reason\":\"length\",\"index\":0,\"message\":{\"content\":\"one\\ntwo\\nthree\\nfour\\nfive\\nsix\\nseven\\neight\\n\",\"role\":\"assistant\"}}],\"created\":1749422643,\"model\":\"llama-3.3-70b\",\"system_fingerprint\":\"fp_cb820b267e7b1a0390cd\",\"object\":\"chat.completion\",\"usage\":{\"prompt_tokens\":84,\"completion_tokens\":16,\"total_tokens\":100,\"prompt_tokens_details\":{\"cached_tokens\":0}},\"time_info\":{\"queue_time\":0.247558544,\"prompt_time\":0.032206131,\"completion_time\":0.000712576,\"total_time\":0.2819676399230957,\"created\":1749422643}}"
+          "string": "{\"id\":\"chatcmpl-b93fd5ec-7f76-4fec-a606-bb868b51708e\",\"choices\":[{\"finish_reason\":\"length\",\"index\":0,\"message\":{\"content\":\"one\\ntwo\\nthree\\nfour\\nfive\\nsix\\nseven\\neight\\n\",\"role\":\"assistant\"}}],\"created\":1751750371,\"model\":\"llama-3.3-70b\",\"system_fingerprint\":\"fp_7707e580790f59a40607\",\"object\":\"chat.completion\",\"usage\":{\"prompt_tokens\":84,\"completion_tokens\":16,\"total_tokens\":100,\"prompt_tokens_details\":{\"cached_tokens\":0}},\"time_info\":{\"queue_time\":0.00103627,\"prompt_time\":0.003208603,\"completion_time\":0.003221065,\"total_time\":0.02079319953918457,\"created\":1751750371}}"
         }
       },
-      "recorded_at": "Sun, 08 Jun 2025 22:44:03 GMT"
+      "recorded_at": "Sat, 05 Jul 2025 21:19:31 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

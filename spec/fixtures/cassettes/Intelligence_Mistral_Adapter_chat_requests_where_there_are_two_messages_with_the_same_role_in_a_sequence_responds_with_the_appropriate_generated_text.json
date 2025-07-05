@@ -6,7 +6,7 @@
         "uri": "https://api.mistral.ai/v1/chat/completions",
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"model\":\"mistral-large-latest\",\"max_tokens\":128,\"temperature\":0.0,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"the secret word is 'blue'\\n\"},{\"role\":\"assistant\",\"content\":\"ok\\n\"},{\"role\":\"user\",\"content\":\"the secret word has been changed to 'red'!\\n\"},{\"role\":\"user\",\"content\":\"what is the secret word?\\n\"}]}"
+          "string": "{\"model\":\"mistral-large-latest\",\"max_tokens\":128,\"temperature\":0.0,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"the word you should remember is 'blue'\\n\"},{\"role\":\"assistant\",\"content\":\"ok\\n\"},{\"role\":\"user\",\"content\":\"the word has been changed to 'red'!\\n\"},{\"role\":\"user\",\"content\":\"what is the word?\\n\"}]}"
         },
         "headers": {
           "User-Agent": [
@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Sun, 08 Jun 2025 22:54:04 GMT"
+            "Sat, 05 Jul 2025 21:26:35 GMT"
           ],
           "content-type": [
             "application/json"
@@ -38,20 +38,26 @@
           "connection": [
             "keep-alive"
           ],
+          "mistral-correlation-id": [
+            "0197dc7b-c1ad-7076-bfa5-ffb8f1ea8626"
+          ],
+          "x-kong-request-id": [
+            "0197dc7b-c1ad-7076-bfa5-ffb8f1ea8626"
+          ],
           "x-envoy-upstream-service-time": [
-            "19184"
+            "7730"
           ],
           "x-ratelimit-limit-tokens-minute": [
             "2000000"
           ],
           "x-ratelimit-remaining-tokens-minute": [
-            "1995421"
+            "1994992"
           ],
           "x-ratelimit-limit-tokens-month": [
             "10000000000"
           ],
           "x-ratelimit-remaining-tokens-month": [
-            "9999966491"
+            "9999880714"
           ],
           "x-ratelimit-tokens-query-cost": [
             "79"
@@ -60,25 +66,25 @@
             "60"
           ],
           "x-ratelimit-remaining-req-10-second": [
-            "60"
+            "57"
           ],
           "access-control-allow-origin": [
             "*"
           ],
           "x-kong-upstream-latency": [
-            "19185"
+            "7730"
           ],
           "x-kong-proxy-latency": [
-            "6"
-          ],
-          "x-kong-request-id": [
-            "41db2a66d9178d3c41ed6d6c1c059c79"
+            "8"
           ],
           "cf-cache-status": [
             "DYNAMIC"
           ],
           "set-cookie": [
             "<SET-COOKIE>"
+          ],
+          "strict-transport-security": [
+            "max-age=15552000; includeSubDomains"
           ],
           "server": [
             "cloudflare"
@@ -95,10 +101,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\"id\":\"746cb45bcdbe4f2eabcc6f6877be406b\",\"object\":\"chat.completion\",\"created\":1749423225,\"model\":\"mistral-large-latest\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"tool_calls\":null,\"content\":\"red\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":77,\"total_tokens\":79,\"completion_tokens\":2}}"
+          "string": "{\"id\":\"29bdac0b9887429e82772faaa8d45456\",\"object\":\"chat.completion\",\"created\":1751750787,\"model\":\"mistral-large-latest\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"tool_calls\":null,\"content\":\"red\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":77,\"total_tokens\":79,\"completion_tokens\":2}}"
         }
       },
-      "recorded_at": "Sun, 08 Jun 2025 22:54:04 GMT"
+      "recorded_at": "Sat, 05 Jul 2025 21:26:35 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

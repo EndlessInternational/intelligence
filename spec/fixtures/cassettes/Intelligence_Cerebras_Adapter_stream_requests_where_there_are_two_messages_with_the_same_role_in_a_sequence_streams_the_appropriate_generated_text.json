@@ -6,7 +6,7 @@
         "uri": "https://api.cerebras.ai/v1/chat/completions",
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"model\":\"llama-3.3-70b\",\"max_tokens\":16,\"stream\":true,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"the secret word is 'blue'\\n\"},{\"role\":\"assistant\",\"content\":\"ok\\n\"},{\"role\":\"user\",\"content\":\"the secret word has been changed to 'red'!\\n\"},{\"role\":\"user\",\"content\":\"what is the secret word?\\n\"}]}"
+          "string": "{\"model\":\"llama-3.3-70b\",\"max_tokens\":16,\"stream\":true,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"the word to remember is 'blue'\\n\"},{\"role\":\"assistant\",\"content\":\"ok\\n\"},{\"role\":\"user\",\"content\":\"the word has been changed to 'red'!\\n\"},{\"role\":\"user\",\"content\":\"what is the word?\\n\"}]}"
         },
         "headers": {
           "User-Agent": [
@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Sun, 08 Jun 2025 22:46:37 GMT"
+            "Sat, 05 Jul 2025 21:21:44 GMT"
           ],
           "content-type": [
             "text/event-stream; charset=utf-8"
@@ -48,19 +48,19 @@
             "60000"
           ],
           "x-ratelimit-remaining-requests-day": [
-            "14347"
+            "14375"
           ],
           "x-ratelimit-remaining-tokens-minute": [
-            "59593"
+            "59481"
           ],
           "x-ratelimit-reset-requests-day": [
-            "4402.398386478424"
+            "9495.547280550003"
           ],
           "x-ratelimit-reset-tokens-minute": [
-            "22.398386478424072"
+            "15.547280550003052"
           ],
           "inference-id": [
-            "chatcmpl-d5d1a251-4150-4b73-9cd1-1686e16b6e48"
+            "chatcmpl-ffc9a8d3-3f0f-4bfe-8bcc-6a9eeffe1cf8"
           ],
           "referrer-policy": [
             "strict-origin-when-cross-origin"
@@ -89,10 +89,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "data: {\"id\":\"chatcmpl-d5d1a251-4150-4b73-9cd1-1686e16b6e48\",\"choices\":[{\"delta\":{\"role\":\"assistant\"},\"index\":0}],\"created\":1749422797,\"model\":\"llama-3.3-70b\",\"system_fingerprint\":\"fp_cb820b267e7b1a0390cd\",\"object\":\"chat.completion.chunk\"}\n\ndata: {\"id\":\"chatcmpl-d5d1a251-4150-4b73-9cd1-1686e16b6e48\",\"choices\":[{\"delta\":{\"content\":\"red\"},\"index\":0}],\"created\":1749422797,\"model\":\"llama-3.3-70b\",\"system_fingerprint\":\"fp_cb820b267e7b1a0390cd\",\"object\":\"chat.completion.chunk\"}\n\ndata: {\"id\":\"chatcmpl-d5d1a251-4150-4b73-9cd1-1686e16b6e48\",\"choices\":[{\"delta\":{},\"index\":0}],\"created\":1749422797,\"model\":\"llama-3.3-70b\",\"system_fingerprint\":\"fp_cb820b267e7b1a0390cd\",\"object\":\"chat.completion.chunk\"}\n\ndata: {\"id\":\"chatcmpl-d5d1a251-4150-4b73-9cd1-1686e16b6e48\",\"choices\":[{\"delta\":{},\"finish_reason\":\"stop\",\"index\":0}],\"created\":1749422797,\"model\":\"llama-3.3-70b\",\"system_fingerprint\":\"fp_cb820b267e7b1a0390cd\",\"object\":\"chat.completion.chunk\",\"usage\":{\"prompt_tokens\":110,\"completion_tokens\":2,\"total_tokens\":112,\"prompt_tokens_details\":{\"cached_tokens\":0}},\"time_info\":{\"queue_time\":0.003062104,\"prompt_time\":0.002802754,\"completion_time\":0.003407264,\"total_time\":0.011022329330444336,\"created\":1749422797}}\n\n"
+          "string": "data: {\"id\":\"chatcmpl-ffc9a8d3-3f0f-4bfe-8bcc-6a9eeffe1cf8\",\"choices\":[{\"delta\":{\"role\":\"assistant\"},\"index\":0}],\"created\":1751750504,\"model\":\"llama-3.3-70b\",\"system_fingerprint\":\"fp_7707e580790f59a40607\",\"object\":\"chat.completion.chunk\"}\n\ndata: {\"id\":\"chatcmpl-ffc9a8d3-3f0f-4bfe-8bcc-6a9eeffe1cf8\",\"choices\":[{\"delta\":{\"content\":\"red\"},\"index\":0}],\"created\":1751750504,\"model\":\"llama-3.3-70b\",\"system_fingerprint\":\"fp_7707e580790f59a40607\",\"object\":\"chat.completion.chunk\"}\n\ndata: {\"id\":\"chatcmpl-ffc9a8d3-3f0f-4bfe-8bcc-6a9eeffe1cf8\",\"choices\":[{\"delta\":{},\"index\":0}],\"created\":1751750504,\"model\":\"llama-3.3-70b\",\"system_fingerprint\":\"fp_7707e580790f59a40607\",\"object\":\"chat.completion.chunk\"}\n\ndata: {\"id\":\"chatcmpl-ffc9a8d3-3f0f-4bfe-8bcc-6a9eeffe1cf8\",\"choices\":[{\"delta\":{},\"finish_reason\":\"stop\",\"index\":0}],\"created\":1751750504,\"model\":\"llama-3.3-70b\",\"system_fingerprint\":\"fp_7707e580790f59a40607\",\"object\":\"chat.completion.chunk\",\"usage\":{\"prompt_tokens\":109,\"completion_tokens\":2,\"total_tokens\":111,\"prompt_tokens_details\":{\"cached_tokens\":0}},\"time_info\":{\"queue_time\":0.00017166,\"prompt_time\":0.004032731,\"completion_time\":0.00004384,\"total_time\":0.006574153900146484,\"created\":1751750504}}\n\n"
         }
       },
-      "recorded_at": "Sun, 08 Jun 2025 22:46:37 GMT"
+      "recorded_at": "Sat, 05 Jul 2025 21:21:44 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

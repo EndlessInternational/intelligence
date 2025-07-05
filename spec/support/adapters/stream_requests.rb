@@ -29,6 +29,13 @@ RSpec.shared_examples 'stream requests' do
         expect( response.result.choices.first ).to be_a( Intelligence::ChatResultChoice )
         expect( response.result.choices.first.end_reason ).to eq( :ended )
 
+        message = response.result.choices.first.message
+        expect( message ).not_to be_nil
+        expect( message.contents ).not_to be_nil
+        expect( message.contents.length ).to eq( 1 )
+        expect( message.contents.last ).to be_a( Intelligence::MessageContent::Text )
+        expect( message.contents.last.text ).to eq( text )
+
         expect( text ).to match( /hello/i )
 
       end 
@@ -66,6 +73,13 @@ RSpec.shared_examples 'stream requests' do
         expect( response.result.choices.first ).to be_a( Intelligence::ChatResultChoice )
         expect( response.result.choices.first.end_reason ).to eq( :ended )
 
+        message = response.result.choices.first.message
+        expect( message ).not_to be_nil
+        expect( message.contents ).not_to be_nil
+        expect( message.contents.length ).to eq( 1 )
+        expect( message.contents.last ).to be_a( Intelligence::MessageContent::Text )
+        expect( message.contents.last.text ).to eq( text )
+
         expect( text ).to match( /blue/i )
 
       end
@@ -98,6 +112,13 @@ RSpec.shared_examples 'stream requests' do
         expect( response.result.choices ).not_to be_nil
         expect( response.result.choices.first ).to be_a( Intelligence::ChatResultChoice )
         expect( response.result.choices.first.end_reason ).to eq( :ended )
+
+        message = response.result.choices.first.message
+        expect( message ).not_to be_nil
+        expect( message.contents ).not_to be_nil
+        expect( message.contents.length ).to eq( 1 )
+        expect( message.contents.last ).to be_a( Intelligence::MessageContent::Text )
+        expect( message.contents.last.text ).to eq( text )
 
         expect( text ).to match( /hello/i )
 
@@ -136,6 +157,13 @@ RSpec.shared_examples 'stream requests' do
         expect( response.result.choices.first ).to be_a( Intelligence::ChatResultChoice )
         expect( response.result.choices.first.end_reason ).to eq( :ended )
 
+        message = response.result.choices.first.message
+        expect( message ).not_to be_nil
+        expect( message.contents ).not_to be_nil
+        expect( message.contents.length ).to eq( 1 )
+        expect( message.contents.last ).to be_a( Intelligence::MessageContent::Text )
+        expect( message.contents.last.text ).to eq( text )
+        
         expect( text ).to match( /blue/i )
 
       end

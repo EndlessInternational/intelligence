@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Thu, 03 Jul 2025 00:15:31 GMT"
+            "Sat, 05 Jul 2025 21:33:25 GMT"
           ],
           "content-type": [
             "application/json"
@@ -74,10 +74,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\"id\":\"27500962-2a0b-1521-3ae5-1b9f36799d9d\",\"object\":\"chat.completion\",\"created\":1751501730,\"model\":\"grok-3\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"\",\"tool_calls\":[{\"id\":\"call_82368337\",\"function\":{\"name\":\"get_location\",\"arguments\":\"{}\"},\"type\":\"function\"}],\"refusal\":null},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":285,\"completion_tokens\":21,\"total_tokens\":306,\"prompt_tokens_details\":{\"text_tokens\":285,\"audio_tokens\":0,\"image_tokens\":0,\"cached_tokens\":3},\"completion_tokens_details\":{\"reasoning_tokens\":0,\"audio_tokens\":0,\"accepted_prediction_tokens\":0,\"rejected_prediction_tokens\":0},\"num_sources_used\":0},\"system_fingerprint\":\"fp_be0739e203\"}"
+          "string": "{\"id\":\"3543ebac-02d5-d6fc-fbed-0b2047fa5552\",\"object\":\"chat.completion\",\"created\":1751751204,\"model\":\"grok-3\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"\",\"tool_calls\":[{\"id\":\"call_42759724\",\"function\":{\"name\":\"get_location\",\"arguments\":\"{}\"},\"type\":\"function\"}],\"refusal\":null},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":285,\"completion_tokens\":21,\"total_tokens\":306,\"prompt_tokens_details\":{\"text_tokens\":285,\"audio_tokens\":0,\"image_tokens\":0,\"cached_tokens\":270},\"completion_tokens_details\":{\"reasoning_tokens\":0,\"audio_tokens\":0,\"accepted_prediction_tokens\":0,\"rejected_prediction_tokens\":0},\"num_sources_used\":0},\"system_fingerprint\":\"fp_9ad1a16f77\"}"
         }
       },
-      "recorded_at": "Thu, 03 Jul 2025 00:15:31 GMT"
+      "recorded_at": "Sat, 05 Jul 2025 21:33:24 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

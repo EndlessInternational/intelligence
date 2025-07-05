@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Sun, 08 Jun 2025 22:55:34 GMT"
+            "Sat, 05 Jul 2025 21:31:33 GMT"
           ],
           "content-type": [
             "text/event-stream"
@@ -38,37 +38,28 @@
           "connection": [
             "keep-alive"
           ],
-          "cf-ray": [
-            "<CF-RAY>"
-          ],
           "access-control-allow-origin": [
             "*"
           ],
           "cache-control": [
             "no-cache"
           ],
-          "x-clerk-auth-message": [
-            "Invalid JWT form. A JWT consists of three parts separated by dots. (reason=token-invalid, token-carrier=header)"
-          ],
-          "x-clerk-auth-reason": [
-            "token-invalid"
-          ],
-          "x-clerk-auth-status": [
-            "signed-out"
-          ],
           "vary": [
             "Accept-Encoding"
           ],
           "server": [
             "cloudflare"
+          ],
+          "cf-ray": [
+            "<CF-RAY>"
           ]
         },
         "body": {
           "encoding": "UTF-8",
-          "string": ": OPENROUTER PROCESSING\n\ndata: {\"id\":\"gen-1749423334-Fa1Pn2NtpLiUhN1gnSeV\",\"provider\":\"Hyperbolic\",\"model\":\"qwen/qwen-2.5-vl-7b-instruct\",\"object\":\"chat.completion.chunk\",\"created\":1749423334,\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"\"},\"finish_reason\":null,\"native_finish_reason\":null,\"logprobs\":null}]}\n\ndata: {\"id\":\"gen-1749423334-Fa1Pn2NtpLiUhN1gnSeV\",\"provider\":\"Hyperbolic\",\"model\":\"qwen/qwen-2.5-vl-7b-instruct\",\"object\":\"chat.completion.chunk\",\"created\":1749423334,\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"hello\"},\"finish_reason\":null,\"native_finish_reason\":null,\"logprobs\":null}]}\n\ndata: {\"id\":\"gen-1749423334-Fa1Pn2NtpLiUhN1gnSeV\",\"provider\":\"Hyperbolic\",\"model\":\"qwen/qwen-2.5-vl-7b-instruct\",\"object\":\"chat.completion.chunk\",\"created\":1749423334,\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"\"},\"finish_reason\":\"stop\",\"native_finish_reason\":\"stop\",\"logprobs\":null}]}\n\ndata: {\"id\":\"gen-1749423334-Fa1Pn2NtpLiUhN1gnSeV\",\"provider\":\"Hyperbolic\",\"model\":\"qwen/qwen-2.5-vl-7b-instruct\",\"object\":\"chat.completion.chunk\",\"created\":1749423334,\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"\"},\"finish_reason\":null,\"native_finish_reason\":null,\"logprobs\":null}],\"usage\":{\"prompt_tokens\":59,\"completion_tokens\":3,\"total_tokens\":62}}\n\ndata: [DONE]\n\n"
+          "string": "data: {\"id\":\"gen-1751751093-2jGmMwVbNFqbh7NGSQpQ\",\"provider\":\"Hyperbolic\",\"model\":\"qwen/qwen-2.5-vl-7b-instruct\",\"object\":\"chat.completion.chunk\",\"created\":1751751093,\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"\"},\"finish_reason\":null,\"native_finish_reason\":null,\"logprobs\":null}]}\n\ndata: {\"id\":\"gen-1751751093-2jGmMwVbNFqbh7NGSQpQ\",\"provider\":\"Hyperbolic\",\"model\":\"qwen/qwen-2.5-vl-7b-instruct\",\"object\":\"chat.completion.chunk\",\"created\":1751751093,\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"hello\"},\"finish_reason\":null,\"native_finish_reason\":null,\"logprobs\":null}]}\n\ndata: {\"id\":\"gen-1751751093-2jGmMwVbNFqbh7NGSQpQ\",\"provider\":\"Hyperbolic\",\"model\":\"qwen/qwen-2.5-vl-7b-instruct\",\"object\":\"chat.completion.chunk\",\"created\":1751751093,\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"\"},\"finish_reason\":\"stop\",\"native_finish_reason\":\"stop\",\"logprobs\":null}]}\n\ndata: {\"id\":\"gen-1751751093-2jGmMwVbNFqbh7NGSQpQ\",\"provider\":\"Hyperbolic\",\"model\":\"qwen/qwen-2.5-vl-7b-instruct\",\"object\":\"chat.completion.chunk\",\"created\":1751751093,\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"\"},\"finish_reason\":null,\"native_finish_reason\":null,\"logprobs\":null}],\"usage\":{\"prompt_tokens\":59,\"completion_tokens\":3,\"total_tokens\":62}}\n\ndata: [DONE]\n\n"
         }
       },
-      "recorded_at": "Sun, 08 Jun 2025 22:55:34 GMT"
+      "recorded_at": "Sat, 05 Jul 2025 21:31:33 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

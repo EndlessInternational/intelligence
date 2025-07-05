@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Sun, 08 Jun 2025 22:51:39 GMT"
+            "Sat, 05 Jul 2025 21:25:42 GMT"
           ],
           "content-type": [
             "application/json"
@@ -57,22 +57,19 @@
             "987"
           ],
           "x-ratelimit-remaining-tokens": [
-            "5837"
+            "5843"
           ],
           "x-ratelimit-reset-requests": [
-            "18m42.9s"
+            "18m42.88s"
           ],
           "x-ratelimit-reset-tokens": [
-            "1.621999999s"
+            "1.568s"
           ],
           "x-request-id": [
             "<X-REQUEST-ID>"
           ],
           "via": [
             "1.1 google"
-          ],
-          "alt-svc": [
-            "h3=\":443\"; ma=86400"
           ],
           "cf-cache-status": [
             "DYNAMIC"
@@ -88,14 +85,17 @@
           ],
           "content-encoding": [
             "gzip"
+          ],
+          "alt-svc": [
+            "h3=\":443\"; ma=86400"
           ]
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\"id\":\"chatcmpl-fd3fbcf7-a685-46e5-9ba3-6c6d04019f31\",\"object\":\"chat.completion\",\"created\":1749423099,\"model\":\"mistral-saba-24b\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"one\\ntwo\\nthree\\nfour\\nfive\\nsix\\nseven\\ne\"},\"logprobs\":null,\"finish_reason\":\"length\"}],\"usage\":{\"queue_time\":0.211862634,\"prompt_tokens\":63,\"prompt_time\":0.003768836,\"completion_tokens\":16,\"completion_time\":0.048484848,\"total_tokens\":79,\"total_time\":0.052253684},\"usage_breakdown\":{\"models\":null},\"system_fingerprint\":\"fp_07e680a590\",\"x_groq\":{\"id\":\"req_01jx8vw3jneb0bya2kdnxw4624\"}}\n"
+          "string": "{\"id\":\"chatcmpl-55a4713d-6768-417e-82d1-c84eadabd617\",\"object\":\"chat.completion\",\"created\":1751750742,\"model\":\"mistral-saba-24b\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"one\\ntwo\\nthree\\nfour\\nfive\\nsix\\nseven\\ne\"},\"logprobs\":null,\"finish_reason\":\"length\"}],\"usage\":{\"queue_time\":0.212817062,\"prompt_tokens\":63,\"prompt_time\":0.003797038,\"completion_tokens\":16,\"completion_time\":0.048484848,\"total_tokens\":79,\"total_time\":0.052281886},\"usage_breakdown\":null,\"system_fingerprint\":\"fp_07e680a590\",\"x_groq\":{\"id\":\"req_01jze7p40jezn9pt9w1c0m51ja\"}}\n"
         }
       },
-      "recorded_at": "Sun, 08 Jun 2025 22:51:39 GMT"
+      "recorded_at": "Sat, 05 Jul 2025 21:25:42 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

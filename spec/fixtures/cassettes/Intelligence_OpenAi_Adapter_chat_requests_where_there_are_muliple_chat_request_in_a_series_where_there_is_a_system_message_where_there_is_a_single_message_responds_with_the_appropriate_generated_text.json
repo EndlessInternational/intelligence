@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Fri, 04 Jul 2025 02:06:53 GMT"
+            "Sat, 05 Jul 2025 21:28:58 GMT"
           ],
           "content-type": [
             "application/json"
@@ -48,7 +48,7 @@
             "9999"
           ],
           "x-ratelimit-remaining-tokens": [
-            "29999965"
+            "29999966"
           ],
           "x-ratelimit-reset-requests": [
             "6ms"
@@ -66,7 +66,7 @@
             "<X-REQUEST-ID>"
           ],
           "openai-processing-ms": [
-            "446"
+            "367"
           ],
           "strict-transport-security": [
             "max-age=31536000; includeSubDomains; preload"
@@ -95,10 +95,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\n  \"id\": \"resp_6867373d58a8819db41d2f3711c856fa00b48462a9ed4662\",\n  \"object\": \"response\",\n  \"created_at\": 1751594813,\n  \"status\": \"completed\",\n  \"background\": false,\n  \"error\": null,\n  \"incomplete_details\": null,\n  \"instructions\": null,\n  \"max_output_tokens\": 128,\n  \"max_tool_calls\": null,\n  \"model\": \"gpt-4o-2024-08-06\",\n  \"output\": [\n    {\n      \"id\": \"msg_6867373db1c4819dac0f0ea1998ce05f00b48462a9ed4662\",\n      \"type\": \"message\",\n      \"status\": \"completed\",\n      \"content\": [\n        {\n          \"type\": \"output_text\",\n          \"annotations\": [],\n          \"logprobs\": [],\n          \"text\": \"hello\"\n        }\n      ],\n      \"role\": \"assistant\"\n    }\n  ],\n  \"parallel_tool_calls\": true,\n  \"previous_response_id\": null,\n  \"reasoning\": {\n    \"effort\": null,\n    \"summary\": null\n  },\n  \"service_tier\": \"default\",\n  \"store\": true,\n  \"temperature\": 0.0,\n  \"text\": {\n    \"format\": {\n      \"type\": \"text\"\n    }\n  },\n  \"tool_choice\": \"auto\",\n  \"tools\": [],\n  \"top_logprobs\": 0,\n  \"top_p\": 1.0,\n  \"truncation\": \"disabled\",\n  \"usage\": {\n    \"input_tokens\": 15,\n    \"input_tokens_details\": {\n      \"cached_tokens\": 0\n    },\n    \"output_tokens\": 2,\n    \"output_tokens_details\": {\n      \"reasoning_tokens\": 0\n    },\n    \"total_tokens\": 17\n  },\n  \"user\": null,\n  \"metadata\": {}\n}"
+          "string": "{\n  \"id\": \"resp_6869991a73a48191ab07dbc5466074c90cdee2cc9dc6df3e\",\n  \"object\": \"response\",\n  \"created_at\": 1751750938,\n  \"status\": \"completed\",\n  \"background\": false,\n  \"error\": null,\n  \"incomplete_details\": null,\n  \"instructions\": null,\n  \"max_output_tokens\": 128,\n  \"max_tool_calls\": null,\n  \"model\": \"gpt-4o-2024-08-06\",\n  \"output\": [\n    {\n      \"id\": \"msg_6869991ab2b88191912834a1951855990cdee2cc9dc6df3e\",\n      \"type\": \"message\",\n      \"status\": \"completed\",\n      \"content\": [\n        {\n          \"type\": \"output_text\",\n          \"annotations\": [],\n          \"logprobs\": [],\n          \"text\": \"hello\"\n        }\n      ],\n      \"role\": \"assistant\"\n    }\n  ],\n  \"parallel_tool_calls\": true,\n  \"previous_response_id\": null,\n  \"reasoning\": {\n    \"effort\": null,\n    \"summary\": null\n  },\n  \"service_tier\": \"default\",\n  \"store\": true,\n  \"temperature\": 0.0,\n  \"text\": {\n    \"format\": {\n      \"type\": \"text\"\n    }\n  },\n  \"tool_choice\": \"auto\",\n  \"tools\": [],\n  \"top_logprobs\": 0,\n  \"top_p\": 1.0,\n  \"truncation\": \"disabled\",\n  \"usage\": {\n    \"input_tokens\": 15,\n    \"input_tokens_details\": {\n      \"cached_tokens\": 0\n    },\n    \"output_tokens\": 2,\n    \"output_tokens_details\": {\n      \"reasoning_tokens\": 0\n    },\n    \"total_tokens\": 17\n  },\n  \"user\": null,\n  \"metadata\": {}\n}"
         }
       },
-      "recorded_at": "Fri, 04 Jul 2025 02:06:53 GMT"
+      "recorded_at": "Sat, 05 Jul 2025 21:28:58 GMT"
     },
     {
       "request": {
@@ -127,7 +127,7 @@
         },
         "headers": {
           "date": [
-            "Fri, 04 Jul 2025 02:06:54 GMT"
+            "Sat, 05 Jul 2025 21:28:59 GMT"
           ],
           "content-type": [
             "application/json"
@@ -166,7 +166,7 @@
             "<X-REQUEST-ID>"
           ],
           "openai-processing-ms": [
-            "319"
+            "321"
           ],
           "strict-transport-security": [
             "max-age=31536000; includeSubDomains; preload"
@@ -195,10 +195,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\n  \"id\": \"resp_6867373df3288191984b473678670cc009717858b7cf02db\",\n  \"object\": \"response\",\n  \"created_at\": 1751594813,\n  \"status\": \"completed\",\n  \"background\": false,\n  \"error\": null,\n  \"incomplete_details\": null,\n  \"instructions\": \"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \",\n  \"max_output_tokens\": 128,\n  \"max_tool_calls\": null,\n  \"model\": \"gpt-4o-2024-08-06\",\n  \"output\": [\n    {\n      \"id\": \"msg_6867373e35808191b95039220bed062c09717858b7cf02db\",\n      \"type\": \"message\",\n      \"status\": \"completed\",\n      \"content\": [\n        {\n          \"type\": \"output_text\",\n          \"annotations\": [],\n          \"logprobs\": [],\n          \"text\": \"hello\"\n        }\n      ],\n      \"role\": \"assistant\"\n    }\n  ],\n  \"parallel_tool_calls\": true,\n  \"previous_response_id\": null,\n  \"reasoning\": {\n    \"effort\": null,\n    \"summary\": null\n  },\n  \"service_tier\": \"default\",\n  \"store\": true,\n  \"temperature\": 0.0,\n  \"text\": {\n    \"format\": {\n      \"type\": \"text\"\n    }\n  },\n  \"tool_choice\": \"auto\",\n  \"tools\": [],\n  \"top_logprobs\": 0,\n  \"top_p\": 1.0,\n  \"truncation\": \"disabled\",\n  \"usage\": {\n    \"input_tokens\": 58,\n    \"input_tokens_details\": {\n      \"cached_tokens\": 0\n    },\n    \"output_tokens\": 2,\n    \"output_tokens_details\": {\n      \"reasoning_tokens\": 0\n    },\n    \"total_tokens\": 60\n  },\n  \"user\": null,\n  \"metadata\": {}\n}"
+          "string": "{\n  \"id\": \"resp_6869991b1e3081a2ae5e8999215e4c5d07af084f34230b67\",\n  \"object\": \"response\",\n  \"created_at\": 1751750939,\n  \"status\": \"completed\",\n  \"background\": false,\n  \"error\": null,\n  \"incomplete_details\": null,\n  \"instructions\": \"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \",\n  \"max_output_tokens\": 128,\n  \"max_tool_calls\": null,\n  \"model\": \"gpt-4o-2024-08-06\",\n  \"output\": [\n    {\n      \"id\": \"msg_6869991b595081a28952e0b90d41c41c07af084f34230b67\",\n      \"type\": \"message\",\n      \"status\": \"completed\",\n      \"content\": [\n        {\n          \"type\": \"output_text\",\n          \"annotations\": [],\n          \"logprobs\": [],\n          \"text\": \"hello\"\n        }\n      ],\n      \"role\": \"assistant\"\n    }\n  ],\n  \"parallel_tool_calls\": true,\n  \"previous_response_id\": null,\n  \"reasoning\": {\n    \"effort\": null,\n    \"summary\": null\n  },\n  \"service_tier\": \"default\",\n  \"store\": true,\n  \"temperature\": 0.0,\n  \"text\": {\n    \"format\": {\n      \"type\": \"text\"\n    }\n  },\n  \"tool_choice\": \"auto\",\n  \"tools\": [],\n  \"top_logprobs\": 0,\n  \"top_p\": 1.0,\n  \"truncation\": \"disabled\",\n  \"usage\": {\n    \"input_tokens\": 58,\n    \"input_tokens_details\": {\n      \"cached_tokens\": 0\n    },\n    \"output_tokens\": 2,\n    \"output_tokens_details\": {\n      \"reasoning_tokens\": 0\n    },\n    \"total_tokens\": 60\n  },\n  \"user\": null,\n  \"metadata\": {}\n}"
         }
       },
-      "recorded_at": "Fri, 04 Jul 2025 02:06:54 GMT"
+      "recorded_at": "Sat, 05 Jul 2025 21:28:59 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Sun, 08 Jun 2025 22:55:47 GMT"
+            "Sat, 05 Jul 2025 21:31:44 GMT"
           ],
           "content-type": [
             "text/event-stream; charset=utf-8"
@@ -39,25 +39,25 @@
             "keep-alive"
           ],
           "inference-id": [
-            "674a59f4-4a59-4f21-b68e-1dbb94d0f3ac"
+            "c9d0a0a6-30b6-4bae-9ddf-3096ab46756e"
           ],
           "x-ratelimit-limit-requests": [
-            "80"
+            "120"
           ],
           "x-ratelimit-limit-requests-day": [
             "12000"
           ],
           "x-ratelimit-remaining-requests": [
-            "61"
+            "101"
           ],
           "x-ratelimit-remaining-requests-day": [
-            "11921"
+            "11981"
           ],
           "x-ratelimit-reset-requests": [
-            "1749423407"
+            "1751751164"
           ],
           "x-ratelimit-reset-requests-day": [
-            "1749509747"
+            "1751837504"
           ],
           "strict-transport-security": [
             "max-age=31536000; includeSubDomains"
@@ -80,10 +80,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "data: {\"choices\":[{\"delta\":{\"content\":\"blue\",\"role\":\"assistant\"},\"finish_reason\":null,\"index\":0,\"logprobs\":null}],\"created\":1749423347.2724175,\"id\":\"3d02be2d-6bbe-4dfe-bb29-6fb0cee9767a\",\"model\":\"Meta-Llama-3.3-70B-Instruct\",\"object\":\"chat.completion.chunk\",\"system_fingerprint\":\"fastcoe\"}\n\ndata: {\"choices\":[{\"delta\":{\"content\":\"\"},\"finish_reason\":\"stop\",\"index\":0,\"logprobs\":null}],\"created\":1749423347.2794743,\"id\":\"3d02be2d-6bbe-4dfe-bb29-6fb0cee9767a\",\"model\":\"Meta-Llama-3.3-70B-Instruct\",\"object\":\"chat.completion.chunk\",\"system_fingerprint\":\"fastcoe\"}\n\ndata: [DONE]\n\n"
+          "string": "data: {\"choices\":[{\"delta\":{\"content\":\"blue\",\"role\":\"assistant\"},\"finish_reason\":null,\"index\":0,\"logprobs\":null}],\"created\":1751751104.9831867,\"id\":\"02e60e4b-0ba5-4fa1-ae09-3d3ccd0dff2e\",\"model\":\"Meta-Llama-3.3-70B-Instruct\",\"object\":\"chat.completion.chunk\",\"system_fingerprint\":\"fastcoe\"}\n\ndata: {\"choices\":[{\"delta\":{\"content\":\"\"},\"finish_reason\":\"stop\",\"index\":0,\"logprobs\":null}],\"created\":1751751104.9904468,\"id\":\"02e60e4b-0ba5-4fa1-ae09-3d3ccd0dff2e\",\"model\":\"Meta-Llama-3.3-70B-Instruct\",\"object\":\"chat.completion.chunk\",\"system_fingerprint\":\"fastcoe\"}\n\ndata: [DONE]\n\n"
         }
       },
-      "recorded_at": "Sun, 08 Jun 2025 22:55:47 GMT"
+      "recorded_at": "Sat, 05 Jul 2025 21:31:44 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

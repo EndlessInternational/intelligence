@@ -98,18 +98,7 @@ module Intelligence
           output_tokens:  0
         }
         choices = context[ :choices ] || Array.new( 1 , { message: {} } )
-
-        choices.each do | choice |
-          choice[ :message ][ :contents ] = choice[ :message ][ :contents ]&.map do | content |
-            case content[ :type ] 
-              when :text 
-                content[ :text ] = ''
-              else 
-                content.clear 
-            end
-            content
-          end
-        end
+        choices_delta = prune_choices( choices )
 
         buffer += chunk
         while ( eol_index = buffer.index( "\n" ) )
@@ -127,9 +116,15 @@ module Intelligence
               data_candidate_index = data_candidate[ :index ] || 0
               data_candidate_content = data_candidate[ :content ]
               data_candidate_finish_reason = data_candidate[ :finishReason ]
-              choices.fill( { message: { role: 'assistant' } }, choices.size, data_candidate_index + 1 ) \
-                if choices.size <= data_candidate_index 
-              contents = choices[ data_candidate_index ][ :message ][ :contents ] || []
+              if choices_delta.size <= data_candidate_index 
+                choices_delta.fill( 
+                  { message: { role: 'assistant' } }, 
+                  choices_delta.size, 
+                  data_candidate_index + 1 
+                )
+              end
+                
+              contents = choices_delta[ data_candidate_index ][ :message ][ :contents ] || []
               last_content = contents&.last 
               
               if data_candidate_content&.include?( :parts ) 
@@ -145,8 +140,8 @@ module Intelligence
                   end
                 end
               end
-              choices[ data_candidate_index ][ :message ][ :contents ] = contents
-              choices[ data_candidate_index ][ :end_reason ] = 
+              choices_delta[ data_candidate_index ][ :message ][ :contents ] = contents
+              choices_delta[ data_candidate_index ][ :end_reason ] = 
                 translate_finish_reason( data_candidate_finish_reason )
             end
   
@@ -161,23 +156,14 @@ module Intelligence
 
         context[ :buffer ] = buffer 
         context[ :metrics ] = metrics
-        context[ :choices ] = choices
+        context[ :choices ] = merge_choices!( choices, choices_delta )
 
-        [ context, choices.empty? ? nil : { choices: choices.dup } ]
+        [ context, { choices: choices_delta } ]
 
       end
 
       def stream_result_attributes( context )
-
-        choices = context[ :choices ]
-        metrics = context[ :metrics ]
-
-        choices = choices.map do | choice |
-          { end_reason: choice[ :end_reason ] }
-        end
-
-        { choices: choices, metrics: context[ :metrics ] }
-
+        { choices: context[ :choices ], metrics: context[ :metrics ] }
       end
 
       alias_method :stream_result_error_attributes, :chat_result_error_attributes

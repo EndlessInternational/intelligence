@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Sun, 08 Jun 2025 22:56:05 GMT"
+            "Sat, 05 Jul 2025 21:31:59 GMT"
           ],
           "content-type": [
             "application/json; charset=utf-8"
@@ -51,22 +51,22 @@
             "*"
           ],
           "etag": [
-            "W/\"206-qiFzfvmh9WbRyBg5B85bP0dMeB4\""
+            "W/\"206-liWvRXsyyrnBKPZVdne2H0K37c8\""
           ],
           "strict-transport-security": [
             "max-age=15552000; includeSubDomains"
           ],
           "x-amzn-trace-id": [
-            "166ce166-2637-4eec-9859-3401bebed0f5-noamzn"
+            "a4f22d44-675d-426e-9f8c-c9efac71f65e-noamzn"
           ],
           "x-api-call-end": [
-            "2025-06-08T22:56:05.791Z"
+            "2025-07-05T21:31:59.985Z"
           ],
           "x-api-call-start": [
-            "2025-06-08T22:56:05.611Z"
+            "2025-07-05T21:31:59.791Z"
           ],
           "x-api-received": [
-            "2025-06-08T22:56:05.593Z"
+            "2025-07-05T21:31:59.699Z"
           ],
           "x-inference-version": [
             "v2"
@@ -107,10 +107,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "{\n  \"id\": \"nxMZ2ba-4Yz4kd-94cbfb015c31ba16\",\n  \"object\": \"chat.completion\",\n  \"created\": 1749423365,\n  \"model\": \"meta-llama/Llama-3.2-11B-Vision-Instruct-Turbo\",\n  \"prompt\": [],\n  \"choices\": [\n    {\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": \"The color is red.\",\n        \"tool_calls\": []\n      },\n      \"logprobs\": null,\n      \"finish_reason\": \"stop\",\n      \"seed\": null\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 86,\n    \"total_tokens\": 92,\n    \"completion_tokens\": 6\n  }\n}"
+          "string": "{\n  \"id\": \"o1uFNo4-3NKUce-95a9f8f02968df1d\",\n  \"object\": \"chat.completion\",\n  \"created\": 1751751119,\n  \"model\": \"meta-llama/Llama-3.2-11B-Vision-Instruct-Turbo\",\n  \"prompt\": [],\n  \"choices\": [\n    {\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": \"The color is red.\",\n        \"tool_calls\": []\n      },\n      \"logprobs\": null,\n      \"finish_reason\": \"stop\",\n      \"seed\": null\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 86,\n    \"total_tokens\": 92,\n    \"completion_tokens\": 6\n  }\n}"
         }
       },
-      "recorded_at": "Sun, 08 Jun 2025 22:56:05 GMT"
+      "recorded_at": "Sat, 05 Jul 2025 21:31:59 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

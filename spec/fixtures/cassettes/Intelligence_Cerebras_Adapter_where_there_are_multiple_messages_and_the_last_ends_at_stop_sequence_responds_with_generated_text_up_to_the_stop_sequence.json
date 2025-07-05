@@ -22,45 +22,21 @@
       },
       "response": {
         "status": {
-          "code": 200,
-          "message": "OK"
+          "code": 500,
+          "message": "Internal Server Error"
         },
         "headers": {
           "date": [
-            "Sun, 08 Jun 2025 22:44:34 GMT"
+            "Sat, 05 Jul 2025 21:20:02 GMT"
           ],
           "content-type": [
             "application/json"
           ],
-          "transfer-encoding": [
-            "chunked"
+          "content-length": [
+            "380"
           ],
           "connection": [
             "keep-alive"
-          ],
-          "x-request-id": [
-            "<X-REQUEST-ID>"
-          ],
-          "x-ratelimit-limit-requests-day": [
-            "14400"
-          ],
-          "x-ratelimit-limit-tokens-minute": [
-            "60000"
-          ],
-          "x-ratelimit-remaining-requests-day": [
-            "14358"
-          ],
-          "x-ratelimit-remaining-tokens-minute": [
-            "59669"
-          ],
-          "x-ratelimit-reset-requests-day": [
-            "4525.594890832901"
-          ],
-          "x-ratelimit-reset-tokens-minute": [
-            "25.594890832901"
-          ],
-          "inference-id": [
-            "chatcmpl-530c45ce-4786-4ef1-b6e3-210da3ae7043"
           ],
           "referrer-policy": [
             "strict-origin-when-cross-origin"
@@ -83,19 +59,16 @@
           "cf-ray": [
             "<CF-RAY>"
           ],
-          "content-encoding": [
-            "gzip"
-          ],
           "alt-svc": [
             "h3=\":443\"; ma=86400"
           ]
         },
         "body": {
-          "encoding": "ASCII-8BIT",
-          "string": "{\"id\":\"chatcmpl-530c45ce-4786-4ef1-b6e3-210da3ae7043\",\"choices\":[{\"finish_reason\":\"stop\",\"index\":0,\"message\":{\"content\":\"one\\ntwo\\nthree\\nfour\\n\",\"role\":\"assistant\"}}],\"created\":1749422674,\"model\":\"llama-3.3-70b\",\"system_fingerprint\":\"fp_cb820b267e7b1a0390cd\",\"object\":\"chat.completion\",\"usage\":{\"prompt_tokens\":109,\"completion_tokens\":20,\"total_tokens\":129,\"prompt_tokens_details\":{\"cached_tokens\":0}},\"time_info\":{\"queue_time\":9.079e-05,\"prompt_time\":0.004370998,\"completion_time\":0.003102793,\"total_time\":0.013769388198852539,\"created\":1749422674}}"
+          "encoding": "UTF-8",
+          "string": "{\"message\":\"Encountered non requests specific error, please try again. 1 validation error for ChatCompletionResponse\\nchoices.0.finish_reason\\n  Input should be 'stop', 'length', 'content_filter' or 'tool_calls' [type=literal_error, input_value='cancelled', input_type=str]\\n    For further information visit https://errors.pydantic.dev/2.7/v/literal_error\",\"type\":\"server_error\"}"
         }
       },
-      "recorded_at": "Sun, 08 Jun 2025 22:44:34 GMT"
+      "recorded_at": "Sat, 05 Jul 2025 21:20:02 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

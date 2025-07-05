@@ -1,5 +1,5 @@
 module Intelligence
-  module Generic
+  module XAi
     module ChatResponseMethods
 
       def chat_result_attributes( response )
@@ -77,12 +77,7 @@ module Intelligence
           output_tokens:  0
         }
         choices = context[ :choices ] || Array.new( 1 , { message: {} } )
-
-        choices.each do | choice |
-          choice[ :message ][ :contents ] = choice[ :message ][ :contents ]&.map do | content |
-            { type: content[ :type ] }
-          end
-        end
+        choices_delta = prune_choices( choices )
 
         buffer += chunk
         while ( eol_index = buffer.index( "\n" ) )
@@ -103,17 +98,17 @@ module Intelligence
               finish_reason = data_choice[ 'finish_reason' ]
               end_reason = to_end_reason( finish_reason ) if finish_reason
               
-              choices.fill( { message: {} }, choices.size, data_choice_index + 1 ) \
-                if choices.size <= data_choice_index 
-              contents = choices[ data_choice_index ][ :message ][ :contents ] || []
+              choices_delta.fill( { message: {} }, choices_delta.size, data_choice_index + 1 ) \
+                if choices_delta.size <= data_choice_index 
+              contents = choices_delta[ data_choice_index ][ :message ][ :contents ] || []
 
               if data_choice_reasoning_content = data_choice_delta[ 'reasoning_content' ]          
                 thought_content = contents.last&.[]( :type ) == :thought ? contents.last : nil 
                 if thought_content.nil?  
                   contents.push( { type: :thought, text: data_choice_reasoning_content } )
                 else
-                  thought_content[ :text ] = 
-                    ( thought_content[ :text ] || '' ) + data_choice_reasoning_content
+                    thought_content[ :text ] = 
+                      ( thought_content[ :text ] || '' ) + data_choice_reasoning_content
                 end
               end 
 
@@ -158,14 +153,14 @@ module Intelligence
               end
 
               # the citations are awkwardly placed on the root of the response payload but their 
-              # actually specific to the choice/message; the grok api only ever returns 1 choice
-              # and one messages per choice :shrug
+              # actually specific to the choice/message; the grok api only ever returns one choice
+              # and one messages per choice though so :shrug
               data[ 'citations' ]&.each do | citation |
                 contents << { type: :web_reference, uri: citation }
               end
 
-              choices[ data_choice_index ][ :message ][ :contents ] = contents
-              choices[ data_choice_index ][ :end_reason ] ||= end_reason
+              choices_delta[ data_choice_index ][ :message ][ :contents ] = contents
+              choices_delta[ data_choice_index ][ :end_reason ] ||= end_reason
             end
   
             if usage = data[ 'usage' ]
@@ -183,9 +178,9 @@ module Intelligence
 
         context[ :buffer ] = buffer 
         context[ :metrics ] = metrics
-        context[ :choices ] = choices
+        context[ :choices ] = merge_choices!( choices, choices_delta )
 
-        [ context, choices.empty? ? nil : { choices: choices.dup } ]
+        [ context, choices_delta.empty? ? nil : { choices: choices_delta } ]
 
       end
 

@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Sun, 08 Jun 2025 22:55:45 GMT"
+            "Sat, 05 Jul 2025 21:31:43 GMT"
           ],
           "content-type": [
             "application/json; charset=utf-8"
@@ -39,25 +39,25 @@
             "keep-alive"
           ],
           "inference-id": [
-            "9c9badc1-136d-4150-a728-da59c3bca049"
+            "fd34eaa6-6d5a-4b1e-9bbf-196e442fd2a0"
           ],
           "x-ratelimit-limit-requests": [
-            "80"
+            "120"
           ],
           "x-ratelimit-limit-requests-day": [
             "12000"
           ],
           "x-ratelimit-remaining-requests": [
-            "66"
+            "106"
           ],
           "x-ratelimit-remaining-requests-day": [
-            "11926"
+            "11986"
           ],
           "x-ratelimit-reset-requests": [
-            "1749423405"
+            "1751751163"
           ],
           "x-ratelimit-reset-requests-day": [
-            "1749509745"
+            "1751837503"
           ],
           "strict-transport-security": [
             "max-age=31536000; includeSubDomains"
@@ -80,10 +80,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"choices\":[{\"finish_reason\":\"length\",\"index\":0,\"logprobs\":null,\"message\":{\"content\":\"one\\ntwo\\nthree\\nfour\\nfive\\nsix\\nseven\\neight\\nnine\\nten\\neleven\\ntw\",\"role\":\"assistant\"}}],\"created\":1749423345.571839,\"id\":\"1eb11b5b-75c7-4082-ace7-42a6ff66d815\",\"model\":\"Meta-Llama-3.3-70B-Instruct\",\"object\":\"chat.completion\",\"system_fingerprint\":\"fastcoe\",\"usage\":{\"completion_tokens\":24,\"completion_tokens_after_first_per_sec\":616.1987288812238,\"completion_tokens_after_first_per_sec_first_ten\":642.2146951329113,\"completion_tokens_per_sec\":277.1352869272193,\"end_time\":1749423345.5718107,\"is_last_response\":true,\"prompt_tokens\":117,\"prompt_tokens_details\":{\"cached_tokens\":0},\"start_time\":1749423345.4852104,\"stop_reason\":\"length\",\"time_to_first_token\":0.04927468299865723,\"total_latency\":0.08660030364990234,\"total_tokens\":141,\"total_tokens_per_sec\":1628.1698106974131}}\n"
+          "string": "{\"choices\":[{\"finish_reason\":\"length\",\"index\":0,\"logprobs\":null,\"message\":{\"content\":\"one\\ntwo\\nthree\\nfour\\nfive\\nsix\\nseven\\neight\\nnine\\nten\\neleven\\ntw\",\"role\":\"assistant\"}}],\"created\":1751751103.4638047,\"id\":\"a73696ee-9529-477c-a318-e636da4ea060\",\"model\":\"Meta-Llama-3.3-70B-Instruct\",\"object\":\"chat.completion\",\"system_fingerprint\":\"fastcoe\",\"usage\":{\"completion_tokens\":24,\"completion_tokens_after_first_per_sec\":599.860663230091,\"completion_tokens_after_first_per_sec_first_ten\":627.7345879045797,\"completion_tokens_per_sec\":269.3803376872607,\"end_time\":1751751103.4636807,\"is_last_response\":true,\"prompt_tokens\":117,\"prompt_tokens_details\":{\"cached_tokens\":0},\"start_time\":1751751103.3744779,\"stop_reason\":\"length\",\"time_to_first_token\":0.05086064338684082,\"total_latency\":0.08909336221808065,\"total_tokens\":141,\"total_tokens_per_sec\":1582.6094839126567}}\n"
         }
       },
-      "recorded_at": "Sun, 08 Jun 2025 22:55:45 GMT"
+      "recorded_at": "Sat, 05 Jul 2025 21:31:43 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

@@ -6,7 +6,7 @@
         "uri": "https://api.openai.com/v1/responses",
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"model\":\"o3\",\"max_output_tokens\":4096,\"reasoning\":{\"effort\":\"medium\",\"summary\":\"detailed\"},\"input\":[{\"role\":\"user\",\"content\":[{\"type\":\"input_text\",\"text\":\"In a 30-60-90 triangle, the length of the hypotenuse is 6. What is the length of the shortest side?\\n\"}]}],\"instructions\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"}"
+          "string": "{\"model\":\"o3\",\"max_output_tokens\":4096,\"reasoning\":{\"effort\":\"high\",\"summary\":\"detailed\"},\"input\":[{\"role\":\"user\",\"content\":[{\"type\":\"input_text\",\"text\":\"Given a triangle ABC with angle A 60 degrees and angle B 40 degrees, extend side BC through C. Now create triangle DAB such that DC is congruent to AB. What is the angle measure of angle ADB?\\n\"}]}],\"instructions\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"}"
         },
         "headers": {
           "User-Agent": [
@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Fri, 04 Jul 2025 02:07:11 GMT"
+            "Sat, 05 Jul 2025 21:29:43 GMT"
           ],
           "content-type": [
             "application/json"
@@ -48,7 +48,7 @@
             "9999"
           ],
           "x-ratelimit-remaining-tokens": [
-            "29999713"
+            "29999697"
           ],
           "x-ratelimit-reset-requests": [
             "6ms"
@@ -66,7 +66,7 @@
             "<X-REQUEST-ID>"
           ],
           "openai-processing-ms": [
-            "4607"
+            "30543"
           ],
           "strict-transport-security": [
             "max-age=31536000; includeSubDomains; preload"
@@ -95,10 +95,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\n  \"id\": \"resp_6867374ab54081a0a831cd51177c724005023d03ecf51538\",\n  \"object\": \"response\",\n  \"created_at\": 1751594826,\n  \"status\": \"completed\",\n  \"background\": false,\n  \"error\": null,\n  \"incomplete_details\": null,\n  \"instructions\": \"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \",\n  \"max_output_tokens\": 4096,\n  \"max_tool_calls\": null,\n  \"model\": \"o3-2025-04-16\",\n  \"output\": [\n    {\n      \"id\": \"rs_6867374afe5081a0b61b2626185caa4e05023d03ecf51538\",\n      \"type\": \"reasoning\",\n      \"summary\": [\n        {\n          \"type\": \"summary_text\",\n          \"text\": \"**Providing the answer clearly**\\n\\nI need to give a succinct answer in the right format, even though the user didn\\u2019t specify one. The developer hinted that I should stick to the requested format without added text. For a 30-60-90 triangle, the side ratios are 1 : \\u221a3 : 2. Given the hypotenuse is 6, I find x equals 3 for the shortest side. I\\u2019ll present \\u201c3\\u201d as the answer, with units matching the hypotenuse. So, the answer is \\\"3.\\\"\"\n        }\n      ]\n    },\n    {\n      \"id\": \"msg_6867374f0dfc81a0a64daf78aa2eae6f05023d03ecf51538\",\n      \"type\": \"message\",\n      \"status\": \"completed\",\n      \"content\": [\n        {\n          \"type\": \"output_text\",\n          \"annotations\": [],\n          \"logprobs\": [],\n          \"text\": \"3\"\n        }\n      ],\n      \"role\": \"assistant\"\n    }\n  ],\n  \"parallel_tool_calls\": true,\n  \"previous_response_id\": null,\n  \"reasoning\": {\n    \"effort\": \"medium\",\n    \"summary\": \"detailed\"\n  },\n  \"service_tier\": \"default\",\n  \"store\": true,\n  \"temperature\": 1.0,\n  \"text\": {\n    \"format\": {\n      \"type\": \"text\"\n    }\n  },\n  \"tool_choice\": \"auto\",\n  \"tools\": [],\n  \"top_logprobs\": 0,\n  \"top_p\": 1.0,\n  \"truncation\": \"disabled\",\n  \"usage\": {\n    \"input_tokens\": 79,\n    \"input_tokens_details\": {\n      \"cached_tokens\": 0\n    },\n    \"output_tokens\": 71,\n    \"output_tokens_details\": {\n      \"reasoning_tokens\": 64\n    },\n    \"total_tokens\": 150\n  },\n  \"user\": null,\n  \"metadata\": {}\n}"
+          "string": "{\n  \"id\": \"resp_68699928ee188192ab67a44bc774a6f403178f1b903c00d7\",\n  \"object\": \"response\",\n  \"created_at\": 1751750952,\n  \"status\": \"completed\",\n  \"background\": false,\n  \"error\": null,\n  \"incomplete_details\": null,\n  \"instructions\": \"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \",\n  \"max_output_tokens\": 4096,\n  \"max_tool_calls\": null,\n  \"model\": \"o3-2025-04-16\",\n  \"output\": [\n    {\n      \"id\": \"rs_686999294d3c8192864c293372c6c26b03178f1b903c00d7\",\n      \"type\": \"reasoning\",\n      \"summary\": [\n        {\n          \"type\": \"summary_text\",\n          \"text\": \"**Analyzing triangle properties**\\n\\nI need to break down the problem step by step. We have triangle ABC with angles A, B, and C measuring 60\\u00b0, 40\\u00b0, and 80\\u00b0, respectively. Identifying the sides, BC is opposite A, CA is opposite B, and AB is opposite C. We'll extend side BC through C to point D, forming triangle DAB where segment DC is congruent to segment AB. My goal is to find the angle \\u2220ADB, ensuring clarity on the congruence between these segments.\"\n        },\n        {\n          \"type\": \"summary_text\",\n          \"text\": \"**Clarifying triangle DAB**\\n\\nI need to confirm that segment DC equals AB, with points D, A, and B forming the vertices of triangle DAB. Segment AB is shared between the original triangle ABC and triangle DAB, which makes sense as one side.\\n\\nI realize that D is on the extension of BC, making B, C, and D collinear in that order. As I create triangle DAB by connecting D to A and B, I'll use the known angles from triangle ABC to help find angle \\u2220ADB. I can see that angle ACD is an external angle at C, which helps me in my calculations.\"\n        },\n        {\n          \"type\": \"summary_text\",\n          \"text\": \"**Calculating triangle relationships**\\n\\nI\\u2019m establishing the relationship between segments CD and CB. The angle ACD, being external, measures 100\\u00b0 since it's 180\\u00b0 minus the interior angle ACB at 80\\u00b0. I'll likely use the Law of Sines or consider equal lengths to find angle \\u2220ADB. Given that DC equals AB, I\\u2019m analyzing triangle DCB and considering triangle ABD.\\n\\nI can define triangle ABC with coordinates and lengths based on trigonometric ratios. By setting a scale factor, I calculate the corresponding lengths for sides a, b, and c using known sine values. This will allow me to advance toward finding the angle \\u2220ADB and the length of segment AD.\"\n        },\n        {\n          \"type\": \"summary_text\",\n          \"text\": \"30\\u00b0\"\n        }\n      ]\n    },\n    {\n      \"id\": \"msg_68699947198c8192b10115ac1ccf967303178f1b903c00d7\",\n      \"type\": \"message\",\n      \"status\": \"completed\",\n      \"content\": [\n        {\n          \"type\": \"output_text\",\n          \"annotations\": [],\n          \"logprobs\": [],\n          \"text\": \"30\\u00b0\"\n        }\n      ],\n      \"role\": \"assistant\"\n    }\n  ],\n  \"parallel_tool_calls\": true,\n  \"previous_response_id\": null,\n  \"reasoning\": {\n    \"effort\": \"high\",\n    \"summary\": \"detailed\"\n  },\n  \"service_tier\": \"default\",\n  \"store\": true,\n  \"temperature\": 1.0,\n  \"text\": {\n    \"format\": {\n      \"type\": \"text\"\n    }\n  },\n  \"tool_choice\": \"auto\",\n  \"tools\": [],\n  \"top_logprobs\": 0,\n  \"top_p\": 1.0,\n  \"truncation\": \"disabled\",\n  \"usage\": {\n    \"input_tokens\": 96,\n    \"input_tokens_details\": {\n      \"cached_tokens\": 0\n    },\n    \"output_tokens\": 3016,\n    \"output_tokens_details\": {\n      \"reasoning_tokens\": 3008\n    },\n    \"total_tokens\": 3112\n  },\n  \"user\": null,\n  \"metadata\": {}\n}"
         }
       },
-      "recorded_at": "Fri, 04 Jul 2025 02:07:11 GMT"
+      "recorded_at": "Sat, 05 Jul 2025 21:29:43 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

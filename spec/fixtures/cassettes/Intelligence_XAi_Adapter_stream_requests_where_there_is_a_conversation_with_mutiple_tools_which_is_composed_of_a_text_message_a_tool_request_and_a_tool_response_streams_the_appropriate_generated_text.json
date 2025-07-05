@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Thu, 03 Jul 2025 00:16:39 GMT"
+            "Sat, 05 Jul 2025 21:34:21 GMT"
           ],
           "content-type": [
             "text/event-stream"
@@ -74,10 +74,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "data: {\"id\":\"215c8c57-593b-f262-1ab0-af8340becc76\",\"object\":\"chat.completion.chunk\",\"created\":1751501801,\"model\":\"grok-3\",\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"tool_calls\":[{\"id\":\"call_25875931\",\"function\":{\"name\":\"get_weather\",\"arguments\":\"{\\\"city\\\":\\\"Seattle\\\",\\\"state\\\":\\\"WA\\\",\\\"country\\\":\\\"USA\\\"}\"},\"index\":0,\"type\":\"function\"}]}}],\"system_fingerprint\":\"fp_be0739e203\"}\n\ndata: {\"id\":\"215c8c57-593b-f262-1ab0-af8340becc76\",\"object\":\"chat.completion.chunk\",\"created\":1751501801,\"model\":\"grok-3\",\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\"},\"finish_reason\":\"tool_calls\"}],\"system_fingerprint\":\"fp_be0739e203\"}\n\ndata: [DONE]\n\n"
+          "string": "data: {\"id\":\"18a9f18a-f614-28b7-3b2d-b6ce10ed705e\",\"object\":\"chat.completion.chunk\",\"created\":1751751262,\"model\":\"grok-3\",\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"tool_calls\":[{\"id\":\"call_47458989\",\"function\":{\"name\":\"get_weather\",\"arguments\":\"{\\\"city\\\":\\\"Seattle\\\",\\\"state\\\":\\\"WA\\\",\\\"country\\\":\\\"USA\\\"}\"},\"index\":0,\"type\":\"function\"}]}}],\"system_fingerprint\":\"fp_9ad1a16f77\"}\n\ndata: {\"id\":\"18a9f18a-f614-28b7-3b2d-b6ce10ed705e\",\"object\":\"chat.completion.chunk\",\"created\":1751751262,\"model\":\"grok-3\",\"choices\":[{\"index\":0,\"delta\":{},\"finish_reason\":\"tool_calls\"}],\"system_fingerprint\":\"fp_9ad1a16f77\"}\n\ndata: [DONE]\n\n"
         }
       },
-      "recorded_at": "Thu, 03 Jul 2025 00:16:41 GMT"
+      "recorded_at": "Sat, 05 Jul 2025 21:34:22 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

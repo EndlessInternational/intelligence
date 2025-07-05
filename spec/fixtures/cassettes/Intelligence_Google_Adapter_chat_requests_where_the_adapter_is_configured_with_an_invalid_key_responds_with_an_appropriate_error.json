@@ -97,7 +97,7 @@
             "gzip"
           ],
           "date": [
-            "Thu, 19 Jun 2025 15:41:17 GMT"
+            "Sat, 05 Jul 2025 21:25:15 GMT"
           ],
           "server": [
             "scaffolding on HTTPServer2"
@@ -112,7 +112,7 @@
             "nosniff"
           ],
           "server-timing": [
-            "gfet4t7; dur=50"
+            "gfet4t7; dur=264"
           ],
           "alt-svc": [
             "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
@@ -126,7 +126,7 @@
           "string": "{\n  \"error\": {\n    \"code\": 400,\n    \"message\": \"API key not valid. Please pass a valid API key.\",\n    \"status\": \"INVALID_ARGUMENT\",\n    \"details\": [\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.ErrorInfo\",\n        \"reason\": \"API_KEY_INVALID\",\n        \"domain\": \"googleapis.com\",\n        \"metadata\": {\n          \"service\": \"generativelanguage.googleapis.com\"\n        }\n      },\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.LocalizedMessage\",\n        \"locale\": \"en-US\",\n        \"message\": \"API key not valid. Please pass a valid API key.\"\n      }\n    ]\n  }\n}\n"
         }
       },
-      "recorded_at": "Thu, 19 Jun 2025 15:41:17 GMT"
+      "recorded_at": "Sat, 05 Jul 2025 21:25:15 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

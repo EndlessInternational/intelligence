@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Fri, 04 Jul 2025 02:07:20 GMT"
+            "Sat, 05 Jul 2025 21:29:49 GMT"
           ],
           "content-type": [
             "application/json"
@@ -66,7 +66,7 @@
             "<X-REQUEST-ID>"
           ],
           "openai-processing-ms": [
-            "406"
+            "907"
           ],
           "strict-transport-security": [
             "max-age=31536000; includeSubDomains; preload"
@@ -95,10 +95,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\n  \"id\": \"resp_6867375865a88191bc7736055d03afab05ab83edbd2a88b6\",\n  \"object\": \"response\",\n  \"created_at\": 1751594840,\n  \"status\": \"completed\",\n  \"background\": false,\n  \"error\": null,\n  \"incomplete_details\": null,\n  \"instructions\": \"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \",\n  \"max_output_tokens\": 128,\n  \"max_tool_calls\": null,\n  \"model\": \"gpt-4o-2024-08-06\",\n  \"output\": [\n    {\n      \"id\": \"fc_68673758b2708191b8ee70fe7b95f1f905ab83edbd2a88b6\",\n      \"type\": \"function_call\",\n      \"status\": \"completed\",\n      \"arguments\": \"{}\",\n      \"call_id\": \"call_YKAB0bQAuYknw3IzTEk3mij3\",\n      \"name\": \"get_location\"\n    }\n  ],\n  \"parallel_tool_calls\": true,\n  \"previous_response_id\": null,\n  \"reasoning\": {\n    \"effort\": null,\n    \"summary\": null\n  },\n  \"service_tier\": \"default\",\n  \"store\": true,\n  \"temperature\": 0.0,\n  \"text\": {\n    \"format\": {\n      \"type\": \"text\"\n    }\n  },\n  \"tool_choice\": \"auto\",\n  \"tools\": [\n    {\n      \"type\": \"function\",\n      \"description\": \"The get_location tool will return the users city, state or province and country.\",\n      \"name\": \"get_location\",\n      \"parameters\": {\n        \"type\": \"object\",\n        \"properties\": {}\n      },\n      \"strict\": true\n    }\n  ],\n  \"top_logprobs\": 0,\n  \"top_p\": 1.0,\n  \"truncation\": \"disabled\",\n  \"usage\": {\n    \"input_tokens\": 89,\n    \"input_tokens_details\": {\n      \"cached_tokens\": 0\n    },\n    \"output_tokens\": 11,\n    \"output_tokens_details\": {\n      \"reasoning_tokens\": 0\n    },\n    \"total_tokens\": 100\n  },\n  \"user\": null,\n  \"metadata\": {}\n}"
+          "string": "{\n  \"id\": \"resp_6869994c8da081a3bbb8fa709b6e0f920b098a2e607b5ae0\",\n  \"object\": \"response\",\n  \"created_at\": 1751750988,\n  \"status\": \"completed\",\n  \"background\": false,\n  \"error\": null,\n  \"incomplete_details\": null,\n  \"instructions\": \"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \",\n  \"max_output_tokens\": 128,\n  \"max_tool_calls\": null,\n  \"model\": \"gpt-4o-2024-08-06\",\n  \"output\": [\n    {\n      \"id\": \"fc_6869994d5f3c81a391f660f055bd5ad70b098a2e607b5ae0\",\n      \"type\": \"function_call\",\n      \"status\": \"completed\",\n      \"arguments\": \"{}\",\n      \"call_id\": \"call_wNYaZzsnoVsMKUVg3kk6d9cS\",\n      \"name\": \"get_location\"\n    }\n  ],\n  \"parallel_tool_calls\": true,\n  \"previous_response_id\": null,\n  \"reasoning\": {\n    \"effort\": null,\n    \"summary\": null\n  },\n  \"service_tier\": \"default\",\n  \"store\": true,\n  \"temperature\": 0.0,\n  \"text\": {\n    \"format\": {\n      \"type\": \"text\"\n    }\n  },\n  \"tool_choice\": \"auto\",\n  \"tools\": [\n    {\n      \"type\": \"function\",\n      \"description\": \"The get_location tool will return the users city, state or province and country.\",\n      \"name\": \"get_location\",\n      \"parameters\": {\n        \"type\": \"object\",\n        \"properties\": {}\n      },\n      \"strict\": true\n    }\n  ],\n  \"top_logprobs\": 0,\n  \"top_p\": 1.0,\n  \"truncation\": \"disabled\",\n  \"usage\": {\n    \"input_tokens\": 89,\n    \"input_tokens_details\": {\n      \"cached_tokens\": 0\n    },\n    \"output_tokens\": 11,\n    \"output_tokens_details\": {\n      \"reasoning_tokens\": 0\n    },\n    \"total_tokens\": 100\n  },\n  \"user\": null,\n  \"metadata\": {}\n}"
         }
       },
-      "recorded_at": "Fri, 04 Jul 2025 02:07:20 GMT"
+      "recorded_at": "Sat, 05 Jul 2025 21:29:49 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

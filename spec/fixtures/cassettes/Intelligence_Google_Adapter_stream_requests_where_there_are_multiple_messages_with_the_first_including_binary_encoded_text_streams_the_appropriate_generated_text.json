@@ -100,7 +100,7 @@
             "chunked"
           ],
           "date": [
-            "Thu, 19 Jun 2025 15:41:58 GMT"
+            "Sat, 05 Jul 2025 21:25:37 GMT"
           ],
           "server": [
             "scaffolding on HTTPServer2"
@@ -115,7 +115,7 @@
             "nosniff"
           ],
           "server-timing": [
-            "gfet4t7; dur=520"
+            "gfet4t7; dur=509"
           ],
           "alt-svc": [
             "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
@@ -123,10 +123,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "data: {\"candidates\": [{\"content\": {\"parts\": [{\"text\": \"4\"}],\"role\": \"model\"},\"index\": 0}],\"usageMetadata\": {\"promptTokenCount\": 80,\"candidatesTokenCount\": 1,\"totalTokenCount\": 81,\"promptTokensDetails\": [{\"modality\": \"TEXT\",\"tokenCount\": 80}]},\"modelVersion\": \"models/gemini-2.5-flash-preview-05-20\",\"responseId\": \"xi9UaMXEOJXTz7IP0uTpqQY\"}\r\n\r\ndata: {\"candidates\": [{\"content\": {\"role\": \"model\"},\"finishReason\": \"STOP\",\"index\": 0}],\"usageMetadata\": {\"promptTokenCount\": 80,\"candidatesTokenCount\": 1,\"totalTokenCount\": 81,\"promptTokensDetails\": [{\"modality\": \"TEXT\",\"tokenCount\": 80}]},\"modelVersion\": \"models/gemini-2.5-flash-preview-05-20\",\"responseId\": \"xi9UaMXEOJXTz7IP0uTpqQY\"}\r\n\r\n"
+          "string": "data: {\"candidates\": [{\"content\": {\"parts\": [{\"text\": \"4\"}],\"role\": \"model\"},\"index\": 0}],\"usageMetadata\": {\"promptTokenCount\": 80,\"candidatesTokenCount\": 1,\"totalTokenCount\": 81,\"promptTokensDetails\": [{\"modality\": \"TEXT\",\"tokenCount\": 80}]},\"modelVersion\": \"gemini-2.5-flash\",\"responseId\": \"UZhpaOfeHu-tz7IP6LX6uAc\"}\r\n\r\ndata: {\"candidates\": [{\"content\": {\"role\": \"model\"},\"finishReason\": \"STOP\",\"index\": 0}],\"usageMetadata\": {\"promptTokenCount\": 80,\"candidatesTokenCount\": 1,\"totalTokenCount\": 81,\"promptTokensDetails\": [{\"modality\": \"TEXT\",\"tokenCount\": 80}]},\"modelVersion\": \"gemini-2.5-flash\",\"responseId\": \"UZhpaOfeHu-tz7IP6LX6uAc\"}\r\n\r\n"
         }
       },
-      "recorded_at": "Thu, 19 Jun 2025 15:41:58 GMT"
+      "recorded_at": "Sat, 05 Jul 2025 21:25:37 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

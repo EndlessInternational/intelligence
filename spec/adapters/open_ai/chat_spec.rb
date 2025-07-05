@@ -68,7 +68,7 @@ RSpec.describe "#{Intelligence::Adapter[ :open_ai ]} chat requests", :open_ai do
         model                 'o3'
         max_tokens            4096
         reasoning do 
-          effort              :medium
+          effort              :high
           summary             :detailed
         end
       end

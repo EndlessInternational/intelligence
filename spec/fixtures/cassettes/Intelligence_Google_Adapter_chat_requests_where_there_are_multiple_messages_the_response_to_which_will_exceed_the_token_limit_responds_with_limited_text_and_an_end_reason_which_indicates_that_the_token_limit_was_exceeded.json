@@ -97,7 +97,7 @@
             "gzip"
           ],
           "date": [
-            "Thu, 19 Jun 2025 15:40:30 GMT"
+            "Sat, 05 Jul 2025 21:24:50 GMT"
           ],
           "server": [
             "scaffolding on HTTPServer2"
@@ -112,7 +112,7 @@
             "nosniff"
           ],
           "server-timing": [
-            "gfet4t7; dur=804"
+            "gfet4t7; dur=337"
           ],
           "alt-svc": [
             "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
@@ -123,10 +123,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "{\n  \"candidates\": [\n    {\n      \"content\": {\n        \"parts\": [\n          {\n            \"text\": \"one\\ntwo\\nthree\\nfour\\nfive\\nsix\\nseven\\neight\\n\"\n          }\n        ],\n        \"role\": \"model\"\n      },\n      \"finishReason\": \"MAX_TOKENS\",\n      \"index\": 0\n    }\n  ],\n  \"usageMetadata\": {\n    \"promptTokenCount\": 87,\n    \"candidatesTokenCount\": 15,\n    \"totalTokenCount\": 102,\n    \"promptTokensDetails\": [\n      {\n        \"modality\": \"TEXT\",\n        \"tokenCount\": 87\n      }\n    ]\n  },\n  \"modelVersion\": \"models/gemini-2.5-flash-preview-05-20\",\n  \"responseId\": \"bi9UaP_5Ktvkz7IP4JuTkAc\"\n}\n"
+          "string": "{\n  \"candidates\": [\n    {\n      \"content\": {\n        \"parts\": [\n          {\n            \"text\": \"one\\ntwo\\nthree\\nfour\\nfive\\nsix\\nseven\\neight\\n\"\n          }\n        ],\n        \"role\": \"model\"\n      },\n      \"finishReason\": \"MAX_TOKENS\",\n      \"index\": 0\n    }\n  ],\n  \"usageMetadata\": {\n    \"promptTokenCount\": 87,\n    \"candidatesTokenCount\": 15,\n    \"totalTokenCount\": 102,\n    \"promptTokensDetails\": [\n      {\n        \"modality\": \"TEXT\",\n        \"tokenCount\": 87\n      }\n    ]\n  },\n  \"modelVersion\": \"gemini-2.5-flash\",\n  \"responseId\": \"IphpaN_zNrqIz7IPyqy1gAY\"\n}\n"
         }
       },
-      "recorded_at": "Thu, 19 Jun 2025 15:40:30 GMT"
+      "recorded_at": "Sat, 05 Jul 2025 21:24:50 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

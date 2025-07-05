@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Thu, 03 Jul 2025 00:15:32 GMT"
+            "Sat, 05 Jul 2025 21:33:27 GMT"
           ],
           "content-type": [
             "application/json"
@@ -74,10 +74,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\"id\":\"6afe6bd8-1e26-bf04-f310-bb83048b8f65\",\"object\":\"chat.completion\",\"created\":1751501732,\"model\":\"grok-3\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"You are located in Seattle, WA, USA.\",\"refusal\":null},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":294,\"completion_tokens\":10,\"total_tokens\":304,\"prompt_tokens_details\":{\"text_tokens\":294,\"audio_tokens\":0,\"image_tokens\":0,\"cached_tokens\":5},\"completion_tokens_details\":{\"reasoning_tokens\":0,\"audio_tokens\":0,\"accepted_prediction_tokens\":0,\"rejected_prediction_tokens\":0},\"num_sources_used\":0},\"system_fingerprint\":\"fp_be0739e203\"}"
+          "string": "{\"id\":\"0ae4d13f-0645-27a8-e702-459779d6900e\",\"object\":\"chat.completion\",\"created\":1751751206,\"model\":\"grok-3\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"You are located in Seattle, WA, USA.\",\"refusal\":null},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":294,\"completion_tokens\":10,\"total_tokens\":304,\"prompt_tokens_details\":{\"text_tokens\":294,\"audio_tokens\":0,\"image_tokens\":0,\"cached_tokens\":5},\"completion_tokens_details\":{\"reasoning_tokens\":0,\"audio_tokens\":0,\"accepted_prediction_tokens\":0,\"rejected_prediction_tokens\":0},\"num_sources_used\":0},\"system_fingerprint\":\"fp_9ad1a16f77\"}"
         }
       },
-      "recorded_at": "Thu, 03 Jul 2025 00:15:32 GMT"
+      "recorded_at": "Sat, 05 Jul 2025 21:33:27 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

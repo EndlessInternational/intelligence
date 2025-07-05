@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Thu, 03 Jul 2025 00:14:57 GMT"
+            "Sat, 05 Jul 2025 21:32:44 GMT"
           ],
           "content-type": [
             "application/json"
@@ -59,12 +59,6 @@
           "set-cookie": [
             "<SET-COOKIE>"
           ],
-          "report-to": [
-            "{\"endpoints\":[{\"url\":\"https:\\/\\/csp-reporting.cloudflare.com\\/cdn-cgi\\/script_monitor\\/report?m=l0lsvyu50yC._DQKV3sKFQ_zTuY1PRpqyVj_TwgNSc0-1751501697-1.0.1.1-kMt7LXsX4eghn7HfGfUzRR9kapDWqn54fdu9WyhZzlAOTGJ_Oyv5Ak9DCIusg69RJPH7pzEcCWAukQebZhWMQQDMB8U3hKtVCSeR_XL8.qBSqxdb.Q0SbvjQ3eut4.wc1eElafgplhgknjaBFPdsng\"}],\"group\":\"cf-csp-endpoint\",\"max_age\":86400}"
-          ],
-          "content-security-policy-report-only": [
-            "script-src 'none'; report-uri https://csp-reporting.cloudflare.com/cdn-cgi/script_monitor/report?m=l0lsvyu50yC._DQKV3sKFQ_zTuY1PRpqyVj_TwgNSc0-1751501697-1.0.1.1-kMt7LXsX4eghn7HfGfUzRR9kapDWqn54fdu9WyhZzlAOTGJ_Oyv5Ak9DCIusg69RJPH7pzEcCWAukQebZhWMQQDMB8U3hKtVCSeR_XL8.qBSqxdb.Q0SbvjQ3eut4.wc1eElafgplhgknjaBFPdsng; report-to cf-csp-endpoint"
-          ],
           "strict-transport-security": [
             "max-age=31536000"
           ],
@@ -80,10 +74,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\"id\":\"5faf42f8-24c9-7672-82bc-d196cfee3bea\",\"object\":\"chat.completion\",\"created\":1751501696,\"model\":\"grok-2-vision-1212\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"Red balloon with a string.\",\"refusal\":null},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":319,\"completion_tokens\":6,\"total_tokens\":325,\"prompt_tokens_details\":{\"text_tokens\":63,\"audio_tokens\":0,\"image_tokens\":256,\"cached_tokens\":0},\"completion_tokens_details\":{\"reasoning_tokens\":0,\"audio_tokens\":0,\"accepted_prediction_tokens\":0,\"rejected_prediction_tokens\":0},\"num_sources_used\":0},\"system_fingerprint\":\"fp_b3554c57d2\"}"
+          "string": "{\"id\":\"79381153-c24c-04ec-467e-8fc1d855aa21\",\"object\":\"chat.completion\",\"created\":1751751164,\"model\":\"grok-2-vision-1212\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"Red balloon with string.\",\"refusal\":null},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":319,\"completion_tokens\":5,\"total_tokens\":324,\"prompt_tokens_details\":{\"text_tokens\":63,\"audio_tokens\":0,\"image_tokens\":256,\"cached_tokens\":0},\"completion_tokens_details\":{\"reasoning_tokens\":0,\"audio_tokens\":0,\"accepted_prediction_tokens\":0,\"rejected_prediction_tokens\":0},\"num_sources_used\":0},\"system_fingerprint\":\"fp_b3554c57d2\"}"
         }
       },
-      "recorded_at": "Thu, 03 Jul 2025 00:14:57 GMT"
+      "recorded_at": "Sat, 05 Jul 2025 21:32:44 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

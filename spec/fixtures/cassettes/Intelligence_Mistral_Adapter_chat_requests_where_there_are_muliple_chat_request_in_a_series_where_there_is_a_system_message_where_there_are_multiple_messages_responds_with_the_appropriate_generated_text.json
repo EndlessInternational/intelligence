@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Sun, 08 Jun 2025 22:52:51 GMT"
+            "Sat, 05 Jul 2025 21:26:15 GMT"
           ],
           "content-type": [
             "application/json"
@@ -38,20 +38,26 @@
           "connection": [
             "keep-alive"
           ],
+          "mistral-correlation-id": [
+            "0197dc7b-922d-7545-b7b5-af33a16602c0"
+          ],
+          "x-kong-request-id": [
+            "0197dc7b-922d-7545-b7b5-af33a16602c0"
+          ],
           "x-envoy-upstream-service-time": [
-            "103"
+            "359"
           ],
           "x-ratelimit-limit-tokens-minute": [
             "2000000"
           ],
           "x-ratelimit-remaining-tokens-minute": [
-            "1999678"
+            "1999643"
           ],
           "x-ratelimit-limit-tokens-month": [
             "10000000000"
           ],
           "x-ratelimit-remaining-tokens-month": [
-            "9999971142"
+            "9999885365"
           ],
           "x-ratelimit-tokens-query-cost": [
             "13"
@@ -60,25 +66,25 @@
             "60"
           ],
           "x-ratelimit-remaining-req-10-second": [
-            "54"
+            "51"
           ],
           "access-control-allow-origin": [
             "*"
           ],
           "x-kong-upstream-latency": [
-            "104"
+            "360"
           ],
           "x-kong-proxy-latency": [
-            "5"
-          ],
-          "x-kong-request-id": [
-            "abcf1723bb6b6b0351464b1669f9743b"
+            "6"
           ],
           "cf-cache-status": [
             "DYNAMIC"
           ],
           "set-cookie": [
             "<SET-COOKIE>"
+          ],
+          "strict-transport-security": [
+            "max-age=15552000; includeSubDomains"
           ],
           "server": [
             "cloudflare"
@@ -95,10 +101,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\"id\":\"83bb53b1e735487c88d0a53d11a8e772\",\"object\":\"chat.completion\",\"created\":1749423170,\"model\":\"mistral-large-latest\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"tool_calls\":null,\"content\":\"Hello\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":11,\"total_tokens\":13,\"completion_tokens\":2}}"
+          "string": "{\"id\":\"c715572e0077483596eb3a54a4c982b5\",\"object\":\"chat.completion\",\"created\":1751750775,\"model\":\"mistral-large-latest\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"tool_calls\":null,\"content\":\"Hello\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":11,\"total_tokens\":13,\"completion_tokens\":2}}"
         }
       },
-      "recorded_at": "Sun, 08 Jun 2025 22:52:50 GMT"
+      "recorded_at": "Sat, 05 Jul 2025 21:26:15 GMT"
     },
     {
       "request": {
@@ -127,7 +133,7 @@
         },
         "headers": {
           "date": [
-            "Sun, 08 Jun 2025 22:52:51 GMT"
+            "Sat, 05 Jul 2025 21:26:16 GMT"
           ],
           "content-type": [
             "application/json"
@@ -138,20 +144,26 @@
           "connection": [
             "keep-alive"
           ],
+          "mistral-correlation-id": [
+            "0197dc7b-9655-7a00-8b9b-ff58aa700d77"
+          ],
+          "x-kong-request-id": [
+            "0197dc7b-9655-7a00-8b9b-ff58aa700d77"
+          ],
           "x-envoy-upstream-service-time": [
-            "107"
+            "139"
           ],
           "x-ratelimit-limit-tokens-minute": [
             "2000000"
           ],
           "x-ratelimit-remaining-tokens-minute": [
-            "1999606"
+            "1999571"
           ],
           "x-ratelimit-limit-tokens-month": [
             "10000000000"
           ],
           "x-ratelimit-remaining-tokens-month": [
-            "9999971070"
+            "9999885293"
           ],
           "x-ratelimit-tokens-query-cost": [
             "72"
@@ -160,25 +172,25 @@
             "60"
           ],
           "x-ratelimit-remaining-req-10-second": [
-            "53"
+            "50"
           ],
           "access-control-allow-origin": [
             "*"
           ],
           "x-kong-upstream-latency": [
-            "107"
+            "140"
           ],
           "x-kong-proxy-latency": [
-            "5"
-          ],
-          "x-kong-request-id": [
-            "50862015a6a4271215045349cd7cd966"
+            "7"
           ],
           "cf-cache-status": [
             "DYNAMIC"
           ],
           "set-cookie": [
             "<SET-COOKIE>"
+          ],
+          "strict-transport-security": [
+            "max-age=15552000; includeSubDomains"
           ],
           "server": [
             "cloudflare"
@@ -195,10 +207,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\"id\":\"be290e8d92bb4d2aa6efcbff7c73b231\",\"object\":\"chat.completion\",\"created\":1749423171,\"model\":\"mistral-large-latest\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"tool_calls\":null,\"content\":\"blue\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":70,\"total_tokens\":72,\"completion_tokens\":2}}"
+          "string": "{\"id\":\"1ee5cdac5fd748c68144c5cb3bdfe8b6\",\"object\":\"chat.completion\",\"created\":1751750776,\"model\":\"mistral-large-latest\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"tool_calls\":null,\"content\":\"blue\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":70,\"total_tokens\":72,\"completion_tokens\":2}}"
         }
       },
-      "recorded_at": "Sun, 08 Jun 2025 22:52:51 GMT"
+      "recorded_at": "Sat, 05 Jul 2025 21:26:16 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

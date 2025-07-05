@@ -100,7 +100,7 @@
             "chunked"
           ],
           "date": [
-            "Thu, 19 Jun 2025 15:41:27 GMT"
+            "Sat, 05 Jul 2025 21:25:25 GMT"
           ],
           "server": [
             "scaffolding on HTTPServer2"
@@ -115,7 +115,7 @@
             "nosniff"
           ],
           "server-timing": [
-            "gfet4t7; dur=803"
+            "gfet4t7; dur=640"
           ],
           "alt-svc": [
             "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
@@ -123,10 +123,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "data: {\"candidates\": [{\"content\": {\"parts\": [{\"text\": \"```json\"}],\"role\": \"model\"},\"index\": 0}],\"usageMetadata\": {\"promptTokenCount\": 130,\"candidatesTokenCount\": 2,\"totalTokenCount\": 132,\"promptTokensDetails\": [{\"modality\": \"TEXT\",\"tokenCount\": 55},{\"modality\": \"AUDIO\",\"tokenCount\": 75}]},\"modelVersion\": \"models/gemini-2.5-flash-preview-05-20\",\"responseId\": \"py9UaMGRB5fUz7IPieyqqQU\"}\r\n\r\ndata: {\"candidates\": [{\"content\": {\"parts\": [{\"text\": \"\\n{\\n  \\\"text\\\": \\\"This is a test.\\\"\\n}\\n\"}],\"role\": \"model\"},\"index\": 0}],\"usageMetadata\": {\"promptTokenCount\": 130,\"candidatesTokenCount\": 16,\"totalTokenCount\": 146,\"promptTokensDetails\": [{\"modality\": \"TEXT\",\"tokenCount\": 55},{\"modality\": \"AUDIO\",\"tokenCount\": 75}]},\"modelVersion\": \"models/gemini-2.5-flash-preview-05-20\",\"responseId\": \"py9UaMGRB5fUz7IPieyqqQU\"}\r\n\r\ndata: {\"candidates\": [{\"content\": {\"parts\": [{\"text\": \"```\"}],\"role\": \"model\"},\"finishReason\": \"STOP\",\"index\": 0}],\"usageMetadata\": {\"promptTokenCount\": 130,\"candidatesTokenCount\": 17,\"totalTokenCount\": 147,\"promptTokensDetails\": [{\"modality\": \"TEXT\",\"tokenCount\": 55},{\"modality\": \"AUDIO\",\"tokenCount\": 75}]},\"modelVersion\": \"models/gemini-2.5-flash-preview-05-20\",\"responseId\": \"py9UaMGRB5fUz7IPieyqqQU\"}\r\n\r\n"
+          "string": "data: {\"candidates\": [{\"content\": {\"parts\": [{\"text\": \"```json\"}],\"role\": \"model\"},\"index\": 0}],\"usageMetadata\": {\"promptTokenCount\": 130,\"candidatesTokenCount\": 2,\"totalTokenCount\": 132,\"promptTokensDetails\": [{\"modality\": \"TEXT\",\"tokenCount\": 55},{\"modality\": \"AUDIO\",\"tokenCount\": 75}]},\"modelVersion\": \"gemini-2.5-flash\",\"responseId\": \"RZhpaKiyIM64qtsP-_Pp-Ak\"}\r\n\r\ndata: {\"candidates\": [{\"content\": {\"parts\": [{\"text\": \"\\n{\\n  \\\"text\\\": \\\"This is a test.\\\"\\n}\\n\"}],\"role\": \"model\"},\"index\": 0}],\"usageMetadata\": {\"promptTokenCount\": 130,\"candidatesTokenCount\": 16,\"totalTokenCount\": 146,\"promptTokensDetails\": [{\"modality\": \"TEXT\",\"tokenCount\": 55},{\"modality\": \"AUDIO\",\"tokenCount\": 75}]},\"modelVersion\": \"gemini-2.5-flash\",\"responseId\": \"RZhpaKiyIM64qtsP-_Pp-Ak\"}\r\n\r\ndata: {\"candidates\": [{\"content\": {\"parts\": [{\"text\": \"```\"}],\"role\": \"model\"},\"finishReason\": \"STOP\",\"index\": 0}],\"usageMetadata\": {\"promptTokenCount\": 130,\"candidatesTokenCount\": 17,\"totalTokenCount\": 147,\"promptTokensDetails\": [{\"modality\": \"TEXT\",\"tokenCount\": 55},{\"modality\": \"AUDIO\",\"tokenCount\": 75}]},\"modelVersion\": \"gemini-2.5-flash\",\"responseId\": \"RZhpaKiyIM64qtsP-_Pp-Ak\"}\r\n\r\n"
         }
       },
-      "recorded_at": "Thu, 19 Jun 2025 15:41:27 GMT"
+      "recorded_at": "Sat, 05 Jul 2025 21:25:25 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

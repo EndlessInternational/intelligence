@@ -77,12 +77,7 @@ module Intelligence
           output_tokens:  0
         }
         choices = context[ :choices ] || Array.new( 1 , { message: {} } )
-
-        choices.each do | choice |
-          choice[ :message ][ :contents ] = choice[ :message ][ :contents ]&.map do | content |
-            { type: content[ :type ] }
-          end
-        end
+        choices_delta = prune_choices( choices )
 
         buffer += chunk
         while ( eol_index = buffer.index( "\n" ) )
@@ -100,9 +95,9 @@ module Intelligence
               data_choice_delta = data_choice[ 'delta' ]
               end_reason = to_end_reason( data_choice[ 'finish_reason' ] )
               
-              choices.fill( { message: {} }, choices.size, data_choice_index + 1 ) \
+              choices_delta.fill( { message: {} }, choices_delta.size, data_choice_index + 1 ) \
                 if choices.size <= data_choice_index 
-              contents = choices[ data_choice_index ][ :message ][ :contents ] || []
+              contents = choices_delta[ data_choice_index ][ :message ][ :contents ] || []
 
               if data_choice_content = data_choice_delta[ 'content' ]
                 text_content = contents.last&.[]( :type ) == :text ? contents.last : nil 
@@ -142,8 +137,8 @@ module Intelligence
                 end 
               end
 
-              choices[ data_choice_index ][ :message ][ :contents ] = contents
-              choices[ data_choice_index ][ :end_reason ] ||= end_reason
+              choices_delta[ data_choice_index ][ :message ][ :contents ] = contents
+              choices_delta[ data_choice_index ][ :end_reason ] ||= end_reason
             end
   
             if usage = data[ 'usage' ]
@@ -161,21 +156,14 @@ module Intelligence
 
         context[ :buffer ] = buffer 
         context[ :metrics ] = metrics
-        context[ :choices ] = choices
+        context[ :choices ] = merge_choices!( choices, choices_delta )
 
-        [ context, choices.empty? ? nil : { choices: choices.dup } ]
+        [ context, { choices: choices_delta } ]
 
       end
 
       def stream_result_attributes( context )
-        choices = context[ :choices ]
-        metrics = context[ :metrics ]
-
-        choices = choices.map do | choice |
-          { end_reason: choice[ :end_reason ] }
-        end
-
-        { choices: choices, metrics: context[ :metrics ] }
+        context
       end
 
       alias_method :stream_result_error_attributes, :chat_result_error_attributes

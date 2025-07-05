@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Sun, 08 Jun 2025 22:56:05 GMT"
+            "Sat, 05 Jul 2025 21:31:59 GMT"
           ],
           "content-type": [
             "application/json; charset=utf-8"
@@ -51,22 +51,22 @@
             "*"
           ],
           "etag": [
-            "W/\"215-VGHkATww+zdmJEcKApTxILL3SBU\""
+            "W/\"215-NqkwqvNWL++2KRsB+P/lqXocQoI\""
           ],
           "strict-transport-security": [
             "max-age=15552000; includeSubDomains"
           ],
           "x-amzn-trace-id": [
-            "08802e0a-02b9-4f53-b5ec-c4e6e3093fe6-noamzn"
+            "1c26aa75-0fdc-430d-ab48-a525fac1af5e-noamzn"
           ],
           "x-api-call-end": [
-            "2025-06-08T22:56:04.709Z"
+            "2025-07-05T21:31:59.276Z"
           ],
           "x-api-call-start": [
-            "2025-06-08T22:56:04.486Z"
+            "2025-07-05T21:31:59.045Z"
           ],
           "x-api-received": [
-            "2025-06-08T22:56:04.463Z"
+            "2025-07-05T21:31:58.975Z"
           ],
           "x-inference-version": [
             "v2"
@@ -107,10 +107,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "{\n  \"id\": \"nxMZ2G6-3NKUce-94cbfafe287e936c\",\n  \"object\": \"chat.completion\",\n  \"created\": 1749423364,\n  \"model\": \"meta-llama/Llama-3.2-11B-Vision-Instruct-Turbo\",\n  \"prompt\": [],\n  \"choices\": [\n    {\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": \"The image depicts a red balloon.\",\n        \"tool_calls\": []\n      },\n      \"logprobs\": null,\n      \"finish_reason\": \"stop\",\n      \"seed\": null\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 66,\n    \"total_tokens\": 74,\n    \"completion_tokens\": 8\n  }\n}"
+          "string": "{\n  \"id\": \"o1uFNaa-62bZhn-95a9f8ebe858fbe6\",\n  \"object\": \"chat.completion\",\n  \"created\": 1751751119,\n  \"model\": \"meta-llama/Llama-3.2-11B-Vision-Instruct-Turbo\",\n  \"prompt\": [],\n  \"choices\": [\n    {\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": \"The image depicts a red balloon.\",\n        \"tool_calls\": []\n      },\n      \"logprobs\": null,\n      \"finish_reason\": \"stop\",\n      \"seed\": null\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 66,\n    \"total_tokens\": 74,\n    \"completion_tokens\": 8\n  }\n}"
         }
       },
-      "recorded_at": "Sun, 08 Jun 2025 22:56:05 GMT"
+      "recorded_at": "Sat, 05 Jul 2025 21:31:59 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

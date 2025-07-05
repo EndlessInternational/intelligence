@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Thu, 03 Jul 2025 00:15:29 GMT"
+            "Sat, 05 Jul 2025 21:33:23 GMT"
           ],
           "content-type": [
             "application/json"
@@ -74,10 +74,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\"id\":\"5a3f7a4c-cdf3-5ab9-7b38-6de647262e62\",\"object\":\"chat.completion\",\"created\":1751501728,\"model\":\"grok-3\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"\",\"tool_calls\":[{\"id\":\"call_43416588\",\"function\":{\"name\":\"get_weather\",\"arguments\":\"{\\\"city\\\":\\\"Seattle\\\",\\\"state\\\":\\\"WA\\\",\\\"country\\\":\\\"USA\\\"}\"},\"type\":\"function\"}],\"refusal\":null},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":444,\"completion_tokens\":47,\"total_tokens\":491,\"prompt_tokens_details\":{\"text_tokens\":444,\"audio_tokens\":0,\"image_tokens\":0,\"cached_tokens\":5},\"completion_tokens_details\":{\"reasoning_tokens\":0,\"audio_tokens\":0,\"accepted_prediction_tokens\":0,\"rejected_prediction_tokens\":0},\"num_sources_used\":0},\"system_fingerprint\":\"fp_be0739e203\"}"
+          "string": "{\"id\":\"f1363340-966c-9006-5479-c8c8186d7452\",\"object\":\"chat.completion\",\"created\":1751751201,\"model\":\"grok-3\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"\",\"tool_calls\":[{\"id\":\"call_39278920\",\"function\":{\"name\":\"get_weather\",\"arguments\":\"{\\\"city\\\":\\\"Seattle\\\",\\\"state\\\":\\\"WA\\\",\\\"country\\\":\\\"USA\\\"}\"},\"type\":\"function\"}],\"refusal\":null},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":444,\"completion_tokens\":47,\"total_tokens\":491,\"prompt_tokens_details\":{\"text_tokens\":444,\"audio_tokens\":0,\"image_tokens\":0,\"cached_tokens\":5},\"completion_tokens_details\":{\"reasoning_tokens\":0,\"audio_tokens\":0,\"accepted_prediction_tokens\":0,\"rejected_prediction_tokens\":0},\"num_sources_used\":0},\"system_fingerprint\":\"fp_9ad1a16f77\"}"
         }
       },
-      "recorded_at": "Thu, 03 Jul 2025 00:15:29 GMT"
+      "recorded_at": "Sat, 05 Jul 2025 21:33:23 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

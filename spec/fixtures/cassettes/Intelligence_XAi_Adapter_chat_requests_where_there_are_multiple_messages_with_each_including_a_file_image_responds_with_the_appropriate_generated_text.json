@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Thu, 03 Jul 2025 00:15:05 GMT"
+            "Sat, 05 Jul 2025 21:32:54 GMT"
           ],
           "content-type": [
             "application/json"
@@ -74,10 +74,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\"id\":\"dc6780e8-f3ad-1f84-0d2a-2923cadff3da\",\"object\":\"chat.completion\",\"created\":1751501705,\"model\":\"grok-2-vision-1212\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"three balloons\",\"refusal\":null},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":588,\"completion_tokens\":2,\"total_tokens\":590,\"prompt_tokens_details\":{\"text_tokens\":76,\"audio_tokens\":0,\"image_tokens\":512,\"cached_tokens\":0},\"completion_tokens_details\":{\"reasoning_tokens\":0,\"audio_tokens\":0,\"accepted_prediction_tokens\":0,\"rejected_prediction_tokens\":0},\"num_sources_used\":0},\"system_fingerprint\":\"fp_b3554c57d2\"}"
+          "string": "{\"id\":\"2dbff960-222b-b119-be44-954f9a52e0a1\",\"object\":\"chat.completion\",\"created\":1751751173,\"model\":\"grok-2-vision-1212\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"three balloons: red, yellow, blue\",\"refusal\":null},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":588,\"completion_tokens\":8,\"total_tokens\":596,\"prompt_tokens_details\":{\"text_tokens\":76,\"audio_tokens\":0,\"image_tokens\":512,\"cached_tokens\":0},\"completion_tokens_details\":{\"reasoning_tokens\":0,\"audio_tokens\":0,\"accepted_prediction_tokens\":0,\"rejected_prediction_tokens\":0},\"num_sources_used\":0},\"system_fingerprint\":\"fp_b3554c57d2\"}"
         }
       },
-      "recorded_at": "Thu, 03 Jul 2025 00:15:05 GMT"
+      "recorded_at": "Sat, 05 Jul 2025 21:32:53 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

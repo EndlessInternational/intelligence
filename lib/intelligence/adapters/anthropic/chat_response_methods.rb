@@ -81,15 +81,17 @@ module Intelligence
         context ||= {}
 
         buffer = context[ :buffer ] || ''
-        contents = context[ :contents ] || []    
-        end_reason = context[ :end_reason ]
-        end_sequence = context[ :end_sequence ]
+        choices = context[ :choices ] || Array.new( 1 , { message: { contents: [] } } )
         metrics = context[ :metrics ] || {
           input_tokens: 0,
           output_tokens:  0
         }
 
-        contents.map! do | content |
+        end_reason = context[ :end_reason ]
+        end_sequence = context[ :end_sequence ]
+        contents = choices.first[ :message ][ :contents ]
+
+        contents = contents.map do | content |
           { type: content[ :type ] }
         end
 
@@ -149,33 +151,27 @@ module Intelligence
           end 
         end
 
-        context = {
-          buffer: buffer,
-          contents: contents,
-          end_reason: end_reason,
-          end_sequence: end_sequence,
-          metrics: metrics
-        }
-        choices = [ {
+        choices_delta = [ {
             end_reason: translate_end_result( end_reason ),
             end_sequence: end_sequence,
-            message: {
-              contents: contents.dup
-            }
+            message: { contents: contents }
           }
         ]
 
-        [ context, ( choices.empty? ? nil : { choices: choices } ) ]
+        [ 
+          {
+            buffer: buffer,
+            choices: merge_choices!( choices, choices_delta ),
+            end_reason: end_reason,
+            end_sequence: end_sequence,
+            metrics: metrics
+          },
+          { choices: choices_delta }
+        ]
       end
 
       def stream_result_attributes( context )
-        {
-          choices: [ { 
-            end_reason: translate_end_result( context[ :end_reason ] ),
-            end_sequence: context[ :end_sequence ], 
-          } ],
-          metrics: context[ :metrics ]
-        }
+        { choices: context[ :choices ], metrics: context[ :metrics ] }
       end
 
       alias_method :stream_result_error_attributes, :chat_result_error_attributes 

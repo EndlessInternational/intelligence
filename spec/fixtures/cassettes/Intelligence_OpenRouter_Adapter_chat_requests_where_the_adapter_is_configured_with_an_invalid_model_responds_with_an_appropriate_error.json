@@ -27,37 +27,28 @@
         },
         "headers": {
           "date": [
-            "Sun, 08 Jun 2025 22:55:33 GMT"
+            "Sat, 05 Jul 2025 21:31:32 GMT"
           ],
           "content-type": [
             "application/json"
           ],
-          "content-length": [
-            "117"
+          "transfer-encoding": [
+            "chunked"
           ],
           "connection": [
             "keep-alive"
           ],
-          "cf-ray": [
-            "<CF-RAY>"
-          ],
           "access-control-allow-origin": [
             "*"
-          ],
-          "x-clerk-auth-message": [
-            "Invalid JWT form. A JWT consists of three parts separated by dots. (reason=token-invalid, token-carrier=header)"
-          ],
-          "x-clerk-auth-reason": [
-            "token-invalid"
-          ],
-          "x-clerk-auth-status": [
-            "signed-out"
           ],
           "vary": [
             "Accept-Encoding"
           ],
           "server": [
             "cloudflare"
+          ],
+          "cf-ray": [
+            "<CF-RAY>"
           ]
         },
         "body": {
@@ -65,7 +56,7 @@
           "string": "{\"error\":{\"message\":\"invalid_model is not a valid model ID\",\"code\":400},\"user_id\":\"user_2loe8790jBboxxSwAZq4jRkox5o\"}"
         }
       },
-      "recorded_at": "Sun, 08 Jun 2025 22:55:33 GMT"
+      "recorded_at": "Sat, 05 Jul 2025 21:31:31 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

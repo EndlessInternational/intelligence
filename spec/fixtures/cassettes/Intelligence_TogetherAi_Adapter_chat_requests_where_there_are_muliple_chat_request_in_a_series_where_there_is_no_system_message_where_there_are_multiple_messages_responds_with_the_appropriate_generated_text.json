@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Sun, 08 Jun 2025 22:55:54 GMT"
+            "Sat, 05 Jul 2025 21:31:51 GMT"
           ],
           "content-type": [
             "application/json; charset=utf-8"
@@ -51,22 +51,22 @@
             "*"
           ],
           "etag": [
-            "W/\"209-0x5M3GP7wGg2yZ9tBE3lNCEwwfU\""
+            "W/\"209-tj0rZorm1d88vtZgFo1UuhB5JYo\""
           ],
           "strict-transport-security": [
             "max-age=15552000; includeSubDomains"
           ],
           "x-amzn-trace-id": [
-            "bf200ee5-f68c-4ae0-a721-0611151517cb-noamzn"
+            "e243a14e-ca5f-4ff4-b363-048629de781c-noamzn"
           ],
           "x-api-call-end": [
-            "2025-06-08T22:55:54.586Z"
+            "2025-07-05T21:31:51.639Z"
           ],
           "x-api-call-start": [
-            "2025-06-08T22:55:54.032Z"
+            "2025-07-05T21:31:51.222Z"
           ],
           "x-api-received": [
-            "2025-06-08T22:55:54.011Z"
+            "2025-07-05T21:31:51.209Z"
           ],
           "x-inference-version": [
             "v2"
@@ -107,10 +107,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "{\n  \"id\": \"nxMYy9t-zqrih-94cbfaba5dd77584\",\n  \"object\": \"chat.completion\",\n  \"created\": 1749423354,\n  \"model\": \"deepseek-ai/DeepSeek-V3\",\n  \"prompt\": [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"stop\",\n      \"seed\": 3829581739580176400,\n      \"logprobs\": null,\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": \"hello\",\n        \"tool_calls\": []\n      }\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 11,\n    \"completion_tokens\": 2,\n    \"total_tokens\": 13,\n    \"cached_tokens\": 0\n  }\n}"
+          "string": "{\n  \"id\": \"o1uFLGg-zqrih-95a9f8bcba65a39e\",\n  \"object\": \"chat.completion\",\n  \"created\": 1751751111,\n  \"model\": \"deepseek-ai/DeepSeek-V3\",\n  \"prompt\": [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"stop\",\n      \"seed\": 8815727976177627000,\n      \"logprobs\": null,\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": \"hello\",\n        \"tool_calls\": []\n      }\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 11,\n    \"completion_tokens\": 2,\n    \"total_tokens\": 13,\n    \"cached_tokens\": 0\n  }\n}"
         }
       },
-      "recorded_at": "Sun, 08 Jun 2025 22:55:54 GMT"
+      "recorded_at": "Sat, 05 Jul 2025 21:31:51 GMT"
     },
     {
       "request": {
@@ -139,7 +139,7 @@
         },
         "headers": {
           "date": [
-            "Sun, 08 Jun 2025 22:55:55 GMT"
+            "Sat, 05 Jul 2025 21:31:52 GMT"
           ],
           "content-type": [
             "application/json; charset=utf-8"
@@ -157,28 +157,28 @@
             "DYNAMIC"
           ],
           "retry-after": [
-            "2"
+            "0"
           ],
           "access-control-allow-origin": [
             "*"
           ],
           "etag": [
-            "W/\"209-UpRlZ3HXiP7jrN7ISxnBLKxjVTU\""
+            "W/\"209-ypnKQb5P2Ka0QybF06M3qoNNYkc\""
           ],
           "strict-transport-security": [
             "max-age=15552000; includeSubDomains"
           ],
           "x-amzn-trace-id": [
-            "eb117186-7add-4422-a756-168c7c86636c-noamzn"
+            "728d3d0c-0d09-488b-8ccc-7a74e299f153-noamzn"
           ],
           "x-api-call-end": [
-            "2025-06-08T22:55:55.317Z"
+            "2025-07-05T21:31:52.303Z"
           ],
           "x-api-call-start": [
-            "2025-06-08T22:55:54.847Z"
+            "2025-07-05T21:31:51.882Z"
           ],
           "x-api-received": [
-            "2025-06-08T22:55:54.835Z"
+            "2025-07-05T21:31:51.864Z"
           ],
           "x-inference-version": [
             "v2"
@@ -193,13 +193,13 @@
             "3000"
           ],
           "x-ratelimit-remaining": [
-            "3"
+            "0"
           ],
           "x-ratelimit-remaining-tokens": [
             "3000"
           ],
           "x-ratelimit-reset": [
-            "2"
+            "0"
           ],
           "x-request-id": [
             "<X-REQUEST-ID>"
@@ -219,10 +219,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "{\n  \"id\": \"nxMYyQ6-zqrih-94cbfabe99bc33d4\",\n  \"object\": \"chat.completion\",\n  \"created\": 1749423354,\n  \"model\": \"deepseek-ai/DeepSeek-V3\",\n  \"prompt\": [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"stop\",\n      \"seed\": 16674134851682580000,\n      \"logprobs\": null,\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": \"blue\",\n        \"tool_calls\": []\n      }\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 27,\n    \"completion_tokens\": 2,\n    \"total_tokens\": 29,\n    \"cached_tokens\": 0\n  }\n}"
+          "string": "{\n  \"id\": \"o1uFLTy-zqrih-95a9f8c05f9ad807\",\n  \"object\": \"chat.completion\",\n  \"created\": 1751751111,\n  \"model\": \"deepseek-ai/DeepSeek-V3\",\n  \"prompt\": [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"stop\",\n      \"seed\": 14141369836039820000,\n      \"logprobs\": null,\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": \"blue\",\n        \"tool_calls\": []\n      }\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 27,\n    \"completion_tokens\": 2,\n    \"total_tokens\": 29,\n    \"cached_tokens\": 0\n  }\n}"
         }
       },
-      "recorded_at": "Sun, 08 Jun 2025 22:55:55 GMT"
+      "recorded_at": "Sat, 05 Jul 2025 21:31:52 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

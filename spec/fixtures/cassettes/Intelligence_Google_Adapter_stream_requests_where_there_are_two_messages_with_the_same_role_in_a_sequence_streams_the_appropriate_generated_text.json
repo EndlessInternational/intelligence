@@ -70,7 +70,7 @@
         "uri": "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:streamGenerateContent?alt=sse&key=<KEY>",
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"generationConfig\":{\"thinkingConfig\":{\"thinkingBudget\":0},\"maxOutputTokens\":128,\"temperature\":0.0},\"systemInstruction\":{\"role\":\"user\",\"parts\":[{\"text\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"}]},\"contents\":[{\"role\":\"user\",\"parts\":[{\"text\":\"the secret word is 'blue'\\n\"}]},{\"role\":\"model\",\"parts\":[{\"text\":\"ok\\n\"}]},{\"role\":\"user\",\"parts\":[{\"text\":\"the secret word has been changed to 'red'!\\n\"}]},{\"role\":\"user\",\"parts\":[{\"text\":\"what is the secret word?\\n\"}]}]}"
+          "string": "{\"generationConfig\":{\"thinkingConfig\":{\"thinkingBudget\":0},\"maxOutputTokens\":128,\"temperature\":0.0},\"systemInstruction\":{\"role\":\"user\",\"parts\":[{\"text\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"}]},\"contents\":[{\"role\":\"user\",\"parts\":[{\"text\":\"the word to remember is 'blue'\\n\"}]},{\"role\":\"model\",\"parts\":[{\"text\":\"ok\\n\"}]},{\"role\":\"user\",\"parts\":[{\"text\":\"the word has been changed to 'red'!\\n\"}]},{\"role\":\"user\",\"parts\":[{\"text\":\"what is the word?\\n\"}]}]}"
         },
         "headers": {
           "User-Agent": [
@@ -100,7 +100,7 @@
             "chunked"
           ],
           "date": [
-            "Thu, 19 Jun 2025 15:41:22 GMT"
+            "Sat, 05 Jul 2025 21:25:21 GMT"
           ],
           "server": [
             "scaffolding on HTTPServer2"
@@ -115,7 +115,7 @@
             "nosniff"
           ],
           "server-timing": [
-            "gfet4t7; dur=420"
+            "gfet4t7; dur=668"
           ],
           "alt-svc": [
             "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
@@ -123,10 +123,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "data: {\"candidates\": [{\"content\": {\"parts\": [{\"text\": \"red\"}],\"role\": \"model\"},\"index\": 0}],\"usageMetadata\": {\"promptTokenCount\": 76,\"candidatesTokenCount\": 1,\"totalTokenCount\": 77,\"promptTokensDetails\": [{\"modality\": \"TEXT\",\"tokenCount\": 76}]},\"modelVersion\": \"models/gemini-2.5-flash-preview-05-20\",\"responseId\": \"oi9UaKrYO9vkz7IPu7SSqAM\"}\r\n\r\ndata: {\"candidates\": [{\"content\": {\"role\": \"model\"},\"finishReason\": \"STOP\",\"index\": 0}],\"usageMetadata\": {\"promptTokenCount\": 76,\"candidatesTokenCount\": 1,\"totalTokenCount\": 77,\"promptTokensDetails\": [{\"modality\": \"TEXT\",\"tokenCount\": 76}]},\"modelVersion\": \"models/gemini-2.5-flash-preview-05-20\",\"responseId\": \"oi9UaKrYO9vkz7IPu7SSqAM\"}\r\n\r\n"
+          "string": "data: {\"candidates\": [{\"content\": {\"parts\": [{\"text\": \"red\"}],\"role\": \"model\"},\"finishReason\": \"STOP\",\"index\": 0}],\"usageMetadata\": {\"promptTokenCount\": 75,\"candidatesTokenCount\": 1,\"totalTokenCount\": 76,\"promptTokensDetails\": [{\"modality\": \"TEXT\",\"tokenCount\": 75}]},\"modelVersion\": \"gemini-2.5-flash\",\"responseId\": \"QZhpaP6gJeflqtsPhtCnmQk\"}\r\n\r\n"
         }
       },
-      "recorded_at": "Thu, 19 Jun 2025 15:41:22 GMT"
+      "recorded_at": "Sat, 05 Jul 2025 21:25:21 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

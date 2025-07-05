@@ -97,7 +97,7 @@
             "gzip"
           ],
           "date": [
-            "Thu, 19 Jun 2025 15:40:24 GMT"
+            "Sat, 05 Jul 2025 21:24:46 GMT"
           ],
           "server": [
             "scaffolding on HTTPServer2"
@@ -112,7 +112,7 @@
             "nosniff"
           ],
           "server-timing": [
-            "gfet4t7; dur=522"
+            "gfet4t7; dur=608"
           ],
           "alt-svc": [
             "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
@@ -123,10 +123,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "{\n  \"candidates\": [\n    {\n      \"content\": {\n        \"parts\": [\n          {\n            \"text\": \"blue\"\n          }\n        ],\n        \"role\": \"model\"\n      },\n      \"finishReason\": \"STOP\",\n      \"index\": 0\n    }\n  ],\n  \"usageMetadata\": {\n    \"promptTokenCount\": 70,\n    \"candidatesTokenCount\": 1,\n    \"totalTokenCount\": 71,\n    \"promptTokensDetails\": [\n      {\n        \"modality\": \"TEXT\",\n        \"tokenCount\": 70\n      }\n    ]\n  },\n  \"modelVersion\": \"models/gemini-2.5-flash-preview-05-20\",\n  \"responseId\": \"aC9UaL-QMq3Uz7IPqMWr0QU\"\n}\n"
+          "string": "{\n  \"candidates\": [\n    {\n      \"content\": {\n        \"parts\": [\n          {\n            \"text\": \"blue\"\n          }\n        ],\n        \"role\": \"model\"\n      },\n      \"finishReason\": \"STOP\",\n      \"index\": 0\n    }\n  ],\n  \"usageMetadata\": {\n    \"promptTokenCount\": 70,\n    \"candidatesTokenCount\": 1,\n    \"totalTokenCount\": 71,\n    \"promptTokensDetails\": [\n      {\n        \"modality\": \"TEXT\",\n        \"tokenCount\": 70\n      }\n    ]\n  },\n  \"modelVersion\": \"gemini-2.5-flash\",\n  \"responseId\": \"HphpaNaxEeqgz7IP1c3FqAc\"\n}\n"
         }
       },
-      "recorded_at": "Thu, 19 Jun 2025 15:40:24 GMT"
+      "recorded_at": "Sat, 05 Jul 2025 21:24:46 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

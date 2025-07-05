@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Thu, 19 Jun 2025 14:31:17 GMT"
+            "Sat, 05 Jul 2025 21:31:02 GMT"
           ],
           "content-type": [
             "application/json"
@@ -45,13 +45,13 @@
             "<OPENAI-ORGANIZATION>"
           ],
           "openai-processing-ms": [
-            "2105"
+            "748"
           ],
           "openai-version": [
             "2020-10-01"
           ],
           "x-envoy-upstream-service-time": [
-            "2116"
+            "752"
           ],
           "x-ratelimit-limit-requests": [
             "10000"
@@ -101,10 +101,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\n  \"id\": \"chatcmpl-BkAaJLVAJ9HawkpYMGj6nZMtvYng6\",\n  \"object\": \"chat.completion\",\n  \"created\": 1750343475,\n  \"model\": \"gpt-4o-2024-08-06\",\n  \"choices\": [\n    {\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": null,\n        \"tool_calls\": [\n          {\n            \"id\": \"call_ArHpHevJi03M2xDITEYj8Wkk\",\n            \"type\": \"function\",\n            \"function\": {\n              \"name\": \"get_weather\",\n              \"arguments\": \"{\\\"city\\\": \\\"London\\\", \\\"country\\\": \\\"United Kingdom\\\"}\"\n            }\n          },\n          {\n            \"id\": \"call_boXcdumnPHpFGfgxxNl0XM1A\",\n            \"type\": \"function\",\n            \"function\": {\n              \"name\": \"get_weather\",\n              \"arguments\": \"{\\\"city\\\": \\\"Paris\\\", \\\"country\\\": \\\"France\\\"}\"\n            }\n          },\n          {\n            \"id\": \"call_JFhB0XiXs6fAMKFjzXvc6ejj\",\n            \"type\": \"function\",\n            \"function\": {\n              \"name\": \"get_weather\",\n              \"arguments\": \"{\\\"city\\\": \\\"Rome\\\", \\\"country\\\": \\\"Italy\\\"}\"\n            }\n          }\n        ],\n        \"refusal\": null,\n        \"annotations\": []\n      },\n      \"logprobs\": null,\n      \"finish_reason\": \"tool_calls\"\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 199,\n    \"completion_tokens\": 71,\n    \"total_tokens\": 270,\n    \"prompt_tokens_details\": {\n      \"cached_tokens\": 0,\n      \"audio_tokens\": 0\n    },\n    \"completion_tokens_details\": {\n      \"reasoning_tokens\": 0,\n      \"audio_tokens\": 0,\n      \"accepted_prediction_tokens\": 0,\n      \"rejected_prediction_tokens\": 0\n    }\n  },\n  \"service_tier\": \"default\",\n  \"system_fingerprint\": \"fp_07871e2ad8\"\n}\n"
+          "string": "{\n  \"id\": \"chatcmpl-Bq4lJzGx2ym64Vw4Ms0TeNNgbUXPx\",\n  \"object\": \"chat.completion\",\n  \"created\": 1751751061,\n  \"model\": \"gpt-4o-2024-08-06\",\n  \"choices\": [\n    {\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": null,\n        \"tool_calls\": [\n          {\n            \"id\": \"call_C1Pl8Z3rms1Tbf6v46r8saCC\",\n            \"type\": \"function\",\n            \"function\": {\n              \"name\": \"get_weather\",\n              \"arguments\": \"{\\\"city\\\": \\\"London\\\", \\\"country\\\": \\\"United Kingdom\\\"}\"\n            }\n          },\n          {\n            \"id\": \"call_EmLxii9Q7VaA9Z0J45G2YbBZ\",\n            \"type\": \"function\",\n            \"function\": {\n              \"name\": \"get_weather\",\n              \"arguments\": \"{\\\"city\\\": \\\"Paris\\\", \\\"country\\\": \\\"France\\\"}\"\n            }\n          },\n          {\n            \"id\": \"call_1sE4mTcDZxGfjKRhT5SOJSfR\",\n            \"type\": \"function\",\n            \"function\": {\n              \"name\": \"get_weather\",\n              \"arguments\": \"{\\\"city\\\": \\\"Rome\\\", \\\"country\\\": \\\"Italy\\\"}\"\n            }\n          }\n        ],\n        \"refusal\": null,\n        \"annotations\": []\n      },\n      \"logprobs\": null,\n      \"finish_reason\": \"tool_calls\"\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 199,\n    \"completion_tokens\": 71,\n    \"total_tokens\": 270,\n    \"prompt_tokens_details\": {\n      \"cached_tokens\": 0,\n      \"audio_tokens\": 0\n    },\n    \"completion_tokens_details\": {\n      \"reasoning_tokens\": 0,\n      \"audio_tokens\": 0,\n      \"accepted_prediction_tokens\": 0,\n      \"rejected_prediction_tokens\": 0\n    }\n  },\n  \"service_tier\": \"default\",\n  \"system_fingerprint\": \"fp_07871e2ad8\"\n}\n"
         }
       },
-      "recorded_at": "Thu, 19 Jun 2025 14:31:17 GMT"
+      "recorded_at": "Sat, 05 Jul 2025 21:31:02 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

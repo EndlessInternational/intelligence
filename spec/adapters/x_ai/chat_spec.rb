@@ -97,9 +97,9 @@ RSpec.describe "#{Intelligence::Adapter[ :x_ai ]} chat requests", :x_ai do
       key                     ENV[ 'XAI_API_KEY' ]
       chat_options do
         model                 'grok-3-mini'
-        max_tokens            1024
+        max_tokens            4096
         temperature           0
-        reasoning_effort      :high
+        reasoning_effort      :low
       end
     end
   end

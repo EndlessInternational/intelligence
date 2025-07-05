@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Thu, 19 Jun 2025 14:30:55 GMT"
+            "Sat, 05 Jul 2025 21:30:41 GMT"
           ],
           "content-type": [
             "application/json"
@@ -45,13 +45,13 @@
             "<OPENAI-ORGANIZATION>"
           ],
           "openai-processing-ms": [
-            "328"
+            "317"
           ],
           "openai-version": [
             "2020-10-01"
           ],
           "x-envoy-upstream-service-time": [
-            "331"
+            "321"
           ],
           "x-ratelimit-limit-requests": [
             "10000"
@@ -101,10 +101,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\n  \"id\": \"chatcmpl-BkAZzgqQSIEOw4NbayRQJu78Vf8W0\",\n  \"object\": \"chat.completion\",\n  \"created\": 1750343455,\n  \"model\": \"gpt-4o-2024-08-06\",\n  \"choices\": [\n    {\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": \"Hello\",\n        \"refusal\": null,\n        \"annotations\": []\n      },\n      \"logprobs\": null,\n      \"finish_reason\": \"stop\"\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 15,\n    \"completion_tokens\": 1,\n    \"total_tokens\": 16,\n    \"prompt_tokens_details\": {\n      \"cached_tokens\": 0,\n      \"audio_tokens\": 0\n    },\n    \"completion_tokens_details\": {\n      \"reasoning_tokens\": 0,\n      \"audio_tokens\": 0,\n      \"accepted_prediction_tokens\": 0,\n      \"rejected_prediction_tokens\": 0\n    }\n  },\n  \"service_tier\": \"default\",\n  \"system_fingerprint\": \"fp_07871e2ad8\"\n}\n"
+          "string": "{\n  \"id\": \"chatcmpl-Bq4kz1UMZx5tzbg5gI68nF9GjeVye\",\n  \"object\": \"chat.completion\",\n  \"created\": 1751751041,\n  \"model\": \"gpt-4o-2024-08-06\",\n  \"choices\": [\n    {\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": \"hello\",\n        \"refusal\": null,\n        \"annotations\": []\n      },\n      \"logprobs\": null,\n      \"finish_reason\": \"stop\"\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 15,\n    \"completion_tokens\": 1,\n    \"total_tokens\": 16,\n    \"prompt_tokens_details\": {\n      \"cached_tokens\": 0,\n      \"audio_tokens\": 0\n    },\n    \"completion_tokens_details\": {\n      \"reasoning_tokens\": 0,\n      \"audio_tokens\": 0,\n      \"accepted_prediction_tokens\": 0,\n      \"rejected_prediction_tokens\": 0\n    }\n  },\n  \"service_tier\": \"default\",\n  \"system_fingerprint\": \"fp_07871e2ad8\"\n}\n"
         }
       },
-      "recorded_at": "Thu, 19 Jun 2025 14:30:55 GMT"
+      "recorded_at": "Sat, 05 Jul 2025 21:30:41 GMT"
     },
     {
       "request": {
@@ -133,7 +133,7 @@
         },
         "headers": {
           "date": [
-            "Thu, 19 Jun 2025 14:30:56 GMT"
+            "Sat, 05 Jul 2025 21:30:42 GMT"
           ],
           "content-type": [
             "application/json"
@@ -151,13 +151,13 @@
             "<OPENAI-ORGANIZATION>"
           ],
           "openai-processing-ms": [
-            "328"
+            "153"
           ],
           "openai-version": [
             "2020-10-01"
           ],
           "x-envoy-upstream-service-time": [
-            "336"
+            "156"
           ],
           "x-ratelimit-limit-requests": [
             "10000"
@@ -169,7 +169,7 @@
             "9999"
           ],
           "x-ratelimit-remaining-tokens": [
-            "29999919"
+            "29999918"
           ],
           "x-ratelimit-reset-requests": [
             "6ms"
@@ -207,10 +207,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\n  \"id\": \"chatcmpl-BkAa0pVs2T0EZBVyjnlfsww9kYGMt\",\n  \"object\": \"chat.completion\",\n  \"created\": 1750343456,\n  \"model\": \"gpt-4o-2024-08-06\",\n  \"choices\": [\n    {\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": \"blue\",\n        \"refusal\": null,\n        \"annotations\": []\n      },\n      \"logprobs\": null,\n      \"finish_reason\": \"stop\"\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 79,\n    \"completion_tokens\": 1,\n    \"total_tokens\": 80,\n    \"prompt_tokens_details\": {\n      \"cached_tokens\": 0,\n      \"audio_tokens\": 0\n    },\n    \"completion_tokens_details\": {\n      \"reasoning_tokens\": 0,\n      \"audio_tokens\": 0,\n      \"accepted_prediction_tokens\": 0,\n      \"rejected_prediction_tokens\": 0\n    }\n  },\n  \"service_tier\": \"default\",\n  \"system_fingerprint\": \"fp_07871e2ad8\"\n}\n"
+          "string": "{\n  \"id\": \"chatcmpl-Bq4kzaeZAXNVZjaID51TRTIhaWkxt\",\n  \"object\": \"chat.completion\",\n  \"created\": 1751751041,\n  \"model\": \"gpt-4o-2024-08-06\",\n  \"choices\": [\n    {\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": \"blue\",\n        \"refusal\": null,\n        \"annotations\": []\n      },\n      \"logprobs\": null,\n      \"finish_reason\": \"stop\"\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 79,\n    \"completion_tokens\": 1,\n    \"total_tokens\": 80,\n    \"prompt_tokens_details\": {\n      \"cached_tokens\": 0,\n      \"audio_tokens\": 0\n    },\n    \"completion_tokens_details\": {\n      \"reasoning_tokens\": 0,\n      \"audio_tokens\": 0,\n      \"accepted_prediction_tokens\": 0,\n      \"rejected_prediction_tokens\": 0\n    }\n  },\n  \"service_tier\": \"default\",\n  \"system_fingerprint\": \"fp_07871e2ad8\"\n}\n"
         }
       },
-      "recorded_at": "Thu, 19 Jun 2025 14:30:56 GMT"
+      "recorded_at": "Sat, 05 Jul 2025 21:30:41 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

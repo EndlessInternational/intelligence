@@ -27,19 +27,22 @@
         },
         "headers": {
           "date": [
-            "Sun, 08 Jun 2025 22:54:12 GMT"
+            "Sat, 05 Jul 2025 21:26:58 GMT"
           ],
           "content-type": [
             "application/json; charset=utf-8"
           ],
           "content-length": [
-            "81"
+            "25"
           ],
           "connection": [
             "keep-alive"
           ],
-          "www-authenticate": [
-            "Key"
+          "mistral-correlation-id": [
+            "0197dc7c-3904-7243-a0e9-47e6d98d25ee"
+          ],
+          "x-kong-request-id": [
+            "0197dc7c-3904-7243-a0e9-47e6d98d25ee"
           ],
           "access-control-allow-origin": [
             "*"
@@ -47,14 +50,14 @@
           "x-kong-response-latency": [
             "6"
           ],
-          "x-kong-request-id": [
-            "ceab1a45f2fad57b8a69b50b54583b51"
-          ],
           "cf-cache-status": [
             "DYNAMIC"
           ],
           "set-cookie": [
             "<SET-COOKIE>"
+          ],
+          "strict-transport-security": [
+            "max-age=15552000; includeSubDomains"
           ],
           "server": [
             "cloudflare"
@@ -68,10 +71,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "{\n  \"message\":\"Unauthorized\",\n  \"request_id\":\"ceab1a45f2fad57b8a69b50b54583b51\"\n}"
+          "string": "{\"detail\":\"Unauthorized\"}"
         }
       },
-      "recorded_at": "Sun, 08 Jun 2025 22:54:12 GMT"
+      "recorded_at": "Sat, 05 Jul 2025 21:26:58 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"
