@@ -5,9 +5,10 @@ RSpec.shared_examples 'chat requests with thought' do | options = {} |
   context 'where there is a message which requires thought' do
     it 'responds with the appropriate generated text' do 
 
-      conversation = create_conversation(         
-        "In a 30-60-90 triangle, the length of the hypotenuse is 6. " +
-        "What is the length of the shortest side?\n"  
+      conversation = create_conversation(   
+        "Given a triangle ABC with angle A 60 degrees and angle B 40 degrees, extend side BC " + 
+        "through C. Now create triangle DAB such that DC is congruent to AB. What is the angle " +
+        "measure of angle ADB?\n" 
       )     
       response = create_and_make_chat_request( send( options[ :adapter ] || :adapter ), conversation )
 
