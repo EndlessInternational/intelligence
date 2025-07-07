@@ -104,6 +104,7 @@ module Intelligence
             result[ :messages ].concat( tool_results.map { | tool_result |
               {
                 role: :tool, 
+                name: tool_result[ :tool_name ],
                 tool_call_id: tool_result[ :tool_call_id ],
                 content: tool_result[ :tool_result ]
               }
@@ -202,7 +203,7 @@ module Intelligence
           [ object, required.compact  ]
         end
 
-        tools&.map do | tool |
+        Utilities.deep_dup( tools )&.map do | tool |
           function = { 
             type: 'function',
             function: {
@@ -216,12 +217,13 @@ module Intelligence
               properties_array_to_object.call( tool[ :properties ] ) 
             function[ :function ][ :parameters ] = {
               type: 'object',
-              properties: properties_object 
+              properties: properties_object,
+              required: []
             }
             function[ :function ][ :parameters ][ :required ] = properties_required \
               if properties_required.any?
           else
-            function[ :function ][ :parameters ] = {}
+            function[ :function ][ :parameters ] = { type: 'object', properties: {}, required: [] }
           end
           function 
         end

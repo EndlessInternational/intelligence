@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Sat, 05 Jul 2025 21:26:06 GMT"
+            "Mon, 07 Jul 2025 01:50:16 GMT"
           ],
           "content-type": [
             "application/json"
@@ -39,25 +39,25 @@
             "keep-alive"
           ],
           "mistral-correlation-id": [
-            "0197dc7b-6d34-7c5a-a068-4e1d22dd7f0c"
+            "0197e293-99f2-7ca4-9379-ca7c3ea727e7"
           ],
           "x-kong-request-id": [
-            "0197dc7b-6d34-7c5a-a068-4e1d22dd7f0c"
+            "0197e293-99f2-7ca4-9379-ca7c3ea727e7"
           ],
           "x-envoy-upstream-service-time": [
-            "394"
+            "2624"
           ],
           "x-ratelimit-limit-tokens-minute": [
             "2000000"
           ],
           "x-ratelimit-remaining-tokens-minute": [
-            "1999901"
+            "1999865"
           ],
           "x-ratelimit-limit-tokens-month": [
             "10000000000"
           ],
           "x-ratelimit-remaining-tokens-month": [
-            "9999885623"
+            "9999888753"
           ],
           "x-ratelimit-tokens-query-cost": [
             "57"
@@ -72,10 +72,10 @@
             "*"
           ],
           "x-kong-upstream-latency": [
-            "396"
+            "2624"
           ],
           "x-kong-proxy-latency": [
-            "7"
+            "8"
           ],
           "cf-cache-status": [
             "DYNAMIC"
@@ -101,10 +101,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\"id\":\"190cff8034364e2fa53a1e3e092e1cd7\",\"object\":\"chat.completion\",\"created\":1751750765,\"model\":\"mistral-large-latest\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"tool_calls\":null,\"content\":\"hello\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":54,\"total_tokens\":57,\"completion_tokens\":3}}"
+          "string": "{\"id\":\"9ce992644acd4c05bb3bc3f1fcfdc014\",\"object\":\"chat.completion\",\"created\":1751853015,\"model\":\"mistral-large-latest\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"tool_calls\":null,\"content\":\"hello\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":54,\"total_tokens\":57,\"completion_tokens\":3}}"
         }
       },
-      "recorded_at": "Sat, 05 Jul 2025 21:26:06 GMT"
+      "recorded_at": "Mon, 07 Jul 2025 01:50:16 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

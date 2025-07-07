@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Sat, 05 Jul 2025 21:26:55 GMT"
+            "Mon, 07 Jul 2025 01:50:51 GMT"
           ],
           "content-type": [
             "application/json"
@@ -39,40 +39,40 @@
             "keep-alive"
           ],
           "mistral-correlation-id": [
-            "0197dc7c-2cb7-70dd-b09e-87e5a895b1ed"
+            "0197e294-2431-721c-b460-27308d6510b3"
           ],
           "x-kong-request-id": [
-            "0197dc7c-2cb7-70dd-b09e-87e5a895b1ed"
+            "0197e294-2431-721c-b460-27308d6510b3"
           ],
           "x-envoy-upstream-service-time": [
-            "911"
+            "2221"
           ],
           "x-ratelimit-limit-tokens-minute": [
             "2000000"
           ],
           "x-ratelimit-remaining-tokens-minute": [
-            "1992587"
+            "1992484"
           ],
           "x-ratelimit-limit-tokens-month": [
             "10000000000"
           ],
           "x-ratelimit-remaining-tokens-month": [
-            "9999878309"
+            "9999881372"
           ],
           "x-ratelimit-tokens-query-cost": [
-            "336"
+            "341"
           ],
           "x-ratelimit-limit-req-10-second": [
             "60"
           ],
           "x-ratelimit-remaining-req-10-second": [
-            "57"
+            "53"
           ],
           "access-control-allow-origin": [
             "*"
           ],
           "x-kong-upstream-latency": [
-            "912"
+            "2222"
           ],
           "x-kong-proxy-latency": [
             "7"
@@ -101,10 +101,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\"id\":\"34b705091f3c4e8cb55110a0ef3f68fa\",\"object\":\"chat.completion\",\"created\":1751750814,\"model\":\"mistral-large-latest\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"tool_calls\":[{\"id\":\"WxVxE3NUe\",\"function\":{\"name\":\"get_weather\",\"arguments\":\"{\\\"location\\\": {\\\"city\\\": \\\"Seattle\\\", \\\"state\\\": \\\"Washington\\\"}}\"},\"index\":0}],\"content\":\"\"},\"finish_reason\":\"tool_calls\"}],\"usage\":{\"prompt_tokens\":302,\"total_tokens\":336,\"completion_tokens\":34}}"
+          "string": "{\"id\":\"c6b46a302ad0430e8e63fd9e0cef5450\",\"object\":\"chat.completion\",\"created\":1751853048,\"model\":\"mistral-large-latest\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"tool_calls\":[{\"id\":\"H0zDrnTCD\",\"function\":{\"name\":\"get_weather\",\"arguments\":\"{\\\"location\\\": {\\\"city\\\": \\\"Seattle\\\", \\\"state\\\": \\\"WA\\\", \\\"country\\\": \\\"USA\\\"}}\"},\"index\":0}],\"content\":\"\"},\"finish_reason\":\"tool_calls\"}],\"usage\":{\"prompt_tokens\":302,\"total_tokens\":341,\"completion_tokens\":39}}"
         }
       },
-      "recorded_at": "Sat, 05 Jul 2025 21:26:55 GMT"
+      "recorded_at": "Mon, 07 Jul 2025 01:50:51 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

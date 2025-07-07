@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Sat, 05 Jul 2025 21:26:13 GMT"
+            "Mon, 07 Jul 2025 01:50:20 GMT"
           ],
           "content-type": [
             "application/json"
@@ -39,25 +39,25 @@
             "keep-alive"
           ],
           "mistral-correlation-id": [
-            "0197dc7b-8aab-7c50-b1cf-626c12fd313f"
+            "0197e293-b401-79b2-a7fa-590c7aa029bf"
           ],
           "x-kong-request-id": [
-            "0197dc7b-8aab-7c50-b1cf-626c12fd313f"
+            "0197e293-b401-79b2-a7fa-590c7aa029bf"
           ],
           "x-envoy-upstream-service-time": [
-            "407"
+            "165"
           ],
           "x-ratelimit-limit-tokens-minute": [
             "2000000"
           ],
           "x-ratelimit-remaining-tokens-minute": [
-            "1999713"
+            "1999712"
           ],
           "x-ratelimit-limit-tokens-month": [
             "10000000000"
           ],
           "x-ratelimit-remaining-tokens-month": [
-            "9999885435"
+            "9999888600"
           ],
           "x-ratelimit-tokens-query-cost": [
             "13"
@@ -72,10 +72,10 @@
             "*"
           ],
           "x-kong-upstream-latency": [
-            "407"
+            "166"
           ],
           "x-kong-proxy-latency": [
-            "7"
+            "6"
           ],
           "cf-cache-status": [
             "DYNAMIC"
@@ -101,10 +101,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\"id\":\"2e79eb97bd3f4ede9412e0d752277250\",\"object\":\"chat.completion\",\"created\":1751750773,\"model\":\"mistral-large-latest\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"tool_calls\":null,\"content\":\"Hello\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":11,\"total_tokens\":13,\"completion_tokens\":2}}"
+          "string": "{\"id\":\"fdaf93376ebb4d559e565fba1deec64c\",\"object\":\"chat.completion\",\"created\":1751853020,\"model\":\"mistral-large-latest\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"tool_calls\":null,\"content\":\"Hello\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":11,\"total_tokens\":13,\"completion_tokens\":2}}"
         }
       },
-      "recorded_at": "Sat, 05 Jul 2025 21:26:13 GMT"
+      "recorded_at": "Mon, 07 Jul 2025 01:50:20 GMT"
     },
     {
       "request": {
@@ -133,7 +133,7 @@
         },
         "headers": {
           "date": [
-            "Sat, 05 Jul 2025 21:26:14 GMT"
+            "Mon, 07 Jul 2025 01:50:24 GMT"
           ],
           "content-type": [
             "application/json"
@@ -145,25 +145,25 @@
             "keep-alive"
           ],
           "mistral-correlation-id": [
-            "0197dc7b-8e8e-79f1-a347-9caeed63dea5"
+            "0197e293-b60d-799b-a2a0-d7b7559f0427"
           ],
           "x-kong-request-id": [
-            "0197dc7b-8e8e-79f1-a347-9caeed63dea5"
+            "0197e293-b60d-799b-a2a0-d7b7559f0427"
           ],
           "x-envoy-upstream-service-time": [
-            "201"
+            "3572"
           ],
           "x-ratelimit-limit-tokens-minute": [
             "2000000"
           ],
           "x-ratelimit-remaining-tokens-minute": [
-            "1999656"
+            "1999655"
           ],
           "x-ratelimit-limit-tokens-month": [
             "10000000000"
           ],
           "x-ratelimit-remaining-tokens-month": [
-            "9999885378"
+            "9999888543"
           ],
           "x-ratelimit-tokens-query-cost": [
             "57"
@@ -172,16 +172,16 @@
             "60"
           ],
           "x-ratelimit-remaining-req-10-second": [
-            "51"
+            "54"
           ],
           "access-control-allow-origin": [
             "*"
           ],
           "x-kong-upstream-latency": [
-            "202"
+            "3573"
           ],
           "x-kong-proxy-latency": [
-            "7"
+            "5"
           ],
           "cf-cache-status": [
             "DYNAMIC"
@@ -207,10 +207,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\"id\":\"96d4b8ad67ba4efdaafb18c12c4de3a1\",\"object\":\"chat.completion\",\"created\":1751750774,\"model\":\"mistral-large-latest\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"tool_calls\":null,\"content\":\"hello\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":54,\"total_tokens\":57,\"completion_tokens\":3}}"
+          "string": "{\"id\":\"815a7fd3be4c4dd1b0227cc677635a99\",\"object\":\"chat.completion\",\"created\":1751853020,\"model\":\"mistral-large-latest\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"tool_calls\":null,\"content\":\"hello\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":54,\"total_tokens\":57,\"completion_tokens\":3}}"
         }
       },
-      "recorded_at": "Sat, 05 Jul 2025 21:26:14 GMT"
+      "recorded_at": "Mon, 07 Jul 2025 01:50:24 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

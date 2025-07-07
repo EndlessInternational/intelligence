@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Sat, 05 Jul 2025 21:26:58 GMT"
+            "Mon, 07 Jul 2025 01:50:55 GMT"
           ],
           "content-type": [
             "application/json"
@@ -39,19 +39,19 @@
             "keep-alive"
           ],
           "mistral-correlation-id": [
-            "0197dc7c-3b78-7ba2-80d3-0f046da1e7c4"
+            "0197e294-3e84-7ee8-a42c-71b19ddaf27e"
           ],
           "x-kong-request-id": [
-            "0197dc7c-3b78-7ba2-80d3-0f046da1e7c4"
+            "0197e294-3e84-7ee8-a42c-71b19ddaf27e"
           ],
           "x-envoy-upstream-service-time": [
-            "62"
+            "57"
           ],
           "access-control-allow-origin": [
             "*"
           ],
           "x-kong-upstream-latency": [
-            "63"
+            "58"
           ],
           "x-kong-proxy-latency": [
             "7"
@@ -80,7 +80,7 @@
           "string": "{\"object\":\"error\",\"message\":\"Invalid model: invalid\",\"type\":\"invalid_model\",\"param\":null,\"code\":\"1500\"}"
         }
       },
-      "recorded_at": "Sat, 05 Jul 2025 21:26:58 GMT"
+      "recorded_at": "Mon, 07 Jul 2025 01:50:55 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

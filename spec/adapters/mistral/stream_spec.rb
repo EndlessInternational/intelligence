@@ -62,16 +62,19 @@ RSpec.describe "#{Intelligence::Adapter[ :mistral ]} stream requests", :mistral 
   end
 
   include_examples 'stream requests'
+  include_examples 'stream requests without alternating roles'
   include_examples 'stream requests with token limit exceeded',
                    adapter: :adapter_with_limited_max_tokens
   include_examples 'stream requests with stop sequence',
                    adapter: :adapter_with_stop_sequence  
+
   include_examples 'stream requests with binary encoded images',
                    adapter: :vision_adapter
   include_examples 'stream requests with file images',
                    adapter: :vision_adapter
-  include_examples 'stream requests without alternating roles'
+
   include_examples 'stream requests with tools'
   include_examples 'stream requests with parallel tools'
+  include_examples 'stream requests with tools multiturn'
 
 end

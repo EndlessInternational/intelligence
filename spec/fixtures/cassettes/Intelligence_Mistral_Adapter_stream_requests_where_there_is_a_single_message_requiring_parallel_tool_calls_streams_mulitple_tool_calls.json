@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Sat, 05 Jul 2025 21:28:53 GMT"
+            "Mon, 07 Jul 2025 01:52:48 GMT"
           ],
           "content-type": [
             "text/event-stream; charset=utf-8"
@@ -39,19 +39,19 @@
             "keep-alive"
           ],
           "mistral-correlation-id": [
-            "0197dc7d-f5e6-7a6a-9d12-f2e5b3c2faa2"
+            "0197e295-ed2d-75d4-b07c-8603e8dd1489"
           ],
           "x-kong-request-id": [
-            "0197dc7d-f5e6-7a6a-9d12-f2e5b3c2faa2"
+            "0197e295-ed2d-75d4-b07c-8603e8dd1489"
           ],
           "x-envoy-upstream-service-time": [
-            "1206"
+            "2962"
           ],
           "access-control-allow-origin": [
             "*"
           ],
           "x-kong-upstream-latency": [
-            "1207"
+            "2963"
           ],
           "x-kong-proxy-latency": [
             "6"
@@ -77,10 +77,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "data: {\"id\":\"2d66ac57b55f4fc7a7a7bc0341711d6b\",\"object\":\"chat.completion.chunk\",\"created\":1751750931,\"model\":\"mistral-large-latest\",\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"\"},\"finish_reason\":null}]}\n\ndata: {\"id\":\"2d66ac57b55f4fc7a7a7bc0341711d6b\",\"object\":\"chat.completion.chunk\",\"created\":1751750931,\"model\":\"mistral-large-latest\",\"choices\":[{\"index\":0,\"delta\":{\"tool_calls\":[{\"id\":\"LHg2J6x5D\",\"function\":{\"name\":\"get_weather\",\"arguments\":\"{\\\"city\\\": \\\"London\\\"}\"},\"index\":0},{\"id\":\"weAyGpu8Y\",\"function\":{\"name\":\"get_weather\",\"arguments\":\"{\\\"city\\\": \\\"Paris\\\"}\"},\"index\":1},{\"id\":\"2ABV85U6Y\",\"function\":{\"name\":\"get_weather\",\"arguments\":\"{\\\"city\\\": \\\"Rome\\\"}\"},\"index\":2}]},\"finish_reason\":\"tool_calls\"}],\"usage\":{\"prompt_tokens\":249,\"total_tokens\":312,\"completion_tokens\":63}}\n\ndata: [DONE]\n\n"
+          "string": "data: {\"id\":\"c0fe7e8da8d24c0fa8b68ca1d79ebcdb\",\"object\":\"chat.completion.chunk\",\"created\":1751853165,\"model\":\"mistral-large-latest\",\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"\"},\"finish_reason\":null}]}\n\ndata: {\"id\":\"c0fe7e8da8d24c0fa8b68ca1d79ebcdb\",\"object\":\"chat.completion.chunk\",\"created\":1751853165,\"model\":\"mistral-large-latest\",\"choices\":[{\"index\":0,\"delta\":{\"tool_calls\":[{\"id\":\"yKl4qgOPh\",\"function\":{\"name\":\"get_weather\",\"arguments\":\"{\\\"city\\\": \\\"London\\\"}\"},\"index\":0},{\"id\":\"rVSkC4KDW\",\"function\":{\"name\":\"get_weather\",\"arguments\":\"{\\\"city\\\": \\\"Paris\\\"}\"},\"index\":1},{\"id\":\"5e2L3GncC\",\"function\":{\"name\":\"get_weather\",\"arguments\":\"{\\\"city\\\": \\\"Rome\\\"}\"},\"index\":2}]},\"finish_reason\":\"tool_calls\"}],\"usage\":{\"prompt_tokens\":249,\"total_tokens\":312,\"completion_tokens\":63}}\n\ndata: [DONE]\n\n"
         }
       },
-      "recorded_at": "Sat, 05 Jul 2025 21:28:53 GMT"
+      "recorded_at": "Mon, 07 Jul 2025 01:52:48 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

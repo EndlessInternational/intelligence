@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Sat, 05 Jul 2025 21:26:20 GMT"
+            "Mon, 07 Jul 2025 01:50:29 GMT"
           ],
           "content-type": [
             "application/json"
@@ -39,25 +39,25 @@
             "keep-alive"
           ],
           "mistral-correlation-id": [
-            "0197dc7b-a29b-7c2a-88bc-9b66f8764eeb"
+            "0197e293-d34e-7b48-ada4-744064396f12"
           ],
           "x-kong-request-id": [
-            "0197dc7b-a29b-7c2a-88bc-9b66f8764eeb"
+            "0197e293-d34e-7b48-ada4-744064396f12"
           ],
           "x-envoy-upstream-service-time": [
-            "757"
+            "803"
           ],
           "x-ratelimit-limit-tokens-minute": [
             "2000000"
           ],
           "x-ratelimit-remaining-tokens-minute": [
-            "1999376"
+            "1999375"
           ],
           "x-ratelimit-limit-tokens-month": [
             "10000000000"
           ],
           "x-ratelimit-remaining-tokens-month": [
-            "9999885098"
+            "9999888263"
           ],
           "x-ratelimit-tokens-query-cost": [
             "111"
@@ -66,13 +66,13 @@
             "60"
           ],
           "x-ratelimit-remaining-req-10-second": [
-            "52"
+            "54"
           ],
           "access-control-allow-origin": [
             "*"
           ],
           "x-kong-upstream-latency": [
-            "758"
+            "804"
           ],
           "x-kong-proxy-latency": [
             "6"
@@ -101,10 +101,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\"id\":\"3e59dfee8fce4d6aa336965a9dcb9acc\",\"object\":\"chat.completion\",\"created\":1751750779,\"model\":\"mistral-large-latest\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"tool_calls\":null,\"content\":\"one\\ntwo\\nthree\\nfour\\nfive\\nsix\\nseven\\neight\\nnine\\nten\\neleven\\n\"},\"finish_reason\":\"length\"}],\"usage\":{\"prompt_tokens\":87,\"total_tokens\":111,\"completion_tokens\":24}}"
+          "string": "{\"id\":\"9a1ddd956df04a0cafc37117404b77b3\",\"object\":\"chat.completion\",\"created\":1751853028,\"model\":\"mistral-large-latest\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"tool_calls\":null,\"content\":\"one\\ntwo\\nthree\\nfour\\nfive\\nsix\\nseven\\neight\\nnine\\nten\\neleven\\n\"},\"finish_reason\":\"length\"}],\"usage\":{\"prompt_tokens\":87,\"total_tokens\":111,\"completion_tokens\":24}}"
         }
       },
-      "recorded_at": "Sat, 05 Jul 2025 21:26:20 GMT"
+      "recorded_at": "Mon, 07 Jul 2025 01:50:29 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

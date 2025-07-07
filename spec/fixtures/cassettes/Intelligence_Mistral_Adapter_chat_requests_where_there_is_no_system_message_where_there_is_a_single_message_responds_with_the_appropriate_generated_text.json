@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Sat, 05 Jul 2025 21:26:04 GMT"
+            "Mon, 07 Jul 2025 01:50:12 GMT"
           ],
           "content-type": [
             "application/json"
@@ -39,28 +39,28 @@
             "keep-alive"
           ],
           "mistral-correlation-id": [
-            "0197dc7b-675b-7817-a6f1-32ac4cd662cb"
+            "0197e293-9056-7fd5-829b-97297e45516a"
           ],
           "x-kong-request-id": [
-            "0197dc7b-675b-7817-a6f1-32ac4cd662cb"
+            "0197e293-9056-7fd5-829b-97297e45516a"
           ],
           "x-envoy-upstream-service-time": [
-            "224"
+            "1221"
           ],
           "x-ratelimit-limit-tokens-minute": [
             "2000000"
           ],
           "x-ratelimit-remaining-tokens-minute": [
-            "1999987"
+            "1999951"
           ],
           "x-ratelimit-limit-tokens-month": [
             "10000000000"
           ],
           "x-ratelimit-remaining-tokens-month": [
-            "9999885709"
+            "9999888839"
           ],
           "x-ratelimit-tokens-query-cost": [
-            "13"
+            "49"
           ],
           "x-ratelimit-limit-req-10-second": [
             "60"
@@ -72,10 +72,10 @@
             "*"
           ],
           "x-kong-upstream-latency": [
-            "225"
+            "1222"
           ],
           "x-kong-proxy-latency": [
-            "7"
+            "6"
           ],
           "cf-cache-status": [
             "DYNAMIC"
@@ -101,10 +101,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\"id\":\"f163d1d6c6d74173a984988b6c1a623b\",\"object\":\"chat.completion\",\"created\":1751750764,\"model\":\"mistral-large-latest\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"tool_calls\":null,\"content\":\"Hello\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":11,\"total_tokens\":13,\"completion_tokens\":2}}"
+          "string": "{\"id\":\"7f42ae3721704ed7ba1e9b6017dbffec\",\"object\":\"chat.completion\",\"created\":1751853011,\"model\":\"mistral-large-latest\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"tool_calls\":null,\"content\":\"Hello! It seems like you've asked me to respond with only the word 'hello', but I've already said too much. So, here it is:\\n\\nhello\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":11,\"total_tokens\":49,\"completion_tokens\":38}}"
         }
       },
-      "recorded_at": "Sat, 05 Jul 2025 21:26:04 GMT"
+      "recorded_at": "Mon, 07 Jul 2025 01:50:12 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"
