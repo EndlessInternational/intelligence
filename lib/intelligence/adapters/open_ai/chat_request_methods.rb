@@ -175,7 +175,7 @@ module Intelligence
           [ object, required.compact  ]
         end
 
-        tools&.map do | tool |
+        Utilities.deep_dup( tools )&.map do | tool |
           function = { 
             type: 'function',
             name: tool[ :name ],
