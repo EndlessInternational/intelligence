@@ -146,6 +146,7 @@ RSpec.describe "#{Intelligence::Adapter[ :x_ai ]} chat requests", :x_ai do
   include_examples 'chat requests with adapter tools'
   include_examples 'chat requests with complex tools'
   include_examples 'chat requests with parallel tools'
+  include_examples 'chat requests with tools multiturn'
 
   include_examples 'chat requests with invalid key', 
                    error_type: 'invalid_request_error'
