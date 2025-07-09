@@ -3,70 +3,6 @@
     {
       "request": {
         "method": "post",
-        "uri": "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=<KEY>",
-        "body": {
-          "encoding": "UTF-8",
-          "string": "{\"generationConfig\":{\"maxOutputTokens\":64,\"temperature\":0.0},\"systemInstruction\":{\"role\":\"user\",\"parts\":[{\"text\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"}]},\"contents\":[{\"role\":\"user\",\"parts\":[{\"text\":\"respond only with the word 'hello'\\n\"}]}]}"
-        },
-        "headers": {
-          "User-Agent": [
-            "Faraday v2.13.1"
-          ],
-          "Content-Type": [
-            "application/json"
-          ]
-        }
-      },
-      "response": {
-        "status": {
-          "code": 200,
-          "message": "OK"
-        },
-        "headers": {
-          "content-type": [
-            "application/json; charset=UTF-8"
-          ],
-          "vary": [
-            "Origin, X-Origin, Referer"
-          ],
-          "content-encoding": [
-            "gzip"
-          ],
-          "date": [
-            "Sun, 08 Jun 2025 22:50:17 GMT"
-          ],
-          "server": [
-            "scaffolding on HTTPServer2"
-          ],
-          "x-xss-protection": [
-            "0"
-          ],
-          "x-frame-options": [
-            "SAMEORIGIN"
-          ],
-          "x-content-type-options": [
-            "nosniff"
-          ],
-          "server-timing": [
-            "gfet4t7; dur=358"
-          ],
-          "alt-svc": [
-            "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
-          ],
-          "transfer-encoding": [
-            "chunked"
-          ]
-        },
-        "body": {
-          "encoding": "UTF-8",
-          "string": "{\n  \"candidates\": [\n    {\n      \"content\": {\n        \"parts\": [\n          {\n            \"text\": \"hello\\n\"\n          }\n        ],\n        \"role\": \"model\"\n      },\n      \"finishReason\": \"STOP\",\n      \"avgLogprobs\": -0.00040294724749401212\n    }\n  ],\n  \"usageMetadata\": {\n    \"promptTokenCount\": 52,\n    \"candidatesTokenCount\": 2,\n    \"totalTokenCount\": 54,\n    \"promptTokensDetails\": [\n      {\n        \"modality\": \"TEXT\",\n        \"tokenCount\": 52\n      }\n    ],\n    \"candidatesTokensDetails\": [\n      {\n        \"modality\": \"TEXT\",\n        \"tokenCount\": 2\n      }\n    ]\n  },\n  \"modelVersion\": \"gemini-2.0-flash\",\n  \"responseId\": \"qRNGaIPRBK3mld8Pkba3wQg\"\n}\n"
-        }
-      },
-      "recorded_at": "Sun, 08 Jun 2025 22:50:17 GMT"
-    },
-    {
-      "request": {
-        "method": "post",
         "uri": "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=<KEY>",
         "body": {
           "encoding": "UTF-8",
@@ -97,7 +33,7 @@
             "gzip"
           ],
           "date": [
-            "Sat, 05 Jul 2025 21:24:45 GMT"
+            "Wed, 09 Jul 2025 21:17:05 GMT"
           ],
           "server": [
             "scaffolding on HTTPServer2"
@@ -112,7 +48,7 @@
             "nosniff"
           ],
           "server-timing": [
-            "gfet4t7; dur=285"
+            "gfet4t7; dur=384"
           ],
           "alt-svc": [
             "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
@@ -123,10 +59,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "{\n  \"candidates\": [\n    {\n      \"content\": {\n        \"parts\": [\n          {\n            \"text\": \"hello\"\n          }\n        ],\n        \"role\": \"model\"\n      },\n      \"finishReason\": \"STOP\",\n      \"index\": 0\n    }\n  ],\n  \"usageMetadata\": {\n    \"promptTokenCount\": 54,\n    \"candidatesTokenCount\": 1,\n    \"totalTokenCount\": 55,\n    \"promptTokensDetails\": [\n      {\n        \"modality\": \"TEXT\",\n        \"tokenCount\": 54\n      }\n    ]\n  },\n  \"modelVersion\": \"gemini-2.5-flash\",\n  \"responseId\": \"HZhpaLilJqLPz7IP4oqSwAU\"\n}\n"
+          "string": "{\n  \"candidates\": [\n    {\n      \"content\": {\n        \"parts\": [\n          {\n            \"text\": \"hello\"\n          }\n        ],\n        \"role\": \"model\"\n      },\n      \"finishReason\": \"STOP\",\n      \"index\": 0\n    }\n  ],\n  \"usageMetadata\": {\n    \"promptTokenCount\": 54,\n    \"candidatesTokenCount\": 1,\n    \"totalTokenCount\": 55,\n    \"promptTokensDetails\": [\n      {\n        \"modality\": \"TEXT\",\n        \"tokenCount\": 54\n      }\n    ]\n  },\n  \"modelVersion\": \"gemini-2.5-flash\",\n  \"responseId\": \"UdxuaOqhMJTBqtsP6KnycA\"\n}\n"
         }
       },
-      "recorded_at": "Sat, 05 Jul 2025 21:24:45 GMT"
+      "recorded_at": "Wed, 09 Jul 2025 21:17:05 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

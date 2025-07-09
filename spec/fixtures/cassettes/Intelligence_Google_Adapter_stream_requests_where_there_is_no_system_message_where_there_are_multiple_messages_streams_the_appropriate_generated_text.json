@@ -3,70 +3,6 @@
     {
       "request": {
         "method": "post",
-        "uri": "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:streamGenerateContent?alt=sse&key=<KEY>",
-        "body": {
-          "encoding": "UTF-8",
-          "string": "{\"generationConfig\":{\"maxOutputTokens\":16,\"temperature\":0.0},\"contents\":[{\"role\":\"user\",\"parts\":[{\"text\":\"the secret word is 'blue'\\n\"}]},{\"role\":\"model\",\"parts\":[{\"text\":\"ok\\n\"}]},{\"role\":\"user\",\"parts\":[{\"text\":\"what is the secret word?\\nrespond with the word only\\n\"}]}]}"
-        },
-        "headers": {
-          "User-Agent": [
-            "Faraday v2.13.1"
-          ],
-          "Content-Type": [
-            "application/json"
-          ]
-        }
-      },
-      "response": {
-        "status": {
-          "code": 200,
-          "message": "OK"
-        },
-        "headers": {
-          "content-type": [
-            "text/event-stream"
-          ],
-          "content-disposition": [
-            "attachment"
-          ],
-          "vary": [
-            "Origin, X-Origin, Referer"
-          ],
-          "transfer-encoding": [
-            "chunked"
-          ],
-          "date": [
-            "Sun, 08 Jun 2025 22:51:02 GMT"
-          ],
-          "server": [
-            "scaffolding on HTTPServer2"
-          ],
-          "x-xss-protection": [
-            "0"
-          ],
-          "x-frame-options": [
-            "SAMEORIGIN"
-          ],
-          "x-content-type-options": [
-            "nosniff"
-          ],
-          "server-timing": [
-            "gfet4t7; dur=451"
-          ],
-          "alt-svc": [
-            "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
-          ]
-        },
-        "body": {
-          "encoding": "UTF-8",
-          "string": "data: {\"candidates\": [{\"content\": {\"parts\": [{\"text\": \"blue\"}],\"role\": \"model\"}}],\"usageMetadata\": {\"promptTokenCount\": 26,\"totalTokenCount\": 26,\"promptTokensDetails\": [{\"modality\": \"TEXT\",\"tokenCount\": 26}]},\"modelVersion\": \"gemini-1.5-pro-002\",\"responseId\": \"1RNGaN_hMIi87dcPmeaIkA0\"}\r\n\r\ndata: {\"candidates\": [{\"content\": {\"parts\": [{\"text\": \"\\n\"}],\"role\": \"model\"},\"finishReason\": \"STOP\"}],\"usageMetadata\": {\"promptTokenCount\": 23,\"candidatesTokenCount\": 2,\"totalTokenCount\": 25,\"promptTokensDetails\": [{\"modality\": \"TEXT\",\"tokenCount\": 23}],\"candidatesTokensDetails\": [{\"modality\": \"TEXT\",\"tokenCount\": 2}]},\"modelVersion\": \"gemini-1.5-pro-002\",\"responseId\": \"1RNGaN_hMIi87dcPmeaIkA0\"}\r\n\r\n"
-        }
-      },
-      "recorded_at": "Sun, 08 Jun 2025 22:51:02 GMT"
-    },
-    {
-      "request": {
-        "method": "post",
         "uri": "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:streamGenerateContent?alt=sse&key=<KEY>",
         "body": {
           "encoding": "UTF-8",
@@ -100,7 +36,7 @@
             "chunked"
           ],
           "date": [
-            "Sat, 05 Jul 2025 21:25:16 GMT"
+            "Wed, 09 Jul 2025 21:17:38 GMT"
           ],
           "server": [
             "scaffolding on HTTPServer2"
@@ -115,7 +51,7 @@
             "nosniff"
           ],
           "server-timing": [
-            "gfet4t7; dur=485"
+            "gfet4t7; dur=455"
           ],
           "alt-svc": [
             "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
@@ -123,10 +59,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "data: {\"candidates\": [{\"content\": {\"parts\": [{\"text\": \"blue\"}],\"role\": \"model\"},\"finishReason\": \"STOP\",\"index\": 0}],\"usageMetadata\": {\"promptTokenCount\": 26,\"candidatesTokenCount\": 1,\"totalTokenCount\": 27,\"promptTokensDetails\": [{\"modality\": \"TEXT\",\"tokenCount\": 26}]},\"modelVersion\": \"gemini-2.5-flash\",\"responseId\": \"PJhpaOueL6CBmtkPwICZ0Aw\"}\r\n\r\n"
+          "string": "data: {\"candidates\": [{\"content\": {\"parts\": [{\"text\": \"blue\"}],\"role\": \"model\"},\"finishReason\": \"STOP\",\"index\": 0}],\"usageMetadata\": {\"promptTokenCount\": 26,\"candidatesTokenCount\": 1,\"totalTokenCount\": 27,\"promptTokensDetails\": [{\"modality\": \"TEXT\",\"tokenCount\": 26}]},\"modelVersion\": \"gemini-2.5-flash\",\"responseId\": \"ctxuaL-4LMmDmtkP9Jig0Q8\"}\r\n\r\n"
         }
       },
-      "recorded_at": "Sat, 05 Jul 2025 21:25:16 GMT"
+      "recorded_at": "Wed, 09 Jul 2025 21:17:38 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

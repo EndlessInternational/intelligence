@@ -138,11 +138,25 @@ module Intelligence
                         ( last_content[ :text ] || '' ) + data_candidate_content_part[ :text ]
                     end
                   end
+                  if function_call = data_candidate_content_part[ :functionCall ]
+                    contents.push( { 
+                      type: :tool_call, 
+                      tool_name: function_call[ :name ],
+                      tool_parameters: function_call[ :args ] 
+                    } )
+                  end
                 end
               end
+
               choices_delta[ data_candidate_index ][ :message ][ :contents ] = contents
-              choices_delta[ data_candidate_index ][ :end_reason ] = 
-                translate_finish_reason( data_candidate_finish_reason )
+
+              if ( data_candidate_finish_reason && data_candidate_finish_reason.length > 1 )
+                end_reason = translate_finish_reason( data_candidate_finish_reason )
+                end_reason = :tool_called \
+                  if end_reason == :ended && contents.last&.dig( :type ) == :tool_call
+                choices_delta[ data_candidate_index ][ :end_reason ] = end_reason
+              end
+                
             end
   
             if usage = data[ :usageMetadata ]

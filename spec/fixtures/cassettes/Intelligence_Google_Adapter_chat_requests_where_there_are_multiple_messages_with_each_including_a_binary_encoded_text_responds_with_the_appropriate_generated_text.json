@@ -3,70 +3,6 @@
     {
       "request": {
         "method": "post",
-        "uri": "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=<KEY>",
-        "body": {
-          "encoding": "UTF-8",
-          "string": "{\"generationConfig\":{\"maxOutputTokens\":32,\"temperature\":0.0},\"systemInstruction\":{\"role\":\"user\",\"parts\":[{\"text\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"}]},\"contents\":[{\"role\":\"user\",\"parts\":[{\"text\":\"what is the text in the attached file?\\n\"},{\"inline_data\":{\"mime_type\":\"text/plain\",\"data\":\"dGhpcyBpcyBhIHRlc3QK\"}}]},{\"role\":\"model\",\"parts\":[{\"text\":\"this is a test\\n\"}]},{\"role\":\"user\",\"parts\":[{\"text\":\"what about this file? what is it about?\\nrespond in less than 16 words\\n\"},{\"inline_data\":{\"mime_type\":\"text/plain\",\"data\":\"SW4gdGhlIGJlZ2lubmluZywgdGhlcmUgd2FzIGEgc2luZ3VsYXJpdHnigJRhbiBpbmZpbml0ZXNpbWFsbHkgc21hbGwsIGhvdCwgYW5kIGRlbnNlIHBvaW50LiAKQXBwcm94aW1hdGVseSAxMy43IGJpbGxpb24geWVhcnMgYWdvLCB0aGlzIHNpbmd1bGFyaXR5IGV4cGFuZGVkIGluIGEgbW9udW1lbnRhbCBldmVudCBrbm93biAKYXMgdGhlIEJpZyBCYW5nLCBnaXZpbmcgYmlydGggdG8gdGhlIHVuaXZlcnNlIGFzIHdlIGtub3cgaXQuIFRpbWUgYW5kIHNwYWNlIHVuZnVybGVkLCBsZWFkaW5nIAp0byB0aGUgZm9ybWF0aW9uIG9mIHN1YmF0b21pYyBwYXJ0aWNsZXMsIGF0b21zLCBhbmQgZXZlbnR1YWxseSwgdGhlIHZhc3QgYXJyYXkgb2YgY2VsZXN0aWFsIApib2RpZXMgdGhhdCBwb3B1bGF0ZSB0aGUgY29zbW9zIHRvZGF5LiBGcm9tIHRoYXQgcHJpbW9yZGlhbCBleHBsb3Npb24gZW1lcmdlZCBnYWxheGllcywgc3RhcnMsIApwbGFuZXRzLCBhbmQgdGhlIGludHJpY2F0ZSB0YXBlc3RyeSBvZiBsaWZlLCBhbGwgZXZvbHZpbmcgb3ZlciBiaWxsaW9ucyBvZiB5ZWFycyBpbnRvIHRoZSAKY29tcGxleCBhbmQgd29uZHJvdXMgdW5pdmVyc2Ugd2Ugb2JzZXJ2ZSBub3cuCg==\"}}]}]}"
-        },
-        "headers": {
-          "User-Agent": [
-            "Faraday v2.13.1"
-          ],
-          "Content-Type": [
-            "application/json"
-          ]
-        }
-      },
-      "response": {
-        "status": {
-          "code": 200,
-          "message": "OK"
-        },
-        "headers": {
-          "content-type": [
-            "application/json; charset=UTF-8"
-          ],
-          "vary": [
-            "Origin, X-Origin, Referer"
-          ],
-          "content-encoding": [
-            "gzip"
-          ],
-          "date": [
-            "Sun, 08 Jun 2025 22:50:29 GMT"
-          ],
-          "server": [
-            "scaffolding on HTTPServer2"
-          ],
-          "x-xss-protection": [
-            "0"
-          ],
-          "x-frame-options": [
-            "SAMEORIGIN"
-          ],
-          "x-content-type-options": [
-            "nosniff"
-          ],
-          "server-timing": [
-            "gfet4t7; dur=488"
-          ],
-          "alt-svc": [
-            "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
-          ],
-          "transfer-encoding": [
-            "chunked"
-          ]
-        },
-        "body": {
-          "encoding": "UTF-8",
-          "string": "{\n  \"candidates\": [\n    {\n      \"content\": {\n        \"parts\": [\n          {\n            \"text\": \"The text describes the Big Bang theory and the universe's evolution from a singularity.\\n\"\n          }\n        ],\n        \"role\": \"model\"\n      },\n      \"finishReason\": \"STOP\",\n      \"avgLogprobs\": -0.10170069668028089\n    }\n  ],\n  \"usageMetadata\": {\n    \"promptTokenCount\": 217,\n    \"candidatesTokenCount\": 18,\n    \"totalTokenCount\": 235,\n    \"promptTokensDetails\": [\n      {\n        \"modality\": \"TEXT\",\n        \"tokenCount\": 217\n      }\n    ],\n    \"candidatesTokensDetails\": [\n      {\n        \"modality\": \"TEXT\",\n        \"tokenCount\": 18\n      }\n    ]\n  },\n  \"modelVersion\": \"gemini-2.0-flash\",\n  \"responseId\": \"tBNGaPb_MrX5ld8Ppfis-QU\"\n}\n"
-        }
-      },
-      "recorded_at": "Sun, 08 Jun 2025 22:50:29 GMT"
-    },
-    {
-      "request": {
-        "method": "post",
         "uri": "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=<KEY>",
         "body": {
           "encoding": "UTF-8",
@@ -97,7 +33,7 @@
             "gzip"
           ],
           "date": [
-            "Sat, 05 Jul 2025 21:24:56 GMT"
+            "Wed, 09 Jul 2025 21:17:16 GMT"
           ],
           "server": [
             "scaffolding on HTTPServer2"
@@ -112,7 +48,7 @@
             "nosniff"
           ],
           "server-timing": [
-            "gfet4t7; dur=519"
+            "gfet4t7; dur=518"
           ],
           "alt-svc": [
             "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
@@ -123,10 +59,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "{\n  \"candidates\": [\n    {\n      \"content\": {\n        \"parts\": [\n          {\n            \"text\": \"The text describes the Big Bang theory and the universe's evolution.\"\n          }\n        ],\n        \"role\": \"model\"\n      },\n      \"finishReason\": \"STOP\",\n      \"index\": 0\n    }\n  ],\n  \"usageMetadata\": {\n    \"promptTokenCount\": 222,\n    \"candidatesTokenCount\": 14,\n    \"totalTokenCount\": 236,\n    \"promptTokensDetails\": [\n      {\n        \"modality\": \"TEXT\",\n        \"tokenCount\": 222\n      }\n    ]\n  },\n  \"modelVersion\": \"gemini-2.5-flash\",\n  \"responseId\": \"KJhpaIG7N-afz7IPxMGlsQc\"\n}\n"
+          "string": "{\n  \"candidates\": [\n    {\n      \"content\": {\n        \"parts\": [\n          {\n            \"text\": \"The text describes the Big Bang theory and the universe's evolution.\"\n          }\n        ],\n        \"role\": \"model\"\n      },\n      \"finishReason\": \"STOP\",\n      \"index\": 0\n    }\n  ],\n  \"usageMetadata\": {\n    \"promptTokenCount\": 222,\n    \"candidatesTokenCount\": 14,\n    \"totalTokenCount\": 236,\n    \"promptTokensDetails\": [\n      {\n        \"modality\": \"TEXT\",\n        \"tokenCount\": 222\n      }\n    ]\n  },\n  \"modelVersion\": \"gemini-2.5-flash\",\n  \"responseId\": \"XNxuaKbDEra-qtsPrLHGqAs\"\n}\n"
         }
       },
-      "recorded_at": "Sat, 05 Jul 2025 21:24:56 GMT"
+      "recorded_at": "Wed, 09 Jul 2025 21:17:16 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

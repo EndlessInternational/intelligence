@@ -217,7 +217,7 @@ module Intelligence
           [ object, required.compact  ]
         end
 
-        return tools&.map { | tool |
+        return Utilities.deep_dup( tools )&.map { | tool |
           function = { 
             name: tool[ :name ],
             description: tool[ :description ],

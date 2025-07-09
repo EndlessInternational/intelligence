@@ -3,70 +3,6 @@
     {
       "request": {
         "method": "post",
-        "uri": "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:streamGenerateContent?alt=sse&key=<KEY>",
-        "body": {
-          "encoding": "UTF-8",
-          "string": "{\"generationConfig\":{\"maxOutputTokens\":24,\"temperature\":0.0},\"systemInstruction\":{\"role\":\"user\",\"parts\":[{\"text\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"}]},\"contents\":[{\"role\":\"user\",\"parts\":[{\"text\":\"what is the text in the attached file?\\n\"},{\"inline_data\":{\"mime_type\":\"text/plain\",\"data\":\"dGhpcyBpcyBhIHRlc3QK\"}}]},{\"role\":\"model\",\"parts\":[{\"text\":\"this is a test\\n\"}]},{\"role\":\"user\",\"parts\":[{\"text\":\"how many words is that?\\nreply with just a number\\n\"}]}]}"
-        },
-        "headers": {
-          "User-Agent": [
-            "Faraday v2.13.1"
-          ],
-          "Content-Type": [
-            "application/json"
-          ]
-        }
-      },
-      "response": {
-        "status": {
-          "code": 200,
-          "message": "OK"
-        },
-        "headers": {
-          "content-type": [
-            "text/event-stream"
-          ],
-          "content-disposition": [
-            "attachment"
-          ],
-          "vary": [
-            "Origin, X-Origin, Referer"
-          ],
-          "transfer-encoding": [
-            "chunked"
-          ],
-          "date": [
-            "Sun, 08 Jun 2025 22:51:34 GMT"
-          ],
-          "server": [
-            "scaffolding on HTTPServer2"
-          ],
-          "x-xss-protection": [
-            "0"
-          ],
-          "x-frame-options": [
-            "SAMEORIGIN"
-          ],
-          "x-content-type-options": [
-            "nosniff"
-          ],
-          "server-timing": [
-            "gfet4t7; dur=608"
-          ],
-          "alt-svc": [
-            "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
-          ]
-        },
-        "body": {
-          "encoding": "UTF-8",
-          "string": "data: {\"candidates\": [{\"content\": {\"parts\": [{\"text\": \"4\"}],\"role\": \"model\"}}],\"usageMetadata\": {\"promptTokenCount\": 80,\"totalTokenCount\": 80,\"promptTokensDetails\": [{\"modality\": \"TEXT\",\"tokenCount\": 80}]},\"modelVersion\": \"gemini-1.5-pro-002\",\"responseId\": \"9hNGaIixDtGU7dcPjoS34QI\"}\r\n\r\ndata: {\"candidates\": [{\"content\": {\"parts\": [{\"text\": \"\\n\"}],\"role\": \"model\"},\"finishReason\": \"STOP\"}],\"usageMetadata\": {\"promptTokenCount\": 76,\"candidatesTokenCount\": 2,\"totalTokenCount\": 78,\"promptTokensDetails\": [{\"modality\": \"TEXT\",\"tokenCount\": 76}],\"candidatesTokensDetails\": [{\"modality\": \"TEXT\",\"tokenCount\": 2}]},\"modelVersion\": \"gemini-1.5-pro-002\",\"responseId\": \"9hNGaIixDtGU7dcPjoS34QI\"}\r\n\r\n"
-        }
-      },
-      "recorded_at": "Sun, 08 Jun 2025 22:51:34 GMT"
-    },
-    {
-      "request": {
-        "method": "post",
         "uri": "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:streamGenerateContent?alt=sse&key=<KEY>",
         "body": {
           "encoding": "UTF-8",
@@ -100,7 +36,7 @@
             "chunked"
           ],
           "date": [
-            "Sat, 05 Jul 2025 21:25:37 GMT"
+            "Wed, 09 Jul 2025 21:17:59 GMT"
           ],
           "server": [
             "scaffolding on HTTPServer2"
@@ -115,7 +51,7 @@
             "nosniff"
           ],
           "server-timing": [
-            "gfet4t7; dur=509"
+            "gfet4t7; dur=354"
           ],
           "alt-svc": [
             "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
@@ -123,10 +59,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "data: {\"candidates\": [{\"content\": {\"parts\": [{\"text\": \"4\"}],\"role\": \"model\"},\"index\": 0}],\"usageMetadata\": {\"promptTokenCount\": 80,\"candidatesTokenCount\": 1,\"totalTokenCount\": 81,\"promptTokensDetails\": [{\"modality\": \"TEXT\",\"tokenCount\": 80}]},\"modelVersion\": \"gemini-2.5-flash\",\"responseId\": \"UZhpaOfeHu-tz7IP6LX6uAc\"}\r\n\r\ndata: {\"candidates\": [{\"content\": {\"role\": \"model\"},\"finishReason\": \"STOP\",\"index\": 0}],\"usageMetadata\": {\"promptTokenCount\": 80,\"candidatesTokenCount\": 1,\"totalTokenCount\": 81,\"promptTokensDetails\": [{\"modality\": \"TEXT\",\"tokenCount\": 80}]},\"modelVersion\": \"gemini-2.5-flash\",\"responseId\": \"UZhpaOfeHu-tz7IP6LX6uAc\"}\r\n\r\n"
+          "string": "data: {\"candidates\": [{\"content\": {\"parts\": [{\"text\": \"4\"}],\"role\": \"model\"},\"index\": 0}],\"usageMetadata\": {\"promptTokenCount\": 80,\"candidatesTokenCount\": 1,\"totalTokenCount\": 81,\"promptTokensDetails\": [{\"modality\": \"TEXT\",\"tokenCount\": 80}]},\"modelVersion\": \"gemini-2.5-flash\",\"responseId\": \"h9xuaM_JB466qtsPu9TkqAs\"}\r\n\r\ndata: {\"candidates\": [{\"content\": {\"role\": \"model\"},\"finishReason\": \"STOP\",\"index\": 0}],\"usageMetadata\": {\"promptTokenCount\": 80,\"candidatesTokenCount\": 1,\"totalTokenCount\": 81,\"promptTokensDetails\": [{\"modality\": \"TEXT\",\"tokenCount\": 80}]},\"modelVersion\": \"gemini-2.5-flash\",\"responseId\": \"h9xuaM_JB466qtsPu9TkqAs\"}\r\n\r\n"
         }
       },
-      "recorded_at": "Sat, 05 Jul 2025 21:25:37 GMT"
+      "recorded_at": "Wed, 09 Jul 2025 21:17:59 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

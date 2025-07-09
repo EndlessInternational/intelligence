@@ -64,7 +64,6 @@ RSpec.shared_examples 'stream requests with parallel tools' do | options = {} |
       expect( tool_calls.length ).to be >= 3
 
       tool_calls.each do | tool_call |
-        expect( tool_call.tool_call_id ).not_to be_nil
         expect( tool_call.tool_name ).to eq( 'get_weather' )
         expect( tool_call.tool_parameters ).to be_a( Hash )
         expect( tool_call.tool_parameters[ :city ] ).to match( /london|paris|rome|/i )

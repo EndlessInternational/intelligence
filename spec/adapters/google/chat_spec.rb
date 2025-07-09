@@ -19,12 +19,12 @@ RSpec.describe "#{Intelligence::Adapter[ :google ]} chat requests", :google do
     end
   end
 
-  let( :adapter_with_tool ) do
+  let( :adapter_with_adapter_tool ) do
     Intelligence::Adapter[ :google ].build! do   
       key                     ENV[ 'GOOGLE_API_KEY' ]
       chat_options do
         model                 'gemini-2.5-flash'
-        max_tokens            32 
+        max_tokens            128 
         temperature           0
 
         tool do     
@@ -32,6 +32,17 @@ RSpec.describe "#{Intelligence::Adapter[ :google ]} chat requests", :google do
           description \
             "The get_location tool will return the users city, state or province and country."
         end
+      end
+    end
+  end
+
+  let( :adapter_with_tools ) do
+    Intelligence::Adapter[ :google ].build! do   
+      key                     ENV[ 'GOOGLE_API_KEY' ]
+      chat_options do
+        model                 'gemini-2.5-flash'
+        max_tokens            1024 
+        temperature           0
       end
     end
   end
@@ -116,10 +127,17 @@ RSpec.describe "#{Intelligence::Adapter[ :google ]} chat requests", :google do
   include_examples 'chat requests with binary encoded text'
   include_examples 'chat requests with binary encoded pdf'
   include_examples 'chat requests with binary encoded audio'
-  include_examples 'chat requests with tools'
-  include_examples 'chat requests with adapter tools'
-  include_examples 'chat requests with parallel tools'
-  include_examples 'chat requests with complex tools'
+
+  include_examples 'chat requests with tools',
+                   adapter: :adapter_with_tools
+  include_examples 'chat requests with adapter tools',
+                   adapter: :adapter_with_adapter_tool
+  include_examples 'chat requests with parallel tools',
+                   adapter: :adapter_with_tools
+  include_examples 'chat requests with complex tools',
+                   adapter: :adapter_with_tools
+  include_examples 'chat requests with tools multiturn',
+                   adapter: :adapter_with_tools
 
   include_examples 'chat requests with invalid key'
   include_examples 'chat requests with invalid model' 

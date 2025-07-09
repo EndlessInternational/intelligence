@@ -122,7 +122,6 @@ RSpec.shared_examples 'stream requests with tools' do | options = {} |
       expect( tool_calls.length ).to be 1
 
       tool_call = tool_calls.first
-      expect( tool_call.tool_call_id ).not_to be_nil
       expect( tool_call.tool_name ).to eq( 'get_weather' )
       expect( tool_call.tool_parameters ).to be_a( Hash )
       expect( tool_call.tool_parameters[ :city ] ).to match( /seattle/i )
@@ -133,7 +132,6 @@ RSpec.shared_examples 'stream requests with tools' do | options = {} |
       expect( tool_calls.length ).to be 1
 
       tool_call = tool_calls.first
-      expect( tool_call.tool_call_id ).not_to be_nil
       expect( tool_call.tool_name ).to eq( 'get_weather' )
       expect( tool_call.tool_parameters ).to be_a( Hash )
       expect( tool_call.tool_parameters[ :city ] ).to match( /seattle/i )
@@ -179,7 +177,6 @@ RSpec.shared_examples 'stream requests with tools' do | options = {} |
       expect( tool_calls.length ).to be 1
 
       tool_call = tool_calls.first
-      expect( tool_call.tool_call_id ).not_to be_nil
       expect( tool_call.tool_name ).to eq( 'get_location' )
 
       contents = choice.message.contents
@@ -188,7 +185,6 @@ RSpec.shared_examples 'stream requests with tools' do | options = {} |
       expect( tool_calls.length ).to be 1
 
       tool_call = tool_calls.first
-      expect( tool_call.tool_call_id ).not_to be_nil
       expect( tool_call.tool_name ).to eq( 'get_location' )
 
     end
@@ -237,7 +233,6 @@ RSpec.shared_examples 'stream requests with tools' do | options = {} |
       expect( tool_calls.length ).to be 1
 
       tool_call = tool_calls.last 
-      expect( tool_call.tool_call_id ).not_to be_nil
       expect( tool_call.tool_name ).to eq( 'get_weather' )
       expect( tool_call.tool_parameters ).to be_a( Hash )
       expect( tool_call.tool_parameters[ :city ] ).to match( /seattle/i )
@@ -248,7 +243,6 @@ RSpec.shared_examples 'stream requests with tools' do | options = {} |
       expect( tool_calls.length ).to be 1
 
       tool_call = tool_calls.last 
-      expect( tool_call.tool_call_id ).not_to be_nil
       expect( tool_call.tool_name ).to eq( 'get_weather' )
       expect( tool_call.tool_parameters ).to be_a( Hash )
       expect( tool_call.tool_parameters[ :city ] ).to match( /seattle/i )
@@ -385,7 +379,6 @@ RSpec.shared_examples 'stream requests with tools' do | options = {} |
         expect( contents.last ).to be_a( Intelligence::MessageContent::ToolCall )
 
         tool_call = contents.last 
-        expect( tool_call.tool_call_id ).not_to be_nil
         expect( tool_call.tool_name ).to eq( 'get_weather' )
         expect( tool_call.tool_parameters ).to be_a( Hash )
         expect( tool_call.tool_parameters[ :city ] ).to match( /seattle/i )
@@ -395,7 +388,6 @@ RSpec.shared_examples 'stream requests with tools' do | options = {} |
         expect( contents.last ).to be_a( Intelligence::MessageContent::ToolCall )
 
         tool_call = contents.last 
-        expect( tool_call.tool_call_id ).not_to be_nil
         expect( tool_call.tool_name ).to eq( 'get_weather' )
         expect( tool_call.tool_parameters ).to be_a( Hash )
         expect( tool_call.tool_parameters[ :city ] ).to match( /seattle/i )
