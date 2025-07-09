@@ -13,22 +13,35 @@ module Intelligence
       attr_reader :tool_name
 
       def tool_parameters( options = nil )
-        return @tool_parameters if @tool_parameters.nil? || @tool_parameters.is_a?( Hash )
+        return @tool_parameters \
+          if @tool_parameters.nil? || 
+             @tool_parameters.is_a?( Hash ) ||
+             ( @tool_parameters.is_a?( String ) && @tool_parameters.empty? )
         
         options = options || {}
         parse = options.key?( :parse ) ? options[ :parse ] : true 
 
         return @parsed_tool_parameters if @parsed_tool_parameters && parse 
         
-        tool_parameters = ( options.key?( :repair ) ? options[ :repair ] : true ) ? 
-            JSON.repair( @tool_parameters ) : @tool_parameters 
+        tool_parameters = begin 
+          if ( options.key?( :repair ) ? options[ :repair ] : true )
+            JSON.repair( @tool_parameters )
+          else 
+            @tool_parameters 
+          end
+        rescue JSON::JSONRepairError
+          @tool_parameters
+        end
 
         if parse 
-          @parsed_tool_parameters = tool_parameters = 
-            JSON.parse( 
-              tool_parameters, 
-              parse.is_a?( Hash ) ? parse : { symbolize_names: true } 
-            ) 
+          begin 
+            @parsed_tool_parameters = tool_parameters = 
+              JSON.parse( 
+                tool_parameters, 
+                parse.is_a?( Hash ) ? parse : { symbolize_names: true } 
+              )
+          rescue JSON::ParserError
+          end 
         end
 
         tool_parameters 

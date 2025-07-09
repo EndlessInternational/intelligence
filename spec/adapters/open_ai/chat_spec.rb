@@ -65,10 +65,10 @@ RSpec.describe "#{Intelligence::Adapter[ :open_ai ]} chat requests", :open_ai do
     Intelligence::Adapter[ :open_ai ].build! do   
       key                     ENV[ 'OPENAI_API_KEY' ]
       chat_options do
-        model                 'o3'
+        model                 'o4-mini'
         max_tokens            4096
         reasoning do 
-          effort              :high
+          effort              :low
           summary             :detailed
         end
       end
@@ -108,6 +108,7 @@ RSpec.describe "#{Intelligence::Adapter[ :open_ai ]} chat requests", :open_ai do
   include_examples 'chat requests with adapter tools'
   include_examples 'chat requests with complex tools'
   include_examples 'chat requests with parallel tools'
+  include_examples 'chat requests with tools multiturn'
 
   include_examples 'chat requests with web search', 
                    adapter: :adapter_with_web_search

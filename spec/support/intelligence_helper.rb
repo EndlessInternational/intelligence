@@ -8,6 +8,8 @@ module IntelligenceHelper
   def adapter_connection 
     Faraday.new do | builder | 
       builder.adapter Faraday.default_adapter 
+      builder.options.timeout       = 240  # read timeout (default is 60)
+      builder.options.open_timeout  = 30   # connection timeout (default is 60)
       builder.use VCR::Middleware::Faraday 
     end
   end 
@@ -75,7 +77,7 @@ module IntelligenceHelper
     request = Intelligence::ChatRequest.new( connection: adapter_connection, adapter: adapter )
     request.stream( conversation, options ) do | request |
       request.receive_result do | result |
-        block.call( result )
+        block.call( result ) if block_given?
       end
     end
   end

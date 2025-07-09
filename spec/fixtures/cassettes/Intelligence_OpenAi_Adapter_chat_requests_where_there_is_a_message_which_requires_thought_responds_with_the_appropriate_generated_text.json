@@ -6,7 +6,7 @@
         "uri": "https://api.openai.com/v1/responses",
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"model\":\"o3\",\"max_output_tokens\":4096,\"reasoning\":{\"effort\":\"high\",\"summary\":\"detailed\"},\"input\":[{\"role\":\"user\",\"content\":[{\"type\":\"input_text\",\"text\":\"Given a triangle ABC with angle A 60 degrees and angle B 40 degrees, extend side BC through C. Now create triangle DAB such that DC is congruent to AB. What is the angle measure of angle ADB?\\n\"}]}],\"instructions\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"}"
+          "string": "{\"model\":\"o4-mini\",\"max_output_tokens\":4096,\"reasoning\":{\"effort\":\"low\",\"summary\":\"detailed\"},\"input\":[{\"role\":\"user\",\"content\":[{\"type\":\"input_text\",\"text\":\"Given a triangle ABC with angle A 60 degrees and angle B 40 degrees, extend side BC through C. Now create triangle DAB such that DC is congruent to AB. What is the angle measure of angle ADB?\\n\"}]}],\"instructions\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"}"
         },
         "headers": {
           "User-Agent": [
@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Sat, 05 Jul 2025 21:29:43 GMT"
+            "Wed, 09 Jul 2025 16:52:51 GMT"
           ],
           "content-type": [
             "application/json"
@@ -39,19 +39,19 @@
             "keep-alive"
           ],
           "x-ratelimit-limit-requests": [
-            "10000"
+            "30000"
           ],
           "x-ratelimit-limit-tokens": [
-            "30000000"
+            "150000000"
           ],
           "x-ratelimit-remaining-requests": [
-            "9999"
+            "29999"
           ],
           "x-ratelimit-remaining-tokens": [
-            "29999697"
+            "149999697"
           ],
           "x-ratelimit-reset-requests": [
-            "6ms"
+            "2ms"
           ],
           "x-ratelimit-reset-tokens": [
             "0s"
@@ -66,7 +66,7 @@
             "<X-REQUEST-ID>"
           ],
           "openai-processing-ms": [
-            "30543"
+            "10262"
           ],
           "strict-transport-security": [
             "max-age=31536000; includeSubDomains; preload"
@@ -95,10 +95,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\n  \"id\": \"resp_68699928ee188192ab67a44bc774a6f403178f1b903c00d7\",\n  \"object\": \"response\",\n  \"created_at\": 1751750952,\n  \"status\": \"completed\",\n  \"background\": false,\n  \"error\": null,\n  \"incomplete_details\": null,\n  \"instructions\": \"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \",\n  \"max_output_tokens\": 4096,\n  \"max_tool_calls\": null,\n  \"model\": \"o3-2025-04-16\",\n  \"output\": [\n    {\n      \"id\": \"rs_686999294d3c8192864c293372c6c26b03178f1b903c00d7\",\n      \"type\": \"reasoning\",\n      \"summary\": [\n        {\n          \"type\": \"summary_text\",\n          \"text\": \"**Analyzing triangle properties**\\n\\nI need to break down the problem step by step. We have triangle ABC with angles A, B, and C measuring 60\\u00b0, 40\\u00b0, and 80\\u00b0, respectively. Identifying the sides, BC is opposite A, CA is opposite B, and AB is opposite C. We'll extend side BC through C to point D, forming triangle DAB where segment DC is congruent to segment AB. My goal is to find the angle \\u2220ADB, ensuring clarity on the congruence between these segments.\"\n        },\n        {\n          \"type\": \"summary_text\",\n          \"text\": \"**Clarifying triangle DAB**\\n\\nI need to confirm that segment DC equals AB, with points D, A, and B forming the vertices of triangle DAB. Segment AB is shared between the original triangle ABC and triangle DAB, which makes sense as one side.\\n\\nI realize that D is on the extension of BC, making B, C, and D collinear in that order. As I create triangle DAB by connecting D to A and B, I'll use the known angles from triangle ABC to help find angle \\u2220ADB. I can see that angle ACD is an external angle at C, which helps me in my calculations.\"\n        },\n        {\n          \"type\": \"summary_text\",\n          \"text\": \"**Calculating triangle relationships**\\n\\nI\\u2019m establishing the relationship between segments CD and CB. The angle ACD, being external, measures 100\\u00b0 since it's 180\\u00b0 minus the interior angle ACB at 80\\u00b0. I'll likely use the Law of Sines or consider equal lengths to find angle \\u2220ADB. Given that DC equals AB, I\\u2019m analyzing triangle DCB and considering triangle ABD.\\n\\nI can define triangle ABC with coordinates and lengths based on trigonometric ratios. By setting a scale factor, I calculate the corresponding lengths for sides a, b, and c using known sine values. This will allow me to advance toward finding the angle \\u2220ADB and the length of segment AD.\"\n        },\n        {\n          \"type\": \"summary_text\",\n          \"text\": \"30\\u00b0\"\n        }\n      ]\n    },\n    {\n      \"id\": \"msg_68699947198c8192b10115ac1ccf967303178f1b903c00d7\",\n      \"type\": \"message\",\n      \"status\": \"completed\",\n      \"content\": [\n        {\n          \"type\": \"output_text\",\n          \"annotations\": [],\n          \"logprobs\": [],\n          \"text\": \"30\\u00b0\"\n        }\n      ],\n      \"role\": \"assistant\"\n    }\n  ],\n  \"parallel_tool_calls\": true,\n  \"previous_response_id\": null,\n  \"reasoning\": {\n    \"effort\": \"high\",\n    \"summary\": \"detailed\"\n  },\n  \"service_tier\": \"default\",\n  \"store\": true,\n  \"temperature\": 1.0,\n  \"text\": {\n    \"format\": {\n      \"type\": \"text\"\n    }\n  },\n  \"tool_choice\": \"auto\",\n  \"tools\": [],\n  \"top_logprobs\": 0,\n  \"top_p\": 1.0,\n  \"truncation\": \"disabled\",\n  \"usage\": {\n    \"input_tokens\": 96,\n    \"input_tokens_details\": {\n      \"cached_tokens\": 0\n    },\n    \"output_tokens\": 3016,\n    \"output_tokens_details\": {\n      \"reasoning_tokens\": 3008\n    },\n    \"total_tokens\": 3112\n  },\n  \"user\": null,\n  \"metadata\": {}\n}"
+          "string": "{\n  \"id\": \"resp_686e9e59749081a1bc04db84d4b708420a9128b563a8dfed\",\n  \"object\": \"response\",\n  \"created_at\": 1752079961,\n  \"status\": \"completed\",\n  \"background\": false,\n  \"error\": null,\n  \"incomplete_details\": null,\n  \"instructions\": \"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \",\n  \"max_output_tokens\": 4096,\n  \"max_tool_calls\": null,\n  \"model\": \"o4-mini-2025-04-16\",\n  \"output\": [\n    {\n      \"id\": \"rs_686e9e59ca2881a193b4d572fae6dc2d0a9128b563a8dfed\",\n      \"type\": \"reasoning\",\n      \"summary\": [\n        {\n          \"type\": \"summary_text\",\n          \"text\": \"**Analyzing triangle ABC**\\n\\nI\\u2019m working with triangle ABC where angles A, B, and C are 60\\u00b0, 40\\u00b0, and 80\\u00b0, respectively. I\\u2019m extending side BC through point C to create triangle DAB, ensuring that side DC is equal to AB. The goal is to determine angle ADB. By placing point B at (0,0) and C at (1,0), I can apply the Law of Sines to relate the sides and angles, leading me to calculate AB as approximately 1.1373.\"\n        },\n        {\n          \"type\": \"summary_text\",\n          \"text\": \"**Calculating angle ADB**\\n\\nI\\u2019m calculating the length AC using the Law of Sines, which gives me about 0.7423. With BC set to 1, I find points B and C at (0,0) and (1,0), respectively. The coordinates for point A are calculated using polar coordinates, which places A at approximately (0.8717, 0.7315). Extending BC to point D gives me (2.1373, 0). Now, I\\u2019ll compute angle ADB using vector methods, finding that angle ADB is around 30 degrees, which I\\u2019ll confirm as my answer.\"\n        }\n      ]\n    },\n    {\n      \"id\": \"msg_686e9e635f6881a184e9544875a0d3840a9128b563a8dfed\",\n      \"type\": \"message\",\n      \"status\": \"completed\",\n      \"content\": [\n        {\n          \"type\": \"output_text\",\n          \"annotations\": [],\n          \"logprobs\": [],\n          \"text\": \"30\\u00b0\"\n        }\n      ],\n      \"role\": \"assistant\"\n    }\n  ],\n  \"parallel_tool_calls\": true,\n  \"previous_response_id\": null,\n  \"reasoning\": {\n    \"effort\": \"low\",\n    \"summary\": \"detailed\"\n  },\n  \"service_tier\": \"default\",\n  \"store\": true,\n  \"temperature\": 1.0,\n  \"text\": {\n    \"format\": {\n      \"type\": \"text\"\n    }\n  },\n  \"tool_choice\": \"auto\",\n  \"tools\": [],\n  \"top_logprobs\": 0,\n  \"top_p\": 1.0,\n  \"truncation\": \"disabled\",\n  \"usage\": {\n    \"input_tokens\": 96,\n    \"input_tokens_details\": {\n      \"cached_tokens\": 0\n    },\n    \"output_tokens\": 648,\n    \"output_tokens_details\": {\n      \"reasoning_tokens\": 640\n    },\n    \"total_tokens\": 744\n  },\n  \"user\": null,\n  \"metadata\": {}\n}"
         }
       },
-      "recorded_at": "Sat, 05 Jul 2025 21:29:43 GMT"
+      "recorded_at": "Wed, 09 Jul 2025 16:52:51 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

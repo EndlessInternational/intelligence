@@ -27,7 +27,22 @@ RSpec.shared_examples 'stream requests with thought' do | options = {} |
       end
       
       expect( response.success? ).to be( true ), response_error_description( response )
+      expect( response.result ).not_to be_nil
+      expect( response.result ).to respond_to( :message )
+      expect( response.result.message ).not_to be_nil
 
+      expect( contents ).not_to be_nil
+      expect( contents.length ).to be >= 1 
+      expect( contents.any? { | c | c.is_a?( Intelligence::MessageContent::Thought ) } ).to be true
+      contents.each do | content |
+        if content.is_a?( Intelligence::MessageContent::Thought )
+          expect( content.text ).not_to be_nil
+          expect( content.text.length ).to be >= 1 
+        end
+      end
+
+      contents = response.result.message.contents
+      expect( contents ).not_to be_nil
       expect( contents.length ).to be >= 1 
       expect( contents.any? { | c | c.is_a?( Intelligence::MessageContent::Thought ) } ).to be true
       contents.each do | content |

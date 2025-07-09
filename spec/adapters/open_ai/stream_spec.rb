@@ -41,7 +41,7 @@ RSpec.describe "#{Intelligence::Adapter[ :open_ai ]} stream requests", :open_ai 
         model                 'o4-mini'
         max_tokens            4096
         reasoning do 
-          effort              :medium
+          effort              :low
           summary             :detailed
         end
 
@@ -77,6 +77,7 @@ RSpec.describe "#{Intelligence::Adapter[ :open_ai ]} stream requests", :open_ai 
   include_examples 'stream requests without alternating roles'
   include_examples 'stream requests with tools'
   include_examples 'stream requests with parallel tools'
+  include_examples 'stream requests with tools multiturn'
   include_examples 'stream requests with web search',
                    adapter: :adapter_with_web_search
 

@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Sat, 05 Jul 2025 21:30:02 GMT"
+            "Wed, 09 Jul 2025 16:53:14 GMT"
           ],
           "content-type": [
             "application/json"
@@ -48,7 +48,7 @@
             "<X-REQUEST-ID>"
           ],
           "openai-processing-ms": [
-            "40"
+            "64"
           ],
           "strict-transport-security": [
             "max-age=31536000; includeSubDomains; preload"
@@ -77,7 +77,7 @@
           "string": "{\n  \"error\": {\n    \"message\": \"Incorrect API key provided: this-key*********alid. You can find your API key at https://platform.openai.com/account/api-keys.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"invalid_api_key\"\n  }\n}"
         }
       },
-      "recorded_at": "Sat, 05 Jul 2025 21:30:02 GMT"
+      "recorded_at": "Wed, 09 Jul 2025 16:53:14 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"
