@@ -21,9 +21,16 @@ module Intelligence
 
           result_content = []
           response_json[ :content ].each do | content |
-            if content[ :type ] == 'text'
+            case content[ :type ]
+            when 'text'
               result_content.push( { type: 'text', text: content[ :text ] } )
-            elsif content[ :type ] == 'tool_use'
+            when 'thinking'
+              result_content.push( { 
+                type: 'thought', 
+                text: content[ :thinking ], 
+                ciphertext: content[ :signature ] 
+              } )
+            when 'tool_use'
               result_content.push( { 
                 type: :tool_call, 
                 tool_call_id: content[ :id ],
@@ -104,21 +111,30 @@ module Intelligence
 
           line = line[ 6..-1 ]
           data = JSON.parse( line )
-          
+          #puts line 
+
           case data[ 'type' ]
             when 'message_start'
               metrics[ :input_tokens ] += data[ 'message' ]&.[]( 'usage' )&.[]( 'input_tokens' ) || 0
               metrics[ :output_tokens ] += data[ 'message' ]&.[]( 'usage' )&.[]( 'output_tokens' ) || 0
             when 'content_block_start'
               index = data[ 'index' ]
-              contents.fill( {}, contents.size..index ) if contents.size <= index
+              if contents.size <= index
+                contents.fill( contents.size..index ) { {} } 
+              end
               if content_block = data[ 'content_block' ]
-                if content_block[ 'type' ] == 'text'
+                case content_block[ 'type' ]
+                when 'text'
                   contents[ index ] = {
                     type: :text,
                     text: content_block[ 'text' ] || '' 
                   }
-                elsif content_block[ 'type' ] == 'tool_use'
+                when 'thinking'
+                  contents[ index ] = {
+                    type: :thought,
+                    text: content_block[ 'thinking' ] || '' 
+                  }
+                when 'tool_use'
                   contents[ index ] = {
                     type: :tool_call,
                     tool_name: content_block[ 'name' ],
@@ -131,10 +147,18 @@ module Intelligence
               index = data[ 'index' ]
               contents.fill( {}, contents.size..index ) if contents.size <= index
               if delta = data[ 'delta' ]
-                if delta[ 'type' ] == 'text_delta'
+                case delta[ 'type' ]
+                when 'text_delta'
                   contents[ index ][ :type ] = :text 
                   contents[ index ][ :text ] = ( contents[ index ][ :text ] || '' ) + delta[ 'text' ]
-                elsif delta[ 'type' ] == 'input_json_delta'
+                when 'thinking_delta'
+                  contents[ index ][ :type ] = :thought 
+                  contents[ index ][ :text ] = ( contents[ index ][ :text ] || '' ) + delta[ 'thinking' ]
+                when 'signature_delta'
+                  if contents[ index ][ :type ] == :thought 
+                    contents[ index ][ :ciphertext ] = delta[ :signature ]
+                  end
+                when 'input_json_delta'
                   contents[ index ][ :type ] = :tool_call 
                   contents[ index ][ :tool_parameters ] = 
                     ( contents[ index ][ :tool_parameters ] || '' ) + delta[ 'partial_json' ]                

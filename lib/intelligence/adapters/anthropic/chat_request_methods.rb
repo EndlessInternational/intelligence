@@ -73,6 +73,12 @@ module Intelligence
               case content[ :type ]
               when :text
                 result_message_content << { type: 'text', text: content[ :text ] }
+              when :thought
+                result_message_content << { 
+                  type: 'thinking', 
+                  thinking: content[ :text ], 
+                  signature: content[ :ciphertext ] 
+                }
               when :binary
                 content_type = content[ :content_type ]
                 bytes = content[ :bytes ]
@@ -123,11 +129,15 @@ module Intelligence
                   )
                 end 
               when :tool_call 
+                tool_parameters = content[ :tool_parameters ]
+                tool_parameters = {} \
+                  if tool_parameters.nil? || 
+                     ( tool_parameters.is_a?( String ) && tool_parameters.empty? )
                 result_message_content << {
                   type: 'tool_use',
                   id: content[ :tool_call_id ],
                   name: content[ :tool_name ],
-                  input: content[ :tool_parameters ] || {}
+                  input: tool_parameters
                 }
               when :tool_result 
                 result_message_content << {
@@ -159,10 +169,11 @@ module Intelligence
 
       def chat_request_tools_attributes( tools ) 
         properties_array_to_object = lambda do | properties |
-          return nil unless properties&.any?  
+          return nil unless properties&.any? 
           object = {}
           required = []
           properties.each do | property | 
+            property = property.dup 
             name = property.delete( :name ) 
             required << name if property.delete( :required )
             if property[ :properties ]&.any?  

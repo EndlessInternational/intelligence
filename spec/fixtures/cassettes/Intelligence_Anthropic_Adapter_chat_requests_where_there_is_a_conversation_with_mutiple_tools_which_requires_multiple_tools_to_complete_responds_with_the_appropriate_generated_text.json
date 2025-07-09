@@ -6,7 +6,7 @@
         "uri": "https://api.anthropic.com/v1/messages",
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"model\":\"claude-3-5-sonnet-20240620\",\"max_tokens\":256,\"temperature\":0.0,\"messages\":[{\"role\":\"user\",\"content\":[{\"type\":\"text\",\"text\":\"respond only with the word 'hello'\\n\"}]}]}"
+          "string": "{\"model\":\"claude-3-5-sonnet-20240620\",\"max_tokens\":256,\"temperature\":0.0,\"system\":\"You are a helpfull assistant who answers questions succinctly.\",\"messages\":[{\"role\":\"user\",\"content\":[{\"type\":\"text\",\"text\":\"What is the current weather?\"}]}],\"tools\":[{\"name\":\"get_location\",\"description\":\"The get_location tool will return the users city, state or province and country.\",\"input_schema\":{\"type\":\"object\"}},{\"name\":\"get_weather\",\"description\":\"The get_weather tool will return the current weather in a given locality.\",\"input_schema\":{\"type\":\"object\",\"properties\":{\"city\":{\"type\":\"string\",\"description\":\"The city or town for which the current weather should be returned.\"},\"state\":{\"type\":\"string\",\"description\":\"The state or province for which the current weather should be returned. If this is not provided the largest or most prominent city with the given name, in the given country or in the worldi, will be assumed.\"},\"country\":{\"type\":\"string\",\"description\":\"The country for which the given weather should be returned. If this is not provided the largest or most prominent city with the given name will be returned.\"}},\"required\":[\"city\"]}}]}"
         },
         "headers": {
           "User-Agent": [
@@ -30,7 +30,7 @@
         },
         "headers": {
           "date": [
-            "Wed, 09 Jul 2025 16:57:33 GMT"
+            "Sun, 06 Jul 2025 19:48:03 GMT"
           ],
           "content-type": [
             "application/json"
@@ -48,7 +48,7 @@
             "80000"
           ],
           "anthropic-ratelimit-input-tokens-reset": [
-            "2025-07-09T16:57:32Z"
+            "2025-07-06T19:48:02Z"
           ],
           "anthropic-ratelimit-output-tokens-limit": [
             "16000"
@@ -57,7 +57,7 @@
             "16000"
           ],
           "anthropic-ratelimit-output-tokens-reset": [
-            "2025-07-09T16:57:33Z"
+            "2025-07-06T19:48:03Z"
           ],
           "anthropic-ratelimit-requests-limit": [
             "1000"
@@ -66,7 +66,7 @@
             "999"
           ],
           "anthropic-ratelimit-requests-reset": [
-            "2025-07-09T16:57:31Z"
+            "2025-07-06T19:48:02Z"
           ],
           "anthropic-ratelimit-tokens-limit": [
             "96000"
@@ -75,7 +75,7 @@
             "96000"
           ],
           "anthropic-ratelimit-tokens-reset": [
-            "2025-07-09T16:57:32Z"
+            "2025-07-06T19:48:02Z"
           ],
           "request-id": [
             "<REQUEST-ID>"
@@ -107,10 +107,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\"id\":\"msg_019zqhNxEeRz1zBkootFrRAC\",\"type\":\"message\",\"role\":\"assistant\",\"model\":\"claude-3-5-sonnet-20240620\",\"content\":[{\"type\":\"text\",\"text\":\"hello\"}],\"stop_reason\":\"end_turn\",\"stop_sequence\":null,\"usage\":{\"input_tokens\":16,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":4,\"service_tier\":\"standard\"}}"
+          "string": "{\"id\":\"msg_01Xx2nxUsGc5gmKK7wTu1ZDD\",\"type\":\"message\",\"role\":\"assistant\",\"model\":\"claude-3-5-sonnet-20240620\",\"content\":[{\"type\":\"text\",\"text\":\"To provide you with the current weather information, I'll need to know your location first. Let me check that for you.\"},{\"type\":\"tool_use\",\"id\":\"toolu_01Mh7L5YaS8Yq3ytexefDX1R\",\"name\":\"get_location\",\"input\":{}}],\"stop_reason\":\"tool_use\",\"stop_sequence\":null,\"usage\":{\"input_tokens\":548,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":62,\"service_tier\":\"standard\"}}"
         }
       },
-      "recorded_at": "Wed, 09 Jul 2025 16:57:33 GMT"
+      "recorded_at": "Sun, 06 Jul 2025 19:48:03 GMT"
     },
     {
       "request": {
@@ -118,7 +118,7 @@
         "uri": "https://api.anthropic.com/v1/messages",
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"model\":\"claude-3-5-sonnet-20240620\",\"max_tokens\":256,\"temperature\":0.0,\"system\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \",\"messages\":[{\"role\":\"user\",\"content\":[{\"type\":\"text\",\"text\":\"the secret word is 'blue'\\n\"}]},{\"role\":\"assistant\",\"content\":[{\"type\":\"text\",\"text\":\"ok\\n\"}]},{\"role\":\"user\",\"content\":[{\"type\":\"text\",\"text\":\"what is the secret word?\\nrespond with the word only\\n\"}]}]}"
+          "string": "{\"model\":\"claude-3-5-sonnet-20240620\",\"max_tokens\":256,\"temperature\":0.0,\"system\":\"You are a helpfull assistant who answers questions succinctly.\",\"messages\":[{\"role\":\"user\",\"content\":[{\"type\":\"text\",\"text\":\"What is the current weather?\"}]},{\"role\":\"assistant\",\"content\":[{\"type\":\"text\",\"text\":\"To provide you with the current weather information, I'll need to know your location first. Let me check that for you.\"},{\"type\":\"tool_use\",\"id\":\"toolu_01Mh7L5YaS8Yq3ytexefDX1R\",\"name\":\"get_location\",\"input\":{}}]},{\"role\":\"user\",\"content\":[{\"type\":\"tool_result\",\"tool_use_id\":\"toolu_01Mh7L5YaS8Yq3ytexefDX1R\",\"content\":\"Seattle, WA, USA\"}]}],\"tools\":[{\"name\":\"get_location\",\"description\":\"The get_location tool will return the users city, state or province and country.\",\"input_schema\":{\"type\":\"object\"}},{\"name\":\"get_weather\",\"description\":\"The get_weather tool will return the current weather in a given locality.\",\"input_schema\":{\"type\":\"object\",\"properties\":{\"city\":{\"type\":\"string\",\"description\":\"The city or town for which the current weather should be returned.\"},\"state\":{\"type\":\"string\",\"description\":\"The state or province for which the current weather should be returned. If this is not provided the largest or most prominent city with the given name, in the given country or in the worldi, will be assumed.\"},\"country\":{\"type\":\"string\",\"description\":\"The country for which the given weather should be returned. If this is not provided the largest or most prominent city with the given name will be returned.\"}},\"required\":[\"city\"]}}]}"
         },
         "headers": {
           "User-Agent": [
@@ -142,7 +142,7 @@
         },
         "headers": {
           "date": [
-            "Wed, 09 Jul 2025 16:57:34 GMT"
+            "Sun, 06 Jul 2025 19:48:05 GMT"
           ],
           "content-type": [
             "application/json"
@@ -160,7 +160,7 @@
             "80000"
           ],
           "anthropic-ratelimit-input-tokens-reset": [
-            "2025-07-09T16:57:34Z"
+            "2025-07-06T19:48:04Z"
           ],
           "anthropic-ratelimit-output-tokens-limit": [
             "16000"
@@ -169,7 +169,7 @@
             "16000"
           ],
           "anthropic-ratelimit-output-tokens-reset": [
-            "2025-07-09T16:57:34Z"
+            "2025-07-06T19:48:05Z"
           ],
           "anthropic-ratelimit-requests-limit": [
             "1000"
@@ -178,7 +178,7 @@
             "999"
           ],
           "anthropic-ratelimit-requests-reset": [
-            "2025-07-09T16:57:33Z"
+            "2025-07-06T19:48:03Z"
           ],
           "anthropic-ratelimit-tokens-limit": [
             "96000"
@@ -187,7 +187,7 @@
             "96000"
           ],
           "anthropic-ratelimit-tokens-reset": [
-            "2025-07-09T16:57:34Z"
+            "2025-07-06T19:48:04Z"
           ],
           "request-id": [
             "<REQUEST-ID>"
@@ -219,10 +219,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\"id\":\"msg_01R3vUAYBsnutFu2roQZb5w5\",\"type\":\"message\",\"role\":\"assistant\",\"model\":\"claude-3-5-sonnet-20240620\",\"content\":[{\"type\":\"text\",\"text\":\"blue\"}],\"stop_reason\":\"end_turn\",\"stop_sequence\":null,\"usage\":{\"input_tokens\":73,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":4,\"service_tier\":\"standard\"}}"
+          "string": "{\"id\":\"msg_01TGSMrZ3jcYS2e8P6zPWHfS\",\"type\":\"message\",\"role\":\"assistant\",\"model\":\"claude-3-5-sonnet-20240620\",\"content\":[{\"type\":\"text\",\"text\":\"Thank you. Now that I have your location, I can check the current weather for you in Seattle, Washington, USA.\"},{\"type\":\"tool_use\",\"id\":\"toolu_011iZamyQ3EbLg7sZCuKcS1y\",\"name\":\"get_weather\",\"input\":{\"city\":\"Seattle\",\"state\":\"WA\",\"country\":\"USA\"}}],\"stop_reason\":\"tool_use\",\"stop_sequence\":null,\"usage\":{\"input_tokens\":627,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":115,\"service_tier\":\"standard\"}}"
         }
       },
-      "recorded_at": "Wed, 09 Jul 2025 16:57:34 GMT"
+      "recorded_at": "Sun, 06 Jul 2025 19:48:05 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

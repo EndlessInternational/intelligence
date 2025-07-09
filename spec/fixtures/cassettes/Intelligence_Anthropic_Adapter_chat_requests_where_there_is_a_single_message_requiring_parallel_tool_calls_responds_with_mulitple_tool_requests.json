@@ -30,7 +30,7 @@
         },
         "headers": {
           "date": [
-            "Sat, 05 Jul 2025 21:17:41 GMT"
+            "Wed, 09 Jul 2025 16:58:47 GMT"
           ],
           "content-type": [
             "application/json"
@@ -48,7 +48,7 @@
             "80000"
           ],
           "anthropic-ratelimit-input-tokens-reset": [
-            "2025-07-05T21:17:39Z"
+            "2025-07-09T16:58:45Z"
           ],
           "anthropic-ratelimit-output-tokens-limit": [
             "16000"
@@ -57,7 +57,7 @@
             "16000"
           ],
           "anthropic-ratelimit-output-tokens-reset": [
-            "2025-07-05T21:17:41Z"
+            "2025-07-09T16:58:48Z"
           ],
           "anthropic-ratelimit-requests-limit": [
             "1000"
@@ -66,7 +66,7 @@
             "999"
           ],
           "anthropic-ratelimit-requests-reset": [
-            "2025-07-05T21:17:38Z"
+            "2025-07-09T16:58:44Z"
           ],
           "anthropic-ratelimit-tokens-limit": [
             "96000"
@@ -75,7 +75,7 @@
             "96000"
           ],
           "anthropic-ratelimit-tokens-reset": [
-            "2025-07-05T21:17:39Z"
+            "2025-07-09T16:58:45Z"
           ],
           "request-id": [
             "<REQUEST-ID>"
@@ -107,10 +107,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\"id\":\"msg_01Jp4E5KA5yKXc7PBgp7AQA9\",\"type\":\"message\",\"role\":\"assistant\",\"model\":\"claude-3-5-sonnet-20240620\",\"content\":[{\"type\":\"text\",\"text\":\"To get the weather information for London, Paris, and Rome, I'll need to use the get_weather tool for each city. I'll make three separate calls to the tool within the same function calls block.\"},{\"type\":\"tool_use\",\"id\":\"toolu_013e44YbBxi5crhARzmE298K\",\"name\":\"get_weather\",\"input\":{\"city\":\"London\"}},{\"type\":\"tool_use\",\"id\":\"toolu_01JD1Ds1LWFTABRyVf56rAh6\",\"name\":\"get_weather\",\"input\":{\"city\":\"Paris\"}},{\"type\":\"tool_use\",\"id\":\"toolu_01NEHTggLz4xKsWD4t7cPeKy\",\"name\":\"get_weather\",\"input\":{\"city\":\"Rome\"}}],\"stop_reason\":\"tool_use\",\"stop_sequence\":null,\"usage\":{\"input_tokens\":534,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":169,\"service_tier\":\"standard\"}}"
+          "string": "{\"id\":\"msg_013q7hn2r1rJFzCZULRFGgyz\",\"type\":\"message\",\"role\":\"assistant\",\"model\":\"claude-3-5-sonnet-20240620\",\"content\":[{\"type\":\"text\",\"text\":\"To get the weather information for London, Paris, and Rome, I'll need to use the get_weather tool for each city. I'll make three separate calls to the tool within the same function calls block.\"},{\"type\":\"tool_use\",\"id\":\"toolu_01CqSViHeKQbEHjLGh8Useeo\",\"name\":\"get_weather\",\"input\":{\"city\":\"London\"}},{\"type\":\"tool_use\",\"id\":\"toolu_01XFDZAgjyQi8gGesgHTCrtN\",\"name\":\"get_weather\",\"input\":{\"city\":\"Paris\"}},{\"type\":\"tool_use\",\"id\":\"toolu_01RfgAWnxuzuBWXpM9E72KvH\",\"name\":\"get_weather\",\"input\":{\"city\":\"Rome\"}}],\"stop_reason\":\"tool_use\",\"stop_sequence\":null,\"usage\":{\"input_tokens\":534,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":169,\"service_tier\":\"standard\"}}"
         }
       },
-      "recorded_at": "Sat, 05 Jul 2025 21:17:40 GMT"
+      "recorded_at": "Wed, 09 Jul 2025 16:58:47 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

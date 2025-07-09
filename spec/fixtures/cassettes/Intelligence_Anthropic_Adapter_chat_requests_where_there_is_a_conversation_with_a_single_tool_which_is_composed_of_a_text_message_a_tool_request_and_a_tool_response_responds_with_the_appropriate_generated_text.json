@@ -30,7 +30,7 @@
         },
         "headers": {
           "date": [
-            "Sat, 05 Jul 2025 21:17:34 GMT"
+            "Wed, 09 Jul 2025 16:58:39 GMT"
           ],
           "content-type": [
             "application/json"
@@ -48,7 +48,7 @@
             "80000"
           ],
           "anthropic-ratelimit-input-tokens-reset": [
-            "2025-07-05T21:17:34Z"
+            "2025-07-09T16:58:39Z"
           ],
           "anthropic-ratelimit-output-tokens-limit": [
             "16000"
@@ -57,7 +57,7 @@
             "16000"
           ],
           "anthropic-ratelimit-output-tokens-reset": [
-            "2025-07-05T21:17:34Z"
+            "2025-07-09T16:58:39Z"
           ],
           "anthropic-ratelimit-requests-limit": [
             "1000"
@@ -66,7 +66,7 @@
             "999"
           ],
           "anthropic-ratelimit-requests-reset": [
-            "2025-07-05T21:17:33Z"
+            "2025-07-09T16:58:38Z"
           ],
           "anthropic-ratelimit-tokens-limit": [
             "96000"
@@ -75,7 +75,7 @@
             "96000"
           ],
           "anthropic-ratelimit-tokens-reset": [
-            "2025-07-05T21:17:34Z"
+            "2025-07-09T16:58:39Z"
           ],
           "request-id": [
             "<REQUEST-ID>"
@@ -107,10 +107,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\"id\":\"msg_01H34Xan26qGmXCSS3ejy7JS\",\"type\":\"message\",\"role\":\"assistant\",\"model\":\"claude-3-5-sonnet-20240620\",\"content\":[{\"type\":\"text\",\"text\":\"Based on the information provided by the get_location tool, you are currently located in Seattle, WA, USA. Seattle is a major city in the state of Washington, located in the Pacific Northwest region of the United States of America.\"}],\"stop_reason\":\"end_turn\",\"stop_sequence\":null,\"usage\":{\"input_tokens\":421,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":52,\"service_tier\":\"standard\"}}"
+          "string": "{\"id\":\"msg_01TG74vZaoESTbtPrL8asW7n\",\"type\":\"message\",\"role\":\"assistant\",\"model\":\"claude-3-5-sonnet-20240620\",\"content\":[{\"type\":\"text\",\"text\":\"Based on the information provided by the get_location tool, you are currently located in Seattle, WA, USA. Seattle is a major city in the state of Washington, located in the Pacific Northwest region of the United States of America.\"}],\"stop_reason\":\"end_turn\",\"stop_sequence\":null,\"usage\":{\"input_tokens\":421,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":52,\"service_tier\":\"standard\"}}"
         }
       },
-      "recorded_at": "Sat, 05 Jul 2025 21:17:34 GMT"
+      "recorded_at": "Wed, 09 Jul 2025 16:58:39 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

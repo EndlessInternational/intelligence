@@ -20,6 +20,20 @@ RSpec.describe "#{Intelligence::Adapter[ :anthropic ]} stream requests", :anthro
     end
   end
 
+  let( :adapter_with_thought ) do
+    Intelligence::Adapter[ :anthropic ].build! do   
+      key                     ENV[ 'ANTHROPIC_API_KEY' ]
+      chat_options do
+        model                 'claude-sonnet-4-20250514'
+        max_tokens            4096
+        thinking do
+          budget_tokens       2048
+        end
+        stream                true
+      end
+    end
+  end
+
   let( :adapter_with_limited_max_tokens ) do
     Intelligence::Adapter[ :anthropic ].build! do   
       key                     ENV[ 'ANTHROPIC_API_KEY' ]
@@ -58,7 +72,12 @@ RSpec.describe "#{Intelligence::Adapter[ :anthropic ]} stream requests", :anthro
   include_examples 'stream requests with file images'
   # include_examples 'stream requests with binary encoded pdf'
 
+  include_examples 'stream requests with thought', 
+                   adapter: :adapter_with_thought
+
   include_examples 'stream requests with tools'
   include_examples 'stream requests with parallel tools'
+
+  include_examples 'stream requests with tools multiturn'
 
 end

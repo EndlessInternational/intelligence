@@ -30,7 +30,7 @@
         },
         "headers": {
           "date": [
-            "Sat, 05 Jul 2025 21:17:31 GMT"
+            "Wed, 09 Jul 2025 16:58:36 GMT"
           ],
           "content-type": [
             "application/json"
@@ -48,7 +48,7 @@
             "80000"
           ],
           "anthropic-ratelimit-input-tokens-reset": [
-            "2025-07-05T21:17:30Z"
+            "2025-07-09T16:58:34Z"
           ],
           "anthropic-ratelimit-output-tokens-limit": [
             "16000"
@@ -57,7 +57,7 @@
             "16000"
           ],
           "anthropic-ratelimit-output-tokens-reset": [
-            "2025-07-05T21:17:32Z"
+            "2025-07-09T16:58:36Z"
           ],
           "anthropic-ratelimit-requests-limit": [
             "1000"
@@ -66,7 +66,7 @@
             "999"
           ],
           "anthropic-ratelimit-requests-reset": [
-            "2025-07-05T21:17:29Z"
+            "2025-07-09T16:58:34Z"
           ],
           "anthropic-ratelimit-tokens-limit": [
             "96000"
@@ -75,7 +75,7 @@
             "96000"
           ],
           "anthropic-ratelimit-tokens-reset": [
-            "2025-07-05T21:17:30Z"
+            "2025-07-09T16:58:34Z"
           ],
           "request-id": [
             "<REQUEST-ID>"
@@ -107,10 +107,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\"id\":\"msg_0189TiNzxjrXg9MPs5WbnwUY\",\"type\":\"message\",\"role\":\"assistant\",\"model\":\"claude-3-5-sonnet-20240620\",\"content\":[{\"type\":\"text\",\"text\":\"To provide you with the current weather, I'll need to use the information about your location that I just received. Let me fetch the weather data for you.\"},{\"type\":\"tool_use\",\"id\":\"toolu_01A2kFSE5PrG1FrnhdbfEGfD\",\"name\":\"get_weather\",\"input\":{\"city\":\"Seattle\",\"state\":\"WA\",\"country\":\"USA\"}}],\"stop_reason\":\"tool_use\",\"stop_sequence\":null,\"usage\":{\"input_tokens\":602,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":122,\"service_tier\":\"standard\"}}"
+          "string": "{\"id\":\"msg_019wk3u57h2JmJ3aJvdxcGzp\",\"type\":\"message\",\"role\":\"assistant\",\"model\":\"claude-3-5-sonnet-20240620\",\"content\":[{\"type\":\"text\",\"text\":\"To provide you with the current weather, I'll need to use the information about your location that I just received. Let me fetch the weather data for you.\"},{\"type\":\"tool_use\",\"id\":\"toolu_013s569RYyDW7kZmRbYDNwP4\",\"name\":\"get_weather\",\"input\":{\"city\":\"Seattle\",\"state\":\"WA\",\"country\":\"USA\"}}],\"stop_reason\":\"tool_use\",\"stop_sequence\":null,\"usage\":{\"input_tokens\":602,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":122,\"service_tier\":\"standard\"}}"
         }
       },
-      "recorded_at": "Sat, 05 Jul 2025 21:17:31 GMT"
+      "recorded_at": "Wed, 09 Jul 2025 16:58:36 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

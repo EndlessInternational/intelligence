@@ -30,7 +30,7 @@
         },
         "headers": {
           "date": [
-            "Sat, 05 Jul 2025 21:17:24 GMT"
+            "Wed, 09 Jul 2025 16:58:28 GMT"
           ],
           "content-type": [
             "application/json"
@@ -48,7 +48,7 @@
             "80000"
           ],
           "anthropic-ratelimit-input-tokens-reset": [
-            "2025-07-05T21:17:23Z"
+            "2025-07-09T16:58:27Z"
           ],
           "anthropic-ratelimit-output-tokens-limit": [
             "16000"
@@ -57,7 +57,7 @@
             "16000"
           ],
           "anthropic-ratelimit-output-tokens-reset": [
-            "2025-07-05T21:17:25Z"
+            "2025-07-09T16:58:29Z"
           ],
           "anthropic-ratelimit-requests-limit": [
             "1000"
@@ -66,7 +66,7 @@
             "999"
           ],
           "anthropic-ratelimit-requests-reset": [
-            "2025-07-05T21:17:23Z"
+            "2025-07-09T16:58:27Z"
           ],
           "anthropic-ratelimit-tokens-limit": [
             "96000"
@@ -75,7 +75,7 @@
             "96000"
           ],
           "anthropic-ratelimit-tokens-reset": [
-            "2025-07-05T21:17:23Z"
+            "2025-07-09T16:58:27Z"
           ],
           "request-id": [
             "<REQUEST-ID>"
@@ -107,10 +107,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\"id\":\"msg_01J9j3D9odrYnug8Jz2kEaYu\",\"type\":\"message\",\"role\":\"assistant\",\"model\":\"claude-3-5-sonnet-20240620\",\"content\":[{\"type\":\"text\",\"text\":\"Certainly! I'll use the get_weather tool to check the current weather in Seattle, Washington for you.\"},{\"type\":\"tool_use\",\"id\":\"toolu_01SaP2su27AGk5dqYBTjgGkn\",\"name\":\"get_weather\",\"input\":{\"city\":\"Seattle\",\"state\":\"WA\"}}],\"stop_reason\":\"tool_use\",\"stop_sequence\":null,\"usage\":{\"input_tokens\":558,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":95,\"service_tier\":\"standard\"}}"
+          "string": "{\"id\":\"msg_01RbEBdRqc5FGJufVdRG6HfH\",\"type\":\"message\",\"role\":\"assistant\",\"model\":\"claude-3-5-sonnet-20240620\",\"content\":[{\"type\":\"text\",\"text\":\"Certainly! I'll use the get_weather tool to check the current weather in Seattle, WA for you.\"},{\"type\":\"tool_use\",\"id\":\"toolu_01WN8faH3of5ShvEeC1BdhY7\",\"name\":\"get_weather\",\"input\":{\"city\":\"Seattle\",\"state\":\"WA\"}}],\"stop_reason\":\"tool_use\",\"stop_sequence\":null,\"usage\":{\"input_tokens\":558,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":96,\"service_tier\":\"standard\"}}"
         }
       },
-      "recorded_at": "Sat, 05 Jul 2025 21:17:24 GMT"
+      "recorded_at": "Wed, 09 Jul 2025 16:58:28 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

@@ -5,6 +5,7 @@ module Intelligence
         
       schema do 
         text            String, required: true
+        ciphertext      String
       end
 
       attr_reader :text 

@@ -30,7 +30,7 @@
         },
         "headers": {
           "date": [
-            "Sat, 05 Jul 2025 21:17:47 GMT"
+            "Wed, 09 Jul 2025 16:59:05 GMT"
           ],
           "content-type": [
             "text/event-stream; charset=utf-8"
@@ -51,7 +51,7 @@
             "80000"
           ],
           "anthropic-ratelimit-input-tokens-reset": [
-            "2025-07-05T21:17:46Z"
+            "2025-07-09T16:59:04Z"
           ],
           "anthropic-ratelimit-output-tokens-limit": [
             "16000"
@@ -60,7 +60,7 @@
             "16000"
           ],
           "anthropic-ratelimit-output-tokens-reset": [
-            "2025-07-05T21:17:46Z"
+            "2025-07-09T16:59:04Z"
           ],
           "anthropic-ratelimit-requests-limit": [
             "1000"
@@ -69,7 +69,7 @@
             "999"
           ],
           "anthropic-ratelimit-requests-reset": [
-            "2025-07-05T21:17:46Z"
+            "2025-07-09T16:59:04Z"
           ],
           "anthropic-ratelimit-tokens-limit": [
             "96000"
@@ -78,7 +78,7 @@
             "96000"
           ],
           "anthropic-ratelimit-tokens-reset": [
-            "2025-07-05T21:17:46Z"
+            "2025-07-09T16:59:04Z"
           ],
           "request-id": [
             "<REQUEST-ID>"
@@ -107,10 +107,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "event: message_start\ndata: {\"type\":\"message_start\",\"message\":{\"id\":\"msg_01GmHWvFysq85mXUwi6cMyDY\",\"type\":\"message\",\"role\":\"assistant\",\"model\":\"claude-3-5-sonnet-20240620\",\"content\":[],\"stop_reason\":null,\"stop_sequence\":null,\"usage\":{\"input_tokens\":89,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":5,\"service_tier\":\"standard\"}}   }\n\nevent: content_block_start\ndata: {\"type\":\"content_block_start\",\"index\":0,\"content_block\":{\"type\":\"text\",\"text\":\"\"}  }\n\nevent: ping\ndata: {\"type\": \"ping\"}\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":0,\"delta\":{\"type\":\"text_delta\",\"text\":\"one\\ntwo\\nthree\"} }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":0,\"delta\":{\"type\":\"text_delta\",\"text\":\"\\nfour\\nfive\"}     }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":0,\"delta\":{\"type\":\"text_delta\",\"text\":\"\\nsix\\nseven\\neight\"}  }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":0,\"delta\":{\"type\":\"text_delta\",\"text\":\"\\nnine\\nten\"}    }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":0,\"delta\":{\"type\":\"text_delta\",\"text\":\"\\neleven\\ntwelve\"}       }\n\nevent: content_block_stop\ndata: {\"type\":\"content_block_stop\",\"index\":0       }\n\nevent: message_delta\ndata: {\"type\":\"message_delta\",\"delta\":{\"stop_reason\":\"max_tokens\",\"stop_sequence\":null},\"usage\":{\"output_tokens\":24} }\n\nevent: message_stop\ndata: {\"type\":\"message_stop\"       }\n\n"
+          "string": "event: message_start\ndata: {\"type\":\"message_start\",\"message\":{\"id\":\"msg_01RK17UUxWxDBGJCHeseNFe1\",\"type\":\"message\",\"role\":\"assistant\",\"model\":\"claude-3-5-sonnet-20240620\",\"content\":[],\"stop_reason\":null,\"stop_sequence\":null,\"usage\":{\"input_tokens\":89,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":5,\"service_tier\":\"standard\"}}      }\n\nevent: content_block_start\ndata: {\"type\":\"content_block_start\",\"index\":0,\"content_block\":{\"type\":\"text\",\"text\":\"\"}}\n\nevent: ping\ndata: {\"type\": \"ping\"}\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":0,\"delta\":{\"type\":\"text_delta\",\"text\":\"one\\ntwo\\nthree\"}           }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":0,\"delta\":{\"type\":\"text_delta\",\"text\":\"\\nfour\\nfive\"}       }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":0,\"delta\":{\"type\":\"text_delta\",\"text\":\"\\nsix\\nseven\\neight\"}             }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":0,\"delta\":{\"type\":\"text_delta\",\"text\":\"\\nnine\\nten\"}         }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":0,\"delta\":{\"type\":\"text_delta\",\"text\":\"\\neleven\\ntwelve\"}}\n\nevent: content_block_stop\ndata: {\"type\":\"content_block_stop\",\"index\":0     }\n\nevent: message_delta\ndata: {\"type\":\"message_delta\",\"delta\":{\"stop_reason\":\"max_tokens\",\"stop_sequence\":null},\"usage\":{\"output_tokens\":24}     }\n\nevent: message_stop\ndata: {\"type\":\"message_stop\"            }\n\n"
         }
       },
-      "recorded_at": "Sat, 05 Jul 2025 21:17:47 GMT"
+      "recorded_at": "Wed, 09 Jul 2025 16:59:05 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

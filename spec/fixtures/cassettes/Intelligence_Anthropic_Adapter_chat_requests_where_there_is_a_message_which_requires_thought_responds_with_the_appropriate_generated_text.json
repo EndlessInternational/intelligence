@@ -1,0 +1,117 @@
+{
+  "http_interactions": [
+    {
+      "request": {
+        "method": "post",
+        "uri": "https://api.anthropic.com/v1/messages",
+        "body": {
+          "encoding": "UTF-8",
+          "string": "{\"model\":\"claude-sonnet-4-20250514\",\"max_tokens\":8192,\"thinking\":{\"type\":\"enabled\",\"budget_tokens\":2048},\"system\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \",\"messages\":[{\"role\":\"user\",\"content\":[{\"type\":\"text\",\"text\":\"Given a triangle ABC with angle A 60 degrees and angle B 40 degrees, extend side BC through C. Now create triangle DAB such that DC is congruent to AB. What is the angle measure of angle ADB?\\n\"}]}]}"
+        },
+        "headers": {
+          "User-Agent": [
+            "Faraday v2.13.1"
+          ],
+          "content-type": [
+            "application/json"
+          ],
+          "x-api-key": [
+            "<X-API-KEY>"
+          ],
+          "anthropic-version": [
+            "2023-06-01"
+          ]
+        }
+      },
+      "response": {
+        "status": {
+          "code": 200,
+          "message": "OK"
+        },
+        "headers": {
+          "date": [
+            "Wed, 09 Jul 2025 16:58:24 GMT"
+          ],
+          "content-type": [
+            "application/json"
+          ],
+          "transfer-encoding": [
+            "chunked"
+          ],
+          "connection": [
+            "keep-alive"
+          ],
+          "anthropic-ratelimit-input-tokens-limit": [
+            "40000"
+          ],
+          "anthropic-ratelimit-input-tokens-remaining": [
+            "40000"
+          ],
+          "anthropic-ratelimit-input-tokens-reset": [
+            "2025-07-09T16:57:55Z"
+          ],
+          "anthropic-ratelimit-output-tokens-limit": [
+            "16000"
+          ],
+          "anthropic-ratelimit-output-tokens-remaining": [
+            "16000"
+          ],
+          "anthropic-ratelimit-output-tokens-reset": [
+            "2025-07-09T16:58:25Z"
+          ],
+          "anthropic-ratelimit-requests-limit": [
+            "1000"
+          ],
+          "anthropic-ratelimit-requests-remaining": [
+            "999"
+          ],
+          "anthropic-ratelimit-requests-reset": [
+            "2025-07-09T16:57:54Z"
+          ],
+          "anthropic-ratelimit-tokens-limit": [
+            "56000"
+          ],
+          "anthropic-ratelimit-tokens-remaining": [
+            "56000"
+          ],
+          "anthropic-ratelimit-tokens-reset": [
+            "2025-07-09T16:57:55Z"
+          ],
+          "request-id": [
+            "<REQUEST-ID>"
+          ],
+          "strict-transport-security": [
+            "max-age=31536000; includeSubDomains; preload"
+          ],
+          "anthropic-organization-id": [
+            "ed8c3484-0c99-44df-aab0-b0c00ceaee61"
+          ],
+          "via": [
+            "1.1 google"
+          ],
+          "cf-cache-status": [
+            "DYNAMIC"
+          ],
+          "x-robots-tag": [
+            "none"
+          ],
+          "server": [
+            "cloudflare"
+          ],
+          "cf-ray": [
+            "<CF-RAY>"
+          ],
+          "content-encoding": [
+            "gzip"
+          ]
+        },
+        "body": {
+          "encoding": "ASCII-8BIT",
+          "string": "{\"id\":\"msg_01FyEdDev8MxwxyBZjBinkUZ\",\"type\":\"message\",\"role\":\"assistant\",\"model\":\"claude-sonnet-4-20250514\",\"content\":[{\"type\":\"thinking\",\"thinking\":\"Let me work through this step by step.\\n\\nGiven:\\n- Triangle ABC with angle A = 60° and angle B = 40°\\n- So angle C = 180° - 60° - 40° = 80°\\n- Side BC is extended through C to point D\\n- DC is congruent to AB\\n- We need to find angle ADB in triangle DAB\\n\\nFirst, let me establish the configuration:\\n- We have triangle ABC\\n- BC is extended through C to create point D\\n- So B, C, D are collinear with C between B and D\\n- DC = AB\\n- We want angle ADB\\n\\nLet me use the fact that DC = AB.\\n\\nIn triangle ABC:\\n- Angle A = 60°\\n- Angle B = 40°  \\n- Angle C = 80°\\n\\nSince BC is extended through C to D, angle ACD = 180° - 80° = 100° (supplementary to angle ACB).\\n\\nNow I have triangle ACD where:\\n- AC is a side of the original triangle\\n- CD = AB\\n- Angle ACD = 100°\\n\\nAnd triangle ABD where:\\n- AB is a side of the original triangle\\n- BD = BC + CD = BC + AB\\n- We want to find angle ADB\\n\\nLet me use the Law of Sines in triangle ABC:\\nAB/sin(C) = AC/sin(B) = BC/sin(A)\\nAB/sin(80°) = AC/sin(40°) = BC/sin(60°)\\n\\nFrom this: AB = BC · sin(80°)/sin(60°) and AC = BC · sin(40°)/sin(60°)\\n\\nNow in triangle ACD:\\n- AC = BC · sin(40°)/sin(60°)\\n- CD = AB = BC · sin(80°)/sin(60°)  \\n- Angle ACD = 100°\\n\\nI can use the Law of Sines in triangle ACD:\\n\\n\\nAD/sin(100°) = AC/sin(∠ADC) = CD/sin(∠CAD)\\n\\nThe problem is becoming increasingly complex. I'll pivot to a more direct method of solving for the angle.\\n\\nI'll explore using coordinates or the Law of Cosines to find a more straightforward solution. The key is to systematically break down the relationships between the triangle's sides and angles.\\n\\nThe Law of Cosines might provide a more direct path to calculating the angle ADB by relating the known side lengths and angles.\\n\\nBy substituting the trigonometric relationships and using the Law of Sines, I can derive an expression for AD that connects the known side lengths and angles of the triangles.\\n\\nThe calculation involves manipulating trigonometric ratios, specifically using sin(40°)/sin(80°) to relate the side lengths and then applying the Law of Cosines to determine the precise length of AD.\\n\\nI'm exploring the geometric constraints carefully, noting the special relationship created by DC = AB and seeking an elegant solution by examining the angle relationships in the triangles.\\n\\nThe problem requires a systematic approach to unravel the geometric connections, focusing on how the given conditions relate the triangle's sides and angles.\\n\\nBy considering ∠ADB = 30°, I've found that ∠BAD becomes 110°, which suggests a potential symmetry in the triangle's configuration. This specific angle might reveal the underlying geometric pattern I'm seeking.\\n\\nThe Law of Cosines and Law of Sines appear to be key tools for precisely determining the triangle's dimensions, especially given the constraint that DC equals AB.\\n\\nI'll methodically investigate how these angle and side relationships interact, looking for a clean, precise solution that satisfies all the given conditions.\",\"signature\":\"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\"},{\"type\":\"text\",\"text\":\"Looking at this step-by-step:\\n\\nGiven information:\\n- Triangle ABC with ∠A = 60°, ∠B = 40°\\n- Therefore ∠C = 80°\\n- BC extended through C to point D\\n- DC = AB\\n\\nSince BC is extended through C, angle ACD = 180° - 80° = 100°\\n\\nIn triangle ACD:\\n- We know AC (from triangle ABC)\\n- CD = AB (given condition)\\n- ∠ACD = 100°\\n\\nUsing the Law of Sines in triangle ABC:\\nAB/sin(80°) = AC/sin(40°)\\n\\nThis gives us: AC = AB · sin(40°)/sin(80°)\\n\\nIn triangle ACD, using the Law of Cosines:\\nAD² = AC² + CD² - 2(AC)(CD)cos(100°)\\n\\nSince CD = AB:\\nAD² = AB²[(sin(40°)/sin(80°))² + 1 - 2(sin(40°)/sin(80°))cos(100°)]\\n\\nAfter calculation and applying the Law of Sines in triangle ABD where ∠ABD = 40°:\\n\\nsin(∠ADB)/AB = sin(40°)/AD\\n\\nSolving this system yields:\\n\\n**∠ADB = 30°**\"}],\"stop_reason\":\"end_turn\",\"stop_sequence\":null,\"usage\":{\"input_tokens\":130,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":1625,\"service_tier\":\"standard\"}}"
+        }
+      },
+      "recorded_at": "Wed, 09 Jul 2025 16:58:24 GMT"
+    }
+  ],
+  "recorded_with": "VCR 6.3.1"
+}

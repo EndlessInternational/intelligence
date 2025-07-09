@@ -42,6 +42,19 @@ RSpec.describe "#{Intelligence::Adapter[ :anthropic ]} chat requests", :anthropi
     end
   end
 
+  let( :adapter_with_thought ) do
+    Intelligence::Adapter[ :anthropic ].build! do   
+      key                     ENV[ 'ANTHROPIC_API_KEY' ]
+      chat_options do
+        model                 'claude-sonnet-4-20250514'
+        max_tokens            8192
+        thinking do
+          budget_tokens       2048
+        end
+      end
+    end
+  end
+
   let ( :adapter_with_tool ) do 
     Intelligence::Adapter[ :anthropic ].build! do 
       key                     ENV[ 'ANTHROPIC_API_KEY' ]
@@ -91,12 +104,16 @@ RSpec.describe "#{Intelligence::Adapter[ :anthropic ]} chat requests", :anthropi
   include_examples 'chat requests without alternating roles'
   include_examples 'chat requests with binary encoded images'
   include_examples 'chat requests with file images'
+
+  include_examples 'chat requests with thought', 
+                   adapter: :adapter_with_thought
   # include_examples 'chat requests with binary encoded pdf'
 
   include_examples 'chat requests with tools'
   include_examples 'chat requests with adapter tools'
   include_examples 'chat requests with complex tools'
   include_examples 'chat requests with parallel tools'
+  include_examples 'chat requests with tools multiturn'
 
   include_examples 'chat requests with invalid key'
   include_examples 'chat requests with invalid model' 
