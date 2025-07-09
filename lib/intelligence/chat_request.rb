@@ -140,7 +140,8 @@ module Intelligence
         result_callback = request.instance_variable_get( "@_intelligence_result_callback" )
         request.options.on_data = Proc.new do | chunk, received_bytes |
           context, attributes = @adapter.stream_result_chunk_attributes( context, chunk )
-          result_callback.call( ChatResult.new( attributes ) ) unless attributes.nil?
+          result_callback.call( ChatResult.new( attributes ) ) \
+            unless result_callback.nil? || attributes.nil?
         end 
 
       end
