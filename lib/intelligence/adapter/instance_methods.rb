@@ -8,8 +8,8 @@ module Intelligence
       end
 
       def merge_options( options, other_options )
-        merged_options = options.dup
-
+        merged_options = Utilities.deep_dup( options )
+        
         other_options.each do | key, value |
           if merged_options[ key].is_a?( Hash ) && value.is_a?( Hash )
             merged_options[ key ] = merge_options( merged_options[ key ], value )
