@@ -1,0 +1,193 @@
+{
+  "http_interactions": [
+    {
+      "request": {
+        "method": "post",
+        "uri": "https://api.groq.com/openai/v1/chat/completions",
+        "body": {
+          "encoding": "UTF-8",
+          "string": "{\"model\":\"moonshotai/kimi-k2-instruct\",\"max_tokens\":256,\"temperature\":0.0,\"tools\":[{\"type\":\"function\",\"function\":{\"name\":\"get_location\",\"description\":\"The get_location tool will return the users city, state or province and country.\",\"parameters\":{\"type\":\"object\",\"properties\":{},\"required\":[]}}},{\"type\":\"function\",\"function\":{\"name\":\"get_location\",\"description\":\"The get_location tool will return the users city, state or province and country.\",\"parameters\":{\"type\":\"object\",\"properties\":{},\"required\":[]}}},{\"type\":\"function\",\"function\":{\"name\":\"get_weather\",\"description\":\"The get_weather tool will return the current weather in a given locality.\",\"parameters\":{\"type\":\"object\",\"properties\":{\"city\":{\"type\":\"string\",\"description\":\"The city or town for which the current weather should be returned.\"},\"state\":{\"type\":\"string\",\"description\":\"The state or province for which the current weather should be returned. If this is not provided the largest or most prominent city with the given name, in the given country or in the worldi, will be assumed.\"},\"country\":{\"type\":\"string\",\"description\":\"The country for which the given weather should be returned. If this is not provided the largest or most prominent city with the given name will be returned.\"}},\"required\":[\"city\"]}}}],\"stream\":true,\"messages\":[{\"role\":\"system\",\"content\":\"You are a helpfull assistant who answers questions succinctly.\"},{\"role\":\"user\",\"content\":\"What is the current weather?\"}]}"
+        },
+        "headers": {
+          "User-Agent": [
+            "Faraday v2.13.1"
+          ],
+          "Content-type": [
+            "application/json"
+          ],
+          "Authorization": [
+            "Bearer <TOKEN>"
+          ]
+        }
+      },
+      "response": {
+        "status": {
+          "code": 200,
+          "message": "OK"
+        },
+        "headers": {
+          "date": [
+            "Tue, 15 Jul 2025 15:44:04 GMT"
+          ],
+          "content-type": [
+            "text/event-stream"
+          ],
+          "transfer-encoding": [
+            "chunked"
+          ],
+          "connection": [
+            "keep-alive"
+          ],
+          "cache-control": [
+            "no-cache"
+          ],
+          "vary": [
+            "Origin"
+          ],
+          "x-groq-region": [
+            "us-west-1"
+          ],
+          "x-ratelimit-limit-requests": [
+            "1000"
+          ],
+          "x-ratelimit-limit-tokens": [
+            "10000"
+          ],
+          "x-ratelimit-remaining-requests": [
+            "981"
+          ],
+          "x-ratelimit-remaining-tokens": [
+            "8394"
+          ],
+          "x-ratelimit-reset-requests": [
+            "27m21.159999999s"
+          ],
+          "x-ratelimit-reset-tokens": [
+            "9.636s"
+          ],
+          "x-request-id": [
+            "<X-REQUEST-ID>"
+          ],
+          "via": [
+            "1.1 google"
+          ],
+          "cf-cache-status": [
+            "DYNAMIC"
+          ],
+          "set-cookie": [
+            "<SET-COOKIE>"
+          ],
+          "server": [
+            "cloudflare"
+          ],
+          "cf-ray": [
+            "<CF-RAY>"
+          ],
+          "alt-svc": [
+            "h3=\":443\"; ma=86400"
+          ]
+        },
+        "body": {
+          "encoding": "UTF-8",
+          "string": "data: {\"id\":\"chatcmpl-e0ad6d39-3abe-4130-bc0e-7ae817be1613\",\"object\":\"chat.completion.chunk\",\"created\":1752594244,\"model\":\"moonshotai/kimi-k2-instruct\",\"system_fingerprint\":\"fp_b8565bb333\",\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"\"},\"logprobs\":null,\"finish_reason\":null}],\"x_groq\":{\"id\":\"req_01k07c3rdefnmtwhsavr1nk11h\"}}\n\ndata: {\"id\":\"chatcmpl-e0ad6d39-3abe-4130-bc0e-7ae817be1613\",\"object\":\"chat.completion.chunk\",\"created\":1752594244,\"model\":\"moonshotai/kimi-k2-instruct\",\"system_fingerprint\":\"fp_b8565bb333\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"I'll\"},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"chatcmpl-e0ad6d39-3abe-4130-bc0e-7ae817be1613\",\"object\":\"chat.completion.chunk\",\"created\":1752594244,\"model\":\"moonshotai/kimi-k2-instruct\",\"system_fingerprint\":\"fp_b8565bb333\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\" check\"},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"chatcmpl-e0ad6d39-3abe-4130-bc0e-7ae817be1613\",\"object\":\"chat.completion.chunk\",\"created\":1752594244,\"model\":\"moonshotai/kimi-k2-instruct\",\"system_fingerprint\":\"fp_b8565bb333\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\" the\"},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"chatcmpl-e0ad6d39-3abe-4130-bc0e-7ae817be1613\",\"object\":\"chat.completion.chunk\",\"created\":1752594244,\"model\":\"moonshotai/kimi-k2-instruct\",\"system_fingerprint\":\"fp_b8565bb333\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\" current\"},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"chatcmpl-e0ad6d39-3abe-4130-bc0e-7ae817be1613\",\"object\":\"chat.completion.chunk\",\"created\":1752594244,\"model\":\"moonshotai/kimi-k2-instruct\",\"system_fingerprint\":\"fp_b8565bb333\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\" weather\"},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"chatcmpl-e0ad6d39-3abe-4130-bc0e-7ae817be1613\",\"object\":\"chat.completion.chunk\",\"created\":1752594244,\"model\":\"moonshotai/kimi-k2-instruct\",\"system_fingerprint\":\"fp_b8565bb333\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\" for\"},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"chatcmpl-e0ad6d39-3abe-4130-bc0e-7ae817be1613\",\"object\":\"chat.completion.chunk\",\"created\":1752594244,\"model\":\"moonshotai/kimi-k2-instruct\",\"system_fingerprint\":\"fp_b8565bb333\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\" you\"},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"chatcmpl-e0ad6d39-3abe-4130-bc0e-7ae817be1613\",\"object\":\"chat.completion.chunk\",\"created\":1752594244,\"model\":\"moonshotai/kimi-k2-instruct\",\"system_fingerprint\":\"fp_b8565bb333\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\".\"},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"chatcmpl-e0ad6d39-3abe-4130-bc0e-7ae817be1613\",\"object\":\"chat.completion.chunk\",\"created\":1752594244,\"model\":\"moonshotai/kimi-k2-instruct\",\"system_fingerprint\":\"fp_b8565bb333\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\" First\"},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"chatcmpl-e0ad6d39-3abe-4130-bc0e-7ae817be1613\",\"object\":\"chat.completion.chunk\",\"created\":1752594244,\"model\":\"moonshotai/kimi-k2-instruct\",\"system_fingerprint\":\"fp_b8565bb333\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\",\"},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"chatcmpl-e0ad6d39-3abe-4130-bc0e-7ae817be1613\",\"object\":\"chat.completion.chunk\",\"created\":1752594244,\"model\":\"moonshotai/kimi-k2-instruct\",\"system_fingerprint\":\"fp_b8565bb333\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\" let\"},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"chatcmpl-e0ad6d39-3abe-4130-bc0e-7ae817be1613\",\"object\":\"chat.completion.chunk\",\"created\":1752594244,\"model\":\"moonshotai/kimi-k2-instruct\",\"system_fingerprint\":\"fp_b8565bb333\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\" me\"},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"chatcmpl-e0ad6d39-3abe-4130-bc0e-7ae817be1613\",\"object\":\"chat.completion.chunk\",\"created\":1752594244,\"model\":\"moonshotai/kimi-k2-instruct\",\"system_fingerprint\":\"fp_b8565bb333\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\" determine\"},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"chatcmpl-e0ad6d39-3abe-4130-bc0e-7ae817be1613\",\"object\":\"chat.completion.chunk\",\"created\":1752594244,\"model\":\"moonshotai/kimi-k2-instruct\",\"system_fingerprint\":\"fp_b8565bb333\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\" your\"},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"chatcmpl-e0ad6d39-3abe-4130-bc0e-7ae817be1613\",\"object\":\"chat.completion.chunk\",\"created\":1752594244,\"model\":\"moonshotai/kimi-k2-instruct\",\"system_fingerprint\":\"fp_b8565bb333\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\" location\"},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"chatcmpl-e0ad6d39-3abe-4130-bc0e-7ae817be1613\",\"object\":\"chat.completion.chunk\",\"created\":1752594244,\"model\":\"moonshotai/kimi-k2-instruct\",\"system_fingerprint\":\"fp_b8565bb333\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\".\"},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"chatcmpl-e0ad6d39-3abe-4130-bc0e-7ae817be1613\",\"object\":\"chat.completion.chunk\",\"created\":1752594244,\"model\":\"moonshotai/kimi-k2-instruct\",\"system_fingerprint\":\"fp_b8565bb333\",\"choices\":[{\"index\":0,\"delta\":{\"tool_calls\":[{\"id\":\"0\",\"type\":\"function\",\"function\":{\"name\":\"get_location\",\"arguments\":\"{}\"},\"index\":0}]},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"chatcmpl-e0ad6d39-3abe-4130-bc0e-7ae817be1613\",\"object\":\"chat.completion.chunk\",\"created\":1752594244,\"model\":\"moonshotai/kimi-k2-instruct\",\"system_fingerprint\":\"fp_b8565bb333\",\"choices\":[{\"index\":0,\"delta\":{},\"logprobs\":null,\"finish_reason\":\"tool_calls\"}],\"x_groq\":{\"id\":\"req_01k07c3rdefnmtwhsavr1nk11h\",\"usage\":{\"queue_time\":0.085082515,\"prompt_tokens\":266,\"prompt_time\":0.012228244,\"completion_tokens\":28,\"completion_time\":0.155298538,\"total_tokens\":294,\"total_time\":0.167526782}}}\n\ndata: [DONE]\n\n"
+        }
+      },
+      "recorded_at": "Tue, 15 Jul 2025 15:44:04 GMT"
+    },
+    {
+      "request": {
+        "method": "post",
+        "uri": "https://api.groq.com/openai/v1/chat/completions",
+        "body": {
+          "encoding": "UTF-8",
+          "string": "{\"model\":\"moonshotai/kimi-k2-instruct\",\"max_tokens\":256,\"temperature\":0.0,\"tools\":[{\"type\":\"function\",\"function\":{\"name\":\"get_location\",\"description\":\"The get_location tool will return the users city, state or province and country.\",\"parameters\":{\"type\":\"object\",\"properties\":{},\"required\":[]}}},{\"type\":\"function\",\"function\":{\"name\":\"get_location\",\"description\":\"The get_location tool will return the users city, state or province and country.\",\"parameters\":{\"type\":\"object\",\"properties\":{},\"required\":[]}}},{\"type\":\"function\",\"function\":{\"name\":\"get_weather\",\"description\":\"The get_weather tool will return the current weather in a given locality.\",\"parameters\":{\"type\":\"object\",\"properties\":{\"city\":{\"type\":\"string\",\"description\":\"The city or town for which the current weather should be returned.\"},\"state\":{\"type\":\"string\",\"description\":\"The state or province for which the current weather should be returned. If this is not provided the largest or most prominent city with the given name, in the given country or in the worldi, will be assumed.\"},\"country\":{\"type\":\"string\",\"description\":\"The country for which the given weather should be returned. If this is not provided the largest or most prominent city with the given name will be returned.\"}},\"required\":[\"city\"]}}}],\"stream\":true,\"messages\":[{\"role\":\"system\",\"content\":\"You are a helpfull assistant who answers questions succinctly.\"},{\"role\":\"user\",\"content\":\"What is the current weather?\"},{\"role\":\"assistant\",\"tool_calls\":[{\"id\":\"0\",\"type\":\"function\",\"function\":{\"name\":\"get_location\",\"arguments\":\"{}\"}}],\"content\":\"I'll check the current weather for you. First, let me determine your location.\"},{\"role\":\"tool\",\"name\":\"get_location\",\"tool_call_id\":\"0\",\"content\":\"Seattle, WA, USA\"}]}"
+        },
+        "headers": {
+          "User-Agent": [
+            "Faraday v2.13.1"
+          ],
+          "Content-type": [
+            "application/json"
+          ],
+          "Authorization": [
+            "Bearer <TOKEN>"
+          ]
+        }
+      },
+      "response": {
+        "status": {
+          "code": 200,
+          "message": "OK"
+        },
+        "headers": {
+          "date": [
+            "Tue, 15 Jul 2025 15:44:04 GMT"
+          ],
+          "content-type": [
+            "text/event-stream"
+          ],
+          "transfer-encoding": [
+            "chunked"
+          ],
+          "connection": [
+            "keep-alive"
+          ],
+          "cache-control": [
+            "no-cache"
+          ],
+          "vary": [
+            "Origin"
+          ],
+          "x-groq-region": [
+            "us-west-1"
+          ],
+          "x-ratelimit-limit-requests": [
+            "1000"
+          ],
+          "x-ratelimit-limit-tokens": [
+            "10000"
+          ],
+          "x-ratelimit-remaining-requests": [
+            "980"
+          ],
+          "x-ratelimit-remaining-tokens": [
+            "8118"
+          ],
+          "x-ratelimit-reset-requests": [
+            "28m47.663999999s"
+          ],
+          "x-ratelimit-reset-tokens": [
+            "11.287999999s"
+          ],
+          "x-request-id": [
+            "<X-REQUEST-ID>"
+          ],
+          "via": [
+            "1.1 google"
+          ],
+          "cf-cache-status": [
+            "DYNAMIC"
+          ],
+          "set-cookie": [
+            "<SET-COOKIE>"
+          ],
+          "server": [
+            "cloudflare"
+          ],
+          "cf-ray": [
+            "<CF-RAY>"
+          ],
+          "alt-svc": [
+            "h3=\":443\"; ma=86400"
+          ]
+        },
+        "body": {
+          "encoding": "UTF-8",
+          "string": "data: {\"id\":\"chatcmpl-145b3d7d-364e-4777-a4d6-7b0b06865cf5\",\"object\":\"chat.completion.chunk\",\"created\":1752594244,\"model\":\"moonshotai/kimi-k2-instruct\",\"system_fingerprint\":\"fp_c5bd0a648b\",\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"\"},\"logprobs\":null,\"finish_reason\":null}],\"x_groq\":{\"id\":\"req_01k07c3rqyfnmr1phs1tmj0tr1\"}}\n\ndata: {\"id\":\"chatcmpl-145b3d7d-364e-4777-a4d6-7b0b06865cf5\",\"object\":\"chat.completion.chunk\",\"created\":1752594244,\"model\":\"moonshotai/kimi-k2-instruct\",\"system_fingerprint\":\"fp_c5bd0a648b\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"Now\"},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"chatcmpl-145b3d7d-364e-4777-a4d6-7b0b06865cf5\",\"object\":\"chat.completion.chunk\",\"created\":1752594244,\"model\":\"moonshotai/kimi-k2-instruct\",\"system_fingerprint\":\"fp_c5bd0a648b\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\" I'll\"},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"chatcmpl-145b3d7d-364e-4777-a4d6-7b0b06865cf5\",\"object\":\"chat.completion.chunk\",\"created\":1752594244,\"model\":\"moonshotai/kimi-k2-instruct\",\"system_fingerprint\":\"fp_c5bd0a648b\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\" get\"},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"chatcmpl-145b3d7d-364e-4777-a4d6-7b0b06865cf5\",\"object\":\"chat.completion.chunk\",\"created\":1752594244,\"model\":\"moonshotai/kimi-k2-instruct\",\"system_fingerprint\":\"fp_c5bd0a648b\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\" the\"},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"chatcmpl-145b3d7d-364e-4777-a4d6-7b0b06865cf5\",\"object\":\"chat.completion.chunk\",\"created\":1752594244,\"model\":\"moonshotai/kimi-k2-instruct\",\"system_fingerprint\":\"fp_c5bd0a648b\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\" current\"},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"chatcmpl-145b3d7d-364e-4777-a4d6-7b0b06865cf5\",\"object\":\"chat.completion.chunk\",\"created\":1752594244,\"model\":\"moonshotai/kimi-k2-instruct\",\"system_fingerprint\":\"fp_c5bd0a648b\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\" weather\"},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"chatcmpl-145b3d7d-364e-4777-a4d6-7b0b06865cf5\",\"object\":\"chat.completion.chunk\",\"created\":1752594244,\"model\":\"moonshotai/kimi-k2-instruct\",\"system_fingerprint\":\"fp_c5bd0a648b\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\" for\"},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"chatcmpl-145b3d7d-364e-4777-a4d6-7b0b06865cf5\",\"object\":\"chat.completion.chunk\",\"created\":1752594244,\"model\":\"moonshotai/kimi-k2-instruct\",\"system_fingerprint\":\"fp_c5bd0a648b\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\" Seattle\"},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"chatcmpl-145b3d7d-364e-4777-a4d6-7b0b06865cf5\",\"object\":\"chat.completion.chunk\",\"created\":1752594244,\"model\":\"moonshotai/kimi-k2-instruct\",\"system_fingerprint\":\"fp_c5bd0a648b\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\",\"},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"chatcmpl-145b3d7d-364e-4777-a4d6-7b0b06865cf5\",\"object\":\"chat.completion.chunk\",\"created\":1752594244,\"model\":\"moonshotai/kimi-k2-instruct\",\"system_fingerprint\":\"fp_c5bd0a648b\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\" WA\"},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"chatcmpl-145b3d7d-364e-4777-a4d6-7b0b06865cf5\",\"object\":\"chat.completion.chunk\",\"created\":1752594244,\"model\":\"moonshotai/kimi-k2-instruct\",\"system_fingerprint\":\"fp_c5bd0a648b\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\".\"},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"chatcmpl-145b3d7d-364e-4777-a4d6-7b0b06865cf5\",\"object\":\"chat.completion.chunk\",\"created\":1752594244,\"model\":\"moonshotai/kimi-k2-instruct\",\"system_fingerprint\":\"fp_c5bd0a648b\",\"choices\":[{\"index\":0,\"delta\":{\"tool_calls\":[{\"id\":\"1\",\"type\":\"function\",\"function\":{\"name\":\"get_weather\",\"arguments\":\"{\\\"city\\\":\\\"Seattle\\\",\\\"country\\\":\\\"USA\\\",\\\"state\\\":\\\"WA\\\"}\"},\"index\":0}]},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"chatcmpl-145b3d7d-364e-4777-a4d6-7b0b06865cf5\",\"object\":\"chat.completion.chunk\",\"created\":1752594244,\"model\":\"moonshotai/kimi-k2-instruct\",\"system_fingerprint\":\"fp_c5bd0a648b\",\"choices\":[{\"index\":0,\"delta\":{},\"logprobs\":null,\"finish_reason\":\"tool_calls\"}],\"x_groq\":{\"id\":\"req_01k07c3rqyfnmr1phs1tmj0tr1\",\"usage\":{\"queue_time\":0.076624249,\"prompt_tokens\":314,\"prompt_time\":0.018175571,\"completion_tokens\":42,\"completion_time\":0.118073022,\"total_tokens\":356,\"total_time\":0.136248593}}}\n\ndata: [DONE]\n\n"
+        }
+      },
+      "recorded_at": "Tue, 15 Jul 2025 15:44:04 GMT"
+    }
+  ],
+  "recorded_with": "VCR 6.3.1"
+}

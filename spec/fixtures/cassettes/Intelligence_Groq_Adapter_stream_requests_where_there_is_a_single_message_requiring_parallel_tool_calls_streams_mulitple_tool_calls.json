@@ -1,0 +1,99 @@
+{
+  "http_interactions": [
+    {
+      "request": {
+        "method": "post",
+        "uri": "https://api.groq.com/openai/v1/chat/completions",
+        "body": {
+          "encoding": "UTF-8",
+          "string": "{\"model\":\"moonshotai/kimi-k2-instruct\",\"max_tokens\":256,\"temperature\":0.0,\"tools\":[{\"type\":\"function\",\"function\":{\"name\":\"get_location\",\"description\":\"The get_location tool will return the users city, state or province and country.\",\"parameters\":{\"type\":\"object\",\"properties\":{},\"required\":[]}}},{\"type\":\"function\",\"function\":{\"name\":\"get_weather\",\"description\":\"The get_weather tool will return the current weather in a given locality.\",\"parameters\":{\"type\":\"object\",\"properties\":{\"city\":{\"type\":\"string\",\"description\":\"The city or town for which the current weather should be returned.\"},\"state\":{\"type\":\"string\",\"description\":\"The state or province for which the current weather should be returned. If this is not provided the largest or most prominent city with the given name, in the given country or in the worldi, will be assumed.\"},\"country\":{\"type\":\"string\",\"description\":\"The country for which the given weather should be returned. If this is not provided the largest or most prominent city with the given name will be returned.\"}},\"required\":[\"city\"]}}}],\"stream\":true,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"What is the weather in London, Paris and Rome right now?\\n\"}]}"
+        },
+        "headers": {
+          "User-Agent": [
+            "Faraday v2.13.1"
+          ],
+          "Content-type": [
+            "application/json"
+          ],
+          "Authorization": [
+            "Bearer <TOKEN>"
+          ]
+        }
+      },
+      "response": {
+        "status": {
+          "code": 200,
+          "message": "OK"
+        },
+        "headers": {
+          "date": [
+            "Tue, 15 Jul 2025 15:44:03 GMT"
+          ],
+          "content-type": [
+            "text/event-stream"
+          ],
+          "transfer-encoding": [
+            "chunked"
+          ],
+          "connection": [
+            "keep-alive"
+          ],
+          "cache-control": [
+            "no-cache"
+          ],
+          "vary": [
+            "Origin"
+          ],
+          "x-groq-region": [
+            "us-west-1"
+          ],
+          "x-ratelimit-limit-requests": [
+            "1000"
+          ],
+          "x-ratelimit-limit-tokens": [
+            "10000"
+          ],
+          "x-ratelimit-remaining-requests": [
+            "982"
+          ],
+          "x-ratelimit-remaining-tokens": [
+            "8589"
+          ],
+          "x-ratelimit-reset-requests": [
+            "25m54.857s"
+          ],
+          "x-ratelimit-reset-tokens": [
+            "8.465s"
+          ],
+          "x-request-id": [
+            "<X-REQUEST-ID>"
+          ],
+          "via": [
+            "1.1 google"
+          ],
+          "cf-cache-status": [
+            "DYNAMIC"
+          ],
+          "set-cookie": [
+            "<SET-COOKIE>"
+          ],
+          "server": [
+            "cloudflare"
+          ],
+          "cf-ray": [
+            "<CF-RAY>"
+          ],
+          "alt-svc": [
+            "h3=\":443\"; ma=86400"
+          ]
+        },
+        "body": {
+          "encoding": "UTF-8",
+          "string": "data: {\"id\":\"chatcmpl-d8933cba-1c63-462e-93ea-5c4591af4d8a\",\"object\":\"chat.completion.chunk\",\"created\":1752594243,\"model\":\"moonshotai/kimi-k2-instruct\",\"system_fingerprint\":\"fp_6e6ff3688b\",\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":null},\"logprobs\":null,\"finish_reason\":null}],\"x_groq\":{\"id\":\"req_01k07c3qzpfm58xsbhg8v0wz5j\"}}\n\ndata: {\"id\":\"chatcmpl-d8933cba-1c63-462e-93ea-5c4591af4d8a\",\"object\":\"chat.completion.chunk\",\"created\":1752594243,\"model\":\"moonshotai/kimi-k2-instruct\",\"system_fingerprint\":\"fp_6e6ff3688b\",\"choices\":[{\"index\":0,\"delta\":{\"tool_calls\":[{\"id\":\"0\",\"type\":\"function\",\"function\":{\"name\":\"get_weather\",\"arguments\":\"{\\\"city\\\":\\\"London\\\"}\"},\"index\":0}]},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"chatcmpl-d8933cba-1c63-462e-93ea-5c4591af4d8a\",\"object\":\"chat.completion.chunk\",\"created\":1752594243,\"model\":\"moonshotai/kimi-k2-instruct\",\"system_fingerprint\":\"fp_6e6ff3688b\",\"choices\":[{\"index\":0,\"delta\":{\"tool_calls\":[{\"id\":\"1\",\"type\":\"function\",\"function\":{\"name\":\"get_weather\",\"arguments\":\"{\\\"city\\\":\\\"Paris\\\"}\"},\"index\":1}]},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"chatcmpl-d8933cba-1c63-462e-93ea-5c4591af4d8a\",\"object\":\"chat.completion.chunk\",\"created\":1752594243,\"model\":\"moonshotai/kimi-k2-instruct\",\"system_fingerprint\":\"fp_6e6ff3688b\",\"choices\":[{\"index\":0,\"delta\":{\"tool_calls\":[{\"id\":\"2\",\"type\":\"function\",\"function\":{\"name\":\"get_weather\",\"arguments\":\"{\\\"city\\\":\\\"Rome\\\"}\"},\"index\":2}]},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"chatcmpl-d8933cba-1c63-462e-93ea-5c4591af4d8a\",\"object\":\"chat.completion.chunk\",\"created\":1752594243,\"model\":\"moonshotai/kimi-k2-instruct\",\"system_fingerprint\":\"fp_6e6ff3688b\",\"choices\":[{\"index\":0,\"delta\":{},\"logprobs\":null,\"finish_reason\":\"tool_calls\"}],\"x_groq\":{\"id\":\"req_01k07c3qzpfm58xsbhg8v0wz5j\",\"usage\":{\"queue_time\":0.176181478,\"prompt_tokens\":266,\"prompt_time\":0.013545863,\"completion_tokens\":49,\"completion_time\":0.164613201,\"total_tokens\":315,\"total_time\":0.178159064}}}\n\ndata: [DONE]\n\n"
+        }
+      },
+      "recorded_at": "Tue, 15 Jul 2025 15:44:03 GMT"
+    }
+  ],
+  "recorded_with": "VCR 6.3.1"
+}
