@@ -15,14 +15,15 @@ module Intelligence
       @message = build_message( message ) if message
     end
 
-    def each( &block)   = @attributes.each( &block )
-
     def key?(key)       = @attributes.key?(key)
     alias include? key?
     def size            = @attributes.size
     alias length size
     alias count size
     def empty?          = @attributes.empty? 
+
+    def each( &block)   = @attributes.each( &block )
+    def []( key )       = @attributes[ key ]
 
   private 
   
