@@ -16,7 +16,7 @@
             "application/json"
           ],
           "api-key": [
-            "BZB3SHO4olQnc8PdagR64UjLjQe4rXVNa1mo6DnprXOoQHCtXdycJQQJ99BGACHYHv6XJ3w3AAAAACOGdXyi"
+            "<API-KEY>"
           ]
         }
       },
@@ -84,6 +84,91 @@
         }
       },
       "recorded_at": "Fri, 11 Jul 2025 19:59:18 GMT"
+    },
+    {
+      "request": {
+        "method": "post",
+        "uri": "https://development-technicalai.openai.azure.com/openai/v1/chat/completions?api-version=preview",
+        "body": {
+          "encoding": "UTF-8",
+          "string": "{\"model\":\"gpt-4.1\",\"max_tokens\":128,\"temperature\":0.0,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"What is the weather in London, Paris and Rome right now?\\n\"}],\"tools\":[{\"type\":\"function\",\"function\":{\"name\":\"get_weather\",\"description\":\"The get_weather tool will return the current weather in a given locality.\",\"parameters\":{\"type\":\"object\",\"properties\":{\"city\":{\"type\":\"string\",\"description\":\"The city or town for which the current weather should be returned.\"},\"state\":{\"type\":\"string\",\"description\":\"The state or province for which the current weather should be returned. If this is not provided the largest or most prominent city with the given name, in the given country or in the worldi, will be assumed.\"},\"country\":{\"type\":\"string\",\"description\":\"The country for which the given weather should be returned. If this is not provided the largest or most prominent city with the given name will be returned.\"}},\"required\":[\"city\"]}}}]}"
+        },
+        "headers": {
+          "User-Agent": [
+            "Faraday v2.13.1"
+          ],
+          "Content-Type": [
+            "application/json"
+          ],
+          "api-key": [
+            "<API-KEY>"
+          ]
+        }
+      },
+      "response": {
+        "status": {
+          "code": 200,
+          "message": "OK"
+        },
+        "headers": {
+          "content-length": [
+            "1373"
+          ],
+          "content-type": [
+            "application/json"
+          ],
+          "apim-request-id": [
+            "5d89a7f6-8028-496b-aefd-270d9b962cb3"
+          ],
+          "strict-transport-security": [
+            "max-age=31536000; includeSubDomains; preload"
+          ],
+          "x-content-type-options": [
+            "nosniff"
+          ],
+          "x-ms-region": [
+            "East US"
+          ],
+          "x-ratelimit-remaining-requests": [
+            "38"
+          ],
+          "x-ratelimit-limit-requests": [
+            "50"
+          ],
+          "x-ratelimit-remaining-tokens": [
+            "47242"
+          ],
+          "x-ratelimit-limit-tokens": [
+            "50000"
+          ],
+          "azureml-model-session": [
+            "d025-20250625212716"
+          ],
+          "cmp-upstream-response-duration": [
+            "630"
+          ],
+          "x-accel-buffering": [
+            "no"
+          ],
+          "x-ms-rai-invoked": [
+            "true"
+          ],
+          "x-request-id": [
+            "<X-REQUEST-ID>"
+          ],
+          "x-ms-deployment-name": [
+            "gpt-4.1"
+          ],
+          "date": [
+            "Tue, 15 Jul 2025 00:09:30 GMT"
+          ]
+        },
+        "body": {
+          "encoding": "UTF-8",
+          "string": "{\"choices\":[{\"content_filter_results\":{},\"finish_reason\":\"tool_calls\",\"index\":0,\"logprobs\":null,\"message\":{\"annotations\":[],\"content\":null,\"refusal\":null,\"role\":\"assistant\",\"tool_calls\":[{\"function\":{\"arguments\":\"{\\\"city\\\": \\\"London\\\", \\\"country\\\": \\\"UK\\\"}\",\"name\":\"get_weather\"},\"id\":\"call_8dzwLrF5EASpv2M5xADP1OAD\",\"type\":\"function\"},{\"function\":{\"arguments\":\"{\\\"city\\\": \\\"Paris\\\", \\\"country\\\": \\\"France\\\"}\",\"name\":\"get_weather\"},\"id\":\"call_nXGGil7kxp6NY9KsLvjsapjY\",\"type\":\"function\"},{\"function\":{\"arguments\":\"{\\\"city\\\": \\\"Rome\\\", \\\"country\\\": \\\"Italy\\\"}\",\"name\":\"get_weather\"},\"id\":\"call_C9YlKhlyNNCyPLSS22SqkELM\",\"type\":\"function\"}]}}],\"created\":1752538170,\"id\":\"chatcmpl-BtNWcEOYM1IAbtX2B0SMLp5fCHGOd\",\"model\":\"gpt-4.1-2025-04-14\",\"object\":\"chat.completion\",\"prompt_filter_results\":[{\"prompt_index\":0,\"content_filter_results\":{\"hate\":{\"filtered\":false,\"severity\":\"safe\"},\"jailbreak\":{\"filtered\":false,\"detected\":false},\"self_harm\":{\"filtered\":false,\"severity\":\"safe\"},\"sexual\":{\"filtered\":false,\"severity\":\"safe\"},\"violence\":{\"filtered\":false,\"severity\":\"safe\"}}}],\"system_fingerprint\":\"fp_07e970ab25\",\"usage\":{\"completion_tokens\":71,\"completion_tokens_details\":{\"accepted_prediction_tokens\":0,\"audio_tokens\":0,\"reasoning_tokens\":0,\"rejected_prediction_tokens\":0},\"prompt_tokens\":199,\"prompt_tokens_details\":{\"audio_tokens\":0,\"cached_tokens\":0},\"total_tokens\":270}}\n"
+        }
+      },
+      "recorded_at": "Tue, 15 Jul 2025 00:09:31 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

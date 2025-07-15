@@ -16,7 +16,7 @@
             "application/json"
           ],
           "api-key": [
-            "BZB3SHO4olQnc8PdagR64UjLjQe4rXVNa1mo6DnprXOoQHCtXdycJQQJ99BGACHYHv6XJ3w3AAAAACOGdXyi"
+            "<API-KEY>"
           ]
         }
       },
@@ -71,7 +71,7 @@
             "application/json"
           ],
           "api-key": [
-            "BZB3SHO4olQnc8PdagR64UjLjQe4rXVNa1mo6DnprXOoQHCtXdycJQQJ99BGACHYHv6XJ3w3AAAAACOGdXyi"
+            "<API-KEY>"
           ]
         }
       },
@@ -156,7 +156,7 @@
             "application/json"
           ],
           "api-key": [
-            "BZB3SHO4olQnc8PdagR64UjLjQe4rXVNa1mo6DnprXOoQHCtXdycJQQJ99BGACHYHv6XJ3w3AAAAACOGdXyi"
+            "<API-KEY>"
           ]
         }
       },
@@ -224,6 +224,176 @@
         }
       },
       "recorded_at": "Fri, 11 Jul 2025 19:58:24 GMT"
+    },
+    {
+      "request": {
+        "method": "post",
+        "uri": "https://development-technicalai.openai.azure.com/openai/v1/chat/completions?api-version=preview",
+        "body": {
+          "encoding": "UTF-8",
+          "string": "{\"model\":\"gpt-4.1\",\"max_tokens\":128,\"temperature\":0.0,\"messages\":[{\"role\":\"user\",\"content\":\"respond only with the word 'hello'\\n\"}]}"
+        },
+        "headers": {
+          "User-Agent": [
+            "Faraday v2.13.1"
+          ],
+          "Content-Type": [
+            "application/json"
+          ],
+          "api-key": [
+            "<API-KEY>"
+          ]
+        }
+      },
+      "response": {
+        "status": {
+          "code": 200,
+          "message": "OK"
+        },
+        "headers": {
+          "content-length": [
+            "1211"
+          ],
+          "content-type": [
+            "application/json"
+          ],
+          "apim-request-id": [
+            "6c9b4d8b-2864-43ce-b80b-b97c12bf5653"
+          ],
+          "strict-transport-security": [
+            "max-age=31536000; includeSubDomains; preload"
+          ],
+          "x-content-type-options": [
+            "nosniff"
+          ],
+          "x-ms-region": [
+            "East US"
+          ],
+          "x-ratelimit-remaining-requests": [
+            "45"
+          ],
+          "x-ratelimit-limit-requests": [
+            "50"
+          ],
+          "x-ratelimit-remaining-tokens": [
+            "49816"
+          ],
+          "x-ratelimit-limit-tokens": [
+            "50000"
+          ],
+          "azureml-model-session": [
+            "d025-20250625212716"
+          ],
+          "cmp-upstream-response-duration": [
+            "187"
+          ],
+          "x-accel-buffering": [
+            "no"
+          ],
+          "x-ms-rai-invoked": [
+            "true"
+          ],
+          "x-request-id": [
+            "<X-REQUEST-ID>"
+          ],
+          "x-ms-deployment-name": [
+            "gpt-4.1"
+          ],
+          "date": [
+            "Tue, 15 Jul 2025 00:05:16 GMT"
+          ]
+        },
+        "body": {
+          "encoding": "UTF-8",
+          "string": "{\"choices\":[{\"content_filter_results\":{\"hate\":{\"filtered\":false,\"severity\":\"safe\"},\"protected_material_code\":{\"filtered\":false,\"detected\":false},\"protected_material_text\":{\"filtered\":false,\"detected\":false},\"self_harm\":{\"filtered\":false,\"severity\":\"safe\"},\"sexual\":{\"filtered\":false,\"severity\":\"safe\"},\"violence\":{\"filtered\":false,\"severity\":\"safe\"}},\"finish_reason\":\"stop\",\"index\":0,\"logprobs\":null,\"message\":{\"annotations\":[],\"content\":\"hello\",\"refusal\":null,\"role\":\"assistant\"}}],\"created\":1752537916,\"id\":\"chatcmpl-BtNSWtcBhTzlCudWqZPG79zIhSNmO\",\"model\":\"gpt-4.1-2025-04-14\",\"object\":\"chat.completion\",\"prompt_filter_results\":[{\"prompt_index\":0,\"content_filter_results\":{\"hate\":{\"filtered\":false,\"severity\":\"safe\"},\"jailbreak\":{\"filtered\":false,\"detected\":false},\"self_harm\":{\"filtered\":false,\"severity\":\"safe\"},\"sexual\":{\"filtered\":false,\"severity\":\"safe\"},\"violence\":{\"filtered\":false,\"severity\":\"safe\"}}}],\"system_fingerprint\":\"fp_07e970ab25\",\"usage\":{\"completion_tokens\":2,\"completion_tokens_details\":{\"accepted_prediction_tokens\":0,\"audio_tokens\":0,\"reasoning_tokens\":0,\"rejected_prediction_tokens\":0},\"prompt_tokens\":15,\"prompt_tokens_details\":{\"audio_tokens\":0,\"cached_tokens\":0},\"total_tokens\":17}}\n"
+        }
+      },
+      "recorded_at": "Tue, 15 Jul 2025 00:05:16 GMT"
+    },
+    {
+      "request": {
+        "method": "post",
+        "uri": "https://development-technicalai.openai.azure.com/openai/v1/chat/completions?api-version=preview",
+        "body": {
+          "encoding": "UTF-8",
+          "string": "{\"model\":\"gpt-4.1\",\"max_tokens\":128,\"temperature\":0.0,\"messages\":[{\"role\":\"user\",\"content\":\"respond only with the word 'hello'\\n\"}]}"
+        },
+        "headers": {
+          "User-Agent": [
+            "Faraday v2.13.1"
+          ],
+          "Content-Type": [
+            "application/json"
+          ],
+          "api-key": [
+            "<API-KEY>"
+          ]
+        }
+      },
+      "response": {
+        "status": {
+          "code": 200,
+          "message": "OK"
+        },
+        "headers": {
+          "content-length": [
+            "1211"
+          ],
+          "content-type": [
+            "application/json"
+          ],
+          "apim-request-id": [
+            "5a130ade-01b6-41b0-a7ed-731b612e3208"
+          ],
+          "strict-transport-security": [
+            "max-age=31536000; includeSubDomains; preload"
+          ],
+          "x-content-type-options": [
+            "nosniff"
+          ],
+          "x-ms-region": [
+            "East US"
+          ],
+          "x-ratelimit-remaining-requests": [
+            "44"
+          ],
+          "x-ratelimit-limit-requests": [
+            "50"
+          ],
+          "x-ratelimit-remaining-tokens": [
+            "49807"
+          ],
+          "x-ratelimit-limit-tokens": [
+            "50000"
+          ],
+          "azureml-model-session": [
+            "d024-20250625152203"
+          ],
+          "cmp-upstream-response-duration": [
+            "203"
+          ],
+          "x-accel-buffering": [
+            "no"
+          ],
+          "x-ms-rai-invoked": [
+            "true"
+          ],
+          "x-request-id": [
+            "<X-REQUEST-ID>"
+          ],
+          "x-ms-deployment-name": [
+            "gpt-4.1"
+          ],
+          "date": [
+            "Tue, 15 Jul 2025 00:05:17 GMT"
+          ]
+        },
+        "body": {
+          "encoding": "UTF-8",
+          "string": "{\"choices\":[{\"content_filter_results\":{\"hate\":{\"filtered\":false,\"severity\":\"safe\"},\"protected_material_code\":{\"filtered\":false,\"detected\":false},\"protected_material_text\":{\"filtered\":false,\"detected\":false},\"self_harm\":{\"filtered\":false,\"severity\":\"safe\"},\"sexual\":{\"filtered\":false,\"severity\":\"safe\"},\"violence\":{\"filtered\":false,\"severity\":\"safe\"}},\"finish_reason\":\"stop\",\"index\":0,\"logprobs\":null,\"message\":{\"annotations\":[],\"content\":\"hello\",\"refusal\":null,\"role\":\"assistant\"}}],\"created\":1752537917,\"id\":\"chatcmpl-BtNSXRXtzqOTuab0IEKa5qJO0WN1R\",\"model\":\"gpt-4.1-2025-04-14\",\"object\":\"chat.completion\",\"prompt_filter_results\":[{\"prompt_index\":0,\"content_filter_results\":{\"hate\":{\"filtered\":false,\"severity\":\"safe\"},\"jailbreak\":{\"filtered\":false,\"detected\":false},\"self_harm\":{\"filtered\":false,\"severity\":\"safe\"},\"sexual\":{\"filtered\":false,\"severity\":\"safe\"},\"violence\":{\"filtered\":false,\"severity\":\"safe\"}}}],\"system_fingerprint\":\"fp_07e970ab25\",\"usage\":{\"completion_tokens\":2,\"completion_tokens_details\":{\"accepted_prediction_tokens\":0,\"audio_tokens\":0,\"reasoning_tokens\":0,\"rejected_prediction_tokens\":0},\"prompt_tokens\":15,\"prompt_tokens_details\":{\"audio_tokens\":0,\"cached_tokens\":0},\"total_tokens\":17}}\n"
+        }
+      },
+      "recorded_at": "Tue, 15 Jul 2025 00:05:17 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

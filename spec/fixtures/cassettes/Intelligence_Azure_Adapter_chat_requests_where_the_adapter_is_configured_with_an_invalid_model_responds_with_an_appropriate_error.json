@@ -16,7 +16,7 @@
             "application/json"
           ],
           "api-key": [
-            "BZB3SHO4olQnc8PdagR64UjLjQe4rXVNa1mo6DnprXOoQHCtXdycJQQJ99BGACHYHv6XJ3w3AAAAACOGdXyi"
+            "<API-KEY>"
           ]
         }
       },
@@ -57,6 +57,64 @@
         }
       },
       "recorded_at": "Fri, 11 Jul 2025 19:59:23 GMT"
+    },
+    {
+      "request": {
+        "method": "post",
+        "uri": "https://development-technicalai.openai.azure.com/openai/v1/chat/completions?api-version=preview",
+        "body": {
+          "encoding": "UTF-8",
+          "string": "{\"model\":\"invalid\",\"max_tokens\":16,\"temperature\":0.0,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"respond only with the word 'hello'\\n\"}]}"
+        },
+        "headers": {
+          "User-Agent": [
+            "Faraday v2.13.1"
+          ],
+          "Content-Type": [
+            "application/json"
+          ],
+          "api-key": [
+            "<API-KEY>"
+          ]
+        }
+      },
+      "response": {
+        "status": {
+          "code": 400,
+          "message": "Bad Request"
+        },
+        "headers": {
+          "transfer-encoding": [
+            "chunked"
+          ],
+          "content-type": [
+            "application/json; charset=utf-8"
+          ],
+          "apim-request-id": [
+            "225ecd73-fa07-49cf-9d23-8a0999349ffb"
+          ],
+          "request-context": [
+            "appId="
+          ],
+          "strict-transport-security": [
+            "max-age=31536000; includeSubDomains; preload"
+          ],
+          "x-content-type-options": [
+            "nosniff"
+          ],
+          "x-ms-region": [
+            "East US"
+          ],
+          "date": [
+            "Tue, 15 Jul 2025 00:09:39 GMT"
+          ]
+        },
+        "body": {
+          "encoding": "UTF-8",
+          "string": "{\"error\":{\"code\":\"unknown_model\",\"message\":\"Unknown model: invalid\",\"details\":\"Unknown model: invalid\"}}"
+        }
+      },
+      "recorded_at": "Tue, 15 Jul 2025 00:09:39 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

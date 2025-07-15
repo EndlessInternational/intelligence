@@ -16,7 +16,7 @@
             "application/json"
           ],
           "api-key": [
-            "invalid key"
+            "<API-KEY>"
           ]
         }
       },
@@ -45,6 +45,52 @@
         }
       },
       "recorded_at": "Fri, 11 Jul 2025 19:59:22 GMT"
+    },
+    {
+      "request": {
+        "method": "post",
+        "uri": "https://development-technicalai.openai.azure.com/openai/v1/chat/completions?api-version=preview",
+        "body": {
+          "encoding": "UTF-8",
+          "string": "{\"model\":\"pixtral-12b-2409\",\"max_tokens\":16,\"temperature\":0.0,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"respond only with the word 'hello'\\n\"}]}"
+        },
+        "headers": {
+          "User-Agent": [
+            "Faraday v2.13.1"
+          ],
+          "Content-Type": [
+            "application/json"
+          ],
+          "api-key": [
+            "<API-KEY>"
+          ]
+        }
+      },
+      "response": {
+        "status": {
+          "code": 401,
+          "message": "PermissionDenied"
+        },
+        "headers": {
+          "content-length": [
+            "224"
+          ],
+          "content-type": [
+            "application/json"
+          ],
+          "apim-request-id": [
+            "b8b825cc-3e8d-4efa-b4a0-48b6e395f479"
+          ],
+          "date": [
+            "Tue, 15 Jul 2025 00:09:36 GMT"
+          ]
+        },
+        "body": {
+          "encoding": "UTF-8",
+          "string": "{\"error\":{\"code\":\"401\",\"message\":\"Access denied due to invalid subscription key or wrong API endpoint. Make sure to provide a valid key for an active subscription and use a correct regional API endpoint for your resource.\"}}"
+        }
+      },
+      "recorded_at": "Tue, 15 Jul 2025 00:09:37 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

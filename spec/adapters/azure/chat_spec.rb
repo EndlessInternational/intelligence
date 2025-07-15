@@ -12,7 +12,8 @@ RSpec.describe "#{Intelligence::Adapter[ :azure ]} chat requests", :azure do
   # this is needed for azure test to avoid the rate limit
   after( :each ) do | example |
     cassette = VCR.current_cassette
-    sleep 1 if cassette && cassette.new_recorded_interactions.any? 
+    sleep 2 if !cassette || 
+               cassette && cassette.new_recorded_interactions.any? 
   end
 
   let( :adapter ) do
