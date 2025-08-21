@@ -143,7 +143,7 @@ module Intelligence
                 result_message_content << {
                   type: 'tool_result',
                   tool_use_id: content[ :tool_call_id ],
-                  content: content[ :tool_result ]
+                  content: content[ :tool_result ]&.to_s
                 }
               else
                 raise UnsupportedContentError.new( :anthropic ) 
