@@ -156,7 +156,7 @@ module Intelligence
                   contents[ index ][ :text ] = ( contents[ index ][ :text ] || '' ) + delta[ 'thinking' ]
                 when 'signature_delta'
                   if contents[ index ][ :type ] == :thought 
-                    contents[ index ][ :ciphertext ] = delta[ :signature ]
+                    contents[ index ][ :ciphertext ] = delta[ 'signature' ]
                   end
                 when 'input_json_delta'
                   contents[ index ][ :type ] = :tool_call 
