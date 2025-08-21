@@ -70,6 +70,8 @@ module Intelligence
                 type: ( message[ :role ] == :user ? 'input_text' : 'output_text' ), 
                 text: content[ :text ] 
               }
+            when :thought
+              # nop
             when :binary
               result_message = { role: message[ :role ], content: [] } if result_message.nil?
               content_type = content[ :content_type ]
@@ -133,10 +135,13 @@ module Intelligence
               result[ :input ] << {
                 type: 'function_call_output',
                 call_id: content[ :tool_call_id ],
-                output: content[ :tool_result ]
+                output: content[ :tool_result ]&.to_s
               }
             else 
-              raise InvalidContentError.new( :open_ai ) 
+              raise UnsupportedContentError.new( 
+                :open_ai,
+                "requires a known content type; received `#{content[ :type ]}`" 
+              ) 
             end
 
           end
