@@ -65,7 +65,12 @@ module Intelligence
             source_contents.each_with_index do | source_content, content_index |
               if destination_content = destination_contents[ content_index ]
                 case destination_content[ :type ]
-                when :thought, :text 
+                when :thought 
+                  destination_content[ :text ] = 
+                    destination_content[ :text ].to_s + source_content[ :text ].to_s
+                  destination_content[ :ciphertext ] = 
+                    destination_content[ :ciphertext ].to_s + source_content[ :ciphertext ].to_s
+                when :text 
                   destination_content[ :text ] = 
                     destination_content[ :text ].to_s + source_content[ :text ].to_s
                 when :tool_call
