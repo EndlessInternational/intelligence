@@ -27,10 +27,13 @@ module Intelligence
           # anthropic variant of normalized properties for anthropic generative text endpoints
           stop_sequences  String, array: true
 
-          # antropic reasoning
-          thinking        do 
-            type          required: true, default: 'enabled'
+          # anthropic reasoning
+          reasoning as: :thinking do 
+            type          Symbol, required: true, default: :enabled
             budget_tokens required: true, in: (1024...)
+
+            # normalized attribute name
+            budget        as: :budget_tokens, in: (1024...)
           end
 
           # anthropic specific properties for anthropic generative text endpoints
