@@ -29,6 +29,7 @@ module Intelligence
 
     def message         = @choices.empty? ? nil : @choices.first.message
     def text            = self.message&.text || '' 
+    def end_reason      = @choices.empty? ? nil : @choices.first.end_reason
 
     def key?(key)       = @attributes.key?(key)
     alias include? key?
