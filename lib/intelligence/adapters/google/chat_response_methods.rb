@@ -4,8 +4,7 @@ module Intelligence
   module Google
     module ChatResponseMethods
 
-       def chat_result_attributes( response )
-
+      def chat_result_attributes( response )
         return nil unless response.success?
 
         response_json = JSON.parse( response.body, symbolize_names: true ) rescue nil
@@ -26,9 +25,20 @@ module Intelligence
             role = ( response_content[ :role ] == 'model' ) ? 'assistant' : 'user'
             contents = []
             response_content[ :parts ]&.each do | response_content_part |
-              if response_content_part.key?( :text )              
+              # google encrypted thoughts are included in other ( seemingly arbitrary )
+              # content so create a cipher_thought before the content to make it easier
+              # to pack it in future requests 
+              if response_content_part.key?( :thoughtSignature )   
                 contents.push( {
-                  type: 'text', text: response_content_part[ :text ]
+                  type: :cipher_thought, 
+                  cipher: response_content_part[ :thoughtSignature ]
+                } )
+              end
+
+              if response_content_part.key?( :text )   
+                type = response_content_part[ :thought ] ? :thought : :text           
+                contents.push( {
+                  type: type, text: response_content_part[ :text ]
                 } )
               elsif function_call = response_content_part[ :functionCall ]                
                 contents.push( {
@@ -66,7 +76,6 @@ module Intelligence
         end
 
         result
-      
       end
 
       def chat_result_error_attributes( response )
@@ -85,8 +94,8 @@ module Intelligence
             error_description: response_body[ :error ][ :message ]
           }
         end
-        result
 
+        result
       end
 
       def stream_result_chunk_attributes( context, chunk )
@@ -107,8 +116,9 @@ module Intelligence
           line = line.strip 
           next if line.empty? || !line.start_with?( 'data:' )
           line = line[ 6..-1 ]
-
           data = JSON.parse( line, symbolize_names: true )
+
+          # puts line
           if data.is_a?( Hash )
             
             data[ :candidates ]&.each do | data_candidate |
@@ -130,9 +140,19 @@ module Intelligence
               if data_candidate_content&.include?( :parts ) 
                 data_candidate_content_parts = data_candidate_content[ :parts ]
                 data_candidate_content_parts&.each do | data_candidate_content_part |
+                  # google encrypted thoughts are included in other ( seemingly arbitrary )
+                  # content so create a cipher_thought before the content to make it easier
+                  # to pack it in future requests 
+                  if data_candidate_content_part.key?( :thoughtSignature )   
+                    contents.push( {
+                      type: :cipher_thought, 
+                      cipher: data_candidate_content_part[ :thoughtSignature ]
+                    } )
+                  end
                   if data_candidate_content_part.key?( :text )
-                    if last_content.nil? || last_content[ :type ] != :text
-                      contents.push( { type: :text, text: data_candidate_content_part[ :text ] } )
+                    type = data_candidate_content_part[ :thought ] ? :thought : :text
+                    if last_content.nil? || last_content[ :type ] != type 
+                      contents.push( { type: type, text: data_candidate_content_part[ :text ] } )
                     else 
                       last_content[ :text ] = 
                         ( last_content[ :text ] || '' ) + data_candidate_content_part[ :text ]

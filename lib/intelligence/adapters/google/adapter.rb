@@ -36,8 +36,13 @@ module Intelligence
           response_schema                   as: :responseSchema
 
           # google specific thinking properies
-          thinking as: :thinkingConfig, default: {} do 
-            budget                Integer,  as: :thinkingBudget, in:(-1...), default: 0
+          reasoning as: :thinkingConfig, default: {} do 
+            thinking_budget       Integer,  as: :thinkingBudget, in:(-1...), default: 0
+            include_thoughts      [ TrueClass, FalseClass ], as: :includeThoughts
+
+            # normalized properties
+            budget                Integer,  as: :thinkingBudget, in:(-1...)
+            summary               [ TrueClass, FalseClass ], as: :includeThoughts
           end
 
           # google specific tool configuration
