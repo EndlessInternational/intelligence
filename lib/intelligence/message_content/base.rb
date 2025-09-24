@@ -5,6 +5,12 @@ module Intelligence
       include DynamicSchema::Definable 
       include DynamicSchema::Buildable 
 
+      schema do 
+        id              String
+      end
+
+      attr_reader       :id
+      
       def initialize( attributes = {} )
         attributes.each do | key, value |
           instance_variable_set( "@#{key}", value.freeze ) if self.respond_to?( "#{key}" )

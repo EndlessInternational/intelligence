@@ -24,7 +24,7 @@ module Intelligence
       end
 
       def to_h
-        { type: :thought, text: text, ciphertext: ciphertext }
+        { type: :thought, id: id, text: text, ciphertext: ciphertext }.compact
       end
     end 
 

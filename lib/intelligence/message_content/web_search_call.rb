@@ -25,7 +25,7 @@ module Intelligence
       end
 
       def to_h
-        { type: :web_search_call, query: query }
+        { type: :web_search_call, id: id, query: query }.compact
       end
     end 
 

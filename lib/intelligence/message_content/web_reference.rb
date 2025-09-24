@@ -27,9 +27,9 @@ module Intelligence
 
       def to_h
         { 
-          type: :web_reference, 
+          type: :web_reference, id: id,
           uri: @uri, title: @title, summary: @summary, access_date: @access_date 
-        }
+        }.compact
       end
 
     end 

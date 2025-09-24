@@ -85,6 +85,7 @@ module Intelligence
       def to_h
         { 
           type:             :tool_call, 
+          id:               id,
           tool_call_id:     tool_call_id, 
           tool_name:        tool_name, 
           tool_parameters:  tool_parameters 

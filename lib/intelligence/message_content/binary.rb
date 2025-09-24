@@ -22,7 +22,12 @@ module Intelligence
       end
 
       def to_h
-        { type: :binary, content_type: content_type, bytes: bytes }
+        { 
+          type: :binary, 
+          id: id,
+          content_type: content_type, 
+          bytes: bytes 
+        }.compact
       end
     end 
 

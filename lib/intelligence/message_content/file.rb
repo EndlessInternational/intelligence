@@ -26,7 +26,7 @@ module Intelligence
       end
 
       def to_h
-        { type: :file, content_type: content_type, uri: @uri.to_s }
+        { type: :file, id: id, content_type: content_type, uri: @uri.to_s }.compact
       end
 
     end 
