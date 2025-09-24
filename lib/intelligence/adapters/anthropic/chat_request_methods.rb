@@ -79,6 +79,8 @@ module Intelligence
                   thinking: content[ :text ], 
                   signature: content[ :ciphertext ] 
                 }
+              when :cipher_thought
+                # nop
               when :binary
                 content_type = content[ :content_type ]
                 bytes = content[ :bytes ]
@@ -145,6 +147,8 @@ module Intelligence
                   tool_use_id: content[ :tool_call_id ],
                   content: content[ :tool_result ]&.to_s
                 }
+              when :web_search_call, :web_reference
+                # nop
               else
                 raise UnsupportedContentError.new( :anthropic ) 
               end
