@@ -1,0 +1,181 @@
+{
+  "http_interactions": [
+    {
+      "request": {
+        "method": "post",
+        "uri": "https://api.openai.com/v1/responses",
+        "body": {
+          "encoding": "UTF-8",
+          "string": "{\"model\":\"gpt-5\",\"reasoning\":{\"effort\":\"medium\",\"summary\":\"detailed\"},\"include\":[\"reasoning.encrypted_content\"],\"input\":[{\"role\":\"user\",\"content\":[{\"type\":\"input_text\",\"text\":\"What is 3 * 5?\"}],\"type\":\"message\"}],\"instructions\":\"You are a helpfull assistant who answers questions succinctly. Please use the calculator tool when asked mathematical questions.\",\"tools\":[{\"type\":\"function\",\"name\":\"calculator\",\"description\":\"# Calculator\\nThe claculator DSL evaluates math, comparisons, logic, and numeric aggregates.\\n## Numbers\\n- Integers and floats are accepted.\\n- Bitwise operators use integers; non-integers are truncated.\\n- The result of bitwise operators are non-numeric but can be converted to numeric using ROUND.\\n## Arithmetic operators\\n- + (add), - (subtract), * (multiply), / (divide), % (modulo), ^ (power).\\n- Bitwise: | (or), & (and), << (shift left), >> (shift right).\\n## Math Functions\\n- SIN, COS, TAN, ASIN, ACOS, ATAN, ATAN2, SINH, COSH, TANH, ASINH, ACOSH, ATANH,   SQRT, EXP, LOG, LOG10, POW.\\n- Angles are in radians.\\n## Comparison Operators\\n- =, !=, <>, <, >, <=, >= return booleans.\\n## Logical functions\\n- IF(cond, then, else).\\n- AND(a, b, ...), OR(a, b, ...), XOR(a, b), NOT(x).\\n- XOR(a, b) is true if exactly one argument is true.\\n## Numeric Functions\\n- MIN(...), MAX(...), SUM(...), AVG(...), COUNT(...).\\n- ROUND(x, [digits]).\\n- ROUNDDOWN(x, [digits]) rounds toward zero.\\n- ROUNDUP(x, [digits]) rounds away from zero.\\n- ABS(x).\\n## Constants\\n- PI, E## Aggregates\\n- Functions accept a list of values or an array, e.g., SUM(1,2,3) or\\n  SUM(1,2,3).\\n- COUNT counts non-nil numeric arguments.\\n## Operator precedence (high to low)\\n1) Parentheses and functions\\n2) Unary +, unary -, NOT\\n3) ^\\n4) *, /, %\\n5) +, -\\n6) <<, >>\\n7) &\\n8) |\\n9) Comparisons (=, !=, <>, <, >, <=, >=)\\n10) AND, XOR, OR\\n## Errors and Edge Cases\\n- Division by zero raises an error.\\n- Non-numeric values in numeric functions raise an error.\\n- Mismatched list sizes in INTERCEPT raise an error.\\n\",\"parameters\":{\"type\":\"object\",\"properties\":{\"expression\":{\"type\":\"string\",\"description\":\"Formula to evaluate. Examples: \\n- 1 + 2 * 3 -> 7\\n- ^ is power: 2 ^ 3 -> 8\\n- Bitwise: 5 | 2 -> 7, 5 & 2 -> 0, 5 << 1 -> 10\\n- Trig: SIN(PI/2) -> 1\\n- IF(2 > 1, 10, 0) -> 10\\n- ROUND(3.14159, 2) -> 3.14; ROUNDUP(-1.2) -> -1; ROUNDDOWN(1.9) -> 1\\n- AVG(1,2,3,4) -> 2.5\\n\"}},\"required\":[\"expression\"]}}]}"
+        },
+        "headers": {
+          "User-Agent": [
+            "Faraday v2.13.1"
+          ],
+          "Content-Type": [
+            "application/json"
+          ],
+          "Authorization": [
+            "Bearer <TOKEN>"
+          ]
+        }
+      },
+      "response": {
+        "status": {
+          "code": 200,
+          "message": "OK"
+        },
+        "headers": {
+          "date": [
+            "Wed, 01 Oct 2025 20:38:42 GMT"
+          ],
+          "content-type": [
+            "application/json"
+          ],
+          "transfer-encoding": [
+            "chunked"
+          ],
+          "connection": [
+            "keep-alive"
+          ],
+          "openai-version": [
+            "2020-10-01"
+          ],
+          "openai-organization": [
+            "<OPENAI-ORGANIZATION>"
+          ],
+          "openai-project": [
+            "proj_SnKVz9MFy0a0D6nNeyw7GaDO"
+          ],
+          "x-request-id": [
+            "<X-REQUEST-ID>"
+          ],
+          "openai-processing-ms": [
+            "5237"
+          ],
+          "x-envoy-upstream-service-time": [
+            "5240"
+          ],
+          "strict-transport-security": [
+            "max-age=31536000; includeSubDomains; preload"
+          ],
+          "cf-cache-status": [
+            "DYNAMIC"
+          ],
+          "set-cookie": [
+            "<SET-COOKIE>"
+          ],
+          "x-content-type-options": [
+            "nosniff"
+          ],
+          "server": [
+            "cloudflare"
+          ],
+          "cf-ray": [
+            "<CF-RAY>"
+          ],
+          "content-encoding": [
+            "gzip"
+          ],
+          "alt-svc": [
+            "h3=\":443\"; ma=86400"
+          ]
+        },
+        "body": {
+          "encoding": "ASCII-8BIT",
+          "string": "{\n  \"id\": \"resp_0068ac4ee8fe3d0e0068dd914d77048192a57f2e04dbd883d2\",\n  \"object\": \"response\",\n  \"created_at\": 1759351117,\n  \"status\": \"completed\",\n  \"background\": false,\n  \"billing\": {\n    \"payer\": \"developer\"\n  },\n  \"error\": null,\n  \"incomplete_details\": null,\n  \"instructions\": \"You are a helpfull assistant who answers questions succinctly. Please use the calculator tool when asked mathematical questions.\",\n  \"max_output_tokens\": null,\n  \"max_tool_calls\": null,\n  \"model\": \"gpt-5-2025-08-07\",\n  \"output\": [\n    {\n      \"id\": \"rs_0068ac4ee8fe3d0e0068dd914ff31c8192a98dc6f3614c6778\",\n      \"type\": \"reasoning\",\n      \"encrypted_content\": \"gAAAAABo3ZFSHnnt1m4KOleyrs7HISaGOK1rMcGMttnIFwZWto32un1B0dAmkPmPxX1b7gcafy5PJlKHg0BxWA4j0eFFhPDbJWmUFnOe5lYzQoNflc9E2kaPDfVrKLif87UhsKpzT_GpC9B-vMXYQuQSfNQIMw7yILObd8Lnb_uoB4QbrypDrRzFvyc5IPl326fxj5sg00S6Z3C0_Dw3KmObSb7wKzAEy_WgLnSLUvGBCp3aODHSgDTobxwHRuw0AQrn603MgHlLgPNzRHolmmPXvfkxAHdaciUj78tGH8wFlG3_vvu8ED2f-wzvrdxcyqJC7LYupdhmZAMpm48WpkV7SjbGkTUC0seuje74wi4-EiCn0BQyIZ7DaSppsjgW1Aeg49Rh2XD4OA4sGSw6Z9Mpuv-BkDPgtqH9Mo5Elcjyl0c6TZ6LjIiXy87mgs35StbsEISMH_ADlFmmiVTLSuPskE3sTTHOgaVVwwsA9ZS53E2hl0begE6oh3q30xDFRedU0k7bvEAr_qp2QADYDt72IWyghkpmrGIVGF7B-bcztia1W6WZT3Ju-Z1o0C1IFG52oYGA0pzl6t2UlTk5oMA0YcIT9Jai-bD-4AehweTkuuH39-Vl7cXfZL8VKTN-Ti947n_lSZX_ShIpUBqo80yE3W-NeqLw_i_aKvRUnoYNJZd4ucyZeqB-VNy6aIoLpBlaVXQbztvsdlm3Alkwru9AID57FXosqvoN5-Dcp-tGw9plMIRS98SazaoLZ-2riPtCfWN-rY1gAcOxT3zYOqd3jCJAvaVyrKTTpjBpildEXFxgCC2BJb1kDSHRVshbBWCr7xch-Pbr3tr62Q-JKYUygZeyCm_cEQzU9-puKS7Tv2qtSaFV2rQofaJxvb_Qfl2jkP_3EdeBBEg3aVV0gtC7OtzE7bLdCIfKisrIgTlHT6zUdwAGFfYo9fKO7fHWBIkFnxMyum9zp8Gu9qWtD8FFROCypPETYM3lZ9kNtbxFQ9UHbS-pX_8pOLoeVTleR_3arHHicpuBtWxd1OKSt58L8dMr7O7c_LN_JrZWcYq_4vz2DQZm2IMU528qEVj-31NOLd-bWm9fTSvpb8zStbh0mR_fTPq8URRxt70MIb_E_jig8LBYG6bYqE8Vn42G14nWqaXcjXKp-i3ih9ND0sMuiJZKNQqhPs6RMRIUx_d-w48ziQ1Zrp49tODQ5UYiFVdAe9PXFd_Wda0w_KTxruH4B6P9qEPjuimxLE2SzdV1MFOgivrxcYQOMndVX2mMso0fuJb_HR8K91wMyrekUi8gf67DzB-7ioufWcBEo_EMNJ_t2inCLh4=\",\n      \"summary\": [\n        {\n          \"type\": \"summary_text\",\n          \"text\": \"**Using calculator tool**\\n\\nI need to provide a succinct answer and use the calculator tool for the math. I should call the function with the expression \\\"3 * 5\\\". I want to keep it minimal and just return \\\"15\\\". Even though there's a multi-tool option, it's not necessary here. I just need to stick to the designated channel for the tool calls and then present the final answer. Alright, let's get this done!\"\n        }\n      ]\n    },\n    {\n      \"id\": \"fc_0068ac4ee8fe3d0e0068dd915274288192b2578a2bbc13a515\",\n      \"type\": \"function_call\",\n      \"status\": \"completed\",\n      \"arguments\": \"{\\\"expression\\\":\\\"3 * 5\\\"}\",\n      \"call_id\": \"call_1bEIWLiv6sGR78IToKkfvvaK\",\n      \"name\": \"calculator\"\n    }\n  ],\n  \"parallel_tool_calls\": true,\n  \"previous_response_id\": null,\n  \"prompt_cache_key\": null,\n  \"reasoning\": {\n    \"effort\": \"medium\",\n    \"summary\": \"detailed\"\n  },\n  \"safety_identifier\": null,\n  \"service_tier\": \"default\",\n  \"store\": true,\n  \"temperature\": 1.0,\n  \"text\": {\n    \"format\": {\n      \"type\": \"text\"\n    },\n    \"verbosity\": \"medium\"\n  },\n  \"tool_choice\": \"auto\",\n  \"tools\": [\n    {\n      \"type\": \"function\",\n      \"description\": \"# Calculator\\nThe claculator DSL evaluates math, comparisons, logic, and numeric aggregates.\\n## Numbers\\n- Integers and floats are accepted.\\n- Bitwise operators use integers; non-integers are truncated.\\n- The result of bitwise operators are non-numeric but can be converted to numeric using ROUND.\\n## Arithmetic operators\\n- + (add), - (subtract), * (multiply), / (divide), % (modulo), ^ (power).\\n- Bitwise: | (or), & (and), << (shift left), >> (shift right).\\n## Math Functions\\n- SIN, COS, TAN, ASIN, ACOS, ATAN, ATAN2, SINH, COSH, TANH, ASINH, ACOSH, ATANH,   SQRT, EXP, LOG, LOG10, POW.\\n- Angles are in radians.\\n## Comparison Operators\\n- =, !=, <>, <, >, <=, >= return booleans.\\n## Logical functions\\n- IF(cond, then, else).\\n- AND(a, b, ...), OR(a, b, ...), XOR(a, b), NOT(x).\\n- XOR(a, b) is true if exactly one argument is true.\\n## Numeric Functions\\n- MIN(...), MAX(...), SUM(...), AVG(...), COUNT(...).\\n- ROUND(x, [digits]).\\n- ROUNDDOWN(x, [digits]) rounds toward zero.\\n- ROUNDUP(x, [digits]) rounds away from zero.\\n- ABS(x).\\n## Constants\\n- PI, E## Aggregates\\n- Functions accept a list of values or an array, e.g., SUM(1,2,3) or\\n  SUM(1,2,3).\\n- COUNT counts non-nil numeric arguments.\\n## Operator precedence (high to low)\\n1) Parentheses and functions\\n2) Unary +, unary -, NOT\\n3) ^\\n4) *, /, %\\n5) +, -\\n6) <<, >>\\n7) &\\n8) |\\n9) Comparisons (=, !=, <>, <, >, <=, >=)\\n10) AND, XOR, OR\\n## Errors and Edge Cases\\n- Division by zero raises an error.\\n- Non-numeric values in numeric functions raise an error.\\n- Mismatched list sizes in INTERCEPT raise an error.\\n\",\n      \"name\": \"calculator\",\n      \"parameters\": {\n        \"type\": \"object\",\n        \"properties\": {\n          \"expression\": {\n            \"type\": \"string\",\n            \"description\": \"Formula to evaluate. Examples: \\n- 1 + 2 * 3 -> 7\\n- ^ is power: 2 ^ 3 -> 8\\n- Bitwise: 5 | 2 -> 7, 5 & 2 -> 0, 5 << 1 -> 10\\n- Trig: SIN(PI/2) -> 1\\n- IF(2 > 1, 10, 0) -> 10\\n- ROUND(3.14159, 2) -> 3.14; ROUNDUP(-1.2) -> -1; ROUNDDOWN(1.9) -> 1\\n- AVG(1,2,3,4) -> 2.5\\n\"\n          }\n        },\n        \"required\": [\n          \"expression\"\n        ],\n        \"additionalProperties\": false\n      },\n      \"strict\": true\n    }\n  ],\n  \"top_logprobs\": 0,\n  \"top_p\": 1.0,\n  \"truncation\": \"disabled\",\n  \"usage\": {\n    \"input_tokens\": 747,\n    \"input_tokens_details\": {\n      \"cached_tokens\": 0\n    },\n    \"output_tokens\": 87,\n    \"output_tokens_details\": {\n      \"reasoning_tokens\": 64\n    },\n    \"total_tokens\": 834\n  },\n  \"user\": null,\n  \"metadata\": {}\n}"
+        }
+      },
+      "recorded_at": "Wed, 01 Oct 2025 20:38:42 GMT"
+    },
+    {
+      "request": {
+        "method": "post",
+        "uri": "https://api.openai.com/v1/responses",
+        "body": {
+          "encoding": "UTF-8",
+          "string": "{\"model\":\"gpt-5\",\"reasoning\":{\"effort\":\"medium\",\"summary\":\"detailed\"},\"include\":[\"reasoning.encrypted_content\"],\"input\":[{\"role\":\"user\",\"content\":[{\"type\":\"input_text\",\"text\":\"What is 3 * 5?\"}],\"type\":\"message\"},{\"id\":\"rs_0068ac4ee8fe3d0e0068dd914ff31c8192a98dc6f3614c6778\",\"type\":\"reasoning\",\"encrypted_content\":\"gAAAAABo3ZFSHnnt1m4KOleyrs7HISaGOK1rMcGMttnIFwZWto32un1B0dAmkPmPxX1b7gcafy5PJlKHg0BxWA4j0eFFhPDbJWmUFnOe5lYzQoNflc9E2kaPDfVrKLif87UhsKpzT_GpC9B-vMXYQuQSfNQIMw7yILObd8Lnb_uoB4QbrypDrRzFvyc5IPl326fxj5sg00S6Z3C0_Dw3KmObSb7wKzAEy_WgLnSLUvGBCp3aODHSgDTobxwHRuw0AQrn603MgHlLgPNzRHolmmPXvfkxAHdaciUj78tGH8wFlG3_vvu8ED2f-wzvrdxcyqJC7LYupdhmZAMpm48WpkV7SjbGkTUC0seuje74wi4-EiCn0BQyIZ7DaSppsjgW1Aeg49Rh2XD4OA4sGSw6Z9Mpuv-BkDPgtqH9Mo5Elcjyl0c6TZ6LjIiXy87mgs35StbsEISMH_ADlFmmiVTLSuPskE3sTTHOgaVVwwsA9ZS53E2hl0begE6oh3q30xDFRedU0k7bvEAr_qp2QADYDt72IWyghkpmrGIVGF7B-bcztia1W6WZT3Ju-Z1o0C1IFG52oYGA0pzl6t2UlTk5oMA0YcIT9Jai-bD-4AehweTkuuH39-Vl7cXfZL8VKTN-Ti947n_lSZX_ShIpUBqo80yE3W-NeqLw_i_aKvRUnoYNJZd4ucyZeqB-VNy6aIoLpBlaVXQbztvsdlm3Alkwru9AID57FXosqvoN5-Dcp-tGw9plMIRS98SazaoLZ-2riPtCfWN-rY1gAcOxT3zYOqd3jCJAvaVyrKTTpjBpildEXFxgCC2BJb1kDSHRVshbBWCr7xch-Pbr3tr62Q-JKYUygZeyCm_cEQzU9-puKS7Tv2qtSaFV2rQofaJxvb_Qfl2jkP_3EdeBBEg3aVV0gtC7OtzE7bLdCIfKisrIgTlHT6zUdwAGFfYo9fKO7fHWBIkFnxMyum9zp8Gu9qWtD8FFROCypPETYM3lZ9kNtbxFQ9UHbS-pX_8pOLoeVTleR_3arHHicpuBtWxd1OKSt58L8dMr7O7c_LN_JrZWcYq_4vz2DQZm2IMU528qEVj-31NOLd-bWm9fTSvpb8zStbh0mR_fTPq8URRxt70MIb_E_jig8LBYG6bYqE8Vn42G14nWqaXcjXKp-i3ih9ND0sMuiJZKNQqhPs6RMRIUx_d-w48ziQ1Zrp49tODQ5UYiFVdAe9PXFd_Wda0w_KTxruH4B6P9qEPjuimxLE2SzdV1MFOgivrxcYQOMndVX2mMso0fuJb_HR8K91wMyrekUi8gf67DzB-7ioufWcBEo_EMNJ_t2inCLh4=\",\"summary\":[{\"type\":\"summary_text\",\"text\":\"**Using calculator tool**\\n\\nI need to provide a succinct answer and use the calculator tool for the math. I should call the function with the expression \\\"3 * 5\\\". I want to keep it minimal and just return \\\"15\\\". Even though there's a multi-tool option, it's not necessary here. I just need to stick to the designated channel for the tool calls and then present the final answer. Alright, let's get this done!\"}]},{\"type\":\"function_call\",\"id\":\"fc_0068ac4ee8fe3d0e0068dd915274288192b2578a2bbc13a515\",\"call_id\":\"call_1bEIWLiv6sGR78IToKkfvvaK\",\"name\":\"calculator\",\"arguments\":\"{\\\"expression\\\":\\\"3 * 5\\\"}\"},{\"type\":\"function_call_output\",\"call_id\":\"call_1bEIWLiv6sGR78IToKkfvvaK\",\"output\":\"15\"}],\"instructions\":\"You are a helpfull assistant who answers questions succinctly. Please use the calculator tool when asked mathematical questions.\",\"tools\":[{\"type\":\"function\",\"name\":\"calculator\",\"description\":\"# Calculator\\nThe claculator DSL evaluates math, comparisons, logic, and numeric aggregates.\\n## Numbers\\n- Integers and floats are accepted.\\n- Bitwise operators use integers; non-integers are truncated.\\n- The result of bitwise operators are non-numeric but can be converted to numeric using ROUND.\\n## Arithmetic operators\\n- + (add), - (subtract), * (multiply), / (divide), % (modulo), ^ (power).\\n- Bitwise: | (or), & (and), << (shift left), >> (shift right).\\n## Math Functions\\n- SIN, COS, TAN, ASIN, ACOS, ATAN, ATAN2, SINH, COSH, TANH, ASINH, ACOSH, ATANH,   SQRT, EXP, LOG, LOG10, POW.\\n- Angles are in radians.\\n## Comparison Operators\\n- =, !=, <>, <, >, <=, >= return booleans.\\n## Logical functions\\n- IF(cond, then, else).\\n- AND(a, b, ...), OR(a, b, ...), XOR(a, b), NOT(x).\\n- XOR(a, b) is true if exactly one argument is true.\\n## Numeric Functions\\n- MIN(...), MAX(...), SUM(...), AVG(...), COUNT(...).\\n- ROUND(x, [digits]).\\n- ROUNDDOWN(x, [digits]) rounds toward zero.\\n- ROUNDUP(x, [digits]) rounds away from zero.\\n- ABS(x).\\n## Constants\\n- PI, E## Aggregates\\n- Functions accept a list of values or an array, e.g., SUM(1,2,3) or\\n  SUM(1,2,3).\\n- COUNT counts non-nil numeric arguments.\\n## Operator precedence (high to low)\\n1) Parentheses and functions\\n2) Unary +, unary -, NOT\\n3) ^\\n4) *, /, %\\n5) +, -\\n6) <<, >>\\n7) &\\n8) |\\n9) Comparisons (=, !=, <>, <, >, <=, >=)\\n10) AND, XOR, OR\\n## Errors and Edge Cases\\n- Division by zero raises an error.\\n- Non-numeric values in numeric functions raise an error.\\n- Mismatched list sizes in INTERCEPT raise an error.\\n\",\"parameters\":{\"type\":\"object\",\"properties\":{\"expression\":{\"type\":\"string\",\"description\":\"Formula to evaluate. Examples: \\n- 1 + 2 * 3 -> 7\\n- ^ is power: 2 ^ 3 -> 8\\n- Bitwise: 5 | 2 -> 7, 5 & 2 -> 0, 5 << 1 -> 10\\n- Trig: SIN(PI/2) -> 1\\n- IF(2 > 1, 10, 0) -> 10\\n- ROUND(3.14159, 2) -> 3.14; ROUNDUP(-1.2) -> -1; ROUNDDOWN(1.9) -> 1\\n- AVG(1,2,3,4) -> 2.5\\n\"}},\"required\":[\"expression\"]}}]}"
+        },
+        "headers": {
+          "User-Agent": [
+            "Faraday v2.13.1"
+          ],
+          "Content-Type": [
+            "application/json"
+          ],
+          "Authorization": [
+            "Bearer <TOKEN>"
+          ]
+        }
+      },
+      "response": {
+        "status": {
+          "code": 200,
+          "message": "OK"
+        },
+        "headers": {
+          "date": [
+            "Wed, 01 Oct 2025 20:38:45 GMT"
+          ],
+          "content-type": [
+            "application/json"
+          ],
+          "transfer-encoding": [
+            "chunked"
+          ],
+          "connection": [
+            "keep-alive"
+          ],
+          "openai-version": [
+            "2020-10-01"
+          ],
+          "openai-organization": [
+            "<OPENAI-ORGANIZATION>"
+          ],
+          "openai-project": [
+            "proj_SnKVz9MFy0a0D6nNeyw7GaDO"
+          ],
+          "x-request-id": [
+            "<X-REQUEST-ID>"
+          ],
+          "openai-processing-ms": [
+            "2193"
+          ],
+          "x-envoy-upstream-service-time": [
+            "2196"
+          ],
+          "strict-transport-security": [
+            "max-age=31536000; includeSubDomains; preload"
+          ],
+          "cf-cache-status": [
+            "DYNAMIC"
+          ],
+          "set-cookie": [
+            "<SET-COOKIE>"
+          ],
+          "x-content-type-options": [
+            "nosniff"
+          ],
+          "server": [
+            "cloudflare"
+          ],
+          "cf-ray": [
+            "<CF-RAY>"
+          ],
+          "content-encoding": [
+            "gzip"
+          ],
+          "alt-svc": [
+            "h3=\":443\"; ma=86400"
+          ]
+        },
+        "body": {
+          "encoding": "ASCII-8BIT",
+          "string": "{\n  \"id\": \"resp_0068ac4ee8fe3d0e0068dd9152f8808192a22f56a700d482e7\",\n  \"object\": \"response\",\n  \"created_at\": 1759351123,\n  \"status\": \"completed\",\n  \"background\": false,\n  \"billing\": {\n    \"payer\": \"developer\"\n  },\n  \"error\": null,\n  \"incomplete_details\": null,\n  \"instructions\": \"You are a helpfull assistant who answers questions succinctly. Please use the calculator tool when asked mathematical questions.\",\n  \"max_output_tokens\": null,\n  \"max_tool_calls\": null,\n  \"model\": \"gpt-5-2025-08-07\",\n  \"output\": [\n    {\n      \"id\": \"msg_0068ac4ee8fe3d0e0068dd9154dcb481928e3e29c7639e1892\",\n      \"type\": \"message\",\n      \"status\": \"completed\",\n      \"content\": [\n        {\n          \"type\": \"output_text\",\n          \"annotations\": [],\n          \"logprobs\": [],\n          \"text\": \"15\"\n        }\n      ],\n      \"role\": \"assistant\"\n    }\n  ],\n  \"parallel_tool_calls\": true,\n  \"previous_response_id\": null,\n  \"prompt_cache_key\": null,\n  \"reasoning\": {\n    \"effort\": \"medium\",\n    \"summary\": \"detailed\"\n  },\n  \"safety_identifier\": null,\n  \"service_tier\": \"default\",\n  \"store\": true,\n  \"temperature\": 1.0,\n  \"text\": {\n    \"format\": {\n      \"type\": \"text\"\n    },\n    \"verbosity\": \"medium\"\n  },\n  \"tool_choice\": \"auto\",\n  \"tools\": [\n    {\n      \"type\": \"function\",\n      \"description\": \"# Calculator\\nThe claculator DSL evaluates math, comparisons, logic, and numeric aggregates.\\n## Numbers\\n- Integers and floats are accepted.\\n- Bitwise operators use integers; non-integers are truncated.\\n- The result of bitwise operators are non-numeric but can be converted to numeric using ROUND.\\n## Arithmetic operators\\n- + (add), - (subtract), * (multiply), / (divide), % (modulo), ^ (power).\\n- Bitwise: | (or), & (and), << (shift left), >> (shift right).\\n## Math Functions\\n- SIN, COS, TAN, ASIN, ACOS, ATAN, ATAN2, SINH, COSH, TANH, ASINH, ACOSH, ATANH,   SQRT, EXP, LOG, LOG10, POW.\\n- Angles are in radians.\\n## Comparison Operators\\n- =, !=, <>, <, >, <=, >= return booleans.\\n## Logical functions\\n- IF(cond, then, else).\\n- AND(a, b, ...), OR(a, b, ...), XOR(a, b), NOT(x).\\n- XOR(a, b) is true if exactly one argument is true.\\n## Numeric Functions\\n- MIN(...), MAX(...), SUM(...), AVG(...), COUNT(...).\\n- ROUND(x, [digits]).\\n- ROUNDDOWN(x, [digits]) rounds toward zero.\\n- ROUNDUP(x, [digits]) rounds away from zero.\\n- ABS(x).\\n## Constants\\n- PI, E## Aggregates\\n- Functions accept a list of values or an array, e.g., SUM(1,2,3) or\\n  SUM(1,2,3).\\n- COUNT counts non-nil numeric arguments.\\n## Operator precedence (high to low)\\n1) Parentheses and functions\\n2) Unary +, unary -, NOT\\n3) ^\\n4) *, /, %\\n5) +, -\\n6) <<, >>\\n7) &\\n8) |\\n9) Comparisons (=, !=, <>, <, >, <=, >=)\\n10) AND, XOR, OR\\n## Errors and Edge Cases\\n- Division by zero raises an error.\\n- Non-numeric values in numeric functions raise an error.\\n- Mismatched list sizes in INTERCEPT raise an error.\\n\",\n      \"name\": \"calculator\",\n      \"parameters\": {\n        \"type\": \"object\",\n        \"properties\": {\n          \"expression\": {\n            \"type\": \"string\",\n            \"description\": \"Formula to evaluate. Examples: \\n- 1 + 2 * 3 -> 7\\n- ^ is power: 2 ^ 3 -> 8\\n- Bitwise: 5 | 2 -> 7, 5 & 2 -> 0, 5 << 1 -> 10\\n- Trig: SIN(PI/2) -> 1\\n- IF(2 > 1, 10, 0) -> 10\\n- ROUND(3.14159, 2) -> 3.14; ROUNDUP(-1.2) -> -1; ROUNDDOWN(1.9) -> 1\\n- AVG(1,2,3,4) -> 2.5\\n\"\n          }\n        },\n        \"required\": [\n          \"expression\"\n        ],\n        \"additionalProperties\": false\n      },\n      \"strict\": true\n    }\n  ],\n  \"top_logprobs\": 0,\n  \"top_p\": 1.0,\n  \"truncation\": \"disabled\",\n  \"usage\": {\n    \"input_tokens\": 860,\n    \"input_tokens_details\": {\n      \"cached_tokens\": 0\n    },\n    \"output_tokens\": 5,\n    \"output_tokens_details\": {\n      \"reasoning_tokens\": 0\n    },\n    \"total_tokens\": 865\n  },\n  \"user\": null,\n  \"metadata\": {}\n}"
+        }
+      },
+      "recorded_at": "Wed, 01 Oct 2025 20:38:45 GMT"
+    }
+  ],
+  "recorded_with": "VCR 6.3.1"
+}

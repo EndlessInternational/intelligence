@@ -6,7 +6,7 @@
         "uri": "https://api.openai.com/v1/responses",
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"model\":\"gpt-4o\",\"temperature\":0.0,\"max_output_tokens\":128,\"input\":[{\"role\":\"user\",\"content\":[{\"type\":\"input_text\",\"text\":\"respond only with the word 'hello'\\n\"}]}]}"
+          "string": "{\"model\":\"gpt-4o\",\"temperature\":0.0,\"max_output_tokens\":128,\"input\":[{\"role\":\"user\",\"content\":[{\"type\":\"input_text\",\"text\":\"respond only with the word 'hello'\\n\"}],\"type\":\"message\"}]}"
         },
         "headers": {
           "User-Agent": [
@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Wed, 09 Jul 2025 16:52:26 GMT"
+            "Wed, 01 Oct 2025 20:36:47 GMT"
           ],
           "content-type": [
             "application/json"
@@ -48,7 +48,7 @@
             "9999"
           ],
           "x-ratelimit-remaining-tokens": [
-            "29999965"
+            "29999966"
           ],
           "x-ratelimit-reset-requests": [
             "6ms"
@@ -62,11 +62,17 @@
           "openai-organization": [
             "<OPENAI-ORGANIZATION>"
           ],
+          "openai-project": [
+            "proj_SnKVz9MFy0a0D6nNeyw7GaDO"
+          ],
           "x-request-id": [
             "<X-REQUEST-ID>"
           ],
           "openai-processing-ms": [
-            "656"
+            "470"
+          ],
+          "x-envoy-upstream-service-time": [
+            "474"
           ],
           "strict-transport-security": [
             "max-age=31536000; includeSubDomains; preload"
@@ -95,10 +101,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\n  \"id\": \"resp_686e9e49578881a2b4d51fb3507d63dc0ebec7d1db9b9315\",\n  \"object\": \"response\",\n  \"created_at\": 1752079945,\n  \"status\": \"completed\",\n  \"background\": false,\n  \"error\": null,\n  \"incomplete_details\": null,\n  \"instructions\": null,\n  \"max_output_tokens\": 128,\n  \"max_tool_calls\": null,\n  \"model\": \"gpt-4o-2024-08-06\",\n  \"output\": [\n    {\n      \"id\": \"msg_686e9e49db8481a29782927ab456d8850ebec7d1db9b9315\",\n      \"type\": \"message\",\n      \"status\": \"completed\",\n      \"content\": [\n        {\n          \"type\": \"output_text\",\n          \"annotations\": [],\n          \"logprobs\": [],\n          \"text\": \"hello\"\n        }\n      ],\n      \"role\": \"assistant\"\n    }\n  ],\n  \"parallel_tool_calls\": true,\n  \"previous_response_id\": null,\n  \"reasoning\": {\n    \"effort\": null,\n    \"summary\": null\n  },\n  \"service_tier\": \"default\",\n  \"store\": true,\n  \"temperature\": 0.0,\n  \"text\": {\n    \"format\": {\n      \"type\": \"text\"\n    }\n  },\n  \"tool_choice\": \"auto\",\n  \"tools\": [],\n  \"top_logprobs\": 0,\n  \"top_p\": 1.0,\n  \"truncation\": \"disabled\",\n  \"usage\": {\n    \"input_tokens\": 15,\n    \"input_tokens_details\": {\n      \"cached_tokens\": 0\n    },\n    \"output_tokens\": 2,\n    \"output_tokens_details\": {\n      \"reasoning_tokens\": 0\n    },\n    \"total_tokens\": 17\n  },\n  \"user\": null,\n  \"metadata\": {}\n}"
+          "string": "{\n  \"id\": \"resp_0c4665c3609755f70068dd90df177881919520505b96242f87\",\n  \"object\": \"response\",\n  \"created_at\": 1759351007,\n  \"status\": \"completed\",\n  \"background\": false,\n  \"billing\": {\n    \"payer\": \"developer\"\n  },\n  \"error\": null,\n  \"incomplete_details\": null,\n  \"instructions\": null,\n  \"max_output_tokens\": 128,\n  \"max_tool_calls\": null,\n  \"model\": \"gpt-4o-2024-08-06\",\n  \"output\": [\n    {\n      \"id\": \"msg_0c4665c3609755f70068dd90df6fc88191ac456b85221a6d9f\",\n      \"type\": \"message\",\n      \"status\": \"completed\",\n      \"content\": [\n        {\n          \"type\": \"output_text\",\n          \"annotations\": [],\n          \"logprobs\": [],\n          \"text\": \"hello\"\n        }\n      ],\n      \"role\": \"assistant\"\n    }\n  ],\n  \"parallel_tool_calls\": true,\n  \"previous_response_id\": null,\n  \"prompt_cache_key\": null,\n  \"reasoning\": {\n    \"effort\": null,\n    \"summary\": null\n  },\n  \"safety_identifier\": null,\n  \"service_tier\": \"default\",\n  \"store\": true,\n  \"temperature\": 0.0,\n  \"text\": {\n    \"format\": {\n      \"type\": \"text\"\n    },\n    \"verbosity\": \"medium\"\n  },\n  \"tool_choice\": \"auto\",\n  \"tools\": [],\n  \"top_logprobs\": 0,\n  \"top_p\": 1.0,\n  \"truncation\": \"disabled\",\n  \"usage\": {\n    \"input_tokens\": 15,\n    \"input_tokens_details\": {\n      \"cached_tokens\": 0\n    },\n    \"output_tokens\": 2,\n    \"output_tokens_details\": {\n      \"reasoning_tokens\": 0\n    },\n    \"total_tokens\": 17\n  },\n  \"user\": null,\n  \"metadata\": {}\n}"
         }
       },
-      "recorded_at": "Wed, 09 Jul 2025 16:52:26 GMT"
+      "recorded_at": "Wed, 01 Oct 2025 20:36:47 GMT"
     },
     {
       "request": {
@@ -106,7 +112,7 @@
         "uri": "https://api.openai.com/v1/responses",
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"model\":\"gpt-4o\",\"temperature\":0.0,\"max_output_tokens\":128,\"input\":[{\"role\":\"user\",\"content\":[{\"type\":\"input_text\",\"text\":\"the secret word is 'blue'\\n\"}]},{\"role\":\"assistant\",\"content\":[{\"type\":\"output_text\",\"text\":\"ok\\n\"}]},{\"role\":\"user\",\"content\":[{\"type\":\"input_text\",\"text\":\"what is the secret word?\\nrespond with the word only\\n\"}]}]}"
+          "string": "{\"model\":\"gpt-4o\",\"temperature\":0.0,\"max_output_tokens\":128,\"input\":[{\"role\":\"user\",\"content\":[{\"type\":\"input_text\",\"text\":\"the secret word is 'blue'\\n\"}],\"type\":\"message\"},{\"role\":\"assistant\",\"content\":[{\"type\":\"output_text\",\"text\":\"ok\\n\"}],\"type\":\"message\"},{\"role\":\"user\",\"content\":[{\"type\":\"input_text\",\"text\":\"what is the secret word?\\nrespond with the word only\\n\"}],\"type\":\"message\"}]}"
         },
         "headers": {
           "User-Agent": [
@@ -127,7 +133,7 @@
         },
         "headers": {
           "date": [
-            "Wed, 09 Jul 2025 16:52:26 GMT"
+            "Wed, 01 Oct 2025 20:36:48 GMT"
           ],
           "content-type": [
             "application/json"
@@ -148,7 +154,7 @@
             "9999"
           ],
           "x-ratelimit-remaining-tokens": [
-            "29999944"
+            "29999945"
           ],
           "x-ratelimit-reset-requests": [
             "6ms"
@@ -162,11 +168,17 @@
           "openai-organization": [
             "<OPENAI-ORGANIZATION>"
           ],
+          "openai-project": [
+            "proj_SnKVz9MFy0a0D6nNeyw7GaDO"
+          ],
           "x-request-id": [
             "<X-REQUEST-ID>"
           ],
           "openai-processing-ms": [
-            "554"
+            "645"
+          ],
+          "x-envoy-upstream-service-time": [
+            "651"
           ],
           "strict-transport-security": [
             "max-age=31536000; includeSubDomains; preload"
@@ -195,10 +207,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\n  \"id\": \"resp_686e9e4a2f948191b95f8cf80d6ca60c0d361f57a3ec3b51\",\n  \"object\": \"response\",\n  \"created_at\": 1752079946,\n  \"status\": \"completed\",\n  \"background\": false,\n  \"error\": null,\n  \"incomplete_details\": null,\n  \"instructions\": null,\n  \"max_output_tokens\": 128,\n  \"max_tool_calls\": null,\n  \"model\": \"gpt-4o-2024-08-06\",\n  \"output\": [\n    {\n      \"id\": \"msg_686e9e4aa79881919edf34cc6db4d9270d361f57a3ec3b51\",\n      \"type\": \"message\",\n      \"status\": \"completed\",\n      \"content\": [\n        {\n          \"type\": \"output_text\",\n          \"annotations\": [],\n          \"logprobs\": [],\n          \"text\": \"blue\"\n        }\n      ],\n      \"role\": \"assistant\"\n    }\n  ],\n  \"parallel_tool_calls\": true,\n  \"previous_response_id\": null,\n  \"reasoning\": {\n    \"effort\": null,\n    \"summary\": null\n  },\n  \"service_tier\": \"default\",\n  \"store\": true,\n  \"temperature\": 0.0,\n  \"text\": {\n    \"format\": {\n      \"type\": \"text\"\n    }\n  },\n  \"tool_choice\": \"auto\",\n  \"tools\": [],\n  \"top_logprobs\": 0,\n  \"top_p\": 1.0,\n  \"truncation\": \"disabled\",\n  \"usage\": {\n    \"input_tokens\": 36,\n    \"input_tokens_details\": {\n      \"cached_tokens\": 0\n    },\n    \"output_tokens\": 2,\n    \"output_tokens_details\": {\n      \"reasoning_tokens\": 0\n    },\n    \"total_tokens\": 38\n  },\n  \"user\": null,\n  \"metadata\": {}\n}"
+          "string": "{\n  \"id\": \"resp_0cf56b2eb79921790068dd90dfbb88819dbd382d5026e3d53d\",\n  \"object\": \"response\",\n  \"created_at\": 1759351007,\n  \"status\": \"completed\",\n  \"background\": false,\n  \"billing\": {\n    \"payer\": \"developer\"\n  },\n  \"error\": null,\n  \"incomplete_details\": null,\n  \"instructions\": null,\n  \"max_output_tokens\": 128,\n  \"max_tool_calls\": null,\n  \"model\": \"gpt-4o-2024-08-06\",\n  \"output\": [\n    {\n      \"id\": \"msg_0cf56b2eb79921790068dd90e03c10819dbf00d6430fa76de8\",\n      \"type\": \"message\",\n      \"status\": \"completed\",\n      \"content\": [\n        {\n          \"type\": \"output_text\",\n          \"annotations\": [],\n          \"logprobs\": [],\n          \"text\": \"blue\"\n        }\n      ],\n      \"role\": \"assistant\"\n    }\n  ],\n  \"parallel_tool_calls\": true,\n  \"previous_response_id\": null,\n  \"prompt_cache_key\": null,\n  \"reasoning\": {\n    \"effort\": null,\n    \"summary\": null\n  },\n  \"safety_identifier\": null,\n  \"service_tier\": \"default\",\n  \"store\": true,\n  \"temperature\": 0.0,\n  \"text\": {\n    \"format\": {\n      \"type\": \"text\"\n    },\n    \"verbosity\": \"medium\"\n  },\n  \"tool_choice\": \"auto\",\n  \"tools\": [],\n  \"top_logprobs\": 0,\n  \"top_p\": 1.0,\n  \"truncation\": \"disabled\",\n  \"usage\": {\n    \"input_tokens\": 36,\n    \"input_tokens_details\": {\n      \"cached_tokens\": 0\n    },\n    \"output_tokens\": 2,\n    \"output_tokens_details\": {\n      \"reasoning_tokens\": 0\n    },\n    \"total_tokens\": 38\n  },\n  \"user\": null,\n  \"metadata\": {}\n}"
         }
       },
-      "recorded_at": "Wed, 09 Jul 2025 16:52:26 GMT"
+      "recorded_at": "Wed, 01 Oct 2025 20:36:48 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

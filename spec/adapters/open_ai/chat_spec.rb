@@ -51,9 +51,7 @@ RSpec.describe "#{Intelligence::Adapter[ :open_ai ]} chat requests", :open_ai do
     Intelligence::Adapter[ :open_ai ].build! do   
       key                     ENV[ 'OPENAI_API_KEY' ]
       chat_options do
-        model                 'gpt-4o'
-        temperature           0
-        max_tokens            1024
+        model                 'gpt-5'
         abilities do 
           web_search 
         end
@@ -65,12 +63,12 @@ RSpec.describe "#{Intelligence::Adapter[ :open_ai ]} chat requests", :open_ai do
     Intelligence::Adapter[ :open_ai ].build! do   
       key                     ENV[ 'OPENAI_API_KEY' ]
       chat_options do
-        model                 'o4-mini'
-        max_tokens            4096
+        model                 'gpt-5'
         reasoning do 
-          effort              :low
+          effort              :medium
           summary             :detailed
         end
+        include               [ 'reasoning.encrypted_content' ]
       end
     end
   end
@@ -109,6 +107,8 @@ RSpec.describe "#{Intelligence::Adapter[ :open_ai ]} chat requests", :open_ai do
   include_examples 'chat requests with complex tools'
   include_examples 'chat requests with parallel tools'
   include_examples 'chat requests with tools multiturn'
+  include_examples 'chat requests with calculator tool', 
+                   adapter: :adapter_with_thought
 
   include_examples 'chat requests with web search', 
                    adapter: :adapter_with_web_search

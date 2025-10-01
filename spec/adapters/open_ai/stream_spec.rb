@@ -38,13 +38,12 @@ RSpec.describe "#{Intelligence::Adapter[ :open_ai ]} stream requests", :open_ai 
     Intelligence::Adapter[ :open_ai ].build! do   
       key                     ENV[ 'OPENAI_API_KEY' ]
       chat_options do
-        model                 'o4-mini'
-        max_tokens            4096
+        model                 'gpt-5'
         reasoning do 
-          effort              :low
+          effort              :medium
           summary             :detailed
         end
-
+        include               [ 'reasoning.encrypted_content' ]
         stream                true
       end
     end
@@ -80,5 +79,8 @@ RSpec.describe "#{Intelligence::Adapter[ :open_ai ]} stream requests", :open_ai 
   include_examples 'stream requests with tools multiturn'
   include_examples 'stream requests with web search',
                    adapter: :adapter_with_web_search
+
+  include_examples 'stream requests with calculator tool', 
+                   adapter: :adapter_with_thought
 
 end
