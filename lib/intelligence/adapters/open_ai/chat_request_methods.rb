@@ -37,7 +37,6 @@ module Intelligence
       end
 
       def chat_request_body( conversation, options = {} )
-
         tools = options.delete( :tools ) || []
         # open ai abilities are essentially custom tools; when passed as an option they should
         # be in the open ai tool format ( which is essentially just a hash where the type is 
@@ -60,28 +59,38 @@ module Intelligence
         result[ :instructions ] = system_message if system_message
 
         conversation[ :messages ]&.each do | message |
-         
           result_message = nil          
           message[ :contents ]&.each do | content |
             case content[ :type ]
             when :text
-              result_message = { role: message[ :role ], content: [] } if result_message.nil?
+              result_message = to_open_ai_message( message, id: content[ :'open_ai/id' ] ) \
+                if result_message.nil?
               result_message[ :content ] << { 
                 type: ( message[ :role ] == :user ? 'input_text' : 'output_text' ), 
                 text: content[ :text ] 
-              }
+              }.compact
             when :thought
               # nop
+            when :cipher_thought
+              open_ai_item = content[ :'open_ai/item' ]
+              if open_ai_item
+                if result_message
+                  result[ :input ] << result_message
+                  result_message = nil 
+                end
+                result[ :input ] << JSON.parse( open_ai_item )
+              end
             when :binary
-              result_message = { role: message[ :role ], content: [] } if result_message.nil?
+              result_message = to_open_ai_message( message ) if result_message.nil?
               content_type = content[ :content_type ]
               bytes = content[ :bytes ]
               if content_type && bytes
                 if SUPPORTED_CONTENT_TYPES.include?( content_type )
                   result_message[ :content ] << {
                     type: ( message[ :role ] == :user ? 'input_image' : 'output_image' ), 
+                    id: content[ :'open_ai/id' ],
                     image_url: "data:#{content_type};base64,#{Base64.strict_encode64( bytes )}".freeze
-                  }
+                  }.compact
                 else
                   raise UnsupportedContentError.new( 
                     :open_ai, 
@@ -95,7 +104,7 @@ module Intelligence
                 )
               end
             when :file 
-              result_message = { role: message[ :role ], content: [] } if result_message.nil?
+              result_message = to_open_ai_message( message ) if result_message.nil?
               content_type = content[ :content_type ]
               uri = content[ :uri ]
               if content_type && uri  
@@ -103,7 +112,7 @@ module Intelligence
                   result_message[ :content ] << {
                     type: ( message[ :role ] == :user ? 'input_image' : 'output_image' ), 
                     image_url: uri 
-                  }
+                  }.compact
                 else 
                   raise UnsupportedContentError.new( 
                     :open_ai, 
@@ -123,10 +132,11 @@ module Intelligence
               end
               result[ :input ] << {
                 type: 'function_call',
+                id: content[ :'open_ai/id' ],
                 call_id: content[ :tool_call_id ],
                 name: content[ :tool_name ],
                 arguments: JSON.generate( content[ :tool_parameters ] || {} )
-              } 
+              }.compact 
             when :tool_result 
               if result_message
                 result[ :input ] << result_message
@@ -137,6 +147,18 @@ module Intelligence
                 call_id: content[ :tool_call_id ],
                 output: content[ :tool_result ]&.to_s
               }
+            when :web_search_call
+              if result_message
+                result[ :input ] << result_message
+                result_message = nil 
+              end
+              result[ :input ] << {
+                id: content[ :'open_ai/id' ],
+                type: 'web_search_call',
+                action: { type: 'search', query: content[ :query ] }
+              }
+            when :web_reference
+              # nop
             else 
               raise UnsupportedContentError.new( 
                 :open_ai,
@@ -157,7 +179,7 @@ module Intelligence
         tools_attributes.concat( abilities ) 
 
         result[ :tools ] = tools_attributes if tools_attributes && tools_attributes.length > 0
-        
+
         JSON.generate( result )
       end 
 
@@ -213,6 +235,12 @@ module Intelligence
 
         result.empty? ? nil : result 
       end 
+
+      def to_open_ai_message( message, id: nil )
+        open_ai_message = { role: message[ :role ], content: [], type: 'message' }
+        open_ai_message[ :id ] = id if id
+        open_ai_message
+      end
 
     end
   end

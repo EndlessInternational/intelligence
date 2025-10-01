@@ -30,21 +30,22 @@ module Intelligence
               # to pack it in future requests 
               if response_content_part.key?( :thoughtSignature )   
                 contents.push( {
-                  type: :cipher_thought, 
-                  cipher: response_content_part[ :thoughtSignature ]
+                  type:                               :cipher_thought, 
+                  :'google/thought-signature' =>      response_content_part[ :thoughtSignature ]
                 } )
               end
 
               if response_content_part.key?( :text )   
                 type = response_content_part[ :thought ] ? :thought : :text           
                 contents.push( {
-                  type: type, text: response_content_part[ :text ]
+                  type:                               type, 
+                  text:                               response_content_part[ :text ]
                 } )
               elsif function_call = response_content_part[ :functionCall ]                
                 contents.push( {
-                  type: :tool_call, 
-                  tool_name: function_call[ :name ],
-                  tool_parameters: function_call[ :args ]
+                  type:                               :tool_call, 
+                  tool_name:                          function_call[ :name ],
+                  tool_parameters:                    function_call[ :args ]
                 } )
                 # google does not indicate there is tool call in the stop reason so 
                 # we will synthesize this end reason
@@ -88,10 +89,11 @@ module Intelligence
           error_details_reason = response_body[ :error ][ :details ]&.first&.[]( :reason )
           # a special case for authentication 
           error_type = :authentication_error if error_details_reason == 'API_KEY_INVALID'
+          error = error_details_reason || response_body[ :error ][ :status ] || error_type
           result = {
-            error_type: error_type.to_s,
-            error: error_details_reason || response_body[ :error ][ :status ] || error_type,
-            error_description: response_body[ :error ][ :message ]
+            error_type:                               error_type.to_s,
+            error:                                    error.to_s,
+            error_description:                        response_body[ :error ][ :message ]
           }
         end
 
@@ -145,14 +147,17 @@ module Intelligence
                   # to pack it in future requests 
                   if data_candidate_content_part.key?( :thoughtSignature )   
                     contents.push( {
-                      type: :cipher_thought, 
-                      cipher: data_candidate_content_part[ :thoughtSignature ]
+                      type:                           :cipher_thought, 
+                     :'google/thought-signature' =>   data_candidate_content_part[ :thoughtSignature ]
                     } )
                   end
                   if data_candidate_content_part.key?( :text )
                     type = data_candidate_content_part[ :thought ] ? :thought : :text
                     if last_content.nil? || last_content[ :type ] != type 
-                      contents.push( { type: type, text: data_candidate_content_part[ :text ] } )
+                      contents.push( { 
+                        type:                         type, 
+                        text:                         data_candidate_content_part[ :text ] 
+                      } )
                     else 
                       last_content[ :text ] = 
                         ( last_content[ :text ] || '' ) + data_candidate_content_part[ :text ]
@@ -160,9 +165,9 @@ module Intelligence
                   end
                   if function_call = data_candidate_content_part[ :functionCall ]
                     contents.push( { 
-                      type: :tool_call, 
-                      tool_name: function_call[ :name ],
-                      tool_parameters: function_call[ :args ] 
+                      type:                           :tool_call, 
+                      tool_name:                      function_call[ :name ],
+                      tool_parameters:                function_call[ :args ] 
                     } )
                   end
                 end

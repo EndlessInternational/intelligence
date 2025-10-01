@@ -74,11 +74,14 @@ module Intelligence
               when :text
                 result_message_content << { type: 'text', text: content[ :text ] }
               when :thought
-                result_message_content << { 
-                  type: 'thinking', 
-                  thinking: content[ :text ], 
-                  signature: content[ :ciphertext ] 
-                }
+                signature = content[ :'anthropic/signature' ]
+                if signature && signature.length > 0 
+                  result_message_content << { 
+                    type:                   'thinking', 
+                    thinking:               content[ :text ], 
+                    signature:              signature 
+                  }
+                end
               when :cipher_thought
                 # nop
               when :binary
@@ -150,7 +153,10 @@ module Intelligence
               when :web_search_call, :web_reference
                 # nop
               else
-                raise UnsupportedContentError.new( :anthropic ) 
+                raise UnsupportedContentError.new( 
+                  :anthropic, 
+                  "does not support content of type '#{content[ :type ]}'." 
+                ) 
               end
             end
             

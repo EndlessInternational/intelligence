@@ -2,15 +2,13 @@ module Intelligence
   module MessageContent 
 
     class Binary < Base
-  
       schema do 
         content_type    String, required: true 
         bytes           String, required: true 
       end
 
-      attr_reader :content_type 
-      attr_reader :bytes
-      
+      attribute         :content_type, :bytes
+
       def valid?
         ( @content_type || false ) && !MIME::Types[ @content_type ].empty? && 
         ( @bytes || false ) && bytes.respond_to?( :empty? ) && !bytes.empty? 
@@ -19,15 +17,6 @@ module Intelligence
       def image?
         ( @content_type || false ) && 
         ( MIME::Types[ @content_type ]&.first&.media_type == 'image' )
-      end
-
-      def to_h
-        { 
-          type: :binary, 
-          id: id,
-          content_type: content_type, 
-          bytes: bytes 
-        }.compact
       end
     end 
 

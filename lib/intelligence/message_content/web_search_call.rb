@@ -1,14 +1,13 @@
 module Intelligence   
   module MessageContent 
-
     class WebSearchCall < Base
         
       schema do 
-        status Symbol, in: [ :searching, :complete ]
-        query String
+        status          Symbol, in: [ :searching, :complete ]
+        query           String
       end
 
-      attr_reader :status, :query 
+      attribute         :status, :query 
       
       def valid?
         true 
@@ -18,16 +17,6 @@ module Intelligence
         @status.to_s == 'complete'
       end
 
-      def merge( other )
-        query = @query  
-        query = other.query if other.query
-        self.class.new( query: query )
-      end
-
-      def to_h
-        { type: :web_search_call, id: id, query: query }.compact
-      end
     end 
-
   end
 end

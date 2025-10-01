@@ -26,16 +26,16 @@ module Intelligence
               result_content.push( { type: 'text', text: content[ :text ] } )
             when 'thinking'
               result_content.push( { 
-                type: 'thought', 
-                text: content[ :thinking ], 
-                ciphertext: content[ :signature ] 
+                type:                       'thought', 
+                text:                       content[ :thinking ], 
+                :'anthropic/signature' =>   content[ :signature ] 
               } )
             when 'tool_use'
               result_content.push( { 
-                type: :tool_call, 
-                tool_call_id: content[ :id ],
-                tool_name: content[ :name ],
-                tool_parameters: content[ :input ]
+                type:                       :tool_call, 
+                tool_call_id:               content[ :id ],
+                tool_name:                  content[ :name ],
+                tool_parameters:            content[ :input ]
               } )
             end
           end
@@ -156,7 +156,7 @@ module Intelligence
                   contents[ index ][ :text ] = ( contents[ index ][ :text ] || '' ) + delta[ 'thinking' ]
                 when 'signature_delta'
                   if contents[ index ][ :type ] == :thought 
-                    contents[ index ][ :ciphertext ] = delta[ 'signature' ]
+                    contents[ index ][ :'anthropic/signature' ] = delta[ 'signature' ]
                   end
                 when 'input_json_delta'
                   contents[ index ][ :type ] = :tool_call 

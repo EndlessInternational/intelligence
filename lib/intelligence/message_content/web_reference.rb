@@ -1,6 +1,5 @@
 module Intelligence   
   module MessageContent 
-
     class WebReference < Base
         
       schema do 
@@ -10,29 +9,12 @@ module Intelligence
         access_date     Date
       end
 
-      attr_reader :uri, :title, :summary, :access_date
+      attribute         :uri, :title, :summary, :access_date
       
       def valid?
         @uri && !@uri.empty? 
       end
 
-      def merge( other )   
-        self.class.new(
-          uri:         other.uri         || uri,
-          title:       other.title       || title,
-          summary:     other.summary     || summary,
-          access_date: other.access_date || access_date
-        )
-      end
-
-      def to_h
-        { 
-          type: :web_reference, id: id,
-          uri: @uri, title: @title, summary: @summary, access_date: @access_date 
-        }.compact
-      end
-
     end 
-
   end
 end

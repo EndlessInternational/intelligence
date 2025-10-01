@@ -192,7 +192,7 @@ module Intelligence
             when :cipher_thought
               # google thought signature are packed with an arbitrary part so the cipher from a
               # cipher thought is stored to be included in the subsequent part
-              thought_signature = content[ :cipher ]
+              thought_signature = content[ :'google/thought-signature' ]
             when :web_search_call, :web_reference
               #nop
             else 
