@@ -59,9 +59,8 @@ RSpec.shared_examples 'chat requests with adapter tools' do | options = {} |
         end 
 
         response = create_and_make_chat_request( 
-          send( options[ :adapter ] || :adapter ), 
-          conversation, 
-          tools: [ get_location_tool ]
+          send( options[ :adapter ] || :adapter_with_tool ), 
+          conversation
         )
         
         expect( response.success? ).to be( true ), response_error_description( response )
