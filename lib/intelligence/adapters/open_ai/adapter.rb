@@ -44,7 +44,7 @@ module Intelligence
             effort                  Symbol, in: [ :low, :medium, :high ]
             summary                 Symbol, in: [ :auto, :concise, :detailed ]
           end
-          service_tier              Symbol, in: [ :auto, :default, :flex ]
+          service_tier              Symbol, in: [ :auto, :default, :priority, :flex ]
           store                     [ TrueClass, FalseClass ] 
           stream                    [ TrueClass, FalseClass ] 
           temperature               Float, in: 0..2
