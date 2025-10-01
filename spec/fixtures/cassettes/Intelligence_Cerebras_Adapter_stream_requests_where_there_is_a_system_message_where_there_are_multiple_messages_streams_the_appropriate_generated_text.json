@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Sat, 05 Jul 2025 21:21:13 GMT"
+            "Wed, 01 Oct 2025 21:23:53 GMT"
           ],
           "content-type": [
             "text/event-stream; charset=utf-8"
@@ -38,6 +38,9 @@
           "connection": [
             "keep-alive"
           ],
+          "cf-ray": [
+            "<CF-RAY>"
+          ],
           "x-request-id": [
             "<X-REQUEST-ID>"
           ],
@@ -45,22 +48,22 @@
             "14400"
           ],
           "x-ratelimit-limit-tokens-minute": [
-            "60000"
+            "64000"
           ],
           "x-ratelimit-remaining-requests-day": [
-            "14379"
+            "14378"
           ],
           "x-ratelimit-remaining-tokens-minute": [
-            "59920"
+            "63809"
           ],
           "x-ratelimit-reset-requests-day": [
-            "9526.561293125153"
+            "9366.575297355652"
           ],
           "x-ratelimit-reset-tokens-minute": [
-            "46.56129312515259"
+            "6.5752973556518555"
           ],
           "inference-id": [
-            "chatcmpl-4c0967c3-849d-4f8d-8fff-027167cddcfe"
+            "chatcmpl-87536714-0257-4ef1-ba05-e0f1fd66b5d3"
           ],
           "referrer-policy": [
             "strict-origin-when-cross-origin"
@@ -80,19 +83,16 @@
           "server": [
             "cloudflare"
           ],
-          "cf-ray": [
-            "<CF-RAY>"
-          ],
           "alt-svc": [
             "h3=\":443\"; ma=86400"
           ]
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "data: {\"id\":\"chatcmpl-4c0967c3-849d-4f8d-8fff-027167cddcfe\",\"choices\":[{\"delta\":{\"role\":\"assistant\"},\"index\":0}],\"created\":1751750473,\"model\":\"llama-3.3-70b\",\"system_fingerprint\":\"fp_7707e580790f59a40607\",\"object\":\"chat.completion.chunk\"}\n\ndata: {\"id\":\"chatcmpl-4c0967c3-849d-4f8d-8fff-027167cddcfe\",\"choices\":[{\"delta\":{\"content\":\"blue\"},\"index\":0}],\"created\":1751750473,\"model\":\"llama-3.3-70b\",\"system_fingerprint\":\"fp_7707e580790f59a40607\",\"object\":\"chat.completion.chunk\"}\n\ndata: {\"id\":\"chatcmpl-4c0967c3-849d-4f8d-8fff-027167cddcfe\",\"choices\":[{\"delta\":{},\"index\":0}],\"created\":1751750473,\"model\":\"llama-3.3-70b\",\"system_fingerprint\":\"fp_7707e580790f59a40607\",\"object\":\"chat.completion.chunk\"}\n\ndata: {\"id\":\"chatcmpl-4c0967c3-849d-4f8d-8fff-027167cddcfe\",\"choices\":[{\"delta\":{},\"finish_reason\":\"stop\",\"index\":0}],\"created\":1751750473,\"model\":\"llama-3.3-70b\",\"system_fingerprint\":\"fp_7707e580790f59a40607\",\"object\":\"chat.completion.chunk\",\"usage\":{\"prompt_tokens\":99,\"completion_tokens\":2,\"total_tokens\":101,\"prompt_tokens_details\":{\"cached_tokens\":0}},\"time_info\":{\"queue_time\":0.00010564,\"prompt_time\":0.003951131,\"completion_time\":0.00004408,\"total_time\":0.0063817501068115234,\"created\":1751750473}}\n\n"
+          "string": "data: {\"id\":\"chatcmpl-87536714-0257-4ef1-ba05-e0f1fd66b5d3\",\"choices\":[{\"delta\":{\"role\":\"assistant\"},\"index\":0}],\"created\":1759353833,\"model\":\"llama-3.3-70b\",\"system_fingerprint\":\"fp_c5ec625e72d41732d8fd\",\"object\":\"chat.completion.chunk\"}\n\ndata: {\"id\":\"chatcmpl-87536714-0257-4ef1-ba05-e0f1fd66b5d3\",\"choices\":[{\"delta\":{\"content\":\"blue\"},\"index\":0}],\"created\":1759353833,\"model\":\"llama-3.3-70b\",\"system_fingerprint\":\"fp_c5ec625e72d41732d8fd\",\"object\":\"chat.completion.chunk\"}\n\ndata: {\"id\":\"chatcmpl-87536714-0257-4ef1-ba05-e0f1fd66b5d3\",\"choices\":[{\"delta\":{},\"index\":0}],\"created\":1759353833,\"model\":\"llama-3.3-70b\",\"system_fingerprint\":\"fp_c5ec625e72d41732d8fd\",\"object\":\"chat.completion.chunk\"}\n\ndata: {\"id\":\"chatcmpl-87536714-0257-4ef1-ba05-e0f1fd66b5d3\",\"choices\":[{\"delta\":{},\"finish_reason\":\"stop\",\"index\":0}],\"created\":1759353833,\"model\":\"llama-3.3-70b\",\"system_fingerprint\":\"fp_c5ec625e72d41732d8fd\",\"object\":\"chat.completion.chunk\",\"usage\":{\"prompt_tokens\":99,\"completion_tokens\":2,\"total_tokens\":101,\"prompt_tokens_details\":{\"cached_tokens\":0}},\"time_info\":{\"queue_time\":0.030339967,\"prompt_time\":0.00525148,\"completion_time\":0.00005378,\"total_time\":0.05634474754333496,\"created\":1759353833}}\n\n"
         }
       },
-      "recorded_at": "Sat, 05 Jul 2025 21:21:13 GMT"
+      "recorded_at": "Wed, 01 Oct 2025 21:23:53 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

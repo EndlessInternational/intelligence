@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Sat, 05 Jul 2025 21:20:32 GMT"
+            "Wed, 01 Oct 2025 21:23:12 GMT"
           ],
           "content-type": [
             "application/json"
@@ -37,6 +37,9 @@
           ],
           "connection": [
             "keep-alive"
+          ],
+          "content-encoding": [
+            "gzip"
           ],
           "referrer-policy": [
             "strict-origin-when-cross-origin"
@@ -59,9 +62,6 @@
           "cf-ray": [
             "<CF-RAY>"
           ],
-          "content-encoding": [
-            "gzip"
-          ],
           "alt-svc": [
             "h3=\":443\"; ma=86400"
           ]
@@ -71,7 +71,7 @@
           "string": "{\"message\":\"Model invalid model does not exist or you do not have access to it.\",\"type\":\"not_found_error\",\"param\":\"model\",\"code\":\"model_not_found\"}"
         }
       },
-      "recorded_at": "Sat, 05 Jul 2025 21:20:32 GMT"
+      "recorded_at": "Wed, 01 Oct 2025 21:23:12 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

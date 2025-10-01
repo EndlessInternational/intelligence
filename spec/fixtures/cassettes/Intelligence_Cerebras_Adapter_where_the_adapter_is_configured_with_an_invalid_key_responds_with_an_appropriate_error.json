@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Sat, 05 Jul 2025 21:20:22 GMT"
+            "Wed, 01 Oct 2025 21:23:02 GMT"
           ],
           "content-type": [
             "application/json"
@@ -37,6 +37,9 @@
           ],
           "connection": [
             "keep-alive"
+          ],
+          "cf-ray": [
+            "<CF-RAY>"
           ],
           "referrer-policy": [
             "strict-origin-when-cross-origin"
@@ -56,9 +59,6 @@
           "server": [
             "cloudflare"
           ],
-          "cf-ray": [
-            "<CF-RAY>"
-          ],
           "alt-svc": [
             "h3=\":443\"; ma=86400"
           ]
@@ -68,7 +68,7 @@
           "string": "{\"message\":\"Wrong API Key\",\"type\":\"invalid_request_error\",\"param\":\"api_key\",\"code\":\"wrong_api_key\"}"
         }
       },
-      "recorded_at": "Sat, 05 Jul 2025 21:20:22 GMT"
+      "recorded_at": "Wed, 01 Oct 2025 21:23:02 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

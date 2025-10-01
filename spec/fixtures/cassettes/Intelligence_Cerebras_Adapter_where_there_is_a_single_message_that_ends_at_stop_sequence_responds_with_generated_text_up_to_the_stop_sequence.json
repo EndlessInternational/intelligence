@@ -22,21 +22,48 @@
       },
       "response": {
         "status": {
-          "code": 500,
-          "message": "Internal Server Error"
+          "code": 200,
+          "message": "OK"
         },
         "headers": {
           "date": [
-            "Sat, 05 Jul 2025 21:51:26 GMT"
+            "Wed, 01 Oct 2025 21:22:31 GMT"
           ],
           "content-type": [
             "application/json"
           ],
-          "content-length": [
-            "380"
+          "transfer-encoding": [
+            "chunked"
           ],
           "connection": [
             "keep-alive"
+          ],
+          "content-encoding": [
+            "gzip"
+          ],
+          "x-request-id": [
+            "<X-REQUEST-ID>"
+          ],
+          "x-ratelimit-limit-requests-day": [
+            "14400"
+          ],
+          "x-ratelimit-limit-tokens-minute": [
+            "64000"
+          ],
+          "x-ratelimit-remaining-requests-day": [
+            "14385"
+          ],
+          "x-ratelimit-remaining-tokens-minute": [
+            "63621"
+          ],
+          "x-ratelimit-reset-requests-day": [
+            "9448.453104496002"
+          ],
+          "x-ratelimit-reset-tokens-minute": [
+            "28.453104496002197"
+          ],
+          "inference-id": [
+            "chatcmpl-ff24755f-46f6-4f93-97e1-bd6e0d585d03"
           ],
           "referrer-policy": [
             "strict-origin-when-cross-origin"
@@ -64,11 +91,11 @@
           ]
         },
         "body": {
-          "encoding": "UTF-8",
-          "string": "{\"message\":\"Encountered non requests specific error, please try again. 1 validation error for ChatCompletionResponse\\nchoices.0.finish_reason\\n  Input should be 'stop', 'length', 'content_filter' or 'tool_calls' [type=literal_error, input_value='cancelled', input_type=str]\\n    For further information visit https://errors.pydantic.dev/2.7/v/literal_error\",\"type\":\"server_error\"}"
+          "encoding": "ASCII-8BIT",
+          "string": "{\"id\":\"chatcmpl-ff24755f-46f6-4f93-97e1-bd6e0d585d03\",\"choices\":[{\"finish_reason\":\"stop\",\"index\":0,\"message\":{\"content\":\"one\\ntwo\\nthree\\nfour\\n\",\"role\":\"assistant\"}}],\"created\":1759353751,\"model\":\"llama-3.3-70b\",\"system_fingerprint\":\"fp_c5ec625e72d41732d8fd\",\"object\":\"chat.completion\",\"usage\":{\"prompt_tokens\":84,\"completion_tokens\":16,\"total_tokens\":100,\"prompt_tokens_details\":{\"cached_tokens\":0}},\"time_info\":{\"queue_time\":0.080540174,\"prompt_time\":0.019387106,\"completion_time\":0.005712606,\"total_time\":0.10935044288635254,\"created\":1759353751}}"
         }
       },
-      "recorded_at": "Sat, 05 Jul 2025 21:51:26 GMT"
+      "recorded_at": "Wed, 01 Oct 2025 21:22:31 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"
