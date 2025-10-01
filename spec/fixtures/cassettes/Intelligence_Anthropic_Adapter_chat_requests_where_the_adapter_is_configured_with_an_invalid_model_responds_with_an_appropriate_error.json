@@ -30,7 +30,7 @@
         },
         "headers": {
           "date": [
-            "Wed, 09 Jul 2025 16:58:51 GMT"
+            "Wed, 01 Oct 2025 21:00:26 GMT"
           ],
           "content-type": [
             "application/json"
@@ -40,6 +40,9 @@
           ],
           "connection": [
             "keep-alive"
+          ],
+          "content-encoding": [
+            "gzip"
           ],
           "x-should-retry": [
             "false"
@@ -52,6 +55,9 @@
           ],
           "anthropic-organization-id": [
             "ed8c3484-0c99-44df-aab0-b0c00ceaee61"
+          ],
+          "x-envoy-upstream-service-time": [
+            "43"
           ],
           "via": [
             "1.1 google"
@@ -67,17 +73,14 @@
           ],
           "cf-ray": [
             "<CF-RAY>"
-          ],
-          "content-encoding": [
-            "gzip"
           ]
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\"type\":\"error\",\"error\":{\"type\":\"not_found_error\",\"message\":\"model: invalid-model\"}}"
+          "string": "{\"type\":\"error\",\"error\":{\"type\":\"not_found_error\",\"message\":\"model: invalid-model\"},\"request_id\":\"req_011CTh9kfgSgsWaQTLbAZCc1\"}"
         }
       },
-      "recorded_at": "Wed, 09 Jul 2025 16:58:51 GMT"
+      "recorded_at": "Wed, 01 Oct 2025 21:00:26 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

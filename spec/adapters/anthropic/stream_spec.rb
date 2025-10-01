@@ -12,9 +12,9 @@ RSpec.describe "#{Intelligence::Adapter[ :anthropic ]} stream requests", :anthro
     Intelligence::Adapter[ :anthropic ].build! do   
       key                     ENV[ 'ANTHROPIC_API_KEY' ]
       chat_options do
-        model                 'claude-3-5-sonnet-20240620'
-        max_tokens            256 
+        model                 'claude-sonnet-4-20250514'
         temperature           0
+        max_tokens            4096 
         stream                true
       end
     end
@@ -24,10 +24,10 @@ RSpec.describe "#{Intelligence::Adapter[ :anthropic ]} stream requests", :anthro
     Intelligence::Adapter[ :anthropic ].build! do   
       key                     ENV[ 'ANTHROPIC_API_KEY' ]
       chat_options do
-        model                 'claude-sonnet-4-20250514'
-        max_tokens            4096
-        thinking do
-          budget_tokens       2048
+        model                 'claude-sonnet-4-5-20250929'
+        max_tokens            8192
+        reasoning do
+          budget_tokens       8191
         end
         stream                true
       end
@@ -38,7 +38,7 @@ RSpec.describe "#{Intelligence::Adapter[ :anthropic ]} stream requests", :anthro
     Intelligence::Adapter[ :anthropic ].build! do   
       key                     ENV[ 'ANTHROPIC_API_KEY' ]
       chat_options do
-        model                 'claude-3-5-sonnet-20240620'
+        model                 'claude-sonnet-4-5-20250929'
         max_tokens            24
         temperature           0
         stream                true
@@ -50,7 +50,7 @@ RSpec.describe "#{Intelligence::Adapter[ :anthropic ]} stream requests", :anthro
     Intelligence::Adapter[ :anthropic ].build! do   
       key                     ENV[ 'ANTHROPIC_API_KEY' ]
       chat_options do
-        model                 'claude-3-5-sonnet-20240620'
+        model                 'claude-sonnet-4-5-20250929'
         max_tokens            16
         stop                  'five'
         temperature           0
@@ -77,7 +77,8 @@ RSpec.describe "#{Intelligence::Adapter[ :anthropic ]} stream requests", :anthro
 
   include_examples 'stream requests with tools'
   include_examples 'stream requests with parallel tools'
-
   include_examples 'stream requests with tools multiturn'
+  include_examples 'stream requests with calculator tool',
+                   adapter: :adapter_with_thought
 
 end

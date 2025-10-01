@@ -6,7 +6,7 @@
         "uri": "https://api.anthropic.com/v1/messages",
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"model\":\"claude-3-5-sonnet-20240620\",\"max_tokens\":256,\"temperature\":0.0,\"system\":\"You are a helpfull assistant who answers questions succinctly.\",\"messages\":[{\"role\":\"user\",\"content\":[{\"type\":\"text\",\"text\":\"Where am I located?\"}]},{\"role\":\"assistant\",\"content\":[{\"type\":\"tool_use\",\"id\":\"MpfiuoRaM\",\"name\":\"get_location\",\"input\":{}}]},{\"role\":\"user\",\"content\":[{\"type\":\"tool_result\",\"tool_use_id\":\"MpfiuoRaM\",\"content\":\"Seattle, WA, USA\"}]}],\"tools\":[{\"name\":\"get_location\",\"description\":\"The get_location tool will return the users city, state or province and country.\",\"input_schema\":{\"type\":\"object\"}}]}"
+          "string": "{\"model\":\"claude-sonnet-4-5-20250929\",\"max_tokens\":128,\"temperature\":0.0,\"tools\":[{\"name\":\"get_location\",\"description\":\"The get_location tool will return the users city, state or province and country.\",\"input_schema\":{\"type\":\"object\"}}],\"system\":\"You are a helpfull assistant who answers questions succinctly.\",\"messages\":[{\"role\":\"user\",\"content\":[{\"type\":\"text\",\"text\":\"Where am I located?\"}]},{\"role\":\"assistant\",\"content\":[{\"type\":\"tool_use\",\"id\":\"MpfiuoRaM\",\"name\":\"get_location\",\"input\":{}}]},{\"role\":\"user\",\"content\":[{\"type\":\"tool_result\",\"tool_use_id\":\"MpfiuoRaM\",\"content\":\"Seattle, WA, USA\"}]}]}"
         },
         "headers": {
           "User-Agent": [
@@ -30,7 +30,7 @@
         },
         "headers": {
           "date": [
-            "Wed, 09 Jul 2025 16:58:39 GMT"
+            "Wed, 01 Oct 2025 21:00:05 GMT"
           ],
           "content-type": [
             "application/json"
@@ -41,23 +41,26 @@
           "connection": [
             "keep-alive"
           ],
+          "content-encoding": [
+            "gzip"
+          ],
           "anthropic-ratelimit-input-tokens-limit": [
-            "80000"
+            "450000"
           ],
           "anthropic-ratelimit-input-tokens-remaining": [
-            "80000"
+            "450000"
           ],
           "anthropic-ratelimit-input-tokens-reset": [
-            "2025-07-09T16:58:39Z"
+            "2025-10-01T21:00:05Z"
           ],
           "anthropic-ratelimit-output-tokens-limit": [
-            "16000"
+            "90000"
           ],
           "anthropic-ratelimit-output-tokens-remaining": [
-            "16000"
+            "90000"
           ],
           "anthropic-ratelimit-output-tokens-reset": [
-            "2025-07-09T16:58:39Z"
+            "2025-10-01T21:00:05Z"
           ],
           "anthropic-ratelimit-requests-limit": [
             "1000"
@@ -66,16 +69,16 @@
             "999"
           ],
           "anthropic-ratelimit-requests-reset": [
-            "2025-07-09T16:58:38Z"
+            "2025-10-01T21:00:03Z"
           ],
           "anthropic-ratelimit-tokens-limit": [
-            "96000"
+            "540000"
           ],
           "anthropic-ratelimit-tokens-remaining": [
-            "96000"
+            "540000"
           ],
           "anthropic-ratelimit-tokens-reset": [
-            "2025-07-09T16:58:39Z"
+            "2025-10-01T21:00:05Z"
           ],
           "request-id": [
             "<REQUEST-ID>"
@@ -85,6 +88,9 @@
           ],
           "anthropic-organization-id": [
             "ed8c3484-0c99-44df-aab0-b0c00ceaee61"
+          ],
+          "x-envoy-upstream-service-time": [
+            "2010"
           ],
           "via": [
             "1.1 google"
@@ -100,17 +106,14 @@
           ],
           "cf-ray": [
             "<CF-RAY>"
-          ],
-          "content-encoding": [
-            "gzip"
           ]
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\"id\":\"msg_01TG74vZaoESTbtPrL8asW7n\",\"type\":\"message\",\"role\":\"assistant\",\"model\":\"claude-3-5-sonnet-20240620\",\"content\":[{\"type\":\"text\",\"text\":\"Based on the information provided by the get_location tool, you are currently located in Seattle, WA, USA. Seattle is a major city in the state of Washington, located in the Pacific Northwest region of the United States of America.\"}],\"stop_reason\":\"end_turn\",\"stop_sequence\":null,\"usage\":{\"input_tokens\":421,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":52,\"service_tier\":\"standard\"}}"
+          "string": "{\"id\":\"msg_017kywnY8KbZrRLQvs4TaKih\",\"type\":\"message\",\"role\":\"assistant\",\"model\":\"claude-sonnet-4-5-20250929\",\"content\":[{\"type\":\"text\",\"text\":\"\\n\\nYou are located in Seattle, WA, USA.\"}],\"stop_reason\":\"end_turn\",\"stop_sequence\":null,\"usage\":{\"input_tokens\":622,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"cache_creation\":{\"ephemeral_5m_input_tokens\":0,\"ephemeral_1h_input_tokens\":0},\"output_tokens\":15,\"service_tier\":\"standard\"}}"
         }
       },
-      "recorded_at": "Wed, 09 Jul 2025 16:58:39 GMT"
+      "recorded_at": "Wed, 01 Oct 2025 21:00:05 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"
