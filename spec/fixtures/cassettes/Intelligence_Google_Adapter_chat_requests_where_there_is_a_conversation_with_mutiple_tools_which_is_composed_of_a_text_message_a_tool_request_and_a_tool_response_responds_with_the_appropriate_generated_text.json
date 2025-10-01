@@ -6,7 +6,7 @@
         "uri": "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=<KEY>",
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"generationConfig\":{\"thinkingConfig\":{\"thinkingBudget\":0},\"maxOutputTokens\":1024,\"temperature\":0.0},\"tools\":{\"function_declarations\":[{\"name\":\"get_location\",\"description\":\"The get_location tool will return the users city, state or province and country.\"},{\"name\":\"get_weather\",\"description\":\"The get_weather tool will return the current weather in a given locality.\",\"parameters\":{\"type\":\"object\",\"properties\":{\"city\":{\"type\":\"string\",\"description\":\"The city or town for which the current weather should be returned.\"},\"state\":{\"type\":\"string\",\"description\":\"The state or province for which the current weather should be returned. If this is not provided the largest or most prominent city with the given name, in the given country or in the worldi, will be assumed.\"},\"country\":{\"type\":\"string\",\"description\":\"The country for which the given weather should be returned. If this is not provided the largest or most prominent city with the given name will be returned.\"}},\"required\":[\"city\"]}}]},\"systemInstruction\":{\"role\":\"user\",\"parts\":[{\"text\":\"You are a helpfull assistant who answers questions succinctly.\"}]},\"contents\":[{\"role\":\"user\",\"parts\":[{\"text\":\"What is the current weather?\"}]},{\"role\":\"model\",\"parts\":[{\"functionCall\":{\"name\":\"get_location\",\"args\":null}}]},{\"role\":\"user\",\"parts\":[{\"functionResponse\":{\"name\":\"get_location\",\"response\":{\"name\":\"get_location\",\"content\":\"Seattle, WA, USA\"}}}]}]}"
+          "string": "{\"generationConfig\":{\"thinkingConfig\":{\"thinkingBudget\":0},\"maxOutputTokens\":4096,\"temperature\":0.0},\"tools\":{\"function_declarations\":[{\"name\":\"get_location\",\"description\":\"The get_location tool will return the users city, state or province and country.\"},{\"name\":\"get_weather\",\"description\":\"The get_weather tool will return the current weather in a given locality.\",\"parameters\":{\"type\":\"object\",\"properties\":{\"city\":{\"type\":\"string\",\"description\":\"The city or town for which the current weather should be returned.\"},\"state\":{\"type\":\"string\",\"description\":\"The state or province for which the current weather should be returned. If this is not provided the largest or most prominent city with the given name, in the given country or in the worldi, will be assumed.\"},\"country\":{\"type\":\"string\",\"description\":\"The country for which the given weather should be returned. If this is not provided the largest or most prominent city with the given name will be returned.\"}},\"required\":[\"city\"]}}]},\"systemInstruction\":{\"role\":\"user\",\"parts\":[{\"text\":\"You are a helpfull assistant who answers questions succinctly.\"}]},\"contents\":[{\"role\":\"user\",\"parts\":[{\"text\":\"What is the current weather?\"}]},{\"role\":\"model\",\"parts\":[{\"functionCall\":{\"name\":\"get_location\",\"args\":null}}]},{\"role\":\"user\",\"parts\":[{\"functionResponse\":{\"name\":\"get_location\",\"response\":{\"name\":\"get_location\",\"content\":\"Seattle, WA, USA\"}}}]}]}"
         },
         "headers": {
           "User-Agent": [
@@ -33,7 +33,7 @@
             "gzip"
           ],
           "date": [
-            "Wed, 09 Jul 2025 21:17:33 GMT"
+            "Wed, 01 Oct 2025 21:26:09 GMT"
           ],
           "server": [
             "scaffolding on HTTPServer2"
@@ -48,7 +48,7 @@
             "nosniff"
           ],
           "server-timing": [
-            "gfet4t7; dur=464"
+            "gfet4t7; dur=524"
           ],
           "alt-svc": [
             "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
@@ -59,10 +59,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "{\n  \"candidates\": [\n    {\n      \"content\": {\n        \"parts\": [\n          {\n            \"functionCall\": {\n              \"name\": \"get_weather\",\n              \"args\": {\n                \"country\": \"USA\",\n                \"city\": \"Seattle\",\n                \"state\": \"WA\"\n              }\n            }\n          }\n        ],\n        \"role\": \"model\"\n      },\n      \"finishReason\": \"STOP\",\n      \"index\": 0\n    }\n  ],\n  \"usageMetadata\": {\n    \"promptTokenCount\": 254,\n    \"candidatesTokenCount\": 25,\n    \"totalTokenCount\": 279,\n    \"promptTokensDetails\": [\n      {\n        \"modality\": \"TEXT\",\n        \"tokenCount\": 254\n      }\n    ]\n  },\n  \"modelVersion\": \"gemini-2.5-flash\",\n  \"responseId\": \"bdxuaOO-NOLAqtsP_fG8wAs\"\n}\n"
+          "string": "{\n  \"candidates\": [\n    {\n      \"content\": {\n        \"parts\": [\n          {\n            \"functionCall\": {\n              \"name\": \"get_weather\",\n              \"args\": {\n                \"state\": \"WA\",\n                \"country\": \"USA\",\n                \"city\": \"Seattle\"\n              }\n            }\n          }\n        ],\n        \"role\": \"model\"\n      },\n      \"finishReason\": \"STOP\",\n      \"index\": 0\n    }\n  ],\n  \"usageMetadata\": {\n    \"promptTokenCount\": 254,\n    \"candidatesTokenCount\": 25,\n    \"totalTokenCount\": 279,\n    \"promptTokensDetails\": [\n      {\n        \"modality\": \"TEXT\",\n        \"tokenCount\": 254\n      }\n    ]\n  },\n  \"modelVersion\": \"gemini-2.5-flash\",\n  \"responseId\": \"cZzdaNG-FZq5qtsPuMSCuAY\"\n}\n"
         }
       },
-      "recorded_at": "Wed, 09 Jul 2025 21:17:33 GMT"
+      "recorded_at": "Wed, 01 Oct 2025 21:26:09 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

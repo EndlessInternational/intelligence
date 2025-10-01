@@ -19,6 +19,21 @@ RSpec.describe "#{Intelligence::Adapter[ :google ]} chat requests", :google do
     end
   end
 
+  let( :adapter_with_thought ) do
+    Intelligence::Adapter[ :google ].build! do   
+      key                     ENV[ 'GOOGLE_API_KEY' ]
+      chat_options do
+        model                 'gemini-2.5-flash'
+        max_tokens            16384 
+        temperature           0
+        reasoning do 
+          budget              8192
+          summary             true
+        end
+      end
+    end
+  end
+
   let( :adapter_with_adapter_tool ) do
     Intelligence::Adapter[ :google ].build! do   
       key                     ENV[ 'GOOGLE_API_KEY' ]
@@ -41,7 +56,7 @@ RSpec.describe "#{Intelligence::Adapter[ :google ]} chat requests", :google do
       key                     ENV[ 'GOOGLE_API_KEY' ]
       chat_options do
         model                 'gemini-2.5-flash'
-        max_tokens            1024 
+        max_tokens            4096 
         temperature           0
       end
     end
@@ -77,9 +92,6 @@ RSpec.describe "#{Intelligence::Adapter[ :google ]} chat requests", :google do
         max_tokens            196
         temperature           0
         stop                  'five'
-        thinking do 
-          budget              128
-        end
       end
     end
   end
@@ -118,8 +130,9 @@ RSpec.describe "#{Intelligence::Adapter[ :google ]} chat requests", :google do
   end
 
   include_examples 'chat requests'
-  include_examples 'chat requests with token limit exceeded', 
-                   adapter: :adapter_with_limited_max_tokens
+  # the google api currently doesn not respect the max token limit
+  #include_examples 'chat requests with token limit exceeded', 
+  #                 adapter: :adapter_with_limited_max_tokens
   include_examples 'chat requests with stop sequence', 
                    adapter: :adapter_with_stop_sequence  
   include_examples 'chat requests without alternating roles'
@@ -127,6 +140,9 @@ RSpec.describe "#{Intelligence::Adapter[ :google ]} chat requests", :google do
   include_examples 'chat requests with binary encoded text'
   include_examples 'chat requests with binary encoded pdf'
   include_examples 'chat requests with binary encoded audio'
+
+  include_examples 'chat requests with thought', 
+                   adapter: :adapter_with_thought
 
   include_examples 'chat requests with tools',
                    adapter: :adapter_with_tools
@@ -138,6 +154,9 @@ RSpec.describe "#{Intelligence::Adapter[ :google ]} chat requests", :google do
                    adapter: :adapter_with_tools
   include_examples 'chat requests with tools multiturn',
                    adapter: :adapter_with_tools
+  include_examples 'chat requests with calculator tool',
+                   adapter: :adapter_with_tools
+
 
   include_examples 'chat requests with invalid key'
   include_examples 'chat requests with invalid model' 

@@ -6,7 +6,7 @@
         "uri": "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=<KEY>",
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"generationConfig\":{\"thinkingConfig\":{\"thinkingBudget\":0},\"maxOutputTokens\":128,\"temperature\":0.0},\"tools\":{\"function_declarations\":[{\"name\":\"get_location\",\"description\":\"The get_location tool will return the users city, state or province and country.\"},{\"name\":\"get_location\",\"description\":\"The get_location tool will return the users city, state or province and country.\"}]},\"systemInstruction\":{\"role\":\"user\",\"parts\":[{\"text\":\"You are a helpfull assistant who answers questions succinctly.\"}]},\"contents\":[{\"role\":\"user\",\"parts\":[{\"text\":\"Where am I located?\"}]},{\"role\":\"model\",\"parts\":[{\"functionCall\":{\"name\":\"get_location\",\"args\":null}}]},{\"role\":\"user\",\"parts\":[{\"functionResponse\":{\"name\":\"get_location\",\"response\":{\"name\":\"get_location\",\"content\":\"Seattle, WA, USA\"}}}]}]}"
+          "string": "{\"generationConfig\":{\"thinkingConfig\":{\"thinkingBudget\":0},\"maxOutputTokens\":128,\"temperature\":0.0},\"tools\":{\"function_declarations\":[{\"name\":\"get_location\",\"description\":\"The get_location tool will return the users city, state or province and country.\"}]},\"systemInstruction\":{\"role\":\"user\",\"parts\":[{\"text\":\"You are a helpfull assistant who answers questions succinctly.\"}]},\"contents\":[{\"role\":\"user\",\"parts\":[{\"text\":\"Where am I located?\"}]},{\"role\":\"model\",\"parts\":[{\"functionCall\":{\"name\":\"get_location\",\"args\":null}}]},{\"role\":\"user\",\"parts\":[{\"functionResponse\":{\"name\":\"get_location\",\"response\":{\"name\":\"get_location\",\"content\":\"Seattle, WA, USA\"}}}]}]}"
         },
         "headers": {
           "User-Agent": [
@@ -33,7 +33,7 @@
             "gzip"
           ],
           "date": [
-            "Wed, 09 Jul 2025 21:17:34 GMT"
+            "Wed, 01 Oct 2025 21:26:11 GMT"
           ],
           "server": [
             "scaffolding on HTTPServer2"
@@ -48,7 +48,7 @@
             "nosniff"
           ],
           "server-timing": [
-            "gfet4t7; dur=421"
+            "gfet4t7; dur=1401"
           ],
           "alt-svc": [
             "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
@@ -59,10 +59,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "{\n  \"candidates\": [\n    {\n      \"content\": {\n        \"parts\": [\n          {\n            \"text\": \"You are located in Seattle, WA, USA.\"\n          }\n        ],\n        \"role\": \"model\"\n      },\n      \"finishReason\": \"STOP\",\n      \"index\": 0\n    }\n  ],\n  \"usageMetadata\": {\n    \"promptTokenCount\": 131,\n    \"candidatesTokenCount\": 10,\n    \"totalTokenCount\": 141,\n    \"promptTokensDetails\": [\n      {\n        \"modality\": \"TEXT\",\n        \"tokenCount\": 131\n      }\n    ]\n  },\n  \"modelVersion\": \"gemini-2.5-flash\",\n  \"responseId\": \"btxuaNWHNZTBqtsP6KnycA\"\n}\n"
+          "string": "{\n  \"candidates\": [\n    {\n      \"content\": {\n        \"parts\": [\n          {\n            \"text\": \"You are located in Seattle, WA, USA.\"\n          }\n        ],\n        \"role\": \"model\"\n      },\n      \"finishReason\": \"STOP\",\n      \"index\": 0\n    }\n  ],\n  \"usageMetadata\": {\n    \"promptTokenCount\": 93,\n    \"candidatesTokenCount\": 10,\n    \"totalTokenCount\": 103,\n    \"promptTokensDetails\": [\n      {\n        \"modality\": \"TEXT\",\n        \"tokenCount\": 93\n      }\n    ]\n  },\n  \"modelVersion\": \"gemini-2.5-flash\",\n  \"responseId\": \"c5zdaIWhGszQz7IP_qTRyQU\"\n}\n"
         }
       },
-      "recorded_at": "Wed, 09 Jul 2025 21:17:34 GMT"
+      "recorded_at": "Wed, 01 Oct 2025 21:26:11 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

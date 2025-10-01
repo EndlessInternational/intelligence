@@ -1,0 +1,69 @@
+{
+  "http_interactions": [
+    {
+      "request": {
+        "method": "post",
+        "uri": "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:streamGenerateContent?alt=sse&key=<KEY>",
+        "body": {
+          "encoding": "UTF-8",
+          "string": "{\"generationConfig\":{\"thinkingConfig\":{\"thinkingBudget\":8192,\"includeThoughts\":true},\"maxOutputTokens\":16384,\"temperature\":0.0},\"contents\":[{\"role\":\"user\",\"parts\":[{\"text\":\"In a 30-60-90 triangle, the length of the hypotenuse is 6. What is the length of the shortest side?\\n\"}]}]}"
+        },
+        "headers": {
+          "User-Agent": [
+            "Faraday v2.13.1"
+          ],
+          "Content-Type": [
+            "application/json"
+          ]
+        }
+      },
+      "response": {
+        "status": {
+          "code": 200,
+          "message": "OK"
+        },
+        "headers": {
+          "content-type": [
+            "text/event-stream"
+          ],
+          "content-disposition": [
+            "attachment"
+          ],
+          "vary": [
+            "Origin, X-Origin, Referer"
+          ],
+          "transfer-encoding": [
+            "chunked"
+          ],
+          "date": [
+            "Wed, 01 Oct 2025 21:26:49 GMT"
+          ],
+          "server": [
+            "scaffolding on HTTPServer2"
+          ],
+          "x-xss-protection": [
+            "0"
+          ],
+          "x-frame-options": [
+            "SAMEORIGIN"
+          ],
+          "x-content-type-options": [
+            "nosniff"
+          ],
+          "server-timing": [
+            "gfet4t7; dur=1344"
+          ],
+          "alt-svc": [
+            "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+          ]
+        },
+        "body": {
+          "encoding": "ASCII-8BIT",
+          "string": "data: {\"candidates\": [{\"content\": {\"parts\": [{\"text\": \"**Examining Triangle Properties**\\n\\nI'm focusing now on understanding the 30-60-90 triangle relationships. I've successfully recalled that the side ratios are 1:√3:2. Given the hypotenuse is 6, I can calculate that the shortest side is 3. This approach feels correct and efficient, and I'm ready to confirm this.\\n\\n\\n\",\"thought\": true}],\"role\": \"model\"},\"index\": 0}],\"usageMetadata\": {\"promptTokenCount\": 35,\"totalTokenCount\": 102,\"promptTokensDetails\": [{\"modality\": \"TEXT\",\"tokenCount\": 35}],\"thoughtsTokenCount\": 67},\"modelVersion\": \"gemini-2.5-flash\",\"responseId\": \"mJzdaN6XK_eKqtsPnO2hsAY\"}\r\n\r\ndata: {\"candidates\": [{\"content\": {\"parts\": [{\"text\": \"**Refining the Solution**\\n\\nI've confirmed my initial calculations. My reasoning's crystal clear now, and the shortest side is definitely 3. Looking at the logic step-by-step reinforces the solution. The ratio relationship works perfectly, and my focus is now on communicating the thought process concisely.\\n\\n\\n\",\"thought\": true}],\"role\": \"model\"},\"index\": 0}],\"usageMetadata\": {\"promptTokenCount\": 35,\"totalTokenCount\": 450,\"promptTokensDetails\": [{\"modality\": \"TEXT\",\"tokenCount\": 35}],\"thoughtsTokenCount\": 415},\"modelVersion\": \"gemini-2.5-flash\",\"responseId\": \"mJzdaN6XK_eKqtsPnO2hsAY\"}\r\n\r\ndata: {\"candidates\": [{\"content\": {\"parts\": [{\"text\": \"**Clarifying the Steps**\\n\\nI'm now methodically breaking down the solution process.  I've laid out each step from problem understanding to the final answer. Each step builds on the last, ensuring clarity and accuracy. The ratios are still solid.  I'm verifying that each component links the right piece of info. I'm focusing on crafting a very clear explanation for the solution now, step by step.\\n\\n\\n\",\"thought\": true}],\"role\": \"model\"},\"index\": 0}],\"usageMetadata\": {\"promptTokenCount\": 35,\"totalTokenCount\": 516,\"promptTokensDetails\": [{\"modality\": \"TEXT\",\"tokenCount\": 35}],\"thoughtsTokenCount\": 481},\"modelVersion\": \"gemini-2.5-flash\",\"responseId\": \"mJzdaN6XK_eKqtsPnO2hsAY\"}\r\n\r\ndata: {\"candidates\": [{\"content\": {\"parts\": [{\"text\": \"In a 30-60-90 triangle, the sides are in a specific ratio:\\n\\n*   The side opposite the 30-degree angle is the shortest side (let's call it 'x').\\n\"}],\"role\": \"model\"},\"index\": 0}],\"usageMetadata\": {\"promptTokenCount\": 35,\"candidatesTokenCount\": 44,\"totalTokenCount\": 560,\"promptTokensDetails\": [{\"modality\": \"TEXT\",\"tokenCount\": 35}],\"thoughtsTokenCount\": 481},\"modelVersion\": \"gemini-2.5-flash\",\"responseId\": \"mJzdaN6XK_eKqtsPnO2hsAY\"}\r\n\r\ndata: {\"candidates\": [{\"content\": {\"parts\": [{\"text\": \"*   The side opposite the 60-degree angle is $x\\\\sqrt{3}$.\\n*   The side opposite the 90-degree angle (the hypotenuse) is $2x$.\\n\\nYou are given that\"}],\"role\": \"model\"},\"index\": 0}],\"usageMetadata\": {\"promptTokenCount\": 35,\"candidatesTokenCount\": 93,\"totalTokenCount\": 609,\"promptTokensDetails\": [{\"modality\": \"TEXT\",\"tokenCount\": 35}],\"thoughtsTokenCount\": 481},\"modelVersion\": \"gemini-2.5-flash\",\"responseId\": \"mJzdaN6XK_eKqtsPnO2hsAY\"}\r\n\r\ndata: {\"candidates\": [{\"content\": {\"parts\": [{\"text\": \" the length of the hypotenuse is 6.\\nSo, we can set up the equation:\\n$2x = 6$\\n\\nNow, solve for x:\\n$x = \\\\frac{6}{2}$\\n$x =\"}],\"role\": \"model\"},\"index\": 0}],\"usageMetadata\": {\"promptTokenCount\": 35,\"candidatesTokenCount\": 144,\"totalTokenCount\": 660,\"promptTokensDetails\": [{\"modality\": \"TEXT\",\"tokenCount\": 35}],\"thoughtsTokenCount\": 481},\"modelVersion\": \"gemini-2.5-flash\",\"responseId\": \"mJzdaN6XK_eKqtsPnO2hsAY\"}\r\n\r\ndata: {\"candidates\": [{\"content\": {\"parts\": [{\"text\": \" 3$\\n\\nThe shortest side is 'x', which is 3.\\n\\nThe length of the shortest side is **3**.\"}],\"role\": \"model\"},\"finishReason\": \"STOP\",\"index\": 0}],\"usageMetadata\": {\"promptTokenCount\": 35,\"candidatesTokenCount\": 170,\"totalTokenCount\": 686,\"promptTokensDetails\": [{\"modality\": \"TEXT\",\"tokenCount\": 35}],\"thoughtsTokenCount\": 481},\"modelVersion\": \"gemini-2.5-flash\",\"responseId\": \"mJzdaN6XK_eKqtsPnO2hsAY\"}\r\n\r\n"
+        }
+      },
+      "recorded_at": "Wed, 01 Oct 2025 21:26:53 GMT"
+    }
+  ],
+  "recorded_with": "VCR 6.3.1"
+}

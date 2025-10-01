@@ -36,7 +36,7 @@
             "chunked"
           ],
           "date": [
-            "Wed, 09 Jul 2025 21:18:03 GMT"
+            "Wed, 01 Oct 2025 21:26:59 GMT"
           ],
           "server": [
             "scaffolding on HTTPServer2"
@@ -51,7 +51,7 @@
             "nosniff"
           ],
           "server-timing": [
-            "gfet4t7; dur=323"
+            "gfet4t7; dur=567"
           ],
           "alt-svc": [
             "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
@@ -59,10 +59,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "data: {\"candidates\": [{\"content\": {\"parts\": [{\"functionCall\": {\"name\": \"get_location\",\"args\": {}}}],\"role\": \"model\"},\"finishReason\": \"STOP\",\"index\": 0}],\"usageMetadata\": {\"promptTokenCount\": 217,\"candidatesTokenCount\": 10,\"totalTokenCount\": 227,\"promptTokensDetails\": [{\"modality\": \"TEXT\",\"tokenCount\": 217}]},\"modelVersion\": \"gemini-2.5-flash\",\"responseId\": \"i9xuaP6FL5-jqtsPr_S_oQo\"}\r\n\r\n"
+          "string": "data: {\"candidates\": [{\"content\": {\"parts\": [{\"functionCall\": {\"name\": \"get_location\",\"args\": {}}}],\"role\": \"model\"},\"finishReason\": \"STOP\",\"index\": 0}],\"usageMetadata\": {\"promptTokenCount\": 217,\"candidatesTokenCount\": 10,\"totalTokenCount\": 227,\"promptTokensDetails\": [{\"modality\": \"TEXT\",\"tokenCount\": 217}]},\"modelVersion\": \"gemini-2.5-flash\",\"responseId\": \"o5zdaPGkLN2hz7IPgo-T6QU\"}\r\n\r\n"
         }
       },
-      "recorded_at": "Wed, 09 Jul 2025 21:18:03 GMT"
+      "recorded_at": "Wed, 01 Oct 2025 21:26:59 GMT"
     },
     {
       "request": {
@@ -100,7 +100,7 @@
             "chunked"
           ],
           "date": [
-            "Wed, 09 Jul 2025 21:18:04 GMT"
+            "Wed, 01 Oct 2025 21:27:00 GMT"
           ],
           "server": [
             "scaffolding on HTTPServer2"
@@ -115,7 +115,7 @@
             "nosniff"
           ],
           "server-timing": [
-            "gfet4t7; dur=369"
+            "gfet4t7; dur=570"
           ],
           "alt-svc": [
             "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
@@ -123,10 +123,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "data: {\"candidates\": [{\"content\": {\"parts\": [{\"functionCall\": {\"name\": \"get_weather\",\"args\": {\"country\": \"USA\",\"state\": \"WA\",\"city\": \"Seattle\"}}}],\"role\": \"model\"},\"finishReason\": \"STOP\",\"index\": 0}],\"usageMetadata\": {\"promptTokenCount\": 254,\"candidatesTokenCount\": 25,\"totalTokenCount\": 279,\"promptTokensDetails\": [{\"modality\": \"TEXT\",\"tokenCount\": 254}]},\"modelVersion\": \"gemini-2.5-flash\",\"responseId\": \"jNxuaPOdDKLqqtsPgeuBwAs\"}\r\n\r\n"
+          "string": "data: {\"candidates\": [{\"content\": {\"parts\": [{\"functionCall\": {\"name\": \"get_weather\",\"args\": {\"state\": \"WA\",\"city\": \"Seattle\",\"country\": \"USA\"}}}],\"role\": \"model\"},\"finishReason\": \"STOP\",\"index\": 0}],\"usageMetadata\": {\"promptTokenCount\": 254,\"candidatesTokenCount\": 25,\"totalTokenCount\": 279,\"promptTokensDetails\": [{\"modality\": \"TEXT\",\"tokenCount\": 254}]},\"modelVersion\": \"gemini-2.5-flash\",\"responseId\": \"pJzdaNmdGp_nz7IP25jmoQM\"}\r\n\r\n"
         }
       },
-      "recorded_at": "Wed, 09 Jul 2025 21:18:04 GMT"
+      "recorded_at": "Wed, 01 Oct 2025 21:27:00 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

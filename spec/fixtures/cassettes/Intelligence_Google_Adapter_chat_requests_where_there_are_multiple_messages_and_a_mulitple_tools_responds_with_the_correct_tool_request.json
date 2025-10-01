@@ -6,7 +6,7 @@
         "uri": "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=<KEY>",
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"generationConfig\":{\"thinkingConfig\":{\"thinkingBudget\":0},\"maxOutputTokens\":1024,\"temperature\":0.0},\"tools\":{\"function_declarations\":[{\"name\":\"get_location\",\"description\":\"The get_location tool will return the users city, state or province and country.\"},{\"name\":\"get_weather\",\"description\":\"The get_weather tool will return the current weather in a given locality.\",\"parameters\":{\"type\":\"object\",\"properties\":{\"city\":{\"type\":\"string\",\"description\":\"The city or town for which the current weather should be returned.\"},\"state\":{\"type\":\"string\",\"description\":\"The state or province for which the current weather should be returned. If this is not provided the largest or most prominent city with the given name, in the given country or in the worldi, will be assumed.\"},\"country\":{\"type\":\"string\",\"description\":\"The country for which the given weather should be returned. If this is not provided the largest or most prominent city with the given name will be returned.\"}},\"required\":[\"city\"]}}]},\"systemInstruction\":{\"role\":\"user\",\"parts\":[{\"text\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"}]},\"contents\":[{\"role\":\"user\",\"parts\":[{\"text\":\"I am in Seattle, WA\\n\"}]},{\"role\":\"model\",\"parts\":[{\"text\":\"Got it! Let me know if you need any local insights or information related to Seattle!\\n\"}]},{\"role\":\"user\",\"parts\":[{\"text\":\"What is the current weather?\\n\"}]}]}"
+          "string": "{\"generationConfig\":{\"thinkingConfig\":{\"thinkingBudget\":0},\"maxOutputTokens\":4096,\"temperature\":0.0},\"tools\":{\"function_declarations\":[{\"name\":\"get_location\",\"description\":\"The get_location tool will return the users city, state or province and country.\"},{\"name\":\"get_weather\",\"description\":\"The get_weather tool will return the current weather in a given locality.\",\"parameters\":{\"type\":\"object\",\"properties\":{\"city\":{\"type\":\"string\",\"description\":\"The city or town for which the current weather should be returned.\"},\"state\":{\"type\":\"string\",\"description\":\"The state or province for which the current weather should be returned. If this is not provided the largest or most prominent city with the given name, in the given country or in the worldi, will be assumed.\"},\"country\":{\"type\":\"string\",\"description\":\"The country for which the given weather should be returned. If this is not provided the largest or most prominent city with the given name will be returned.\"}},\"required\":[\"city\"]}}]},\"systemInstruction\":{\"role\":\"user\",\"parts\":[{\"text\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"}]},\"contents\":[{\"role\":\"user\",\"parts\":[{\"text\":\"I am in Seattle, WA\\n\"}]},{\"role\":\"model\",\"parts\":[{\"text\":\"Got it! Let me know if you need any local insights or information related to Seattle!\\n\"}]},{\"role\":\"user\",\"parts\":[{\"text\":\"What is the current weather?\\n\"}]}]}"
         },
         "headers": {
           "User-Agent": [
@@ -33,7 +33,7 @@
             "gzip"
           ],
           "date": [
-            "Wed, 09 Jul 2025 21:17:32 GMT"
+            "Wed, 01 Oct 2025 21:26:07 GMT"
           ],
           "server": [
             "scaffolding on HTTPServer2"
@@ -48,7 +48,7 @@
             "nosniff"
           ],
           "server-timing": [
-            "gfet4t7; dur=485"
+            "gfet4t7; dur=574"
           ],
           "alt-svc": [
             "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
@@ -59,10 +59,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "{\n  \"candidates\": [\n    {\n      \"content\": {\n        \"parts\": [\n          {\n            \"functionCall\": {\n              \"name\": \"get_weather\",\n              \"args\": {\n                \"country\": \"USA\",\n                \"city\": \"Seattle\",\n                \"state\": \"WA\"\n              }\n            }\n          }\n        ],\n        \"role\": \"model\"\n      },\n      \"finishReason\": \"STOP\",\n      \"index\": 0\n    }\n  ],\n  \"usageMetadata\": {\n    \"promptTokenCount\": 278,\n    \"candidatesTokenCount\": 25,\n    \"totalTokenCount\": 303,\n    \"promptTokensDetails\": [\n      {\n        \"modality\": \"TEXT\",\n        \"tokenCount\": 278\n      }\n    ]\n  },\n  \"modelVersion\": \"gemini-2.5-flash\",\n  \"responseId\": \"bNxuaObkOaCI6dkP9aq2oAI\"\n}\n"
+          "string": "{\n  \"candidates\": [\n    {\n      \"content\": {\n        \"parts\": [\n          {\n            \"functionCall\": {\n              \"name\": \"get_weather\",\n              \"args\": {\n                \"country\": \"USA\",\n                \"state\": \"WA\",\n                \"city\": \"Seattle\"\n              }\n            }\n          }\n        ],\n        \"role\": \"model\"\n      },\n      \"finishReason\": \"STOP\",\n      \"index\": 0\n    }\n  ],\n  \"usageMetadata\": {\n    \"promptTokenCount\": 278,\n    \"candidatesTokenCount\": 25,\n    \"totalTokenCount\": 303,\n    \"promptTokensDetails\": [\n      {\n        \"modality\": \"TEXT\",\n        \"tokenCount\": 278\n      }\n    ]\n  },\n  \"modelVersion\": \"gemini-2.5-flash\",\n  \"responseId\": \"b5zdaKaHOaesz7IP9bfewAQ\"\n}\n"
         }
       },
-      "recorded_at": "Wed, 09 Jul 2025 21:17:32 GMT"
+      "recorded_at": "Wed, 01 Oct 2025 21:26:07 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

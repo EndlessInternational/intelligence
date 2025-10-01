@@ -1,0 +1,69 @@
+{
+  "http_interactions": [
+    {
+      "request": {
+        "method": "post",
+        "uri": "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=<KEY>",
+        "body": {
+          "encoding": "UTF-8",
+          "string": "{\"generationConfig\":{\"thinkingConfig\":{\"thinkingBudget\":8192,\"includeThoughts\":true},\"maxOutputTokens\":16384,\"temperature\":0.0},\"systemInstruction\":{\"role\":\"user\",\"parts\":[{\"text\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"}]},\"contents\":[{\"role\":\"user\",\"parts\":[{\"text\":\"Given a triangle ABC with angle A 60 degrees and angle B 40 degrees, extend side BC through C. Now create triangle DAB such that DC is congruent to AB. What is the angle measure of angle ADB?\\n\"}]}]}"
+        },
+        "headers": {
+          "User-Agent": [
+            "Faraday v2.13.1"
+          ],
+          "Content-Type": [
+            "application/json"
+          ]
+        }
+      },
+      "response": {
+        "status": {
+          "code": 200,
+          "message": "OK"
+        },
+        "headers": {
+          "content-type": [
+            "application/json; charset=UTF-8"
+          ],
+          "vary": [
+            "Origin, X-Origin, Referer"
+          ],
+          "content-encoding": [
+            "gzip"
+          ],
+          "date": [
+            "Wed, 01 Oct 2025 21:26:04 GMT"
+          ],
+          "server": [
+            "scaffolding on HTTPServer2"
+          ],
+          "x-xss-protection": [
+            "0"
+          ],
+          "x-frame-options": [
+            "SAMEORIGIN"
+          ],
+          "x-content-type-options": [
+            "nosniff"
+          ],
+          "server-timing": [
+            "gfet4t7; dur=55360"
+          ],
+          "alt-svc": [
+            "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+          ],
+          "transfer-encoding": [
+            "chunked"
+          ]
+        },
+        "body": {
+          "encoding": "UTF-8",
+          "string": "{\n  \"candidates\": [\n    {\n      \"content\": {\n        \"parts\": [\n          {\n            \"text\": \"**Initial Assessment & Strategy**\\n\\nOkay, so the problem is asking for the measure of angle ADB. I've got triangle ABC with some angle measures, side BC is extended and a new triangle DAB is formed with a side equality, DC = AB.  My immediate thought is to use the angle-chasing approach since coordinate geometry or vectors will likely be more complicated. I need to figure out how the angles in triangle ABC connect to those in triangle DAB. I'll start by finding all the angles in triangle ABC, then visualize the setup and note down all the given information. Then I will need to look for any special constructions or theorems that I can employ.\\n\\n**Angle Chasing and Initial Observations**\\n\\nI easily found that angle C in triangle ABC is 80 degrees, the exterior angle at C is 100 degrees. Since I'm given that DC = AB, let's explore that relation. My thoughts now turn to constructing an auxiliary point or line. Constructing an auxiliary point to create a special triangle could be useful.\\n\\n**Trial and Error: Auxiliary Constructions and Reasoning**\\n\\nI start by considering some potential approaches: maybe construct a line parallel to AD or construct an isosceles triangle using DC=AB. Constructing an equilateral triangle using the given angle might be also useful.  I attempt various constructions: adding point E on AB such that CE is parallel to AD, adding a point E on AD such that triangle ACE is isosceles, or on point E such that triangle BCE is congruent to triangle DAB but they seem like a dead end. I get stuck and start trying to add a point E on the line that extends BC such that AB=CE.\\n\\n**Identifying a Promising Construction**\\n\\nFinally, I got the idea that I can construct a point E on AB such that AC = AE. If I do so, since ∠BAC = 60°, then triangle ACE becomes equilateral and I can relate the lengths. This seems like it will lead somewhere because I can express CE and also find ∠DCE, since ∠ACD = 100°. The relation DC = AB is very important here.\\n\\n**Geometric Deductions and Key Relationships**\\n\\nI'm confident in constructing this equilateral triangle, triangle ACE. This gives AC=CE=AE. Since BC is extended to D such that DC=AB, then AB=CE=DC. Knowing that AB = DC and AC, that triangle CDE now becomes isosceles since CE=DC. From ABC using the sine rule, I can find the length AC in terms of AB.\\n\\n**Calculation and Final Answer**\\n\\nI now use the sine rule to express CE and DE. Knowing CE=AC, DC= AB, and ∠ACD =100 and angle ACE = 60, then I can find the other angles in triangle CDE. Doing so, I derive the length DE and angle ∠CDE is also 40°. Since ∠ADB is the same as ∠CDE, the measure of angle ADB is 40°.\\n\\nI have now come to the conclusion and I double checked to make sure it's valid.\\n\",\n            \"thought\": true\n          },\n          {\n            \"text\": \"1.  **Find angles in triangle ABC:**\\n    Given ∠A = 60° and ∠B = 40°.\\n    The sum of angles in a triangle is 180°, so ∠BCA = 180° - (60° + 40°) = 180° - 100° = 80°.\\n\\n2.  **Find exterior angle ∠ACD:**\\n    Since B, C, D are collinear, ∠ACD is supplementary to ∠BCA.\\n    ∠ACD = 180° - ∠BCA = 180° - 80° = 100°.\\n\\n3.  **Construct point E on AB:**\\n    Locate a point E on side AB such that AE = AC.\\n    Since ∠BAC = 60° and AE = AC, triangle ACE is an isosceles triangle with a 60° vertex angle. Therefore, triangle ACE is equilateral.\\n    This implies AC = CE = AE and ∠ACE = 60°.\\n\\n4.  **Relate side lengths using Sine Rule in triangle ABC:**\\n    In triangle ABC, by the Law of Sines:\\n    AC / sin(∠ABC) = AB / sin(∠BCA)\\n    AC / sin(40°) = AB / sin(80°)\\n    AC = AB * sin(40°) / sin(80°)\\n    Using the double angle identity sin(80°) = 2 * sin(40°) * cos(40°):\\n    AC = AB * sin(40°) / (2 * sin(40°) * cos(40°))\\n    AC = AB / (2 * cos(40°)).\\n    Since CE = AC (from equilateral triangle ACE), we have CE = AB / (2 * cos(40°)).\\n\\n5.  **Analyze triangle CDE:**\\n    We have the following information for triangle CDE:\\n    *   DC = AB (given).\\n    *   CE = AB / (2 * cos(40°)) (from step 4).\\n    *   ∠DCE = ∠ACD - ∠ACE = 100° - 60° = 40°.\\n\\n6.  **Apply Law of Cosines to triangle CDE to find DE:**\\n    DE² = DC² + CE² - 2 * DC * CE * cos(∠DCE)\\n    Substitute the known values:\\n    DE² = AB² + (AB / (2 * cos(40°)))² - 2 * AB * (AB / (2 * cos(40°))) * cos(40°)\\n    DE² = AB² + AB² / (4 * cos²(40°)) - AB²\\n    DE² = AB² / (4 * cos²(40°))\\n    Taking the square root of both sides:\\n    DE = AB / (2 * cos(40°)).\\n\\n7.  **Determine angles in triangle CDE:**\\n    From step 4, CE = AB / (2 * cos(40°)).\\n    From step 6, DE = AB / (2 * cos(40°)).\\n    Therefore, CE = DE.\\n    Since triangle CDE is isosceles with CE = DE, the angles opposite these sides must be equal:\\n    ∠CDE = ∠DCE.\\n    We found ∠DCE = 40° in step 5.\\n    So, ∠CDE = 40°.\\n\\n8.  **Conclusion:**\\n    The angle ∠ADB is the same as ∠CDE.\\n    Therefore, ∠ADB = 40°.\\n\\nThe final answer is $\\\\boxed{40}$\"\n          }\n        ],\n        \"role\": \"model\"\n      },\n      \"finishReason\": \"STOP\",\n      \"index\": 0\n    }\n  ],\n  \"usageMetadata\": {\n    \"promptTokenCount\": 92,\n    \"candidatesTokenCount\": 817,\n    \"totalTokenCount\": 8591,\n    \"promptTokensDetails\": [\n      {\n        \"modality\": \"TEXT\",\n        \"tokenCount\": 92\n      }\n    ],\n    \"thoughtsTokenCount\": 7682\n  },\n  \"modelVersion\": \"gemini-2.5-flash\",\n  \"responseId\": \"bJzdaKGMOs6Fz7IPuu7isQM\"\n}\n"
+        }
+      },
+      "recorded_at": "Wed, 01 Oct 2025 21:26:05 GMT"
+    }
+  ],
+  "recorded_with": "VCR 6.3.1"
+}

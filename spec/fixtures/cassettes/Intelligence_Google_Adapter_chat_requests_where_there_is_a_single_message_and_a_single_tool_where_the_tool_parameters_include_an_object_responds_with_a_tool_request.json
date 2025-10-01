@@ -6,7 +6,7 @@
         "uri": "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=<KEY>",
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"generationConfig\":{\"thinkingConfig\":{\"thinkingBudget\":0},\"maxOutputTokens\":1024,\"temperature\":0.0},\"tools\":{\"function_declarations\":[{\"name\":\"get_weather\",\"description\":\"The get_weather tool returns the current weather in given locality.\",\"parameters\":{\"type\":\"object\",\"properties\":{\"location\":{\"type\":\"object\",\"description\":\"The locality for which the weather will be returned\",\"properties\":{\"city\":{\"type\":\"string\",\"description\":\"The city or town for which the current weather should be returned.\"},\"state\":{\"type\":\"string\",\"description\":\"The state or province for which the current weather should be returned. If this is not provided the largest or most prominent city with the given name, in the given country or in the worldi, will be assumed.\"},\"country\":{\"type\":\"string\",\"description\":\"The country for which the given weather should be returned. If this is not provided the largest or most prominent city with the given name will be returned.\"}},\"required\":[\"city\"]}},\"required\":[\"location\"]}}]},\"systemInstruction\":{\"role\":\"user\",\"parts\":[{\"text\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"}]},\"contents\":[{\"role\":\"user\",\"parts\":[{\"text\":\"Tell me the weather in Seattle.\\n\"}]}]}"
+          "string": "{\"generationConfig\":{\"thinkingConfig\":{\"thinkingBudget\":0},\"maxOutputTokens\":4096,\"temperature\":0.0},\"tools\":{\"function_declarations\":[{\"name\":\"get_weather\",\"description\":\"The get_weather tool returns the current weather in given locality.\",\"parameters\":{\"type\":\"object\",\"properties\":{\"location\":{\"type\":\"object\",\"description\":\"The locality for which the weather will be returned\",\"properties\":{\"city\":{\"type\":\"string\",\"description\":\"The city or town for which the current weather should be returned.\"},\"state\":{\"type\":\"string\",\"description\":\"The state or province for which the current weather should be returned. If this is not provided the largest or most prominent city with the given name, in the given country or in the worldi, will be assumed.\"},\"country\":{\"type\":\"string\",\"description\":\"The country for which the given weather should be returned. If this is not provided the largest or most prominent city with the given name will be returned.\"}},\"required\":[\"city\"]}},\"required\":[\"location\"]}}]},\"systemInstruction\":{\"role\":\"user\",\"parts\":[{\"text\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"}]},\"contents\":[{\"role\":\"user\",\"parts\":[{\"text\":\"Tell me the weather in Seattle.\\n\"}]}]}"
         },
         "headers": {
           "User-Agent": [
@@ -33,7 +33,7 @@
             "gzip"
           ],
           "date": [
-            "Wed, 09 Jul 2025 21:17:36 GMT"
+            "Wed, 01 Oct 2025 21:26:12 GMT"
           ],
           "server": [
             "scaffolding on HTTPServer2"
@@ -48,7 +48,7 @@
             "nosniff"
           ],
           "server-timing": [
-            "gfet4t7; dur=523"
+            "gfet4t7; dur=572"
           ],
           "alt-svc": [
             "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
@@ -59,10 +59,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "{\n  \"candidates\": [\n    {\n      \"content\": {\n        \"parts\": [\n          {\n            \"functionCall\": {\n              \"name\": \"get_weather\",\n              \"args\": {\n                \"location\": {\n                  \"country\": \"USA\",\n                  \"city\": \"Seattle\",\n                  \"state\": \"WA\"\n                }\n              }\n            }\n          }\n        ],\n        \"role\": \"model\"\n      },\n      \"finishReason\": \"STOP\",\n      \"index\": 0\n    }\n  ],\n  \"usageMetadata\": {\n    \"promptTokenCount\": 268,\n    \"candidatesTokenCount\": 31,\n    \"totalTokenCount\": 299,\n    \"promptTokensDetails\": [\n      {\n        \"modality\": \"TEXT\",\n        \"tokenCount\": 268\n      }\n    ]\n  },\n  \"modelVersion\": \"gemini-2.5-flash\",\n  \"responseId\": \"cNxuaLm2BojZqtsP9YmaQA\"\n}\n"
+          "string": "{\n  \"candidates\": [\n    {\n      \"content\": {\n        \"parts\": [\n          {\n            \"functionCall\": {\n              \"name\": \"get_weather\",\n              \"args\": {\n                \"location\": {\n                  \"state\": \"Washington\",\n                  \"city\": \"Seattle\",\n                  \"country\": \"USA\"\n                }\n              }\n            }\n          }\n        ],\n        \"role\": \"model\"\n      },\n      \"finishReason\": \"STOP\",\n      \"index\": 0\n    }\n  ],\n  \"usageMetadata\": {\n    \"promptTokenCount\": 268,\n    \"candidatesTokenCount\": 31,\n    \"totalTokenCount\": 299,\n    \"promptTokensDetails\": [\n      {\n        \"modality\": \"TEXT\",\n        \"tokenCount\": 268\n      }\n    ]\n  },\n  \"modelVersion\": \"gemini-2.5-flash\",\n  \"responseId\": \"dJzdaKK5OsDAz7IPtq7zwQM\"\n}\n"
         }
       },
-      "recorded_at": "Wed, 09 Jul 2025 21:17:36 GMT"
+      "recorded_at": "Wed, 01 Oct 2025 21:26:12 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"
