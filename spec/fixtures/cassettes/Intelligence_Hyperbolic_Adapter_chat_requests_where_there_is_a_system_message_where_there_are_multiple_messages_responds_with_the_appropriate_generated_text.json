@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Sat, 05 Jul 2025 21:25:49 GMT"
+            "Wed, 01 Oct 2025 21:08:18 GMT"
           ],
           "content-type": [
             "application/json"
@@ -38,8 +38,11 @@
           "connection": [
             "keep-alive"
           ],
+          "content-encoding": [
+            "gzip"
+          ],
           "x-inference-request-id": [
-            "71a3f55c-da86-4f16-80d8-eabaa6c531a4"
+            "adb20c7a-b26a-4752-88e2-20fd614b23d3"
           ],
           "cf-cache-status": [
             "DYNAMIC"
@@ -49,17 +52,14 @@
           ],
           "cf-ray": [
             "<CF-RAY>"
-          ],
-          "content-encoding": [
-            "gzip"
           ]
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\"id\":\"chatcmpl-e4e19fe1b8c44a27a5a25801d3e42742\",\"object\":\"chat.completion\",\"created\":1751750749,\"model\":\"Qwen/Qwen2.5-VL-7B-Instruct\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"reasoning_content\":null,\"content\":\"blue\",\"tool_calls\":[]},\"logprobs\":null,\"finish_reason\":\"stop\",\"stop_reason\":null}],\"usage\":{\"prompt_tokens\":82,\"total_tokens\":84,\"completion_tokens\":2,\"prompt_tokens_details\":null},\"prompt_logprobs\":null,\"kv_transfer_params\":null}"
+          "string": "{\"id\":\"chatcmpl-9091cd97956744faacf7cffee406f8f3\",\"object\":\"chat.completion\",\"created\":1759352898,\"model\":\"Qwen/Qwen2.5-VL-7B-Instruct\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"reasoning_content\":null,\"content\":\"blue\",\"tool_calls\":[]},\"logprobs\":null,\"finish_reason\":\"stop\",\"stop_reason\":null}],\"usage\":{\"prompt_tokens\":82,\"total_tokens\":84,\"completion_tokens\":2,\"prompt_tokens_details\":null},\"prompt_logprobs\":null,\"kv_transfer_params\":null}"
         }
       },
-      "recorded_at": "Sat, 05 Jul 2025 21:25:49 GMT"
+      "recorded_at": "Wed, 01 Oct 2025 21:08:18 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

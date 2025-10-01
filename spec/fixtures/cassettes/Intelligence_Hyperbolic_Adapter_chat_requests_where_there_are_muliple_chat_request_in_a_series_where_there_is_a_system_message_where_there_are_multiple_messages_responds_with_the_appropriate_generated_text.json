@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Sat, 05 Jul 2025 21:25:52 GMT"
+            "Wed, 01 Oct 2025 21:08:20 GMT"
           ],
           "content-type": [
             "application/json"
@@ -38,8 +38,11 @@
           "connection": [
             "keep-alive"
           ],
+          "content-encoding": [
+            "gzip"
+          ],
           "x-inference-request-id": [
-            "38704b4c-9f17-4e0d-869b-07923e043e17"
+            "a28627aa-c74a-488a-a8b8-c5b3bc138f6b"
           ],
           "cf-cache-status": [
             "DYNAMIC"
@@ -49,17 +52,14 @@
           ],
           "cf-ray": [
             "<CF-RAY>"
-          ],
-          "content-encoding": [
-            "gzip"
           ]
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\"id\":\"chatcmpl-42f9768a67e74074874bf3b8551c1662\",\"object\":\"chat.completion\",\"created\":1751750752,\"model\":\"Qwen/Qwen2.5-VL-7B-Instruct\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"reasoning_content\":null,\"content\":\"hello\",\"tool_calls\":[]},\"logprobs\":null,\"finish_reason\":\"stop\",\"stop_reason\":null}],\"usage\":{\"prompt_tokens\":27,\"total_tokens\":29,\"completion_tokens\":2,\"prompt_tokens_details\":null},\"prompt_logprobs\":null,\"kv_transfer_params\":null}"
+          "string": "{\"id\":\"chatcmpl-37a9fc9d8e244875b44d5ba785b524d8\",\"object\":\"chat.completion\",\"created\":1759352900,\"model\":\"Qwen/Qwen2.5-VL-7B-Instruct\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"reasoning_content\":null,\"content\":\"hello\",\"tool_calls\":[]},\"logprobs\":null,\"finish_reason\":\"stop\",\"stop_reason\":null}],\"usage\":{\"prompt_tokens\":27,\"total_tokens\":29,\"completion_tokens\":2,\"prompt_tokens_details\":null},\"prompt_logprobs\":null,\"kv_transfer_params\":null}"
         }
       },
-      "recorded_at": "Sat, 05 Jul 2025 21:25:52 GMT"
+      "recorded_at": "Wed, 01 Oct 2025 21:08:20 GMT"
     },
     {
       "request": {
@@ -88,7 +88,7 @@
         },
         "headers": {
           "date": [
-            "Sat, 05 Jul 2025 21:25:52 GMT"
+            "Wed, 01 Oct 2025 21:08:20 GMT"
           ],
           "content-type": [
             "application/json"
@@ -99,8 +99,11 @@
           "connection": [
             "keep-alive"
           ],
+          "content-encoding": [
+            "gzip"
+          ],
           "x-inference-request-id": [
-            "c5ab4c09-d981-4ae9-a48b-527a470d2543"
+            "0c06f2c9-3655-4ecc-a491-5ae132f86053"
           ],
           "cf-cache-status": [
             "DYNAMIC"
@@ -110,17 +113,14 @@
           ],
           "cf-ray": [
             "<CF-RAY>"
-          ],
-          "content-encoding": [
-            "gzip"
           ]
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\"id\":\"chatcmpl-1be9d26d857f41528a349aec01e0b2c4\",\"object\":\"chat.completion\",\"created\":1751750752,\"model\":\"Qwen/Qwen2.5-VL-7B-Instruct\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"reasoning_content\":null,\"content\":\"blue\",\"tool_calls\":[]},\"logprobs\":null,\"finish_reason\":\"stop\",\"stop_reason\":null}],\"usage\":{\"prompt_tokens\":82,\"total_tokens\":84,\"completion_tokens\":2,\"prompt_tokens_details\":null},\"prompt_logprobs\":null,\"kv_transfer_params\":null}"
+          "string": "{\"id\":\"chatcmpl-746755d60ddd408d8018a643014ae574\",\"object\":\"chat.completion\",\"created\":1759352900,\"model\":\"Qwen/Qwen2.5-VL-7B-Instruct\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"reasoning_content\":null,\"content\":\"blue\",\"tool_calls\":[]},\"logprobs\":null,\"finish_reason\":\"stop\",\"stop_reason\":null}],\"usage\":{\"prompt_tokens\":82,\"total_tokens\":84,\"completion_tokens\":2,\"prompt_tokens_details\":null},\"prompt_logprobs\":null,\"kv_transfer_params\":null}"
         }
       },
-      "recorded_at": "Sat, 05 Jul 2025 21:25:52 GMT"
+      "recorded_at": "Wed, 01 Oct 2025 21:08:20 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

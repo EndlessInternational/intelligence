@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Sat, 05 Jul 2025 21:25:48 GMT"
+            "Wed, 01 Oct 2025 21:08:18 GMT"
           ],
           "content-type": [
             "application/json"
@@ -38,8 +38,11 @@
           "connection": [
             "keep-alive"
           ],
+          "content-encoding": [
+            "gzip"
+          ],
           "x-inference-request-id": [
-            "8184197d-778f-4468-bdcf-215b15ca9daf"
+            "5d0ed820-9ac9-461a-8643-b8f1ca92744d"
           ],
           "cf-cache-status": [
             "DYNAMIC"
@@ -49,17 +52,14 @@
           ],
           "cf-ray": [
             "<CF-RAY>"
-          ],
-          "content-encoding": [
-            "gzip"
           ]
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\"id\":\"chatcmpl-8b85813594c4473aac95bdde1db05b5e\",\"object\":\"chat.completion\",\"created\":1751750748,\"model\":\"Qwen/Qwen2.5-VL-7B-Instruct\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"reasoning_content\":null,\"content\":\"hello\",\"tool_calls\":[]},\"logprobs\":null,\"finish_reason\":\"stop\",\"stop_reason\":null}],\"usage\":{\"prompt_tokens\":59,\"total_tokens\":61,\"completion_tokens\":2,\"prompt_tokens_details\":null},\"prompt_logprobs\":null,\"kv_transfer_params\":null}"
+          "string": "{\"id\":\"chatcmpl-d14cf29a38a24520bf16b8e5f13f25e2\",\"object\":\"chat.completion\",\"created\":1759352898,\"model\":\"Qwen/Qwen2.5-VL-7B-Instruct\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"reasoning_content\":null,\"content\":\"hello\",\"tool_calls\":[]},\"logprobs\":null,\"finish_reason\":\"stop\",\"stop_reason\":null}],\"usage\":{\"prompt_tokens\":59,\"total_tokens\":61,\"completion_tokens\":2,\"prompt_tokens_details\":null},\"prompt_logprobs\":null,\"kv_transfer_params\":null}"
         }
       },
-      "recorded_at": "Sat, 05 Jul 2025 21:25:48 GMT"
+      "recorded_at": "Wed, 01 Oct 2025 21:08:18 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

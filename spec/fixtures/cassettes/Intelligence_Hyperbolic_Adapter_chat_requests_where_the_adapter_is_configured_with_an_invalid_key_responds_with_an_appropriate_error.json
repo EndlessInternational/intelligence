@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Sat, 05 Jul 2025 21:25:57 GMT"
+            "Wed, 01 Oct 2025 21:08:24 GMT"
           ],
           "content-type": [
             "application/json"
@@ -38,6 +38,9 @@
           "connection": [
             "keep-alive"
           ],
+          "cf-ray": [
+            "<CF-RAY>"
+          ],
           "www-authenticate": [
             "Bearer"
           ],
@@ -46,9 +49,6 @@
           ],
           "server": [
             "cloudflare"
-          ],
-          "cf-ray": [
-            "<CF-RAY>"
           ]
         },
         "body": {
@@ -56,7 +56,7 @@
           "string": "{\"detail\":\"Could not validate credentials\"}"
         }
       },
-      "recorded_at": "Sat, 05 Jul 2025 21:25:57 GMT"
+      "recorded_at": "Wed, 01 Oct 2025 21:08:24 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

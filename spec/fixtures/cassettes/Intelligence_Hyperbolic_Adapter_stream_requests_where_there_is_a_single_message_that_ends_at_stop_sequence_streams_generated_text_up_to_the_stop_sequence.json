@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Sat, 05 Jul 2025 21:26:00 GMT"
+            "Wed, 01 Oct 2025 21:08:26 GMT"
           ],
           "content-type": [
             "text/event-stream; charset=utf-8"
@@ -38,25 +38,25 @@
           "connection": [
             "keep-alive"
           ],
+          "cf-ray": [
+            "<CF-RAY>"
+          ],
           "x-inference-request-id": [
-            "9fa26c66-effa-48ca-a1fd-42a45a4ffde0"
+            "cf550324-3b56-4f8e-93b2-941c698a97dc"
           ],
           "cf-cache-status": [
             "DYNAMIC"
           ],
           "server": [
             "cloudflare"
-          ],
-          "cf-ray": [
-            "<CF-RAY>"
           ]
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "data: {\"id\": \"chatcmpl-9e4208209ecf40b88970331914a76b53\", \"object\": \"chat.completion.chunk\", \"created\": 1751750760, \"model\": \"Qwen/Qwen2.5-VL-7B-Instruct\", \"choices\": [{\"index\": 0, \"delta\": {\"role\": \"assistant\", \"content\": \"\"}, \"logprobs\": null, \"finish_reason\": null}], \"usage\": {\"prompt_tokens\": 66, \"total_tokens\": 67, \"completion_tokens\": 1}}\n\ndata: {\"id\": \"chatcmpl-9e4208209ecf40b88970331914a76b53\", \"object\": \"chat.completion.chunk\", \"created\": 1751750760, \"model\": \"Qwen/Qwen2.5-VL-7B-Instruct\", \"choices\": [{\"index\": 0, \"delta\": {\"content\": \"\", \"tool_calls\": []}}], \"usage\": {\"prompt_tokens\": 66, \"total_tokens\": 68, \"completion_tokens\": 2}}\n\ndata: {\"id\": \"chatcmpl-9e4208209ecf40b88970331914a76b53\", \"object\": \"chat.completion.chunk\", \"created\": 1751750760, \"model\": \"Qwen/Qwen2.5-VL-7B-Instruct\", \"choices\": [{\"index\": 0, \"delta\": {\"content\": \"o\", \"tool_calls\": []}}], \"usage\": {\"prompt_tokens\": 66, \"total_tokens\": 69, \"completion_tokens\": 3}}\n\ndata: {\"id\": \"chatcmpl-9e4208209ecf40b88970331914a76b53\", \"object\": \"chat.completion.chunk\", \"created\": 1751750760, \"model\": \"Qwen/Qwen2.5-VL-7B-Instruct\", \"choices\": [{\"index\": 0, \"delta\": {\"content\": \"ne\\n\", \"tool_calls\": []}}], \"usage\": {\"prompt_tokens\": 66, \"total_tokens\": 70, \"completion_tokens\": 4}}\n\ndata: {\"id\": \"chatcmpl-9e4208209ecf40b88970331914a76b53\", \"object\": \"chat.completion.chunk\", \"created\": 1751750760, \"model\": \"Qwen/Qwen2.5-VL-7B-Instruct\", \"choices\": [{\"index\": 0, \"delta\": {\"content\": \"t\", \"tool_calls\": []}}], \"usage\": {\"prompt_tokens\": 66, \"total_tokens\": 71, \"completion_tokens\": 5}}\n\ndata: {\"id\": \"chatcmpl-9e4208209ecf40b88970331914a76b53\", \"object\": \"chat.completion.chunk\", \"created\": 1751750760, \"model\": \"Qwen/Qwen2.5-VL-7B-Instruct\", \"choices\": [{\"index\": 0, \"delta\": {\"content\": \"wo\\nth\", \"tool_calls\": []}}], \"usage\": {\"prompt_tokens\": 66, \"total_tokens\": 72, \"completion_tokens\": 6}}\n\ndata: {\"id\": \"chatcmpl-9e4208209ecf40b88970331914a76b53\", \"object\": \"chat.completion.chunk\", \"created\": 1751750760, \"model\": \"Qwen/Qwen2.5-VL-7B-Instruct\", \"choices\": [{\"index\": 0, \"delta\": {\"content\": \"r\", \"tool_calls\": []}}], \"usage\": {\"prompt_tokens\": 66, \"total_tokens\": 73, \"completion_tokens\": 7}}\n\ndata: {\"id\": \"chatcmpl-9e4208209ecf40b88970331914a76b53\", \"object\": \"chat.completion.chunk\", \"created\": 1751750760, \"model\": \"Qwen/Qwen2.5-VL-7B-Instruct\", \"choices\": [{\"index\": 0, \"delta\": {\"content\": \"ee\\nf\", \"tool_calls\": []}}], \"usage\": {\"prompt_tokens\": 66, \"total_tokens\": 74, \"completion_tokens\": 8}}\n\ndata: {\"id\": \"chatcmpl-9e4208209ecf40b88970331914a76b53\", \"object\": \"chat.completion.chunk\", \"created\": 1751750760, \"model\": \"Qwen/Qwen2.5-VL-7B-Instruct\", \"choices\": [{\"index\": 0, \"delta\": {\"content\": \"o\", \"tool_calls\": []}}], \"usage\": {\"prompt_tokens\": 66, \"total_tokens\": 75, \"completion_tokens\": 9}}\n\ndata: {\"id\": \"chatcmpl-9e4208209ecf40b88970331914a76b53\", \"object\": \"chat.completion.chunk\", \"created\": 1751750760, \"model\": \"Qwen/Qwen2.5-VL-7B-Instruct\", \"choices\": [{\"index\": 0, \"delta\": {\"content\": \"ur\\n\", \"tool_calls\": []}, \"finish_reason\": \"stop\", \"stop_reason\": \"five\"}], \"usage\": {\"prompt_tokens\": 66, \"total_tokens\": 76, \"completion_tokens\": 10}}\n\ndata: [DONE]\n\n"
+          "string": "data: {\"id\": \"chatcmpl-a3921c88d85f4b8e86e377a2012b1533\", \"object\": \"chat.completion.chunk\", \"created\": 1759352906, \"model\": \"Qwen/Qwen2.5-VL-7B-Instruct\", \"choices\": [{\"index\": 0, \"delta\": {\"role\": \"assistant\", \"content\": \"\"}, \"logprobs\": null, \"finish_reason\": null}], \"usage\": {\"prompt_tokens\": 66, \"total_tokens\": 67, \"completion_tokens\": 1}}\n\ndata: {\"id\": \"chatcmpl-a3921c88d85f4b8e86e377a2012b1533\", \"object\": \"chat.completion.chunk\", \"created\": 1759352906, \"model\": \"Qwen/Qwen2.5-VL-7B-Instruct\", \"choices\": [{\"index\": 0, \"delta\": {\"content\": \"\", \"tool_calls\": []}}], \"usage\": {\"prompt_tokens\": 66, \"total_tokens\": 68, \"completion_tokens\": 2}}\n\ndata: {\"id\": \"chatcmpl-a3921c88d85f4b8e86e377a2012b1533\", \"object\": \"chat.completion.chunk\", \"created\": 1759352906, \"model\": \"Qwen/Qwen2.5-VL-7B-Instruct\", \"choices\": [{\"index\": 0, \"delta\": {\"content\": \"o\", \"tool_calls\": []}}], \"usage\": {\"prompt_tokens\": 66, \"total_tokens\": 69, \"completion_tokens\": 3}}\n\ndata: {\"id\": \"chatcmpl-a3921c88d85f4b8e86e377a2012b1533\", \"object\": \"chat.completion.chunk\", \"created\": 1759352906, \"model\": \"Qwen/Qwen2.5-VL-7B-Instruct\", \"choices\": [{\"index\": 0, \"delta\": {\"content\": \"ne\\n\", \"tool_calls\": []}}], \"usage\": {\"prompt_tokens\": 66, \"total_tokens\": 70, \"completion_tokens\": 4}}\n\ndata: {\"id\": \"chatcmpl-a3921c88d85f4b8e86e377a2012b1533\", \"object\": \"chat.completion.chunk\", \"created\": 1759352906, \"model\": \"Qwen/Qwen2.5-VL-7B-Instruct\", \"choices\": [{\"index\": 0, \"delta\": {\"content\": \"t\", \"tool_calls\": []}}], \"usage\": {\"prompt_tokens\": 66, \"total_tokens\": 71, \"completion_tokens\": 5}}\n\ndata: {\"id\": \"chatcmpl-a3921c88d85f4b8e86e377a2012b1533\", \"object\": \"chat.completion.chunk\", \"created\": 1759352906, \"model\": \"Qwen/Qwen2.5-VL-7B-Instruct\", \"choices\": [{\"index\": 0, \"delta\": {\"content\": \"wo\\nth\", \"tool_calls\": []}}], \"usage\": {\"prompt_tokens\": 66, \"total_tokens\": 72, \"completion_tokens\": 6}}\n\ndata: {\"id\": \"chatcmpl-a3921c88d85f4b8e86e377a2012b1533\", \"object\": \"chat.completion.chunk\", \"created\": 1759352906, \"model\": \"Qwen/Qwen2.5-VL-7B-Instruct\", \"choices\": [{\"index\": 0, \"delta\": {\"content\": \"r\", \"tool_calls\": []}}], \"usage\": {\"prompt_tokens\": 66, \"total_tokens\": 73, \"completion_tokens\": 7}}\n\ndata: {\"id\": \"chatcmpl-a3921c88d85f4b8e86e377a2012b1533\", \"object\": \"chat.completion.chunk\", \"created\": 1759352906, \"model\": \"Qwen/Qwen2.5-VL-7B-Instruct\", \"choices\": [{\"index\": 0, \"delta\": {\"content\": \"ee\\nf\", \"tool_calls\": []}}], \"usage\": {\"prompt_tokens\": 66, \"total_tokens\": 74, \"completion_tokens\": 8}}\n\ndata: {\"id\": \"chatcmpl-a3921c88d85f4b8e86e377a2012b1533\", \"object\": \"chat.completion.chunk\", \"created\": 1759352906, \"model\": \"Qwen/Qwen2.5-VL-7B-Instruct\", \"choices\": [{\"index\": 0, \"delta\": {\"content\": \"o\", \"tool_calls\": []}}], \"usage\": {\"prompt_tokens\": 66, \"total_tokens\": 75, \"completion_tokens\": 9}}\n\ndata: {\"id\": \"chatcmpl-a3921c88d85f4b8e86e377a2012b1533\", \"object\": \"chat.completion.chunk\", \"created\": 1759352906, \"model\": \"Qwen/Qwen2.5-VL-7B-Instruct\", \"choices\": [{\"index\": 0, \"delta\": {\"content\": \"ur\\n\", \"tool_calls\": []}, \"finish_reason\": \"stop\", \"stop_reason\": \"five\"}], \"usage\": {\"prompt_tokens\": 66, \"total_tokens\": 76, \"completion_tokens\": 10}}\n\ndata: [DONE]\n\n"
         }
       },
-      "recorded_at": "Sat, 05 Jul 2025 21:26:00 GMT"
+      "recorded_at": "Wed, 01 Oct 2025 21:08:26 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"
