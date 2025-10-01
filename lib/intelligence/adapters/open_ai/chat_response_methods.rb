@@ -151,12 +151,13 @@ module Intelligence
             case data[ :type ]
             when 'response.output_item.added'
               response_item = data[ :item ]
+              response_item_id = response_item[ :id ]
               case response_item[ :type ]
               # tool_call 
               when 'function_call'
                 content = {
-                  :'open_ai/cid' => "tool_call/#{response_item[ :id ]}/0",
-                  :'open_ai/id' =>  response_item[ :id ],
+                  :'open_ai/cid' => "tool_call/#{response_item_id}/0",
+                  :'open_ai/id' =>  response_item_id,
                   type:             :tool_call,
                   tool_name:        response_item[ :name ],
                   tool_call_id:     response_item[ :call_id ],
@@ -166,8 +167,8 @@ module Intelligence
               # web_search_call 
               when 'web_search_call'
                 content = { 
-                  :'open_ai/cid' => "web_search_call/#{response_item[ :id ]}/0", 
-                  :'open_ai/id' =>  response_item[ :id ], 
+                  :'open_ai/cid' => "web_search_call/#{response_item_id}/0", 
+                  :'open_ai/id' =>  response_item_id, 
                   type:             :web_search_call, 
                   status:           :searching 
                 }
@@ -207,7 +208,8 @@ module Intelligence
               end
             # text
             when 'response.content_part.added'
-              response_cid        = "text/#{data[ :item_id ]}/#{data[ :content_index ]}"
+              response_item_id    = data[ :item_id ]
+              response_cid        = "text/#{response_item_id}/#{data[ :content_index ]}"
               response_part_json  = data[ :part ]
               raise 'A content item was created but it is not `output_text`.' \
                 if response_part_json[ :type ] != 'output_text'
@@ -215,19 +217,21 @@ module Intelligence
               if content.nil? || content[ :'open_ai/cid' ] != response_cid
                 content = { 
                   :'open_ai/cid' => response_cid, 
-                  :'open_ai/id'  => data[ :item_id ],
+
+                  :'open_ai/id'  => response_item_id,
                   type:             :text, 
                   text:             response_text || '' 
                 }
                 content_present   = response_text && response_text.length > 0
               end 
-            when 'response.output_text.delta'
-              response_cid        = "text/#{data[ :item_id ]}/#{data[ :content_index ]}"
+            when 'response.output_text.delta'              
               response_item_id    = data[ :item_id ]
+              response_cid        = "text/#{response_item_id}/#{data[ :content_index ]}"
               response_text       = data[ :delta ]
               if content.nil? || content[ :'open_ai/cid' ] != response_cid
                 content = { 
                   :'open_ai/cid' => response_cid, 
+
                   :'open_ai/id'  => response_item_id,
                   type:             :text, 
                   text:             response_text || '' 
@@ -258,13 +262,14 @@ module Intelligence
                 end
               # cipher thought
               when 'reasoning'
+                response_item_id = response_item[ :id ]
                 response_item_encrypted_content = response_item[ :encrypted_content ]
                 if response_item_encrypted_content && response_item_encrypted_content.length > 0
                   content = { 
-                    :'open_ai/cid' => "cipher_thought/#{response_item[ :id ]}/0",
+                    :'open_ai/cid' => "cipher_thought/#{response_item_id}/0",
 
                     type:             :cipher_thought, 
-                    :'open_ai/id'  => response_item[ :id ],
+                    :'open_ai/id'  => response_item_id,
                     :'open_ai/item'=> response_item.to_json
                   }
                   content_present = true
