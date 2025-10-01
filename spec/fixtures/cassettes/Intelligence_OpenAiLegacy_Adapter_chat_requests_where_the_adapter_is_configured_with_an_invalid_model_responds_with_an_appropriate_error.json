@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Sat, 05 Jul 2025 21:31:02 GMT"
+            "Wed, 01 Oct 2025 23:19:30 GMT"
           ],
           "content-type": [
             "application/json; charset=utf-8"
@@ -44,14 +44,20 @@
           "x-request-id": [
             "<X-REQUEST-ID>"
           ],
-          "strict-transport-security": [
-            "max-age=31536000; includeSubDomains; preload"
+          "x-envoy-upstream-service-time": [
+            "46"
+          ],
+          "x-openai-proxy-wasm": [
+            "v0.1"
           ],
           "cf-cache-status": [
             "DYNAMIC"
           ],
           "set-cookie": [
             "<SET-COOKIE>"
+          ],
+          "strict-transport-security": [
+            "max-age=31536000; includeSubDomains; preload"
           ],
           "x-content-type-options": [
             "nosniff"
@@ -74,7 +80,7 @@
           "string": "{\n    \"error\": {\n        \"message\": \"The model `invalid_model` does not exist or you do not have access to it.\",\n        \"type\": \"invalid_request_error\",\n        \"param\": null,\n        \"code\": \"model_not_found\"\n    }\n}\n"
         }
       },
-      "recorded_at": "Sat, 05 Jul 2025 21:31:02 GMT"
+      "recorded_at": "Wed, 01 Oct 2025 23:19:30 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

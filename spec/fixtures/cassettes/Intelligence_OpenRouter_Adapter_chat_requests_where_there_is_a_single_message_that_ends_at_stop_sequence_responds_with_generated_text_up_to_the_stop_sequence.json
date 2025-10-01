@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Sat, 05 Jul 2025 21:31:28 GMT"
+            "Wed, 01 Oct 2025 23:17:09 GMT"
           ],
           "content-type": [
             "application/json"
@@ -38,28 +38,37 @@
           "connection": [
             "keep-alive"
           ],
+          "content-encoding": [
+            "gzip"
+          ],
           "access-control-allow-origin": [
             "*"
           ],
           "vary": [
             "Accept-Encoding"
           ],
+          "permissions-policy": [
+            "payment=(self \"https://checkout.stripe.com\" \"https://connect-js.stripe.com\" \"https://js.stripe.com\" \"https://*.js.stripe.com\" \"https://hooks.stripe.com\")"
+          ],
+          "referrer-policy": [
+            "no-referrer, strict-origin-when-cross-origin"
+          ],
+          "x-content-type-options": [
+            "nosniff"
+          ],
           "server": [
             "cloudflare"
           ],
           "cf-ray": [
             "<CF-RAY>"
-          ],
-          "content-encoding": [
-            "gzip"
           ]
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "\n         \n{\"id\":\"gen-1751751087-6EM1imm1CxYXd8Y5RiR8\",\"provider\":\"Hyperbolic\",\"model\":\"qwen/qwen-2.5-vl-7b-instruct\",\"object\":\"chat.completion\",\"created\":1751751087,\"choices\":[{\"logprobs\":null,\"finish_reason\":\"stop\",\"native_finish_reason\":\"stop\",\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"one\\ntwo\\nthree\\nfour\\n\",\"refusal\":null,\"reasoning\":null}}],\"usage\":{\"prompt_tokens\":66,\"completion_tokens\":10,\"total_tokens\":76}}"
+          "string": "\n         \n\n         \n{\"id\":\"gen-1759360629-wNAopYtxWQROJeLyYW76\",\"provider\":\"Hyperbolic\",\"model\":\"qwen/qwen-2.5-vl-7b-instruct\",\"object\":\"chat.completion\",\"created\":1759360629,\"choices\":[{\"logprobs\":null,\"finish_reason\":\"stop\",\"native_finish_reason\":\"stop\",\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"one\\ntwo\\nthree\\nfour\\n\",\"refusal\":null,\"reasoning\":null}}],\"usage\":{\"prompt_tokens\":66,\"completion_tokens\":10,\"total_tokens\":76}}"
         }
       },
-      "recorded_at": "Sat, 05 Jul 2025 21:31:28 GMT"
+      "recorded_at": "Wed, 01 Oct 2025 23:17:10 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

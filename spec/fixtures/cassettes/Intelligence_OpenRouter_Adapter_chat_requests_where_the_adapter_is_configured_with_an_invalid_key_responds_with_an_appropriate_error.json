@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Sat, 05 Jul 2025 21:31:31 GMT"
+            "Wed, 01 Oct 2025 23:17:16 GMT"
           ],
           "content-type": [
             "application/json"
@@ -38,17 +38,26 @@
           "connection": [
             "keep-alive"
           ],
+          "cf-ray": [
+            "<CF-RAY>"
+          ],
           "access-control-allow-origin": [
             "*"
           ],
           "vary": [
             "Accept-Encoding"
           ],
+          "permissions-policy": [
+            "payment=(self \"https://checkout.stripe.com\" \"https://connect-js.stripe.com\" \"https://js.stripe.com\" \"https://*.js.stripe.com\" \"https://hooks.stripe.com\")"
+          ],
+          "referrer-policy": [
+            "no-referrer, strict-origin-when-cross-origin"
+          ],
+          "x-content-type-options": [
+            "nosniff"
+          ],
           "server": [
             "cloudflare"
-          ],
-          "cf-ray": [
-            "<CF-RAY>"
           ]
         },
         "body": {
@@ -56,7 +65,7 @@
           "string": "{\"error\":{\"message\":\"No auth credentials found\",\"code\":401}}"
         }
       },
-      "recorded_at": "Sat, 05 Jul 2025 21:31:31 GMT"
+      "recorded_at": "Wed, 01 Oct 2025 23:17:16 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

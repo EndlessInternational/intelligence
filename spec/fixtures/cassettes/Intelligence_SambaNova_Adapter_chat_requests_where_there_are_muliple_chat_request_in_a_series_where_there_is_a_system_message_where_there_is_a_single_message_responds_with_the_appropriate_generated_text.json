@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Sat, 05 Jul 2025 21:31:42 GMT"
+            "Wed, 01 Oct 2025 23:14:47 GMT"
           ],
           "content-type": [
             "application/json; charset=utf-8"
@@ -39,25 +39,25 @@
             "keep-alive"
           ],
           "inference-id": [
-            "b68b4bfa-0b8e-4e0c-b7f7-be7d3be4816e"
+            "fd0667da-6497-448a-ac24-e82f23300019"
           ],
           "x-ratelimit-limit-requests": [
-            "120"
+            "240"
           ],
           "x-ratelimit-limit-requests-day": [
-            "12000"
+            "48000"
           ],
           "x-ratelimit-remaining-requests": [
-            "111"
+            "218"
           ],
           "x-ratelimit-remaining-requests-day": [
-            "11991"
+            "47978"
           ],
           "x-ratelimit-reset-requests": [
-            "1751751162"
+            "1759360547"
           ],
           "x-ratelimit-reset-requests-day": [
-            "1751837502"
+            "1759446887"
           ],
           "strict-transport-security": [
             "max-age=31536000; includeSubDomains"
@@ -80,10 +80,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"choices\":[{\"finish_reason\":\"stop\",\"index\":0,\"logprobs\":null,\"message\":{\"content\":\"hello\",\"role\":\"assistant\"}}],\"created\":1751751102.3105664,\"id\":\"f4a3da9f-d22f-4888-8050-09e4e870522e\",\"model\":\"Meta-Llama-3.3-70B-Instruct\",\"object\":\"chat.completion\",\"system_fingerprint\":\"fastcoe\",\"usage\":{\"completion_tokens\":1,\"completion_tokens_after_first_per_sec\":0,\"completion_tokens_after_first_per_sec_first_ten\":0,\"completion_tokens_per_sec\":15.279573339550607,\"end_time\":1751751102.310529,\"is_last_response\":true,\"prompt_tokens\":43,\"prompt_tokens_details\":{\"cached_tokens\":0},\"start_time\":1751751102.2450821,\"stop_reason\":\"stop\",\"time_to_first_token\":0.05230355262756348,\"total_latency\":0.06544685363769531,\"total_tokens\":44,\"total_tokens_per_sec\":672.3012269402267}}\n"
+          "string": "{\"choices\":[{\"finish_reason\":\"stop\",\"index\":0,\"logprobs\":null,\"message\":{\"content\":\"hello\",\"role\":\"assistant\"}}],\"created\":1759360487.2733316,\"id\":\"9a309a53-1d97-45e8-8718-7102cfcd1a09\",\"model\":\"Meta-Llama-3.3-70B-Instruct\",\"object\":\"chat.completion\",\"system_fingerprint\":\"fastcoe\",\"usage\":{\"completion_tokens\":1,\"completion_tokens_after_first_per_sec\":0,\"completion_tokens_after_first_per_sec_first_ten\":0,\"completion_tokens_after_first_per_sec_graph\":0,\"completion_tokens_per_sec\":15.720720686953946,\"end_time\":1759360487.2732441,\"is_last_response\":true,\"prompt_tokens\":43,\"prompt_tokens_details\":{\"cached_tokens\":0},\"start_time\":1759360487.2096338,\"stop_reason\":\"stop\",\"time_to_first_token\":0.05010795593261719,\"total_latency\":0.06361031532287598,\"total_tokens\":44,\"total_tokens_per_sec\":691.7117102259737}}\n"
         }
       },
-      "recorded_at": "Sat, 05 Jul 2025 21:31:42 GMT"
+      "recorded_at": "Wed, 01 Oct 2025 23:14:47 GMT"
     },
     {
       "request": {
@@ -112,7 +112,7 @@
         },
         "headers": {
           "date": [
-            "Sat, 05 Jul 2025 21:31:42 GMT"
+            "Wed, 01 Oct 2025 23:14:47 GMT"
           ],
           "content-type": [
             "application/json; charset=utf-8"
@@ -124,25 +124,25 @@
             "keep-alive"
           ],
           "inference-id": [
-            "59a776da-15f3-4172-8933-933a12d7b56a"
+            "f19c5443-22d1-4c62-b559-98af54dfb652"
           ],
           "x-ratelimit-limit-requests": [
-            "120"
+            "240"
           ],
           "x-ratelimit-limit-requests-day": [
-            "12000"
+            "48000"
           ],
           "x-ratelimit-remaining-requests": [
-            "110"
+            "217"
           ],
           "x-ratelimit-remaining-requests-day": [
-            "11990"
+            "47977"
           ],
           "x-ratelimit-reset-requests": [
-            "1751751162"
+            "1759360547"
           ],
           "x-ratelimit-reset-requests-day": [
-            "1751837502"
+            "1759446887"
           ],
           "strict-transport-security": [
             "max-age=31536000; includeSubDomains"
@@ -165,10 +165,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"choices\":[{\"finish_reason\":\"stop\",\"index\":0,\"logprobs\":null,\"message\":{\"content\":\"hello\",\"role\":\"assistant\"}}],\"created\":1751751102.5399284,\"id\":\"53d01505-504f-47c6-a8d7-25f39a52cff3\",\"model\":\"Meta-Llama-3.3-70B-Instruct\",\"object\":\"chat.completion\",\"system_fingerprint\":\"fastcoe\",\"usage\":{\"completion_tokens\":1,\"completion_tokens_after_first_per_sec\":0,\"completion_tokens_after_first_per_sec_first_ten\":0,\"completion_tokens_per_sec\":15.89853572741711,\"end_time\":1751751102.5398855,\"is_last_response\":true,\"prompt_tokens\":78,\"prompt_tokens_details\":{\"cached_tokens\":0},\"start_time\":1751751102.4769866,\"stop_reason\":\"stop\",\"time_to_first_token\":0.049533843994140625,\"total_latency\":0.06289887428283691,\"total_tokens\":79,\"total_tokens_per_sec\":1255.9843224659517}}\n"
+          "string": "{\"choices\":[{\"finish_reason\":\"stop\",\"index\":0,\"logprobs\":null,\"message\":{\"content\":\"hello\",\"role\":\"assistant\"}}],\"created\":1759360487.5306253,\"id\":\"052c15b0-18a4-4f28-9b6e-8d9e37b73b16\",\"model\":\"Meta-Llama-3.3-70B-Instruct\",\"object\":\"chat.completion\",\"system_fingerprint\":\"fastcoe\",\"usage\":{\"completion_tokens\":1,\"completion_tokens_after_first_per_sec\":0,\"completion_tokens_after_first_per_sec_first_ten\":0,\"completion_tokens_after_first_per_sec_graph\":0,\"completion_tokens_per_sec\":16.40219618639428,\"end_time\":1759360487.5305502,\"is_last_response\":true,\"prompt_tokens\":78,\"prompt_tokens_details\":{\"cached_tokens\":0},\"start_time\":1759360487.4695828,\"stop_reason\":\"stop\",\"time_to_first_token\":0.04850459098815918,\"total_latency\":0.060967445373535156,\"total_tokens\":79,\"total_tokens_per_sec\":1295.773498725148}}\n"
         }
       },
-      "recorded_at": "Sat, 05 Jul 2025 21:31:42 GMT"
+      "recorded_at": "Wed, 01 Oct 2025 23:14:47 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"
