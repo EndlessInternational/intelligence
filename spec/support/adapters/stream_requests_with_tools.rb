@@ -38,7 +38,6 @@ RSpec.shared_examples 'stream requests with tools' do | options = {} |
       response = nil
       conversation = create_conversation( "Where am I located?\n" )
 
-      contents = []
       adapter = send( options[ :adapter ] || :adapter ) 
       response = create_and_make_stream_request( adapter, conversation, tools: [ get_location_tool ] ) do | result |
         expect( result ).to be_a( Intelligence::ChatResult )
@@ -49,15 +48,6 @@ RSpec.shared_examples 'stream requests with tools' do | options = {} |
         choice = result.choices.first
         expect( choice.message ).to be_a( Intelligence::Message )
         expect( choice.message.contents ).not_to be_nil
-     
-        contents_fragments = choice.message.contents 
-        contents.fill( nil, contents.length..(contents_fragments.length - 1) )
-
-        contents_fragments.each_with_index do | contents_fragment, index |
-          contents[ index ] = contents[ index ].nil? ? 
-            contents_fragment : 
-            contents[ index ].merge( contents_fragment )
-        end
       end
 
       expect( response.success? ).to be( true ), response_error_description( response )
@@ -65,19 +55,11 @@ RSpec.shared_examples 'stream requests with tools' do | options = {} |
       choice = response.result.choices.first 
       expect( choice.end_reason ).to eq( :tool_called )
     
-      # test of collected contents
-      expect( contents.length ).to be > 0
-      tool_calls = contents.select { | content | content.is_a?( Intelligence::MessageContent::ToolCall ) }
-      expect( tool_calls.length ).to be 1
-      expect( tool_calls.last.tool_name ).to eq( 'get_location' )
-
-      # separate test of response payload
       contents = choice.message.contents
       expect( contents.length ).to be > 0
       tool_calls = contents.select { | content | content.is_a?( Intelligence::MessageContent::ToolCall ) }
       expect( tool_calls.length ).to be 1
       expect( tool_calls.last.tool_name ).to eq( 'get_location' )
-
     end
   end 
 
@@ -90,7 +72,6 @@ RSpec.shared_examples 'stream requests with tools' do | options = {} |
         "What is the current weather?\n"
       )
 
-      contents = []
       adapter = send( options[ :adapter ] || :adapter ) 
       response = create_and_make_stream_request( adapter, conversation, tools: [ get_weather_tool ] ) do | result |
         expect( result ).to be_a( Intelligence::ChatResult )
@@ -100,31 +81,13 @@ RSpec.shared_examples 'stream requests with tools' do | options = {} |
 
         choice = result.choices.first
         expect( choice.message ).to be_a( Intelligence::Message )
-        expect( choice.message.contents ).not_to be_nil
-     
-        contents_fragments = choice.message.contents 
-        contents.fill( nil, contents.length..(contents_fragments.length - 1) )
-
-        contents_fragments.each_with_index do | contents_fragment, index |
-          contents[ index ] = contents[ index ].nil? ? 
-            contents_fragment : 
-            contents[ index ].merge( contents_fragment )
-        end
+        expect( choice.message.contents ).not_to be_nil     
       end
 
       expect( response.success? ).to be( true ), response_error_description( response )
       
       choice = response.result.choices.first 
       expect( choice.end_reason ).to eq( :tool_called )
-
-      expect( contents.length ).to be > 0
-      tool_calls = contents.select { | content | content.is_a?( Intelligence::MessageContent::ToolCall ) }
-      expect( tool_calls.length ).to be 1
-
-      tool_call = tool_calls.first
-      expect( tool_call.tool_name ).to eq( 'get_weather' )
-      expect( tool_call.tool_parameters ).to be_a( Hash )
-      expect( tool_call.tool_parameters[ :city ] ).to match( /seattle/i )
 
       contents = choice.message.contents
       expect( contents.length ).to be > 0
@@ -144,7 +107,6 @@ RSpec.shared_examples 'stream requests with tools' do | options = {} |
 
       conversation = create_conversation( "Where am I located?" )
       
-      contents = []
       adapter = send( options[ :adapter ] || :adapter ) 
       tools =  [ get_location_tool, get_weather_tool ]
       response = create_and_make_stream_request( adapter, conversation, tools: tools ) do | result |
@@ -155,29 +117,13 @@ RSpec.shared_examples 'stream requests with tools' do | options = {} |
 
         choice = result.choices.first
         expect( choice.message ).to be_a( Intelligence::Message )
-        expect( choice.message.contents ).not_to be_nil
-     
-        contents_fragments = choice.message.contents 
-        contents.fill( nil, contents.length..(contents_fragments.length - 1) )
-
-        contents_fragments.each_with_index do | contents_fragment, index |
-          contents[ index ] = contents[ index ].nil? ? 
-            contents_fragment : 
-            contents[ index ].merge( contents_fragment )
-        end
+        expect( choice.message.contents ).not_to be_nil     
       end
 
       expect( response.success? ).to be( true ), response_error_description( response )
       
       choice = response.result.choices.first 
       expect( choice.end_reason ).to eq( :tool_called )
-
-      expect( contents.length ).to be > 0
-      tool_calls = contents.select { | content | content.is_a?( Intelligence::MessageContent::ToolCall ) }
-      expect( tool_calls.length ).to be 1
-
-      tool_call = tool_calls.first
-      expect( tool_call.tool_name ).to eq( 'get_location' )
 
       contents = choice.message.contents
       expect( contents.length ).to be > 0
@@ -199,7 +145,6 @@ RSpec.shared_examples 'stream requests with tools' do | options = {} |
         "What is the current weather?\n"
       )
       
-      contents = []
       adapter = send( options[ :adapter ] || :adapter ) 
       tools = [ get_location_tool, get_weather_tool ]
       response = create_and_make_stream_request( adapter, conversation, tools: tools ) do | result |
@@ -211,31 +156,13 @@ RSpec.shared_examples 'stream requests with tools' do | options = {} |
 
         choice = result.choices.first
         expect( choice.message ).to be_a( Intelligence::Message )
-        expect( choice.message.contents ).not_to be_nil
-     
-        contents_fragments = choice.message.contents 
-        contents.fill( nil, contents.length..(contents_fragments.length - 1) )
-
-        contents_fragments.each_with_index do | contents_fragment, index |
-          contents[ index ] = contents[ index ].nil? ? 
-            contents_fragment : 
-            contents[ index ].merge( contents_fragment )
-        end
+        expect( choice.message.contents ).not_to be_nil     
       end
 
       expect( response.success? ).to be( true ), response_error_description( response )
       
       choice = response.result.choices.first 
       expect( choice.end_reason ).to eq( :tool_called )
-
-      expect( contents.length ).to be > 0
-      tool_calls = contents.select { | content | content.is_a?( Intelligence::MessageContent::ToolCall ) }
-      expect( tool_calls.length ).to be 1
-
-      tool_call = tool_calls.last 
-      expect( tool_call.tool_name ).to eq( 'get_weather' )
-      expect( tool_call.tool_parameters ).to be_a( Hash )
-      expect( tool_call.tool_parameters[ :city ] ).to match( /seattle/i )
 
       contents = choice.message.contents
       expect( contents.length ).to be > 0
@@ -246,8 +173,6 @@ RSpec.shared_examples 'stream requests with tools' do | options = {} |
       expect( tool_call.tool_name ).to eq( 'get_weather' )
       expect( tool_call.tool_parameters ).to be_a( Hash )
       expect( tool_call.tool_parameters[ :city ] ).to match( /seattle/i )
-
-
    end
   end
 
@@ -278,7 +203,6 @@ RSpec.shared_examples 'stream requests with tools' do | options = {} |
           end 
         end 
     
-        contents = []
         adapter = send( options[ :adapter ] || :adapter ) 
         tools = [ get_location_tool ]
         response = create_and_make_stream_request( adapter, conversation, tools: tools ) do | result |
@@ -289,16 +213,7 @@ RSpec.shared_examples 'stream requests with tools' do | options = {} |
 
           choice = result.choices.first
           expect( choice.message ).to be_a( Intelligence::Message )
-          expect( choice.message.contents ).not_to be_nil
-       
-          contents_fragments = choice.message.contents 
-          contents.fill( nil, contents.length..(contents_fragments.length - 1) )
-
-          contents_fragments.each_with_index do | contents_fragment, index |
-            contents[ index ] = contents[ index ].nil? ? 
-              contents_fragment : 
-              contents[ index ].merge( contents_fragment )
-          end
+          expect( choice.message.contents ).not_to be_nil       
         end
 
         expect( response.success? ).to be( true ), response_error_description( response )
@@ -306,15 +221,10 @@ RSpec.shared_examples 'stream requests with tools' do | options = {} |
         choice = response.result.choices.first 
         expect( choice.end_reason ).to eq( :ended )
 
-        expect( contents.length ).to be > 0
-        expect( contents.last ).to be_a( Intelligence::MessageContent::Text )
-        expect( contents.last.text ).to match( /seattle/i )
-
         contents = choice.message.contents
         expect( contents.length ).to be > 0
         expect( contents.last ).to be_a( Intelligence::MessageContent::Text )
         expect( contents.last.text ).to match( /seattle/i )
-
       end
     end
   end 
@@ -346,7 +256,6 @@ RSpec.shared_examples 'stream requests with tools' do | options = {} |
           end 
         end 
        
-        contents = []
         adapter = send( options[ :adapter ] || :adapter ) 
         tools =  [ get_location_tool, get_weather_tool ]
         response = create_and_make_stream_request( adapter, conversation, tools: tools ) do | result |
@@ -358,30 +267,13 @@ RSpec.shared_examples 'stream requests with tools' do | options = {} |
 
           choice = result.choices.first
           expect( choice.message ).to be_a( Intelligence::Message )
-          expect( choice.message.contents ).not_to be_nil
-       
-          contents_fragments = choice.message.contents 
-          contents.fill( nil, contents.length..(contents_fragments.length - 1) )
-
-          contents_fragments.each_with_index do | contents_fragment, index |
-            contents[ index ] = contents[ index ].nil? ? 
-              contents_fragment : 
-              contents[ index ].merge( contents_fragment )
-          end
+          expect( choice.message.contents ).not_to be_nil       
         end
 
         expect( response.success? ).to be( true ), response_error_description( response )
         
         choice = response.result.choices.first 
         expect( choice.end_reason ).to eq( :tool_called )
-
-        expect( contents.length ).to be > 0
-        expect( contents.last ).to be_a( Intelligence::MessageContent::ToolCall )
-
-        tool_call = contents.last 
-        expect( tool_call.tool_name ).to eq( 'get_weather' )
-        expect( tool_call.tool_parameters ).to be_a( Hash )
-        expect( tool_call.tool_parameters[ :city ] ).to match( /seattle/i )
 
         contents = choice.message.contents
         expect( contents.length ).to be > 0
@@ -391,7 +283,7 @@ RSpec.shared_examples 'stream requests with tools' do | options = {} |
         expect( tool_call.tool_name ).to eq( 'get_weather' )
         expect( tool_call.tool_parameters ).to be_a( Hash )
         expect( tool_call.tool_parameters[ :city ] ).to match( /seattle/i )
-
+        
       end
     end
   end 

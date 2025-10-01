@@ -32,7 +32,6 @@ RSpec.shared_examples 'stream requests with parallel tools' do | options = {} |
         "What is the weather in London, Paris and Rome right now?\n" 
       )
       
-      contents = []
       adapter = send( options[ :adapter ] || :adapter ) 
       tools = [ get_weather_tool ]
       response = create_and_make_stream_request( adapter, conversation, tools: tools ) do | result |
@@ -44,21 +43,19 @@ RSpec.shared_examples 'stream requests with parallel tools' do | options = {} |
         choice = result.choices.first
         expect( choice.message ).to be_a( Intelligence::Message )
         expect( choice.message.contents ).not_to be_nil
-     
-        contents_fragments = choice.message.contents 
-        contents.fill( nil, contents.length..(contents_fragments.length - 1) )
-
-        contents_fragments.each_with_index do | contents_fragment, index |
-          contents[ index ] = contents[ index ].nil? ? 
-            contents_fragment : 
-            contents[ index ].merge( contents_fragment )
-        end
       end
 
       expect( response.success? ).to be( true ), response_error_description( response )
+      expect( response.result ).not_to be_nil
+      expect( response.result ).to respond_to( :message )
+      expect( response.result.message ).not_to be_nil
       
       choice = response.result.choices.first 
       expect( choice.end_reason ).to eq( :tool_called )
+
+      contents = response.result.message.contents
+      expect( contents ).not_to be_nil
+      expect( contents.length ).to be >= 3 
 
       tool_calls = contents.select { | content | content.is_a?( Intelligence::MessageContent::ToolCall ) }
       expect( tool_calls.length ).to be >= 3

@@ -12,9 +12,7 @@ RSpec.shared_examples 'stream requests with thought' do | options = {} |
         "What is the length of the shortest side?\n" 
       )
       
-      contents = []
       response = create_and_make_stream_request( send( options[ :adapter ] || :adapter ), conversation ) do | result | 
-        
         expect( result ).to be_a( Intelligence::ChatResult )
         expect( result.choices ).not_to be_nil
         expect( result.choices.length ).to eq( 1 )
@@ -22,24 +20,12 @@ RSpec.shared_examples 'stream requests with thought' do | options = {} |
         choice = result.choices.first
         expect( choice.message ).to be_a( Intelligence::Message )
         expect( choice.message.contents ).not_to be_nil
-
-        contents = Intelligence::MessageContent.merge( contents, choice.message.contents )
       end
       
       expect( response.success? ).to be( true ), response_error_description( response )
       expect( response.result ).not_to be_nil
       expect( response.result ).to respond_to( :message )
       expect( response.result.message ).not_to be_nil
-
-      expect( contents ).not_to be_nil
-      expect( contents.length ).to be >= 1 
-      expect( contents.any? { | c | c.is_a?( Intelligence::MessageContent::Thought ) } ).to be true
-      contents.each do | content |
-        if content.is_a?( Intelligence::MessageContent::Thought )
-          expect( content.text ).not_to be_nil
-          expect( content.text.length ).to be >= 1 
-        end
-      end
 
       contents = response.result.message.contents
       expect( contents ).not_to be_nil
