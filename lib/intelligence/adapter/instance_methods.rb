@@ -66,17 +66,18 @@ module Intelligence
               if destination_content = destination_contents[ content_index ]
                 case destination_content[ :type ]
                 when :thought 
-                  destination_content[ :text ] = 
-                    destination_content[ :text ].to_s + source_content[ :text ].to_s
-                  destination_content[ :ciphertext ] = 
-                    destination_content[ :ciphertext ].to_s + source_content[ :ciphertext ].to_s
+                  text = destination_content[ :text ].to_s + source_content[ :text ].to_s
+                  destination_content.merge!( source_content )
+                  destination_content[ :text ] = text
                 when :text 
-                  destination_content[ :text ] = 
-                    destination_content[ :text ].to_s + source_content[ :text ].to_s
+                  text = destination_content[ :text ].to_s + source_content[ :text ].to_s
+                  destination_content.merge!( source_content )
+                  destination_content[ :text ] = text
                 when :tool_call
-                  destination_content[ :tool_parameters ] =
-                    destination_content[ :tool_parameters ].to_s + 
-                    source_content[ :tool_parameters ].to_s
+                  tool_parameters = destination_content[ :tool_parameters ].to_s + 
+                                    source_content[ :tool_parameters ].to_s
+                  destination_content.merge!( source_content )
+                  destination_content[ :tool_parameters ] = tool_parameters
                 when :web_reference
                   # this only appears once so does not need to be merged subsequently
                 end
