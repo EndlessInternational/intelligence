@@ -47,8 +47,8 @@ module Intelligence
 
           # google specific tool configuration
           tool                              array: true, as: :tools, &Tool.schema 
-          tool_configuration as: :tool_config do
-            function_calling as: :function_calling_config do 
+          tool_configuration                as: :tool_config do
+            function_calling                as: :function_calling_config do 
               mode                Symbol,   in: [ :auto, :any, :none ]
               allowed_function_names  String, array: true 
             end
@@ -57,21 +57,9 @@ module Intelligence
           # build-in tools are called 'abilities' in Intelligence so as not to conflic 
           # with the caller defined tools  
           abilities do 
-            # this appears to be a ( now ) legacy argument and is no longer supported
-            # with the 2.0 models
-            google_search_retrieval do 
-              dynamic_retrieval             as: :dynamic_retrieval_config, default: {} do 
-                mode              String,   default: 'MODE_DYNAMIC'
-                threshold         Float,    as: :dynamic_threshold, in: 0..1, default: 0.3
-              end
-            end
-
-            # this argument and is only supported with the 2.0 or later models
-            google_search do 
-            end 
-
-            code_execution do 
-            end
+            web_search                      as: :googleSearch do; end 
+            web_browser                     as: :urlContext do; end
+            code_execution                  as: :codeExecution do; end
           end 
 
         end
