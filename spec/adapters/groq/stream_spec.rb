@@ -12,8 +12,21 @@ RSpec.describe "#{Intelligence::Adapter[ :groq ]} stream requests", :groq do
     Intelligence::Adapter[ :groq ].build! do   
       key                     ENV[ 'GROQ_API_KEY' ]
       chat_options do
-        model                 'mistral-saba-24b'
+        model                 'moonshotai/kimi-k2-instruct-0905'
         max_tokens            24
+        temperature           0
+
+        stream                true
+      end
+    end
+  end
+
+  let( :adapter_with_extended_tokens ) do
+    Intelligence::Adapter[ :groq ].build! do   
+      key                     ENV[ 'GROQ_API_KEY' ]
+      chat_options do
+        model                 'moonshotai/kimi-k2-instruct-0905'
+        max_tokens            1024
         temperature           0
 
         stream                true
@@ -25,7 +38,7 @@ RSpec.describe "#{Intelligence::Adapter[ :groq ]} stream requests", :groq do
     Intelligence::Adapter[ :groq ].build! do   
       key   ENV[ 'GROQ_API_KEY' ]
       chat_options do
-        model                 'mistral-saba-24b'
+        model                 'moonshotai/kimi-k2-instruct-0905'
         max_tokens            64 
         stop                  'five'
         temperature           0
@@ -39,7 +52,7 @@ RSpec.describe "#{Intelligence::Adapter[ :groq ]} stream requests", :groq do
     Intelligence::Adapter[ :groq ].build! do   
       key                     ENV[ 'GROQ_API_KEY' ]
       chat_options do
-        model                 'moonshotai/kimi-k2-instruct'
+        model                 'moonshotai/kimi-k2-instruct-0905'
         max_tokens            256 
         temperature           0
 
@@ -62,5 +75,6 @@ RSpec.describe "#{Intelligence::Adapter[ :groq ]} stream requests", :groq do
   include_examples 'stream requests with tools', adapter: :adapter_with_tool
   include_examples 'stream requests with parallel tools', adapter: :adapter_with_tool
   include_examples 'stream requests with tools multiturn', adapter: :adapter_with_tool
+  include_examples 'stream requests with calculator tool', adapter: :adapter_with_tool
 
 end

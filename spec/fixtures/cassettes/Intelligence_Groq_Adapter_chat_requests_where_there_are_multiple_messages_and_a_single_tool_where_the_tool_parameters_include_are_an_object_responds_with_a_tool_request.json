@@ -6,7 +6,7 @@
         "uri": "https://api.groq.com/openai/v1/chat/completions",
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"model\":\"moonshotai/kimi-k2-instruct\",\"max_tokens\":256,\"temperature\":0.0,\"tools\":[{\"type\":\"function\",\"function\":{\"name\":\"get_location\",\"description\":\"The get_location tool will return the users city, state or province and country.\",\"parameters\":{\"type\":\"object\",\"properties\":{},\"required\":[]}}},{\"type\":\"function\",\"function\":{\"name\":\"get_weather\",\"description\":\"The get_weather tool returns the current weather in given locality.\",\"parameters\":{\"type\":\"object\",\"properties\":{\"location\":{\"type\":\"object\",\"description\":\"The locality for which the weather will be returned\",\"properties\":{\"city\":{\"type\":\"string\",\"description\":\"The city or town for which the current weather should be returned.\"},\"state\":{\"type\":\"string\",\"description\":\"The state or province for which the current weather should be returned. If this is not provided the largest or most prominent city with the given name, in the given country or in the worldi, will be assumed.\"},\"country\":{\"type\":\"string\",\"description\":\"The country for which the given weather should be returned. If this is not provided the largest or most prominent city with the given name will be returned.\"}},\"required\":[\"city\"]}},\"required\":[\"location\"]}}}],\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"I am in Seattle, WA\\n\"},{\"role\":\"assistant\",\"content\":\"Got it! Let me know if you need any local insights or information related to Seattle!\\n\"},{\"role\":\"user\",\"content\":\"What is the current weather?\\n\"}]}"
+          "string": "{\"model\":\"openai/gpt-oss-120b\",\"max_tokens\":1024,\"temperature\":0.0,\"tools\":[{\"type\":\"function\",\"function\":{\"name\":\"get_location\",\"description\":\"The get_location tool will return the users city, state or province and country.\",\"parameters\":{\"type\":\"object\",\"properties\":{},\"required\":[]}}},{\"type\":\"function\",\"function\":{\"name\":\"get_weather\",\"description\":\"The get_weather tool returns the current weather in given locality.\",\"parameters\":{\"type\":\"object\",\"properties\":{\"location\":{\"type\":\"object\",\"description\":\"The locality for which the weather will be returned\",\"properties\":{\"city\":{\"type\":\"string\",\"description\":\"The city or town for which the current weather should be returned.\"},\"state\":{\"type\":\"string\",\"description\":\"The state or province for which the current weather should be returned. If this is not provided the largest or most prominent city with the given name, in the given country or in the worldi, will be assumed.\"},\"country\":{\"type\":\"string\",\"description\":\"The country for which the given weather should be returned. If this is not provided the largest or most prominent city with the given name will be returned.\"}},\"required\":[\"city\"]}},\"required\":[\"location\"]}}}],\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"I am in Seattle, WA\\n\"},{\"role\":\"assistant\",\"content\":\"Got it! Let me know if you need any local insights or information related to Seattle!\\n\"},{\"role\":\"user\",\"content\":\"What is the current weather?\\n\"}]}"
         },
         "headers": {
           "User-Agent": [
@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Tue, 15 Jul 2025 15:42:36 GMT"
+            "Thu, 02 Oct 2025 18:27:24 GMT"
           ],
           "content-type": [
             "application/json"
@@ -38,6 +38,9 @@
           "connection": [
             "keep-alive"
           ],
+          "content-encoding": [
+            "gzip"
+          ],
           "cache-control": [
             "private, max-age=0, no-store, no-cache, must-revalidate"
           ],
@@ -45,25 +48,25 @@
             "Origin"
           ],
           "x-groq-region": [
-            "us-west-1"
+            "dls"
           ],
           "x-ratelimit-limit-requests": [
             "1000"
           ],
           "x-ratelimit-limit-tokens": [
-            "10000"
+            "8000"
           ],
           "x-ratelimit-remaining-requests": [
-            "992"
+            "976"
           ],
           "x-ratelimit-remaining-tokens": [
-            "8255"
+            "6995"
           ],
           "x-ratelimit-reset-requests": [
-            "11m30.847999999s"
+            "34m33.127s"
           ],
           "x-ratelimit-reset-tokens": [
-            "10.469s"
+            "7.531999999s"
           ],
           "x-request-id": [
             "<X-REQUEST-ID>"
@@ -83,19 +86,16 @@
           "cf-ray": [
             "<CF-RAY>"
           ],
-          "content-encoding": [
-            "gzip"
-          ],
           "alt-svc": [
             "h3=\":443\"; ma=86400"
           ]
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\"id\":\"chatcmpl-4b2d1cd6-b35f-4f7f-81c2-75dfb7a1ad42\",\"object\":\"chat.completion\",\"created\":1752594156,\"model\":\"moonshotai/kimi-k2-instruct\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"tool_calls\":[{\"id\":\"0\",\"type\":\"function\",\"function\":{\"name\":\"get_weather\",\"arguments\":\"{\\\"location\\\":{\\\"city\\\":\\\"Seattle\\\",\\\"state\\\":\\\"WA\\\"}}\"}}]},\"logprobs\":null,\"finish_reason\":\"tool_calls\"}],\"usage\":{\"queue_time\":0.176469611,\"prompt_tokens\":325,\"prompt_time\":0.021215328,\"completion_tokens\":28,\"completion_time\":0.080932451,\"total_tokens\":353,\"total_time\":0.102147779},\"usage_breakdown\":null,\"system_fingerprint\":\"fp_6e6ff3688b\",\"x_groq\":{\"id\":\"req_01k07c12mbfnd86xdy9j8qfpvd\"},\"service_tier\":\"on_demand\"}\n"
+          "string": "{\"id\":\"chatcmpl-3f6a671a-e0f5-4dbd-be77-099b32db051f\",\"object\":\"chat.completion\",\"created\":1759429644,\"model\":\"openai/gpt-oss-120b\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"reasoning\":\"User wants current weather for Seattle, WA. Need to call get_weather with location city Seattle, state WA, country US. Use function.\",\"tool_calls\":[{\"id\":\"fc_91e71a64-6036-4dd3-a67e-6c028db5485f\",\"type\":\"function\",\"function\":{\"name\":\"get_weather\",\"arguments\":\"{\\\"location\\\":{\\\"city\\\":\\\"Seattle\\\",\\\"country\\\":\\\"US\\\",\\\"state\\\":\\\"WA\\\"}}\"}}]},\"logprobs\":null,\"finish_reason\":\"tool_calls\"}],\"usage\":{\"queue_time\":0.21306932,\"prompt_tokens\":365,\"prompt_time\":0.017655125,\"completion_tokens\":77,\"completion_time\":0.152937357,\"total_tokens\":442,\"total_time\":0.170592482},\"usage_breakdown\":null,\"system_fingerprint\":\"fp_82669fd91d\",\"x_groq\":{\"id\":\"req_01k6k2vkj7fcrak30j4tm9bj8p\"},\"service_tier\":\"on_demand\"}\n"
         }
       },
-      "recorded_at": "Tue, 15 Jul 2025 15:42:36 GMT"
+      "recorded_at": "Thu, 02 Oct 2025 18:27:24 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

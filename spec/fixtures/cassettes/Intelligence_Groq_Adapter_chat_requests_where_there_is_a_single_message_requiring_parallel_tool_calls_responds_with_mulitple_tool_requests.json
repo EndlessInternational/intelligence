@@ -6,7 +6,7 @@
         "uri": "https://api.groq.com/openai/v1/chat/completions",
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"model\":\"moonshotai/kimi-k2-instruct\",\"max_tokens\":256,\"temperature\":0.0,\"tools\":[{\"type\":\"function\",\"function\":{\"name\":\"get_location\",\"description\":\"The get_location tool will return the users city, state or province and country.\",\"parameters\":{\"type\":\"object\",\"properties\":{},\"required\":[]}}},{\"type\":\"function\",\"function\":{\"name\":\"get_weather\",\"description\":\"The get_weather tool will return the current weather in a given locality.\",\"parameters\":{\"type\":\"object\",\"properties\":{\"city\":{\"type\":\"string\",\"description\":\"The city or town for which the current weather should be returned.\"},\"state\":{\"type\":\"string\",\"description\":\"The state or province for which the current weather should be returned. If this is not provided the largest or most prominent city with the given name, in the given country or in the worldi, will be assumed.\"},\"country\":{\"type\":\"string\",\"description\":\"The country for which the given weather should be returned. If this is not provided the largest or most prominent city with the given name will be returned.\"}},\"required\":[\"city\"]}}}],\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"What is the weather in London, Paris and Rome right now?\\n\"}]}"
+          "string": "{\"model\":\"moonshotai/kimi-k2-instruct-0905\",\"max_tokens\":1024,\"temperature\":0.0,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"What is the weather in London, Paris and Rome right now?\\n\"}],\"tools\":[{\"type\":\"function\",\"function\":{\"name\":\"get_weather\",\"description\":\"The get_weather tool will return the current weather in a given locality.\",\"parameters\":{\"type\":\"object\",\"properties\":{\"city\":{\"type\":\"string\",\"description\":\"The city or town for which the current weather should be returned.\"},\"state\":{\"type\":\"string\",\"description\":\"The state or province for which the current weather should be returned. If this is not provided the largest or most prominent city with the given name, in the given country or in the worldi, will be assumed.\"},\"country\":{\"type\":\"string\",\"description\":\"The country for which the given weather should be returned. If this is not provided the largest or most prominent city with the given name will be returned.\"}},\"required\":[\"city\"]}}}]}"
         },
         "headers": {
           "User-Agent": [
@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Tue, 15 Jul 2025 15:42:36 GMT"
+            "Thu, 02 Oct 2025 18:27:24 GMT"
           ],
           "content-type": [
             "application/json"
@@ -38,6 +38,9 @@
           "connection": [
             "keep-alive"
           ],
+          "content-encoding": [
+            "gzip"
+          ],
           "cache-control": [
             "private, max-age=0, no-store, no-cache, must-revalidate"
           ],
@@ -45,7 +48,7 @@
             "Origin"
           ],
           "x-groq-region": [
-            "us-west-1"
+            "dls"
           ],
           "x-ratelimit-limit-requests": [
             "1000"
@@ -54,16 +57,16 @@
             "10000"
           ],
           "x-ratelimit-remaining-requests": [
-            "991"
+            "766"
           ],
           "x-ratelimit-remaining-tokens": [
-            "7992"
+            "8307"
           ],
           "x-ratelimit-reset-requests": [
-            "12m57.231s"
+            "5h36m55.294s"
           ],
           "x-ratelimit-reset-tokens": [
-            "12.043s"
+            "10.152999999s"
           ],
           "x-request-id": [
             "<X-REQUEST-ID>"
@@ -83,19 +86,16 @@
           "cf-ray": [
             "<CF-RAY>"
           ],
-          "content-encoding": [
-            "gzip"
-          ],
           "alt-svc": [
             "h3=\":443\"; ma=86400"
           ]
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\"id\":\"chatcmpl-1fe6b4ef-69f2-4da2-b954-db76cc8a0e53\",\"object\":\"chat.completion\",\"created\":1752594156,\"model\":\"moonshotai/kimi-k2-instruct\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"tool_calls\":[{\"id\":\"0\",\"type\":\"function\",\"function\":{\"name\":\"get_weather\",\"arguments\":\"{\\\"city\\\":\\\"London\\\"}\"}},{\"id\":\"1\",\"type\":\"function\",\"function\":{\"name\":\"get_weather\",\"arguments\":\"{\\\"city\\\":\\\"Paris\\\"}\"}},{\"id\":\"2\",\"type\":\"function\",\"function\":{\"name\":\"get_weather\",\"arguments\":\"{\\\"city\\\":\\\"Rome\\\"}\"}}]},\"logprobs\":null,\"finish_reason\":\"tool_calls\"}],\"usage\":{\"queue_time\":0.176553075,\"prompt_tokens\":266,\"prompt_time\":0.012486584,\"completion_tokens\":49,\"completion_time\":0.107850792,\"total_tokens\":315,\"total_time\":0.120337376},\"usage_breakdown\":null,\"system_fingerprint\":\"fp_6e6ff3688b\",\"x_groq\":{\"id\":\"req_01k07c12ztf6zbnwxjtzqe21td\"},\"service_tier\":\"on_demand\"}\n"
+          "string": "{\"id\":\"chatcmpl-28e0a85c-4e81-438c-8c5f-c389df819245\",\"object\":\"chat.completion\",\"created\":1759429644,\"model\":\"moonshotai/kimi-k2-instruct-0905\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"I'll get the current weather for London, Paris, and Rome.\",\"tool_calls\":[{\"id\":\"functions.get_weather:0\",\"type\":\"function\",\"function\":{\"name\":\"get_weather\",\"arguments\":\"{\\\"city\\\":\\\"London\\\",\\\"country\\\":\\\"United Kingdom\\\"}\"}},{\"id\":\"functions.get_weather:1\",\"type\":\"function\",\"function\":{\"name\":\"get_weather\",\"arguments\":\"{\\\"city\\\":\\\"Paris\\\",\\\"country\\\":\\\"France\\\"}\"}},{\"id\":\"functions.get_weather:2\",\"type\":\"function\",\"function\":{\"name\":\"get_weather\",\"arguments\":\"{\\\"city\\\":\\\"Rome\\\",\\\"country\\\":\\\"Italy\\\"}\"}}]},\"logprobs\":null,\"finish_reason\":\"tool_calls\"}],\"usage\":{\"queue_time\":0.277633239,\"prompt_tokens\":257,\"prompt_time\":0.008571044,\"completion_tokens\":81,\"completion_time\":0.238786495,\"total_tokens\":338,\"total_time\":0.247357539,\"prompt_tokens_details\":{\"cached_tokens\":256}},\"usage_breakdown\":null,\"system_fingerprint\":\"fp_6e6ff3688b\",\"x_groq\":{\"id\":\"req_01k6k2vm49f9gtsmyy5e9apwge\"},\"service_tier\":\"on_demand\"}\n"
         }
       },
-      "recorded_at": "Tue, 15 Jul 2025 15:42:36 GMT"
+      "recorded_at": "Thu, 02 Oct 2025 18:27:24 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

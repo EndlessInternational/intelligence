@@ -6,7 +6,7 @@
         "uri": "https://api.groq.com/openai/v1/chat/completions",
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"model\":\"mistral-saba-24b\",\"max_tokens\":64,\"stop\":[\"five\"],\"temperature\":0.0,\"stream\":true,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"count to five in words, all lower case, one word per line\\n\"},{\"role\":\"assistant\",\"content\":\"one\\ntwo\\nthree\\nfour\\nfive\\n\"},{\"role\":\"user\",\"content\":\"count to twenty in words, all lower case, one word per line\\n\"}]}"
+          "string": "{\"model\":\"moonshotai/kimi-k2-instruct-0905\",\"max_tokens\":64,\"stop\":[\"five\"],\"temperature\":0.0,\"stream\":true,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"count to five in words, all lower case, one word per line\\n\"},{\"role\":\"assistant\",\"content\":\"one\\ntwo\\nthree\\nfour\\nfive\\n\"},{\"role\":\"user\",\"content\":\"count to twenty in words, all lower case, one word per line\\n\"}]}"
         },
         "headers": {
           "User-Agent": [
@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Sat, 05 Jul 2025 21:25:46 GMT"
+            "Thu, 02 Oct 2025 18:27:28 GMT"
           ],
           "content-type": [
             "text/event-stream"
@@ -38,6 +38,9 @@
           "connection": [
             "keep-alive"
           ],
+          "cf-ray": [
+            "<CF-RAY>"
+          ],
           "cache-control": [
             "no-cache"
           ],
@@ -45,25 +48,25 @@
             "Origin"
           ],
           "x-groq-region": [
-            "us-west-1"
+            "dls"
           ],
           "x-ratelimit-limit-requests": [
             "1000"
           ],
           "x-ratelimit-limit-tokens": [
-            "6000"
+            "10000"
           ],
           "x-ratelimit-remaining-requests": [
-            "975"
+            "754"
           ],
           "x-ratelimit-remaining-tokens": [
-            "5283"
+            "5758"
           ],
           "x-ratelimit-reset-requests": [
-            "35m59.543999999s"
+            "5h54m14.123999999s"
           ],
           "x-ratelimit-reset-tokens": [
-            "7.163999999s"
+            "25.448s"
           ],
           "x-request-id": [
             "<X-REQUEST-ID>"
@@ -80,19 +83,16 @@
           "server": [
             "cloudflare"
           ],
-          "cf-ray": [
-            "<CF-RAY>"
-          ],
           "alt-svc": [
             "h3=\":443\"; ma=86400"
           ]
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "data: {\"id\":\"chatcmpl-0e0f4677-e23d-4ce4-9eb0-f2c28691161f\",\"object\":\"chat.completion.chunk\",\"created\":1751750746,\"model\":\"mistral-saba-24b\",\"system_fingerprint\":\"fp_07e680a590\",\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"\"},\"logprobs\":null,\"finish_reason\":null}],\"x_groq\":{\"id\":\"req_01jze7p88jf27rn5r34y7dh62k\"}}\n\ndata: {\"id\":\"chatcmpl-0e0f4677-e23d-4ce4-9eb0-f2c28691161f\",\"object\":\"chat.completion.chunk\",\"created\":1751750746,\"model\":\"mistral-saba-24b\",\"system_fingerprint\":\"fp_07e680a590\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"one\"},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"chatcmpl-0e0f4677-e23d-4ce4-9eb0-f2c28691161f\",\"object\":\"chat.completion.chunk\",\"created\":1751750746,\"model\":\"mistral-saba-24b\",\"system_fingerprint\":\"fp_07e680a590\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"\\n\"},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"chatcmpl-0e0f4677-e23d-4ce4-9eb0-f2c28691161f\",\"object\":\"chat.completion.chunk\",\"created\":1751750746,\"model\":\"mistral-saba-24b\",\"system_fingerprint\":\"fp_07e680a590\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"two\"},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"chatcmpl-0e0f4677-e23d-4ce4-9eb0-f2c28691161f\",\"object\":\"chat.completion.chunk\",\"created\":1751750746,\"model\":\"mistral-saba-24b\",\"system_fingerprint\":\"fp_07e680a590\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"\\n\"},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"chatcmpl-0e0f4677-e23d-4ce4-9eb0-f2c28691161f\",\"object\":\"chat.completion.chunk\",\"created\":1751750746,\"model\":\"mistral-saba-24b\",\"system_fingerprint\":\"fp_07e680a590\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"three\"},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"chatcmpl-0e0f4677-e23d-4ce4-9eb0-f2c28691161f\",\"object\":\"chat.completion.chunk\",\"created\":1751750746,\"model\":\"mistral-saba-24b\",\"system_fingerprint\":\"fp_07e680a590\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"\\n\"},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"chatcmpl-0e0f4677-e23d-4ce4-9eb0-f2c28691161f\",\"object\":\"chat.completion.chunk\",\"created\":1751750746,\"model\":\"mistral-saba-24b\",\"system_fingerprint\":\"fp_07e680a590\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"four\"},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"chatcmpl-0e0f4677-e23d-4ce4-9eb0-f2c28691161f\",\"object\":\"chat.completion.chunk\",\"created\":1751750746,\"model\":\"mistral-saba-24b\",\"system_fingerprint\":\"fp_07e680a590\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"\\n\"},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"chatcmpl-0e0f4677-e23d-4ce4-9eb0-f2c28691161f\",\"object\":\"chat.completion.chunk\",\"created\":1751750746,\"model\":\"mistral-saba-24b\",\"system_fingerprint\":\"fp_07e680a590\",\"choices\":[{\"index\":0,\"delta\":{},\"logprobs\":null,\"finish_reason\":\"stop\"}],\"x_groq\":{\"id\":\"req_01jze7p88jf27rn5r34y7dh62k\",\"usage\":{\"queue_time\":0.210875505,\"prompt_tokens\":91,\"prompt_time\":0.004798422,\"completion_tokens\":58,\"completion_time\":0.175757576,\"total_tokens\":149,\"total_time\":0.180555998}}}\n\ndata: [DONE]\n\n"
+          "string": "data: {\"id\":\"chatcmpl-f93b54b5-2619-49a2-8dd6-a66f9177d9a6\",\"object\":\"chat.completion.chunk\",\"created\":1759429648,\"model\":\"moonshotai/kimi-k2-instruct-0905\",\"system_fingerprint\":\"fp_b8565bb333\",\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"\"},\"logprobs\":null,\"finish_reason\":null}],\"x_groq\":{\"id\":\"req_01k6k2vr3df9xt49f3adc561jg\"}}\n\ndata: {\"id\":\"chatcmpl-f93b54b5-2619-49a2-8dd6-a66f9177d9a6\",\"object\":\"chat.completion.chunk\",\"created\":1759429648,\"model\":\"moonshotai/kimi-k2-instruct-0905\",\"system_fingerprint\":\"fp_b8565bb333\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"one\"},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"chatcmpl-f93b54b5-2619-49a2-8dd6-a66f9177d9a6\",\"object\":\"chat.completion.chunk\",\"created\":1759429648,\"model\":\"moonshotai/kimi-k2-instruct-0905\",\"system_fingerprint\":\"fp_b8565bb333\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"\\n\"},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"chatcmpl-f93b54b5-2619-49a2-8dd6-a66f9177d9a6\",\"object\":\"chat.completion.chunk\",\"created\":1759429648,\"model\":\"moonshotai/kimi-k2-instruct-0905\",\"system_fingerprint\":\"fp_b8565bb333\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"two\"},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"chatcmpl-f93b54b5-2619-49a2-8dd6-a66f9177d9a6\",\"object\":\"chat.completion.chunk\",\"created\":1759429648,\"model\":\"moonshotai/kimi-k2-instruct-0905\",\"system_fingerprint\":\"fp_b8565bb333\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"\\n\"},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"chatcmpl-f93b54b5-2619-49a2-8dd6-a66f9177d9a6\",\"object\":\"chat.completion.chunk\",\"created\":1759429648,\"model\":\"moonshotai/kimi-k2-instruct-0905\",\"system_fingerprint\":\"fp_b8565bb333\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"three\"},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"chatcmpl-f93b54b5-2619-49a2-8dd6-a66f9177d9a6\",\"object\":\"chat.completion.chunk\",\"created\":1759429648,\"model\":\"moonshotai/kimi-k2-instruct-0905\",\"system_fingerprint\":\"fp_b8565bb333\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"\\n\"},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"chatcmpl-f93b54b5-2619-49a2-8dd6-a66f9177d9a6\",\"object\":\"chat.completion.chunk\",\"created\":1759429648,\"model\":\"moonshotai/kimi-k2-instruct-0905\",\"system_fingerprint\":\"fp_b8565bb333\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"four\"},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"chatcmpl-f93b54b5-2619-49a2-8dd6-a66f9177d9a6\",\"object\":\"chat.completion.chunk\",\"created\":1759429648,\"model\":\"moonshotai/kimi-k2-instruct-0905\",\"system_fingerprint\":\"fp_b8565bb333\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"\\n\"},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"chatcmpl-f93b54b5-2619-49a2-8dd6-a66f9177d9a6\",\"object\":\"chat.completion.chunk\",\"created\":1759429648,\"model\":\"moonshotai/kimi-k2-instruct-0905\",\"system_fingerprint\":\"fp_b8565bb333\",\"choices\":[{\"index\":0,\"delta\":{},\"logprobs\":null,\"finish_reason\":\"stop\"}],\"x_groq\":{\"id\":\"req_01k6k2vr3df9xt49f3adc561jg\",\"usage\":{\"queue_time\":0.057217611,\"prompt_tokens\":98,\"prompt_time\":0.028649464,\"completion_tokens\":55,\"completion_time\":0.099069944,\"total_tokens\":153,\"total_time\":0.127719408}},\"usage\":{\"queue_time\":0.057217611,\"prompt_tokens\":98,\"prompt_time\":0.028649464,\"completion_tokens\":55,\"completion_time\":0.099069944,\"total_tokens\":153,\"total_time\":0.127719408}}\n\ndata: [DONE]\n\n"
         }
       },
-      "recorded_at": "Sat, 05 Jul 2025 21:25:46 GMT"
+      "recorded_at": "Thu, 02 Oct 2025 18:27:28 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

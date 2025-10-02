@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Sat, 05 Jul 2025 21:25:43 GMT"
+            "Thu, 02 Oct 2025 18:27:26 GMT"
           ],
           "content-type": [
             "application/json"
@@ -38,6 +38,9 @@
           "connection": [
             "keep-alive"
           ],
+          "cf-ray": [
+            "<CF-RAY>"
+          ],
           "cache-control": [
             "private, max-age=0, no-store, no-cache, must-revalidate"
           ],
@@ -45,7 +48,7 @@
             "Origin"
           ],
           "x-groq-region": [
-            "us-west-1"
+            "dls"
           ],
           "x-request-id": [
             "<X-REQUEST-ID>"
@@ -62,9 +65,6 @@
           "server": [
             "cloudflare"
           ],
-          "cf-ray": [
-            "<CF-RAY>"
-          ],
           "alt-svc": [
             "h3=\":443\"; ma=86400"
           ]
@@ -74,7 +74,7 @@
           "string": "{\"error\":{\"message\":\"Invalid API Key\",\"type\":\"invalid_request_error\",\"code\":\"invalid_api_key\"}}\n"
         }
       },
-      "recorded_at": "Sat, 05 Jul 2025 21:25:43 GMT"
+      "recorded_at": "Thu, 02 Oct 2025 18:27:26 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

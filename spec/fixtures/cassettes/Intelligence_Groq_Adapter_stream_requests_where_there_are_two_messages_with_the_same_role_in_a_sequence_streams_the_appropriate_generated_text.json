@@ -6,7 +6,7 @@
         "uri": "https://api.groq.com/openai/v1/chat/completions",
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"model\":\"mistral-saba-24b\",\"max_tokens\":24,\"temperature\":0.0,\"stream\":true,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"the word to remember is 'blue'\\n\"},{\"role\":\"assistant\",\"content\":\"ok\\n\"},{\"role\":\"user\",\"content\":\"the word has been changed to 'red'!\\n\"},{\"role\":\"user\",\"content\":\"what is the word?\\n\"}]}"
+          "string": "{\"model\":\"moonshotai/kimi-k2-instruct-0905\",\"max_tokens\":24,\"temperature\":0.0,\"stream\":true,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"the word to remember is 'blue'\\n\"},{\"role\":\"assistant\",\"content\":\"ok\\n\"},{\"role\":\"user\",\"content\":\"the word has been changed to 'red'!\\n\"},{\"role\":\"user\",\"content\":\"what is the word?\\n\"}]}"
         },
         "headers": {
           "User-Agent": [
@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Sat, 05 Jul 2025 21:25:47 GMT"
+            "Thu, 02 Oct 2025 18:27:28 GMT"
           ],
           "content-type": [
             "text/event-stream"
@@ -38,6 +38,9 @@
           "connection": [
             "keep-alive"
           ],
+          "cf-ray": [
+            "<CF-RAY>"
+          ],
           "cache-control": [
             "no-cache"
           ],
@@ -45,25 +48,25 @@
             "Origin"
           ],
           "x-groq-region": [
-            "us-west-1"
+            "dls"
           ],
           "x-ratelimit-limit-requests": [
             "1000"
           ],
           "x-ratelimit-limit-tokens": [
-            "6000"
+            "10000"
           ],
           "x-ratelimit-remaining-requests": [
-            "974"
+            "753"
           ],
           "x-ratelimit-remaining-tokens": [
-            "5192"
+            "5661"
           ],
           "x-ratelimit-reset-requests": [
-            "37m25.918999999s"
+            "5h55m40.507s"
           ],
           "x-ratelimit-reset-tokens": [
-            "8.08s"
+            "26.034s"
           ],
           "x-request-id": [
             "<X-REQUEST-ID>"
@@ -80,19 +83,16 @@
           "server": [
             "cloudflare"
           ],
-          "cf-ray": [
-            "<CF-RAY>"
-          ],
           "alt-svc": [
             "h3=\":443\"; ma=86400"
           ]
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "data: {\"id\":\"chatcmpl-f0bee285-fddf-453a-ae15-a08b7082d8d0\",\"object\":\"chat.completion.chunk\",\"created\":1751750747,\"model\":\"mistral-saba-24b\",\"system_fingerprint\":\"fp_07e680a590\",\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"\"},\"logprobs\":null,\"finish_reason\":null}],\"x_groq\":{\"id\":\"req_01jze7p8qmf28acp5qgsq14zm9\"}}\n\ndata: {\"id\":\"chatcmpl-f0bee285-fddf-453a-ae15-a08b7082d8d0\",\"object\":\"chat.completion.chunk\",\"created\":1751750747,\"model\":\"mistral-saba-24b\",\"system_fingerprint\":\"fp_07e680a590\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"red\"},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"chatcmpl-f0bee285-fddf-453a-ae15-a08b7082d8d0\",\"object\":\"chat.completion.chunk\",\"created\":1751750747,\"model\":\"mistral-saba-24b\",\"system_fingerprint\":\"fp_07e680a590\",\"choices\":[{\"index\":0,\"delta\":{},\"logprobs\":null,\"finish_reason\":\"stop\"}],\"x_groq\":{\"id\":\"req_01jze7p8qmf28acp5qgsq14zm9\",\"usage\":{\"queue_time\":0.21231968599999998,\"prompt_tokens\":79,\"prompt_time\":0.004291491,\"completion_tokens\":2,\"completion_time\":0.006060606,\"total_tokens\":81,\"total_time\":0.010352097}}}\n\ndata: [DONE]\n\n"
+          "string": "data: {\"id\":\"chatcmpl-31012f4a-ab1b-455a-9b3b-8cf2e42ff314\",\"object\":\"chat.completion.chunk\",\"created\":1759429648,\"model\":\"moonshotai/kimi-k2-instruct-0905\",\"system_fingerprint\":\"fp_b8565bb333\",\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"\"},\"logprobs\":null,\"finish_reason\":null}],\"x_groq\":{\"id\":\"req_01k6k2vrckfd8a09hpa22s13jx\"}}\n\ndata: {\"id\":\"chatcmpl-31012f4a-ab1b-455a-9b3b-8cf2e42ff314\",\"object\":\"chat.completion.chunk\",\"created\":1759429648,\"model\":\"moonshotai/kimi-k2-instruct-0905\",\"system_fingerprint\":\"fp_b8565bb333\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"red\"},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"chatcmpl-31012f4a-ab1b-455a-9b3b-8cf2e42ff314\",\"object\":\"chat.completion.chunk\",\"created\":1759429648,\"model\":\"moonshotai/kimi-k2-instruct-0905\",\"system_fingerprint\":\"fp_b8565bb333\",\"choices\":[{\"index\":0,\"delta\":{},\"logprobs\":null,\"finish_reason\":\"stop\"}],\"x_groq\":{\"id\":\"req_01k6k2vrckfd8a09hpa22s13jx\",\"usage\":{\"queue_time\":0.057534883,\"prompt_tokens\":91,\"prompt_time\":0.022672422,\"completion_tokens\":2,\"completion_time\":1.2e-7,\"total_tokens\":93,\"total_time\":0.022672542}},\"usage\":{\"queue_time\":0.057534883,\"prompt_tokens\":91,\"prompt_time\":0.022672422,\"completion_tokens\":2,\"completion_time\":1.2e-7,\"total_tokens\":93,\"total_time\":0.022672542}}\n\ndata: [DONE]\n\n"
         }
       },
-      "recorded_at": "Sat, 05 Jul 2025 21:25:46 GMT"
+      "recorded_at": "Thu, 02 Oct 2025 18:27:28 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

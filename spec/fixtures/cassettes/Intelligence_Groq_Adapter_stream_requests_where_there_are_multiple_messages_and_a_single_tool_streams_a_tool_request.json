@@ -6,7 +6,7 @@
         "uri": "https://api.groq.com/openai/v1/chat/completions",
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"model\":\"moonshotai/kimi-k2-instruct\",\"max_tokens\":256,\"temperature\":0.0,\"tools\":[{\"type\":\"function\",\"function\":{\"name\":\"get_location\",\"description\":\"The get_location tool will return the users city, state or province and country.\",\"parameters\":{\"type\":\"object\",\"properties\":{},\"required\":[]}}},{\"type\":\"function\",\"function\":{\"name\":\"get_weather\",\"description\":\"The get_weather tool will return the current weather in a given locality.\",\"parameters\":{\"type\":\"object\",\"properties\":{\"city\":{\"type\":\"string\",\"description\":\"The city or town for which the current weather should be returned.\"},\"state\":{\"type\":\"string\",\"description\":\"The state or province for which the current weather should be returned. If this is not provided the largest or most prominent city with the given name, in the given country or in the worldi, will be assumed.\"},\"country\":{\"type\":\"string\",\"description\":\"The country for which the given weather should be returned. If this is not provided the largest or most prominent city with the given name will be returned.\"}},\"required\":[\"city\"]}}}],\"stream\":true,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"I am in Seattle, WA\\n\"},{\"role\":\"assistant\",\"content\":\"Got it! Let me know if you need any local insights or information related to Seattle!\\n\"},{\"role\":\"user\",\"content\":\"What is the current weather?\\n\"}]}"
+          "string": "{\"model\":\"moonshotai/kimi-k2-instruct-0905\",\"max_tokens\":256,\"temperature\":0.0,\"tools\":[{\"type\":\"function\",\"function\":{\"name\":\"get_location\",\"description\":\"The get_location tool will return the users city, state or province and country.\",\"parameters\":{\"type\":\"object\",\"properties\":{},\"required\":[]}}},{\"type\":\"function\",\"function\":{\"name\":\"get_weather\",\"description\":\"The get_weather tool will return the current weather in a given locality.\",\"parameters\":{\"type\":\"object\",\"properties\":{\"city\":{\"type\":\"string\",\"description\":\"The city or town for which the current weather should be returned.\"},\"state\":{\"type\":\"string\",\"description\":\"The state or province for which the current weather should be returned. If this is not provided the largest or most prominent city with the given name, in the given country or in the worldi, will be assumed.\"},\"country\":{\"type\":\"string\",\"description\":\"The country for which the given weather should be returned. If this is not provided the largest or most prominent city with the given name will be returned.\"}},\"required\":[\"city\"]}}}],\"stream\":true,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"I am in Seattle, WA\\n\"},{\"role\":\"assistant\",\"content\":\"Got it! Let me know if you need any local insights or information related to Seattle!\\n\"},{\"role\":\"user\",\"content\":\"What is the current weather?\\n\"}]}"
         },
         "headers": {
           "User-Agent": [
@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Tue, 15 Jul 2025 15:44:02 GMT"
+            "Thu, 02 Oct 2025 18:27:29 GMT"
           ],
           "content-type": [
             "text/event-stream"
@@ -38,6 +38,9 @@
           "connection": [
             "keep-alive"
           ],
+          "cf-ray": [
+            "<CF-RAY>"
+          ],
           "cache-control": [
             "no-cache"
           ],
@@ -45,7 +48,7 @@
             "Origin"
           ],
           "x-groq-region": [
-            "us-west-1"
+            "dls"
           ],
           "x-ratelimit-limit-requests": [
             "1000"
@@ -54,16 +57,16 @@
             "10000"
           ],
           "x-ratelimit-remaining-requests": [
-            "987"
+            "751"
           ],
           "x-ratelimit-remaining-tokens": [
-            "9763"
+            "5213"
           ],
           "x-ratelimit-reset-requests": [
-            "18m42.985s"
+            "5h58m33.306s"
           ],
           "x-ratelimit-reset-tokens": [
-            "1.422s"
+            "28.718s"
           ],
           "x-request-id": [
             "<X-REQUEST-ID>"
@@ -80,19 +83,16 @@
           "server": [
             "cloudflare"
           ],
-          "cf-ray": [
-            "<CF-RAY>"
-          ],
           "alt-svc": [
             "h3=\":443\"; ma=86400"
           ]
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "data: {\"id\":\"chatcmpl-a8e4a7bd-f2be-4508-962d-eaabcdc8fe70\",\"object\":\"chat.completion.chunk\",\"created\":1752594242,\"model\":\"moonshotai/kimi-k2-instruct\",\"system_fingerprint\":\"fp_c5bd0a648b\",\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":null},\"logprobs\":null,\"finish_reason\":null}],\"x_groq\":{\"id\":\"req_01k07c3pgtfm59p1e0nkgfx8re\"}}\n\ndata: {\"id\":\"chatcmpl-a8e4a7bd-f2be-4508-962d-eaabcdc8fe70\",\"object\":\"chat.completion.chunk\",\"created\":1752594242,\"model\":\"moonshotai/kimi-k2-instruct\",\"system_fingerprint\":\"fp_c5bd0a648b\",\"choices\":[{\"index\":0,\"delta\":{\"tool_calls\":[{\"id\":\"0\",\"type\":\"function\",\"function\":{\"name\":\"get_weather\",\"arguments\":\"{\\\"city\\\":\\\"Seattle\\\",\\\"state\\\":\\\"WA\\\"}\"},\"index\":0}]},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"chatcmpl-a8e4a7bd-f2be-4508-962d-eaabcdc8fe70\",\"object\":\"chat.completion.chunk\",\"created\":1752594242,\"model\":\"moonshotai/kimi-k2-instruct\",\"system_fingerprint\":\"fp_c5bd0a648b\",\"choices\":[{\"index\":0,\"delta\":{},\"logprobs\":null,\"finish_reason\":\"tool_calls\"}],\"x_groq\":{\"id\":\"req_01k07c3pgtfm59p1e0nkgfx8re\",\"usage\":{\"queue_time\":0.076030762,\"prompt_tokens\":292,\"prompt_time\":0.015869759,\"completion_tokens\":25,\"completion_time\":0.061892824,\"total_tokens\":317,\"total_time\":0.077762583}}}\n\ndata: [DONE]\n\n"
+          "string": "data: {\"id\":\"chatcmpl-c0029e19-99fb-4246-add1-0b57af9570c3\",\"object\":\"chat.completion.chunk\",\"created\":1759429649,\"model\":\"moonshotai/kimi-k2-instruct-0905\",\"system_fingerprint\":\"fp_b8565bb333\",\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":null},\"logprobs\":null,\"finish_reason\":null}],\"x_groq\":{\"id\":\"req_01k6k2vrvtfa084c49dfjrgn0j\"}}\n\ndata: {\"id\":\"chatcmpl-c0029e19-99fb-4246-add1-0b57af9570c3\",\"object\":\"chat.completion.chunk\",\"created\":1759429649,\"model\":\"moonshotai/kimi-k2-instruct-0905\",\"system_fingerprint\":\"fp_b8565bb333\",\"choices\":[{\"index\":0,\"delta\":{\"tool_calls\":[{\"id\":\"functions.get_weather:0\",\"type\":\"function\",\"function\":{\"name\":\"get_weather\",\"arguments\":\"{\\\"city\\\":\\\"Seattle\\\",\\\"state\\\":\\\"WA\\\"}\"},\"index\":0}]},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"chatcmpl-c0029e19-99fb-4246-add1-0b57af9570c3\",\"object\":\"chat.completion.chunk\",\"created\":1759429649,\"model\":\"moonshotai/kimi-k2-instruct-0905\",\"system_fingerprint\":\"fp_b8565bb333\",\"choices\":[{\"index\":0,\"delta\":{},\"logprobs\":null,\"finish_reason\":\"tool_calls\"}],\"x_groq\":{\"id\":\"req_01k6k2vrvtfa084c49dfjrgn0j\",\"usage\":{\"queue_time\":0.05781415,\"prompt_tokens\":337,\"prompt_time\":0.023488966,\"completion_tokens\":25,\"completion_time\":0.079367473,\"total_tokens\":362,\"total_time\":0.102856439,\"prompt_tokens_details\":{\"cached_tokens\":256}}},\"usage\":{\"queue_time\":0.05781415,\"prompt_tokens\":337,\"prompt_time\":0.023488966,\"completion_tokens\":25,\"completion_time\":0.079367473,\"total_tokens\":362,\"total_time\":0.102856439,\"prompt_tokens_details\":{\"cached_tokens\":256}}}\n\ndata: [DONE]\n\n"
         }
       },
-      "recorded_at": "Tue, 15 Jul 2025 15:44:02 GMT"
+      "recorded_at": "Thu, 02 Oct 2025 18:27:29 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

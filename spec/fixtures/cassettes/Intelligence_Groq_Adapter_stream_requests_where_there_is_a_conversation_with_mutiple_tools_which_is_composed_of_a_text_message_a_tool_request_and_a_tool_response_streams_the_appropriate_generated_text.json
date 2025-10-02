@@ -6,7 +6,7 @@
         "uri": "https://api.groq.com/openai/v1/chat/completions",
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"model\":\"moonshotai/kimi-k2-instruct\",\"max_tokens\":256,\"temperature\":0.0,\"tools\":[{\"type\":\"function\",\"function\":{\"name\":\"get_location\",\"description\":\"The get_location tool will return the users city, state or province and country.\",\"parameters\":{\"type\":\"object\",\"properties\":{},\"required\":[]}}},{\"type\":\"function\",\"function\":{\"name\":\"get_location\",\"description\":\"The get_location tool will return the users city, state or province and country.\",\"parameters\":{\"type\":\"object\",\"properties\":{},\"required\":[]}}},{\"type\":\"function\",\"function\":{\"name\":\"get_weather\",\"description\":\"The get_weather tool will return the current weather in a given locality.\",\"parameters\":{\"type\":\"object\",\"properties\":{\"city\":{\"type\":\"string\",\"description\":\"The city or town for which the current weather should be returned.\"},\"state\":{\"type\":\"string\",\"description\":\"The state or province for which the current weather should be returned. If this is not provided the largest or most prominent city with the given name, in the given country or in the worldi, will be assumed.\"},\"country\":{\"type\":\"string\",\"description\":\"The country for which the given weather should be returned. If this is not provided the largest or most prominent city with the given name will be returned.\"}},\"required\":[\"city\"]}}}],\"stream\":true,\"messages\":[{\"role\":\"system\",\"content\":\"You are a helpfull assistant who answers questions succinctly.\"},{\"role\":\"user\",\"content\":\"What is the current weather?\"},{\"role\":\"assistant\",\"tool_calls\":[{\"id\":\"MpfiuoRaM\",\"type\":\"function\",\"function\":{\"name\":\"get_location\",\"arguments\":\"{}\"}}],\"content\":\"\"},{\"role\":\"tool\",\"name\":\"get_location\",\"tool_call_id\":\"MpfiuoRaM\",\"content\":\"Seattle, WA, USA\"}]}"
+          "string": "{\"model\":\"moonshotai/kimi-k2-instruct-0905\",\"max_tokens\":256,\"temperature\":0.0,\"tools\":[{\"type\":\"function\",\"function\":{\"name\":\"get_location\",\"description\":\"The get_location tool will return the users city, state or province and country.\",\"parameters\":{\"type\":\"object\",\"properties\":{},\"required\":[]}}},{\"type\":\"function\",\"function\":{\"name\":\"get_location\",\"description\":\"The get_location tool will return the users city, state or province and country.\",\"parameters\":{\"type\":\"object\",\"properties\":{},\"required\":[]}}},{\"type\":\"function\",\"function\":{\"name\":\"get_weather\",\"description\":\"The get_weather tool will return the current weather in a given locality.\",\"parameters\":{\"type\":\"object\",\"properties\":{\"city\":{\"type\":\"string\",\"description\":\"The city or town for which the current weather should be returned.\"},\"state\":{\"type\":\"string\",\"description\":\"The state or province for which the current weather should be returned. If this is not provided the largest or most prominent city with the given name, in the given country or in the worldi, will be assumed.\"},\"country\":{\"type\":\"string\",\"description\":\"The country for which the given weather should be returned. If this is not provided the largest or most prominent city with the given name will be returned.\"}},\"required\":[\"city\"]}}}],\"stream\":true,\"messages\":[{\"role\":\"system\",\"content\":\"You are a helpfull assistant who answers questions succinctly.\"},{\"role\":\"user\",\"content\":\"What is the current weather?\"},{\"role\":\"assistant\",\"tool_calls\":[{\"id\":\"MpfiuoRaM\",\"type\":\"function\",\"function\":{\"name\":\"get_location\",\"arguments\":\"{}\"}}],\"content\":\"\"},{\"role\":\"tool\",\"name\":\"get_location\",\"tool_call_id\":\"MpfiuoRaM\",\"content\":\"Seattle, WA, USA\"}]}"
         },
         "headers": {
           "User-Agent": [
@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Tue, 15 Jul 2025 15:44:03 GMT"
+            "Thu, 02 Oct 2025 18:27:31 GMT"
           ],
           "content-type": [
             "text/event-stream"
@@ -38,6 +38,9 @@
           "connection": [
             "keep-alive"
           ],
+          "cf-ray": [
+            "<CF-RAY>"
+          ],
           "cache-control": [
             "no-cache"
           ],
@@ -45,7 +48,7 @@
             "Origin"
           ],
           "x-groq-region": [
-            "us-west-1"
+            "dls"
           ],
           "x-ratelimit-limit-requests": [
             "1000"
@@ -54,16 +57,16 @@
             "10000"
           ],
           "x-ratelimit-remaining-requests": [
-            "983"
+            "747"
           ],
           "x-ratelimit-remaining-tokens": [
-            "8892"
+            "4104"
           ],
           "x-ratelimit-reset-requests": [
-            "24m28.408s"
+            "6h4m18.739999999s"
           ],
           "x-ratelimit-reset-tokens": [
-            "6.642999999s"
+            "35.373s"
           ],
           "x-request-id": [
             "<X-REQUEST-ID>"
@@ -80,19 +83,16 @@
           "server": [
             "cloudflare"
           ],
-          "cf-ray": [
-            "<CF-RAY>"
-          ],
           "alt-svc": [
             "h3=\":443\"; ma=86400"
           ]
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "data: {\"id\":\"chatcmpl-ab508ab6-2aa4-466c-b4ac-166a473b145e\",\"object\":\"chat.completion.chunk\",\"created\":1752594243,\"model\":\"moonshotai/kimi-k2-instruct\",\"system_fingerprint\":\"fp_6e6ff3688b\",\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":null},\"logprobs\":null,\"finish_reason\":null}],\"x_groq\":{\"id\":\"req_01k07c3qmwfscs7d7ehaxys5hy\"}}\n\ndata: {\"id\":\"chatcmpl-ab508ab6-2aa4-466c-b4ac-166a473b145e\",\"object\":\"chat.completion.chunk\",\"created\":1752594243,\"model\":\"moonshotai/kimi-k2-instruct\",\"system_fingerprint\":\"fp_6e6ff3688b\",\"choices\":[{\"index\":0,\"delta\":{\"tool_calls\":[{\"id\":\"1\",\"type\":\"function\",\"function\":{\"name\":\"get_weather\",\"arguments\":\"{\\\"city\\\":\\\"Seattle\\\",\\\"country\\\":\\\"USA\\\",\\\"state\\\":\\\"WA\\\"}\"},\"index\":0}]},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"chatcmpl-ab508ab6-2aa4-466c-b4ac-166a473b145e\",\"object\":\"chat.completion.chunk\",\"created\":1752594243,\"model\":\"moonshotai/kimi-k2-instruct\",\"system_fingerprint\":\"fp_6e6ff3688b\",\"choices\":[{\"index\":0,\"delta\":{},\"logprobs\":null,\"finish_reason\":\"tool_calls\"}],\"x_groq\":{\"id\":\"req_01k07c3qmwfscs7d7ehaxys5hy\",\"usage\":{\"queue_time\":0.18067544400000002,\"prompt_tokens\":301,\"prompt_time\":0.020319975,\"completion_tokens\":31,\"completion_time\":0.060348392,\"total_tokens\":332,\"total_time\":0.080668367}}}\n\ndata: [DONE]\n\n"
+          "string": "data: {\"id\":\"chatcmpl-22edccd8-d8ac-4275-951f-bcebf81db1a2\",\"object\":\"chat.completion.chunk\",\"created\":1759429651,\"model\":\"moonshotai/kimi-k2-instruct-0905\",\"system_fingerprint\":\"fp_b8565bb333\",\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":null},\"logprobs\":null,\"finish_reason\":null}],\"x_groq\":{\"id\":\"req_01k6k2vtd1fa5snwwgwwq2w0jj\"}}\n\ndata: {\"id\":\"chatcmpl-22edccd8-d8ac-4275-951f-bcebf81db1a2\",\"object\":\"chat.completion.chunk\",\"created\":1759429651,\"model\":\"moonshotai/kimi-k2-instruct-0905\",\"system_fingerprint\":\"fp_b8565bb333\",\"choices\":[{\"index\":0,\"delta\":{\"tool_calls\":[{\"id\":\"functions.get_weather:1\",\"type\":\"function\",\"function\":{\"name\":\"get_weather\",\"arguments\":\"{\\\"city\\\":\\\"Seattle\\\",\\\"country\\\":\\\"USA\\\",\\\"state\\\":\\\"WA\\\"}\"},\"index\":0}]},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"chatcmpl-22edccd8-d8ac-4275-951f-bcebf81db1a2\",\"object\":\"chat.completion.chunk\",\"created\":1759429651,\"model\":\"moonshotai/kimi-k2-instruct-0905\",\"system_fingerprint\":\"fp_b8565bb333\",\"choices\":[{\"index\":0,\"delta\":{},\"logprobs\":null,\"finish_reason\":\"tool_calls\"}],\"x_groq\":{\"id\":\"req_01k6k2vtd1fa5snwwgwwq2w0jj\",\"usage\":{\"queue_time\":0.247159391,\"prompt_tokens\":365,\"prompt_time\":0.047065661,\"completion_tokens\":31,\"completion_time\":0.075106566,\"total_tokens\":396,\"total_time\":0.122172227,\"prompt_tokens_details\":{\"cached_tokens\":256}}},\"usage\":{\"queue_time\":0.247159391,\"prompt_tokens\":365,\"prompt_time\":0.047065661,\"completion_tokens\":31,\"completion_time\":0.075106566,\"total_tokens\":396,\"total_time\":0.122172227,\"prompt_tokens_details\":{\"cached_tokens\":256}}}\n\ndata: [DONE]\n\n"
         }
       },
-      "recorded_at": "Tue, 15 Jul 2025 15:44:03 GMT"
+      "recorded_at": "Thu, 02 Oct 2025 18:27:31 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"
