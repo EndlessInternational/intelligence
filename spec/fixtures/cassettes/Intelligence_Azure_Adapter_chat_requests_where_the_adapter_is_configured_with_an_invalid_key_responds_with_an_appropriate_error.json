@@ -3,10 +3,10 @@
     {
       "request": {
         "method": "post",
-        "uri": "https://development-kristoph-resource.services.ai.azure.com/openai/v1/chat/completions?api-version=preview",
+        "uri": "https://development-technicalai.openai.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2025-01-01-preview",
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"model\":\"pixtral-12b-2409\",\"max_tokens\":16,\"temperature\":0.0,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"respond only with the word 'hello'\\n\"}]}"
+          "string": "{\"max_tokens\":16,\"temperature\":0.0,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"respond only with the word 'hello'\\n\"}]}"
         },
         "headers": {
           "User-Agent": [
@@ -33,10 +33,10 @@
             "application/json"
           ],
           "apim-request-id": [
-            "f38ac946-99ce-4809-92c9-f9a258427778"
+            "8186e4c6-8a82-436d-b276-0f1f2f77c449"
           ],
           "date": [
-            "Fri, 11 Jul 2025 19:59:21 GMT"
+            "Thu, 02 Oct 2025 18:03:25 GMT"
           ]
         },
         "body": {
@@ -44,53 +44,7 @@
           "string": "{\"error\":{\"code\":\"401\",\"message\":\"Access denied due to invalid subscription key or wrong API endpoint. Make sure to provide a valid key for an active subscription and use a correct regional API endpoint for your resource.\"}}"
         }
       },
-      "recorded_at": "Fri, 11 Jul 2025 19:59:22 GMT"
-    },
-    {
-      "request": {
-        "method": "post",
-        "uri": "https://development-technicalai.openai.azure.com/openai/v1/chat/completions?api-version=preview",
-        "body": {
-          "encoding": "UTF-8",
-          "string": "{\"model\":\"pixtral-12b-2409\",\"max_tokens\":16,\"temperature\":0.0,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"respond only with the word 'hello'\\n\"}]}"
-        },
-        "headers": {
-          "User-Agent": [
-            "Faraday v2.13.1"
-          ],
-          "Content-Type": [
-            "application/json"
-          ],
-          "api-key": [
-            "<API-KEY>"
-          ]
-        }
-      },
-      "response": {
-        "status": {
-          "code": 401,
-          "message": "PermissionDenied"
-        },
-        "headers": {
-          "content-length": [
-            "224"
-          ],
-          "content-type": [
-            "application/json"
-          ],
-          "apim-request-id": [
-            "b8b825cc-3e8d-4efa-b4a0-48b6e395f479"
-          ],
-          "date": [
-            "Tue, 15 Jul 2025 00:09:36 GMT"
-          ]
-        },
-        "body": {
-          "encoding": "UTF-8",
-          "string": "{\"error\":{\"code\":\"401\",\"message\":\"Access denied due to invalid subscription key or wrong API endpoint. Make sure to provide a valid key for an active subscription and use a correct regional API endpoint for your resource.\"}}"
-        }
-      },
-      "recorded_at": "Tue, 15 Jul 2025 00:09:37 GMT"
+      "recorded_at": "Thu, 02 Oct 2025 18:03:26 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

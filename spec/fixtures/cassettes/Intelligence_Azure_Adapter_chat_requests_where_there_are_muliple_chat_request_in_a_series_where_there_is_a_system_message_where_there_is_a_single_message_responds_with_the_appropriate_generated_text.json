@@ -3,65 +3,10 @@
     {
       "request": {
         "method": "post",
-        "uri": "https://development-kristoph-resource.services.ai.azure.com/openai/v1/chat/completions?api-version=",
+        "uri": "https://development-technicalai.openai.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2025-01-01-preview",
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"model\":\"gpt-4.1\",\"max_tokens\":128,\"temperature\":0.0,\"messages\":[{\"role\":\"user\",\"content\":\"respond only with the word 'hello'\\n\"}]}"
-        },
-        "headers": {
-          "User-Agent": [
-            "Faraday v2.13.1"
-          ],
-          "Content-Type": [
-            "application/json"
-          ],
-          "api-key": [
-            "<API-KEY>"
-          ]
-        }
-      },
-      "response": {
-        "status": {
-          "code": 400,
-          "message": "BadRequest"
-        },
-        "headers": {
-          "content-length": [
-            "69"
-          ],
-          "content-type": [
-            "application/json"
-          ],
-          "apim-request-id": [
-            "5d45e71b-3426-499a-a3d5-ce97a9174ab2"
-          ],
-          "strict-transport-security": [
-            "max-age=31536000; includeSubDomains; preload"
-          ],
-          "x-content-type-options": [
-            "nosniff"
-          ],
-          "x-ms-region": [
-            "East US 2"
-          ],
-          "date": [
-            "Fri, 11 Jul 2025 19:44:54 GMT"
-          ]
-        },
-        "body": {
-          "encoding": "UTF-8",
-          "string": "{\"error\":{\"code\":\"BadRequest\",\"message\":\"API version not supported\"}}"
-        }
-      },
-      "recorded_at": "Fri, 11 Jul 2025 19:44:54 GMT"
-    },
-    {
-      "request": {
-        "method": "post",
-        "uri": "https://development-kristoph-resource.services.ai.azure.com/openai/v1/chat/completions?api-version=preview",
-        "body": {
-          "encoding": "UTF-8",
-          "string": "{\"model\":\"gpt-4.1\",\"max_tokens\":128,\"temperature\":0.0,\"messages\":[{\"role\":\"user\",\"content\":\"respond only with the word 'hello'\\n\"}]}"
+          "string": "{\"max_tokens\":128,\"temperature\":0.0,\"messages\":[{\"role\":\"user\",\"content\":\"respond only with the word 'hello'\\n\"}]}"
         },
         "headers": {
           "User-Agent": [
@@ -88,177 +33,7 @@
             "application/json"
           ],
           "apim-request-id": [
-            "ee9ef093-2c09-46c2-8d08-c1b728b6a463"
-          ],
-          "strict-transport-security": [
-            "max-age=31536000; includeSubDomains; preload"
-          ],
-          "x-content-type-options": [
-            "nosniff"
-          ],
-          "x-ms-region": [
-            "East US 2"
-          ],
-          "x-ratelimit-remaining-requests": [
-            "41"
-          ],
-          "x-ratelimit-limit-requests": [
-            "50"
-          ],
-          "x-ratelimit-remaining-tokens": [
-            "49767"
-          ],
-          "x-ratelimit-limit-tokens": [
-            "50000"
-          ],
-          "azureml-model-session": [
-            "d023-20250624220414"
-          ],
-          "cmp-upstream-response-duration": [
-            "199"
-          ],
-          "x-accel-buffering": [
-            "no"
-          ],
-          "x-ms-rai-invoked": [
-            "true"
-          ],
-          "x-request-id": [
-            "<X-REQUEST-ID>"
-          ],
-          "x-ms-deployment-name": [
-            "gpt-4.1"
-          ],
-          "date": [
-            "Fri, 11 Jul 2025 19:58:28 GMT"
-          ]
-        },
-        "body": {
-          "encoding": "UTF-8",
-          "string": "{\"choices\":[{\"content_filter_results\":{\"hate\":{\"filtered\":false,\"severity\":\"safe\"},\"protected_material_code\":{\"filtered\":false,\"detected\":false},\"protected_material_text\":{\"filtered\":false,\"detected\":false},\"self_harm\":{\"filtered\":false,\"severity\":\"safe\"},\"sexual\":{\"filtered\":false,\"severity\":\"safe\"},\"violence\":{\"filtered\":false,\"severity\":\"safe\"}},\"finish_reason\":\"stop\",\"index\":0,\"logprobs\":null,\"message\":{\"annotations\":[],\"content\":\"hello\",\"refusal\":null,\"role\":\"assistant\"}}],\"created\":1752263908,\"id\":\"chatcmpl-BsEB2T4EHFc5ejgr1yImFJg04A6pM\",\"model\":\"gpt-4.1-2025-04-14\",\"object\":\"chat.completion\",\"prompt_filter_results\":[{\"prompt_index\":0,\"content_filter_results\":{\"hate\":{\"filtered\":false,\"severity\":\"safe\"},\"jailbreak\":{\"filtered\":false,\"detected\":false},\"self_harm\":{\"filtered\":false,\"severity\":\"safe\"},\"sexual\":{\"filtered\":false,\"severity\":\"safe\"},\"violence\":{\"filtered\":false,\"severity\":\"safe\"}}}],\"system_fingerprint\":\"fp_07e970ab25\",\"usage\":{\"completion_tokens\":2,\"completion_tokens_details\":{\"accepted_prediction_tokens\":0,\"audio_tokens\":0,\"reasoning_tokens\":0,\"rejected_prediction_tokens\":0},\"prompt_tokens\":15,\"prompt_tokens_details\":{\"audio_tokens\":0,\"cached_tokens\":0},\"total_tokens\":17}}\n"
-        }
-      },
-      "recorded_at": "Fri, 11 Jul 2025 19:58:28 GMT"
-    },
-    {
-      "request": {
-        "method": "post",
-        "uri": "https://development-kristoph-resource.services.ai.azure.com/openai/v1/chat/completions?api-version=preview",
-        "body": {
-          "encoding": "UTF-8",
-          "string": "{\"model\":\"gpt-4.1\",\"max_tokens\":128,\"temperature\":0.0,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"respond only with the word 'hello'\\n\"}]}"
-        },
-        "headers": {
-          "User-Agent": [
-            "Faraday v2.13.1"
-          ],
-          "Content-Type": [
-            "application/json"
-          ],
-          "api-key": [
-            "<API-KEY>"
-          ]
-        }
-      },
-      "response": {
-        "status": {
-          "code": 200,
-          "message": "OK"
-        },
-        "headers": {
-          "content-length": [
-            "1211"
-          ],
-          "content-type": [
-            "application/json"
-          ],
-          "apim-request-id": [
-            "f52acff9-7340-4f3a-9a85-a2297c54c454"
-          ],
-          "strict-transport-security": [
-            "max-age=31536000; includeSubDomains; preload"
-          ],
-          "x-content-type-options": [
-            "nosniff"
-          ],
-          "x-ms-region": [
-            "East US 2"
-          ],
-          "x-ratelimit-remaining-requests": [
-            "40"
-          ],
-          "x-ratelimit-limit-requests": [
-            "50"
-          ],
-          "x-ratelimit-remaining-tokens": [
-            "49702"
-          ],
-          "x-ratelimit-limit-tokens": [
-            "50000"
-          ],
-          "azureml-model-session": [
-            "d027-20250625002357"
-          ],
-          "cmp-upstream-response-duration": [
-            "242"
-          ],
-          "x-accel-buffering": [
-            "no"
-          ],
-          "x-ms-rai-invoked": [
-            "true"
-          ],
-          "x-request-id": [
-            "<X-REQUEST-ID>"
-          ],
-          "x-ms-deployment-name": [
-            "gpt-4.1"
-          ],
-          "date": [
-            "Fri, 11 Jul 2025 19:58:29 GMT"
-          ]
-        },
-        "body": {
-          "encoding": "UTF-8",
-          "string": "{\"choices\":[{\"content_filter_results\":{\"hate\":{\"filtered\":false,\"severity\":\"safe\"},\"protected_material_code\":{\"filtered\":false,\"detected\":false},\"protected_material_text\":{\"filtered\":false,\"detected\":false},\"self_harm\":{\"filtered\":false,\"severity\":\"safe\"},\"sexual\":{\"filtered\":false,\"severity\":\"safe\"},\"violence\":{\"filtered\":false,\"severity\":\"safe\"}},\"finish_reason\":\"stop\",\"index\":0,\"logprobs\":null,\"message\":{\"annotations\":[],\"content\":\"hello\",\"refusal\":null,\"role\":\"assistant\"}}],\"created\":1752263909,\"id\":\"chatcmpl-BsEB3nb0QFMRZYAhT9Y5BuN1SWiZu\",\"model\":\"gpt-4.1-2025-04-14\",\"object\":\"chat.completion\",\"prompt_filter_results\":[{\"prompt_index\":0,\"content_filter_results\":{\"hate\":{\"filtered\":false,\"severity\":\"safe\"},\"jailbreak\":{\"filtered\":false,\"detected\":false},\"self_harm\":{\"filtered\":false,\"severity\":\"safe\"},\"sexual\":{\"filtered\":false,\"severity\":\"safe\"},\"violence\":{\"filtered\":false,\"severity\":\"safe\"}}}],\"system_fingerprint\":\"fp_07e970ab25\",\"usage\":{\"completion_tokens\":2,\"completion_tokens_details\":{\"accepted_prediction_tokens\":0,\"audio_tokens\":0,\"reasoning_tokens\":0,\"rejected_prediction_tokens\":0},\"prompt_tokens\":58,\"prompt_tokens_details\":{\"audio_tokens\":0,\"cached_tokens\":0},\"total_tokens\":60}}\n"
-        }
-      },
-      "recorded_at": "Fri, 11 Jul 2025 19:58:29 GMT"
-    },
-    {
-      "request": {
-        "method": "post",
-        "uri": "https://development-technicalai.openai.azure.com/openai/v1/chat/completions?api-version=preview",
-        "body": {
-          "encoding": "UTF-8",
-          "string": "{\"model\":\"gpt-4.1\",\"max_tokens\":128,\"temperature\":0.0,\"messages\":[{\"role\":\"user\",\"content\":\"respond only with the word 'hello'\\n\"}]}"
-        },
-        "headers": {
-          "User-Agent": [
-            "Faraday v2.13.1"
-          ],
-          "Content-Type": [
-            "application/json"
-          ],
-          "api-key": [
-            "<API-KEY>"
-          ]
-        }
-      },
-      "response": {
-        "status": {
-          "code": 200,
-          "message": "OK"
-        },
-        "headers": {
-          "content-length": [
-            "1211"
-          ],
-          "content-type": [
-            "application/json"
-          ],
-          "apim-request-id": [
-            "11429087-e6c0-4d3a-9fb8-60c4155b1d25"
+            "546672bb-f665-4df1-93a5-275a4e6260df"
           ],
           "strict-transport-security": [
             "max-age=31536000; includeSubDomains; preload"
@@ -282,10 +57,7 @@
             "50000"
           ],
           "azureml-model-session": [
-            "d024-20250625152203"
-          ],
-          "cmp-upstream-response-duration": [
-            "191"
+            "d050-20250926074127"
           ],
           "x-accel-buffering": [
             "no"
@@ -300,23 +72,23 @@
             "gpt-4.1"
           ],
           "date": [
-            "Tue, 15 Jul 2025 00:05:22 GMT"
+            "Thu, 02 Oct 2025 18:02:11 GMT"
           ]
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"choices\":[{\"content_filter_results\":{\"hate\":{\"filtered\":false,\"severity\":\"safe\"},\"protected_material_code\":{\"filtered\":false,\"detected\":false},\"protected_material_text\":{\"filtered\":false,\"detected\":false},\"self_harm\":{\"filtered\":false,\"severity\":\"safe\"},\"sexual\":{\"filtered\":false,\"severity\":\"safe\"},\"violence\":{\"filtered\":false,\"severity\":\"safe\"}},\"finish_reason\":\"stop\",\"index\":0,\"logprobs\":null,\"message\":{\"annotations\":[],\"content\":\"hello\",\"refusal\":null,\"role\":\"assistant\"}}],\"created\":1752537923,\"id\":\"chatcmpl-BtNSdk39q60X1gJQWKcBBqwk4mkGE\",\"model\":\"gpt-4.1-2025-04-14\",\"object\":\"chat.completion\",\"prompt_filter_results\":[{\"prompt_index\":0,\"content_filter_results\":{\"hate\":{\"filtered\":false,\"severity\":\"safe\"},\"jailbreak\":{\"filtered\":false,\"detected\":false},\"self_harm\":{\"filtered\":false,\"severity\":\"safe\"},\"sexual\":{\"filtered\":false,\"severity\":\"safe\"},\"violence\":{\"filtered\":false,\"severity\":\"safe\"}}}],\"system_fingerprint\":\"fp_07e970ab25\",\"usage\":{\"completion_tokens\":2,\"completion_tokens_details\":{\"accepted_prediction_tokens\":0,\"audio_tokens\":0,\"reasoning_tokens\":0,\"rejected_prediction_tokens\":0},\"prompt_tokens\":15,\"prompt_tokens_details\":{\"audio_tokens\":0,\"cached_tokens\":0},\"total_tokens\":17}}\n"
+          "string": "{\"choices\":[{\"content_filter_results\":{\"hate\":{\"filtered\":false,\"severity\":\"safe\"},\"protected_material_code\":{\"filtered\":false,\"detected\":false},\"protected_material_text\":{\"filtered\":false,\"detected\":false},\"self_harm\":{\"filtered\":false,\"severity\":\"safe\"},\"sexual\":{\"filtered\":false,\"severity\":\"safe\"},\"violence\":{\"filtered\":false,\"severity\":\"safe\"}},\"finish_reason\":\"stop\",\"index\":0,\"logprobs\":null,\"message\":{\"annotations\":[],\"content\":\"hello\",\"refusal\":null,\"role\":\"assistant\"}}],\"created\":1759428131,\"id\":\"chatcmpl-CMHv1W46DMB0ARtrix9U8Z8G1AWD8\",\"model\":\"gpt-4.1-2025-04-14\",\"object\":\"chat.completion\",\"prompt_filter_results\":[{\"prompt_index\":0,\"content_filter_results\":{\"hate\":{\"filtered\":false,\"severity\":\"safe\"},\"jailbreak\":{\"filtered\":false,\"detected\":false},\"self_harm\":{\"filtered\":false,\"severity\":\"safe\"},\"sexual\":{\"filtered\":false,\"severity\":\"safe\"},\"violence\":{\"filtered\":false,\"severity\":\"safe\"}}}],\"system_fingerprint\":\"fp_4d7b201289\",\"usage\":{\"completion_tokens\":2,\"completion_tokens_details\":{\"accepted_prediction_tokens\":0,\"audio_tokens\":0,\"reasoning_tokens\":0,\"rejected_prediction_tokens\":0},\"prompt_tokens\":15,\"prompt_tokens_details\":{\"audio_tokens\":0,\"cached_tokens\":0},\"total_tokens\":17}}\n"
         }
       },
-      "recorded_at": "Tue, 15 Jul 2025 00:05:23 GMT"
+      "recorded_at": "Thu, 02 Oct 2025 18:02:11 GMT"
     },
     {
       "request": {
         "method": "post",
-        "uri": "https://development-technicalai.openai.azure.com/openai/v1/chat/completions?api-version=preview",
+        "uri": "https://development-technicalai.openai.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2025-01-01-preview",
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"model\":\"gpt-4.1\",\"max_tokens\":128,\"temperature\":0.0,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"respond only with the word 'hello'\\n\"}]}"
+          "string": "{\"max_tokens\":128,\"temperature\":0.0,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"respond only with the word 'hello'\\n\"}]}"
         },
         "headers": {
           "User-Agent": [
@@ -343,7 +115,7 @@
             "application/json"
           ],
           "apim-request-id": [
-            "4fe6dcff-d614-41c3-83ec-5df10c2d0786"
+            "b72545de-f887-42f6-a1c7-eec3358776ea"
           ],
           "strict-transport-security": [
             "max-age=31536000; includeSubDomains; preload"
@@ -367,10 +139,7 @@
             "50000"
           ],
           "azureml-model-session": [
-            "d024-20250625152203"
-          ],
-          "cmp-upstream-response-duration": [
-            "182"
+            "d050-20250926074127"
           ],
           "x-accel-buffering": [
             "no"
@@ -385,15 +154,15 @@
             "gpt-4.1"
           ],
           "date": [
-            "Tue, 15 Jul 2025 00:05:23 GMT"
+            "Thu, 02 Oct 2025 18:02:11 GMT"
           ]
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"choices\":[{\"content_filter_results\":{\"hate\":{\"filtered\":false,\"severity\":\"safe\"},\"protected_material_code\":{\"filtered\":false,\"detected\":false},\"protected_material_text\":{\"filtered\":false,\"detected\":false},\"self_harm\":{\"filtered\":false,\"severity\":\"safe\"},\"sexual\":{\"filtered\":false,\"severity\":\"safe\"},\"violence\":{\"filtered\":false,\"severity\":\"safe\"}},\"finish_reason\":\"stop\",\"index\":0,\"logprobs\":null,\"message\":{\"annotations\":[],\"content\":\"hello\",\"refusal\":null,\"role\":\"assistant\"}}],\"created\":1752537924,\"id\":\"chatcmpl-BtNSemiH1WjiQZOzCHsKVMsdkYake\",\"model\":\"gpt-4.1-2025-04-14\",\"object\":\"chat.completion\",\"prompt_filter_results\":[{\"prompt_index\":0,\"content_filter_results\":{\"hate\":{\"filtered\":false,\"severity\":\"safe\"},\"jailbreak\":{\"filtered\":false,\"detected\":false},\"self_harm\":{\"filtered\":false,\"severity\":\"safe\"},\"sexual\":{\"filtered\":false,\"severity\":\"safe\"},\"violence\":{\"filtered\":false,\"severity\":\"safe\"}}}],\"system_fingerprint\":\"fp_07e970ab25\",\"usage\":{\"completion_tokens\":2,\"completion_tokens_details\":{\"accepted_prediction_tokens\":0,\"audio_tokens\":0,\"reasoning_tokens\":0,\"rejected_prediction_tokens\":0},\"prompt_tokens\":58,\"prompt_tokens_details\":{\"audio_tokens\":0,\"cached_tokens\":0},\"total_tokens\":60}}\n"
+          "string": "{\"choices\":[{\"content_filter_results\":{\"hate\":{\"filtered\":false,\"severity\":\"safe\"},\"protected_material_code\":{\"filtered\":false,\"detected\":false},\"protected_material_text\":{\"filtered\":false,\"detected\":false},\"self_harm\":{\"filtered\":false,\"severity\":\"safe\"},\"sexual\":{\"filtered\":false,\"severity\":\"safe\"},\"violence\":{\"filtered\":false,\"severity\":\"safe\"}},\"finish_reason\":\"stop\",\"index\":0,\"logprobs\":null,\"message\":{\"annotations\":[],\"content\":\"hello\",\"refusal\":null,\"role\":\"assistant\"}}],\"created\":1759428131,\"id\":\"chatcmpl-CMHv1exL6OyEDMK4A3acFe32eaYxW\",\"model\":\"gpt-4.1-2025-04-14\",\"object\":\"chat.completion\",\"prompt_filter_results\":[{\"prompt_index\":0,\"content_filter_results\":{\"hate\":{\"filtered\":false,\"severity\":\"safe\"},\"jailbreak\":{\"filtered\":false,\"detected\":false},\"self_harm\":{\"filtered\":false,\"severity\":\"safe\"},\"sexual\":{\"filtered\":false,\"severity\":\"safe\"},\"violence\":{\"filtered\":false,\"severity\":\"safe\"}}}],\"system_fingerprint\":\"fp_4d7b201289\",\"usage\":{\"completion_tokens\":2,\"completion_tokens_details\":{\"accepted_prediction_tokens\":0,\"audio_tokens\":0,\"reasoning_tokens\":0,\"rejected_prediction_tokens\":0},\"prompt_tokens\":58,\"prompt_tokens_details\":{\"audio_tokens\":0,\"cached_tokens\":0},\"total_tokens\":60}}\n"
         }
       },
-      "recorded_at": "Tue, 15 Jul 2025 00:05:24 GMT"
+      "recorded_at": "Thu, 02 Oct 2025 18:02:11 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

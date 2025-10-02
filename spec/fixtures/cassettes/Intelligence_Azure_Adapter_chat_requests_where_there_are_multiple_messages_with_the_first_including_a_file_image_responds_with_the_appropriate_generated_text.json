@@ -3,10 +3,10 @@
     {
       "request": {
         "method": "post",
-        "uri": "https://development-kristoph-resource.services.ai.azure.com/openai/v1/chat/completions?api-version=preview",
+        "uri": "https://development-technicalai.openai.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2025-01-01-preview",
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"model\":\"gpt-4.1\",\"max_tokens\":32,\"temperature\":0.0,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":[{\"type\":\"text\",\"text\":\"identify this image; all lower case\\n\"},{\"type\":\"image_url\",\"image_url\":{\"url\":\"https://github.com/EndlessInternational/intelligence/blob/main/spec/fixtures/files/single-red-balloon.png?raw=true\"}}]},{\"role\":\"assistant\",\"content\":\"balloon\\n\"},{\"role\":\"user\",\"content\":\"what color?\\n\"}]}"
+          "string": "{\"max_tokens\":32,\"temperature\":0.0,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":[{\"type\":\"text\",\"text\":\"identify this image; all lower case\\n\"},{\"type\":\"image_url\",\"image_url\":{\"url\":\"https://github.com/EndlessInternational/intelligence/blob/main/spec/fixtures/files/single-red-balloon.png?raw=true\"}}]},{\"role\":\"assistant\",\"content\":\"balloon\\n\"},{\"role\":\"user\",\"content\":\"what color?\\n\"}]}"
         },
         "headers": {
           "User-Agent": [
@@ -27,7 +27,7 @@
         },
         "headers": {
           "content-length": [
-            "1254"
+            "1259"
           ],
           "content-type": [
             "application/json; charset=utf-8"
@@ -36,101 +36,7 @@
             "<REQUEST-ID>"
           ],
           "apim-request-id": [
-            "7f84e494-9c4d-4fdd-a051-a2e0926ca820"
-          ],
-          "strict-transport-security": [
-            "max-age=31536000; includeSubDomains; preload"
-          ],
-          "x-content-type-options": [
-            "nosniff"
-          ],
-          "x-ms-region": [
-            "East US 2"
-          ],
-          "x-ratelimit-remaining-requests": [
-            "28"
-          ],
-          "x-ratelimit-limit-requests": [
-            "50"
-          ],
-          "x-ratelimit-remaining-tokens": [
-            "42838"
-          ],
-          "x-ratelimit-limit-tokens": [
-            "50000"
-          ],
-          "azureml-model-session": [
-            "d067-20250626015118"
-          ],
-          "cmp-upstream-response-duration": [
-            "426"
-          ],
-          "x-accel-buffering": [
-            "no"
-          ],
-          "x-ms-rai-invoked": [
-            "true"
-          ],
-          "x-request-id": [
-            "<X-REQUEST-ID>"
-          ],
-          "api-supported-versions": [
-            "1"
-          ],
-          "x-envoy-upstream-service-time": [
-            "988"
-          ],
-          "x-ms-deployment-name": [
-            "gpt-4.1"
-          ],
-          "date": [
-            "Fri, 11 Jul 2025 19:58:52 GMT"
-          ]
-        },
-        "body": {
-          "encoding": "UTF-8",
-          "string": "{\"choices\":[{\"content_filter_results\":{\"hate\":{\"filtered\":false,\"severity\":\"safe\"},\"protected_material_code\":{\"filtered\":false,\"detected\":false},\"protected_material_text\":{\"filtered\":false,\"detected\":false},\"self_harm\":{\"filtered\":false,\"severity\":\"safe\"},\"sexual\":{\"filtered\":false,\"severity\":\"safe\"},\"violence\":{\"filtered\":false,\"severity\":\"safe\"}},\"finish_reason\":\"stop\",\"index\":0,\"logprobs\":null,\"message\":{\"annotations\":[],\"content\":\"red\",\"refusal\":null,\"role\":\"assistant\"}}],\"created\":1752263933,\"id\":\"chatcmpl-BsEBR4F6AZpUAB4yYm6G2ZZDLNjvK\",\"model\":\"gpt-4.1-2025-04-14\",\"object\":\"chat.completion\",\"prompt_filter_results\":[{\"prompt_index\":0,\"content_filter_result\":{\"jailbreak\":{\"filtered\":false,\"detected\":false}}},{\"prompt_index\":1,\"content_filter_result\":{\"sexual\":{\"filtered\":false,\"severity\":\"safe\"},\"violence\":{\"filtered\":false,\"severity\":\"safe\"},\"hate\":{\"filtered\":false,\"severity\":\"safe\"},\"self_harm\":{\"filtered\":false,\"severity\":\"safe\"}}}],\"system_fingerprint\":\"fp_07e970ab25\",\"usage\":{\"completion_tokens\":2,\"completion_tokens_details\":{\"accepted_prediction_tokens\":0,\"audio_tokens\":0,\"reasoning_tokens\":0,\"rejected_prediction_tokens\":0},\"prompt_tokens\":282,\"prompt_tokens_details\":{\"audio_tokens\":0,\"cached_tokens\":0},\"total_tokens\":284}}"
-        }
-      },
-      "recorded_at": "Fri, 11 Jul 2025 19:58:53 GMT"
-    },
-    {
-      "request": {
-        "method": "post",
-        "uri": "https://development-technicalai.openai.azure.com/openai/v1/chat/completions?api-version=preview",
-        "body": {
-          "encoding": "UTF-8",
-          "string": "{\"model\":\"gpt-4.1\",\"max_tokens\":32,\"temperature\":0.0,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":[{\"type\":\"text\",\"text\":\"identify this image; all lower case\\n\"},{\"type\":\"image_url\",\"image_url\":{\"url\":\"https://github.com/EndlessInternational/intelligence/blob/main/spec/fixtures/files/single-red-balloon.png?raw=true\"}}]},{\"role\":\"assistant\",\"content\":\"balloon\\n\"},{\"role\":\"user\",\"content\":\"what color?\\n\"}]}"
-        },
-        "headers": {
-          "User-Agent": [
-            "Faraday v2.13.1"
-          ],
-          "Content-Type": [
-            "application/json"
-          ],
-          "api-key": [
-            "<API-KEY>"
-          ]
-        }
-      },
-      "response": {
-        "status": {
-          "code": 200,
-          "message": "OK"
-        },
-        "headers": {
-          "content-length": [
-            "1254"
-          ],
-          "content-type": [
-            "application/json; charset=utf-8"
-          ],
-          "request-id": [
-            "<REQUEST-ID>"
-          ],
-          "apim-request-id": [
-            "a2eec024-a041-49fb-a0c8-a22d08633eb0"
+            "35973146-97a2-4113-b542-55c7b1eb36d9"
           ],
           "strict-transport-security": [
             "max-age=31536000; includeSubDomains; preload"
@@ -154,10 +60,7 @@
             "50000"
           ],
           "azureml-model-session": [
-            "d027-20250625002357"
-          ],
-          "cmp-upstream-response-duration": [
-            "546"
+            "d244-20250926115306"
           ],
           "x-accel-buffering": [
             "no"
@@ -172,21 +75,21 @@
             "1"
           ],
           "x-envoy-upstream-service-time": [
-            "180946"
+            "1255"
           ],
           "x-ms-deployment-name": [
             "gpt-4.1"
           ],
           "date": [
-            "Tue, 15 Jul 2025 00:08:57 GMT"
+            "Thu, 02 Oct 2025 18:02:45 GMT"
           ]
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"choices\":[{\"content_filter_results\":{\"hate\":{\"filtered\":false,\"severity\":\"safe\"},\"protected_material_code\":{\"filtered\":false,\"detected\":false},\"protected_material_text\":{\"filtered\":false,\"detected\":false},\"self_harm\":{\"filtered\":false,\"severity\":\"safe\"},\"sexual\":{\"filtered\":false,\"severity\":\"safe\"},\"violence\":{\"filtered\":false,\"severity\":\"safe\"}},\"finish_reason\":\"stop\",\"index\":0,\"logprobs\":null,\"message\":{\"annotations\":[],\"content\":\"red\",\"refusal\":null,\"role\":\"assistant\"}}],\"created\":1752538137,\"id\":\"chatcmpl-BtNW5uwyB3wbBlkF9Nisi3VVXf7tq\",\"model\":\"gpt-4.1-2025-04-14\",\"object\":\"chat.completion\",\"prompt_filter_results\":[{\"prompt_index\":0,\"content_filter_result\":{\"jailbreak\":{\"filtered\":false,\"detected\":false}}},{\"prompt_index\":1,\"content_filter_result\":{\"sexual\":{\"filtered\":false,\"severity\":\"safe\"},\"violence\":{\"filtered\":false,\"severity\":\"safe\"},\"hate\":{\"filtered\":false,\"severity\":\"safe\"},\"self_harm\":{\"filtered\":false,\"severity\":\"safe\"}}}],\"system_fingerprint\":\"fp_07e970ab25\",\"usage\":{\"completion_tokens\":2,\"completion_tokens_details\":{\"accepted_prediction_tokens\":0,\"audio_tokens\":0,\"reasoning_tokens\":0,\"rejected_prediction_tokens\":0},\"prompt_tokens\":282,\"prompt_tokens_details\":{\"audio_tokens\":0,\"cached_tokens\":0},\"total_tokens\":284}}"
+          "string": "{\"choices\":[{\"content_filter_results\":{\"hate\":{\"filtered\":false,\"severity\":\"safe\"},\"protected_material_code\":{\"filtered\":false,\"detected\":false},\"protected_material_text\":{\"filtered\":false,\"detected\":false},\"self_harm\":{\"filtered\":false,\"severity\":\"safe\"},\"sexual\":{\"filtered\":false,\"severity\":\"safe\"},\"violence\":{\"filtered\":false,\"severity\":\"safe\"}},\"finish_reason\":\"stop\",\"index\":0,\"logprobs\":null,\"message\":{\"annotations\":[],\"content\":\"red\",\"refusal\":null,\"role\":\"assistant\"}}],\"created\":1759428165,\"id\":\"chatcmpl-CMHvZnxOOhFkyrnDmb7TDavTMLh5Z\",\"model\":\"gpt-4.1-2025-04-14\",\"object\":\"chat.completion\",\"prompt_filter_results\":[{\"prompt_index\":1,\"content_filter_result\":{\"sexual\":{\"filtered\":false,\"severity\":\"safe\"},\"violence\":{\"filtered\":false,\"severity\":\"safe\"},\"hate\":{\"filtered\":false,\"severity\":\"safe\"},\"self_harm\":{\"filtered\":false,\"severity\":\"safe\"},\"custom_blocklists\":{\"filtered\":false,\"details\":[]}}},{\"prompt_index\":0,\"content_filter_result\":{}}],\"system_fingerprint\":\"fp_4d7b201289\",\"usage\":{\"completion_tokens\":2,\"completion_tokens_details\":{\"accepted_prediction_tokens\":0,\"audio_tokens\":0,\"reasoning_tokens\":0,\"rejected_prediction_tokens\":0},\"prompt_tokens\":282,\"prompt_tokens_details\":{\"audio_tokens\":0,\"cached_tokens\":0},\"total_tokens\":284}}"
         }
       },
-      "recorded_at": "Tue, 15 Jul 2025 00:08:57 GMT"
+      "recorded_at": "Thu, 02 Oct 2025 18:02:45 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

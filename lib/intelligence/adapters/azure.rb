@@ -9,7 +9,7 @@ module Intelligence
 	        # normalized properties, used by all endpoints
 	        base_uri                    String, required: true
 	        key                         String
-	        api_version  								String, required: true, default: 'preview'
+	        api_version  								String, required: true, default: '2025-01-01-preview'
 	        
 	        # properties for generative text endpoints 
 	        chat_options do 

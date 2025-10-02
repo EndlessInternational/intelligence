@@ -3,10 +3,10 @@
     {
       "request": {
         "method": "post",
-        "uri": "https://development-kristoph-resource.services.ai.azure.com/openai/v1/chat/completions?api-version=preview",
+        "uri": "https://development-technicalai.openai.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2025-01-01-preview",
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"model\":\"gpt-4.1\",\"max_tokens\":128,\"temperature\":0.0,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"I am in Seattle, WA\\n\"},{\"role\":\"assistant\",\"content\":\"Got it! Let me know if you need any local insights or information related to Seattle!\\n\"},{\"role\":\"user\",\"content\":\"What is the current weather?\\n\"}],\"tools\":[{\"type\":\"function\",\"function\":{\"name\":\"get_location\",\"description\":\"The get_location tool will return the users city, state or province and country.\",\"parameters\":{\"type\":\"object\",\"properties\":{},\"required\":[]}}},{\"type\":\"function\",\"function\":{\"name\":\"get_weather\",\"description\":\"The get_weather tool will return the current weather in a given locality.\",\"parameters\":{\"type\":\"object\",\"properties\":{\"city\":{\"type\":\"string\",\"description\":\"The city or town for which the current weather should be returned.\"},\"state\":{\"type\":\"string\",\"description\":\"The state or province for which the current weather should be returned. If this is not provided the largest or most prominent city with the given name, in the given country or in the worldi, will be assumed.\"},\"country\":{\"type\":\"string\",\"description\":\"The country for which the given weather should be returned. If this is not provided the largest or most prominent city with the given name will be returned.\"}},\"required\":[\"city\"]}}}]}"
+          "string": "{\"max_tokens\":128,\"temperature\":0.0,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"I am in Seattle, WA\\n\"},{\"role\":\"assistant\",\"content\":\"Got it! Let me know if you need any local insights or information related to Seattle!\\n\"},{\"role\":\"user\",\"content\":\"What is the current weather?\\n\"}],\"tools\":[{\"type\":\"function\",\"function\":{\"name\":\"get_location\",\"description\":\"The get_location tool will return the users city, state or province and country.\",\"parameters\":{\"type\":\"object\",\"properties\":{},\"required\":[]}}},{\"type\":\"function\",\"function\":{\"name\":\"get_weather\",\"description\":\"The get_weather tool will return the current weather in a given locality.\",\"parameters\":{\"type\":\"object\",\"properties\":{\"city\":{\"type\":\"string\",\"description\":\"The city or town for which the current weather should be returned.\"},\"state\":{\"type\":\"string\",\"description\":\"The state or province for which the current weather should be returned. If this is not provided the largest or most prominent city with the given name, in the given country or in the worldi, will be assumed.\"},\"country\":{\"type\":\"string\",\"description\":\"The country for which the given weather should be returned. If this is not provided the largest or most prominent city with the given name will be returned.\"}},\"required\":[\"city\"]}}}]}"
         },
         "headers": {
           "User-Agent": [
@@ -33,92 +33,7 @@
             "application/json"
           ],
           "apim-request-id": [
-            "bf7fe7a3-5076-4f93-9a9d-d9fdbe4587bd"
-          ],
-          "strict-transport-security": [
-            "max-age=31536000; includeSubDomains; preload"
-          ],
-          "x-content-type-options": [
-            "nosniff"
-          ],
-          "x-ms-region": [
-            "East US 2"
-          ],
-          "x-ratelimit-remaining-requests": [
-            "23"
-          ],
-          "x-ratelimit-limit-requests": [
-            "50"
-          ],
-          "x-ratelimit-remaining-tokens": [
-            "40454"
-          ],
-          "x-ratelimit-limit-tokens": [
-            "50000"
-          ],
-          "azureml-model-session": [
-            "d019-20250625151526"
-          ],
-          "cmp-upstream-response-duration": [
-            "699"
-          ],
-          "x-accel-buffering": [
-            "no"
-          ],
-          "x-ms-rai-invoked": [
-            "true"
-          ],
-          "x-request-id": [
-            "<X-REQUEST-ID>"
-          ],
-          "x-ms-deployment-name": [
-            "gpt-4.1"
-          ],
-          "date": [
-            "Fri, 11 Jul 2025 19:59:03 GMT"
-          ]
-        },
-        "body": {
-          "encoding": "UTF-8",
-          "string": "{\"choices\":[{\"content_filter_results\":{},\"finish_reason\":\"tool_calls\",\"index\":0,\"logprobs\":null,\"message\":{\"annotations\":[],\"content\":null,\"refusal\":null,\"role\":\"assistant\",\"tool_calls\":[{\"function\":{\"arguments\":\"{\\\"city\\\":\\\"Seattle\\\",\\\"state\\\":\\\"WA\\\",\\\"country\\\":\\\"USA\\\"}\",\"name\":\"get_weather\"},\"id\":\"call_zsKvqTdWZv3vB942bSTSWEtk\",\"type\":\"function\"}]}}],\"created\":1752263944,\"id\":\"chatcmpl-BsEBcfjhCzg0encOYb2LFhTNhX42r\",\"model\":\"gpt-4.1-2025-04-14\",\"object\":\"chat.completion\",\"prompt_filter_results\":[{\"prompt_index\":0,\"content_filter_results\":{\"hate\":{\"filtered\":false,\"severity\":\"safe\"},\"jailbreak\":{\"filtered\":false,\"detected\":false},\"self_harm\":{\"filtered\":false,\"severity\":\"safe\"},\"sexual\":{\"filtered\":false,\"severity\":\"safe\"},\"violence\":{\"filtered\":false,\"severity\":\"safe\"}}}],\"system_fingerprint\":\"fp_07e970ab25\",\"usage\":{\"completion_tokens\":23,\"completion_tokens_details\":{\"accepted_prediction_tokens\":0,\"audio_tokens\":0,\"reasoning_tokens\":0,\"rejected_prediction_tokens\":0},\"prompt_tokens\":249,\"prompt_tokens_details\":{\"audio_tokens\":0,\"cached_tokens\":0},\"total_tokens\":272}}\n"
-        }
-      },
-      "recorded_at": "Fri, 11 Jul 2025 19:59:04 GMT"
-    },
-    {
-      "request": {
-        "method": "post",
-        "uri": "https://development-technicalai.openai.azure.com/openai/v1/chat/completions?api-version=preview",
-        "body": {
-          "encoding": "UTF-8",
-          "string": "{\"model\":\"gpt-4.1\",\"max_tokens\":128,\"temperature\":0.0,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"I am in Seattle, WA\\n\"},{\"role\":\"assistant\",\"content\":\"Got it! Let me know if you need any local insights or information related to Seattle!\\n\"},{\"role\":\"user\",\"content\":\"What is the current weather?\\n\"}],\"tools\":[{\"type\":\"function\",\"function\":{\"name\":\"get_location\",\"description\":\"The get_location tool will return the users city, state or province and country.\",\"parameters\":{\"type\":\"object\",\"properties\":{},\"required\":[]}}},{\"type\":\"function\",\"function\":{\"name\":\"get_weather\",\"description\":\"The get_weather tool will return the current weather in a given locality.\",\"parameters\":{\"type\":\"object\",\"properties\":{\"city\":{\"type\":\"string\",\"description\":\"The city or town for which the current weather should be returned.\"},\"state\":{\"type\":\"string\",\"description\":\"The state or province for which the current weather should be returned. If this is not provided the largest or most prominent city with the given name, in the given country or in the worldi, will be assumed.\"},\"country\":{\"type\":\"string\",\"description\":\"The country for which the given weather should be returned. If this is not provided the largest or most prominent city with the given name will be returned.\"}},\"required\":[\"city\"]}}}]}"
-        },
-        "headers": {
-          "User-Agent": [
-            "Faraday v2.13.1"
-          ],
-          "Content-Type": [
-            "application/json"
-          ],
-          "api-key": [
-            "<API-KEY>"
-          ]
-        }
-      },
-      "response": {
-        "status": {
-          "code": 200,
-          "message": "OK"
-        },
-        "headers": {
-          "content-length": [
-            "1087"
-          ],
-          "content-type": [
-            "application/json"
-          ],
-          "apim-request-id": [
-            "fb59f280-fbde-4809-a5fb-9afa173cadb9"
+            "a22c84de-13ef-48f8-8ce1-c4744de8afba"
           ],
           "strict-transport-security": [
             "max-age=31536000; includeSubDomains; preload"
@@ -130,22 +45,19 @@
             "East US"
           ],
           "x-ratelimit-remaining-requests": [
-            "45"
+            "26"
           ],
           "x-ratelimit-limit-requests": [
             "50"
           ],
           "x-ratelimit-remaining-tokens": [
-            "47616"
+            "39812"
           ],
           "x-ratelimit-limit-tokens": [
             "50000"
           ],
           "azureml-model-session": [
-            "d030-20250625154533"
-          ],
-          "cmp-upstream-response-duration": [
-            "225"
+            "d048-20250926074127"
           ],
           "x-accel-buffering": [
             "no"
@@ -160,15 +72,15 @@
             "gpt-4.1"
           ],
           "date": [
-            "Tue, 15 Jul 2025 00:09:11 GMT"
+            "Thu, 02 Oct 2025 18:03:00 GMT"
           ]
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"choices\":[{\"content_filter_results\":{},\"finish_reason\":\"tool_calls\",\"index\":0,\"logprobs\":null,\"message\":{\"annotations\":[],\"content\":null,\"refusal\":null,\"role\":\"assistant\",\"tool_calls\":[{\"function\":{\"arguments\":\"{\\\"city\\\":\\\"Seattle\\\",\\\"state\\\":\\\"WA\\\",\\\"country\\\":\\\"USA\\\"}\",\"name\":\"get_weather\"},\"id\":\"call_YxDVIoQVpGvM6Sj9nZgo0Auh\",\"type\":\"function\"}]}}],\"created\":1752538151,\"id\":\"chatcmpl-BtNWJuAVhR8ljQeNCBzdwVm38jMdU\",\"model\":\"gpt-4.1-2025-04-14\",\"object\":\"chat.completion\",\"prompt_filter_results\":[{\"prompt_index\":0,\"content_filter_results\":{\"hate\":{\"filtered\":false,\"severity\":\"safe\"},\"jailbreak\":{\"filtered\":false,\"detected\":false},\"self_harm\":{\"filtered\":false,\"severity\":\"safe\"},\"sexual\":{\"filtered\":false,\"severity\":\"safe\"},\"violence\":{\"filtered\":false,\"severity\":\"safe\"}}}],\"system_fingerprint\":\"fp_07e970ab25\",\"usage\":{\"completion_tokens\":23,\"completion_tokens_details\":{\"accepted_prediction_tokens\":0,\"audio_tokens\":0,\"reasoning_tokens\":0,\"rejected_prediction_tokens\":0},\"prompt_tokens\":249,\"prompt_tokens_details\":{\"audio_tokens\":0,\"cached_tokens\":0},\"total_tokens\":272}}\n"
+          "string": "{\"choices\":[{\"content_filter_results\":{},\"finish_reason\":\"tool_calls\",\"index\":0,\"logprobs\":null,\"message\":{\"annotations\":[],\"content\":null,\"refusal\":null,\"role\":\"assistant\",\"tool_calls\":[{\"function\":{\"arguments\":\"{\\\"city\\\":\\\"Seattle\\\",\\\"state\\\":\\\"WA\\\",\\\"country\\\":\\\"USA\\\"}\",\"name\":\"get_weather\"},\"id\":\"call_7EQKo12Z4YN2fjpE64WcVdDx\",\"type\":\"function\"}]}}],\"created\":1759428180,\"id\":\"chatcmpl-CMHvoYe8o73aJcJX8ggYnmI1Y4nDG\",\"model\":\"gpt-4.1-2025-04-14\",\"object\":\"chat.completion\",\"prompt_filter_results\":[{\"prompt_index\":0,\"content_filter_results\":{\"hate\":{\"filtered\":false,\"severity\":\"safe\"},\"jailbreak\":{\"filtered\":false,\"detected\":false},\"self_harm\":{\"filtered\":false,\"severity\":\"safe\"},\"sexual\":{\"filtered\":false,\"severity\":\"safe\"},\"violence\":{\"filtered\":false,\"severity\":\"safe\"}}}],\"system_fingerprint\":\"fp_4d7b201289\",\"usage\":{\"completion_tokens\":23,\"completion_tokens_details\":{\"accepted_prediction_tokens\":0,\"audio_tokens\":0,\"reasoning_tokens\":0,\"rejected_prediction_tokens\":0},\"prompt_tokens\":249,\"prompt_tokens_details\":{\"audio_tokens\":0,\"cached_tokens\":0},\"total_tokens\":272}}\n"
         }
       },
-      "recorded_at": "Tue, 15 Jul 2025 00:09:12 GMT"
+      "recorded_at": "Thu, 02 Oct 2025 18:03:00 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

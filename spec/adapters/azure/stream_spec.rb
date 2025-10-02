@@ -22,7 +22,6 @@ RSpec.describe "#{Intelligence::Adapter[ :azure ]} stream requests", :azure do
       key                     ENV[ 'AZURE_API_KEY' ]
       base_uri                ENV[ 'AZURE_BASE_URI' ]
       chat_options do
-        model                 'gpt-4.1'
         max_tokens            128
         temperature           0
 
@@ -36,7 +35,6 @@ RSpec.describe "#{Intelligence::Adapter[ :azure ]} stream requests", :azure do
       key                     ENV[ 'AZURE_API_KEY' ]
       base_uri                ENV[ 'AZURE_BASE_URI' ]
       chat_options do
-        model                 'gpt-4.1'
         max_tokens            16
         temperature           0
 
@@ -50,7 +48,6 @@ RSpec.describe "#{Intelligence::Adapter[ :azure ]} stream requests", :azure do
       key                     ENV[ 'AZURE_API_KEY' ]
       base_uri                ENV[ 'AZURE_BASE_URI' ]
       chat_options do
-        model                 'gpt-4.1'
         max_tokens            16
         temperature           0
         stop                  'five'
@@ -65,7 +62,6 @@ RSpec.describe "#{Intelligence::Adapter[ :azure ]} stream requests", :azure do
       key                     ENV[ 'AZURE_API_KEY' ]
       base_uri                ENV[ 'AZURE_BASE_URI' ]
       chat_options do
-        model                 'gpt-4.1'
         max_tokens            32 
         temperature           0
 

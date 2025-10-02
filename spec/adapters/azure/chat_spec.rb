@@ -21,7 +21,6 @@ RSpec.describe "#{Intelligence::Adapter[ :azure ]} chat requests", :azure do
       key                     ENV[ 'AZURE_API_KEY' ]
       base_uri                ENV[ 'AZURE_BASE_URI' ]
       chat_options do
-        model                 'gpt-4.1'
         max_tokens            128 
         temperature           0
       end
@@ -33,7 +32,6 @@ RSpec.describe "#{Intelligence::Adapter[ :azure ]} chat requests", :azure do
       key                     ENV[ 'AZURE_API_KEY' ]
       base_uri                ENV[ 'AZURE_BASE_URI' ]
       chat_options do
-        model                 'gpt-4.1'
         max_tokens            128 
         temperature           0
 
@@ -51,7 +49,6 @@ RSpec.describe "#{Intelligence::Adapter[ :azure ]} chat requests", :azure do
       key                     ENV[ 'AZURE_API_KEY' ]
       base_uri                ENV[ 'AZURE_BASE_URI' ]
       chat_options do
-        model                 'gpt-4.1'
         max_tokens            24 
         temperature           0
       end
@@ -63,7 +60,6 @@ RSpec.describe "#{Intelligence::Adapter[ :azure ]} chat requests", :azure do
       key                     ENV[ 'AZURE_API_KEY' ]
       base_uri                ENV[ 'AZURE_BASE_URI' ]
       chat_options do
-        model                 'gpt-4.1'
         max_tokens            24
         temperature           0
         stop                  'five'
@@ -76,7 +72,6 @@ RSpec.describe "#{Intelligence::Adapter[ :azure ]} chat requests", :azure do
       key                     ENV[ 'AZURE_API_KEY' ]
       base_uri                ENV[ 'AZURE_BASE_URI' ]
       chat_options do
-        model                 'gpt-4.1'
         max_tokens            32
         temperature           0
       end
@@ -88,24 +83,11 @@ RSpec.describe "#{Intelligence::Adapter[ :azure ]} chat requests", :azure do
       key                     'invalid key'
       base_uri                ENV[ 'AZURE_BASE_URI' ]
       chat_options do
-        model                 'pixtral-12b-2409'        
         max_tokens            16
         temperature           0
       end
     end
   end 
-
-  let( :adapter_with_invalid_model ) do
-    Intelligence::Adapter[ :azure ].build! do 
-      key                     ENV[ 'AZURE_API_KEY' ]
-      base_uri                ENV[ 'AZURE_BASE_URI' ]
-      chat_options do
-        model                 'invalid'
-        max_tokens            16
-        temperature           0
-      end
-    end
-  end
 
   include_examples 'chat requests'
   include_examples 'chat requests with token limit exceeded', adapter: :adapter_with_limited_max_tokens
@@ -122,5 +104,6 @@ RSpec.describe "#{Intelligence::Adapter[ :azure ]} chat requests", :azure do
   include_examples 'chat requests with tools multiturn'
 
   include_examples 'chat requests with invalid key'
-  include_examples 'chat requests with invalid model', error_type: 'invalid_request_error'
+  # this is not meaningful for Azure because the model is part of the deployment ( in the base uri )
+  # include_examples 'chat requests with invalid model'
 end
