@@ -93,8 +93,8 @@ RSpec.describe "#{Intelligence::Adapter[ :google ]} stream requests", :google do
   include_examples 'stream requests'
   # the google api currently doesn not respect the max token limit
   #
-  #include_examples 'stream requests with token limit exceeded', 
-  #                 adapter: :adapter_with_limited_max_tokens
+  include_examples 'stream requests with token limit exceeded', 
+                  adapter: :adapter_with_limited_max_tokens
   include_examples 'stream requests with stop sequence', 
                    adapter: :adapter_with_limited_max_tokens  
   include_examples 'stream requests without alternating roles'

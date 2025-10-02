@@ -36,7 +36,7 @@
             "chunked"
           ],
           "date": [
-            "Wed, 01 Oct 2025 21:26:58 GMT"
+            "Thu, 02 Oct 2025 17:42:36 GMT"
           ],
           "server": [
             "scaffolding on HTTPServer2"
@@ -51,7 +51,7 @@
             "nosniff"
           ],
           "server-timing": [
-            "gfet4t7; dur=523"
+            "gfet4t7; dur=542"
           ],
           "alt-svc": [
             "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
@@ -59,10 +59,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "data: {\"candidates\": [{\"content\": {\"parts\": [{\"functionCall\": {\"name\": \"get_weather\",\"args\": {\"city\": \"Seattle\",\"country\": \"USA\",\"state\": \"WA\"}}}],\"role\": \"model\"},\"finishReason\": \"STOP\",\"index\": 0}],\"usageMetadata\": {\"promptTokenCount\": 254,\"candidatesTokenCount\": 25,\"totalTokenCount\": 279,\"promptTokensDetails\": [{\"modality\": \"TEXT\",\"tokenCount\": 254}]},\"modelVersion\": \"gemini-2.5-flash\",\"responseId\": \"opzdaLP_CbHTz7IP3qjdqQE\"}\r\n\r\n"
+          "string": "data: {\"candidates\": [{\"content\": {\"parts\": [{\"functionCall\": {\"name\": \"get_weather\",\"args\": {\"city\": \"Seattle\",\"state\": \"WA\",\"country\": \"USA\"}}}],\"role\": \"model\"},\"finishReason\": \"STOP\",\"index\": 0}],\"usageMetadata\": {\"promptTokenCount\": 254,\"candidatesTokenCount\": 25,\"totalTokenCount\": 279,\"promptTokensDetails\": [{\"modality\": \"TEXT\",\"tokenCount\": 254}]},\"modelVersion\": \"gemini-2.5-flash\",\"responseId\": \"jLneaPTNL6ammtkP393cyQI\"}\r\n\r\n"
         }
       },
-      "recorded_at": "Wed, 01 Oct 2025 21:26:58 GMT"
+      "recorded_at": "Thu, 02 Oct 2025 17:42:36 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

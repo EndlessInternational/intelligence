@@ -131,8 +131,8 @@ RSpec.describe "#{Intelligence::Adapter[ :google ]} chat requests", :google do
 
   include_examples 'chat requests'
   # the google api currently doesn not respect the max token limit
-  #include_examples 'chat requests with token limit exceeded', 
-  #                 adapter: :adapter_with_limited_max_tokens
+  include_examples 'chat requests with token limit exceeded', 
+                    adapter: :adapter_with_limited_max_tokens
   include_examples 'chat requests with stop sequence', 
                    adapter: :adapter_with_stop_sequence  
   include_examples 'chat requests without alternating roles'

@@ -33,7 +33,7 @@
             "gzip"
           ],
           "date": [
-            "Wed, 01 Oct 2025 21:26:12 GMT"
+            "Thu, 02 Oct 2025 17:41:49 GMT"
           ],
           "server": [
             "scaffolding on HTTPServer2"
@@ -48,7 +48,7 @@
             "nosniff"
           ],
           "server-timing": [
-            "gfet4t7; dur=572"
+            "gfet4t7; dur=628"
           ],
           "alt-svc": [
             "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
@@ -59,10 +59,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "{\n  \"candidates\": [\n    {\n      \"content\": {\n        \"parts\": [\n          {\n            \"functionCall\": {\n              \"name\": \"get_weather\",\n              \"args\": {\n                \"location\": {\n                  \"state\": \"Washington\",\n                  \"city\": \"Seattle\",\n                  \"country\": \"USA\"\n                }\n              }\n            }\n          }\n        ],\n        \"role\": \"model\"\n      },\n      \"finishReason\": \"STOP\",\n      \"index\": 0\n    }\n  ],\n  \"usageMetadata\": {\n    \"promptTokenCount\": 268,\n    \"candidatesTokenCount\": 31,\n    \"totalTokenCount\": 299,\n    \"promptTokensDetails\": [\n      {\n        \"modality\": \"TEXT\",\n        \"tokenCount\": 268\n      }\n    ]\n  },\n  \"modelVersion\": \"gemini-2.5-flash\",\n  \"responseId\": \"dJzdaKK5OsDAz7IPtq7zwQM\"\n}\n"
+          "string": "{\n  \"candidates\": [\n    {\n      \"content\": {\n        \"parts\": [\n          {\n            \"functionCall\": {\n              \"name\": \"get_weather\",\n              \"args\": {\n                \"location\": {\n                  \"city\": \"Seattle\",\n                  \"state\": \"Washington\",\n                  \"country\": \"USA\"\n                }\n              }\n            }\n          }\n        ],\n        \"role\": \"model\"\n      },\n      \"finishReason\": \"STOP\",\n      \"index\": 0\n    }\n  ],\n  \"usageMetadata\": {\n    \"promptTokenCount\": 268,\n    \"candidatesTokenCount\": 31,\n    \"totalTokenCount\": 299,\n    \"promptTokensDetails\": [\n      {\n        \"modality\": \"TEXT\",\n        \"tokenCount\": 268\n      }\n    ]\n  },\n  \"modelVersion\": \"gemini-2.5-flash\",\n  \"responseId\": \"XbneaKXwCZaymtkP_IOZyQ4\"\n}\n"
         }
       },
-      "recorded_at": "Wed, 01 Oct 2025 21:26:12 GMT"
+      "recorded_at": "Thu, 02 Oct 2025 17:41:49 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

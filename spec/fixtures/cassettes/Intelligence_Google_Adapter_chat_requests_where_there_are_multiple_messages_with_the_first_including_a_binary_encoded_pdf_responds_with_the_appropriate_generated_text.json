@@ -33,7 +33,7 @@
             "gzip"
           ],
           "date": [
-            "Wed, 01 Oct 2025 21:24:52 GMT"
+            "Thu, 02 Oct 2025 17:40:16 GMT"
           ],
           "server": [
             "scaffolding on HTTPServer2"
@@ -48,7 +48,7 @@
             "nosniff"
           ],
           "server-timing": [
-            "gfet4t7; dur=2028"
+            "gfet4t7; dur=2400"
           ],
           "alt-svc": [
             "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
@@ -59,10 +59,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "{\n  \"candidates\": [\n    {\n      \"content\": {\n        \"parts\": [\n          {\n            \"text\": \"February 2004\"\n          }\n        ],\n        \"role\": \"model\"\n      },\n      \"finishReason\": \"STOP\",\n      \"index\": 0\n    }\n  ],\n  \"usageMetadata\": {\n    \"promptTokenCount\": 8324,\n    \"candidatesTokenCount\": 6,\n    \"totalTokenCount\": 8330,\n    \"cachedContentTokenCount\": 8133,\n    \"promptTokensDetails\": [\n      {\n        \"modality\": \"TEXT\",\n        \"tokenCount\": 68\n      },\n      {\n        \"modality\": \"DOCUMENT\",\n        \"tokenCount\": 8256\n      }\n    ],\n    \"cacheTokensDetails\": [\n      {\n        \"modality\": \"DOCUMENT\",\n        \"tokenCount\": 8067\n      },\n      {\n        \"modality\": \"TEXT\",\n        \"tokenCount\": 66\n      }\n    ]\n  },\n  \"modelVersion\": \"gemini-2.5-flash\",\n  \"responseId\": \"JJzdaMrRB_C1qtsPwPy68Qs\"\n}\n"
+          "string": "{\n  \"candidates\": [\n    {\n      \"content\": {\n        \"parts\": [\n          {\n            \"text\": \"February 2004\"\n          }\n        ],\n        \"role\": \"model\"\n      },\n      \"finishReason\": \"STOP\",\n      \"index\": 0\n    }\n  ],\n  \"usageMetadata\": {\n    \"promptTokenCount\": 8324,\n    \"candidatesTokenCount\": 6,\n    \"totalTokenCount\": 8330,\n    \"cachedContentTokenCount\": 8133,\n    \"promptTokensDetails\": [\n      {\n        \"modality\": \"TEXT\",\n        \"tokenCount\": 68\n      },\n      {\n        \"modality\": \"DOCUMENT\",\n        \"tokenCount\": 8256\n      }\n    ],\n    \"cacheTokensDetails\": [\n      {\n        \"modality\": \"TEXT\",\n        \"tokenCount\": 66\n      },\n      {\n        \"modality\": \"DOCUMENT\",\n        \"tokenCount\": 8067\n      }\n    ]\n  },\n  \"modelVersion\": \"gemini-2.5-flash\",\n  \"responseId\": \"ALneaNCIBdGymtkPnYuM4QY\"\n}\n"
         }
       },
-      "recorded_at": "Wed, 01 Oct 2025 21:24:52 GMT"
+      "recorded_at": "Thu, 02 Oct 2025 17:40:16 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

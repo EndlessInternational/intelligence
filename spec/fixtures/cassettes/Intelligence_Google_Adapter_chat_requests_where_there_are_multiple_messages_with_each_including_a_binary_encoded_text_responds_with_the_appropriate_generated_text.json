@@ -33,7 +33,7 @@
             "gzip"
           ],
           "date": [
-            "Wed, 01 Oct 2025 21:24:45 GMT"
+            "Thu, 02 Oct 2025 17:40:04 GMT"
           ],
           "server": [
             "scaffolding on HTTPServer2"
@@ -48,7 +48,7 @@
             "nosniff"
           ],
           "server-timing": [
-            "gfet4t7; dur=850"
+            "gfet4t7; dur=666"
           ],
           "alt-svc": [
             "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
@@ -59,10 +59,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "{\n  \"candidates\": [\n    {\n      \"content\": {\n        \"parts\": [\n          {\n            \"text\": \"The Big Bang: universe's origin, from singularity to cosmos, stars, and life.\"\n          }\n        ],\n        \"role\": \"model\"\n      },\n      \"finishReason\": \"STOP\",\n      \"index\": 0\n    }\n  ],\n  \"usageMetadata\": {\n    \"promptTokenCount\": 222,\n    \"candidatesTokenCount\": 19,\n    \"totalTokenCount\": 241,\n    \"promptTokensDetails\": [\n      {\n        \"modality\": \"TEXT\",\n        \"tokenCount\": 222\n      }\n    ]\n  },\n  \"modelVersion\": \"gemini-2.5-flash\",\n  \"responseId\": \"HZzdaK2TJ8fVz7IP6sGj2QU\"\n}\n"
+          "string": "{\n  \"candidates\": [\n    {\n      \"content\": {\n        \"parts\": [\n          {\n            \"text\": \"The Big Bang: universe's origin, from singularity to cosmos, stars, and life.\"\n          }\n        ],\n        \"role\": \"model\"\n      },\n      \"finishReason\": \"STOP\",\n      \"index\": 0\n    }\n  ],\n  \"usageMetadata\": {\n    \"promptTokenCount\": 222,\n    \"candidatesTokenCount\": 19,\n    \"totalTokenCount\": 241,\n    \"promptTokensDetails\": [\n      {\n        \"modality\": \"TEXT\",\n        \"tokenCount\": 222\n      }\n    ]\n  },\n  \"modelVersion\": \"gemini-2.5-flash\",\n  \"responseId\": \"9LjeaJrmFO7mqtsPhtjAsA0\"\n}\n"
         }
       },
-      "recorded_at": "Wed, 01 Oct 2025 21:24:45 GMT"
+      "recorded_at": "Thu, 02 Oct 2025 17:40:04 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"
