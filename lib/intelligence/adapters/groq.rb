@@ -33,15 +33,7 @@ module Intelligence
 
           temperature         Float
           tool                array: true, as: :tools, &Tool.schema
-          tool_choice do
-            String  # Handles "auto", "none", etc.
-
-            # Or structured as object
-            type    Symbol, in: [:function]
-            function do
-              name  Symbol, required: true
-            end
-          end
+          tool_choice String
           top_logprobs        Integer
           top_p               Float
           user                String
