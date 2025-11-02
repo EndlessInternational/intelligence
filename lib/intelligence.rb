@@ -8,6 +8,8 @@ require 'json/repair'
 
 require 'intelligence/version'
 
+require 'intelligence/utilities/deep_dup'
+
 require 'intelligence/error'
 require 'intelligence/adapter_error'
 require 'intelligence/unsupported_content_error'

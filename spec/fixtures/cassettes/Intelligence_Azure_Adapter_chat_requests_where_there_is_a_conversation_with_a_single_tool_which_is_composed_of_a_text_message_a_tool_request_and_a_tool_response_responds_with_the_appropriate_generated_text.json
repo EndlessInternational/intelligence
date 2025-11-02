@@ -1,0 +1,87 @@
+{
+  "http_interactions": [
+    {
+      "request": {
+        "method": "post",
+        "uri": "https://development-technicalai.openai.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2025-01-01-preview",
+        "body": {
+          "encoding": "UTF-8",
+          "string": "{\"max_tokens\":128,\"temperature\":0.0,\"tools\":[{\"type\":\"function\",\"function\":{\"name\":\"get_location\",\"description\":\"The get_location tool will return the users city, state or province and country.\",\"parameters\":{\"type\":\"object\",\"properties\":{},\"required\":[]}}}],\"messages\":[{\"role\":\"system\",\"content\":\"You are a helpfull assistant who answers questions succinctly.\"},{\"role\":\"user\",\"content\":\"Where am I located?\"},{\"role\":\"assistant\",\"tool_calls\":[{\"id\":\"MpfiuoRaM\",\"type\":\"function\",\"function\":{\"name\":\"get_location\",\"arguments\":\"{}\"}}],\"content\":\"\"},{\"role\":\"tool\",\"name\":\"get_location\",\"tool_call_id\":\"MpfiuoRaM\",\"content\":\"Seattle, WA, USA\"}]}"
+        },
+        "headers": {
+          "User-Agent": [
+            "Faraday v2.13.1"
+          ],
+          "Content-Type": [
+            "application/json"
+          ],
+          "api-key": [
+            "<API-KEY>"
+          ]
+        }
+      },
+      "response": {
+        "status": {
+          "code": 200,
+          "message": "OK"
+        },
+        "headers": {
+          "content-length": [
+            "1251"
+          ],
+          "content-type": [
+            "application/json"
+          ],
+          "apim-request-id": [
+            "c7d0fbdf-dcdd-4ba8-a391-f3d1cd8c301b"
+          ],
+          "strict-transport-security": [
+            "max-age=31536000; includeSubDomains; preload"
+          ],
+          "x-content-type-options": [
+            "nosniff"
+          ],
+          "x-ms-region": [
+            "East US"
+          ],
+          "x-ratelimit-remaining-requests": [
+            "29"
+          ],
+          "x-ratelimit-limit-requests": [
+            "50"
+          ],
+          "x-ratelimit-remaining-tokens": [
+            "39459"
+          ],
+          "x-ratelimit-limit-tokens": [
+            "50000"
+          ],
+          "azureml-model-session": [
+            "d048-20250926074127"
+          ],
+          "x-accel-buffering": [
+            "no"
+          ],
+          "x-ms-rai-invoked": [
+            "true"
+          ],
+          "x-request-id": [
+            "<X-REQUEST-ID>"
+          ],
+          "x-ms-deployment-name": [
+            "gpt-4.1"
+          ],
+          "date": [
+            "Thu, 02 Oct 2025 18:03:11 GMT"
+          ]
+        },
+        "body": {
+          "encoding": "UTF-8",
+          "string": "{\"choices\":[{\"content_filter_results\":{\"hate\":{\"filtered\":false,\"severity\":\"safe\"},\"protected_material_code\":{\"filtered\":false,\"detected\":false},\"protected_material_text\":{\"filtered\":false,\"detected\":false},\"self_harm\":{\"filtered\":false,\"severity\":\"safe\"},\"sexual\":{\"filtered\":false,\"severity\":\"safe\"},\"violence\":{\"filtered\":false,\"severity\":\"safe\"}},\"finish_reason\":\"stop\",\"index\":0,\"logprobs\":null,\"message\":{\"annotations\":[],\"content\":\"You are located in Seattle, Washington, USA.\",\"refusal\":null,\"role\":\"assistant\"}}],\"created\":1759428192,\"id\":\"chatcmpl-CMHw0W1xD04VKYmhqOW5aUGnORHSn\",\"model\":\"gpt-4.1-2025-04-14\",\"object\":\"chat.completion\",\"prompt_filter_results\":[{\"prompt_index\":0,\"content_filter_results\":{\"hate\":{\"filtered\":false,\"severity\":\"safe\"},\"jailbreak\":{\"filtered\":false,\"detected\":false},\"self_harm\":{\"filtered\":false,\"severity\":\"safe\"},\"sexual\":{\"filtered\":false,\"severity\":\"safe\"},\"violence\":{\"filtered\":false,\"severity\":\"safe\"}}}],\"system_fingerprint\":\"fp_4d7b201289\",\"usage\":{\"completion_tokens\":12,\"completion_tokens_details\":{\"accepted_prediction_tokens\":0,\"audio_tokens\":0,\"reasoning_tokens\":0,\"rejected_prediction_tokens\":0},\"prompt_tokens\":87,\"prompt_tokens_details\":{\"audio_tokens\":0,\"cached_tokens\":0},\"total_tokens\":99}}\n"
+        }
+      },
+      "recorded_at": "Thu, 02 Oct 2025 18:03:12 GMT"
+    }
+  ],
+  "recorded_with": "VCR 6.3.1"
+}

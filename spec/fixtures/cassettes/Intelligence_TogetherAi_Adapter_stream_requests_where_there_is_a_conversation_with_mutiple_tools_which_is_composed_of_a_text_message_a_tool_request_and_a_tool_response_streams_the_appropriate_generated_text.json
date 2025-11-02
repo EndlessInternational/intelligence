@@ -6,13 +6,13 @@
         "uri": "https://api.together.xyz/v1/chat/completions",
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"model\":\"meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo\",\"max_tokens\":128.0,\"temperature\":0.0,\"stream\":true,\"messages\":[{\"role\":\"system\",\"content\":\"You are a helpfull assistant who answers questions succinctly.\"},{\"role\":\"user\",\"content\":\"What is the current weather?\"},{\"role\":\"assistant\",\"tool_calls\":[{\"id\":\"MpfiuoRaM\",\"type\":\"function\",\"function\":{\"name\":\"get_location\",\"arguments\":\"{}\"}}],\"content\":\"\"},{\"role\":\"tool\",\"tool_call_id\":\"MpfiuoRaM\",\"content\":\"Seattle, WA, USA\"}],\"tools\":[{\"type\":\"function\",\"function\":{\"name\":\"get_location\",\"description\":\"The get_location tool will return the users city, state or province and country.\",\"parameters\":{}}},{\"type\":\"function\",\"function\":{\"name\":\"get_weather\",\"description\":\"The get_weather tool will return the current weather in a given locality.\",\"parameters\":{\"type\":\"object\",\"properties\":{\"city\":{\"type\":\"string\",\"description\":\"The city or town for which the current weather should be returned.\"},\"state\":{\"type\":\"string\",\"description\":\"The state or province for which the current weather should be returned. If this is not provided the largest or most prominent city with the given name, in the given country or in the worldi, will be assumed.\"},\"country\":{\"type\":\"string\",\"description\":\"The country for which the given weather should be returned. If this is not provided the largest or most prominent city with the given name will be returned.\"}},\"required\":[\"city\"]}}}]}"
+          "string": "{\"model\":\"deepseek-ai/DeepSeek-V3\",\"max_tokens\":128.0,\"temperature\":0.0,\"stream\":true,\"messages\":[{\"role\":\"system\",\"content\":\"You are a helpfull assistant who answers questions succinctly.\"},{\"role\":\"user\",\"content\":\"What is the current weather?\"},{\"role\":\"assistant\",\"tool_calls\":[{\"id\":\"MpfiuoRaM\",\"type\":\"function\",\"function\":{\"name\":\"get_location\",\"arguments\":\"{}\"}}],\"content\":\"\"},{\"role\":\"tool\",\"tool_call_id\":\"MpfiuoRaM\",\"content\":\"Seattle, WA, USA\"}],\"tools\":[{\"type\":\"function\",\"function\":{\"name\":\"get_location\",\"description\":\"The get_location tool will return the users city, state or province and country.\",\"parameters\":{}}},{\"type\":\"function\",\"function\":{\"name\":\"get_weather\",\"description\":\"The get_weather tool will return the current weather in a given locality.\",\"parameters\":{\"type\":\"object\",\"properties\":{\"city\":{\"type\":\"string\",\"description\":\"The city or town for which the current weather should be returned.\"},\"state\":{\"type\":\"string\",\"description\":\"The state or province for which the current weather should be returned. If this is not provided the largest or most prominent city with the given name, in the given country or in the worldi, will be assumed.\"},\"country\":{\"type\":\"string\",\"description\":\"The country for which the given weather should be returned. If this is not provided the largest or most prominent city with the given name will be returned.\"}},\"required\":[\"city\"]}}}]}"
         },
         "headers": {
           "User-Agent": [
-            "Faraday v2.12.0"
+            "Faraday v2.13.1"
           ],
-          "Content-Type": [
+          "Content-type": [
             "application/json"
           ],
           "Authorization": [
@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Tue, 21 Jan 2025 01:55:31 GMT"
+            "Sat, 05 Jul 2025 21:32:20 GMT"
           ],
           "content-type": [
             "text/event-stream;charset=utf-8"
@@ -57,13 +57,13 @@
             "max-age=15552000; includeSubDomains"
           ],
           "x-amzn-trace-id": [
-            "f86063ca-7327-4bc2-8f57-b1016489fa97-noamzn"
+            "0006b53a-d7ee-484d-aa86-73a14b3a46db-noamzn"
           ],
           "x-api-call-start": [
-            "2025-01-21T01:55:31.418Z"
+            "2025-07-05T21:32:20.073Z"
           ],
           "x-api-received": [
-            "2025-01-21T01:55:31.410Z"
+            "2025-07-05T21:32:20.049Z"
           ],
           "x-inference-version": [
             "v2"
@@ -72,19 +72,22 @@
             "false"
           ],
           "x-ratelimit-limit": [
-            "30"
+            "2"
           ],
           "x-ratelimit-limit-tokens": [
             "3000"
           ],
           "x-ratelimit-remaining": [
-            "54"
+            "1"
           ],
           "x-ratelimit-remaining-tokens": [
             "3000"
           ],
           "x-ratelimit-reset": [
             "0"
+          ],
+          "x-request-id": [
+            "<X-REQUEST-ID>"
           ],
           "vary": [
             "Accept-Encoding"
@@ -98,10 +101,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "data: {\"id\":\"9053aeb8edea76b8\",\"object\":\"chat.completion.chunk\",\"created\":1737424531,\"model\":\"meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo\",\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":null},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"9053aeb8edea76b8\",\"object\":\"chat.completion.chunk\",\"created\":1737424531,\"model\":\"meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo\",\"choices\":[{\"index\":0,\"delta\":{\"tool_calls\":[{\"index\":0,\"id\":\"call_9k1mwq5m8oc5fyuedidg8z5z\",\"type\":\"function\",\"function\":{\"name\":\"get_weather\",\"arguments\":\"\"}}]},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"9053aeb8edea76b8\",\"object\":\"chat.completion.chunk\",\"created\":1737424531,\"model\":\"meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo\",\"choices\":[{\"index\":0,\"delta\":{\"tool_calls\":[{\"index\":0,\"function\":{\"arguments\":\"{\\\"\"}}]},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"9053aeb8edea76b8\",\"object\":\"chat.completion.chunk\",\"created\":1737424531,\"model\":\"meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo\",\"choices\":[{\"index\":0,\"delta\":{\"tool_calls\":[{\"index\":0,\"function\":{\"arguments\":\"city\"}}]},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"9053aeb8edea76b8\",\"object\":\"chat.completion.chunk\",\"created\":1737424531,\"model\":\"meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo\",\"choices\":[{\"index\":0,\"delta\":{\"tool_calls\":[{\"index\":0,\"function\":{\"arguments\":\"\\\":\"}}]},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"9053aeb8edea76b8\",\"object\":\"chat.completion.chunk\",\"created\":1737424531,\"model\":\"meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo\",\"choices\":[{\"index\":0,\"delta\":{\"tool_calls\":[{\"index\":0,\"function\":{\"arguments\":\" \\\"\"}}]},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"9053aeb8edea76b8\",\"object\":\"chat.completion.chunk\",\"created\":1737424531,\"model\":\"meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo\",\"choices\":[{\"index\":0,\"delta\":{\"tool_calls\":[{\"index\":0,\"function\":{\"arguments\":\"Seattle\"}}]},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"9053aeb8edea76b8\",\"object\":\"chat.completion.chunk\",\"created\":1737424531,\"model\":\"meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo\",\"choices\":[{\"index\":0,\"delta\":{\"tool_calls\":[{\"index\":0,\"function\":{\"arguments\":\"\\\",\"}}]},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"9053aeb8edea76b8\",\"object\":\"chat.completion.chunk\",\"created\":1737424531,\"model\":\"meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo\",\"choices\":[{\"index\":0,\"delta\":{\"tool_calls\":[{\"index\":0,\"function\":{\"arguments\":\" \\\"\"}}]},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"9053aeb8edea76b8\",\"object\":\"chat.completion.chunk\",\"created\":1737424531,\"model\":\"meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo\",\"choices\":[{\"index\":0,\"delta\":{\"tool_calls\":[{\"index\":0,\"function\":{\"arguments\":\"state\"}}]},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"9053aeb8edea76b8\",\"object\":\"chat.completion.chunk\",\"created\":1737424531,\"model\":\"meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo\",\"choices\":[{\"index\":0,\"delta\":{\"tool_calls\":[{\"index\":0,\"function\":{\"arguments\":\"\\\":\"}}]},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"9053aeb8edea76b8\",\"object\":\"chat.completion.chunk\",\"created\":1737424531,\"model\":\"meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo\",\"choices\":[{\"index\":0,\"delta\":{\"tool_calls\":[{\"index\":0,\"function\":{\"arguments\":\" \\\"\"}}]},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"9053aeb8edea76b8\",\"object\":\"chat.completion.chunk\",\"created\":1737424531,\"model\":\"meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo\",\"choices\":[{\"index\":0,\"delta\":{\"tool_calls\":[{\"index\":0,\"function\":{\"arguments\":\"WA\"}}]},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"9053aeb8edea76b8\",\"object\":\"chat.completion.chunk\",\"created\":1737424531,\"model\":\"meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo\",\"choices\":[{\"index\":0,\"delta\":{\"tool_calls\":[{\"index\":0,\"function\":{\"arguments\":\"\\\",\"}}]},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"9053aeb8edea76b8\",\"object\":\"chat.completion.chunk\",\"created\":1737424531,\"model\":\"meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo\",\"choices\":[{\"index\":0,\"delta\":{\"tool_calls\":[{\"index\":0,\"function\":{\"arguments\":\" \\\"\"}}]},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"9053aeb8edea76b8\",\"object\":\"chat.completion.chunk\",\"created\":1737424531,\"model\":\"meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo\",\"choices\":[{\"index\":0,\"delta\":{\"tool_calls\":[{\"index\":0,\"function\":{\"arguments\":\"country\"}}]},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"9053aeb8edea76b8\",\"object\":\"chat.completion.chunk\",\"created\":1737424531,\"model\":\"meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo\",\"choices\":[{\"index\":0,\"delta\":{\"tool_calls\":[{\"index\":0,\"function\":{\"arguments\":\"\\\":\"}}]},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"9053aeb8edea76b8\",\"object\":\"chat.completion.chunk\",\"created\":1737424531,\"model\":\"meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo\",\"choices\":[{\"index\":0,\"delta\":{\"tool_calls\":[{\"index\":0,\"function\":{\"arguments\":\" \\\"\"}}]},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"9053aeb8edea76b8\",\"object\":\"chat.completion.chunk\",\"created\":1737424531,\"model\":\"meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo\",\"choices\":[{\"index\":0,\"delta\":{\"tool_calls\":[{\"index\":0,\"function\":{\"arguments\":\"USA\"}}]},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"9053aeb8edea76b8\",\"object\":\"chat.completion.chunk\",\"created\":1737424531,\"model\":\"meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo\",\"choices\":[{\"index\":0,\"delta\":{\"tool_calls\":[{\"index\":0,\"function\":{\"arguments\":\"\\\"\"}}]},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"9053aeb8edea76b8\",\"object\":\"chat.completion.chunk\",\"created\":1737424531,\"model\":\"meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo\",\"choices\":[{\"index\":0,\"delta\":{\"tool_calls\":[{\"index\":0,\"function\":{\"arguments\":\"}\"}}]},\"logprobs\":null,\"finish_reason\":\"tool_calls\"}]}\n\ndata: [DONE]\n\n"
+          "string": "data: {\"id\":\"o1uFUqv-zqrih-95a9f9701a37585c\",\"object\":\"chat.completion.chunk\",\"created\":1751751140,\"model\":\"deepseek-ai/DeepSeek-V3\",\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":null},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"o1uFUqv-zqrih-95a9f9701a37585c\",\"object\":\"chat.completion.chunk\",\"created\":1751751140,\"model\":\"deepseek-ai/DeepSeek-V3\",\"choices\":[{\"index\":0,\"delta\":{\"tool_calls\":[{\"index\":0,\"id\":\"call_kfsuhcr6k1c2zmbtoxn6gfdq\",\"type\":\"function\",\"function\":{\"name\":\"get_current_weather\",\"arguments\":\"\"}}]},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"o1uFUqv-zqrih-95a9f9701a37585c\",\"object\":\"chat.completion.chunk\",\"created\":1751751140,\"model\":\"deepseek-ai/DeepSeek-V3\",\"choices\":[{\"index\":0,\"delta\":{\"tool_calls\":[{\"index\":0,\"function\":{\"arguments\":\"{\\\"location\\\":\\\"Seattle, WA, USA\\\"}\"}}]},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"o1uFUqv-zqrih-95a9f9701a37585c\",\"object\":\"chat.completion.chunk\",\"created\":1751751140,\"choices\":[{\"index\":0,\"text\":\"\",\"logprobs\":null,\"finish_reason\":\"tool_calls\",\"seed\":18155305371124838000,\"delta\":{\"token_id\":1,\"role\":\"assistant\",\"content\":\"\",\"tool_calls\":null}}],\"model\":\"deepseek-ai/DeepSeek-V3-p\",\"usage\":{\"prompt_tokens\":60,\"completion_tokens\":42,\"total_tokens\":102,\"cached_tokens\":0}}\n\ndata: [DONE]\n\n"
         }
       },
-      "recorded_at": "Tue, 21 Jan 2025 01:55:31 GMT"
+      "recorded_at": "Sat, 05 Jul 2025 21:32:20 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

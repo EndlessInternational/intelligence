@@ -3,14 +3,14 @@
     {
       "request": {
         "method": "post",
-        "uri": "https://api.openai.com/v1/chat/completions",
+        "uri": "https://api.openai.com/v1/responses",
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"model\":\"gpt-4o\",\"temperature\":0.0,\"max_completion_tokens\":16,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":[{\"type\":\"text\",\"text\":\"count to twenty in words, all lower case, one word per line\\n\"}]}]}"
+          "string": "{\"model\":\"gpt-4o\",\"temperature\":0.0,\"max_output_tokens\":16,\"input\":[{\"role\":\"user\",\"content\":[{\"type\":\"input_text\",\"text\":\"count to twenty in words, all lower case, one word per line\\n\"}],\"type\":\"message\"}],\"instructions\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"}"
         },
         "headers": {
           "User-Agent": [
-            "Faraday v2.12.0"
+            "Faraday v2.13.1"
           ],
           "Content-Type": [
             "application/json"
@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Mon, 20 Jan 2025 22:16:18 GMT"
+            "Wed, 01 Oct 2025 20:36:53 GMT"
           ],
           "content-type": [
             "application/json"
@@ -37,18 +37,6 @@
           ],
           "connection": [
             "keep-alive"
-          ],
-          "access-control-expose-headers": [
-            "X-Request-ID"
-          ],
-          "openai-organization": [
-            "<OPENAI-ORGANIZATION>"
-          ],
-          "openai-processing-ms": [
-            "1214"
-          ],
-          "openai-version": [
-            "2020-10-01"
           ],
           "x-ratelimit-limit-requests": [
             "10000"
@@ -60,7 +48,7 @@
             "9999"
           ],
           "x-ratelimit-remaining-tokens": [
-            "29999911"
+            "29999916"
           ],
           "x-ratelimit-reset-requests": [
             "6ms"
@@ -68,8 +56,23 @@
           "x-ratelimit-reset-tokens": [
             "0s"
           ],
+          "openai-version": [
+            "2020-10-01"
+          ],
+          "openai-organization": [
+            "<OPENAI-ORGANIZATION>"
+          ],
+          "openai-project": [
+            "proj_SnKVz9MFy0a0D6nNeyw7GaDO"
+          ],
           "x-request-id": [
             "<X-REQUEST-ID>"
+          ],
+          "openai-processing-ms": [
+            "1776"
+          ],
+          "x-envoy-upstream-service-time": [
+            "1785"
           ],
           "strict-transport-security": [
             "max-age=31536000; includeSubDomains; preload"
@@ -98,10 +101,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\n  \"id\": \"chatcmpl-AruM4Fs3ZzwmTUDamYLF9tv2o0zCr\",\n  \"object\": \"chat.completion\",\n  \"created\": 1737411376,\n  \"model\": \"gpt-4o-2024-08-06\",\n  \"choices\": [\n    {\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": \"one  \\ntwo  \\nthree  \\nfour  \\nfive  \\nsix  \\nseven  \\neight  \\n\",\n        \"refusal\": null\n      },\n      \"logprobs\": null,\n      \"finish_reason\": \"length\"\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 65,\n    \"completion_tokens\": 16,\n    \"total_tokens\": 81,\n    \"prompt_tokens_details\": {\n      \"cached_tokens\": 0,\n      \"audio_tokens\": 0\n    },\n    \"completion_tokens_details\": {\n      \"reasoning_tokens\": 0,\n      \"audio_tokens\": 0,\n      \"accepted_prediction_tokens\": 0,\n      \"rejected_prediction_tokens\": 0\n    }\n  },\n  \"service_tier\": \"default\",\n  \"system_fingerprint\": \"fp_50cad350e4\"\n}\n"
+          "string": "{\n  \"id\": \"resp_0afb8045f51c96550068dd90e39f94819fb60237f23795938c\",\n  \"object\": \"response\",\n  \"created_at\": 1759351011,\n  \"status\": \"incomplete\",\n  \"background\": false,\n  \"billing\": {\n    \"payer\": \"developer\"\n  },\n  \"error\": null,\n  \"incomplete_details\": {\n    \"reason\": \"max_output_tokens\"\n  },\n  \"instructions\": \"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \",\n  \"max_output_tokens\": 16,\n  \"max_tool_calls\": null,\n  \"model\": \"gpt-4o-2024-08-06\",\n  \"output\": [\n    {\n      \"id\": \"msg_0afb8045f51c96550068dd90e525fc819f860a90136d086aec\",\n      \"type\": \"message\",\n      \"status\": \"incomplete\",\n      \"content\": [\n        {\n          \"type\": \"output_text\",\n          \"annotations\": [],\n          \"logprobs\": [],\n          \"text\": \"one  \\ntwo  \\nthree  \\nfour  \\nfive  \\nsix  \\nseven  \\neight  \\n\"\n        }\n      ],\n      \"role\": \"assistant\"\n    }\n  ],\n  \"parallel_tool_calls\": true,\n  \"previous_response_id\": null,\n  \"prompt_cache_key\": null,\n  \"reasoning\": {\n    \"effort\": null,\n    \"summary\": null\n  },\n  \"safety_identifier\": null,\n  \"service_tier\": \"default\",\n  \"store\": true,\n  \"temperature\": 0.0,\n  \"text\": {\n    \"format\": {\n      \"type\": \"text\"\n    },\n    \"verbosity\": \"medium\"\n  },\n  \"tool_choice\": \"auto\",\n  \"tools\": [],\n  \"top_logprobs\": 0,\n  \"top_p\": 1.0,\n  \"truncation\": \"disabled\",\n  \"usage\": {\n    \"input_tokens\": 65,\n    \"input_tokens_details\": {\n      \"cached_tokens\": 0\n    },\n    \"output_tokens\": 16,\n    \"output_tokens_details\": {\n      \"reasoning_tokens\": 0\n    },\n    \"total_tokens\": 81\n  },\n  \"user\": null,\n  \"metadata\": {}\n}"
         }
       },
-      "recorded_at": "Mon, 20 Jan 2025 22:16:18 GMT"
+      "recorded_at": "Wed, 01 Oct 2025 20:36:53 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

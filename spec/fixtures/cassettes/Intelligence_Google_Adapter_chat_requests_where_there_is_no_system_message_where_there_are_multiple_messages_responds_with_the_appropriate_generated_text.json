@@ -3,14 +3,14 @@
     {
       "request": {
         "method": "post",
-        "uri": "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent?key=<KEY>",
+        "uri": "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=<KEY>",
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"generationConfig\":{\"maxOutputTokens\":64,\"temperature\":0.0},\"contents\":[{\"role\":\"user\",\"parts\":[{\"text\":\"the secret word is 'red'\\n\"}]},{\"role\":\"model\",\"parts\":[{\"text\":\"ok\\n\"}]},{\"role\":\"user\",\"parts\":[{\"text\":\"what is the exact secret word? answer with the word only\\n\"}]}]}"
+          "string": "{\"generationConfig\":{\"thinkingConfig\":{\"thinkingBudget\":0},\"maxOutputTokens\":128,\"temperature\":0.0},\"contents\":[{\"role\":\"user\",\"parts\":[{\"text\":\"the secret word is 'red'\\n\"}]},{\"role\":\"model\",\"parts\":[{\"text\":\"ok\\n\"}]},{\"role\":\"user\",\"parts\":[{\"text\":\"what is the exact secret word? answer with the word only\\n\"}]}]}"
         },
         "headers": {
           "User-Agent": [
-            "Faraday v2.12.0"
+            "Faraday v2.13.1"
           ],
           "Content-Type": [
             "application/json"
@@ -33,7 +33,7 @@
             "gzip"
           ],
           "date": [
-            "Tue, 21 Jan 2025 02:55:16 GMT"
+            "Thu, 02 Oct 2025 17:39:45 GMT"
           ],
           "server": [
             "scaffolding on HTTPServer2"
@@ -48,7 +48,7 @@
             "nosniff"
           ],
           "server-timing": [
-            "gfet4t7; dur=512"
+            "gfet4t7; dur=377"
           ],
           "alt-svc": [
             "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
@@ -59,10 +59,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "{\n  \"candidates\": [\n    {\n      \"content\": {\n        \"parts\": [\n          {\n            \"text\": \"red\\n\"\n          }\n        ],\n        \"role\": \"model\"\n      },\n      \"finishReason\": \"STOP\"\n    }\n  ],\n  \"usageMetadata\": {\n    \"promptTokenCount\": 26,\n    \"candidatesTokenCount\": 2,\n    \"totalTokenCount\": 28\n  },\n  \"modelVersion\": \"gemini-1.5-pro-002\"\n}\n"
+          "string": "{\n  \"candidates\": [\n    {\n      \"content\": {\n        \"parts\": [\n          {\n            \"text\": \"red\"\n          }\n        ],\n        \"role\": \"model\"\n      },\n      \"finishReason\": \"STOP\",\n      \"index\": 0\n    }\n  ],\n  \"usageMetadata\": {\n    \"promptTokenCount\": 26,\n    \"candidatesTokenCount\": 1,\n    \"totalTokenCount\": 27,\n    \"promptTokensDetails\": [\n      {\n        \"modality\": \"TEXT\",\n        \"tokenCount\": 26\n      }\n    ]\n  },\n  \"modelVersion\": \"gemini-2.5-flash\",\n  \"responseId\": \"4bjeaIeRKs-eqtsP5ZnsmAI\"\n}\n"
         }
       },
-      "recorded_at": "Tue, 21 Jan 2025 02:55:16 GMT"
+      "recorded_at": "Thu, 02 Oct 2025 17:39:45 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

@@ -5,7 +5,7 @@ SENSITIVE_URL_PARAMETERS = %w(
 )
 
 SENSITIVE_REQUEST_HEADERS = %w(
-  x-api-key
+  x-api-key api-key
 )
 
 SENSITIVE_RESPONSE_HEADERS = %w(

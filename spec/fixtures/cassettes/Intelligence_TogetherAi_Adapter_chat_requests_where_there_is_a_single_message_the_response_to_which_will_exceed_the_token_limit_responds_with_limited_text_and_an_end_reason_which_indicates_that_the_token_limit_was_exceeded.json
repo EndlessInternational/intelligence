@@ -6,13 +6,13 @@
         "uri": "https://api.together.xyz/v1/chat/completions",
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"model\":\"meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo\",\"max_tokens\":24.0,\"temperature\":0.0,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"count to twenty in words, all lower case, one word per line\\n\"}]}"
+          "string": "{\"model\":\"deepseek-ai/DeepSeek-V3\",\"max_tokens\":24.0,\"temperature\":0.0,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"count to twenty in words, all lower case, one word per line\\n\"}]}"
         },
         "headers": {
           "User-Agent": [
-            "Faraday v2.12.0"
+            "Faraday v2.13.1"
           ],
-          "Content-Type": [
+          "Content-type": [
             "application/json"
           ],
           "Authorization": [
@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Tue, 21 Jan 2025 01:55:18 GMT"
+            "Sat, 05 Jul 2025 21:31:55 GMT"
           ],
           "content-type": [
             "application/json; charset=utf-8"
@@ -45,28 +45,28 @@
             "DYNAMIC"
           ],
           "retry-after": [
-            "0"
+            "2"
           ],
           "access-control-allow-origin": [
             "*"
           ],
           "etag": [
-            "W/\"23d-H807ntGWCddr3F7WlVDZibKgpEc\""
+            "W/\"24d-UfkJlGo1ypH8SenZVl/PTw1HL/4\""
           ],
           "strict-transport-security": [
             "max-age=15552000; includeSubDomains"
           ],
           "x-amzn-trace-id": [
-            "cfb267a7-55d2-4ed9-8577-840320d327a2-noamzn"
+            "011a5de8-e020-44b2-b600-6ef7a177b1ca-noamzn"
           ],
           "x-api-call-end": [
-            "2025-01-21T01:55:18.875Z"
+            "2025-07-05T21:31:55.580Z"
           ],
           "x-api-call-start": [
-            "2025-01-21T01:55:18.718Z"
+            "2025-07-05T21:31:55.069Z"
           ],
           "x-api-received": [
-            "2025-01-21T01:55:18.710Z"
+            "2025-07-05T21:31:55.056Z"
           ],
           "x-inference-version": [
             "v2"
@@ -75,19 +75,22 @@
             "false"
           ],
           "x-ratelimit-limit": [
-            "30"
+            "2"
           ],
           "x-ratelimit-limit-tokens": [
             "3000"
           ],
           "x-ratelimit-remaining": [
-            "53"
+            "3"
           ],
           "x-ratelimit-remaining-tokens": [
             "3000"
           ],
           "x-ratelimit-reset": [
-            "0"
+            "2"
+          ],
+          "x-request-id": [
+            "<X-REQUEST-ID>"
           ],
           "vary": [
             "Accept-Encoding"
@@ -104,10 +107,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "{\n  \"id\": \"9053ae698fe6751e\",\n  \"object\": \"chat.completion\",\n  \"created\": 1737424518,\n  \"model\": \"meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo\",\n  \"prompt\": [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"length\",\n      \"seed\": 18170210521661389000,\n      \"logprobs\": null,\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": \"one\\ntwo\\nthree\\nfour\\nfive\\nsix\\nseven\\neight\\nnine\\nten\\neleven\\ntw\",\n        \"tool_calls\": []\n      }\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 84,\n    \"completion_tokens\": 24,\n    \"total_tokens\": 108\n  }\n}"
+          "string": "{\n  \"id\": \"o1uFMR1-zqrih-95a9f8d3fa0c27ee\",\n  \"object\": \"chat.completion\",\n  \"created\": 1751751115,\n  \"model\": \"deepseek-ai/DeepSeek-V3\",\n  \"prompt\": [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"length\",\n      \"seed\": 14705539855426208000,\n      \"logprobs\": null,\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": \"one\\ntwo\\nthree\\nfour\\nfive\\nsix\\nseven\\neight\\nnine\\nten\\neleven\\ntw\",\n        \"tool_calls\": []\n      }\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 57,\n    \"completion_tokens\": 24,\n    \"total_tokens\": 81,\n    \"cached_tokens\": 0\n  }\n}"
         }
       },
-      "recorded_at": "Tue, 21 Jan 2025 01:55:18 GMT"
+      "recorded_at": "Sat, 05 Jul 2025 21:31:55 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

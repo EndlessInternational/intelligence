@@ -1,0 +1,84 @@
+{
+  "http_interactions": [
+    {
+      "request": {
+        "method": "post",
+        "uri": "https://api.x.ai/v1/chat/completions",
+        "body": {
+          "encoding": "UTF-8",
+          "string": "{\"model\":\"grok-3\",\"max_tokens\":16,\"temperature\":0.0,\"stop\":[\"five\"],\"stream\":true,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"count to twenty in words, all lower case, one word per line\\n\"}]}"
+        },
+        "headers": {
+          "User-Agent": [
+            "Faraday v2.13.1"
+          ],
+          "Content-type": [
+            "application/json"
+          ],
+          "Authorization": [
+            "Bearer <TOKEN>"
+          ]
+        }
+      },
+      "response": {
+        "status": {
+          "code": 200,
+          "message": "OK"
+        },
+        "headers": {
+          "date": [
+            "Sat, 05 Jul 2025 21:33:48 GMT"
+          ],
+          "content-type": [
+            "text/event-stream"
+          ],
+          "transfer-encoding": [
+            "chunked"
+          ],
+          "connection": [
+            "keep-alive"
+          ],
+          "cache-control": [
+            "no-cache"
+          ],
+          "x-zero-data-retention": [
+            "false"
+          ],
+          "x-request-id": [
+            "<X-REQUEST-ID>"
+          ],
+          "vary": [
+            "origin, access-control-request-method, access-control-request-headers"
+          ],
+          "access-control-allow-origin": [
+            "*"
+          ],
+          "access-control-expose-headers": [
+            "*"
+          ],
+          "cf-cache-status": [
+            "DYNAMIC"
+          ],
+          "set-cookie": [
+            "<SET-COOKIE>"
+          ],
+          "strict-transport-security": [
+            "max-age=31536000"
+          ],
+          "server": [
+            "cloudflare"
+          ],
+          "cf-ray": [
+            "<CF-RAY>"
+          ]
+        },
+        "body": {
+          "encoding": "UTF-8",
+          "string": "data: {\"id\":\"7600b215-7f13-5bc0-b5de-82ab6b86737f\",\"object\":\"chat.completion.chunk\",\"created\":1751751228,\"model\":\"grok-3\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"one\",\"role\":\"assistant\"}}],\"system_fingerprint\":\"fp_9ad1a16f77\"}\n\ndata: {\"id\":\"7600b215-7f13-5bc0-b5de-82ab6b86737f\",\"object\":\"chat.completion.chunk\",\"created\":1751751228,\"model\":\"grok-3\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"\\n\"}}],\"system_fingerprint\":\"fp_9ad1a16f77\"}\n\ndata: {\"id\":\"7600b215-7f13-5bc0-b5de-82ab6b86737f\",\"object\":\"chat.completion.chunk\",\"created\":1751751228,\"model\":\"grok-3\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"two\"}}],\"system_fingerprint\":\"fp_9ad1a16f77\"}\n\ndata: {\"id\":\"7600b215-7f13-5bc0-b5de-82ab6b86737f\",\"object\":\"chat.completion.chunk\",\"created\":1751751228,\"model\":\"grok-3\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"\\n\"}}],\"system_fingerprint\":\"fp_9ad1a16f77\"}\n\ndata: {\"id\":\"7600b215-7f13-5bc0-b5de-82ab6b86737f\",\"object\":\"chat.completion.chunk\",\"created\":1751751228,\"model\":\"grok-3\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"three\"}}],\"system_fingerprint\":\"fp_9ad1a16f77\"}\n\ndata: {\"id\":\"7600b215-7f13-5bc0-b5de-82ab6b86737f\",\"object\":\"chat.completion.chunk\",\"created\":1751751228,\"model\":\"grok-3\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"\\n\"}}],\"system_fingerprint\":\"fp_9ad1a16f77\"}\n\ndata: {\"id\":\"7600b215-7f13-5bc0-b5de-82ab6b86737f\",\"object\":\"chat.completion.chunk\",\"created\":1751751228,\"model\":\"grok-3\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"four\"}}],\"system_fingerprint\":\"fp_9ad1a16f77\"}\n\ndata: {\"id\":\"7600b215-7f13-5bc0-b5de-82ab6b86737f\",\"object\":\"chat.completion.chunk\",\"created\":1751751228,\"model\":\"grok-3\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"\\n\"}}],\"system_fingerprint\":\"fp_9ad1a16f77\"}\n\ndata: {\"id\":\"7600b215-7f13-5bc0-b5de-82ab6b86737f\",\"object\":\"chat.completion.chunk\",\"created\":1751751228,\"model\":\"grok-3\",\"choices\":[{\"index\":0,\"delta\":{},\"finish_reason\":\"stop\"}],\"system_fingerprint\":\"fp_9ad1a16f77\"}\n\ndata: [DONE]\n\n"
+        }
+      },
+      "recorded_at": "Sat, 05 Jul 2025 21:33:48 GMT"
+    }
+  ],
+  "recorded_with": "VCR 6.3.1"
+}

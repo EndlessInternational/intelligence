@@ -1,0 +1,84 @@
+{
+  "http_interactions": [
+    {
+      "request": {
+        "method": "post",
+        "uri": "https://api.x.ai/v1/chat/completions",
+        "body": {
+          "encoding": "UTF-8",
+          "string": "{\"model\":\"grok-2-vision-1212\",\"max_tokens\":16,\"temperature\":0.0,\"stream\":true,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":[{\"type\":\"text\",\"text\":\"identify this image; all lower case\\n\"},{\"type\":\"image_url\",\"image_url\":{\"url\":\"https://github.com/EndlessInternational/intelligence/blob/main/spec/fixtures/files/single-red-balloon.png?raw=true\"}}]},{\"role\":\"assistant\",\"content\":\"one red balloon\\n\"},{\"role\":\"user\",\"content\":[{\"type\":\"text\",\"text\":\"what about this image?\\n\"},{\"type\":\"image_url\",\"image_url\":{\"url\":\"https://github.com/EndlessInternational/intelligence/blob/main/spec/fixtures/files/three-balloons.png?raw=true\"}}]}]}"
+        },
+        "headers": {
+          "User-Agent": [
+            "Faraday v2.13.1"
+          ],
+          "Content-type": [
+            "application/json"
+          ],
+          "Authorization": [
+            "Bearer <TOKEN>"
+          ]
+        }
+      },
+      "response": {
+        "status": {
+          "code": 200,
+          "message": "OK"
+        },
+        "headers": {
+          "date": [
+            "Sat, 05 Jul 2025 21:34:02 GMT"
+          ],
+          "content-type": [
+            "text/event-stream"
+          ],
+          "transfer-encoding": [
+            "chunked"
+          ],
+          "connection": [
+            "keep-alive"
+          ],
+          "cache-control": [
+            "no-cache"
+          ],
+          "x-zero-data-retention": [
+            "false"
+          ],
+          "x-request-id": [
+            "<X-REQUEST-ID>"
+          ],
+          "vary": [
+            "origin, access-control-request-method, access-control-request-headers"
+          ],
+          "access-control-allow-origin": [
+            "*"
+          ],
+          "access-control-expose-headers": [
+            "*"
+          ],
+          "cf-cache-status": [
+            "DYNAMIC"
+          ],
+          "set-cookie": [
+            "<SET-COOKIE>"
+          ],
+          "strict-transport-security": [
+            "max-age=31536000"
+          ],
+          "server": [
+            "cloudflare"
+          ],
+          "cf-ray": [
+            "<CF-RAY>"
+          ]
+        },
+        "body": {
+          "encoding": "UTF-8",
+          "string": "data: {\"id\":\"792fe671-6555-aeac-88d9-99a84f8763bf\",\"object\":\"chat.completion.chunk\",\"created\":1751751242,\"model\":\"grok-2-vision-1212\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"three\",\"role\":\"assistant\"}}],\"system_fingerprint\":\"fp_b3554c57d2\"}\n\ndata: {\"id\":\"792fe671-6555-aeac-88d9-99a84f8763bf\",\"object\":\"chat.completion.chunk\",\"created\":1751751242,\"model\":\"grok-2-vision-1212\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\" balloons\"}}],\"system_fingerprint\":\"fp_b3554c57d2\"}\n\ndata: {\"id\":\"792fe671-6555-aeac-88d9-99a84f8763bf\",\"object\":\"chat.completion.chunk\",\"created\":1751751242,\"model\":\"grok-2-vision-1212\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\":\"}}],\"system_fingerprint\":\"fp_b3554c57d2\"}\n\ndata: {\"id\":\"792fe671-6555-aeac-88d9-99a84f8763bf\",\"object\":\"chat.completion.chunk\",\"created\":1751751242,\"model\":\"grok-2-vision-1212\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\" red\"}}],\"system_fingerprint\":\"fp_b3554c57d2\"}\n\ndata: {\"id\":\"792fe671-6555-aeac-88d9-99a84f8763bf\",\"object\":\"chat.completion.chunk\",\"created\":1751751242,\"model\":\"grok-2-vision-1212\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\",\"}}],\"system_fingerprint\":\"fp_b3554c57d2\"}\n\ndata: {\"id\":\"792fe671-6555-aeac-88d9-99a84f8763bf\",\"object\":\"chat.completion.chunk\",\"created\":1751751242,\"model\":\"grok-2-vision-1212\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\" yellow\"}}],\"system_fingerprint\":\"fp_b3554c57d2\"}\n\ndata: {\"id\":\"792fe671-6555-aeac-88d9-99a84f8763bf\",\"object\":\"chat.completion.chunk\",\"created\":1751751242,\"model\":\"grok-2-vision-1212\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\",\"}}],\"system_fingerprint\":\"fp_b3554c57d2\"}\n\ndata: {\"id\":\"792fe671-6555-aeac-88d9-99a84f8763bf\",\"object\":\"chat.completion.chunk\",\"created\":1751751242,\"model\":\"grok-2-vision-1212\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\" blue\"}}],\"system_fingerprint\":\"fp_b3554c57d2\"}\n\ndata: {\"id\":\"792fe671-6555-aeac-88d9-99a84f8763bf\",\"object\":\"chat.completion.chunk\",\"created\":1751751242,\"model\":\"grok-2-vision-1212\",\"choices\":[{\"index\":0,\"delta\":{},\"finish_reason\":\"stop\"}],\"system_fingerprint\":\"fp_b3554c57d2\"}\n\ndata: [DONE]\n\n"
+        }
+      },
+      "recorded_at": "Sat, 05 Jul 2025 21:34:02 GMT"
+    }
+  ],
+  "recorded_with": "VCR 6.3.1"
+}

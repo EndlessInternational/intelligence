@@ -17,7 +17,7 @@ module Intelligence
 
       SUPPORTED_FILE_MEDIA_TYPES = %w[ text ]
 
-      SUPPORTED_CONTENT_TYPES = %w[
+      SUPPORTED_FILE_CONTENT_TYPES = %w[
         image/png image/jpeg image/webp image/heic image/heif 
         video/x-flv video/quicktime video/mpeg video/mpegps video/mpg video/mp4 video/webm 
         video/wmv video/3gpp
@@ -93,11 +93,18 @@ module Intelligence
 
           result_message = { role: message[ :role ] == :user ? 'user' : 'model' }
           result_message_parts = []
+ 
+          thought_signature = nil
           
           message[ :contents ]&.each do | content |
             case content[ :type ]
             when :text
-              result_message_parts << { text: content[ :text ] }
+              text_part = { text: content[ :text ] }
+              if ( thought_signature )
+                text_part[ :thoughtSignature ] = thought_signature
+                thought_signature = nil  
+              end
+              result_message_parts << text_part
             when :binary
               content_type = content[ :content_type ]
               bytes = content[ :bytes ]
@@ -105,12 +112,17 @@ module Intelligence
                 mime_type = MIME::Types[ content_type ].first
                 if SUPPORTED_BINARY_MEDIA_TYPES.include?( mime_type&.media_type ) || 
                    SUPPORTED_BINARY_CONTENT_TYPES.include?( content_type )
-                  result_message_parts << {
+                  binary_part = {
                     inline_data: {
                       mime_type: content_type,
                       data: Base64.strict_encode64( bytes )
                     }
                   }
+                  if ( thought_signature )
+                    binary_part[ :thoughtSignature ] = thought_signature
+                    thought_signature = nil  
+                  end
+                  result_message_parts << binary_part
                 else
                   raise UnsupportedContentError.new( 
                     :google, 
@@ -130,12 +142,17 @@ module Intelligence
                 mime_type = MIME::Types[ content_type ].first
                 if SUPPORTED_FILE_MEDIA_TYPES.include?( mime_type&.media_type ) || 
                    SUPPORTED_FILE_CONTENT_TYPES.include?( content_type )
-                  result_message_parts << {
+                  file_part = {
                     file_data: {
                       mime_type: content_type,
                       file_uri: uri
                     }
                   }
+                  if ( thought_signature )
+                    file_part[ :thoughtSignature ] = thought_signature
+                    thought_signature = nil  
+                  end
+                  result_message_parts << file_part
                 else
                   raise UnsupportedContentError.new( 
                     :google, 
@@ -149,12 +166,17 @@ module Intelligence
                 )
               end 
             when :tool_call
-              result_message_parts << { 
+              tool_call_part = { 
                 functionCall: {
                   name: content[ :tool_name ],
                   args: content[ :tool_parameters ]
                 }
               }
+              if ( thought_signature )
+                tool_call_part[ :thoughtSignature ] = thought_signature
+                thought_signature = nil  
+              end
+              result_message_parts << tool_call_part
             when :tool_result 
               result_message_parts << {
                 functionResponse: {
@@ -165,8 +187,16 @@ module Intelligence
                   } 
                 }
               }
+            when :thought
+              # nop
+            when :cipher_thought
+              # google thought signature are packed with an arbitrary part so the cipher from a
+              # cipher thought is stored to be included in the subsequent part
+              thought_signature = content[ :'google/thought-signature' ]
+            when :web_search_call, :web_reference
+              #nop
             else 
-              raise InvalidContentError.new( :google ) 
+              raise UnsupportedContentError.new( :google ) 
             end 
           end
 
@@ -217,7 +247,7 @@ module Intelligence
           [ object, required.compact  ]
         end
 
-        return tools&.map { | tool |
+        return Utilities.deep_dup( tools )&.map { | tool |
           function = { 
             name: tool[ :name ],
             description: tool[ :description ],

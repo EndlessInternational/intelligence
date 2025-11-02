@@ -6,11 +6,11 @@
         "uri": "https://api.anthropic.com/v1/messages",
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"model\":\"claude-3-5-sonnet-20240620\",\"max_tokens\":256,\"temperature\":0.0,\"messages\":[{\"role\":\"user\",\"content\":[{\"type\":\"text\",\"text\":\"the secret word is 'red'\\n\"}]},{\"role\":\"assistant\",\"content\":[{\"type\":\"text\",\"text\":\"ok\\n\"}]},{\"role\":\"user\",\"content\":[{\"type\":\"text\",\"text\":\"what is the exact secret word? answer with the word only\\n\"}]}]}"
+          "string": "{\"model\":\"claude-sonnet-4-20250514\",\"max_tokens\":2048,\"temperature\":0.0,\"messages\":[{\"role\":\"user\",\"content\":[{\"type\":\"text\",\"text\":\"the secret word is 'red'\\n\"}]},{\"role\":\"assistant\",\"content\":[{\"type\":\"text\",\"text\":\"ok\\n\"}]},{\"role\":\"user\",\"content\":[{\"type\":\"text\",\"text\":\"what is the exact secret word? answer with the word only\\n\"}]}]}"
         },
         "headers": {
           "User-Agent": [
-            "Faraday v2.12.0"
+            "Faraday v2.13.1"
           ],
           "content-type": [
             "application/json"
@@ -30,7 +30,7 @@
         },
         "headers": {
           "date": [
-            "Tue, 21 Jan 2025 03:29:30 GMT"
+            "Wed, 01 Oct 2025 20:57:56 GMT"
           ],
           "content-type": [
             "application/json"
@@ -41,6 +41,27 @@
           "connection": [
             "keep-alive"
           ],
+          "content-encoding": [
+            "gzip"
+          ],
+          "anthropic-ratelimit-input-tokens-limit": [
+            "450000"
+          ],
+          "anthropic-ratelimit-input-tokens-remaining": [
+            "450000"
+          ],
+          "anthropic-ratelimit-input-tokens-reset": [
+            "2025-10-01T20:57:56Z"
+          ],
+          "anthropic-ratelimit-output-tokens-limit": [
+            "90000"
+          ],
+          "anthropic-ratelimit-output-tokens-remaining": [
+            "90000"
+          ],
+          "anthropic-ratelimit-output-tokens-reset": [
+            "2025-10-01T20:57:56Z"
+          ],
           "anthropic-ratelimit-requests-limit": [
             "1000"
           ],
@@ -48,37 +69,28 @@
             "999"
           ],
           "anthropic-ratelimit-requests-reset": [
-            "2025-01-21T03:29:29Z"
-          ],
-          "anthropic-ratelimit-input-tokens-limit": [
-            "80000"
-          ],
-          "anthropic-ratelimit-input-tokens-remaining": [
-            "80000"
-          ],
-          "anthropic-ratelimit-input-tokens-reset": [
-            "2025-01-21T03:29:30Z"
-          ],
-          "anthropic-ratelimit-output-tokens-limit": [
-            "16000"
-          ],
-          "anthropic-ratelimit-output-tokens-remaining": [
-            "16000"
-          ],
-          "anthropic-ratelimit-output-tokens-reset": [
-            "2025-01-21T03:29:30Z"
+            "2025-10-01T20:57:54Z"
           ],
           "anthropic-ratelimit-tokens-limit": [
-            "96000"
+            "540000"
           ],
           "anthropic-ratelimit-tokens-remaining": [
-            "96000"
+            "540000"
           ],
           "anthropic-ratelimit-tokens-reset": [
-            "2025-01-21T03:29:30Z"
+            "2025-10-01T20:57:56Z"
           ],
           "request-id": [
             "<REQUEST-ID>"
+          ],
+          "strict-transport-security": [
+            "max-age=31536000; includeSubDomains; preload"
+          ],
+          "anthropic-organization-id": [
+            "ed8c3484-0c99-44df-aab0-b0c00ceaee61"
+          ],
+          "x-envoy-upstream-service-time": [
+            "1908"
           ],
           "via": [
             "1.1 google"
@@ -94,17 +106,14 @@
           ],
           "cf-ray": [
             "<CF-RAY>"
-          ],
-          "content-encoding": [
-            "gzip"
           ]
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\"id\":\"msg_011GbQiBdZdKLqGCn6pWdpMa\",\"type\":\"message\",\"role\":\"assistant\",\"model\":\"claude-3-5-sonnet-20240620\",\"content\":[{\"type\":\"text\",\"text\":\"red\"}],\"stop_reason\":\"end_turn\",\"stop_sequence\":null,\"usage\":{\"input_tokens\":34,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":4}}"
+          "string": "{\"id\":\"msg_015T4pnDYmjNjW1bwCfRdv7r\",\"type\":\"message\",\"role\":\"assistant\",\"model\":\"claude-sonnet-4-20250514\",\"content\":[{\"type\":\"text\",\"text\":\"red\"}],\"stop_reason\":\"end_turn\",\"stop_sequence\":null,\"usage\":{\"input_tokens\":34,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"cache_creation\":{\"ephemeral_5m_input_tokens\":0,\"ephemeral_1h_input_tokens\":0},\"output_tokens\":4,\"service_tier\":\"standard\"}}"
         }
       },
-      "recorded_at": "Tue, 21 Jan 2025 03:29:30 GMT"
+      "recorded_at": "Wed, 01 Oct 2025 20:57:56 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

@@ -3,14 +3,14 @@
     {
       "request": {
         "method": "post",
-        "uri": "https://api.openai.com/v1/chat/completions",
+        "uri": "https://api.openai.com/v1/responses",
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"model\":\"gpt-4o\",\"max_completion_tokens\":128,\"temperature\":0.0,\"stream\":true,\"stream_options\":{\"include_usage\":true},\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":[{\"type\":\"text\",\"text\":\"identify this image; all lower case\\n\"},{\"type\":\"image_url\",\"image_url\":{\"url\":\"https://github.com/EndlessInternational/intelligence/blob/main/spec/fixtures/files/single-red-balloon.png?raw=true\"}}]}]}"
+          "string": "{\"model\":\"gpt-4o\",\"max_output_tokens\":128,\"temperature\":0.0,\"stream\":true,\"input\":[{\"role\":\"user\",\"content\":[{\"type\":\"input_text\",\"text\":\"identify this image; all lower case\\n\"},{\"type\":\"input_image\",\"image_url\":\"https://github.com/EndlessInternational/intelligence/blob/main/spec/fixtures/files/single-red-balloon.png?raw=true\"}],\"type\":\"message\"}],\"instructions\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"}"
         },
         "headers": {
           "User-Agent": [
-            "Faraday v2.12.0"
+            "Faraday v2.13.1"
           ],
           "Content-Type": [
             "application/json"
@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Mon, 20 Jan 2025 22:17:03 GMT"
+            "Wed, 01 Oct 2025 20:39:40 GMT"
           ],
           "content-type": [
             "text/event-stream; charset=utf-8"
@@ -38,47 +38,23 @@
           "connection": [
             "keep-alive"
           ],
-          "access-control-expose-headers": [
-            "X-Request-ID"
+          "openai-version": [
+            "2020-10-01"
           ],
           "openai-organization": [
             "<OPENAI-ORGANIZATION>"
           ],
-          "openai-processing-ms": [
-            "1458"
-          ],
-          "openai-version": [
-            "2020-10-01"
-          ],
-          "x-ratelimit-limit-input-images": [
-            "50000"
-          ],
-          "x-ratelimit-limit-requests": [
-            "10000"
-          ],
-          "x-ratelimit-limit-tokens": [
-            "30000000"
-          ],
-          "x-ratelimit-remaining-input-images": [
-            "49999"
-          ],
-          "x-ratelimit-remaining-requests": [
-            "9999"
-          ],
-          "x-ratelimit-remaining-tokens": [
-            "29999152"
-          ],
-          "x-ratelimit-reset-input-images": [
-            "1ms"
-          ],
-          "x-ratelimit-reset-requests": [
-            "6ms"
-          ],
-          "x-ratelimit-reset-tokens": [
-            "1ms"
+          "openai-project": [
+            "proj_SnKVz9MFy0a0D6nNeyw7GaDO"
           ],
           "x-request-id": [
             "<X-REQUEST-ID>"
+          ],
+          "openai-processing-ms": [
+            "666"
+          ],
+          "x-envoy-upstream-service-time": [
+            "678"
           ],
           "strict-transport-security": [
             "max-age=31536000; includeSubDomains; preload"
@@ -104,10 +80,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "data: {\"id\":\"chatcmpl-AruMp2yWjl9YwJERKkqQGtP1YRU4S\",\"object\":\"chat.completion.chunk\",\"created\":1737411423,\"model\":\"gpt-4o-2024-08-06\",\"service_tier\":\"default\",\"system_fingerprint\":\"fp_4691090a87\",\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"\",\"refusal\":null},\"logprobs\":null,\"finish_reason\":null}],\"usage\":null}\n\ndata: {\"id\":\"chatcmpl-AruMp2yWjl9YwJERKkqQGtP1YRU4S\",\"object\":\"chat.completion.chunk\",\"created\":1737411423,\"model\":\"gpt-4o-2024-08-06\",\"service_tier\":\"default\",\"system_fingerprint\":\"fp_4691090a87\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"a\"},\"logprobs\":null,\"finish_reason\":null}],\"usage\":null}\n\ndata: {\"id\":\"chatcmpl-AruMp2yWjl9YwJERKkqQGtP1YRU4S\",\"object\":\"chat.completion.chunk\",\"created\":1737411423,\"model\":\"gpt-4o-2024-08-06\",\"service_tier\":\"default\",\"system_fingerprint\":\"fp_4691090a87\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\" red\"},\"logprobs\":null,\"finish_reason\":null}],\"usage\":null}\n\ndata: {\"id\":\"chatcmpl-AruMp2yWjl9YwJERKkqQGtP1YRU4S\",\"object\":\"chat.completion.chunk\",\"created\":1737411423,\"model\":\"gpt-4o-2024-08-06\",\"service_tier\":\"default\",\"system_fingerprint\":\"fp_4691090a87\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\" balloon\"},\"logprobs\":null,\"finish_reason\":null}],\"usage\":null}\n\ndata: {\"id\":\"chatcmpl-AruMp2yWjl9YwJERKkqQGtP1YRU4S\",\"object\":\"chat.completion.chunk\",\"created\":1737411423,\"model\":\"gpt-4o-2024-08-06\",\"service_tier\":\"default\",\"system_fingerprint\":\"fp_4691090a87\",\"choices\":[{\"index\":0,\"delta\":{},\"logprobs\":null,\"finish_reason\":\"stop\"}],\"usage\":null}\n\ndata: {\"id\":\"chatcmpl-AruMp2yWjl9YwJERKkqQGtP1YRU4S\",\"object\":\"chat.completion.chunk\",\"created\":1737411423,\"model\":\"gpt-4o-2024-08-06\",\"service_tier\":\"default\",\"system_fingerprint\":\"fp_4691090a87\",\"choices\":[],\"usage\":{\"prompt_tokens\":312,\"completion_tokens\":3,\"total_tokens\":315,\"prompt_tokens_details\":{\"cached_tokens\":0,\"audio_tokens\":0},\"completion_tokens_details\":{\"reasoning_tokens\":0,\"audio_tokens\":0,\"accepted_prediction_tokens\":0,\"rejected_prediction_tokens\":0}}}\n\ndata: [DONE]\n\n"
+          "string": "event: response.created\ndata: {\"type\":\"response.created\",\"sequence_number\":0,\"response\":{\"id\":\"resp_016234a9d548a9610068dd918b6070819090b49459aa16cd42\",\"object\":\"response\",\"created_at\":1759351179,\"status\":\"in_progress\",\"background\":false,\"error\":null,\"incomplete_details\":null,\"instructions\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \",\"max_output_tokens\":128,\"max_tool_calls\":null,\"model\":\"gpt-4o-2024-08-06\",\"output\":[],\"parallel_tool_calls\":true,\"previous_response_id\":null,\"prompt_cache_key\":null,\"reasoning\":{\"effort\":null,\"summary\":null},\"safety_identifier\":null,\"service_tier\":\"auto\",\"store\":true,\"temperature\":0.0,\"text\":{\"format\":{\"type\":\"text\"},\"verbosity\":\"medium\"},\"tool_choice\":\"auto\",\"tools\":[],\"top_logprobs\":0,\"top_p\":1.0,\"truncation\":\"disabled\",\"usage\":null,\"user\":null,\"metadata\":{}}}\n\nevent: response.in_progress\ndata: {\"type\":\"response.in_progress\",\"sequence_number\":1,\"response\":{\"id\":\"resp_016234a9d548a9610068dd918b6070819090b49459aa16cd42\",\"object\":\"response\",\"created_at\":1759351179,\"status\":\"in_progress\",\"background\":false,\"error\":null,\"incomplete_details\":null,\"instructions\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \",\"max_output_tokens\":128,\"max_tool_calls\":null,\"model\":\"gpt-4o-2024-08-06\",\"output\":[],\"parallel_tool_calls\":true,\"previous_response_id\":null,\"prompt_cache_key\":null,\"reasoning\":{\"effort\":null,\"summary\":null},\"safety_identifier\":null,\"service_tier\":\"auto\",\"store\":true,\"temperature\":0.0,\"text\":{\"format\":{\"type\":\"text\"},\"verbosity\":\"medium\"},\"tool_choice\":\"auto\",\"tools\":[],\"top_logprobs\":0,\"top_p\":1.0,\"truncation\":\"disabled\",\"usage\":null,\"user\":null,\"metadata\":{}}}\n\nevent: response.output_item.added\ndata: {\"type\":\"response.output_item.added\",\"sequence_number\":2,\"output_index\":0,\"item\":{\"id\":\"msg_016234a9d548a9610068dd918cb70c8190ac99e4519af2f2b4\",\"type\":\"message\",\"status\":\"in_progress\",\"content\":[],\"role\":\"assistant\"}}\n\nevent: response.content_part.added\ndata: {\"type\":\"response.content_part.added\",\"sequence_number\":3,\"item_id\":\"msg_016234a9d548a9610068dd918cb70c8190ac99e4519af2f2b4\",\"output_index\":0,\"content_index\":0,\"part\":{\"type\":\"output_text\",\"annotations\":[],\"logprobs\":[],\"text\":\"\"}}\n\nevent: response.output_text.delta\ndata: {\"type\":\"response.output_text.delta\",\"sequence_number\":4,\"item_id\":\"msg_016234a9d548a9610068dd918cb70c8190ac99e4519af2f2b4\",\"output_index\":0,\"content_index\":0,\"delta\":\"red\",\"logprobs\":[],\"obfuscation\":\"8Csr8Dub1G6A5\"}\n\nevent: response.output_text.delta\ndata: {\"type\":\"response.output_text.delta\",\"sequence_number\":5,\"item_id\":\"msg_016234a9d548a9610068dd918cb70c8190ac99e4519af2f2b4\",\"output_index\":0,\"content_index\":0,\"delta\":\" balloon\",\"logprobs\":[],\"obfuscation\":\"BmSEPR1e\"}\n\nevent: response.output_text.done\ndata: {\"type\":\"response.output_text.done\",\"sequence_number\":6,\"item_id\":\"msg_016234a9d548a9610068dd918cb70c8190ac99e4519af2f2b4\",\"output_index\":0,\"content_index\":0,\"text\":\"red balloon\",\"logprobs\":[]}\n\nevent: response.content_part.done\ndata: {\"type\":\"response.content_part.done\",\"sequence_number\":7,\"item_id\":\"msg_016234a9d548a9610068dd918cb70c8190ac99e4519af2f2b4\",\"output_index\":0,\"content_index\":0,\"part\":{\"type\":\"output_text\",\"annotations\":[],\"logprobs\":[],\"text\":\"red balloon\"}}\n\nevent: response.output_item.done\ndata: {\"type\":\"response.output_item.done\",\"sequence_number\":8,\"output_index\":0,\"item\":{\"id\":\"msg_016234a9d548a9610068dd918cb70c8190ac99e4519af2f2b4\",\"type\":\"message\",\"status\":\"completed\",\"content\":[{\"type\":\"output_text\",\"annotations\":[],\"logprobs\":[],\"text\":\"red balloon\"}],\"role\":\"assistant\"}}\n\nevent: response.completed\ndata: {\"type\":\"response.completed\",\"sequence_number\":9,\"response\":{\"id\":\"resp_016234a9d548a9610068dd918b6070819090b49459aa16cd42\",\"object\":\"response\",\"created_at\":1759351179,\"status\":\"completed\",\"background\":false,\"error\":null,\"incomplete_details\":null,\"instructions\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \",\"max_output_tokens\":128,\"max_tool_calls\":null,\"model\":\"gpt-4o-2024-08-06\",\"output\":[{\"id\":\"msg_016234a9d548a9610068dd918cb70c8190ac99e4519af2f2b4\",\"type\":\"message\",\"status\":\"completed\",\"content\":[{\"type\":\"output_text\",\"annotations\":[],\"logprobs\":[],\"text\":\"red balloon\"}],\"role\":\"assistant\"}],\"parallel_tool_calls\":true,\"previous_response_id\":null,\"prompt_cache_key\":null,\"reasoning\":{\"effort\":null,\"summary\":null},\"safety_identifier\":null,\"service_tier\":\"default\",\"store\":true,\"temperature\":0.0,\"text\":{\"format\":{\"type\":\"text\"},\"verbosity\":\"medium\"},\"tool_choice\":\"auto\",\"tools\":[],\"top_logprobs\":0,\"top_p\":1.0,\"truncation\":\"disabled\",\"usage\":{\"input_tokens\":313,\"input_tokens_details\":{\"cached_tokens\":0},\"output_tokens\":3,\"output_tokens_details\":{\"reasoning_tokens\":0},\"total_tokens\":316},\"user\":null,\"metadata\":{}}}\n\n"
         }
       },
-      "recorded_at": "Mon, 20 Jan 2025 22:17:03 GMT"
+      "recorded_at": "Wed, 01 Oct 2025 20:39:41 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

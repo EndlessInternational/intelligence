@@ -19,7 +19,7 @@ RSpec.describe "#{Intelligence::Adapter[ :cerebras ]} stream requests", :cerebra
     Intelligence::Adapter[ :cerebras ].build! do   
       key                     ENV[ 'CEREBRAS_API_KEY' ]
       chat_options do
-        model                 'llama3.1-70b'
+        model                 'llama-3.3-70b'
         max_tokens            16
 
         stream                true
@@ -31,7 +31,7 @@ RSpec.describe "#{Intelligence::Adapter[ :cerebras ]} stream requests", :cerebra
     Intelligence::Adapter[ :cerebras ].build! do   
       key   ENV[ 'CEREBRAS_API_KEY' ]
       chat_options do
-        model                 'llama3.1-70b'
+        model                 'llama-3.3-70b'
         max_tokens            64
         stop                  'five'
 

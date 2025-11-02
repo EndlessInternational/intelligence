@@ -1,0 +1,93 @@
+{
+  "http_interactions": [
+    {
+      "request": {
+        "method": "post",
+        "uri": "https://api.openai.com/v1/responses",
+        "body": {
+          "encoding": "UTF-8",
+          "string": "{\"model\":\"gpt-5\",\"input\":[{\"role\":\"user\",\"content\":[{\"type\":\"input_text\",\"text\":\"what is the top news item today?\\n\"}],\"type\":\"message\"}],\"instructions\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \",\"tools\":[{\"type\":\"web_search_preview\"}]}"
+        },
+        "headers": {
+          "User-Agent": [
+            "Faraday v2.13.1"
+          ],
+          "Content-Type": [
+            "application/json"
+          ],
+          "Authorization": [
+            "Bearer <TOKEN>"
+          ]
+        }
+      },
+      "response": {
+        "status": {
+          "code": 200,
+          "message": "OK"
+        },
+        "headers": {
+          "date": [
+            "Wed, 01 Oct 2025 20:39:30 GMT"
+          ],
+          "content-type": [
+            "application/json"
+          ],
+          "transfer-encoding": [
+            "chunked"
+          ],
+          "connection": [
+            "keep-alive"
+          ],
+          "openai-version": [
+            "2020-10-01"
+          ],
+          "openai-organization": [
+            "<OPENAI-ORGANIZATION>"
+          ],
+          "openai-project": [
+            "proj_SnKVz9MFy0a0D6nNeyw7GaDO"
+          ],
+          "x-request-id": [
+            "<X-REQUEST-ID>"
+          ],
+          "openai-processing-ms": [
+            "44744"
+          ],
+          "x-envoy-upstream-service-time": [
+            "44746"
+          ],
+          "strict-transport-security": [
+            "max-age=31536000; includeSubDomains; preload"
+          ],
+          "cf-cache-status": [
+            "DYNAMIC"
+          ],
+          "set-cookie": [
+            "<SET-COOKIE>"
+          ],
+          "x-content-type-options": [
+            "nosniff"
+          ],
+          "server": [
+            "cloudflare"
+          ],
+          "cf-ray": [
+            "<CF-RAY>"
+          ],
+          "content-encoding": [
+            "gzip"
+          ],
+          "alt-svc": [
+            "h3=\":443\"; ma=86400"
+          ]
+        },
+        "body": {
+          "encoding": "ASCII-8BIT",
+          "string": "{\n  \"id\": \"resp_078315f4d14b66890068dd9155550c8190ba3fbe9cabb00e32\",\n  \"object\": \"response\",\n  \"created_at\": 1759351125,\n  \"status\": \"completed\",\n  \"background\": false,\n  \"billing\": {\n    \"payer\": \"developer\"\n  },\n  \"error\": null,\n  \"incomplete_details\": null,\n  \"instructions\": \"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \",\n  \"max_output_tokens\": null,\n  \"max_tool_calls\": null,\n  \"model\": \"gpt-5-2025-08-07\",\n  \"output\": [\n    {\n      \"id\": \"rs_078315f4d14b66890068dd91564c908190a0eadc5c3e1f554f\",\n      \"type\": \"reasoning\",\n      \"summary\": []\n    },\n    {\n      \"id\": \"ws_078315f4d14b66890068dd91596f988190a03d75c8e6a93eed\",\n      \"type\": \"web_search_call\",\n      \"status\": \"completed\",\n      \"action\": {\n        \"type\": \"search\",\n        \"query\": \"top news today October 1, 2025 Reuters\"\n      }\n    },\n    {\n      \"id\": \"rs_078315f4d14b66890068dd915b30988190833e7b382f3fe9f6\",\n      \"type\": \"reasoning\",\n      \"summary\": []\n    },\n    {\n      \"id\": \"ws_078315f4d14b66890068dd91626fa48190af49ed1cba95f2f8\",\n      \"type\": \"web_search_call\",\n      \"status\": \"completed\",\n      \"action\": {\n        \"type\": \"search\",\n        \"query\": \"U.S. government shutdown October 1, 2025 news Reuters\"\n      }\n    },\n    {\n      \"id\": \"rs_078315f4d14b66890068dd9165e8e481909cea9698936890d7\",\n      \"type\": \"reasoning\",\n      \"summary\": []\n    },\n    {\n      \"id\": \"msg_078315f4d14b66890068dd917ed22c8190b76c5ee11eafd33c\",\n      \"type\": \"message\",\n      \"status\": \"completed\",\n      \"content\": [\n        {\n          \"type\": \"output_text\",\n          \"annotations\": [\n            {\n              \"type\": \"url_citation\",\n              \"end_index\": 365,\n              \"start_index\": 178,\n              \"title\": \"Government shutdown begins as nation faces new period of uncertainty - The Washington Post\",\n              \"url\": \"https://www.washingtonpost.com/politics/2025/10/01/government-shutdown-congress-trump-health-care/74498f38-9e7b-11f0-af12-ae28224a8694_story.html?utm_source=openai\"\n            },\n            {\n              \"type\": \"url_citation\",\n              \"end_index\": 644,\n              \"start_index\": 468,\n              \"title\": \"US financial regulators start shuttering as federal funding runs out\",\n              \"url\": \"https://www.reuters.com/sustainability/boards-policy-regulation/us-financial-regulators-start-shuttering-federal-funding-runs-out-2025-10-01/?utm_source=openai\"\n            }\n          ],\n          \"logprobs\": [],\n          \"text\": \"Top story today (October 1, 2025): The U.S. federal government has shut down after Congress missed the funding deadline, triggering widespread furloughs and service disruptions. ([washingtonpost.com](https://www.washingtonpost.com/politics/2025/10/01/government-shutdown-congress-trump-health-care/74498f38-9e7b-11f0-af12-ae28224a8694_story.html?utm_source=openai)) Financial regulators like the SEC are largely shuttered, and markets slipped while gold hit a record. ([reuters.com](https://www.reuters.com/sustainability/boards-policy-regulation/us-financial-regulators-start-shuttering-federal-funding-runs-out-2025-10-01/?utm_source=openai))\"\n        }\n      ],\n      \"role\": \"assistant\"\n    }\n  ],\n  \"parallel_tool_calls\": true,\n  \"previous_response_id\": null,\n  \"prompt_cache_key\": null,\n  \"reasoning\": {\n    \"effort\": \"medium\",\n    \"summary\": null\n  },\n  \"safety_identifier\": null,\n  \"service_tier\": \"default\",\n  \"store\": true,\n  \"temperature\": 1.0,\n  \"text\": {\n    \"format\": {\n      \"type\": \"text\"\n    },\n    \"verbosity\": \"medium\"\n  },\n  \"tool_choice\": \"auto\",\n  \"tools\": [\n    {\n      \"type\": \"web_search_preview\",\n      \"search_context_size\": \"medium\",\n      \"user_location\": {\n        \"type\": \"approximate\",\n        \"city\": null,\n        \"country\": \"US\",\n        \"region\": null,\n        \"timezone\": null\n      }\n    }\n  ],\n  \"top_logprobs\": 0,\n  \"top_p\": 1.0,\n  \"truncation\": \"disabled\",\n  \"usage\": {\n    \"input_tokens\": 12958,\n    \"input_tokens_details\": {\n      \"cached_tokens\": 4096\n    },\n    \"output_tokens\": 1448,\n    \"output_tokens_details\": {\n      \"reasoning_tokens\": 1344\n    },\n    \"total_tokens\": 14406\n  },\n  \"user\": null,\n  \"metadata\": {}\n}"
+        }
+      },
+      "recorded_at": "Wed, 01 Oct 2025 20:39:30 GMT"
+    }
+  ],
+  "recorded_with": "VCR 6.3.1"
+}

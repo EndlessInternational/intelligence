@@ -10,9 +10,9 @@
         },
         "headers": {
           "User-Agent": [
-            "Faraday v2.12.0"
+            "Faraday v2.13.1"
           ],
-          "Content-Type": [
+          "Content-type": [
             "application/json"
           ],
           "Authorization": [
@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Mon, 20 Jan 2025 22:26:54 GMT"
+            "Mon, 07 Jul 2025 01:52:48 GMT"
           ],
           "content-type": [
             "text/event-stream; charset=utf-8"
@@ -38,50 +38,32 @@
           "connection": [
             "keep-alive"
           ],
-          "ratelimitbysize-remaining": [
-            "1994305"
+          "mistral-correlation-id": [
+            "0197e295-ed2d-75d4-b07c-8603e8dd1489"
           ],
-          "x-ratelimitbysize-limit-month": [
-            "10000000000"
-          ],
-          "x-ratelimitbysize-remaining-month": [
-            "9999985386"
-          ],
-          "ratelimitbysize-query-cost": [
-            "183"
-          ],
-          "ratelimitbysize-limit": [
-            "2000000"
-          ],
-          "x-ratelimitbysize-limit-minute": [
-            "2000000"
-          ],
-          "x-ratelimitbysize-remaining-minute": [
-            "1994305"
-          ],
-          "ratelimitbysize-reset": [
-            "13"
+          "x-kong-request-id": [
+            "0197e295-ed2d-75d4-b07c-8603e8dd1489"
           ],
           "x-envoy-upstream-service-time": [
-            "6360"
+            "2962"
           ],
           "access-control-allow-origin": [
             "*"
           ],
           "x-kong-upstream-latency": [
-            "6361"
+            "2963"
           ],
           "x-kong-proxy-latency": [
-            "1"
-          ],
-          "x-kong-request-id": [
-            "6c2f9d3b3c00ae46da22075819af6628"
+            "6"
           ],
           "cf-cache-status": [
             "DYNAMIC"
           ],
           "set-cookie": [
             "<SET-COOKIE>"
+          ],
+          "strict-transport-security": [
+            "max-age=15552000; includeSubDomains"
           ],
           "server": [
             "cloudflare"
@@ -95,10 +77,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "data: {\"id\":\"5ec2ffdbfe364dadba2ff69417f83f14\",\"object\":\"chat.completion.chunk\",\"created\":1737412008,\"model\":\"mistral-large-latest\",\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"\"},\"finish_reason\":null}]}\n\ndata: {\"id\":\"5ec2ffdbfe364dadba2ff69417f83f14\",\"object\":\"chat.completion.chunk\",\"created\":1737412008,\"model\":\"mistral-large-latest\",\"choices\":[{\"index\":0,\"delta\":{\"tool_calls\":[{\"id\":\"e1e5vFjsP\",\"function\":{\"name\":\"get_weather\",\"arguments\":\"{\\\"city\\\": \\\"London\\\"}\"},\"index\":0},{\"id\":\"SmeW3AjdT\",\"function\":{\"name\":\"get_weather\",\"arguments\":\"{\\\"city\\\": \\\"Paris\\\"}\"},\"index\":1},{\"id\":\"ckvI3rLq7\",\"function\":{\"name\":\"get_weather\",\"arguments\":\"{\\\"city\\\": \\\"Rome\\\"}\"},\"index\":2}]},\"finish_reason\":\"tool_calls\"}],\"usage\":{\"prompt_tokens\":249,\"total_tokens\":311,\"completion_tokens\":62}}\n\ndata: [DONE]\n\n"
+          "string": "data: {\"id\":\"c0fe7e8da8d24c0fa8b68ca1d79ebcdb\",\"object\":\"chat.completion.chunk\",\"created\":1751853165,\"model\":\"mistral-large-latest\",\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"\"},\"finish_reason\":null}]}\n\ndata: {\"id\":\"c0fe7e8da8d24c0fa8b68ca1d79ebcdb\",\"object\":\"chat.completion.chunk\",\"created\":1751853165,\"model\":\"mistral-large-latest\",\"choices\":[{\"index\":0,\"delta\":{\"tool_calls\":[{\"id\":\"yKl4qgOPh\",\"function\":{\"name\":\"get_weather\",\"arguments\":\"{\\\"city\\\": \\\"London\\\"}\"},\"index\":0},{\"id\":\"rVSkC4KDW\",\"function\":{\"name\":\"get_weather\",\"arguments\":\"{\\\"city\\\": \\\"Paris\\\"}\"},\"index\":1},{\"id\":\"5e2L3GncC\",\"function\":{\"name\":\"get_weather\",\"arguments\":\"{\\\"city\\\": \\\"Rome\\\"}\"},\"index\":2}]},\"finish_reason\":\"tool_calls\"}],\"usage\":{\"prompt_tokens\":249,\"total_tokens\":312,\"completion_tokens\":63}}\n\ndata: [DONE]\n\n"
         }
       },
-      "recorded_at": "Mon, 20 Jan 2025 22:26:54 GMT"
+      "recorded_at": "Mon, 07 Jul 2025 01:52:48 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

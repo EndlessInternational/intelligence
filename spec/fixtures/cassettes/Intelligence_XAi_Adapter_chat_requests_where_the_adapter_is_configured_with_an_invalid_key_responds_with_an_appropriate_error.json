@@ -10,9 +10,9 @@
         },
         "headers": {
           "User-Agent": [
-            "Faraday v2.12.0"
+            "Faraday v2.13.1"
           ],
-          "Content-Type": [
+          "Content-type": [
             "application/json"
           ],
           "Authorization": [
@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Tue, 21 Jan 2025 03:38:53 GMT"
+            "Sat, 05 Jul 2025 21:33:35 GMT"
           ],
           "content-type": [
             "application/json"
@@ -50,6 +50,15 @@
           "cf-cache-status": [
             "DYNAMIC"
           ],
+          "set-cookie": [
+            "<SET-COOKIE>"
+          ],
+          "report-to": [
+            "{\"endpoints\":[{\"url\":\"https:\\/\\/csp-reporting.cloudflare.com\\/cdn-cgi\\/script_monitor\\/report?m=eq2C.K41Ydlsg2JC_hOjd2UQqMryGEw85VS048PEHI8-1751751215-1.0.1.1-8p4tNoYJ_uhbdMhrk9UDqETfMfHyT7iGB95FsOj_jvcSMHElcjMI9kAE8ir0hLfRKBbGbYfgyaXf_UhFA8fzJTdrhUieGsKLqaZqpIi5oD60oGVpyTSVXSZnl7Wtf1KQ1Hwl2j2WwX4KdPUtzKJY4g\"}],\"group\":\"cf-csp-endpoint\",\"max_age\":86400}"
+          ],
+          "content-security-policy-report-only": [
+            "script-src 'none'; report-uri https://csp-reporting.cloudflare.com/cdn-cgi/script_monitor/report?m=eq2C.K41Ydlsg2JC_hOjd2UQqMryGEw85VS048PEHI8-1751751215-1.0.1.1-8p4tNoYJ_uhbdMhrk9UDqETfMfHyT7iGB95FsOj_jvcSMHElcjMI9kAE8ir0hLfRKBbGbYfgyaXf_UhFA8fzJTdrhUieGsKLqaZqpIi5oD60oGVpyTSVXSZnl7Wtf1KQ1Hwl2j2WwX4KdPUtzKJY4g; report-to cf-csp-endpoint"
+          ],
           "strict-transport-security": [
             "max-age=31536000"
           ],
@@ -65,7 +74,7 @@
           "string": "{\"code\":\"Client specified an invalid argument\",\"error\":\"Incorrect API key provided: th***id. You can obtain an API key from https://console.x.ai.\"}"
         }
       },
-      "recorded_at": "Tue, 21 Jan 2025 03:38:53 GMT"
+      "recorded_at": "Sat, 05 Jul 2025 21:33:35 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

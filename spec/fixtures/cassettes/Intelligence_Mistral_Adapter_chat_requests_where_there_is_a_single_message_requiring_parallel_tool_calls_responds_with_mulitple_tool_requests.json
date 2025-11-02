@@ -10,9 +10,9 @@
         },
         "headers": {
           "User-Agent": [
-            "Faraday v2.12.0"
+            "Faraday v2.13.1"
           ],
-          "Content-Type": [
+          "Content-type": [
             "application/json"
           ],
           "Authorization": [
@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Mon, 20 Jan 2025 22:26:24 GMT"
+            "Mon, 07 Jul 2025 01:50:52 GMT"
           ],
           "content-type": [
             "application/json"
@@ -38,50 +38,53 @@
           "connection": [
             "keep-alive"
           ],
-          "x-ratelimitbysize-limit-minute": [
-            "2000000"
+          "mistral-correlation-id": [
+            "0197e294-2e27-7c0d-8eb8-c3508050954f"
           ],
-          "x-ratelimitbysize-remaining-minute": [
-            "1996741"
-          ],
-          "ratelimitbysize-remaining": [
-            "1996741"
-          ],
-          "ratelimitbysize-reset": [
-            "37"
-          ],
-          "ratelimitbysize-limit": [
-            "2000000"
-          ],
-          "x-ratelimitbysize-remaining-month": [
-            "9999988118"
-          ],
-          "x-ratelimitbysize-limit-month": [
-            "10000000000"
-          ],
-          "ratelimitbysize-query-cost": [
-            "183"
+          "x-kong-request-id": [
+            "0197e294-2e27-7c0d-8eb8-c3508050954f"
           ],
           "x-envoy-upstream-service-time": [
-            "1286"
+            "1006"
+          ],
+          "x-ratelimit-limit-tokens-minute": [
+            "2000000"
+          ],
+          "x-ratelimit-remaining-tokens-minute": [
+            "1992172"
+          ],
+          "x-ratelimit-limit-tokens-month": [
+            "10000000000"
+          ],
+          "x-ratelimit-remaining-tokens-month": [
+            "9999881060"
+          ],
+          "x-ratelimit-tokens-query-cost": [
+            "312"
+          ],
+          "x-ratelimit-limit-req-10-second": [
+            "60"
+          ],
+          "x-ratelimit-remaining-req-10-second": [
+            "53"
           ],
           "access-control-allow-origin": [
             "*"
           ],
           "x-kong-upstream-latency": [
-            "1287"
+            "1007"
           ],
           "x-kong-proxy-latency": [
-            "1"
-          ],
-          "x-kong-request-id": [
-            "8591e00cf9147f3c8ddddb362da72d47"
+            "6"
           ],
           "cf-cache-status": [
             "DYNAMIC"
           ],
           "set-cookie": [
             "<SET-COOKIE>"
+          ],
+          "strict-transport-security": [
+            "max-age=15552000; includeSubDomains"
           ],
           "server": [
             "cloudflare"
@@ -98,10 +101,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\"id\":\"11ebc8fd6c534eee85cae9f0bd48cc0c\",\"object\":\"chat.completion\",\"created\":1737411983,\"model\":\"mistral-large-latest\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"tool_calls\":[{\"id\":\"1lH8jmqWv\",\"function\":{\"name\":\"get_weather\",\"arguments\":\"{\\\"city\\\": \\\"London\\\"}\"},\"index\":0},{\"id\":\"Orcp0Zhkp\",\"function\":{\"name\":\"get_weather\",\"arguments\":\"{\\\"city\\\": \\\"Paris\\\"}\"},\"index\":1},{\"id\":\"xS0oi6CIe\",\"function\":{\"name\":\"get_weather\",\"arguments\":\"{\\\"city\\\": \\\"Rome\\\"}\"},\"index\":2}],\"content\":\"\"},\"finish_reason\":\"tool_calls\"}],\"usage\":{\"prompt_tokens\":249,\"total_tokens\":311,\"completion_tokens\":62}}"
+          "string": "{\"id\":\"50672eec4e7547e193470dc517c97760\",\"object\":\"chat.completion\",\"created\":1751853051,\"model\":\"mistral-large-latest\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"tool_calls\":[{\"id\":\"Czkynyn6E\",\"function\":{\"name\":\"get_weather\",\"arguments\":\"{\\\"city\\\": \\\"London\\\"}\"},\"index\":0},{\"id\":\"bBS8tsbSC\",\"function\":{\"name\":\"get_weather\",\"arguments\":\"{\\\"city\\\": \\\"Paris\\\"}\"},\"index\":1},{\"id\":\"kbrrYX53G\",\"function\":{\"name\":\"get_weather\",\"arguments\":\"{\\\"city\\\": \\\"Rome\\\"}\"},\"index\":2}],\"content\":\"\"},\"finish_reason\":\"tool_calls\"}],\"usage\":{\"prompt_tokens\":249,\"total_tokens\":312,\"completion_tokens\":63}}"
         }
       },
-      "recorded_at": "Mon, 20 Jan 2025 22:26:24 GMT"
+      "recorded_at": "Mon, 07 Jul 2025 01:50:52 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

@@ -25,24 +25,26 @@ module Intelligence
           end
           seed                Integer
           stop                String, array: true
+
           stream              [ TrueClass, FalseClass ]
           stream_options do
             include_usage     [ TrueClass, FalseClass ]
           end
+
           temperature         Float
           tool                array: true, as: :tools, &Tool.schema
-          tool_choice         String
+          tool_choice do
+            # one of 'auto', 'none' or 'function'
+            type              Symbol, in: [ :auto, :none, :function ]
+            # the function parameters is required if you specify a type of 'function'
+            function do
+              name            String
+            end
+          end
           top_logprobs        Integer
           top_p               Float
           user                String
         end
-      end
-
-      def chat_request_body( conversation, options = nil )
-        tools = options&.delete( :tools ) || []
-        options = merge_options( @options, build_options( options ) )
-
-        super( conversation, { tools: tools }.merge( options ) )
       end
 
     end

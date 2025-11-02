@@ -1,0 +1,99 @@
+{
+  "http_interactions": [
+    {
+      "request": {
+        "method": "post",
+        "uri": "https://api.groq.com/openai/v1/chat/completions",
+        "body": {
+          "encoding": "UTF-8",
+          "string": "{\"model\":\"moonshotai/kimi-k2-instruct-0905\",\"max_tokens\":256,\"temperature\":0.0,\"tools\":[{\"type\":\"function\",\"function\":{\"name\":\"get_location\",\"description\":\"The get_location tool will return the users city, state or province and country.\",\"parameters\":{\"type\":\"object\",\"properties\":{},\"required\":[]}}},{\"type\":\"function\",\"function\":{\"name\":\"get_location\",\"description\":\"The get_location tool will return the users city, state or province and country.\",\"parameters\":{\"type\":\"object\",\"properties\":{},\"required\":[]}}}],\"stream\":true,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"Where am I located?\\n\"}]}"
+        },
+        "headers": {
+          "User-Agent": [
+            "Faraday v2.13.1"
+          ],
+          "Content-type": [
+            "application/json"
+          ],
+          "Authorization": [
+            "Bearer <TOKEN>"
+          ]
+        }
+      },
+      "response": {
+        "status": {
+          "code": 200,
+          "message": "OK"
+        },
+        "headers": {
+          "date": [
+            "Thu, 02 Oct 2025 18:27:29 GMT"
+          ],
+          "content-type": [
+            "text/event-stream"
+          ],
+          "transfer-encoding": [
+            "chunked"
+          ],
+          "connection": [
+            "keep-alive"
+          ],
+          "cf-ray": [
+            "<CF-RAY>"
+          ],
+          "cache-control": [
+            "no-cache"
+          ],
+          "vary": [
+            "Origin"
+          ],
+          "x-groq-region": [
+            "dls"
+          ],
+          "x-ratelimit-limit-requests": [
+            "1000"
+          ],
+          "x-ratelimit-limit-tokens": [
+            "10000"
+          ],
+          "x-ratelimit-remaining-requests": [
+            "752"
+          ],
+          "x-ratelimit-remaining-tokens": [
+            "5514"
+          ],
+          "x-ratelimit-reset-requests": [
+            "5h57m7.01s"
+          ],
+          "x-ratelimit-reset-tokens": [
+            "26.914s"
+          ],
+          "x-request-id": [
+            "<X-REQUEST-ID>"
+          ],
+          "via": [
+            "1.1 google"
+          ],
+          "cf-cache-status": [
+            "DYNAMIC"
+          ],
+          "set-cookie": [
+            "<SET-COOKIE>"
+          ],
+          "server": [
+            "cloudflare"
+          ],
+          "alt-svc": [
+            "h3=\":443\"; ma=86400"
+          ]
+        },
+        "body": {
+          "encoding": "UTF-8",
+          "string": "data: {\"id\":\"chatcmpl-e9143ebe-d1a0-4b64-867b-01aa9bab0ec1\",\"object\":\"chat.completion.chunk\",\"created\":1759429649,\"model\":\"moonshotai/kimi-k2-instruct-0905\",\"system_fingerprint\":\"fp_b8565bb333\",\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":null},\"logprobs\":null,\"finish_reason\":null}],\"x_groq\":{\"id\":\"req_01k6k2vrjkf56vfxv09gzgf6ax\"}}\n\ndata: {\"id\":\"chatcmpl-e9143ebe-d1a0-4b64-867b-01aa9bab0ec1\",\"object\":\"chat.completion.chunk\",\"created\":1759429649,\"model\":\"moonshotai/kimi-k2-instruct-0905\",\"system_fingerprint\":\"fp_b8565bb333\",\"choices\":[{\"index\":0,\"delta\":{\"tool_calls\":[{\"id\":\"functions.get_location:0\",\"type\":\"function\",\"function\":{\"name\":\"get_location\",\"arguments\":\"{}\"},\"index\":0}]},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"chatcmpl-e9143ebe-d1a0-4b64-867b-01aa9bab0ec1\",\"object\":\"chat.completion.chunk\",\"created\":1759429649,\"model\":\"moonshotai/kimi-k2-instruct-0905\",\"system_fingerprint\":\"fp_b8565bb333\",\"choices\":[{\"index\":0,\"delta\":{},\"logprobs\":null,\"finish_reason\":\"tool_calls\"}],\"x_groq\":{\"id\":\"req_01k6k2vrjkf56vfxv09gzgf6ax\",\"usage\":{\"queue_time\":0.102053221,\"prompt_tokens\":176,\"prompt_time\":0.04353198,\"completion_tokens\":12,\"completion_time\":0.047692128,\"total_tokens\":188,\"total_time\":0.091224108}},\"usage\":{\"queue_time\":0.102053221,\"prompt_tokens\":176,\"prompt_time\":0.04353198,\"completion_tokens\":12,\"completion_time\":0.047692128,\"total_tokens\":188,\"total_time\":0.091224108}}\n\ndata: [DONE]\n\n"
+        }
+      },
+      "recorded_at": "Thu, 02 Oct 2025 18:27:29 GMT"
+    }
+  ],
+  "recorded_with": "VCR 6.3.1"
+}

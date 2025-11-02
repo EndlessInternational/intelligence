@@ -1,0 +1,217 @@
+{
+  "http_interactions": [
+    {
+      "request": {
+        "method": "post",
+        "uri": "https://api.openai.com/v1/responses",
+        "body": {
+          "encoding": "UTF-8",
+          "string": "{\"model\":\"gpt-4o\",\"temperature\":0.0,\"max_output_tokens\":128,\"input\":[{\"role\":\"user\",\"content\":[{\"type\":\"input_text\",\"text\":\"What is the current weather?\"}],\"type\":\"message\"}],\"instructions\":\"You are a helpfull assistant who answers questions succinctly.\",\"tools\":[{\"type\":\"function\",\"name\":\"get_location\",\"description\":\"The get_location tool will return the users city, state or province and country.\"},{\"type\":\"function\",\"name\":\"get_weather\",\"description\":\"The get_weather tool will return the current weather in a given locality.\",\"parameters\":{\"type\":\"object\",\"properties\":{\"city\":{\"type\":\"string\",\"description\":\"The city or town for which the current weather should be returned.\"},\"state\":{\"type\":\"string\",\"description\":\"The state or province for which the current weather should be returned. If this is not provided the largest or most prominent city with the given name, in the given country or in the worldi, will be assumed.\"},\"country\":{\"type\":\"string\",\"description\":\"The country for which the given weather should be returned. If this is not provided the largest or most prominent city with the given name will be returned.\"}},\"required\":[\"city\"]}}]}"
+        },
+        "headers": {
+          "User-Agent": [
+            "Faraday v2.13.1"
+          ],
+          "Content-Type": [
+            "application/json"
+          ],
+          "Authorization": [
+            "Bearer <TOKEN>"
+          ]
+        }
+      },
+      "response": {
+        "status": {
+          "code": 200,
+          "message": "OK"
+        },
+        "headers": {
+          "date": [
+            "Wed, 01 Oct 2025 20:38:36 GMT"
+          ],
+          "content-type": [
+            "application/json"
+          ],
+          "transfer-encoding": [
+            "chunked"
+          ],
+          "connection": [
+            "keep-alive"
+          ],
+          "x-ratelimit-limit-requests": [
+            "10000"
+          ],
+          "x-ratelimit-limit-tokens": [
+            "30000000"
+          ],
+          "x-ratelimit-remaining-requests": [
+            "9999"
+          ],
+          "x-ratelimit-remaining-tokens": [
+            "29999597"
+          ],
+          "x-ratelimit-reset-requests": [
+            "6ms"
+          ],
+          "x-ratelimit-reset-tokens": [
+            "0s"
+          ],
+          "openai-version": [
+            "2020-10-01"
+          ],
+          "openai-organization": [
+            "<OPENAI-ORGANIZATION>"
+          ],
+          "openai-project": [
+            "proj_SnKVz9MFy0a0D6nNeyw7GaDO"
+          ],
+          "x-request-id": [
+            "<X-REQUEST-ID>"
+          ],
+          "openai-processing-ms": [
+            "501"
+          ],
+          "x-envoy-upstream-service-time": [
+            "505"
+          ],
+          "strict-transport-security": [
+            "max-age=31536000; includeSubDomains; preload"
+          ],
+          "cf-cache-status": [
+            "DYNAMIC"
+          ],
+          "set-cookie": [
+            "<SET-COOKIE>"
+          ],
+          "x-content-type-options": [
+            "nosniff"
+          ],
+          "server": [
+            "cloudflare"
+          ],
+          "cf-ray": [
+            "<CF-RAY>"
+          ],
+          "content-encoding": [
+            "gzip"
+          ],
+          "alt-svc": [
+            "h3=\":443\"; ma=86400"
+          ]
+        },
+        "body": {
+          "encoding": "ASCII-8BIT",
+          "string": "{\n  \"id\": \"resp_00832ffcaf66a4900068dd914bef64819f88dab8db0d340054\",\n  \"object\": \"response\",\n  \"created_at\": 1759351115,\n  \"status\": \"completed\",\n  \"background\": false,\n  \"billing\": {\n    \"payer\": \"developer\"\n  },\n  \"error\": null,\n  \"incomplete_details\": null,\n  \"instructions\": \"You are a helpfull assistant who answers questions succinctly.\",\n  \"max_output_tokens\": 128,\n  \"max_tool_calls\": null,\n  \"model\": \"gpt-4o-2024-08-06\",\n  \"output\": [\n    {\n      \"id\": \"fc_00832ffcaf66a4900068dd914c5090819fb716a4b9ed4f5423\",\n      \"type\": \"function_call\",\n      \"status\": \"completed\",\n      \"arguments\": \"{}\",\n      \"call_id\": \"call_1RtPl9Gx64LAiJcwjj4UMRqc\",\n      \"name\": \"get_location\"\n    }\n  ],\n  \"parallel_tool_calls\": true,\n  \"previous_response_id\": null,\n  \"prompt_cache_key\": null,\n  \"reasoning\": {\n    \"effort\": null,\n    \"summary\": null\n  },\n  \"safety_identifier\": null,\n  \"service_tier\": \"default\",\n  \"store\": true,\n  \"temperature\": 0.0,\n  \"text\": {\n    \"format\": {\n      \"type\": \"text\"\n    },\n    \"verbosity\": \"medium\"\n  },\n  \"tool_choice\": \"auto\",\n  \"tools\": [\n    {\n      \"type\": \"function\",\n      \"description\": \"The get_location tool will return the users city, state or province and country.\",\n      \"name\": \"get_location\",\n      \"parameters\": {\n        \"additionalProperties\": false,\n        \"type\": \"object\",\n        \"properties\": {},\n        \"required\": []\n      },\n      \"strict\": true\n    },\n    {\n      \"type\": \"function\",\n      \"description\": \"The get_weather tool will return the current weather in a given locality.\",\n      \"name\": \"get_weather\",\n      \"parameters\": {\n        \"type\": \"object\",\n        \"properties\": {\n          \"city\": {\n            \"type\": \"string\",\n            \"description\": \"The city or town for which the current weather should be returned.\"\n          },\n          \"state\": {\n            \"type\": \"string\",\n            \"description\": \"The state or province for which the current weather should be returned. If this is not provided the largest or most prominent city with the given name, in the given country or in the worldi, will be assumed.\"\n          },\n          \"country\": {\n            \"type\": \"string\",\n            \"description\": \"The country for which the given weather should be returned. If this is not provided the largest or most prominent city with the given name will be returned.\"\n          }\n        },\n        \"required\": [\n          \"city\",\n          \"state\",\n          \"country\"\n        ],\n        \"additionalProperties\": false\n      },\n      \"strict\": true\n    }\n  ],\n  \"top_logprobs\": 0,\n  \"top_p\": 1.0,\n  \"truncation\": \"disabled\",\n  \"usage\": {\n    \"input_tokens\": 186,\n    \"input_tokens_details\": {\n      \"cached_tokens\": 0\n    },\n    \"output_tokens\": 11,\n    \"output_tokens_details\": {\n      \"reasoning_tokens\": 0\n    },\n    \"total_tokens\": 197\n  },\n  \"user\": null,\n  \"metadata\": {}\n}"
+        }
+      },
+      "recorded_at": "Wed, 01 Oct 2025 20:38:36 GMT"
+    },
+    {
+      "request": {
+        "method": "post",
+        "uri": "https://api.openai.com/v1/responses",
+        "body": {
+          "encoding": "UTF-8",
+          "string": "{\"model\":\"gpt-4o\",\"temperature\":0.0,\"max_output_tokens\":128,\"input\":[{\"role\":\"user\",\"content\":[{\"type\":\"input_text\",\"text\":\"What is the current weather?\"}],\"type\":\"message\"},{\"type\":\"function_call\",\"id\":\"fc_00832ffcaf66a4900068dd914c5090819fb716a4b9ed4f5423\",\"call_id\":\"call_1RtPl9Gx64LAiJcwjj4UMRqc\",\"name\":\"get_location\",\"arguments\":\"{}\"},{\"type\":\"function_call_output\",\"call_id\":\"call_1RtPl9Gx64LAiJcwjj4UMRqc\",\"output\":\"Seattle, WA, USA\"}],\"instructions\":\"You are a helpfull assistant who answers questions succinctly.\",\"tools\":[{\"type\":\"function\",\"name\":\"get_location\",\"description\":\"The get_location tool will return the users city, state or province and country.\"},{\"type\":\"function\",\"name\":\"get_weather\",\"description\":\"The get_weather tool will return the current weather in a given locality.\",\"parameters\":{\"type\":\"object\",\"properties\":{\"city\":{\"type\":\"string\",\"description\":\"The city or town for which the current weather should be returned.\"},\"state\":{\"type\":\"string\",\"description\":\"The state or province for which the current weather should be returned. If this is not provided the largest or most prominent city with the given name, in the given country or in the worldi, will be assumed.\"},\"country\":{\"type\":\"string\",\"description\":\"The country for which the given weather should be returned. If this is not provided the largest or most prominent city with the given name will be returned.\"}},\"required\":[\"city\"]}}]}"
+        },
+        "headers": {
+          "User-Agent": [
+            "Faraday v2.13.1"
+          ],
+          "Content-Type": [
+            "application/json"
+          ],
+          "Authorization": [
+            "Bearer <TOKEN>"
+          ]
+        }
+      },
+      "response": {
+        "status": {
+          "code": 200,
+          "message": "OK"
+        },
+        "headers": {
+          "date": [
+            "Wed, 01 Oct 2025 20:38:37 GMT"
+          ],
+          "content-type": [
+            "application/json"
+          ],
+          "transfer-encoding": [
+            "chunked"
+          ],
+          "connection": [
+            "keep-alive"
+          ],
+          "x-ratelimit-limit-requests": [
+            "10000"
+          ],
+          "x-ratelimit-limit-tokens": [
+            "30000000"
+          ],
+          "x-ratelimit-remaining-requests": [
+            "9999"
+          ],
+          "x-ratelimit-remaining-tokens": [
+            "29999573"
+          ],
+          "x-ratelimit-reset-requests": [
+            "6ms"
+          ],
+          "x-ratelimit-reset-tokens": [
+            "0s"
+          ],
+          "openai-version": [
+            "2020-10-01"
+          ],
+          "openai-organization": [
+            "<OPENAI-ORGANIZATION>"
+          ],
+          "openai-project": [
+            "proj_SnKVz9MFy0a0D6nNeyw7GaDO"
+          ],
+          "x-request-id": [
+            "<X-REQUEST-ID>"
+          ],
+          "openai-processing-ms": [
+            "644"
+          ],
+          "x-envoy-upstream-service-time": [
+            "648"
+          ],
+          "strict-transport-security": [
+            "max-age=31536000; includeSubDomains; preload"
+          ],
+          "cf-cache-status": [
+            "DYNAMIC"
+          ],
+          "set-cookie": [
+            "<SET-COOKIE>"
+          ],
+          "x-content-type-options": [
+            "nosniff"
+          ],
+          "server": [
+            "cloudflare"
+          ],
+          "cf-ray": [
+            "<CF-RAY>"
+          ],
+          "content-encoding": [
+            "gzip"
+          ],
+          "alt-svc": [
+            "h3=\":443\"; ma=86400"
+          ]
+        },
+        "body": {
+          "encoding": "ASCII-8BIT",
+          "string": "{\n  \"id\": \"resp_00832ffcaf66a4900068dd914ca5fc819f82edcde1535677d0\",\n  \"object\": \"response\",\n  \"created_at\": 1759351116,\n  \"status\": \"completed\",\n  \"background\": false,\n  \"billing\": {\n    \"payer\": \"developer\"\n  },\n  \"error\": null,\n  \"incomplete_details\": null,\n  \"instructions\": \"You are a helpfull assistant who answers questions succinctly.\",\n  \"max_output_tokens\": 128,\n  \"max_tool_calls\": null,\n  \"model\": \"gpt-4o-2024-08-06\",\n  \"output\": [\n    {\n      \"id\": \"fc_00832ffcaf66a4900068dd914d0e04819fa0195fea5b6901f3\",\n      \"type\": \"function_call\",\n      \"status\": \"completed\",\n      \"arguments\": \"{\\\"city\\\":\\\"Seattle\\\",\\\"state\\\":\\\"WA\\\",\\\"country\\\":\\\"USA\\\"}\",\n      \"call_id\": \"call_Z1mXt6MKxDdj21RgU8VVB6yU\",\n      \"name\": \"get_weather\"\n    }\n  ],\n  \"parallel_tool_calls\": true,\n  \"previous_response_id\": null,\n  \"prompt_cache_key\": null,\n  \"reasoning\": {\n    \"effort\": null,\n    \"summary\": null\n  },\n  \"safety_identifier\": null,\n  \"service_tier\": \"default\",\n  \"store\": true,\n  \"temperature\": 0.0,\n  \"text\": {\n    \"format\": {\n      \"type\": \"text\"\n    },\n    \"verbosity\": \"medium\"\n  },\n  \"tool_choice\": \"auto\",\n  \"tools\": [\n    {\n      \"type\": \"function\",\n      \"description\": \"The get_location tool will return the users city, state or province and country.\",\n      \"name\": \"get_location\",\n      \"parameters\": {\n        \"additionalProperties\": false,\n        \"type\": \"object\",\n        \"properties\": {},\n        \"required\": []\n      },\n      \"strict\": true\n    },\n    {\n      \"type\": \"function\",\n      \"description\": \"The get_weather tool will return the current weather in a given locality.\",\n      \"name\": \"get_weather\",\n      \"parameters\": {\n        \"type\": \"object\",\n        \"properties\": {\n          \"city\": {\n            \"type\": \"string\",\n            \"description\": \"The city or town for which the current weather should be returned.\"\n          },\n          \"state\": {\n            \"type\": \"string\",\n            \"description\": \"The state or province for which the current weather should be returned. If this is not provided the largest or most prominent city with the given name, in the given country or in the worldi, will be assumed.\"\n          },\n          \"country\": {\n            \"type\": \"string\",\n            \"description\": \"The country for which the given weather should be returned. If this is not provided the largest or most prominent city with the given name will be returned.\"\n          }\n        },\n        \"required\": [\n          \"city\",\n          \"state\",\n          \"country\"\n        ],\n        \"additionalProperties\": false\n      },\n      \"strict\": true\n    }\n  ],\n  \"top_logprobs\": 0,\n  \"top_p\": 1.0,\n  \"truncation\": \"disabled\",\n  \"usage\": {\n    \"input_tokens\": 210,\n    \"input_tokens_details\": {\n      \"cached_tokens\": 0\n    },\n    \"output_tokens\": 23,\n    \"output_tokens_details\": {\n      \"reasoning_tokens\": 0\n    },\n    \"total_tokens\": 233\n  },\n  \"user\": null,\n  \"metadata\": {}\n}"
+        }
+      },
+      "recorded_at": "Wed, 01 Oct 2025 20:38:37 GMT"
+    }
+  ],
+  "recorded_with": "VCR 6.3.1"
+}

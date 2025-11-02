@@ -6,13 +6,13 @@
         "uri": "https://api.sambanova.ai/v1/chat/completions",
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"model\":\"Meta-Llama-3.1-70B-Instruct\",\"max_tokens\":24,\"temperature\":0.0,\"messages\":[{\"role\":\"user\",\"content\":\"respond only with the word 'hello'\\n\"}]}"
+          "string": "{\"model\":\"Meta-Llama-3.3-70B-Instruct\",\"max_tokens\":24,\"temperature\":0.0,\"messages\":[{\"role\":\"user\",\"content\":\"respond only with the word 'hello'\\n\"}]}"
         },
         "headers": {
           "User-Agent": [
-            "Faraday v2.12.0"
+            "Faraday v2.13.1"
           ],
-          "Content-Type": [
+          "Content-type": [
             "application/json"
           ],
           "Authorization": [
@@ -27,16 +27,37 @@
         },
         "headers": {
           "date": [
-            "Mon, 20 Jan 2025 23:29:01 GMT"
+            "Wed, 01 Oct 2025 23:14:47 GMT"
           ],
           "content-type": [
             "application/json; charset=utf-8"
           ],
-          "content-length": [
-            "688"
+          "transfer-encoding": [
+            "chunked"
           ],
           "connection": [
             "keep-alive"
+          ],
+          "inference-id": [
+            "fd0667da-6497-448a-ac24-e82f23300019"
+          ],
+          "x-ratelimit-limit-requests": [
+            "240"
+          ],
+          "x-ratelimit-limit-requests-day": [
+            "48000"
+          ],
+          "x-ratelimit-remaining-requests": [
+            "218"
+          ],
+          "x-ratelimit-remaining-requests-day": [
+            "47978"
+          ],
+          "x-ratelimit-reset-requests": [
+            "1759360547"
+          ],
+          "x-ratelimit-reset-requests-day": [
+            "1759446887"
           ],
           "strict-transport-security": [
             "max-age=31536000; includeSubDomains"
@@ -59,10 +80,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"choices\":[{\"finish_reason\":\"stop\",\"index\":0,\"logprobs\":null,\"message\":{\"content\":\"hello\",\"role\":\"assistant\"}}],\"created\":1737415741,\"id\":\"7bf03a46-8f24-4242-9ca0-2d6fba2099da\",\"model\":\"Meta-Llama-3.1-70B-Instruct\",\"object\":\"chat.completion\",\"system_fingerprint\":\"fastcoe\",\"usage\":{\"completion_tokens\":1,\"completion_tokens_after_first_per_sec\":0,\"completion_tokens_after_first_per_sec_first_ten\":0,\"completion_tokens_per_sec\":11.979857931582089,\"end_time\":1737415741.212285,\"is_last_response\":true,\"prompt_tokens\":43,\"start_time\":1737415741.1288116,\"time_to_first_token\":0.06539011001586914,\"total_latency\":0.08347344398498535,\"total_tokens\":44,\"total_tokens_per_sec\":527.113748989612}}\n"
+          "string": "{\"choices\":[{\"finish_reason\":\"stop\",\"index\":0,\"logprobs\":null,\"message\":{\"content\":\"hello\",\"role\":\"assistant\"}}],\"created\":1759360487.2733316,\"id\":\"9a309a53-1d97-45e8-8718-7102cfcd1a09\",\"model\":\"Meta-Llama-3.3-70B-Instruct\",\"object\":\"chat.completion\",\"system_fingerprint\":\"fastcoe\",\"usage\":{\"completion_tokens\":1,\"completion_tokens_after_first_per_sec\":0,\"completion_tokens_after_first_per_sec_first_ten\":0,\"completion_tokens_after_first_per_sec_graph\":0,\"completion_tokens_per_sec\":15.720720686953946,\"end_time\":1759360487.2732441,\"is_last_response\":true,\"prompt_tokens\":43,\"prompt_tokens_details\":{\"cached_tokens\":0},\"start_time\":1759360487.2096338,\"stop_reason\":\"stop\",\"time_to_first_token\":0.05010795593261719,\"total_latency\":0.06361031532287598,\"total_tokens\":44,\"total_tokens_per_sec\":691.7117102259737}}\n"
         }
       },
-      "recorded_at": "Mon, 20 Jan 2025 23:29:01 GMT"
+      "recorded_at": "Wed, 01 Oct 2025 23:14:47 GMT"
     },
     {
       "request": {
@@ -70,13 +91,13 @@
         "uri": "https://api.sambanova.ai/v1/chat/completions",
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"model\":\"Meta-Llama-3.1-70B-Instruct\",\"max_tokens\":24,\"temperature\":0.0,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"respond only with the word 'hello'\\n\"}]}"
+          "string": "{\"model\":\"Meta-Llama-3.3-70B-Instruct\",\"max_tokens\":24,\"temperature\":0.0,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"respond only with the word 'hello'\\n\"}]}"
         },
         "headers": {
           "User-Agent": [
-            "Faraday v2.12.0"
+            "Faraday v2.13.1"
           ],
-          "Content-Type": [
+          "Content-type": [
             "application/json"
           ],
           "Authorization": [
@@ -91,16 +112,37 @@
         },
         "headers": {
           "date": [
-            "Mon, 20 Jan 2025 23:29:01 GMT"
+            "Wed, 01 Oct 2025 23:14:47 GMT"
           ],
           "content-type": [
             "application/json; charset=utf-8"
           ],
-          "content-length": [
-            "688"
+          "transfer-encoding": [
+            "chunked"
           ],
           "connection": [
             "keep-alive"
+          ],
+          "inference-id": [
+            "f19c5443-22d1-4c62-b559-98af54dfb652"
+          ],
+          "x-ratelimit-limit-requests": [
+            "240"
+          ],
+          "x-ratelimit-limit-requests-day": [
+            "48000"
+          ],
+          "x-ratelimit-remaining-requests": [
+            "217"
+          ],
+          "x-ratelimit-remaining-requests-day": [
+            "47977"
+          ],
+          "x-ratelimit-reset-requests": [
+            "1759360547"
+          ],
+          "x-ratelimit-reset-requests-day": [
+            "1759446887"
           ],
           "strict-transport-security": [
             "max-age=31536000; includeSubDomains"
@@ -123,10 +165,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"choices\":[{\"finish_reason\":\"stop\",\"index\":0,\"logprobs\":null,\"message\":{\"content\":\"hello\",\"role\":\"assistant\"}}],\"created\":1737415741,\"id\":\"afe420ad-2686-490e-944f-fe70e8a3d783\",\"model\":\"Meta-Llama-3.1-70B-Instruct\",\"object\":\"chat.completion\",\"system_fingerprint\":\"fastcoe\",\"usage\":{\"completion_tokens\":1,\"completion_tokens_after_first_per_sec\":0,\"completion_tokens_after_first_per_sec_first_ten\":0,\"completion_tokens_per_sec\":12.31854373294722,\"end_time\":1737415741.4639835,\"is_last_response\":true,\"prompt_tokens\":78,\"start_time\":1737415741.382805,\"time_to_first_token\":0.06331253051757812,\"total_latency\":0.08117842674255371,\"total_tokens\":79,\"total_tokens_per_sec\":973.1649549028303}}\n"
+          "string": "{\"choices\":[{\"finish_reason\":\"stop\",\"index\":0,\"logprobs\":null,\"message\":{\"content\":\"hello\",\"role\":\"assistant\"}}],\"created\":1759360487.5306253,\"id\":\"052c15b0-18a4-4f28-9b6e-8d9e37b73b16\",\"model\":\"Meta-Llama-3.3-70B-Instruct\",\"object\":\"chat.completion\",\"system_fingerprint\":\"fastcoe\",\"usage\":{\"completion_tokens\":1,\"completion_tokens_after_first_per_sec\":0,\"completion_tokens_after_first_per_sec_first_ten\":0,\"completion_tokens_after_first_per_sec_graph\":0,\"completion_tokens_per_sec\":16.40219618639428,\"end_time\":1759360487.5305502,\"is_last_response\":true,\"prompt_tokens\":78,\"prompt_tokens_details\":{\"cached_tokens\":0},\"start_time\":1759360487.4695828,\"stop_reason\":\"stop\",\"time_to_first_token\":0.04850459098815918,\"total_latency\":0.060967445373535156,\"total_tokens\":79,\"total_tokens_per_sec\":1295.773498725148}}\n"
         }
       },
-      "recorded_at": "Mon, 20 Jan 2025 23:29:01 GMT"
+      "recorded_at": "Wed, 01 Oct 2025 23:14:47 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

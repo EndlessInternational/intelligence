@@ -18,7 +18,7 @@ RSpec.describe "#{Intelligence::Adapter[ :x_ai ]} chat requests", :x_ai do
     Intelligence::Adapter[ :x_ai ].build! do   
       key                     ENV[ 'XAI_API_KEY' ]
       chat_options do
-        model                 'grok-beta'
+        model                 'grok-3'
         max_tokens            128 
         temperature           0
       end
@@ -29,7 +29,7 @@ RSpec.describe "#{Intelligence::Adapter[ :x_ai ]} chat requests", :x_ai do
     Intelligence::Adapter[ :x_ai ].build! do   
       key                     ENV[ 'XAI_API_KEY' ]
       chat_options do
-        model                 'grok-beta'
+        model                 'grok-3'
         max_tokens            128 
         temperature           0
 
@@ -46,7 +46,7 @@ RSpec.describe "#{Intelligence::Adapter[ :x_ai ]} chat requests", :x_ai do
     Intelligence::Adapter[ :x_ai ].build! do   
       key                     ENV[ 'XAI_API_KEY' ]
       chat_options do
-        model                 'grok-beta'
+        model                 'grok-3'
         max_tokens            24 
         temperature           0
       end
@@ -57,7 +57,7 @@ RSpec.describe "#{Intelligence::Adapter[ :x_ai ]} chat requests", :x_ai do
     Intelligence::Adapter[ :x_ai ].build! do   
       key                     ENV[ 'XAI_API_KEY' ]
       chat_options do
-        model                 'grok-beta'
+        model                 'grok-3'
         max_tokens            24
         temperature           0
         stop                  'five'
@@ -69,9 +69,37 @@ RSpec.describe "#{Intelligence::Adapter[ :x_ai ]} chat requests", :x_ai do
     Intelligence::Adapter[ :x_ai ].build! do   
       key                     ENV[ 'XAI_API_KEY' ]
       chat_options do
-        model                 'grok-beta'
+        model                 'grok-2-vision-1212'
         max_tokens            24
         temperature           0
+      end
+    end
+  end
+
+  let( :adapter_with_web_search ) do
+    Intelligence::Adapter[ :x_ai ].build! do   
+      key                     ENV[ 'XAI_API_KEY' ]
+      chat_options do
+        model                 'grok-3-latest'
+        max_tokens            1024
+        temperature           0
+        abilities do  
+          web_search do 
+            return_citations  true
+          end
+        end
+      end
+    end
+  end
+
+  let( :adapter_with_thought ) do
+    Intelligence::Adapter[ :x_ai ].build! do   
+      key                     ENV[ 'XAI_API_KEY' ]
+      chat_options do
+        model                 'grok-3-mini'
+        max_tokens            4096
+        temperature           0
+        reasoning_effort      :low
       end
     end
   end
@@ -101,20 +129,27 @@ RSpec.describe "#{Intelligence::Adapter[ :x_ai ]} chat requests", :x_ai do
   include_examples 'chat requests'
   include_examples 'chat requests with token limit exceeded', 
                    adapter: :adapter_with_limited_max_tokens 
-  # grok's stop sequence behaviour is unique in that it includes the stop sequence in the 
-  # response so disabled this test for now
-  # include_examples 'chat requests with stop sequence', 
-  #                adapter: :adapter_with_stop_sequence
+  include_examples 'chat requests with stop sequence', 
+                   adapter: :adapter_with_stop_sequence
   include_examples 'chat requests without alternating roles'
-  # include_examples 'chat requests with binary encoded images', 
-  #                 adapter: :vision_adapter
+  include_examples 'chat requests with binary encoded images', 
+                   adapter: :vision_adapter
+  include_examples 'chat requests with file images',
+                   adapter: :vision_adapter
+  include_examples 'chat requests without alternating roles'
+  include_examples 'chat requests with web search', 
+                   adapter: :adapter_with_web_search
+  include_examples 'chat requests with thought', 
+                   adapter: :adapter_with_thought
+
   include_examples 'chat requests with tools'
   include_examples 'chat requests with adapter tools'
   include_examples 'chat requests with complex tools'
-  # grok currently seems unable to support parallel tools 
-  # include_examples 'chat requests with parallel tools'
+  include_examples 'chat requests with parallel tools'
+  include_examples 'chat requests with tools multiturn'
 
   include_examples 'chat requests with invalid key', 
                    error_type: 'invalid_request_error'
   include_examples 'chat requests with invalid model'
+
 end

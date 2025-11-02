@@ -4,6 +4,8 @@ module Intelligence
 
       CHAT_REQUEST_URI = "https://api.anthropic.com/v1/messages"
 
+      SUPPORTED_CONTENT_TYPES = %w[ image/jpeg image/png image/gif image/webp application/pdf ]
+
       def chat_request_uri( options )
         CHAT_REQUEST_URI
       end
@@ -71,14 +73,24 @@ module Intelligence
               case content[ :type ]
               when :text
                 result_message_content << { type: 'text', text: content[ :text ] }
+              when :thought
+                signature = content[ :'anthropic/signature' ]
+                if signature && signature.length > 0 
+                  result_message_content << { 
+                    type:                   'thinking', 
+                    thinking:               content[ :text ], 
+                    signature:              signature 
+                  }
+                end
+              when :cipher_thought
+                # nop
               when :binary
                 content_type = content[ :content_type ]
                 bytes = content[ :bytes ]
                 if content_type && bytes
-                  mime_type = MIME::Types[ content_type ].first
-                  if mime_type&.media_type == 'image'
+                  if SUPPORTED_CONTENT_TYPES.include?( content_type )
                     result_message_content << {
-                      type: 'image',
+                      type: content_type == 'application/pdf' ? 'document' : 'image',
                       source: {
                         type: 'base64',
                         media_type: content_type,
@@ -97,21 +109,54 @@ module Intelligence
                     'requires file content to include content type and (packed) bytes'  
                   )
                 end
+              when :file 
+                content_type = content[ :content_type ]
+                uri = content[ :uri ]
+                if content_type && uri  
+                  if SUPPORTED_CONTENT_TYPES.include?( content_type )
+                    result_message_content << {
+                      type: content_type == 'application/pdf' ? 'document' : 'image',
+                      source: {
+                        type: 'url',
+                        url: uri 
+                      }
+                    }
+                  else 
+                    raise UnsupportedContentError.new( 
+                      :anthropic, 
+                      "only supports content of type #{SUPPORTED_CONTENT_TYPES.join( ', ' )}" 
+                    ) 
+                  end 
+                else 
+                  raise UnsupportedContentError.new(
+                    :anthropic, 
+                    'requires file content to include content type and uri'  
+                  )
+                end 
               when :tool_call 
+                tool_parameters = content[ :tool_parameters ]
+                tool_parameters = {} \
+                  if tool_parameters.nil? || 
+                     ( tool_parameters.is_a?( String ) && tool_parameters.empty? )
                 result_message_content << {
                   type: 'tool_use',
                   id: content[ :tool_call_id ],
                   name: content[ :tool_name ],
-                  input: content[ :tool_parameters ] || {}
+                  input: tool_parameters
                 }
               when :tool_result 
                 result_message_content << {
                   type: 'tool_result',
                   tool_use_id: content[ :tool_call_id ],
-                  content: content[ :tool_result ]
+                  content: content[ :tool_result ]&.to_s
                 }
+              when :web_search_call, :web_reference
+                # nop
               else
-                raise InvalidContentError.new( :anthropic ) 
+                raise UnsupportedContentError.new( 
+                  :anthropic, 
+                  "does not support content of type '#{content[ :type ]}'." 
+                ) 
               end
             end
             
@@ -134,10 +179,11 @@ module Intelligence
 
       def chat_request_tools_attributes( tools ) 
         properties_array_to_object = lambda do | properties |
-          return nil unless properties&.any?  
+          return nil unless properties&.any? 
           object = {}
           required = []
           properties.each do | property | 
+            property = property.dup 
             name = property.delete( :name ) 
             required << name if property.delete( :required )
             if property[ :properties ]&.any?  

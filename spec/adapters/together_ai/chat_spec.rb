@@ -12,7 +12,7 @@ RSpec.describe "#{Intelligence::Adapter[ :together_ai ]} chat requests", :togeth
     Intelligence::Adapter[ :together_ai ].build! do   
       key                     ENV[ 'TOGETHERAI_API_KEY' ]
       chat_options do
-        model                 'meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo'
+        model                 'deepseek-ai/DeepSeek-V3'
         max_tokens            128 
         temperature           0
       end
@@ -23,7 +23,7 @@ RSpec.describe "#{Intelligence::Adapter[ :together_ai ]} chat requests", :togeth
     Intelligence::Adapter[ :open_ai ].build! do   
       key                     ENV[ 'TOGETHERAI_API_KEY' ]
       chat_options do
-        model                 'meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo'
+        model                 'deepseek-ai/DeepSeek-V3'
         max_tokens            128 
         temperature           0
 
@@ -40,7 +40,7 @@ RSpec.describe "#{Intelligence::Adapter[ :together_ai ]} chat requests", :togeth
     Intelligence::Adapter[ :together_ai ].build! do   
       key                     ENV[ 'TOGETHERAI_API_KEY' ]
       chat_options do
-        model                 'meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo'
+        model                 'deepseek-ai/DeepSeek-V3'
         max_tokens            24 
         temperature           0
       end
@@ -51,7 +51,7 @@ RSpec.describe "#{Intelligence::Adapter[ :together_ai ]} chat requests", :togeth
     Intelligence::Adapter[ :together_ai ].build! do   
       key                     ENV[ 'TOGETHERAI_API_KEY' ]
       chat_options do
-        model                 'meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo'
+        model                 'deepseek-ai/DeepSeek-V3'
         max_tokens            24
         temperature           0
         stop                  'five'
@@ -74,7 +74,7 @@ RSpec.describe "#{Intelligence::Adapter[ :together_ai ]} chat requests", :togeth
     Intelligence::Adapter[ :together_ai ].build! do 
       key                     'this-key-is-not-valid'  
       chat_options do
-        model                 'meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo'
+        model                 'deepseek-ai/DeepSeek-V3'
         max_tokens            16
         temperature           0
       end
@@ -100,10 +100,11 @@ RSpec.describe "#{Intelligence::Adapter[ :together_ai ]} chat requests", :togeth
   include_examples 'chat requests without alternating roles'
   include_examples 'chat requests with binary encoded images', 
                    adapter: :vision_adapter
+  
+  # tools no longer work with together ai although they did historically; this may 
+  # be a model problem but I cannot find a working model
   include_examples 'chat requests with tools'
-  # parallel tools actually sort of work with together ai but the model returns the request 
-  # as part of a text content payload so this is disabled for now
-  # include_examples 'chat requests with complex tools'
+  include_examples 'chat requests with complex tools'
   include_examples 'chat requests with parallel tools'
 
   include_examples 'chat requests with invalid key'

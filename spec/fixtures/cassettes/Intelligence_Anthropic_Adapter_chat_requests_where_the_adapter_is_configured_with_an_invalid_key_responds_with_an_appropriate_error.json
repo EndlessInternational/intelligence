@@ -6,11 +6,11 @@
         "uri": "https://api.anthropic.com/v1/messages",
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"model\":\"claude-3-5-sonnet-20240620\",\"max_tokens\":24,\"temperature\":0.0,\"system\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \",\"messages\":[{\"role\":\"user\",\"content\":[{\"type\":\"text\",\"text\":\"respond only with the word 'hello'\\n\"}]}]}"
+          "string": "{\"model\":\"claude-sonnet-4-5-20250929\",\"max_tokens\":24,\"temperature\":0.0,\"system\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \",\"messages\":[{\"role\":\"user\",\"content\":[{\"type\":\"text\",\"text\":\"respond only with the word 'hello'\\n\"}]}]}"
         },
         "headers": {
           "User-Agent": [
-            "Faraday v2.12.0"
+            "Faraday v2.13.1"
           ],
           "content-type": [
             "application/json"
@@ -30,22 +30,31 @@
         },
         "headers": {
           "date": [
-            "Tue, 21 Jan 2025 03:30:05 GMT"
+            "Wed, 01 Oct 2025 21:00:26 GMT"
           ],
           "content-type": [
             "application/json"
           ],
           "content-length": [
-            "86"
+            "130"
           ],
           "connection": [
             "keep-alive"
+          ],
+          "cf-ray": [
+            "<CF-RAY>"
           ],
           "x-should-retry": [
             "false"
           ],
           "request-id": [
             "<REQUEST-ID>"
+          ],
+          "strict-transport-security": [
+            "max-age=31536000; includeSubDomains; preload"
+          ],
+          "x-envoy-upstream-service-time": [
+            "8"
           ],
           "via": [
             "1.1 google"
@@ -58,17 +67,14 @@
           ],
           "server": [
             "cloudflare"
-          ],
-          "cf-ray": [
-            "<CF-RAY>"
           ]
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"}}"
+          "string": "{\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CTh9kevJe5JJNhqerdpaj\"}"
         }
       },
-      "recorded_at": "Tue, 21 Jan 2025 03:30:05 GMT"
+      "recorded_at": "Wed, 01 Oct 2025 21:00:26 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

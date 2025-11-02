@@ -6,13 +6,13 @@
         "uri": "https://api.sambanova.ai/v1/chat/completions",
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"model\":\"Meta-Llama-3.1-70B-Instruct\",\"max_tokens\":16,\"temperature\":0.0,\"stream\":true,\"messages\":[{\"role\":\"user\",\"content\":\"respond only with the word 'hello'\\n\"}]}"
+          "string": "{\"model\":\"Meta-Llama-3.3-70B-Instruct\",\"max_tokens\":16,\"temperature\":0.0,\"stream\":true,\"messages\":[{\"role\":\"user\",\"content\":\"respond only with the word 'hello'\\n\"}]}"
         },
         "headers": {
           "User-Agent": [
-            "Faraday v2.12.0"
+            "Faraday v2.13.1"
           ],
-          "Content-Type": [
+          "Content-type": [
             "application/json"
           ],
           "Authorization": [
@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Mon, 20 Jan 2025 23:29:48 GMT"
+            "Wed, 01 Oct 2025 23:14:50 GMT"
           ],
           "content-type": [
             "text/event-stream; charset=utf-8"
@@ -37,6 +37,27 @@
           ],
           "connection": [
             "keep-alive"
+          ],
+          "inference-id": [
+            "f8c6cbc4-9928-44ec-b515-b90c901be676"
+          ],
+          "x-ratelimit-limit-requests": [
+            "240"
+          ],
+          "x-ratelimit-limit-requests-day": [
+            "48000"
+          ],
+          "x-ratelimit-remaining-requests": [
+            "209"
+          ],
+          "x-ratelimit-remaining-requests-day": [
+            "47969"
+          ],
+          "x-ratelimit-reset-requests": [
+            "1759360550"
+          ],
+          "x-ratelimit-reset-requests-day": [
+            "1759446890"
           ],
           "strict-transport-security": [
             "max-age=31536000; includeSubDomains"
@@ -59,10 +80,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "data: {\"choices\":[{\"delta\":{\"content\":\"\",\"role\":\"assistant\"},\"finish_reason\":null,\"index\":0,\"logprobs\":null}],\"created\":1737415788,\"id\":\"446bd3fb-947a-4c94-9506-2a76bdcbbea3\",\"model\":\"Meta-Llama-3.1-70B-Instruct\",\"object\":\"chat.completion.chunk\",\"system_fingerprint\":\"fastcoe\"}\n\ndata: {\"choices\":[{\"delta\":{\"content\":\"hello\",\"role\":\"assistant\"},\"finish_reason\":null,\"index\":0,\"logprobs\":null}],\"created\":1737415788,\"id\":\"446bd3fb-947a-4c94-9506-2a76bdcbbea3\",\"model\":\"Meta-Llama-3.1-70B-Instruct\",\"object\":\"chat.completion.chunk\",\"system_fingerprint\":\"fastcoe\"}\n\ndata: {\"choices\":[{\"delta\":{\"content\":\"\"},\"finish_reason\":\"stop\",\"index\":0,\"logprobs\":null}],\"created\":1737415788,\"id\":\"446bd3fb-947a-4c94-9506-2a76bdcbbea3\",\"model\":\"Meta-Llama-3.1-70B-Instruct\",\"object\":\"chat.completion.chunk\",\"system_fingerprint\":\"fastcoe\"}\n\ndata: [DONE]\n\n"
+          "string": "data: {\"choices\":[{\"delta\":{\"content\":\"hello\",\"role\":\"assistant\"},\"finish_reason\":null,\"index\":0,\"logprobs\":null}],\"created\":1759360490.1145692,\"id\":\"55b1c5c9-c114-4dd2-b54b-273d59ebb934\",\"model\":\"Meta-Llama-3.3-70B-Instruct\",\"object\":\"chat.completion.chunk\",\"system_fingerprint\":\"fastcoe\"}\n\ndata: {\"choices\":[{\"delta\":{\"content\":\"\"},\"finish_reason\":\"stop\",\"index\":0,\"logprobs\":null}],\"created\":1759360490.1216788,\"id\":\"55b1c5c9-c114-4dd2-b54b-273d59ebb934\",\"model\":\"Meta-Llama-3.3-70B-Instruct\",\"object\":\"chat.completion.chunk\",\"system_fingerprint\":\"fastcoe\"}\n\ndata: [DONE]\n\n"
         }
       },
-      "recorded_at": "Mon, 20 Jan 2025 23:29:48 GMT"
+      "recorded_at": "Wed, 01 Oct 2025 23:14:50 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

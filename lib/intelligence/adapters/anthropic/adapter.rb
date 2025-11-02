@@ -17,15 +17,24 @@ module Intelligence
   
           # normalized properties for anthropic generative text endpoint
           model           String
-          max_tokens      Integer
-          temperature     Float
-          top_k           Integer
-          top_p           Float
+          max_tokens      Integer, in: (1...)
+          temperature     Float, in: 0.0..1.0 
+          top_k           Integer, in: (1...)
+          top_p           Float, in: (0..1)
           stop            String, array: true, as: :stop_sequences
           stream          [ TrueClass, FalseClass ]
 
           # anthropic variant of normalized properties for anthropic generative text endpoints
           stop_sequences  String, array: true
+
+          # anthropic reasoning
+          reasoning as: :thinking do 
+            type          Symbol, required: true, default: :enabled
+            budget_tokens required: true, in: (1024...)
+
+            # normalized attribute name
+            budget        as: :budget_tokens, in: (1024...)
+          end
 
           # anthropic specific properties for anthropic generative text endpoints
           tool            array: true, as: :tools, &Tool.schema 
@@ -45,10 +54,12 @@ module Intelligence
             name          String
           end
           
+          container       String
           metadata do
             user_id       String
-          end 
-          
+          end           
+          service_tier    Symbol, in: [ :auto, :standard_only ]
+
         end
         
       end

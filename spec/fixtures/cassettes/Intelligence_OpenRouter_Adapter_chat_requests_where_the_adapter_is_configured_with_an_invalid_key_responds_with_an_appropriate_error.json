@@ -6,13 +6,13 @@
         "uri": "https://openrouter.ai/api/v1/chat/completions",
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"model\":\"qwen/qwen-2-vl-7b-instruct\",\"max_tokens\":16,\"temperature\":0.0,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"respond only with the word 'hello'\\n\"}]}"
+          "string": "{\"model\":\"qwen/qwen-2.5-vl-7b-instruct\",\"max_tokens\":16,\"temperature\":0.0,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"respond only with the word 'hello'\\n\"}]}"
         },
         "headers": {
           "User-Agent": [
-            "Faraday v2.12.0"
+            "Faraday v2.13.1"
           ],
-          "Content-Type": [
+          "Content-type": [
             "application/json"
           ],
           "Authorization": [
@@ -27,37 +27,37 @@
         },
         "headers": {
           "date": [
-            "Mon, 20 Jan 2025 22:42:11 GMT"
+            "Wed, 01 Oct 2025 23:17:16 GMT"
           ],
           "content-type": [
-            "application/json; charset=UTF-8"
+            "application/json"
           ],
-          "content-length": [
-            "60"
+          "transfer-encoding": [
+            "chunked"
           ],
           "connection": [
             "keep-alive"
           ],
+          "cf-ray": [
+            "<CF-RAY>"
+          ],
           "access-control-allow-origin": [
             "*"
-          ],
-          "x-clerk-auth-message": [
-            "Invalid JWT form. A JWT consists of three parts separated by dots. (reason=token-<TOKEN>, token-carrier=header)"
-          ],
-          "x-clerk-auth-reason": [
-            "token-<TOKEN>"
-          ],
-          "x-clerk-auth-status": [
-            "signed-out"
           ],
           "vary": [
             "Accept-Encoding"
           ],
+          "permissions-policy": [
+            "payment=(self \"https://checkout.stripe.com\" \"https://connect-js.stripe.com\" \"https://js.stripe.com\" \"https://*.js.stripe.com\" \"https://hooks.stripe.com\")"
+          ],
+          "referrer-policy": [
+            "no-referrer, strict-origin-when-cross-origin"
+          ],
+          "x-content-type-options": [
+            "nosniff"
+          ],
           "server": [
             "cloudflare"
-          ],
-          "cf-ray": [
-            "<CF-RAY>"
           ]
         },
         "body": {
@@ -65,7 +65,7 @@
           "string": "{\"error\":{\"message\":\"No auth credentials found\",\"code\":401}}"
         }
       },
-      "recorded_at": "Mon, 20 Jan 2025 22:42:11 GMT"
+      "recorded_at": "Wed, 01 Oct 2025 23:17:16 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

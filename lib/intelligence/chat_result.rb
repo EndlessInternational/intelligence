@@ -13,23 +13,33 @@ module Intelligence
     attr_reader :metrics
 
     def initialize( chat_attributes )
+      raise 'A ChatResult must be initialized with attributes but got nil.' unless chat_attributes 
 
-      @choices = []
-      chat_attributes[ :choices ]&.each do | json_choice |
-        @choices.push( ChatResultChoice.new( json_choice ) )
+      @attributes = chat_attributes.dup
+      @choices = ( @attributes.delete( :choices ) || [] ).map do | json_choice |
+        ChatResultChoice.new( json_choice )
       end
-      @metrics = ChatMetrics.new( chat_attributes[ :metrics ] ) \
-        if chat_attributes.key?( :metrics )
+
+      json_metrics = @attributes.delete( :metrics )
+      @metrics = ChatMetrics.new( json_metrics ) if json_metrics
     end
 
-    def message 
-      return nil if @choices.empty?
-      @choices.first.message
-    end
+    def id              = @attributes[ :id ]
+    def user            = @attributes[ :user ]
 
-    def text 
-      return self.message&.text || ''
-    end
+    def message         = @choices.empty? ? nil : @choices.first.message
+    def text            = self.message&.text || '' 
+    def end_reason      = @choices.empty? ? nil : @choices.first.end_reason
+
+    def key?(key)       = @attributes.key?(key)
+    alias include? key?
+    def size            = @attributes.size
+    alias length size
+    alias count size
+    def empty?          = @attributes.empty? 
+
+    def each( &block)   = @attributes.each( &block )
+    def []( key )       = @attributes[ key ]
 
   end
 

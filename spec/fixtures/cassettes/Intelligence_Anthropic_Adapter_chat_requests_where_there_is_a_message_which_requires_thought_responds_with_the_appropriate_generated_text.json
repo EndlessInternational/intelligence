@@ -1,0 +1,120 @@
+{
+  "http_interactions": [
+    {
+      "request": {
+        "method": "post",
+        "uri": "https://api.anthropic.com/v1/messages",
+        "body": {
+          "encoding": "UTF-8",
+          "string": "{\"model\":\"claude-sonnet-4-5-20250929\",\"max_tokens\":8192,\"thinking\":{\"type\":\"enabled\",\"budget_tokens\":8191},\"system\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \",\"messages\":[{\"role\":\"user\",\"content\":[{\"type\":\"text\",\"text\":\"Given a triangle ABC with angle A 60 degrees and angle B 40 degrees, extend side BC through C. Now create triangle DAB such that DC is congruent to AB. What is the angle measure of angle ADB?\\n\"}]}]}"
+        },
+        "headers": {
+          "User-Agent": [
+            "Faraday v2.13.1"
+          ],
+          "content-type": [
+            "application/json"
+          ],
+          "x-api-key": [
+            "<X-API-KEY>"
+          ],
+          "anthropic-version": [
+            "2023-06-01"
+          ]
+        }
+      },
+      "response": {
+        "status": {
+          "code": 200,
+          "message": "OK"
+        },
+        "headers": {
+          "date": [
+            "Wed, 01 Oct 2025 20:59:46 GMT"
+          ],
+          "content-type": [
+            "application/json"
+          ],
+          "transfer-encoding": [
+            "chunked"
+          ],
+          "connection": [
+            "keep-alive"
+          ],
+          "content-encoding": [
+            "gzip"
+          ],
+          "anthropic-ratelimit-input-tokens-limit": [
+            "450000"
+          ],
+          "anthropic-ratelimit-input-tokens-remaining": [
+            "450000"
+          ],
+          "anthropic-ratelimit-input-tokens-reset": [
+            "2025-10-01T20:58:55Z"
+          ],
+          "anthropic-ratelimit-output-tokens-limit": [
+            "90000"
+          ],
+          "anthropic-ratelimit-output-tokens-remaining": [
+            "86000"
+          ],
+          "anthropic-ratelimit-output-tokens-reset": [
+            "2025-10-01T20:59:49Z"
+          ],
+          "anthropic-ratelimit-requests-limit": [
+            "1000"
+          ],
+          "anthropic-ratelimit-requests-remaining": [
+            "999"
+          ],
+          "anthropic-ratelimit-requests-reset": [
+            "2025-10-01T20:58:53Z"
+          ],
+          "anthropic-ratelimit-tokens-limit": [
+            "540000"
+          ],
+          "anthropic-ratelimit-tokens-remaining": [
+            "536000"
+          ],
+          "anthropic-ratelimit-tokens-reset": [
+            "2025-10-01T20:58:55Z"
+          ],
+          "request-id": [
+            "<REQUEST-ID>"
+          ],
+          "strict-transport-security": [
+            "max-age=31536000; includeSubDomains; preload"
+          ],
+          "anthropic-organization-id": [
+            "ed8c3484-0c99-44df-aab0-b0c00ceaee61"
+          ],
+          "x-envoy-upstream-service-time": [
+            "52756"
+          ],
+          "via": [
+            "1.1 google"
+          ],
+          "cf-cache-status": [
+            "DYNAMIC"
+          ],
+          "x-robots-tag": [
+            "none"
+          ],
+          "server": [
+            "cloudflare"
+          ],
+          "cf-ray": [
+            "<CF-RAY>"
+          ]
+        },
+        "body": {
+          "encoding": "ASCII-8BIT",
+          "string": "{\"id\":\"msg_01EPFkKYZYm6pmReCPeXfzo3\",\"type\":\"message\",\"role\":\"assistant\",\"model\":\"claude-sonnet-4-5-20250929\",\"content\":[{\"type\":\"thinking\",\"thinking\":\"Let me work through this step by step.\\n\\nGiven:\\n- Triangle ABC with angle A = 60° and angle B = 40°\\n- Extend side BC through C\\n- Create triangle DAB such that DC is congruent to AB (DC = AB)\\n\\nFirst, let me find angle C in triangle ABC:\\nAngle C = 180° - 60° - 40° = 80°\\n\\nNow, BC is extended through C, so D is on the ray from B through C, beyond C.\\n\\nWe have DC = AB and we need to find angle ADB.\\n\\nLet me set up coordinates or think about this geometrically.\\n\\nActually, let me reconsider. We have:\\n- Triangle ABC with ∠BAC = 60°, ∠ABC = 40°, ∠ACB = 80°\\n- D is on the extension of BC beyond C\\n- DC = AB\\n- We need to find ∠ADB\\n\\nSince D is on the extension of BC beyond C, the points B, C, D are collinear with C between B and D.\\n\\nLet me denote:\\n- AB = c\\n- BC = a  \\n- AC = b\\n- DC = c (since DC = AB)\\n\\nUsing the sine rule in triangle ABC:\\nAB/sin(C) = BC/sin(A) = AC/sin(B)\\n\\nSo: c/sin(80°) = a/sin(60°) = b/sin(40°)\\n\\nThis gives us:\\n- a = c·sin(60°)/sin(80°)\\n- b = c·sin(40°)/sin(80°)\\n\\nNow in triangle ADC:\\n- DC = c\\n- AC = b = c·sin(40°)/sin(80°)\\n- ∠ACD = 180° - 80° = 100° (since ∠ACB = 80° and D is on the extension)\\n\\nUsing the sine rule in triangle ADC:\\n\\n\\nI'll explore the relationships between the sides and angles, focusing on finding the length of AD using trigonometric principles. The sine rule provides a connection between the sides and angles, allowing me to set up an equation relating the unknown side AD to the known sides and angles. I'll carefully manipulate the trigonometric expressions to isolate the length of AD.\\n\\nThe cosine rule offers an alternative approach to calculating AD's length by using the squared sides and the angle between them. I'll carefully substitute the known values and trigonometric expressions to derive the squared length of AD.\\n\\nBy examining the angle relationships in triangle ADC, I can establish a connection between the unknown angles and use the sine rule to develop a systematic approach to solving for the side lengths. The key will be to express the unknown angles in terms of each other and leverage the sine rule's proportionality.\\n\\nI'll manipulate the trigonometric identities, focusing on the relationship between sin(80° - α) and sin(α), while strategically using angle sum and half-angle trigonometric formulas to simplify the complex expression. The goal is to isolate cos(α) and create a manageable equation that reveals the angle's precise value.\\n\\nBy noting the trigonometric identity for sin(80°)cos(80°), I can transform the complex expression into a more tractable form, reducing the computational complexity and bringing me closer to a solution.\\n\\nThe sine rule provides an elegant approach to triangular relationships, particularly when dealing with angle constraints. By examining the proportionality of sides and angles in triangle ADC, I can establish key relationships that might reveal the unknown angle's characteristics.\\n\\nThe current approach involves exploring how side lengths relate through sine values, specifically examining how c and b are connected through their angular relationships, with particular attention to the 80° constraint between complementary angles.\\n\\nBy setting up an equation linking sine values of different angles and manipulating trigonometric identities, I'm working toward expressing the relationship between the unknown angle and known trigonometric values.\\n\\nThe critical insight emerges when comparing sine values of complementary angles, revealing a potential pathway to determining the specific angle's properties through precise trigonometric manipulations.\\n\\nI notice the collinearity of points B, C, and D introduces complexity in angle measurement, requiring careful reconsideration of how geometric relationships translate into angular measurements.\\n\\nThe problem demands a nuanced approach, examining how angles interact when points are positioned in a non-standard configuration, potentially challenging traditional geometric assumptions about angle relationships.\\n\\nWhen points are collinear with C positioned between B and D, the rays DC and DB form opposite rays from point D, which means ∠ADC and ∠ADB are supplementary angles - a critical insight for resolving the geometric relationship.\\n\\nThe supplementary angle relationship implies that ∠ADC + ∠ADB equals 180°, allowing me to derive ∠ADB by subtracting ∠ADC from 180°. I'll focus on calculating ∠ADC using the sine rule and the given triangle measurements.\\n\\nIn triangle ADC, I'll leverage the sine rule to relate the known angle of 100° and the side lengths, systematically working to determine the unknown angle ∠ADC.\\n\\nBy manipulating trigonometric identities and substituting known angle relationships, I develop an equation to solve for the tangent of the angle. The key involves expressing sine functions using angle addition formulas and trigonometric identities to simplify the complex trigonometric expression.\\n\\nI recognize that further angle transformations will help me resolve the equation, particularly by rewriting sine functions using compound angle formulas.\\n\\nNumerical calculation provides a precise approach. By plugging in precise trigonometric values, I compute the tangent value and determine the angle's approximate measure. The calculated result suggests the angle is close to 30 degrees.\\n\\nI verify the result algebraically, confirming ∠ADC as exactly 30°. By examining the sine rule and comparing trigonometric relationships, I validate the initial numerical calculation. The algebraic verification provides additional confidence in the geometric solution.\\n\\nI explore the trigonometric identities, manipulating sine functions and comparing their values. Through careful substitution and trigonometric manipulation, I confirm the relationship between sine values at different angles.\\n\\nThe key steps involve comparing sin(80°) with 2sin(40°)sin(50°), ultimately showing their equivalence. This confirms the original geometric assumption about the angle's precise measurement.\\n\\nWith this verification complete, I now recognize the complementary angle ∠ADB as 150°.\",\"signature\":\"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\"},{\"type\":\"text\",\"text\":\"Looking at this problem, I need to find angle ADB where D is positioned such that DC = AB.\\n\\n**Setting up the triangle ABC:**\\n- Angle A = 60°\\n- Angle B = 40°  \\n- Angle C = 180° - 60° - 40° = 80°\\n\\n**Key observations:**\\n- D is on the extension of BC beyond C (so B, C, D are collinear)\\n- DC = AB\\n- Since BCD are collinear, angles ADC and ADB are supplementary: ∠ADB + ∠ADC = 180°\\n\\n**Finding angle ADC in triangle ADC:**\\n\\nSince D is beyond C on the extension of BC:\\n- ∠ACD = 180° - 80° = 100° (supplementary to angle ACB)\\n\\nIn triangle ADC, using the sine rule and the relationship from triangle ABC:\\n\\nFrom triangle ABC: AB/sin(80°) = AC/sin(40°)\\n\\nSo: AC = AB · sin(40°)/sin(80°)\\n\\nIn triangle ADC where DC = AB:\\n- DC/sin(∠CAD) = AC/sin(∠ADC)\\n\\nWith ∠CAD + ∠ADC = 80° (since ∠ACD = 100°), let ∠ADC = θ.\\n\\nThen: AB/sin(80° - θ) = (AB · sin(40°)/sin(80°))/sin(θ)\\n\\nSimplifying: sin(θ)/sin(80° - θ) = sin(40°)/sin(80°)\\n\\nCross-multiplying and expanding:\\nsin(80°)sin(θ) = sin(40°)sin(80° - θ)\\nsin(80°)sin(θ) = sin(40°)[sin(80°)cos(θ) - cos(80°)sin(θ)]\\n\\nSolving: tan(θ) = sin(40°)sin(80°)/[sin(80°) + sin(40°)cos(80°)]\\n\\nUsing the product-to-sum identity: 2sin(40°)sin(50°) = cos(10°) = sin(80°)\\n\\nThis gives θ = 30°.\\n\\n**Therefore:**\\n∠ADC = 30°\\n∠ADB = 180° - 30° = **150°**\"}],\"stop_reason\":\"end_turn\",\"stop_sequence\":null,\"usage\":{\"input_tokens\":130,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"cache_creation\":{\"ephemeral_5m_input_tokens\":0,\"ephemeral_1h_input_tokens\":0},\"output_tokens\":3933,\"service_tier\":\"standard\"}}"
+        }
+      },
+      "recorded_at": "Wed, 01 Oct 2025 20:59:46 GMT"
+    }
+  ],
+  "recorded_with": "VCR 6.3.1"
+}

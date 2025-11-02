@@ -1,0 +1,87 @@
+{
+  "http_interactions": [
+    {
+      "request": {
+        "method": "post",
+        "uri": "https://development-technicalai.openai.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2025-01-01-preview",
+        "body": {
+          "encoding": "UTF-8",
+          "string": "{\"max_tokens\":128,\"temperature\":0.0,\"stream\":true,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"the secret word is 'blue'\\n\"},{\"role\":\"assistant\",\"content\":\"ok\\n\"},{\"role\":\"user\",\"content\":\"what is the secret word?\\nrespond with the word only\\n\"}]}"
+        },
+        "headers": {
+          "User-Agent": [
+            "Faraday v2.13.1"
+          ],
+          "Content-Type": [
+            "application/json"
+          ],
+          "api-key": [
+            "<API-KEY>"
+          ]
+        }
+      },
+      "response": {
+        "status": {
+          "code": 200,
+          "message": "OK"
+        },
+        "headers": {
+          "transfer-encoding": [
+            "chunked"
+          ],
+          "content-type": [
+            "text/event-stream; charset=utf-8"
+          ],
+          "apim-request-id": [
+            "f2ceeaa7-0926-4511-9440-5cd19236bcd8"
+          ],
+          "strict-transport-security": [
+            "max-age=31536000; includeSubDomains; preload"
+          ],
+          "x-content-type-options": [
+            "nosniff"
+          ],
+          "x-ms-region": [
+            "East US"
+          ],
+          "x-ratelimit-remaining-requests": [
+            "29"
+          ],
+          "x-ratelimit-limit-requests": [
+            "50"
+          ],
+          "x-ratelimit-remaining-tokens": [
+            "40506"
+          ],
+          "x-ratelimit-limit-tokens": [
+            "50000"
+          ],
+          "azureml-model-session": [
+            "d050-20250926074127"
+          ],
+          "x-accel-buffering": [
+            "no"
+          ],
+          "x-ms-rai-invoked": [
+            "true"
+          ],
+          "x-request-id": [
+            "<X-REQUEST-ID>"
+          ],
+          "x-ms-deployment-name": [
+            "gpt-4.1"
+          ],
+          "date": [
+            "Thu, 02 Oct 2025 18:03:36 GMT"
+          ]
+        },
+        "body": {
+          "encoding": "UTF-8",
+          "string": "data: {\"choices\":[],\"created\":0,\"id\":\"\",\"model\":\"\",\"object\":\"\",\"prompt_filter_results\":[{\"prompt_index\":0,\"content_filter_results\":{\"hate\":{\"filtered\":false,\"severity\":\"safe\"},\"jailbreak\":{\"filtered\":false,\"detected\":false},\"self_harm\":{\"filtered\":false,\"severity\":\"safe\"},\"sexual\":{\"filtered\":false,\"severity\":\"safe\"},\"violence\":{\"filtered\":false,\"severity\":\"safe\"}}}]}\n\ndata: {\"choices\":[{\"content_filter_results\":{},\"delta\":{\"content\":\"\",\"refusal\":null,\"role\":\"assistant\"},\"finish_reason\":null,\"index\":0,\"logprobs\":null}],\"created\":1759428216,\"id\":\"chatcmpl-CMHwOPFx1AAH6WBXwaArH1VRiKuyI\",\"model\":\"gpt-4.1-2025-04-14\",\"object\":\"chat.completion.chunk\",\"system_fingerprint\":\"fp_4d7b201289\"}\n\ndata: {\"choices\":[{\"content_filter_results\":{\"hate\":{\"filtered\":false,\"severity\":\"safe\"},\"self_harm\":{\"filtered\":false,\"severity\":\"safe\"},\"sexual\":{\"filtered\":false,\"severity\":\"safe\"},\"violence\":{\"filtered\":false,\"severity\":\"safe\"}},\"delta\":{\"content\":\"blue\"},\"finish_reason\":null,\"index\":0,\"logprobs\":null}],\"created\":1759428216,\"id\":\"chatcmpl-CMHwOPFx1AAH6WBXwaArH1VRiKuyI\",\"model\":\"gpt-4.1-2025-04-14\",\"object\":\"chat.completion.chunk\",\"system_fingerprint\":\"fp_4d7b201289\"}\n\ndata: {\"choices\":[{\"content_filter_results\":{},\"delta\":{},\"finish_reason\":\"stop\",\"index\":0,\"logprobs\":null}],\"created\":1759428216,\"id\":\"chatcmpl-CMHwOPFx1AAH6WBXwaArH1VRiKuyI\",\"model\":\"gpt-4.1-2025-04-14\",\"object\":\"chat.completion.chunk\",\"system_fingerprint\":\"fp_4d7b201289\"}\n\ndata: [DONE]\n\n"
+        }
+      },
+      "recorded_at": "Thu, 02 Oct 2025 18:03:36 GMT"
+    }
+  ],
+  "recorded_with": "VCR 6.3.1"
+}

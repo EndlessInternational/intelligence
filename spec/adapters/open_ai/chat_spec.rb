@@ -47,14 +47,28 @@ RSpec.describe "#{Intelligence::Adapter[ :open_ai ]} chat requests", :open_ai do
     end
   end
 
-  let( :adapter_with_stop_sequence ) do
+  let( :adapter_with_web_search ) do
     Intelligence::Adapter[ :open_ai ].build! do   
       key                     ENV[ 'OPENAI_API_KEY' ]
       chat_options do
-        model                 'gpt-4o'
-        max_tokens            24
-        temperature           0
-        stop                  'five'
+        model                 'gpt-5'
+        abilities do 
+          web_search 
+        end
+      end
+    end
+  end
+
+  let( :adapter_with_thought ) do
+    Intelligence::Adapter[ :open_ai ].build! do   
+      key                     ENV[ 'OPENAI_API_KEY' ]
+      chat_options do
+        model                 'gpt-5'
+        reasoning do 
+          effort              :medium
+          summary             :detailed
+        end
+        include               [ 'reasoning.encrypted_content' ]
       end
     end
   end
@@ -82,16 +96,24 @@ RSpec.describe "#{Intelligence::Adapter[ :open_ai ]} chat requests", :open_ai do
   include_examples 'chat requests'
   include_examples 'chat requests with token limit exceeded',
                    adapter: :adapter_with_limited_max_tokens
-  include_examples 'chat requests with stop sequence', 
-                   adapter: :adapter_with_stop_sequence
   include_examples 'chat requests with binary encoded images'
   include_examples 'chat requests with file images'
   include_examples 'chat requests without alternating roles'
+  include_examples 'chat requests with thought', 
+                   adapter: :adapter_with_thought
+
   include_examples 'chat requests with tools'
   include_examples 'chat requests with adapter tools'
   include_examples 'chat requests with complex tools'
   include_examples 'chat requests with parallel tools'
+  include_examples 'chat requests with tools multiturn'
+  include_examples 'chat requests with calculator tool', 
+                   adapter: :adapter_with_thought
+
+  include_examples 'chat requests with web search', 
+                   adapter: :adapter_with_web_search
 
   include_examples 'chat requests with invalid key'
-  include_examples 'chat requests with invalid model' 
+  include_examples 'chat requests with invalid model', 
+                   error_type: 'invalid_request_error'
 end

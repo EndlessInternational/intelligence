@@ -6,13 +6,13 @@
         "uri": "https://api.sambanova.ai/v1/chat/completions",
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"model\":\"Meta-Llama-3.1-70B-Instruct\",\"max_tokens\":24,\"temperature\":0.0,\"stop\":[\"five\"],\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"count to ten in words, all lower case, one word per line\\n\"}]}"
+          "string": "{\"model\":\"Meta-Llama-3.3-70B-Instruct\",\"max_tokens\":24,\"temperature\":0.0,\"stop\":[\"five\"],\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"count to ten in words, all lower case, one word per line\\n\"}]}"
         },
         "headers": {
           "User-Agent": [
-            "Faraday v2.12.0"
+            "Faraday v2.13.1"
           ],
-          "Content-Type": [
+          "Content-type": [
             "application/json"
           ],
           "Authorization": [
@@ -27,16 +27,37 @@
         },
         "headers": {
           "date": [
-            "Mon, 20 Jan 2025 23:29:22 GMT"
+            "Wed, 01 Oct 2025 23:14:48 GMT"
           ],
           "content-type": [
             "application/json; charset=utf-8"
           ],
-          "content-length": [
-            "740"
+          "transfer-encoding": [
+            "chunked"
           ],
           "connection": [
             "keep-alive"
+          ],
+          "inference-id": [
+            "2e482993-23fe-452f-90d5-17e5d451d171"
+          ],
+          "x-ratelimit-limit-requests": [
+            "240"
+          ],
+          "x-ratelimit-limit-requests-day": [
+            "48000"
+          ],
+          "x-ratelimit-remaining-requests": [
+            "212"
+          ],
+          "x-ratelimit-remaining-requests-day": [
+            "47972"
+          ],
+          "x-ratelimit-reset-requests": [
+            "1759360548"
+          ],
+          "x-ratelimit-reset-requests-day": [
+            "1759446888"
           ],
           "strict-transport-security": [
             "max-age=31536000; includeSubDomains"
@@ -59,10 +80,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"choices\":[{\"finish_reason\":\"stop\",\"index\":0,\"logprobs\":null,\"message\":{\"content\":\"one\\ntwo\\nthree\\nfour\\n\",\"role\":\"assistant\"}}],\"created\":1737415762,\"id\":\"99d37895-8ad4-4c0c-aace-6d97c658e656\",\"model\":\"Meta-Llama-3.1-70B-Instruct\",\"object\":\"chat.completion\",\"system_fingerprint\":\"fastcoe\",\"usage\":{\"completion_tokens\":8,\"completion_tokens_after_first_per_sec\":197.80454086101193,\"completion_tokens_after_first_per_sec_first_ten\":555.7414206845785,\"completion_tokens_per_sec\":102.86876809844122,\"end_time\":1737415762.8665292,\"is_last_response\":true,\"prompt_tokens\":84,\"start_time\":1737415762.767767,\"time_to_first_token\":0.06337380409240723,\"total_latency\":0.0777689880794949,\"total_tokens\":92,\"total_tokens_per_sec\":1182.9908331320742}}\n"
+          "string": "{\"choices\":[{\"finish_reason\":\"stop\",\"index\":0,\"logprobs\":null,\"message\":{\"content\":\"one\\ntwo\\nthree\\nfour\\n\",\"role\":\"assistant\"}}],\"created\":1759360488.9333994,\"id\":\"06e1abfb-b71a-4b7e-841b-525bd58e029e\",\"model\":\"Meta-Llama-3.3-70B-Instruct\",\"object\":\"chat.completion\",\"system_fingerprint\":\"fastcoe\",\"usage\":{\"completion_tokens\":11,\"completion_tokens_after_first_per_sec\":791.2138990020939,\"completion_tokens_after_first_per_sec_first_ten\":827.7196929331202,\"completion_tokens_after_first_per_sec_graph\":827.7196929331202,\"completion_tokens_per_sec\":173.36198066380345,\"end_time\":1759360488.9212835,\"is_last_response\":true,\"prompt_tokens\":84,\"prompt_tokens_details\":{\"cached_tokens\":0},\"start_time\":1759360488.8578324,\"stop_reason\":\"stop\",\"time_to_first_token\":0.0508122444152832,\"total_latency\":0.06345105171203613,\"total_tokens\":95,\"total_tokens_per_sec\":1497.2171057328478}}\n"
         }
       },
-      "recorded_at": "Mon, 20 Jan 2025 23:29:22 GMT"
+      "recorded_at": "Wed, 01 Oct 2025 23:14:48 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

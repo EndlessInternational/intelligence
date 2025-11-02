@@ -1,0 +1,99 @@
+{
+  "http_interactions": [
+    {
+      "request": {
+        "method": "post",
+        "uri": "https://api.groq.com/openai/v1/chat/completions",
+        "body": {
+          "encoding": "UTF-8",
+          "string": "{\"model\":\"moonshotai/kimi-k2-instruct-0905\",\"max_tokens\":256,\"temperature\":0.0,\"tools\":[{\"type\":\"function\",\"function\":{\"name\":\"get_location\",\"description\":\"The get_location tool will return the users city, state or province and country.\",\"parameters\":{\"type\":\"object\",\"properties\":{},\"required\":[]}}},{\"type\":\"function\",\"function\":{\"name\":\"get_weather\",\"description\":\"The get_weather tool will return the current weather in a given locality.\",\"parameters\":{\"type\":\"object\",\"properties\":{\"city\":{\"type\":\"string\",\"description\":\"The city or town for which the current weather should be returned.\"},\"state\":{\"type\":\"string\",\"description\":\"The state or province for which the current weather should be returned. If this is not provided the largest or most prominent city with the given name, in the given country or in the worldi, will be assumed.\"},\"country\":{\"type\":\"string\",\"description\":\"The country for which the given weather should be returned. If this is not provided the largest or most prominent city with the given name will be returned.\"}},\"required\":[\"city\"]}}}],\"stream\":true,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"What is the weather in London, Paris and Rome right now?\\n\"}]}"
+        },
+        "headers": {
+          "User-Agent": [
+            "Faraday v2.13.1"
+          ],
+          "Content-type": [
+            "application/json"
+          ],
+          "Authorization": [
+            "Bearer <TOKEN>"
+          ]
+        }
+      },
+      "response": {
+        "status": {
+          "code": 200,
+          "message": "OK"
+        },
+        "headers": {
+          "date": [
+            "Thu, 02 Oct 2025 18:27:31 GMT"
+          ],
+          "content-type": [
+            "text/event-stream"
+          ],
+          "transfer-encoding": [
+            "chunked"
+          ],
+          "connection": [
+            "keep-alive"
+          ],
+          "cf-ray": [
+            "<CF-RAY>"
+          ],
+          "cache-control": [
+            "no-cache"
+          ],
+          "vary": [
+            "Origin"
+          ],
+          "x-groq-region": [
+            "dls"
+          ],
+          "x-ratelimit-limit-requests": [
+            "1000"
+          ],
+          "x-ratelimit-limit-tokens": [
+            "10000"
+          ],
+          "x-ratelimit-remaining-requests": [
+            "746"
+          ],
+          "x-ratelimit-remaining-tokens": [
+            "3841"
+          ],
+          "x-ratelimit-reset-requests": [
+            "6h5m45.119s"
+          ],
+          "x-ratelimit-reset-tokens": [
+            "36.95s"
+          ],
+          "x-request-id": [
+            "<X-REQUEST-ID>"
+          ],
+          "via": [
+            "1.1 google"
+          ],
+          "cf-cache-status": [
+            "DYNAMIC"
+          ],
+          "set-cookie": [
+            "<SET-COOKIE>"
+          ],
+          "server": [
+            "cloudflare"
+          ],
+          "alt-svc": [
+            "h3=\":443\"; ma=86400"
+          ]
+        },
+        "body": {
+          "encoding": "UTF-8",
+          "string": "data: {\"id\":\"chatcmpl-28866aa6-ff18-4e26-b493-745dacc0d989\",\"object\":\"chat.completion.chunk\",\"created\":1759429651,\"model\":\"moonshotai/kimi-k2-instruct-0905\",\"system_fingerprint\":\"fp_6e6ff3688b\",\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":null},\"logprobs\":null,\"finish_reason\":null}],\"x_groq\":{\"id\":\"req_01k6k2vtw5f5casnraj78t3qgz\"}}\n\ndata: {\"id\":\"chatcmpl-28866aa6-ff18-4e26-b493-745dacc0d989\",\"object\":\"chat.completion.chunk\",\"created\":1759429651,\"model\":\"moonshotai/kimi-k2-instruct-0905\",\"system_fingerprint\":\"fp_6e6ff3688b\",\"choices\":[{\"index\":0,\"delta\":{\"tool_calls\":[{\"id\":\"functions.get_weather:0\",\"type\":\"function\",\"function\":{\"name\":\"get_weather\",\"arguments\":\"{\\\"city\\\":\\\"London\\\",\\\"country\\\":\\\"United Kingdom\\\"}\"},\"index\":0}]},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"chatcmpl-28866aa6-ff18-4e26-b493-745dacc0d989\",\"object\":\"chat.completion.chunk\",\"created\":1759429651,\"model\":\"moonshotai/kimi-k2-instruct-0905\",\"system_fingerprint\":\"fp_6e6ff3688b\",\"choices\":[{\"index\":0,\"delta\":{\"tool_calls\":[{\"id\":\"functions.get_weather:1\",\"type\":\"function\",\"function\":{\"name\":\"get_weather\",\"arguments\":\"{\\\"city\\\":\\\"Paris\\\",\\\"country\\\":\\\"France\\\"}\"},\"index\":1}]},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"chatcmpl-28866aa6-ff18-4e26-b493-745dacc0d989\",\"object\":\"chat.completion.chunk\",\"created\":1759429651,\"model\":\"moonshotai/kimi-k2-instruct-0905\",\"system_fingerprint\":\"fp_6e6ff3688b\",\"choices\":[{\"index\":0,\"delta\":{\"tool_calls\":[{\"id\":\"functions.get_weather:2\",\"type\":\"function\",\"function\":{\"name\":\"get_weather\",\"arguments\":\"{\\\"city\\\":\\\"Rome\\\",\\\"country\\\":\\\"Italy\\\"}\"},\"index\":2}]},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"chatcmpl-28866aa6-ff18-4e26-b493-745dacc0d989\",\"object\":\"chat.completion.chunk\",\"created\":1759429651,\"model\":\"moonshotai/kimi-k2-instruct-0905\",\"system_fingerprint\":\"fp_6e6ff3688b\",\"choices\":[{\"index\":0,\"delta\":{},\"logprobs\":null,\"finish_reason\":\"tool_calls\"}],\"x_groq\":{\"id\":\"req_01k6k2vtw5f5casnraj78t3qgz\",\"usage\":{\"queue_time\":0.319931598,\"prompt_tokens\":311,\"prompt_time\":0.027864145,\"completion_tokens\":68,\"completion_time\":0.20449363,\"total_tokens\":379,\"total_time\":0.232357775,\"prompt_tokens_details\":{\"cached_tokens\":256}}},\"usage\":{\"queue_time\":0.319931598,\"prompt_tokens\":311,\"prompt_time\":0.027864145,\"completion_tokens\":68,\"completion_time\":0.20449363,\"total_tokens\":379,\"total_time\":0.232357775,\"prompt_tokens_details\":{\"cached_tokens\":256}}}\n\ndata: [DONE]\n\n"
+        }
+      },
+      "recorded_at": "Thu, 02 Oct 2025 18:27:31 GMT"
+    }
+  ],
+  "recorded_with": "VCR 6.3.1"
+}

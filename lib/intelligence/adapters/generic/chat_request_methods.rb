@@ -12,25 +12,32 @@ module Intelligence
         end
       end
 
+      CHAT_COMPLETIONS_PATH = 'chat/completions'
+
       def self.included( base )
         base.extend( ClassMethods )
       end
 
-      def chat_request_uri( options )
-        self.class.chat_request_uri
+      def chat_request_uri( options = nil )
+        options = merge_options( @options, build_options( options ) )
+        self.class.chat_request_uri || begin 
+          base_uri = options[ :base_uri ]
+          if base_uri
+            # because URI join is dumb
+            base_uri = ( base_uri.end_with?( '/' ) ? base_uri : base_uri + '/' ) 
+            URI.join( base_uri, CHAT_COMPLETIONS_PATH )
+          else
+            nil 
+          end
+        end
       end
 
       def chat_request_headers( options = nil )
         options = merge_options( @options, build_options( options ) )
-        result = {}
+        result = { 'Content-Type': 'application/json' }
 
         key = options[ :key ]
-
-        raise ArgumentError.new( "An API key is required to build a chat request." ) \
-          if key.nil?
-
-        result[ 'Content-Type' ] = 'application/json'
-        result[ 'Authorization' ] = "Bearer #{key}"
+        result[ 'Authorization' ] = "Bearer #{key}" if key
 
         result 
       end
@@ -97,6 +104,7 @@ module Intelligence
             result[ :messages ].concat( tool_results.map { | tool_result |
               {
                 role: :tool, 
+                name: tool_result[ :tool_name ],
                 tool_call_id: tool_result[ :tool_call_id ],
                 content: tool_result[ :tool_result ]
               }
@@ -195,7 +203,7 @@ module Intelligence
           [ object, required.compact  ]
         end
 
-        tools&.map do | tool |
+        Utilities.deep_dup( tools )&.map do | tool |
           function = { 
             type: 'function',
             function: {
@@ -209,12 +217,13 @@ module Intelligence
               properties_array_to_object.call( tool[ :properties ] ) 
             function[ :function ][ :parameters ] = {
               type: 'object',
-              properties: properties_object 
+              properties: properties_object,
+              required: []
             }
             function[ :function ][ :parameters ][ :required ] = properties_required \
               if properties_required.any?
           else
-            function[ :function ][ :parameters ] = {}
+            function[ :function ][ :parameters ] = { type: 'object', properties: {}, required: [] }
           end
           function 
         end

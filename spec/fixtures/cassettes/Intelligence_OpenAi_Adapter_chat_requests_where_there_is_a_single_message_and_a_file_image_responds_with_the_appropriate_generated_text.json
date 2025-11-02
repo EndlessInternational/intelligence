@@ -3,14 +3,14 @@
     {
       "request": {
         "method": "post",
-        "uri": "https://api.openai.com/v1/chat/completions",
+        "uri": "https://api.openai.com/v1/responses",
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"model\":\"gpt-4o\",\"temperature\":0.0,\"max_completion_tokens\":128,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":[{\"type\":\"text\",\"text\":\"identify this image; all lower case\\n\"},{\"type\":\"image_url\",\"image_url\":{\"url\":\"https://github.com/EndlessInternational/intelligence/blob/main/spec/fixtures/files/single-red-balloon.png?raw=true\"}}]}]}"
+          "string": "{\"model\":\"gpt-4o\",\"temperature\":0.0,\"max_output_tokens\":128,\"input\":[{\"role\":\"user\",\"content\":[{\"type\":\"input_text\",\"text\":\"identify this image; all lower case\\n\"},{\"type\":\"input_image\",\"image_url\":\"https://github.com/EndlessInternational/intelligence/blob/main/spec/fixtures/files/single-red-balloon.png?raw=true\"}],\"type\":\"message\"}],\"instructions\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"}"
         },
         "headers": {
           "User-Agent": [
-            "Faraday v2.12.0"
+            "Faraday v2.13.1"
           ],
           "Content-Type": [
             "application/json"
@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Mon, 20 Jan 2025 22:16:30 GMT"
+            "Wed, 01 Oct 2025 20:37:02 GMT"
           ],
           "content-type": [
             "application/json"
@@ -38,38 +38,17 @@
           "connection": [
             "keep-alive"
           ],
-          "access-control-expose-headers": [
-            "X-Request-ID"
-          ],
-          "openai-organization": [
-            "<OPENAI-ORGANIZATION>"
-          ],
-          "openai-processing-ms": [
-            "1500"
-          ],
-          "openai-version": [
-            "2020-10-01"
-          ],
-          "x-ratelimit-limit-input-images": [
-            "50000"
-          ],
           "x-ratelimit-limit-requests": [
             "10000"
           ],
           "x-ratelimit-limit-tokens": [
             "30000000"
           ],
-          "x-ratelimit-remaining-input-images": [
-            "49999"
-          ],
           "x-ratelimit-remaining-requests": [
             "9999"
           ],
           "x-ratelimit-remaining-tokens": [
-            "29999152"
-          ],
-          "x-ratelimit-reset-input-images": [
-            "1ms"
+            "29999235"
           ],
           "x-ratelimit-reset-requests": [
             "6ms"
@@ -77,8 +56,23 @@
           "x-ratelimit-reset-tokens": [
             "1ms"
           ],
+          "openai-version": [
+            "2020-10-01"
+          ],
+          "openai-organization": [
+            "<OPENAI-ORGANIZATION>"
+          ],
+          "openai-project": [
+            "proj_SnKVz9MFy0a0D6nNeyw7GaDO"
+          ],
           "x-request-id": [
             "<X-REQUEST-ID>"
+          ],
+          "openai-processing-ms": [
+            "1077"
+          ],
+          "x-envoy-upstream-service-time": [
+            "1421"
           ],
           "strict-transport-security": [
             "max-age=31536000; includeSubDomains; preload"
@@ -107,10 +101,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\n  \"id\": \"chatcmpl-AruMI0hQq1Oy7gfrvtNbn8iXwGf5P\",\n  \"object\": \"chat.completion\",\n  \"created\": 1737411390,\n  \"model\": \"gpt-4o-2024-08-06\",\n  \"choices\": [\n    {\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": \"a red balloon\",\n        \"refusal\": null\n      },\n      \"logprobs\": null,\n      \"finish_reason\": \"stop\"\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 508,\n    \"completion_tokens\": 4,\n    \"total_tokens\": 512,\n    \"prompt_tokens_details\": {\n      \"cached_tokens\": 0,\n      \"audio_tokens\": 0\n    },\n    \"completion_tokens_details\": {\n      \"reasoning_tokens\": 0,\n      \"audio_tokens\": 0,\n      \"accepted_prediction_tokens\": 0,\n      \"rejected_prediction_tokens\": 0\n    }\n  },\n  \"service_tier\": \"default\",\n  \"system_fingerprint\": \"fp_4691090a87\"\n}\n"
+          "string": "{\n  \"id\": \"resp_08a8d0cad40b6de50068dd90edac54819f844d969bc2596c34\",\n  \"object\": \"response\",\n  \"created_at\": 1759351022,\n  \"status\": \"completed\",\n  \"background\": false,\n  \"billing\": {\n    \"payer\": \"developer\"\n  },\n  \"error\": null,\n  \"incomplete_details\": null,\n  \"instructions\": \"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \",\n  \"max_output_tokens\": 128,\n  \"max_tool_calls\": null,\n  \"model\": \"gpt-4o-2024-08-06\",\n  \"output\": [\n    {\n      \"id\": \"msg_08a8d0cad40b6de50068dd90ee9b8c819faf21fb5d3b431f4b\",\n      \"type\": \"message\",\n      \"status\": \"completed\",\n      \"content\": [\n        {\n          \"type\": \"output_text\",\n          \"annotations\": [],\n          \"logprobs\": [],\n          \"text\": \"red balloon\"\n        }\n      ],\n      \"role\": \"assistant\"\n    }\n  ],\n  \"parallel_tool_calls\": true,\n  \"previous_response_id\": null,\n  \"prompt_cache_key\": null,\n  \"reasoning\": {\n    \"effort\": null,\n    \"summary\": null\n  },\n  \"safety_identifier\": null,\n  \"service_tier\": \"default\",\n  \"store\": true,\n  \"temperature\": 0.0,\n  \"text\": {\n    \"format\": {\n      \"type\": \"text\"\n    },\n    \"verbosity\": \"medium\"\n  },\n  \"tool_choice\": \"auto\",\n  \"tools\": [],\n  \"top_logprobs\": 0,\n  \"top_p\": 1.0,\n  \"truncation\": \"disabled\",\n  \"usage\": {\n    \"input_tokens\": 313,\n    \"input_tokens_details\": {\n      \"cached_tokens\": 0\n    },\n    \"output_tokens\": 3,\n    \"output_tokens_details\": {\n      \"reasoning_tokens\": 0\n    },\n    \"total_tokens\": 316\n  },\n  \"user\": null,\n  \"metadata\": {}\n}"
         }
       },
-      "recorded_at": "Mon, 20 Jan 2025 22:16:30 GMT"
+      "recorded_at": "Wed, 01 Oct 2025 20:37:02 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

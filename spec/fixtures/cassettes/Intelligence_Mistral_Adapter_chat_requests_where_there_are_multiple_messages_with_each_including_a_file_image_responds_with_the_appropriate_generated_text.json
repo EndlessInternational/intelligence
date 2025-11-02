@@ -10,9 +10,9 @@
         },
         "headers": {
           "User-Agent": [
-            "Faraday v2.12.0"
+            "Faraday v2.13.1"
           ],
-          "Content-Type": [
+          "Content-type": [
             "application/json"
           ],
           "Authorization": [
@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Mon, 20 Jan 2025 22:26:12 GMT"
+            "Mon, 07 Jul 2025 01:50:37 GMT"
           ],
           "content-type": [
             "application/json"
@@ -38,50 +38,53 @@
           "connection": [
             "keep-alive"
           ],
-          "x-ratelimitbysize-limit-minute": [
-            "2000000"
+          "mistral-correlation-id": [
+            "0197e293-f2dc-7a28-90bb-5a4257034921"
           ],
-          "x-ratelimitbysize-remaining-minute": [
-            "1998401"
-          ],
-          "ratelimitbysize-remaining": [
-            "1998401"
-          ],
-          "ratelimitbysize-reset": [
-            "49"
-          ],
-          "ratelimitbysize-limit": [
-            "2000000"
-          ],
-          "x-ratelimitbysize-remaining-month": [
-            "9999989931"
-          ],
-          "x-ratelimitbysize-limit-month": [
-            "10000000000"
-          ],
-          "ratelimitbysize-query-cost": [
-            "75"
+          "x-kong-request-id": [
+            "0197e293-f2dc-7a28-90bb-5a4257034921"
           ],
           "x-envoy-upstream-service-time": [
-            "1639"
+            "1004"
+          ],
+          "x-ratelimit-limit-tokens-minute": [
+            "2000000"
+          ],
+          "x-ratelimit-remaining-tokens-minute": [
+            "1994991"
+          ],
+          "x-ratelimit-limit-tokens-month": [
+            "10000000000"
+          ],
+          "x-ratelimit-remaining-tokens-month": [
+            "9999883879"
+          ],
+          "x-ratelimit-tokens-query-cost": [
+            "1398"
+          ],
+          "x-ratelimit-limit-req-10-second": [
+            "60"
+          ],
+          "x-ratelimit-remaining-req-10-second": [
+            "52"
           ],
           "access-control-allow-origin": [
             "*"
           ],
           "x-kong-upstream-latency": [
-            "1639"
+            "1006"
           ],
           "x-kong-proxy-latency": [
-            "1"
-          ],
-          "x-kong-request-id": [
-            "65f74c7bfaa6b90ca791db4b7e56592c"
+            "6"
           ],
           "cf-cache-status": [
             "DYNAMIC"
           ],
           "set-cookie": [
             "<SET-COOKIE>"
+          ],
+          "strict-transport-security": [
+            "max-age=15552000; includeSubDomains"
           ],
           "server": [
             "cloudflare"
@@ -98,10 +101,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\"id\":\"3193a26fb98348ad8cb6eb342d16535d\",\"object\":\"chat.completion\",\"created\":1737411972,\"model\":\"pixtral-12b-2409\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"tool_calls\":null,\"content\":\"three balloons\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":1394,\"total_tokens\":1397,\"completion_tokens\":3}}"
+          "string": "{\"id\":\"ddebda76bfa8475697e7ddbe35532b76\",\"object\":\"chat.completion\",\"created\":1751853036,\"model\":\"pixtral-12b-2409\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"tool_calls\":null,\"content\":\"three balloons\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":1394,\"total_tokens\":1398,\"completion_tokens\":4}}"
         }
       },
-      "recorded_at": "Mon, 20 Jan 2025 22:26:12 GMT"
+      "recorded_at": "Mon, 07 Jul 2025 01:50:37 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

@@ -3,14 +3,14 @@
     {
       "request": {
         "method": "post",
-        "uri": "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:streamGenerateContent?alt=sse&key=<KEY>",
+        "uri": "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:streamGenerateContent?alt=sse&key=<KEY>",
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"generationConfig\":{\"maxOutputTokens\":16,\"temperature\":0.0,\"stopSequences\":[\"five\"]},\"systemInstruction\":{\"role\":\"user\",\"parts\":[{\"text\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"}]},\"contents\":[{\"role\":\"user\",\"parts\":[{\"text\":\"count to twenty in words, all lower case, one word per line\\n\"}]}]}"
+          "string": "{\"generationConfig\":{\"thinkingConfig\":{\"thinkingBudget\":0},\"maxOutputTokens\":32,\"temperature\":0.0,\"stopSequences\":[\"five\"]},\"systemInstruction\":{\"role\":\"user\",\"parts\":[{\"text\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"}]},\"contents\":[{\"role\":\"user\",\"parts\":[{\"text\":\"count to twenty in words, all lower case, one word per line\\n\"}]}]}"
         },
         "headers": {
           "User-Agent": [
-            "Faraday v2.12.0"
+            "Faraday v2.13.1"
           ],
           "Content-Type": [
             "application/json"
@@ -36,7 +36,7 @@
             "chunked"
           ],
           "date": [
-            "Tue, 21 Jan 2025 02:56:04 GMT"
+            "Thu, 02 Oct 2025 17:41:59 GMT"
           ],
           "server": [
             "scaffolding on HTTPServer2"
@@ -51,7 +51,7 @@
             "nosniff"
           ],
           "server-timing": [
-            "gfet4t7; dur=461"
+            "gfet4t7; dur=566"
           ],
           "alt-svc": [
             "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
@@ -59,10 +59,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "data: {\"candidates\": [{\"content\": {\"parts\": [{\"text\": \"one\"}],\"role\": \"model\"}}],\"usageMetadata\": {\"promptTokenCount\": 60,\"totalTokenCount\": 60},\"modelVersion\": \"gemini-1.5-pro-002\"}\r\n\r\ndata: {\"candidates\": [{\"content\": {\"parts\": [{\"text\": \"\\ntwo\\nthree\\nfour\\n\"}],\"role\": \"model\"},\"finishReason\": \"STOP\"}],\"usageMetadata\": {\"promptTokenCount\": 60,\"candidatesTokenCount\": 8,\"totalTokenCount\": 68},\"modelVersion\": \"gemini-1.5-pro-002\"}\r\n\r\n"
+          "string": "data: {\"candidates\": [{\"content\": {\"parts\": [{\"text\": \"one\\ntwo\\n\"}],\"role\": \"model\"},\"index\": 0}],\"usageMetadata\": {\"promptTokenCount\": 60,\"candidatesTokenCount\": 3,\"totalTokenCount\": 63,\"promptTokensDetails\": [{\"modality\": \"TEXT\",\"tokenCount\": 60}]},\"modelVersion\": \"gemini-2.5-flash\",\"responseId\": \"Z7neaLjzAaGfqtsP4L_G0A0\"}\r\n\r\ndata: {\"candidates\": [{\"content\": {\"parts\": [{\"text\": \"three\\nfour\\n\"}],\"role\": \"model\"},\"finishReason\": \"STOP\",\"index\": 0}],\"usageMetadata\": {\"promptTokenCount\": 60,\"candidatesTokenCount\": 6,\"totalTokenCount\": 66,\"promptTokensDetails\": [{\"modality\": \"TEXT\",\"tokenCount\": 60}]},\"modelVersion\": \"gemini-2.5-flash\",\"responseId\": \"Z7neaLjzAaGfqtsP4L_G0A0\"}\r\n\r\n"
         }
       },
-      "recorded_at": "Tue, 21 Jan 2025 02:56:04 GMT"
+      "recorded_at": "Thu, 02 Oct 2025 17:41:59 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

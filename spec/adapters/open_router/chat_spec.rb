@@ -12,9 +12,14 @@ RSpec.describe "#{Intelligence::Adapter[ :open_router ]} chat requests", :open_r
     Intelligence::Adapter[ :open_router ].build! do   
       key                     ENV[ 'OPENROUTER_API_KEY' ]
       chat_options do
-        model                 'meta-llama/llama-3.2-11b-vision-instruct'
+        model                 'qwen/qwen-2.5-vl-7b-instruct'
         max_tokens            24 
         temperature           0
+
+        provider do 
+          order               [ 'Hyperbolic' ]
+          allow_fallbacks     false 
+        end
       end
     end
   end
@@ -23,10 +28,15 @@ RSpec.describe "#{Intelligence::Adapter[ :open_router ]} chat requests", :open_r
     Intelligence::Adapter[ :open_router ].build! do   
       key                     ENV[ 'OPENROUTER_API_KEY' ]
       chat_options do
-        model                 'meta-llama/llama-3.2-11b-vision-instruct'
+        model                 'qwen/qwen-2.5-vl-7b-instruct'
         max_tokens            24
         temperature           0
         stop                  'five'
+
+        provider do 
+          order               [ 'Hyperbolic' ]
+          allow_fallbacks     false 
+        end
       end
     end
   end
@@ -35,7 +45,7 @@ RSpec.describe "#{Intelligence::Adapter[ :open_router ]} chat requests", :open_r
     Intelligence::Adapter[ :open_router ].build! do   
       key                     ENV[ 'OPENROUTER_API_KEY' ]
       chat_options do
-        model                 'qwen/qwen-2-vl-7b-instruct'
+        model                 'qwen/qwen-2.5-vl-7b-instruct'
         max_tokens            24
         temperature           0
         provider do 
@@ -50,7 +60,7 @@ RSpec.describe "#{Intelligence::Adapter[ :open_router ]} chat requests", :open_r
     Intelligence::Adapter[ :open_router ].build! do 
       key                     'invalid key'  
       chat_options do
-        model                 'qwen/qwen-2-vl-7b-instruct'
+        model                 'qwen/qwen-2.5-vl-7b-instruct'
         max_tokens            16
         temperature           0
       end

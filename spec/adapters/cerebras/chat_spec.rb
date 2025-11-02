@@ -18,7 +18,7 @@ RSpec.describe Intelligence::Adapter[ :cerebras ], :cerebras do
     Intelligence::Adapter[ :cerebras ].build! do   
       key                     ENV[ 'CEREBRAS_API_KEY' ]
       chat_options do
-        model                 'llama3.1-70b'
+        model                 'llama-3.3-70b'
         max_tokens            16
       end
     end
@@ -28,7 +28,7 @@ RSpec.describe Intelligence::Adapter[ :cerebras ], :cerebras do
     Intelligence::Adapter[ :cerebras ].build! do   
       key                     ENV[ 'CEREBRAS_API_KEY' ]
       chat_options do
-        model                 'llama3.1-70b'
+        model                 'llama-3.3-70b'
         max_tokens            24
         stop                  'five'
       end
@@ -39,7 +39,7 @@ RSpec.describe Intelligence::Adapter[ :cerebras ], :cerebras do
     Intelligence::Adapter[ :cerebras ].build! do 
       key                     'this-key-is-not-valid'  
       chat_options do
-        model                 'llama3.1-70b'
+        model                 'llama-3.3-70b'
         max_tokens            16
       end
     end

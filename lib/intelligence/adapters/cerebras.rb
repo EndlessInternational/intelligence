@@ -5,10 +5,13 @@ module Intelligence
 
     class Adapter < Generic::Adapter
 
-      chat_request_uri "https://api.cerebras.ai/v1/chat/completions"
+      DEFAULT_BASE_URI    = 'https://api.cerebras.ai/v1'
       
       schema do 
+        
+        base_uri          String, default: DEFAULT_BASE_URI
         key               String 
+
         chat_options do 
           model           String
           max_tokens      Integer
@@ -26,8 +29,9 @@ module Intelligence
             type          String 
             mame          String
           end
-          user
+          user            String
         end
+        
       end
 
     end

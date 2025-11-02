@@ -7,11 +7,23 @@ module Intelligence
     attr_reader :end_sequence
 
     def initialize( chat_choice_attributes )
-      @end_reason = chat_choice_attributes[ :end_reason ]
-      @end_sequence = chat_choice_attributes[ :end_sequence ]
-      @message = build_message( chat_choice_attributes[ :message ] ) \
-        if chat_choice_attributes[ :message ]
+      @attributes = chat_choice_attributes.dup
+      @end_reason = @attributes.delete( :end_reason )
+      @end_sequence = @attributes.delete( :end_sequence )
+
+      message = @attributes.delete( :message )
+      @message = build_message( message ) if message
     end
+
+    def key?(key)       = @attributes.key?(key)
+    alias include? key?
+    def size            = @attributes.size
+    alias length size
+    alias count size
+    def empty?          = @attributes.empty? 
+
+    def each( &block)   = @attributes.each( &block )
+    def []( key )       = @attributes[ key ]
 
   private 
   

@@ -1,0 +1,199 @@
+{
+  "http_interactions": [
+    {
+      "request": {
+        "method": "post",
+        "uri": "https://api.groq.com/openai/v1/chat/completions",
+        "body": {
+          "encoding": "UTF-8",
+          "string": "{\"model\":\"moonshotai/kimi-k2-instruct-0905\",\"max_tokens\":1024,\"temperature\":0.0,\"messages\":[{\"role\":\"system\",\"content\":\"You are a helpfull assistant who answers questions succinctly.\"},{\"role\":\"user\",\"content\":\"What is the current weather?\"}],\"tools\":[{\"type\":\"function\",\"function\":{\"name\":\"get_location\",\"description\":\"The get_location tool will return the users city, state or province and country.\",\"parameters\":{\"type\":\"object\",\"properties\":{},\"required\":[]}}},{\"type\":\"function\",\"function\":{\"name\":\"get_weather\",\"description\":\"The get_weather tool will return the current weather in a given locality.\",\"parameters\":{\"type\":\"object\",\"properties\":{\"city\":{\"type\":\"string\",\"description\":\"The city or town for which the current weather should be returned.\"},\"state\":{\"type\":\"string\",\"description\":\"The state or province for which the current weather should be returned. If this is not provided the largest or most prominent city with the given name, in the given country or in the worldi, will be assumed.\"},\"country\":{\"type\":\"string\",\"description\":\"The country for which the given weather should be returned. If this is not provided the largest or most prominent city with the given name will be returned.\"}},\"required\":[\"city\"]}}}]}"
+        },
+        "headers": {
+          "User-Agent": [
+            "Faraday v2.13.1"
+          ],
+          "Content-type": [
+            "application/json"
+          ],
+          "Authorization": [
+            "Bearer <TOKEN>"
+          ]
+        }
+      },
+      "response": {
+        "status": {
+          "code": 200,
+          "message": "OK"
+        },
+        "headers": {
+          "date": [
+            "Thu, 02 Oct 2025 18:27:25 GMT"
+          ],
+          "content-type": [
+            "application/json"
+          ],
+          "transfer-encoding": [
+            "chunked"
+          ],
+          "connection": [
+            "keep-alive"
+          ],
+          "content-encoding": [
+            "gzip"
+          ],
+          "cache-control": [
+            "private, max-age=0, no-store, no-cache, must-revalidate"
+          ],
+          "vary": [
+            "Origin"
+          ],
+          "x-groq-region": [
+            "dls"
+          ],
+          "x-ratelimit-limit-requests": [
+            "1000"
+          ],
+          "x-ratelimit-limit-tokens": [
+            "10000"
+          ],
+          "x-ratelimit-remaining-requests": [
+            "765"
+          ],
+          "x-ratelimit-remaining-tokens": [
+            "8055"
+          ],
+          "x-ratelimit-reset-requests": [
+            "5h38m23.360999999s"
+          ],
+          "x-ratelimit-reset-tokens": [
+            "11.664999999s"
+          ],
+          "x-request-id": [
+            "<X-REQUEST-ID>"
+          ],
+          "via": [
+            "1.1 google"
+          ],
+          "cf-cache-status": [
+            "DYNAMIC"
+          ],
+          "set-cookie": [
+            "<SET-COOKIE>"
+          ],
+          "server": [
+            "cloudflare"
+          ],
+          "cf-ray": [
+            "<CF-RAY>"
+          ],
+          "alt-svc": [
+            "h3=\":443\"; ma=86400"
+          ]
+        },
+        "body": {
+          "encoding": "ASCII-8BIT",
+          "string": "{\"id\":\"chatcmpl-1bb85ff4-dc7e-4410-928d-2090ef987224\",\"object\":\"chat.completion\",\"created\":1759429645,\"model\":\"moonshotai/kimi-k2-instruct-0905\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"tool_calls\":[{\"id\":\"functions.get_location:0\",\"type\":\"function\",\"function\":{\"name\":\"get_location\",\"arguments\":\"{}\"}}]},\"logprobs\":null,\"finish_reason\":\"tool_calls\"}],\"usage\":{\"queue_time\":0.087426136,\"prompt_tokens\":277,\"prompt_time\":0.009721918,\"completion_tokens\":12,\"completion_time\":0.059897208,\"total_tokens\":289,\"total_time\":0.069619126,\"prompt_tokens_details\":{\"cached_tokens\":256}},\"usage_breakdown\":null,\"system_fingerprint\":\"fp_b8565bb333\",\"x_groq\":{\"id\":\"req_01k6k2vmr9f9m94s453x1rgcxw\"},\"service_tier\":\"on_demand\"}\n"
+        }
+      },
+      "recorded_at": "Thu, 02 Oct 2025 18:27:25 GMT"
+    },
+    {
+      "request": {
+        "method": "post",
+        "uri": "https://api.groq.com/openai/v1/chat/completions",
+        "body": {
+          "encoding": "UTF-8",
+          "string": "{\"model\":\"moonshotai/kimi-k2-instruct-0905\",\"max_tokens\":1024,\"temperature\":0.0,\"messages\":[{\"role\":\"system\",\"content\":\"You are a helpfull assistant who answers questions succinctly.\"},{\"role\":\"user\",\"content\":\"What is the current weather?\"},{\"role\":\"assistant\",\"tool_calls\":[{\"id\":\"functions.get_location:0\",\"type\":\"function\",\"function\":{\"name\":\"get_location\",\"arguments\":\"{}\"}}],\"content\":\"\"},{\"role\":\"tool\",\"name\":\"get_location\",\"tool_call_id\":\"functions.get_location:0\",\"content\":\"Seattle, WA, USA\"}],\"tools\":[{\"type\":\"function\",\"function\":{\"name\":\"get_location\",\"description\":\"The get_location tool will return the users city, state or province and country.\",\"parameters\":{\"type\":\"object\",\"properties\":{},\"required\":[]}}},{\"type\":\"function\",\"function\":{\"name\":\"get_weather\",\"description\":\"The get_weather tool will return the current weather in a given locality.\",\"parameters\":{\"type\":\"object\",\"properties\":{\"city\":{\"type\":\"string\",\"description\":\"The city or town for which the current weather should be returned.\"},\"state\":{\"type\":\"string\",\"description\":\"The state or province for which the current weather should be returned. If this is not provided the largest or most prominent city with the given name, in the given country or in the worldi, will be assumed.\"},\"country\":{\"type\":\"string\",\"description\":\"The country for which the given weather should be returned. If this is not provided the largest or most prominent city with the given name will be returned.\"}},\"required\":[\"city\"]}}}]}"
+        },
+        "headers": {
+          "User-Agent": [
+            "Faraday v2.13.1"
+          ],
+          "Content-type": [
+            "application/json"
+          ],
+          "Authorization": [
+            "Bearer <TOKEN>"
+          ]
+        }
+      },
+      "response": {
+        "status": {
+          "code": 200,
+          "message": "OK"
+        },
+        "headers": {
+          "date": [
+            "Thu, 02 Oct 2025 18:27:25 GMT"
+          ],
+          "content-type": [
+            "application/json"
+          ],
+          "transfer-encoding": [
+            "chunked"
+          ],
+          "connection": [
+            "keep-alive"
+          ],
+          "content-encoding": [
+            "gzip"
+          ],
+          "cache-control": [
+            "private, max-age=0, no-store, no-cache, must-revalidate"
+          ],
+          "vary": [
+            "Origin"
+          ],
+          "x-groq-region": [
+            "dls"
+          ],
+          "x-ratelimit-limit-requests": [
+            "1000"
+          ],
+          "x-ratelimit-limit-tokens": [
+            "10000"
+          ],
+          "x-ratelimit-remaining-requests": [
+            "764"
+          ],
+          "x-ratelimit-remaining-tokens": [
+            "7782"
+          ],
+          "x-ratelimit-reset-requests": [
+            "5h39m50.096s"
+          ],
+          "x-ratelimit-reset-tokens": [
+            "13.305s"
+          ],
+          "x-request-id": [
+            "<X-REQUEST-ID>"
+          ],
+          "via": [
+            "1.1 google"
+          ],
+          "cf-cache-status": [
+            "DYNAMIC"
+          ],
+          "set-cookie": [
+            "<SET-COOKIE>"
+          ],
+          "server": [
+            "cloudflare"
+          ],
+          "cf-ray": [
+            "<CF-RAY>"
+          ],
+          "alt-svc": [
+            "h3=\":443\"; ma=86400"
+          ]
+        },
+        "body": {
+          "encoding": "ASCII-8BIT",
+          "string": "{\"id\":\"chatcmpl-b9997e4a-ee1f-4061-b424-ca56b73aab07\",\"object\":\"chat.completion\",\"created\":1759429645,\"model\":\"moonshotai/kimi-k2-instruct-0905\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"tool_calls\":[{\"id\":\"functions.get_weather:1\",\"type\":\"function\",\"function\":{\"name\":\"get_weather\",\"arguments\":\"{\\\"city\\\":\\\"Seattle\\\",\\\"country\\\":\\\"USA\\\",\\\"state\\\":\\\"WA\\\"}\"}}]},\"logprobs\":null,\"finish_reason\":\"tool_calls\"}],\"usage\":{\"queue_time\":0.176026047,\"prompt_tokens\":311,\"prompt_time\":0.018432075,\"completion_tokens\":31,\"completion_time\":0.054987502,\"total_tokens\":342,\"total_time\":0.073419577,\"prompt_tokens_details\":{\"cached_tokens\":256}},\"usage_breakdown\":null,\"system_fingerprint\":\"fp_6e6ff3688b\",\"x_groq\":{\"id\":\"req_01k6k2vn1tfcwt7208kabyb3dc\"},\"service_tier\":\"on_demand\"}\n"
+        }
+      },
+      "recorded_at": "Thu, 02 Oct 2025 18:27:25 GMT"
+    }
+  ],
+  "recorded_with": "VCR 6.3.1"
+}

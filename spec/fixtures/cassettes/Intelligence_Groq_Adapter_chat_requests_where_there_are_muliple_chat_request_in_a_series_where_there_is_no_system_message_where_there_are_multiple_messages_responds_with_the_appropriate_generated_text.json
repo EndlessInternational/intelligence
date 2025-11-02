@@ -6,13 +6,13 @@
         "uri": "https://api.groq.com/openai/v1/chat/completions",
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"model\":\"llama-3.1-70b-versatile\",\"max_tokens\":16,\"temperature\":0.0,\"messages\":[{\"role\":\"user\",\"content\":\"respond only with the word 'hello'\\n\"}]}"
+          "string": "{\"model\":\"moonshotai/kimi-k2-instruct-0905\",\"max_tokens\":16,\"temperature\":0.0,\"messages\":[{\"role\":\"user\",\"content\":\"respond only with the word 'hello'\\n\"}]}"
         },
         "headers": {
           "User-Agent": [
-            "Faraday v2.12.0"
+            "Faraday v2.13.1"
           ],
-          "Content-Type": [
+          "Content-type": [
             "application/json"
           ],
           "Authorization": [
@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Mon, 20 Jan 2025 22:29:03 GMT"
+            "Thu, 02 Oct 2025 18:27:18 GMT"
           ],
           "content-type": [
             "application/json"
@@ -38,47 +38,44 @@
           "connection": [
             "keep-alive"
           ],
-          "cf-ray": [
-            "<CF-RAY>"
-          ],
-          "cf-cache-status": [
-            "DYNAMIC"
+          "content-encoding": [
+            "gzip"
           ],
           "cache-control": [
             "private, max-age=0, no-store, no-cache, must-revalidate"
           ],
           "vary": [
-            "Origin, Accept-Encoding"
+            "Origin"
+          ],
+          "x-groq-region": [
+            "dls"
+          ],
+          "x-ratelimit-limit-requests": [
+            "1000"
+          ],
+          "x-ratelimit-limit-tokens": [
+            "10000"
+          ],
+          "x-ratelimit-remaining-requests": [
+            "783"
+          ],
+          "x-ratelimit-remaining-tokens": [
+            "9876"
+          ],
+          "x-ratelimit-reset-requests": [
+            "5h12m28.605s"
+          ],
+          "x-ratelimit-reset-tokens": [
+            "738.999999ms"
+          ],
+          "x-request-id": [
+            "<X-REQUEST-ID>"
           ],
           "via": [
             "1.1 google"
           ],
-          "alt-svc": [
-            "h3=\":443\"; ma=86400"
-          ],
-          "x-groq-region": [
-            "us-west-1"
-          ],
-          "x-ratelimit-limit-requests": [
-            "14400"
-          ],
-          "x-ratelimit-limit-tokens": [
-            "6000"
-          ],
-          "x-ratelimit-remaining-requests": [
-            "14393"
-          ],
-          "x-ratelimit-remaining-tokens": [
-            "5736"
-          ],
-          "x-ratelimit-reset-requests": [
-            "41.775999999s"
-          ],
-          "x-ratelimit-reset-tokens": [
-            "2.636999999s"
-          ],
-          "x-request-id": [
-            "<X-REQUEST-ID>"
+          "cf-cache-status": [
+            "DYNAMIC"
           ],
           "set-cookie": [
             "<SET-COOKIE>"
@@ -86,16 +83,19 @@
           "server": [
             "cloudflare"
           ],
-          "content-encoding": [
-            "gzip"
+          "cf-ray": [
+            "<CF-RAY>"
+          ],
+          "alt-svc": [
+            "h3=\":443\"; ma=86400"
           ]
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\"id\":\"chatcmpl-d6066c5a-1d91-404e-acfc-fd2287603239\",\"object\":\"chat.completion\",\"created\":1737412143,\"model\":\"llama-3.1-70b-versatile\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"hello\"},\"logprobs\":null,\"finish_reason\":\"stop\"}],\"usage\":{\"queue_time\":0.246805746,\"prompt_tokens\":43,\"prompt_time\":0.008220214,\"completion_tokens\":2,\"completion_time\":0.007272727,\"total_tokens\":45,\"total_time\":0.015492941},\"system_fingerprint\":\"fp_76dc6cf67d\",\"x_groq\":{\"id\":\"req_01jj2xatcyfemaq5f331cdd0dc\"}}\n"
+          "string": "{\"id\":\"chatcmpl-bd41fdc2-35cb-4976-afdf-33fe8c053fa5\",\"object\":\"chat.completion\",\"created\":1759429638,\"model\":\"moonshotai/kimi-k2-instruct-0905\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"hello\"},\"logprobs\":null,\"finish_reason\":\"stop\"}],\"usage\":{\"queue_time\":0.057154133,\"prompt_tokens\":33,\"prompt_time\":0.010422824,\"completion_tokens\":2,\"completion_time\":1.2e-7,\"total_tokens\":35,\"total_time\":0.010422944},\"usage_breakdown\":null,\"system_fingerprint\":\"fp_b8565bb333\",\"x_groq\":{\"id\":\"req_01k6k2vdvpfc5t6mv5x9qt0fda\"},\"service_tier\":\"on_demand\"}\n"
         }
       },
-      "recorded_at": "Mon, 20 Jan 2025 22:29:03 GMT"
+      "recorded_at": "Thu, 02 Oct 2025 18:27:18 GMT"
     },
     {
       "request": {
@@ -103,13 +103,13 @@
         "uri": "https://api.groq.com/openai/v1/chat/completions",
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"model\":\"llama-3.1-70b-versatile\",\"max_tokens\":16,\"temperature\":0.0,\"messages\":[{\"role\":\"user\",\"content\":\"the secret word is 'blue'\\n\"},{\"role\":\"assistant\",\"content\":\"ok\\n\"},{\"role\":\"user\",\"content\":\"what is the secret word?\\nrespond with the word only\\n\"}]}"
+          "string": "{\"model\":\"moonshotai/kimi-k2-instruct-0905\",\"max_tokens\":16,\"temperature\":0.0,\"messages\":[{\"role\":\"user\",\"content\":\"the secret word is 'blue'\\n\"},{\"role\":\"assistant\",\"content\":\"ok\\n\"},{\"role\":\"user\",\"content\":\"what is the secret word?\\nrespond with the word only\\n\"}]}"
         },
         "headers": {
           "User-Agent": [
-            "Faraday v2.12.0"
+            "Faraday v2.13.1"
           ],
-          "Content-Type": [
+          "Content-type": [
             "application/json"
           ],
           "Authorization": [
@@ -124,7 +124,7 @@
         },
         "headers": {
           "date": [
-            "Mon, 20 Jan 2025 22:29:03 GMT"
+            "Thu, 02 Oct 2025 18:27:18 GMT"
           ],
           "content-type": [
             "application/json"
@@ -135,47 +135,44 @@
           "connection": [
             "keep-alive"
           ],
-          "cf-ray": [
-            "<CF-RAY>"
-          ],
-          "cf-cache-status": [
-            "DYNAMIC"
+          "content-encoding": [
+            "gzip"
           ],
           "cache-control": [
             "private, max-age=0, no-store, no-cache, must-revalidate"
           ],
           "vary": [
-            "Origin, Accept-Encoding"
+            "Origin"
+          ],
+          "x-groq-region": [
+            "dls"
+          ],
+          "x-ratelimit-limit-requests": [
+            "1000"
+          ],
+          "x-ratelimit-limit-tokens": [
+            "10000"
+          ],
+          "x-ratelimit-remaining-requests": [
+            "782"
+          ],
+          "x-ratelimit-remaining-tokens": [
+            "9846"
+          ],
+          "x-ratelimit-reset-requests": [
+            "5h13m55.041s"
+          ],
+          "x-ratelimit-reset-tokens": [
+            "923ms"
+          ],
+          "x-request-id": [
+            "<X-REQUEST-ID>"
           ],
           "via": [
             "1.1 google"
           ],
-          "alt-svc": [
-            "h3=\":443\"; ma=86400"
-          ],
-          "x-groq-region": [
-            "us-west-1"
-          ],
-          "x-ratelimit-limit-requests": [
-            "14400"
-          ],
-          "x-ratelimit-limit-tokens": [
-            "6000"
-          ],
-          "x-ratelimit-remaining-requests": [
-            "14392"
-          ],
-          "x-ratelimit-remaining-tokens": [
-            "5705"
-          ],
-          "x-ratelimit-reset-requests": [
-            "47.649s"
-          ],
-          "x-ratelimit-reset-tokens": [
-            "2.948999999s"
-          ],
-          "x-request-id": [
-            "<X-REQUEST-ID>"
+          "cf-cache-status": [
+            "DYNAMIC"
           ],
           "set-cookie": [
             "<SET-COOKIE>"
@@ -183,16 +180,19 @@
           "server": [
             "cloudflare"
           ],
-          "content-encoding": [
-            "gzip"
+          "cf-ray": [
+            "<CF-RAY>"
+          ],
+          "alt-svc": [
+            "h3=\":443\"; ma=86400"
           ]
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\"id\":\"chatcmpl-b4bdcd6f-2da5-4dc0-bc92-f012ea055c0c\",\"object\":\"chat.completion\",\"created\":1737412143,\"model\":\"llama-3.1-70b-versatile\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"blue\"},\"logprobs\":null,\"finish_reason\":\"stop\"}],\"usage\":{\"queue_time\":0.01956596,\"prompt_tokens\":66,\"prompt_time\":0.010439528,\"completion_tokens\":2,\"completion_time\":0.007272727,\"total_tokens\":68,\"total_time\":0.017712255},\"system_fingerprint\":\"fp_4e32347616\",\"x_groq\":{\"id\":\"req_01jj2xatqxfjtsdz2r5vqvxep5\"}}\n"
+          "string": "{\"id\":\"chatcmpl-c0436c58-5445-4d9a-9a04-e4172028810f\",\"object\":\"chat.completion\",\"created\":1759429638,\"model\":\"moonshotai/kimi-k2-instruct-0905\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"blue\"},\"logprobs\":null,\"finish_reason\":\"stop\"}],\"usage\":{\"queue_time\":0.058180207,\"prompt_tokens\":54,\"prompt_time\":0.024914668,\"completion_tokens\":2,\"completion_time\":1.1e-7,\"total_tokens\":56,\"total_time\":0.024914778},\"usage_breakdown\":null,\"system_fingerprint\":\"fp_b8565bb333\",\"x_groq\":{\"id\":\"req_01k6k2ve0pf8stgr2t3t4r2w5r\"},\"service_tier\":\"on_demand\"}\n"
         }
       },
-      "recorded_at": "Mon, 20 Jan 2025 22:29:03 GMT"
+      "recorded_at": "Thu, 02 Oct 2025 18:27:18 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

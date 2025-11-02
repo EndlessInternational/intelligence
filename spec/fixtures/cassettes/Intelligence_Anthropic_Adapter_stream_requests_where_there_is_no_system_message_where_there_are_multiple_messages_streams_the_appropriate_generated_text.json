@@ -6,11 +6,11 @@
         "uri": "https://api.anthropic.com/v1/messages",
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"model\":\"claude-3-5-sonnet-20240620\",\"max_tokens\":256,\"temperature\":0.0,\"stream\":true,\"messages\":[{\"role\":\"user\",\"content\":[{\"type\":\"text\",\"text\":\"the secret word is 'blue'\\n\"}]},{\"role\":\"assistant\",\"content\":[{\"type\":\"text\",\"text\":\"ok\\n\"}]},{\"role\":\"user\",\"content\":[{\"type\":\"text\",\"text\":\"what is the secret word?\\nrespond with the word only\\n\"}]}]}"
+          "string": "{\"model\":\"claude-sonnet-4-20250514\",\"temperature\":0.0,\"max_tokens\":4096,\"stream\":true,\"messages\":[{\"role\":\"user\",\"content\":[{\"type\":\"text\",\"text\":\"the secret word is 'blue'\\n\"}]},{\"role\":\"assistant\",\"content\":[{\"type\":\"text\",\"text\":\"ok\\n\"}]},{\"role\":\"user\",\"content\":[{\"type\":\"text\",\"text\":\"what is the secret word?\\nrespond with the word only\\n\"}]}]}"
         },
         "headers": {
           "User-Agent": [
-            "Faraday v2.12.0"
+            "Faraday v2.13.1"
           ],
           "content-type": [
             "application/json"
@@ -30,7 +30,7 @@
         },
         "headers": {
           "date": [
-            "Tue, 21 Jan 2025 03:30:06 GMT"
+            "Wed, 01 Oct 2025 21:00:30 GMT"
           ],
           "content-type": [
             "text/event-stream; charset=utf-8"
@@ -41,8 +41,29 @@
           "connection": [
             "keep-alive"
           ],
+          "cf-ray": [
+            "<CF-RAY>"
+          ],
           "cache-control": [
             "no-cache"
+          ],
+          "anthropic-ratelimit-input-tokens-limit": [
+            "450000"
+          ],
+          "anthropic-ratelimit-input-tokens-remaining": [
+            "450000"
+          ],
+          "anthropic-ratelimit-input-tokens-reset": [
+            "2025-10-01T21:00:28Z"
+          ],
+          "anthropic-ratelimit-output-tokens-limit": [
+            "90000"
+          ],
+          "anthropic-ratelimit-output-tokens-remaining": [
+            "90000"
+          ],
+          "anthropic-ratelimit-output-tokens-reset": [
+            "2025-10-01T21:00:28Z"
           ],
           "anthropic-ratelimit-requests-limit": [
             "1000"
@@ -51,37 +72,28 @@
             "999"
           ],
           "anthropic-ratelimit-requests-reset": [
-            "2025-01-21T03:30:06Z"
-          ],
-          "anthropic-ratelimit-input-tokens-limit": [
-            "80000"
-          ],
-          "anthropic-ratelimit-input-tokens-remaining": [
-            "80000"
-          ],
-          "anthropic-ratelimit-input-tokens-reset": [
-            "2025-01-21T03:30:06Z"
-          ],
-          "anthropic-ratelimit-output-tokens-limit": [
-            "16000"
-          ],
-          "anthropic-ratelimit-output-tokens-remaining": [
-            "16000"
-          ],
-          "anthropic-ratelimit-output-tokens-reset": [
-            "2025-01-21T03:30:07Z"
+            "2025-10-01T21:00:28Z"
           ],
           "anthropic-ratelimit-tokens-limit": [
-            "96000"
+            "540000"
           ],
           "anthropic-ratelimit-tokens-remaining": [
-            "96000"
+            "540000"
           ],
           "anthropic-ratelimit-tokens-reset": [
-            "2025-01-21T03:30:06Z"
+            "2025-10-01T21:00:28Z"
           ],
           "request-id": [
             "<REQUEST-ID>"
+          ],
+          "strict-transport-security": [
+            "max-age=31536000; includeSubDomains; preload"
+          ],
+          "anthropic-organization-id": [
+            "ed8c3484-0c99-44df-aab0-b0c00ceaee61"
+          ],
+          "x-envoy-upstream-service-time": [
+            "2486"
           ],
           "via": [
             "1.1 google"
@@ -94,17 +106,14 @@
           ],
           "server": [
             "cloudflare"
-          ],
-          "cf-ray": [
-            "<CF-RAY>"
           ]
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "event: message_start\ndata: {\"type\":\"message_start\",\"message\":{\"id\":\"msg_015a6oR7d3s5HGynWz7myLaq\",\"type\":\"message\",\"role\":\"assistant\",\"model\":\"claude-3-5-sonnet-20240620\",\"content\":[],\"stop_reason\":null,\"stop_sequence\":null,\"usage\":{\"input_tokens\":34,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":2}}               }\n\nevent: content_block_start\ndata: {\"type\":\"content_block_start\",\"index\":0,\"content_block\":{\"type\":\"text\",\"text\":\"\"}    }\n\nevent: ping\ndata: {\"type\": \"ping\"}\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":0,\"delta\":{\"type\":\"text_delta\",\"text\":\"blue\"}             }\n\nevent: content_block_stop\ndata: {\"type\":\"content_block_stop\",\"index\":0     }\n\nevent: message_delta\ndata: {\"type\":\"message_delta\",\"delta\":{\"stop_reason\":\"end_turn\",\"stop_sequence\":null},\"usage\":{\"output_tokens\":4}           }\n\nevent: message_stop\ndata: {\"type\":\"message_stop\"            }\n\n"
+          "string": "event: message_start\ndata: {\"type\":\"message_start\",\"message\":{\"id\":\"msg_01WvAG3qVrRaa2NVracC5see\",\"type\":\"message\",\"role\":\"assistant\",\"model\":\"claude-sonnet-4-20250514\",\"content\":[],\"stop_reason\":null,\"stop_sequence\":null,\"usage\":{\"input_tokens\":34,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"cache_creation\":{\"ephemeral_5m_input_tokens\":0,\"ephemeral_1h_input_tokens\":0},\"output_tokens\":1,\"service_tier\":\"standard\"}}   }\n\nevent: content_block_start\ndata: {\"type\":\"content_block_start\",\"index\":0,\"content_block\":{\"type\":\"text\",\"text\":\"\"}             }\n\nevent: content_block_delta\ndata: {\"type\":\"content_block_delta\",\"index\":0,\"delta\":{\"type\":\"text_delta\",\"text\":\"blue\"}         }\n\nevent: content_block_stop\ndata: {\"type\":\"content_block_stop\",\"index\":0  }\n\nevent: message_delta\ndata: {\"type\":\"message_delta\",\"delta\":{\"stop_reason\":\"end_turn\",\"stop_sequence\":null},\"usage\":{\"input_tokens\":34,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":4}       }\n\nevent: message_stop\ndata: {\"type\":\"message_stop\"              }\n\n"
         }
       },
-      "recorded_at": "Tue, 21 Jan 2025 03:30:06 GMT"
+      "recorded_at": "Wed, 01 Oct 2025 21:00:30 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

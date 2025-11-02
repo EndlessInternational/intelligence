@@ -4,30 +4,31 @@ module Intelligence
   module Mistral
     class Adapter < Generic::Adapter
 
-      chat_request_uri "https://api.mistral.ai/v1/chat/completions"
+      DEFAULT_BASE_URI              = "https://api.mistral.ai/v1"
       
       schema do 
-        key                   String 
+        base_uri                    String, default: DEFAULT_BASE_URI
+        key                         String 
         chat_options do 
-          model               String
-          temperature         Float
-          top_p               Float
-          max_tokens          Integer
-          min_tokens          Integer
-          seed                Integer, as: :random_seed 
-          stop                String, array: true
-          stream              [ TrueClass, FalseClass ]
+          model                     String
+          temperature               Float
+          top_p                     Float
+          max_tokens                Integer
+          min_tokens                Integer
+          seed                      Integer, as: :random_seed 
+          stop                      String, array: true
+          stream                    [ TrueClass, FalseClass ]
 
-          random_seed         Integer
+          random_seed               Integer
           response_format do 
-            type              String 
+            type                    String 
           end
 
-          tool                array: true, as: :tools, &Tool.schema 
+          tool                      array: true, as: :tools, &Tool.schema 
           tool_choice do 
-            type              String 
+            type                    String 
             function do 
-              name            String 
+              name                  String 
             end
           end
         end

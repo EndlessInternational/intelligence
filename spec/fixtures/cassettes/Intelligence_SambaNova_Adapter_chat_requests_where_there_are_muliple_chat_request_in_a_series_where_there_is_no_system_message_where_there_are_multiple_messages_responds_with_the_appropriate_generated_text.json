@@ -6,13 +6,13 @@
         "uri": "https://api.sambanova.ai/v1/chat/completions",
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"model\":\"Meta-Llama-3.1-70B-Instruct\",\"max_tokens\":24,\"temperature\":0.0,\"messages\":[{\"role\":\"user\",\"content\":\"respond only with the word 'hello'\\n\"}]}"
+          "string": "{\"model\":\"Meta-Llama-3.3-70B-Instruct\",\"max_tokens\":24,\"temperature\":0.0,\"messages\":[{\"role\":\"user\",\"content\":\"respond only with the word 'hello'\\n\"}]}"
         },
         "headers": {
           "User-Agent": [
-            "Faraday v2.12.0"
+            "Faraday v2.13.1"
           ],
-          "Content-Type": [
+          "Content-type": [
             "application/json"
           ],
           "Authorization": [
@@ -27,16 +27,37 @@
         },
         "headers": {
           "date": [
-            "Mon, 20 Jan 2025 23:28:55 GMT"
+            "Wed, 01 Oct 2025 23:14:46 GMT"
           ],
           "content-type": [
             "application/json; charset=utf-8"
           ],
-          "content-length": [
-            "688"
+          "transfer-encoding": [
+            "chunked"
           ],
           "connection": [
             "keep-alive"
+          ],
+          "inference-id": [
+            "917d6ca6-410d-4879-a64b-c867098736e1"
+          ],
+          "x-ratelimit-limit-requests": [
+            "240"
+          ],
+          "x-ratelimit-limit-requests-day": [
+            "48000"
+          ],
+          "x-ratelimit-remaining-requests": [
+            "220"
+          ],
+          "x-ratelimit-remaining-requests-day": [
+            "47980"
+          ],
+          "x-ratelimit-reset-requests": [
+            "1759360546"
+          ],
+          "x-ratelimit-reset-requests-day": [
+            "1759446886"
           ],
           "strict-transport-security": [
             "max-age=31536000; includeSubDomains"
@@ -59,10 +80,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"choices\":[{\"finish_reason\":\"stop\",\"index\":0,\"logprobs\":null,\"message\":{\"content\":\"hello\",\"role\":\"assistant\"}}],\"created\":1737415735,\"id\":\"1478a36a-5f37-4b83-8d29-f9b049545486\",\"model\":\"Meta-Llama-3.1-70B-Instruct\",\"object\":\"chat.completion\",\"system_fingerprint\":\"fastcoe\",\"usage\":{\"completion_tokens\":1,\"completion_tokens_after_first_per_sec\":0,\"completion_tokens_after_first_per_sec_first_ten\":0,\"completion_tokens_per_sec\":12.25455129797087,\"end_time\":1737415735.7329345,\"is_last_response\":true,\"prompt_tokens\":43,\"start_time\":1737415735.6513321,\"time_to_first_token\":0.0627446174621582,\"total_latency\":0.08160233497619629,\"total_tokens\":44,\"total_tokens_per_sec\":539.2002571107183}}\n"
+          "string": "{\"choices\":[{\"finish_reason\":\"stop\",\"index\":0,\"logprobs\":null,\"message\":{\"content\":\"hello\",\"role\":\"assistant\"}}],\"created\":1759360486.7695856,\"id\":\"a2b75285-2d87-47a4-a098-b2653f652d67\",\"model\":\"Meta-Llama-3.3-70B-Instruct\",\"object\":\"chat.completion\",\"system_fingerprint\":\"fastcoe\",\"usage\":{\"completion_tokens\":1,\"completion_tokens_after_first_per_sec\":0,\"completion_tokens_after_first_per_sec_first_ten\":0,\"completion_tokens_after_first_per_sec_graph\":0,\"completion_tokens_per_sec\":15.405792363776607,\"end_time\":1759360486.7694592,\"is_last_response\":true,\"prompt_tokens\":43,\"prompt_tokens_details\":{\"cached_tokens\":0},\"start_time\":1759360486.7045486,\"stop_reason\":\"stop\",\"time_to_first_token\":0.05194902420043945,\"total_latency\":0.0649106502532959,\"total_tokens\":44,\"total_tokens_per_sec\":677.8548640061707}}\n"
         }
       },
-      "recorded_at": "Mon, 20 Jan 2025 23:28:55 GMT"
+      "recorded_at": "Wed, 01 Oct 2025 23:14:46 GMT"
     },
     {
       "request": {
@@ -70,13 +91,13 @@
         "uri": "https://api.sambanova.ai/v1/chat/completions",
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"model\":\"Meta-Llama-3.1-70B-Instruct\",\"max_tokens\":24,\"temperature\":0.0,\"messages\":[{\"role\":\"user\",\"content\":\"the secret word is 'blue'\\n\"},{\"role\":\"assistant\",\"content\":\"ok\\n\"},{\"role\":\"user\",\"content\":\"what is the secret word?\\nrespond with the word only\\n\"}]}"
+          "string": "{\"model\":\"Meta-Llama-3.3-70B-Instruct\",\"max_tokens\":24,\"temperature\":0.0,\"messages\":[{\"role\":\"user\",\"content\":\"the secret word is 'blue'\\n\"},{\"role\":\"assistant\",\"content\":\"ok\\n\"},{\"role\":\"user\",\"content\":\"what is the secret word?\\nrespond with the word only\\n\"}]}"
         },
         "headers": {
           "User-Agent": [
-            "Faraday v2.12.0"
+            "Faraday v2.13.1"
           ],
-          "Content-Type": [
+          "Content-type": [
             "application/json"
           ],
           "Authorization": [
@@ -91,16 +112,37 @@
         },
         "headers": {
           "date": [
-            "Mon, 20 Jan 2025 23:28:55 GMT"
+            "Wed, 01 Oct 2025 23:14:47 GMT"
           ],
           "content-type": [
             "application/json; charset=utf-8"
           ],
-          "content-length": [
-            "689"
+          "transfer-encoding": [
+            "chunked"
           ],
           "connection": [
             "keep-alive"
+          ],
+          "inference-id": [
+            "def216a6-639c-496b-8343-e9e49cde415a"
+          ],
+          "x-ratelimit-limit-requests": [
+            "240"
+          ],
+          "x-ratelimit-limit-requests-day": [
+            "48000"
+          ],
+          "x-ratelimit-remaining-requests": [
+            "219"
+          ],
+          "x-ratelimit-remaining-requests-day": [
+            "47979"
+          ],
+          "x-ratelimit-reset-requests": [
+            "1759360547"
+          ],
+          "x-ratelimit-reset-requests-day": [
+            "1759446887"
           ],
           "strict-transport-security": [
             "max-age=31536000; includeSubDomains"
@@ -123,10 +165,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"choices\":[{\"finish_reason\":\"stop\",\"index\":0,\"logprobs\":null,\"message\":{\"content\":\"blue\",\"role\":\"assistant\"}}],\"created\":1737415735,\"id\":\"691ee693-2294-431a-b796-71e1da0a5cf6\",\"model\":\"Meta-Llama-3.1-70B-Instruct\",\"object\":\"chat.completion\",\"system_fingerprint\":\"fastcoe\",\"usage\":{\"completion_tokens\":1,\"completion_tokens_after_first_per_sec\":0,\"completion_tokens_after_first_per_sec_first_ten\":0,\"completion_tokens_per_sec\":12.534865859161833,\"end_time\":1737415735.9665864,\"is_last_response\":true,\"prompt_tokens\":64,\"start_time\":1737415735.8868089,\"time_to_first_token\":0.06238102912902832,\"total_latency\":0.07977747917175293,\"total_tokens\":65,\"total_tokens_per_sec\":814.7662808455191}}\n"
+          "string": "{\"choices\":[{\"finish_reason\":\"stop\",\"index\":0,\"logprobs\":null,\"message\":{\"content\":\"blue\",\"role\":\"assistant\"}}],\"created\":1759360487.017047,\"id\":\"ddd356bb-57c2-4c06-8b13-4ef88f402b3b\",\"model\":\"Meta-Llama-3.3-70B-Instruct\",\"object\":\"chat.completion\",\"system_fingerprint\":\"fastcoe\",\"usage\":{\"completion_tokens\":1,\"completion_tokens_after_first_per_sec\":0,\"completion_tokens_after_first_per_sec_first_ten\":0,\"completion_tokens_after_first_per_sec_graph\":0,\"completion_tokens_per_sec\":15.722311769512771,\"end_time\":1759360487.0169716,\"is_last_response\":true,\"prompt_tokens\":64,\"prompt_tokens_details\":{\"cached_tokens\":0},\"start_time\":1759360486.9533677,\"stop_reason\":\"stop\",\"time_to_first_token\":0.05083775520324707,\"total_latency\":0.06360387802124023,\"total_tokens\":65,\"total_tokens_per_sec\":1021.9502650183301}}\n"
         }
       },
-      "recorded_at": "Mon, 20 Jan 2025 23:28:55 GMT"
+      "recorded_at": "Wed, 01 Oct 2025 23:14:46 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

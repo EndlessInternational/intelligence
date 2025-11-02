@@ -1,0 +1,84 @@
+{
+  "http_interactions": [
+    {
+      "request": {
+        "method": "post",
+        "uri": "https://api.x.ai/v1/chat/completions",
+        "body": {
+          "encoding": "UTF-8",
+          "string": "{\"model\":\"grok-3-mini\",\"max_tokens\":4096,\"temperature\":0.0,\"reasoning_effort\":\"low\",\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"Given a triangle ABC with angle A 60 degrees and angle B 40 degrees, extend side BC through C. Now create triangle DAB such that DC is congruent to AB. What is the angle measure of angle ADB?\\n\"}]}"
+        },
+        "headers": {
+          "User-Agent": [
+            "Faraday v2.13.1"
+          ],
+          "Content-type": [
+            "application/json"
+          ],
+          "Authorization": [
+            "Bearer <TOKEN>"
+          ]
+        }
+      },
+      "response": {
+        "status": {
+          "code": 200,
+          "message": "OK"
+        },
+        "headers": {
+          "date": [
+            "Sat, 05 Jul 2025 21:49:43 GMT"
+          ],
+          "content-type": [
+            "application/json"
+          ],
+          "transfer-encoding": [
+            "chunked"
+          ],
+          "connection": [
+            "keep-alive"
+          ],
+          "x-zero-data-retention": [
+            "false"
+          ],
+          "x-request-id": [
+            "<X-REQUEST-ID>"
+          ],
+          "vary": [
+            "origin, access-control-request-method, access-control-request-headers"
+          ],
+          "access-control-allow-origin": [
+            "*"
+          ],
+          "access-control-expose-headers": [
+            "*"
+          ],
+          "cf-cache-status": [
+            "DYNAMIC"
+          ],
+          "set-cookie": [
+            "<SET-COOKIE>"
+          ],
+          "strict-transport-security": [
+            "max-age=31536000"
+          ],
+          "server": [
+            "cloudflare"
+          ],
+          "cf-ray": [
+            "<CF-RAY>"
+          ],
+          "content-encoding": [
+            "gzip"
+          ]
+        },
+        "body": {
+          "encoding": "ASCII-8BIT",
+          "string": "{\"id\":\"47488f45-f9dd-f573-7bcf-ba8166c76b93\",\"object\":\"chat.completion\",\"created\":1751752171,\"model\":\"grok-3-mini\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"30 degrees\",\"reasoning_content\":\"First, the user is asking about a geometry problem. Let me understand it step by step.\\n\\nWe have triangle ABC with angle A = 60 degrees and angle B = 40 degrees. So, in triangle ABC, the sum of angles is 180 degrees, so angle C = 180 - 60 - 40 = 80 degrees.\\n\\nNow, extend side BC through C. So, we're lengthening the line beyond point C.\\n\\nThen, create triangle DAB such that DC is congruent to AB. So, we're adding a point D on the extension of BC, such that the length DC equals the length of AB.\\n\\nWe need to find the measure of angle ADB in triangle DAB.\\n\\nLet me sketch this mentally:\\n\\n- Triangle ABC: A, B, C with angles 60° at A, 40° at B, 80° at C.\\n\\n- Extend BC to point D such that DC = AB.\\n\\nTriangle DAB is formed by points D, A, and B.\\n\\nI need to find angle ADB, which is the angle at D in triangle DAB.\\n\\nTo solve this, I might need to use some properties of triangles, like congruence or the law of sines.\\n\\nLet me denote the sides:\\n\\nLet’s say, in triangle ABC:\\n\\n- Let side BC = a\\n\\n- Side AC = b\\n\\n- Side AB = c\\n\\nBy law of sines: a / sin A = b / sin B = c / sin C\\n\\nSo, a / sin 60° = b / sin 40° = c / sin 80°\\n\\nDC = AB = c\\n\\nSince D is on the extension of BC through C, the line is B-C-D, so BD = BC + CD = a + c\\n\\nIn triangle DAB, we have points D, A, B.\\n\\nSides: DA, AB = c, and BD = a + c\\n\\nI need angle at D, which is angle ADB.\\n\\nIn triangle DAB, angles at D, A, and B.\\n\\nAngle at A in triangle DAB is angle DAB, which is part of the original angle at A.\\n\\nThis might be tricky. I need to find the angles in triangle DAB.\\n\\nI could use the law of sines in triangle DAB.\\n\\nFirst, I need to know more about the sides or other angles.\\n\\nLet me try to find angle at B in triangle DAB.\\n\\nIn triangle ABC, angle at B is 40°, which is angle ABC between points A, B, C.\\n\\nIn triangle DAB, angle at B is angle ABD, between points A, B, D.\\n\\nSince D is on the extension of BC, points C and D are on the same line from B, so angle ABD is the angle between A, B, and D.\\n\\nSince D is on the line BC extended, the line BD is the same as line BC, so angle ABD is the same as angle ABC, which is 40°.\\n\\nIs that correct? Angle ABC is the angle at B between points A, B, C. Since D is on the extension of BC, the direction from B to D is the same as from B to C, so yes, angle between A, B, D is the same as angle between A, B, C, because D and C are on the same ray from B.\\n\\nNo: C is on the ray from B through C, and D is further on that ray, so from B, the ray to D is the same as the ray to C. Therefore, angle ABD is indeed the same as angle ABC, which is 40°.\\n\\nSo, in triangle DAB, angle at B is 40°.\\n\\nNow, I need another angle or side to find angle at D.\\n\\nI know side AB = c\\n\\nSide BD = BC + CD = a + c, and CD = c, so BD = a + c\\n\\nIn triangle ABC, by law of sines, a = BC = (sin 60° / sin 80°) * c, wait no.\\n\\nLaw of sines: a / sin A = c / sin C\\n\\na = BC, opposite to angle A (60°)\\n\\nc = AB, opposite to angle C (80°)\\n\\nSo, a / sin 60° = c / sin 80°\\n\\nThus, a = c * (sin 60° / sin 80°)\\n\\nSin 60° = √3 / 2 ≈ 0.866\\n\\nSin 80° ≈ 0.985\\n\\nSo, a ≈ c * (0.866 / 0.985) ≈ c * 0.879\\n\\nSo, BD = a + c ≈ 0.879c + c = 1.879c\\n\\nIn triangle DAB, sides: AB = c, BD = a + c, and DA is unknown.\\n\\nAngles: at B, 40°\\n\\nLet me denote angle at D as x (which is angle ADB)\\n\\nAngle at A in triangle DAB is angle DAB, let's call it y.\\n\\nThen, in triangle DAB, x + y + 40° = 180°, so x + y = 140°\\n\\nBy law of sines in triangle DAB:\\n\\nAB / sin(x) = BD / sin(y) = DA / sin(40°)\\n\\nSpecifically: side opposite to angle at D (x) is AB = c\\n\\nSide opposite to angle at A (y) is BD = a + c\\n\\nSide opposite to angle at B (40°) is DA\\n\\nSo, c / sin(x) = (a + c) / sin(y)\\n\\nAnd since x + y = 140°, y = 140° - x\\n\\nSo, c / sin(x) = (a + c) / sin(140° - x)\\n\\nSin(140° - x) = sin(180° - 40° - x) wait, no: sin(140° - x)\\n\\nSin(140° - x) = sin(140° - x)\\n\\nNote that sin(140° - x) = sin(180° - (40° + x)) = sin(40° + x), since sin(180° - θ) = sin θ\\n\\n140° - x = 180° - (40° + x)? Let's check: 180° - (40° + x) = 140° - x, yes.\\n\\nSo, sin(140° - x) = sin(180° - (40° + x)) = sin(40° + x)\\n\\nMore straightforwardly, sin(140° - x) = sin( (180° - 40°) - x ) but anyway, yes, sin(140° - x) = sin(40° + x) because 140° - x = 180° - (40° + x), and sin is positive in second quadrant.\\n\\nTo be precise: sin(α) = sin(180° - α)\\n\\nSo, sin(140° - x) = sin(180° - (140° - x)) = sin(40° + x)\\n\\nYes.\\n\\nSo, c / sin(x) = (a + c) / sin(40° + x)\\n\\nLet me plug in a = c * (sin 60° / sin 80°)\\n\\nLet k = sin 60° / sin 80° = (√3 / 2) / sin 80°\\n\\nSo, a = c k\\n\\nThus, c / sin(x) = (c k + c) / sin(40° + x) = c (k + 1) / sin(40° + x)\\n\\nDivide both sides by c: 1 / sin(x) = (k + 1) / sin(40° + x)\\n\\nSo, sin(40° + x) = (k + 1) sin(x)\\n\\nTherefore, sin(40° + x) = (k + 1) sin(x)\\n\\nNow, sin(40° + x) = sin(40°) cos(x) + cos(40°) sin(x)\\n\\nSo, sin(40°) cos(x) + cos(40°) sin(x) = (k + 1) sin(x)\\n\\nLet me bring terms to one side: sin(40°) cos(x) + cos(40°) sin(x) - (k + 1) sin(x) = 0\\n\\nsin(40°) cos(x) + [cos(40°) - (k + 1)] sin(x) = 0\\n\\nLet me factor: sin(40°) cos(x) = - [cos(40°) - (k + 1)] sin(x)\\n\\nMultiply both sides by -1: - sin(40°) cos(x) = [cos(40°) - (k + 1)] sin(x) - cos(40°) sin(x) + (k+1) sin(x) wait, no.\\n\\nFrom: sin(40°) cos(x) = [ (k + 1) - cos(40°) ] sin(x)\\n\\nYes: from earlier:\\n\\nsin(40°) cos(x) = [ (k + 1) - cos(40°) ] sin(x)\\n\\nLet me denote m = (k + 1) - cos(40°)\\n\\nSo, sin(40°) cos(x) = m sin(x)\\n\\nThen, sin(40°) cos(x) - m sin(x) = 0\\n\\nsin(x) [ m / tan(x) ? Wait no.\\n\\nDivide both sides by cos(x): sin(40°) = m tan(x)\\n\\nFrom sin(40°) cos(x) = m sin(x)\\n\\nThen, sin(40°) = m sin(x) / cos(x) = m tan(x)\\n\\nSo, tan(x) = sin(40°) / m\\n\\nBut m = (k + 1) - cos(40°)\\n\\nAnd k = sin(60°) / sin(80°) = (√3 / 2) / sin(80°)\\n\\nLet me calculate numerical values.\\n\\nFirst, sin(60°) = √3 / 2 ≈ 0.8660\\n\\nsin(80°) ≈ 0.9848\\n\\nSo, k = 0.8660 / 0.9848 ≈ 0.8794\\n\\nThen, k + 1 ≈ 0.8794 + 1 = 1.8794\\n\\ncos(40°) ≈ 0.7660\\n\\nSo, m = (k + 1) - cos(40°) ≈ 1.8794 - 0.7660 = 1.1134\\n\\nsin(40°) ≈ 0.6428\\n\\nTherefore, tan(x) = sin(40°) / m ≈ 0.6428 / 1.1134 ≈ 0.5775\\n\\nSo, x = arctan(0.5775) ≈ 30 degrees, since tan(30°) = 1/√3 ≈ 0.5774\\n\\nOh! So x ≈ 30°\\n\\nTherefore, angle ADB is 30 degrees.\\n\\nLet me double-check if I did everything right.\\n\\nFrom tan(x) = sin(40°) / m, and m = (k+1) - cos(40°)\\n\\nAnd calculations seem correct.\\n\\nSo, the angle measure of angle ADB is 30 degrees.\",\"refusal\":null},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":92,\"completion_tokens\":2,\"total_tokens\":2386,\"prompt_tokens_details\":{\"text_tokens\":92,\"audio_tokens\":0,\"image_tokens\":0,\"cached_tokens\":3},\"completion_tokens_details\":{\"reasoning_tokens\":2292,\"audio_tokens\":0,\"accepted_prediction_tokens\":0,\"rejected_prediction_tokens\":0},\"num_sources_used\":0},\"system_fingerprint\":\"fp_98701f8c5d\"}"
+        }
+      },
+      "recorded_at": "Sat, 05 Jul 2025 21:49:43 GMT"
+    }
+  ],
+  "recorded_with": "VCR 6.3.1"
+}

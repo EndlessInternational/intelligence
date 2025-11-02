@@ -5,11 +5,12 @@ module Intelligence
 
     class Adapter < Generic::Adapter
 
-      chat_request_uri "https://api.sambanova.ai/v1/chat/completions"
+      DEFAULT_BASE_URI        = "https://api.sambanova.ai/v1"
       
       schema do 
 
         # normalized properties for all endpoints
+        base_uri              String, default: DEFAULT_BASE_URI        
         key                   String
         
         # properties for generative text endpoints
@@ -42,12 +43,10 @@ module Intelligence
         }
 
         parsed_body = JSON.parse( response.body, symbolize_names: true ) rescue nil 
-        if parsed_body && parsed_body.respond_to?( :include? ) && parsed_body.include?( :error )
-          result = {
-            error_type: error_type.to_s,
-            error: parsed_body[ :error ][ :code ] || error_type.to_s,
-            error_description: parsed_body[ :error ][ :message ] || error_description
-          }
+        if parsed_body && 
+           parsed_body.respond_to?( :include? ) && parsed_body.include?( :error ) && 
+           parsed_body[ :error ].is_a?( String )
+          result[ :error_description ] = parsed_body[ :error ]
         elsif response.headers[ 'content-type' ].start_with?( 'text/plain' ) &&
               response.body && response.body.length > 0
           result[ :error_description ] = response.body

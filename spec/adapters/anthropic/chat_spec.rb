@@ -12,8 +12,8 @@ RSpec.describe "#{Intelligence::Adapter[ :anthropic ]} chat requests", :anthropi
     Intelligence::Adapter[ :anthropic ].build! do   
       key                     ENV[ 'ANTHROPIC_API_KEY' ]
       chat_options do
-        model                 'claude-3-5-sonnet-20240620'
-        max_tokens            256 
+        model                 'claude-sonnet-4-20250514'
+        max_tokens            2048 
         temperature           0
       end
     end
@@ -23,7 +23,7 @@ RSpec.describe "#{Intelligence::Adapter[ :anthropic ]} chat requests", :anthropi
     Intelligence::Adapter[ :anthropic ].build! do   
       key                     ENV[ 'ANTHROPIC_API_KEY' ]
       chat_options do
-        model                 'claude-3-5-sonnet-20240620'
+        model                 'claude-sonnet-4-5-20250929'
         max_tokens            24
         temperature           0
       end
@@ -34,10 +34,23 @@ RSpec.describe "#{Intelligence::Adapter[ :anthropic ]} chat requests", :anthropi
     Intelligence::Adapter[ :anthropic ].build! do   
       key                     ENV[ 'ANTHROPIC_API_KEY' ]
       chat_options do
-        model                 'claude-3-5-sonnet-20240620'
+        model                 'claude-sonnet-4-5-20250929'
         max_tokens            24
         temperature           0
         stop                  'five'
+      end
+    end
+  end
+
+  let( :adapter_with_thought ) do
+    Intelligence::Adapter[ :anthropic ].build! do   
+      key                     ENV[ 'ANTHROPIC_API_KEY' ]
+      chat_options do
+        model                 'claude-sonnet-4-5-20250929'
+        max_tokens            8192
+        reasoning do
+          budget_tokens       8191
+        end
       end
     end
   end
@@ -46,7 +59,7 @@ RSpec.describe "#{Intelligence::Adapter[ :anthropic ]} chat requests", :anthropi
     Intelligence::Adapter[ :anthropic ].build! do 
       key                     ENV[ 'ANTHROPIC_API_KEY' ]
       chat_options do
-        model                 'claude-3-5-sonnet-20240620'
+        model                 'claude-sonnet-4-5-20250929'
         max_tokens            128
         temperature           0
 
@@ -64,7 +77,7 @@ RSpec.describe "#{Intelligence::Adapter[ :anthropic ]} chat requests", :anthropi
     Intelligence::Adapter[ :anthropic ].build! do 
       key                     'this-key-is-not-valid'  
       chat_options do
-        model                 'claude-3-5-sonnet-20240620'
+        model                 'claude-sonnet-4-5-20250929'
         max_tokens            24
         temperature           0
       end
@@ -90,10 +103,19 @@ RSpec.describe "#{Intelligence::Adapter[ :anthropic ]} chat requests", :anthropi
                    end_reason: :end_sequence_encountered 
   include_examples 'chat requests without alternating roles'
   include_examples 'chat requests with binary encoded images'
+  include_examples 'chat requests with file images'
+
+  include_examples 'chat requests with thought', 
+                   adapter: :adapter_with_thought
+  # include_examples 'chat requests with binary encoded pdf'
+
   include_examples 'chat requests with tools'
   include_examples 'chat requests with adapter tools'
   include_examples 'chat requests with complex tools'
   include_examples 'chat requests with parallel tools'
+  include_examples 'chat requests with tools multiturn'
+  include_examples 'chat requests with calculator tool', 
+                   adapter: :adapter_with_thought
 
   include_examples 'chat requests with invalid key'
   include_examples 'chat requests with invalid model' 

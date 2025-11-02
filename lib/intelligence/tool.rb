@@ -127,11 +127,11 @@ module Intelligence
     end  
     
     def initialize( attributes = nil )
-      @properies = attributes
+      @properties = attributes
     end 
 
     def to_h
-      @properies.to_h
+      @properties.to_h
     end 
 
   end

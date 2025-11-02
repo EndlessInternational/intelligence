@@ -6,13 +6,13 @@
         "uri": "https://api.cerebras.ai/v1/chat/completions",
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"model\":\"llama3.1-70b\",\"max_tokens\":16,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"respond only with the word 'hello'\\n\"}]}"
+          "string": "{\"model\":\"llama-3.3-70b\",\"max_tokens\":16,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"respond only with the word 'hello'\\n\"}]}"
         },
         "headers": {
           "User-Agent": [
-            "Faraday v2.12.0"
+            "Faraday v2.13.1"
           ],
-          "Content-Type": [
+          "Content-type": [
             "application/json"
           ],
           "Authorization": [
@@ -26,6 +26,9 @@
           "message": "Unauthorized"
         },
         "headers": {
+          "date": [
+            "Wed, 01 Oct 2025 21:23:02 GMT"
+          ],
           "content-type": [
             "application/json"
           ],
@@ -35,14 +38,8 @@
           "connection": [
             "keep-alive"
           ],
-          "date": [
-            "Tue, 31 Dec 2024 01:26:44 GMT"
-          ],
-          "strict-transport-security": [
-            "max-age=3600; includeSubDomains"
-          ],
-          "server": [
-            "uvicorn"
+          "cf-ray": [
+            "<CF-RAY>"
           ],
           "referrer-policy": [
             "strict-origin-when-cross-origin"
@@ -50,20 +47,20 @@
           "x-content-type-options": [
             "nosniff"
           ],
-          "x-cache": [
-            "Error from cloudfront"
+          "strict-transport-security": [
+            "max-age=3600; includeSubDomains"
           ],
-          "via": [
-            "1.1 3d33f952c2b7fe5b0308385e96c9263c.cloudfront.net (CloudFront)"
+          "cf-cache-status": [
+            "DYNAMIC"
           ],
-          "x-amz-cf-pop": [
-            "SFO20-C1"
+          "set-cookie": [
+            "<SET-COOKIE>"
+          ],
+          "server": [
+            "cloudflare"
           ],
           "alt-svc": [
             "h3=\":443\"; ma=86400"
-          ],
-          "x-amz-cf-id": [
-            "X7KqWWX3JLAvxdH1QR_3MCdp0g7iP8wZfCgUVS2gMLBNd9Ti61gM5A=="
           ]
         },
         "body": {
@@ -71,7 +68,7 @@
           "string": "{\"message\":\"Wrong API Key\",\"type\":\"invalid_request_error\",\"param\":\"api_key\",\"code\":\"wrong_api_key\"}"
         }
       },
-      "recorded_at": "Tue, 31 Dec 2024 01:26:44 GMT"
+      "recorded_at": "Wed, 01 Oct 2025 21:23:02 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

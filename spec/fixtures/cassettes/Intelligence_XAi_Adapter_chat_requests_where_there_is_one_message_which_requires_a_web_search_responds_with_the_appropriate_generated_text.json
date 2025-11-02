@@ -1,0 +1,84 @@
+{
+  "http_interactions": [
+    {
+      "request": {
+        "method": "post",
+        "uri": "https://api.x.ai/v1/chat/completions",
+        "body": {
+          "encoding": "UTF-8",
+          "string": "{\"model\":\"grok-3-latest\",\"max_tokens\":1024,\"temperature\":0.0,\"abilities\":{\"search_parameters\":{\"mode\":\"auto\",\"return_citations\":true}},\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"what is the top news item today?\\n\"}],\"search_parameters\":{\"mode\":\"auto\",\"return_citations\":true}}"
+        },
+        "headers": {
+          "User-Agent": [
+            "Faraday v2.13.1"
+          ],
+          "Content-type": [
+            "application/json"
+          ],
+          "Authorization": [
+            "Bearer <TOKEN>"
+          ]
+        }
+      },
+      "response": {
+        "status": {
+          "code": 200,
+          "message": "OK"
+        },
+        "headers": {
+          "date": [
+            "Sat, 05 Jul 2025 21:33:00 GMT"
+          ],
+          "content-type": [
+            "application/json"
+          ],
+          "transfer-encoding": [
+            "chunked"
+          ],
+          "connection": [
+            "keep-alive"
+          ],
+          "x-zero-data-retention": [
+            "false"
+          ],
+          "x-request-id": [
+            "<X-REQUEST-ID>"
+          ],
+          "vary": [
+            "origin, access-control-request-method, access-control-request-headers"
+          ],
+          "access-control-allow-origin": [
+            "*"
+          ],
+          "access-control-expose-headers": [
+            "*"
+          ],
+          "cf-cache-status": [
+            "DYNAMIC"
+          ],
+          "set-cookie": [
+            "<SET-COOKIE>"
+          ],
+          "strict-transport-security": [
+            "max-age=31536000"
+          ],
+          "server": [
+            "cloudflare"
+          ],
+          "cf-ray": [
+            "<CF-RAY>"
+          ],
+          "content-encoding": [
+            "gzip"
+          ]
+        },
+        "body": {
+          "encoding": "ASCII-8BIT",
+          "string": "{\"id\":\"6c02006e-5aff-0768-65f0-1066a60b3f72\",\"object\":\"chat.completion\",\"created\":1751751176,\"model\":\"grok-3\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"Based on available information for July 5, 2025, a notable news item today involves Ukraine’s special forces striking Russia’s Borisoglebsk airfield in Voronezh, targeting a glide-bomb depot, while Russian air defense reported downing numerous Ukrainian drones near St. Petersburg and other regions, as mentioned in posts found on X. However, this information is not independently verified and should be treated as inconclusive. For a comprehensive and confirmed top news story, I recommend checking a reliable news source like The Hindu Morning Digest or NDTV for the latest headlines.\",\"refusal\":null},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":2598,\"completion_tokens\":113,\"total_tokens\":2711,\"prompt_tokens_details\":{\"text_tokens\":2598,\"audio_tokens\":0,\"image_tokens\":0,\"cached_tokens\":2},\"completion_tokens_details\":{\"reasoning_tokens\":0,\"audio_tokens\":0,\"accepted_prediction_tokens\":0,\"rejected_prediction_tokens\":0},\"num_sources_used\":2},\"system_fingerprint\":\"fp_9ad1a16f77\",\"citations\":[\"https://www.yahoo.com/news/top-morning-july-5-2025-144500099.html\",\"https://wpbf.com/article/news-to-go-july-5-2025/65303044\",\"https://timesofindia.indiatimes.com/technology/gaming/nyt-strands-today-clues-answers-spangram-for-july-5-2025/articleshow/122267642.cms\",\"https://pennlive.com/advice/2025/07/horoscope-for-today-july-5-2025-look-inside-yourself-to-stir-courage.html\",\"https://timesofindia.indiatimes.com/astrology/horoscope/july-05-2025-birthday-forecast-discover-what-the-next-12-months-hold-for-you/articleshow/122257336.cms\",\"https://www.thehindu.com/news/the-hindu-morning-digest-july-5-2025/article69774628.ece\",\"https://www.indiatimes.com/events/school-assembly-news-headlines-for-today-july-5-2025-from-sports-to-education-check-20-national-international-news-662914.html\",\"https://www.ndtv.com/video/top-headlines-of-the-day-july-5-2025-961577\",\"https://x.com/Sputnik_India/status/1937881184434082233\",\"https://x.com/SputnikInt/status/1930714165070733651\",\"https://x.com/SputnikInt/status/1934343040652480875\",\"https://x.com/Sputnik_India/status/1937507971908436224\",\"https://x.com/SatlokChannel/status/1812721347048452557\",\"https://x.com/Sputnik_India/status/1932455399686623383\",\"https://x.com/Sputnik_India/status/1936434414512410901\"]}"
+        }
+      },
+      "recorded_at": "Sat, 05 Jul 2025 21:33:00 GMT"
+    }
+  ],
+  "recorded_with": "VCR 6.3.1"
+}

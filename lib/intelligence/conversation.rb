@@ -18,7 +18,7 @@ module Intelligence
       if attributes
         if attributes[ :system_message ]&.any? 
           system_message = Message.new( 
-            attributes[ :system_message ][ :role ],  
+            attributes[ :system_message ][ :role ] || :system,  
             attributes[ :system_message ]
           )
           @system_message = system_message unless system_message.empty?

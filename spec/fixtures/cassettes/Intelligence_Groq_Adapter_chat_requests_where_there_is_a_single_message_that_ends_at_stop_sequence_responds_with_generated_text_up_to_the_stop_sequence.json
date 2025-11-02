@@ -6,13 +6,13 @@
         "uri": "https://api.groq.com/openai/v1/chat/completions",
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"model\":\"llama-3.1-70b-versatile\",\"max_tokens\":32,\"stop\":[\"five\"],\"temperature\":0.0,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"count to ten in words, all lower case, one word per line\\n\"}]}"
+          "string": "{\"model\":\"moonshotai/kimi-k2-instruct-0905\",\"max_tokens\":32,\"stop\":[\"five\"],\"temperature\":0.0,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"count to ten in words, all lower case, one word per line\\n\"}]}"
         },
         "headers": {
           "User-Agent": [
-            "Faraday v2.12.0"
+            "Faraday v2.13.1"
           ],
-          "Content-Type": [
+          "Content-type": [
             "application/json"
           ],
           "Authorization": [
@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Mon, 20 Jan 2025 22:29:08 GMT"
+            "Thu, 02 Oct 2025 18:27:20 GMT"
           ],
           "content-type": [
             "application/json"
@@ -38,47 +38,44 @@
           "connection": [
             "keep-alive"
           ],
-          "cf-ray": [
-            "<CF-RAY>"
-          ],
-          "cf-cache-status": [
-            "DYNAMIC"
+          "content-encoding": [
+            "gzip"
           ],
           "cache-control": [
             "private, max-age=0, no-store, no-cache, must-revalidate"
           ],
           "vary": [
-            "Origin, Accept-Encoding"
+            "Origin"
+          ],
+          "x-groq-region": [
+            "dls"
+          ],
+          "x-ratelimit-limit-requests": [
+            "1000"
+          ],
+          "x-ratelimit-limit-tokens": [
+            "10000"
+          ],
+          "x-ratelimit-remaining-requests": [
+            "775"
+          ],
+          "x-ratelimit-remaining-tokens": [
+            "9661"
+          ],
+          "x-ratelimit-reset-requests": [
+            "5h23m59.777s"
+          ],
+          "x-ratelimit-reset-tokens": [
+            "2.034s"
+          ],
+          "x-request-id": [
+            "<X-REQUEST-ID>"
           ],
           "via": [
             "1.1 google"
           ],
-          "alt-svc": [
-            "h3=\":443\"; ma=86400"
-          ],
-          "x-groq-region": [
-            "us-west-1"
-          ],
-          "x-ratelimit-limit-requests": [
-            "14400"
-          ],
-          "x-ratelimit-limit-tokens": [
-            "6000"
-          ],
-          "x-ratelimit-remaining-requests": [
-            "14385"
-          ],
-          "x-ratelimit-remaining-tokens": [
-            "5529"
-          ],
-          "x-ratelimit-reset-requests": [
-            "1m27.997999999s"
-          ],
-          "x-ratelimit-reset-tokens": [
-            "4.706s"
-          ],
-          "x-request-id": [
-            "<X-REQUEST-ID>"
+          "cf-cache-status": [
+            "DYNAMIC"
           ],
           "set-cookie": [
             "<SET-COOKIE>"
@@ -86,16 +83,19 @@
           "server": [
             "cloudflare"
           ],
-          "content-encoding": [
-            "gzip"
+          "cf-ray": [
+            "<CF-RAY>"
+          ],
+          "alt-svc": [
+            "h3=\":443\"; ma=86400"
           ]
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\"id\":\"chatcmpl-4f14b132-a841-4a9f-94e0-920cd14b3f16\",\"object\":\"chat.completion\",\"created\":1737412148,\"model\":\"llama-3.1-70b-versatile\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"one\\ntwo\\nthree\\nfour\\n\"},\"logprobs\":null,\"finish_reason\":\"stop\"}],\"usage\":{\"queue_time\":0.48586252999999996,\"prompt_tokens\":85,\"prompt_time\":0.01595655,\"completion_tokens\":20,\"completion_time\":0.072727273,\"total_tokens\":105,\"total_time\":0.088683823},\"system_fingerprint\":\"fp_4196e754db\",\"x_groq\":{\"id\":\"req_01jj2xaz4ve1gb8v95ec2czaka\"}}\n"
+          "string": "{\"id\":\"chatcmpl-178075e1-0a4b-4ef5-87b7-c760c199a975\",\"object\":\"chat.completion\",\"created\":1759429640,\"model\":\"moonshotai/kimi-k2-instruct-0905\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"one\\ntwo\\nthree\\nfour\\n\"},\"logprobs\":null,\"finish_reason\":\"stop\"}],\"usage\":{\"queue_time\":0.057854062,\"prompt_tokens\":65,\"prompt_time\":0.013987884,\"completion_tokens\":21,\"completion_time\":0.041507151,\"total_tokens\":86,\"total_time\":0.055495035},\"usage_breakdown\":null,\"system_fingerprint\":\"fp_b8565bb333\",\"x_groq\":{\"id\":\"req_01k6k2vfqge70v5xat5yqvcrv8\"},\"service_tier\":\"on_demand\"}\n"
         }
       },
-      "recorded_at": "Mon, 20 Jan 2025 22:29:08 GMT"
+      "recorded_at": "Thu, 02 Oct 2025 18:27:20 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

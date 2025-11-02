@@ -12,7 +12,7 @@ RSpec.describe "#{Intelligence::Adapter[ :groq ]} chat requests", :groq do
     Intelligence::Adapter[ :groq ].build! do   
       key                     ENV[ 'GROQ_API_KEY' ]
       chat_options do
-        model                 'llama-3.1-70b-versatile'
+        model                 'moonshotai/kimi-k2-instruct-0905'
         max_tokens            16
         temperature           0
       end
@@ -23,10 +23,38 @@ RSpec.describe "#{Intelligence::Adapter[ :groq ]} chat requests", :groq do
     Intelligence::Adapter[ :groq ].build! do   
       key                     ENV[ 'GROQ_API_KEY' ]
       chat_options do
-        model                 'llama-3.1-70b-versatile'
+        model                 'moonshotai/kimi-k2-instruct-0905'
         max_tokens            32 
         stop                  'five'
         temperature           0
+      end
+    end
+  end
+
+  let( :adapter_with_extended_tokens ) do
+    Intelligence::Adapter[ :groq ].build! do   
+      key                     ENV[ 'GROQ_API_KEY' ]
+      chat_options do
+        model                 'moonshotai/kimi-k2-instruct-0905'
+        max_tokens            1024
+        temperature           0
+      end
+    end
+  end
+
+  let( :adapter_with_tool ) do
+    Intelligence::Adapter[ :groq ].build! do   
+      key                     ENV[ 'GROQ_API_KEY' ]
+      chat_options do
+        model                 'openai/gpt-oss-120b'
+        max_tokens            1024 
+        temperature           0
+
+        tool do     
+          name :get_location 
+          description \
+            "The get_location tool will return the users city, state or province and country."
+        end
       end
     end
   end
@@ -35,7 +63,7 @@ RSpec.describe "#{Intelligence::Adapter[ :groq ]} chat requests", :groq do
     Intelligence::Adapter[ :groq ].build! do 
       key                     'this-key-is-not-valid'  
       chat_options do
-        model                 'llama-3.1-70b-versatile'
+        model                 'mistral-saba-24b'
         max_tokens            16
         temperature           0
       end
@@ -57,6 +85,13 @@ RSpec.describe "#{Intelligence::Adapter[ :groq ]} chat requests", :groq do
   include_examples 'chat requests with token limit exceeded'
   include_examples 'chat requests with stop sequence', adapter: :adapter_with_stop_sequence  
   include_examples 'chat requests without alternating roles'
+
+  include_examples 'chat requests with tools', adapter: :adapter_with_extended_tokens
+  include_examples 'chat requests with adapter tools', adapter: :adapter_with_tool 
+  include_examples 'chat requests with complex tools', adapter: :adapter_with_tool
+  include_examples 'chat requests with parallel tools', adapter: :adapter_with_extended_tokens
+  include_examples 'chat requests with tools multiturn', adapter: :adapter_with_extended_tokens
+  include_examples 'chat requests with calculator tool', adapter: :adapter_with_extended_tokens
 
   include_examples 'chat requests with invalid key'
   include_examples 'chat requests with invalid model' 

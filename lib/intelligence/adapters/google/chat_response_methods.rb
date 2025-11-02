@@ -4,8 +4,7 @@ module Intelligence
   module Google
     module ChatResponseMethods
 
-       def chat_result_attributes( response )
-
+      def chat_result_attributes( response )
         return nil unless response.success?
 
         response_json = JSON.parse( response.body, symbolize_names: true ) rescue nil
@@ -26,15 +25,27 @@ module Intelligence
             role = ( response_content[ :role ] == 'model' ) ? 'assistant' : 'user'
             contents = []
             response_content[ :parts ]&.each do | response_content_part |
-              if response_content_part.key?( :text )              
+              # google encrypted thoughts are included in other ( seemingly arbitrary )
+              # content so create a cipher_thought before the content to make it easier
+              # to pack it in future requests 
+              if response_content_part.key?( :thoughtSignature )   
                 contents.push( {
-                  type: 'text', text: response_content_part[ :text ]
+                  type:                               :cipher_thought, 
+                  :'google/thought-signature' =>      response_content_part[ :thoughtSignature ]
+                } )
+              end
+
+              if response_content_part.key?( :text )   
+                type = response_content_part[ :thought ] ? :thought : :text           
+                contents.push( {
+                  type:                               type, 
+                  text:                               response_content_part[ :text ]
                 } )
               elsif function_call = response_content_part[ :functionCall ]                
                 contents.push( {
-                  type: :tool_call, 
-                  tool_name: function_call[ :name ],
-                  tool_parameters: function_call[ :args ]
+                  type:                               :tool_call, 
+                  tool_name:                          function_call[ :name ],
+                  tool_parameters:                    function_call[ :args ]
                 } )
                 # google does not indicate there is tool call in the stop reason so 
                 # we will synthesize this end reason
@@ -66,7 +77,6 @@ module Intelligence
         end
 
         result
-      
       end
 
       def chat_result_error_attributes( response )
@@ -79,14 +89,15 @@ module Intelligence
           error_details_reason = response_body[ :error ][ :details ]&.first&.[]( :reason )
           # a special case for authentication 
           error_type = :authentication_error if error_details_reason == 'API_KEY_INVALID'
+          error = error_details_reason || response_body[ :error ][ :status ] || error_type
           result = {
-            error_type: error_type.to_s,
-            error: error_details_reason || response_body[ :error ][ :status ] || error_type,
-            error_description: response_body[ :error ][ :message ]
+            error_type:                               error_type.to_s,
+            error:                                    error.to_s,
+            error_description:                        response_body[ :error ][ :message ]
           }
         end
-        result
 
+        result
       end
 
       def stream_result_chunk_attributes( context, chunk )
@@ -98,18 +109,7 @@ module Intelligence
           output_tokens:  0
         }
         choices = context[ :choices ] || Array.new( 1 , { message: {} } )
-
-        choices.each do | choice |
-          choice[ :message ][ :contents ] = choice[ :message ][ :contents ]&.map do | content |
-            case content[ :type ] 
-              when :text 
-                content[ :text ] = ''
-              else 
-                content.clear 
-            end
-            content
-          end
-        end
+        choices_delta = prune_choices( choices )
 
         buffer += chunk
         while ( eol_index = buffer.index( "\n" ) )
@@ -118,8 +118,9 @@ module Intelligence
           line = line.strip 
           next if line.empty? || !line.start_with?( 'data:' )
           line = line[ 6..-1 ]
-
           data = JSON.parse( line, symbolize_names: true )
+
+          # puts line
           if data.is_a?( Hash )
             
             data[ :candidates ]&.each do | data_candidate |
@@ -127,27 +128,60 @@ module Intelligence
               data_candidate_index = data_candidate[ :index ] || 0
               data_candidate_content = data_candidate[ :content ]
               data_candidate_finish_reason = data_candidate[ :finishReason ]
-              choices.fill( { message: { role: 'assistant' } }, choices.size, data_candidate_index + 1 ) \
-                if choices.size <= data_candidate_index 
-              contents = choices[ data_candidate_index ][ :message ][ :contents ] || []
+              if choices_delta.size <= data_candidate_index 
+                choices_delta.fill( 
+                  { message: { role: 'assistant' } }, 
+                  choices_delta.size, 
+                  data_candidate_index + 1 
+                )
+              end
+                
+              contents = choices_delta[ data_candidate_index ][ :message ][ :contents ] || []
               last_content = contents&.last 
               
               if data_candidate_content&.include?( :parts ) 
                 data_candidate_content_parts = data_candidate_content[ :parts ]
                 data_candidate_content_parts&.each do | data_candidate_content_part |
+                  # google encrypted thoughts are included in other ( seemingly arbitrary )
+                  # content so create a cipher_thought before the content to make it easier
+                  # to pack it in future requests 
+                  if data_candidate_content_part.key?( :thoughtSignature )   
+                    contents.push( {
+                      type:                           :cipher_thought, 
+                     :'google/thought-signature' =>   data_candidate_content_part[ :thoughtSignature ]
+                    } )
+                  end
                   if data_candidate_content_part.key?( :text )
-                    if last_content.nil? || last_content[ :type ] != :text
-                      contents.push( { type: :text, text: data_candidate_content_part[ :text ] } )
+                    type = data_candidate_content_part[ :thought ] ? :thought : :text
+                    if last_content.nil? || last_content[ :type ] != type 
+                      contents.push( { 
+                        type:                         type, 
+                        text:                         data_candidate_content_part[ :text ] 
+                      } )
                     else 
                       last_content[ :text ] = 
                         ( last_content[ :text ] || '' ) + data_candidate_content_part[ :text ]
                     end
                   end
+                  if function_call = data_candidate_content_part[ :functionCall ]
+                    contents.push( { 
+                      type:                           :tool_call, 
+                      tool_name:                      function_call[ :name ],
+                      tool_parameters:                function_call[ :args ] 
+                    } )
+                  end
                 end
               end
-              choices[ data_candidate_index ][ :message ][ :contents ] = contents
-              choices[ data_candidate_index ][ :end_reason ] = 
-                translate_finish_reason( data_candidate_finish_reason )
+
+              choices_delta[ data_candidate_index ][ :message ][ :contents ] = contents
+
+              if ( data_candidate_finish_reason && data_candidate_finish_reason.length > 1 )
+                end_reason = translate_finish_reason( data_candidate_finish_reason )
+                end_reason = :tool_called \
+                  if end_reason == :ended && contents.last&.dig( :type ) == :tool_call
+                choices_delta[ data_candidate_index ][ :end_reason ] = end_reason
+              end
+                
             end
   
             if usage = data[ :usageMetadata ]
@@ -161,23 +195,14 @@ module Intelligence
 
         context[ :buffer ] = buffer 
         context[ :metrics ] = metrics
-        context[ :choices ] = choices
+        context[ :choices ] = merge_choices!( choices, choices_delta )
 
-        [ context, choices.empty? ? nil : { choices: choices.dup } ]
+        [ context, { choices: choices_delta } ]
 
       end
 
       def stream_result_attributes( context )
-
-        choices = context[ :choices ]
-        metrics = context[ :metrics ]
-
-        choices = choices.map do | choice |
-          { end_reason: choice[ :end_reason ] }
-        end
-
-        { choices: choices, metrics: context[ :metrics ] }
-
+        { choices: context[ :choices ], metrics: context[ :metrics ] }
       end
 
       alias_method :stream_result_error_attributes, :chat_result_error_attributes

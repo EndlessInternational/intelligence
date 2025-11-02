@@ -1,0 +1,117 @@
+{
+  "http_interactions": [
+    {
+      "request": {
+        "method": "post",
+        "uri": "https://api.together.xyz/v1/chat/completions",
+        "body": {
+          "encoding": "UTF-8",
+          "string": "{\"model\":\"deepseek-ai/DeepSeek-V3\",\"max_tokens\":128.0,\"temperature\":0.0,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"Tell me the weather in Seattle.\\n\"}],\"tools\":[{\"type\":\"function\",\"function\":{\"name\":\"get_weather\",\"description\":\"The get_weather tool returns the current weather in given locality.\",\"parameters\":{\"type\":\"object\",\"properties\":{\"location\":{\"type\":\"object\",\"description\":\"The locality for which the weather will be returned\",\"properties\":{\"city\":{\"type\":\"string\",\"description\":\"The city or town for which the current weather should be returned.\"},\"state\":{\"type\":\"string\",\"description\":\"The state or province for which the current weather should be returned. If this is not provided the largest or most prominent city with the given name, in the given country or in the worldi, will be assumed.\"},\"country\":{\"type\":\"string\",\"description\":\"The country for which the given weather should be returned. If this is not provided the largest or most prominent city with the given name will be returned.\"}},\"required\":[\"city\"]}},\"required\":[\"location\"]}}}]}"
+        },
+        "headers": {
+          "User-Agent": [
+            "Faraday v2.13.1"
+          ],
+          "Content-type": [
+            "application/json"
+          ],
+          "Authorization": [
+            "Bearer <TOKEN>"
+          ]
+        }
+      },
+      "response": {
+        "status": {
+          "code": 200,
+          "message": "OK"
+        },
+        "headers": {
+          "date": [
+            "Sat, 05 Jul 2025 21:32:05 GMT"
+          ],
+          "content-type": [
+            "application/json; charset=utf-8"
+          ],
+          "transfer-encoding": [
+            "chunked"
+          ],
+          "connection": [
+            "keep-alive"
+          ],
+          "cf-ray": [
+            "<CF-RAY>"
+          ],
+          "cf-cache-status": [
+            "DYNAMIC"
+          ],
+          "retry-after": [
+            "0"
+          ],
+          "access-control-allow-origin": [
+            "*"
+          ],
+          "etag": [
+            "W/\"32c-opUz00PkIO/i/eqx3nmhdaSrqWI\""
+          ],
+          "strict-transport-security": [
+            "max-age=15552000; includeSubDomains"
+          ],
+          "x-amzn-trace-id": [
+            "d62d90c0-9fba-4abe-bc93-7a4ca75644e9-noamzn"
+          ],
+          "x-api-call-end": [
+            "2025-07-05T21:32:05.137Z"
+          ],
+          "x-api-call-start": [
+            "2025-07-05T21:32:04.742Z"
+          ],
+          "x-api-received": [
+            "2025-07-05T21:32:04.725Z"
+          ],
+          "x-inference-version": [
+            "v2"
+          ],
+          "x-ratelimit": [
+            "false"
+          ],
+          "x-ratelimit-limit": [
+            "2"
+          ],
+          "x-ratelimit-limit-tokens": [
+            "3000"
+          ],
+          "x-ratelimit-remaining": [
+            "1"
+          ],
+          "x-ratelimit-remaining-tokens": [
+            "3000"
+          ],
+          "x-ratelimit-reset": [
+            "0"
+          ],
+          "x-request-id": [
+            "<X-REQUEST-ID>"
+          ],
+          "vary": [
+            "Accept-Encoding"
+          ],
+          "server": [
+            "cloudflare"
+          ],
+          "content-encoding": [
+            "gzip"
+          ],
+          "alt-svc": [
+            "h3=\":443\"; ma=86400"
+          ]
+        },
+        "body": {
+          "encoding": "UTF-8",
+          "string": "{\n  \"id\": \"o1uFQHi-zqrih-95a9f9115cb41565\",\n  \"object\": \"chat.completion\",\n  \"created\": 1751751124,\n  \"model\": \"deepseek-ai/DeepSeek-V3\",\n  \"prompt\": [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"tool_calls\",\n      \"seed\": 15639278398829945000,\n      \"logprobs\": null,\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": null,\n        \"tool_calls\": [\n          {\n            \"index\": 0,\n            \"id\": \"call_uisegwyxvb1f30rud709q79v\",\n            \"type\": \"function\",\n            \"function\": {\n              \"arguments\": \"{\\\"location\\\":{\\\"city\\\":\\\"Seattle\\\"}}\",\n              \"name\": \"get_weather\"\n            }\n          }\n        ]\n      }\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 404,\n    \"completion_tokens\": 32,\n    \"total_tokens\": 436,\n    \"cached_tokens\": 0\n  }\n}"
+        }
+      },
+      "recorded_at": "Sat, 05 Jul 2025 21:32:05 GMT"
+    }
+  ],
+  "recorded_with": "VCR 6.3.1"
+}

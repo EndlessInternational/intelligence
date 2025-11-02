@@ -9,8 +9,8 @@ module Intelligence
 
         result = {}
         result[ :choices ] = []
-
         ( response_json[ :choices ] || [] ).each do | json_choice |
+          end_reason = to_end_reason( json_choice[ :finish_reason ] )
           if ( json_message = json_choice[ :message ] )
             result_message = { role: json_message[ :role ] }
             if json_message[ :content ] 
@@ -18,6 +18,7 @@ module Intelligence
             end
             if json_message[ :tool_calls ] && !json_message[ :tool_calls ].empty?
               result_message[ :contents ] ||= []
+              end_reason = :tool_called if end_reason == :ended
               json_message[ :tool_calls ].each do | json_message_tool_call |
                 result_message_tool_call_parameters = 
                   JSON.parse( json_message_tool_call[ :function ][ :arguments ], symbolize_names: true ) \
@@ -31,10 +32,7 @@ module Intelligence
               end 
             end
           end
-          result[ :choices ].push( { 
-            end_reason: to_end_reason( json_choice[ :finish_reason ] ), 
-            message: result_message 
-          } )
+          result[ :choices ].push( { end_reason: end_reason, message: result_message } )
         end
 
         metrics_json = response_json[ :usage ]
@@ -71,6 +69,7 @@ module Intelligence
       end
 
       def stream_result_chunk_attributes( context, chunk )
+        
         context ||= {}
         buffer = context[ :buffer ] || ''
         metrics = context[ :metrics ] || {
@@ -78,12 +77,7 @@ module Intelligence
           output_tokens:  0
         }
         choices = context[ :choices ] || Array.new( 1 , { message: {} } )
-
-        choices.each do | choice |
-          choice[ :message ][ :contents ] = choice[ :message ][ :contents ]&.map do | content |
-            { type: content[ :type ] }
-          end
-        end
+        choices_delta = prune_choices( choices )
 
         buffer += chunk
         while ( eol_index = buffer.index( "\n" ) )
@@ -99,20 +93,21 @@ module Intelligence
 
               data_choice_index = data_choice[ 'index' ]
               data_choice_delta = data_choice[ 'delta' ]
-              data_choice_finish_reason = data_choice[ 'finish_reason' ]
+              end_reason = to_end_reason( data_choice[ 'finish_reason' ] )
               
-              choices.fill( { message: {} }, choices.size, data_choice_index + 1 ) \
+              choices_delta.fill( { message: {} }, choices_delta.size, data_choice_index + 1 ) \
                 if choices.size <= data_choice_index 
-              contents = choices[ data_choice_index ][ :message ][ :contents ] || []
+              contents = choices_delta[ data_choice_index ][ :message ][ :contents ] || []
 
-              text_content = contents.first&.[]( :type ) == :text ? contents.first : nil 
               if data_choice_content = data_choice_delta[ 'content' ]
+                text_content = contents.last&.[]( :type ) == :text ? contents.last : nil 
                 if text_content.nil?  
-                  contents.unshift( text_content = { type: :text, text: data_choice_content } )
+                  contents.push( text_content = { type: :text, text: data_choice_content } )
                 else
                   text_content[ :text ] = ( text_content[ :text ] || '' ) + data_choice_content
                 end
               end 
+
               if data_choice_tool_calls = data_choice_delta[ 'tool_calls' ]
                 data_choice_tool_calls.each_with_index do | data_choice_tool_call, data_choice_tool_call_index |
                   if data_choice_tool_call_function = data_choice_tool_call[ 'function' ]
@@ -121,29 +116,29 @@ module Intelligence
                     data_choice_tool_name = data_choice_tool_call_function[ 'name' ]
                     data_choice_tool_parameters = data_choice_tool_call_function[ 'arguments' ]
                     
-                    tool_call_content_index = ( text_content.nil? ? 0 : 1 ) + data_choice_tool_index 
-                    if tool_call_content_index >= contents.length 
+                    # if the data_choice_tool_id is present this indicates a new tool call.
+                    if data_choice_tool_id
                       contents.push( { 
                         type: :tool_call, 
                         tool_call_id: data_choice_tool_id,
                         tool_name: data_choice_tool_name,
                         tool_parameters: data_choice_tool_parameters
                       } )
+                    # otherwise the tool is being aggregated  
                     else 
+                      tool_call_content_index = contents.rindex do | content | 
+                        content[ :type ] == :tool_call 
+                      end     
                       tool_call = contents[ tool_call_content_index ]
-                      tool_call[ :tool_call_id ] = ( tool_call[ :tool_call_id ] || '' ) + data_choice_tool_id \
-                        if data_choice_tool_id 
-                      tool_call[ :tool_name ] = ( tool_call[ :tool_name ] || '' ) + data_choice_tool_name \
-                        if data_choice_tool_name 
                       tool_call[ :tool_parameters ] = ( tool_call[ :tool_parameters ] || '' ) + data_choice_tool_parameters \
                         if data_choice_tool_parameters
                     end 
                   end 
                 end 
               end
-              choices[ data_choice_index ][ :message ][ :contents ] = contents
-              choices[ data_choice_index ][ :end_reason ] ||= 
-                to_end_reason( data_choice_finish_reason )
+
+              choices_delta[ data_choice_index ][ :message ][ :contents ] = contents
+              choices_delta[ data_choice_index ][ :end_reason ] ||= end_reason
             end
   
             if usage = data[ 'usage' ]
@@ -161,20 +156,14 @@ module Intelligence
 
         context[ :buffer ] = buffer 
         context[ :metrics ] = metrics
-        context[ :choices ] = choices
+        context[ :choices ] = merge_choices!( choices, choices_delta )
 
-        [ context, choices.empty? ? nil : { choices: choices.dup } ]
+        [ context, { choices: choices_delta } ]
+
       end
 
       def stream_result_attributes( context )
-        choices = context[ :choices ]
-        metrics = context[ :metrics ]
-
-        choices = choices.map do | choice |
-          { end_reason: choice[ :end_reason ] }
-        end
-
-        { choices: choices, metrics: context[ :metrics ] }
+        context
       end
 
       alias_method :stream_result_error_attributes, :chat_result_error_attributes

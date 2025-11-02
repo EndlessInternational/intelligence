@@ -6,13 +6,13 @@
         "uri": "https://api.together.xyz/v1/chat/completions",
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"model\":\"meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo\",\"max_tokens\":128.0,\"temperature\":0.0,\"messages\":[{\"role\":\"user\",\"content\":\"respond only with the word 'hello'\\n\"}]}"
+          "string": "{\"model\":\"deepseek-ai/DeepSeek-V3\",\"max_tokens\":128.0,\"temperature\":0.0,\"messages\":[{\"role\":\"user\",\"content\":\"respond only with the word 'hello'\\n\"}]}"
         },
         "headers": {
           "User-Agent": [
-            "Faraday v2.12.0"
+            "Faraday v2.13.1"
           ],
-          "Content-Type": [
+          "Content-type": [
             "application/json"
           ],
           "Authorization": [
@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Tue, 21 Jan 2025 01:55:17 GMT"
+            "Sat, 05 Jul 2025 21:31:53 GMT"
           ],
           "content-type": [
             "application/json; charset=utf-8"
@@ -45,28 +45,28 @@
             "DYNAMIC"
           ],
           "retry-after": [
-            "1"
+            "2"
           ],
           "access-control-allow-origin": [
             "*"
           ],
           "etag": [
-            "W/\"1f7-YOYcdw6bhGUJUv3vV8dEIAUAIGs\""
+            "W/\"209-4q9zCOXNjSHbV9JU6Fd7kP8x3Es\""
           ],
           "strict-transport-security": [
             "max-age=15552000; includeSubDomains"
           ],
           "x-amzn-trace-id": [
-            "f692777d-c290-4853-85de-5bbf95e2eb9f-noamzn"
+            "9a5a0abd-e629-497d-a07f-7888bbd3b7db-noamzn"
           ],
           "x-api-call-end": [
-            "2025-01-21T01:55:17.537Z"
+            "2025-07-05T21:31:53.000Z"
           ],
           "x-api-call-start": [
-            "2025-01-21T01:55:17.389Z"
+            "2025-07-05T21:31:52.576Z"
           ],
           "x-api-received": [
-            "2025-01-21T01:55:17.378Z"
+            "2025-07-05T21:31:52.561Z"
           ],
           "x-inference-version": [
             "v2"
@@ -75,19 +75,22 @@
             "false"
           ],
           "x-ratelimit-limit": [
-            "30"
+            "2"
           ],
           "x-ratelimit-limit-tokens": [
             "3000"
           ],
           "x-ratelimit-remaining": [
-            "57"
+            "3"
           ],
           "x-ratelimit-remaining-tokens": [
             "3000"
           ],
           "x-ratelimit-reset": [
-            "1"
+            "2"
+          ],
+          "x-request-id": [
+            "<X-REQUEST-ID>"
           ],
           "vary": [
             "Accept-Encoding"
@@ -104,10 +107,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "{\n  \"id\": \"9053ae613b8db9e8\",\n  \"object\": \"chat.completion\",\n  \"created\": 1737424517,\n  \"model\": \"meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo\",\n  \"prompt\": [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"eos\",\n      \"seed\": 6883111282696386000,\n      \"logprobs\": null,\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": \"hello\",\n        \"tool_calls\": []\n      }\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 43,\n    \"completion_tokens\": 2,\n    \"total_tokens\": 45\n  }\n}"
+          "string": "{\n  \"id\": \"o1uFLfz-zqrih-95a9f8c52e1f7640\",\n  \"object\": \"chat.completion\",\n  \"created\": 1751751112,\n  \"model\": \"deepseek-ai/DeepSeek-V3\",\n  \"prompt\": [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"stop\",\n      \"seed\": 9359570271977036000,\n      \"logprobs\": null,\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": \"hello\",\n        \"tool_calls\": []\n      }\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 11,\n    \"completion_tokens\": 2,\n    \"total_tokens\": 13,\n    \"cached_tokens\": 0\n  }\n}"
         }
       },
-      "recorded_at": "Tue, 21 Jan 2025 01:55:17 GMT"
+      "recorded_at": "Sat, 05 Jul 2025 21:31:52 GMT"
     },
     {
       "request": {
@@ -115,13 +118,13 @@
         "uri": "https://api.together.xyz/v1/chat/completions",
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"model\":\"meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo\",\"max_tokens\":128.0,\"temperature\":0.0,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"respond only with the word 'hello'\\n\"}]}"
+          "string": "{\"model\":\"deepseek-ai/DeepSeek-V3\",\"max_tokens\":128.0,\"temperature\":0.0,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"respond only with the word 'hello'\\n\"}]}"
         },
         "headers": {
           "User-Agent": [
-            "Faraday v2.12.0"
+            "Faraday v2.13.1"
           ],
-          "Content-Type": [
+          "Content-type": [
             "application/json"
           ],
           "Authorization": [
@@ -136,7 +139,7 @@
         },
         "headers": {
           "date": [
-            "Tue, 21 Jan 2025 01:55:17 GMT"
+            "Sat, 05 Jul 2025 21:31:53 GMT"
           ],
           "content-type": [
             "application/json; charset=utf-8"
@@ -160,22 +163,22 @@
             "*"
           ],
           "etag": [
-            "W/\"1f7-o5xjAKbi6PyrphN66cNlyZ3FlOk\""
+            "W/\"20a-hGhY1GHKBSDTxvisuPjDU4L3Nqs\""
           ],
           "strict-transport-security": [
             "max-age=15552000; includeSubDomains"
           ],
           "x-amzn-trace-id": [
-            "5cccceb0-879f-4ef1-8d9a-aab762f92aee-noamzn"
+            "939b7891-60a1-4f55-9595-3428a1e81e63-noamzn"
           ],
           "x-api-call-end": [
-            "2025-01-21T01:55:17.911Z"
+            "2025-07-05T21:31:53.548Z"
           ],
           "x-api-call-start": [
-            "2025-01-21T01:55:17.744Z"
+            "2025-07-05T21:31:53.216Z"
           ],
           "x-api-received": [
-            "2025-01-21T01:55:17.706Z"
+            "2025-07-05T21:31:53.204Z"
           ],
           "x-inference-version": [
             "v2"
@@ -184,19 +187,22 @@
             "false"
           ],
           "x-ratelimit-limit": [
-            "30"
+            "2"
           ],
           "x-ratelimit-limit-tokens": [
             "3000"
           ],
           "x-ratelimit-remaining": [
-            "56"
+            "2"
           ],
           "x-ratelimit-remaining-tokens": [
             "3000"
           ],
           "x-ratelimit-reset": [
             "1"
+          ],
+          "x-request-id": [
+            "<X-REQUEST-ID>"
           ],
           "vary": [
             "Accept-Encoding"
@@ -213,10 +219,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "{\n  \"id\": \"9053ae631820868b\",\n  \"object\": \"chat.completion\",\n  \"created\": 1737424517,\n  \"model\": \"meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo\",\n  \"prompt\": [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"eos\",\n      \"seed\": 3134579615351282700,\n      \"logprobs\": null,\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": \"hello\",\n        \"tool_calls\": []\n      }\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 78,\n    \"completion_tokens\": 2,\n    \"total_tokens\": 80\n  }\n}"
+          "string": "{\n  \"id\": \"o1uFLs5-zqrih-95a9f8c93e87a33e\",\n  \"object\": \"chat.completion\",\n  \"created\": 1751751113,\n  \"model\": \"deepseek-ai/DeepSeek-V3\",\n  \"prompt\": [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"stop\",\n      \"seed\": 14541272640571668000,\n      \"logprobs\": null,\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": \"hello\",\n        \"tool_calls\": []\n      }\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 50,\n    \"completion_tokens\": 2,\n    \"total_tokens\": 52,\n    \"cached_tokens\": 0\n  }\n}"
         }
       },
-      "recorded_at": "Tue, 21 Jan 2025 01:55:17 GMT"
+      "recorded_at": "Sat, 05 Jul 2025 21:31:53 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

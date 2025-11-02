@@ -6,13 +6,13 @@
         "uri": "https://openrouter.ai/api/v1/chat/completions",
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"model\":\"meta-llama/llama-3.2-11b-vision-instruct\",\"max_tokens\":16,\"temperature\":0.0,\"stop\":[\"five\"],\"stream\":true,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"count to five in words, all lower case, one word per line\\n\"},{\"role\":\"assistant\",\"content\":\"one\\ntwo\\nthree\\nfour\\nfive\\n\"},{\"role\":\"user\",\"content\":\"count to twenty in words, all lower case, one word per line\\n\"}]}"
+          "string": "{\"model\":\"qwen/qwen-2.5-vl-7b-instruct\",\"max_tokens\":16,\"temperature\":0.0,\"stop\":[\"five\"],\"stream\":true,\"provider\":{\"order\":[\"Hyperbolic\"],\"allow_fallbacks\":false},\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"count to five in words, all lower case, one word per line\\n\"},{\"role\":\"assistant\",\"content\":\"one\\ntwo\\nthree\\nfour\\nfive\\n\"},{\"role\":\"user\",\"content\":\"count to twenty in words, all lower case, one word per line\\n\"}]}"
         },
         "headers": {
           "User-Agent": [
-            "Faraday v2.12.0"
+            "Faraday v2.13.1"
           ],
-          "Content-Type": [
+          "Content-type": [
             "application/json"
           ],
           "Authorization": [
@@ -27,7 +27,7 @@
         },
         "headers": {
           "date": [
-            "Mon, 20 Jan 2025 22:42:17 GMT"
+            "Wed, 01 Oct 2025 23:17:23 GMT"
           ],
           "content-type": [
             "text/event-stream"
@@ -38,37 +38,37 @@
           "connection": [
             "keep-alive"
           ],
+          "cf-ray": [
+            "<CF-RAY>"
+          ],
           "access-control-allow-origin": [
             "*"
           ],
           "cache-control": [
             "no-cache"
           ],
-          "x-clerk-auth-message": [
-            "Invalid JWT form. A JWT consists of three parts separated by dots. (reason=token-invalid, token-carrier=header)"
-          ],
-          "x-clerk-auth-reason": [
-            "token-invalid"
-          ],
-          "x-clerk-auth-status": [
-            "signed-out"
-          ],
           "vary": [
             "Accept-Encoding"
           ],
+          "permissions-policy": [
+            "payment=(self \"https://checkout.stripe.com\" \"https://connect-js.stripe.com\" \"https://js.stripe.com\" \"https://*.js.stripe.com\" \"https://hooks.stripe.com\")"
+          ],
+          "referrer-policy": [
+            "no-referrer, strict-origin-when-cross-origin"
+          ],
+          "x-content-type-options": [
+            "nosniff"
+          ],
           "server": [
             "cloudflare"
-          ],
-          "cf-ray": [
-            "<CF-RAY>"
           ]
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "data: {\"id\":\"gen-1737412937-7lHieYYIFdxbp4foOWDs\",\"provider\":\"DeepInfra\",\"model\":\"meta-llama/llama-3.2-11b-vision-instruct\",\"object\":\"chat.completion.chunk\",\"created\":1737412937,\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"\"},\"finish_reason\":null,\"native_finish_reason\":null}]}\n\ndata: {\"id\":\"gen-1737412937-7lHieYYIFdxbp4foOWDs\",\"provider\":\"DeepInfra\",\"model\":\"meta-llama/llama-3.2-11b-vision-instruct\",\"object\":\"chat.completion.chunk\",\"created\":1737412937,\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"one\"},\"finish_reason\":null,\"native_finish_reason\":null}]}\n\ndata: {\"id\":\"gen-1737412937-7lHieYYIFdxbp4foOWDs\",\"provider\":\"DeepInfra\",\"model\":\"meta-llama/llama-3.2-11b-vision-instruct\",\"object\":\"chat.completion.chunk\",\"created\":1737412937,\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"\\n\"},\"finish_reason\":null,\"native_finish_reason\":null}]}\n\ndata: {\"id\":\"gen-1737412937-7lHieYYIFdxbp4foOWDs\",\"provider\":\"DeepInfra\",\"model\":\"meta-llama/llama-3.2-11b-vision-instruct\",\"object\":\"chat.completion.chunk\",\"created\":1737412937,\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"two\"},\"finish_reason\":null,\"native_finish_reason\":null}]}\n\ndata: {\"id\":\"gen-1737412937-7lHieYYIFdxbp4foOWDs\",\"provider\":\"DeepInfra\",\"model\":\"meta-llama/llama-3.2-11b-vision-instruct\",\"object\":\"chat.completion.chunk\",\"created\":1737412937,\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"\\n\"},\"finish_reason\":null,\"native_finish_reason\":null}]}\n\ndata: {\"id\":\"gen-1737412937-7lHieYYIFdxbp4foOWDs\",\"provider\":\"DeepInfra\",\"model\":\"meta-llama/llama-3.2-11b-vision-instruct\",\"object\":\"chat.completion.chunk\",\"created\":1737412937,\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"three\"},\"finish_reason\":null,\"native_finish_reason\":null}]}\n\ndata: {\"id\":\"gen-1737412937-7lHieYYIFdxbp4foOWDs\",\"provider\":\"DeepInfra\",\"model\":\"meta-llama/llama-3.2-11b-vision-instruct\",\"object\":\"chat.completion.chunk\",\"created\":1737412937,\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"\\n\"},\"finish_reason\":null,\"native_finish_reason\":null}]}\n\ndata: {\"id\":\"gen-1737412937-7lHieYYIFdxbp4foOWDs\",\"provider\":\"DeepInfra\",\"model\":\"meta-llama/llama-3.2-11b-vision-instruct\",\"object\":\"chat.completion.chunk\",\"created\":1737412937,\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"four\"},\"finish_reason\":null,\"native_finish_reason\":null}]}\n\ndata: {\"id\":\"gen-1737412937-7lHieYYIFdxbp4foOWDs\",\"provider\":\"DeepInfra\",\"model\":\"meta-llama/llama-3.2-11b-vision-instruct\",\"object\":\"chat.completion.chunk\",\"created\":1737412937,\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"\\n\"},\"finish_reason\":null,\"native_finish_reason\":null}]}\n\ndata: {\"id\":\"gen-1737412937-7lHieYYIFdxbp4foOWDs\",\"provider\":\"DeepInfra\",\"model\":\"meta-llama/llama-3.2-11b-vision-instruct\",\"object\":\"chat.completion.chunk\",\"created\":1737412937,\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"\"},\"finish_reason\":\"stop\",\"native_finish_reason\":\"stop\"}]}\n\ndata: {\"id\":\"gen-1737412937-7lHieYYIFdxbp4foOWDs\",\"provider\":\"DeepInfra\",\"model\":\"meta-llama/llama-3.2-11b-vision-instruct\",\"object\":\"chat.completion.chunk\",\"created\":1737412937,\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"\"},\"finish_reason\":null,\"native_finish_reason\":null,\"logprobs\":null}],\"usage\":{\"prompt_tokens\":97,\"completion_tokens\":8,\"total_tokens\":105}}\n\ndata: [DONE]\n\n"
+          "string": "data: {\"id\":\"gen-1759360642-JeD1iPPT5vnz7TYO7IW7\",\"provider\":\"Hyperbolic\",\"model\":\"qwen/qwen-2.5-vl-7b-instruct\",\"object\":\"chat.completion.chunk\",\"created\":1759360642,\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"\"},\"finish_reason\":null,\"native_finish_reason\":null,\"logprobs\":null}]}\n\ndata: {\"id\":\"gen-1759360642-JeD1iPPT5vnz7TYO7IW7\",\"provider\":\"Hyperbolic\",\"model\":\"qwen/qwen-2.5-vl-7b-instruct\",\"object\":\"chat.completion.chunk\",\"created\":1759360642,\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"\"},\"finish_reason\":null,\"native_finish_reason\":null,\"logprobs\":null}]}\n\ndata: {\"id\":\"gen-1759360642-JeD1iPPT5vnz7TYO7IW7\",\"provider\":\"Hyperbolic\",\"model\":\"qwen/qwen-2.5-vl-7b-instruct\",\"object\":\"chat.completion.chunk\",\"created\":1759360642,\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"o\"},\"finish_reason\":null,\"native_finish_reason\":null,\"logprobs\":null}]}\n\ndata: {\"id\":\"gen-1759360642-JeD1iPPT5vnz7TYO7IW7\",\"provider\":\"Hyperbolic\",\"model\":\"qwen/qwen-2.5-vl-7b-instruct\",\"object\":\"chat.completion.chunk\",\"created\":1759360642,\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"ne\\n\"},\"finish_reason\":null,\"native_finish_reason\":null,\"logprobs\":null}]}\n\ndata: {\"id\":\"gen-1759360642-JeD1iPPT5vnz7TYO7IW7\",\"provider\":\"Hyperbolic\",\"model\":\"qwen/qwen-2.5-vl-7b-instruct\",\"object\":\"chat.completion.chunk\",\"created\":1759360642,\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"t\"},\"finish_reason\":null,\"native_finish_reason\":null,\"logprobs\":null}]}\n\ndata: {\"id\":\"gen-1759360642-JeD1iPPT5vnz7TYO7IW7\",\"provider\":\"Hyperbolic\",\"model\":\"qwen/qwen-2.5-vl-7b-instruct\",\"object\":\"chat.completion.chunk\",\"created\":1759360642,\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"wo\\nth\"},\"finish_reason\":null,\"native_finish_reason\":null,\"logprobs\":null}]}\n\ndata: {\"id\":\"gen-1759360642-JeD1iPPT5vnz7TYO7IW7\",\"provider\":\"Hyperbolic\",\"model\":\"qwen/qwen-2.5-vl-7b-instruct\",\"object\":\"chat.completion.chunk\",\"created\":1759360642,\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"r\"},\"finish_reason\":null,\"native_finish_reason\":null,\"logprobs\":null}]}\n\ndata: {\"id\":\"gen-1759360642-JeD1iPPT5vnz7TYO7IW7\",\"provider\":\"Hyperbolic\",\"model\":\"qwen/qwen-2.5-vl-7b-instruct\",\"object\":\"chat.completion.chunk\",\"created\":1759360642,\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"ee\\n\"},\"finish_reason\":null,\"native_finish_reason\":null,\"logprobs\":null}]}\n\ndata: {\"id\":\"gen-1759360642-JeD1iPPT5vnz7TYO7IW7\",\"provider\":\"Hyperbolic\",\"model\":\"qwen/qwen-2.5-vl-7b-instruct\",\"object\":\"chat.completion.chunk\",\"created\":1759360642,\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"fo\"},\"finish_reason\":null,\"native_finish_reason\":null,\"logprobs\":null}]}\n\ndata: {\"id\":\"gen-1759360642-JeD1iPPT5vnz7TYO7IW7\",\"provider\":\"Hyperbolic\",\"model\":\"qwen/qwen-2.5-vl-7b-instruct\",\"object\":\"chat.completion.chunk\",\"created\":1759360642,\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"ur\\n\"},\"finish_reason\":\"stop\",\"native_finish_reason\":\"stop\",\"logprobs\":null}]}\n\ndata: {\"id\":\"gen-1759360642-JeD1iPPT5vnz7TYO7IW7\",\"provider\":\"Hyperbolic\",\"model\":\"qwen/qwen-2.5-vl-7b-instruct\",\"object\":\"chat.completion.chunk\",\"created\":1759360642,\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"\"},\"finish_reason\":null,\"native_finish_reason\":null,\"logprobs\":null}],\"usage\":{\"prompt_tokens\":101,\"completion_tokens\":10,\"total_tokens\":111}}\n\ndata: [DONE]\n\n"
         }
       },
-      "recorded_at": "Mon, 20 Jan 2025 22:42:18 GMT"
+      "recorded_at": "Wed, 01 Oct 2025 23:17:23 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

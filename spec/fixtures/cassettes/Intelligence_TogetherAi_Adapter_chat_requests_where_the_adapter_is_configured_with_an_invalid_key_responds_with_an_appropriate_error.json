@@ -6,13 +6,13 @@
         "uri": "https://api.together.xyz/v1/chat/completions",
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"model\":\"meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo\",\"max_tokens\":16.0,\"temperature\":0.0,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"respond only with the word 'hello'\\n\"}]}"
+          "string": "{\"model\":\"deepseek-ai/DeepSeek-V3\",\"max_tokens\":16.0,\"temperature\":0.0,\"messages\":[{\"role\":\"system\",\"content\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"},{\"role\":\"user\",\"content\":\"respond only with the word 'hello'\\n\"}]}"
         },
         "headers": {
           "User-Agent": [
-            "Faraday v2.12.0"
+            "Faraday v2.13.1"
           ],
-          "Content-Type": [
+          "Content-type": [
             "application/json"
           ],
           "Authorization": [
@@ -27,13 +27,13 @@
         },
         "headers": {
           "date": [
-            "Tue, 21 Jan 2025 01:55:24 GMT"
+            "Sat, 05 Jul 2025 21:32:07 GMT"
           ],
           "content-type": [
             "application/json; charset=utf-8"
           ],
           "content-length": [
-            "251"
+            "265"
           ],
           "connection": [
             "keep-alive"
@@ -48,16 +48,19 @@
             "*"
           ],
           "etag": [
-            "W/\"fb-+v83tIjBONudqWy1FDtUUuH73zw\""
+            "W/\"109-Lv9wmK0kxmr5smBLDHKwdhx1+Ew\""
           ],
           "strict-transport-security": [
             "max-age=15552000; includeSubDomains"
           ],
           "x-amzn-trace-id": [
-            "47c6518c-bd2b-4c36-a3c1-19e3eea0f326-noamzn"
+            "601512a6-e912-42a9-88be-bb9e171c9e09-noamzn"
           ],
           "x-api-received": [
-            "2025-01-21T01:55:24.779Z"
+            "2025-07-05T21:32:07.201Z"
+          ],
+          "x-request-id": [
+            "<X-REQUEST-ID>"
           ],
           "vary": [
             "Accept-Encoding"
@@ -71,10 +74,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "{\n  \"id\": \"9053ae8fadf20879\",\n  \"error\": {\n    \"message\": \"Invalid API key provided. You can find your API key at https://api.together.xyz/settings/api-keys.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"invalid_api_key\"\n  }\n}"
+          "string": "{\n  \"id\": \"o1uFR2Q-zqrih-95a9f920af18090f\",\n  \"error\": {\n    \"message\": \"Invalid API key provided. You can find your API key at https://api.together.xyz/settings/api-keys.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"invalid_api_key\"\n  }\n}"
         }
       },
-      "recorded_at": "Tue, 21 Jan 2025 01:55:24 GMT"
+      "recorded_at": "Sat, 05 Jul 2025 21:32:07 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

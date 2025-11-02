@@ -8,17 +8,25 @@ module Intelligence
         uri             URI, required: true 
       end
 
-      def initialize( attributes )
-        @uri = URI( attributes[ :uri ] ) if attributes[ :uri ]
-        @content_type = attributes[ :content_type ]
+      attribute         :uri
+
+      def initialize( attributes = nil )
+        if attributes&.fetch( :uri )
+          attributes = attributes.dup
+          attributes[ :uri ] = URI( attributes[ :uri ] ) unless attributes[ :uri ].is_a?( URI )
+        end
+        super( attributes )
       end
 
       def content_type 
-        @content_type ||= valid_uri? ? MIME::Types.type_for( @uri.path )&.first&.content_type : nil
+        @attributes[ :content_type ] ||= begin
+          computed = valid_uri? ? MIME::Types.type_for( uri.path )&.first&.content_type : nil
+          computed&.freeze
+        end
       end
 
       def valid_uri?( schemes = [ 'http', 'https' ] )
-        !!( @uri && schemes.include?( @uri.scheme ) && @uri.path && !@uri.path.empty? )      
+        !!( uri && schemes.include?( uri.scheme ) && uri.path && !uri.path.empty? )      
       end
 
       def valid?
@@ -26,7 +34,10 @@ module Intelligence
       end
 
       def to_h
-        { type: :file, content_type: content_type, uri: @uri.to_s }
+        hash = super
+        hash[ :uri ] = uri.to_s if hash[ :uri ]
+        hash[ :content_type ] = content_type
+        hash
       end
 
     end 
