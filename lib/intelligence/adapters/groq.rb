@@ -15,13 +15,10 @@ module Intelligence
           logprobs            [ TrueClass, FalseClass ]
           max_tokens          Integer
           model               String
-          # the parallel_tool_calls is only allowed when 'tools' are specified
           parallel_tool_calls [ TrueClass, FalseClass ]
           presence_penalty    Float
           response_format do
-            # 'text' and 'json_object' are the only supported types; you must also instruct
-            # the model to output json
-            type              Symbol, in: [ :text, :json_object ]
+              type              Symbol, in: [ :text, :json_object ]
           end
           seed                Integer
           stop                String, array: true
@@ -33,7 +30,7 @@ module Intelligence
 
           temperature         Float
           tool                array: true, as: :tools, &Tool.schema
-          tool_choice String
+          tool_choice         String
           top_logprobs        Integer
           top_p               Float
           user                String
