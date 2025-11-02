@@ -10,18 +10,14 @@ module Intelligence
       CHAT_COMPLETIONS_PATH = 'openai/deployments'
 
       schema do
-        # normalized properties, used by all endpoints
         base_uri                    String, required: true
         key                         String
-        # Enterprise authentication properties
         tenant_id                   String
         client_id                   String
         client_secret               String
         api_version                 String, required: true, default: '2024-02-01'
 
-        # properties for generative text endpoints
         chat_options do
-          # normalized properties for openai generative text endpoint
           model                     String, required: true
           max_tokens                Integer, as: :max_completion_tokens
           temperature               Float, in: (0..1)
@@ -35,32 +31,19 @@ module Intelligence
 
           modalities                String, array: true
           response_format do
-            # 'text' and 'json_schema' are the only supported types
             type                    Symbol, in: [ :text, :json_schema ]
             json_schema
           end
 
-          # Azure OpenAI variant properties
           max_completion_tokens     Integer
 
-          # tools
           tool                      array: true, as: :tools, &Tool.schema
-          # tool choice configuration
-          #
-          # `tool_choice :none`
-          # or
-          # ```
-          # tool_choice :function do
-          #   function :my_function
-          # end
-          # ```
           tool_choice               arguments: :type do
             type                    Symbol, in: [ :none, :auto, :required ]
             function                arguments: :name do
               name                  Symbol
             end
           end
-          # the parallel_tool_calls parameter is only allowed when 'tools' are specified
           parallel_tool_calls       [ TrueClass, FalseClass ]
 
         end
@@ -89,7 +72,6 @@ module Intelligence
         raise ArgumentError.new( "A model is required to build an Azure chat request." ) \
           if model.nil?
 
-        # Azure OpenAI endpoint format: https://{endpoint}/openai/deployments/{model}/chat/completions?api-version={api_version}
         base_uri = ( base_uri.end_with?( '/' ) ? base_uri : base_uri + '/' )
         "#{base_uri}#{CHAT_COMPLETIONS_PATH}/#{model}/chat/completions?api-version=#{api_version}"
       end
@@ -103,11 +85,9 @@ module Intelligence
         client_secret = options[ :client_secret ]
 
         if tenant_id && client_id && client_secret
-          # Use enterprise authentication (OAuth 2.0 client credentials)
           token = fetch_azure_access_token(tenant_id, client_id, client_secret)
           result[ 'Authorization' ] = "Bearer #{token}"
         else
-          # Use API key authentication (fallback)
           key = options[ :key ]
           raise ArgumentError.new( "An Azure key is required to build an Azure request." ) \
             if key.nil?
@@ -122,11 +102,9 @@ module Intelligence
         tools = options&.delete( :tools ) || []
         options = merge_options( @options, build_options( options ) )
 
-        # Remove model from the request body as it's in the URL for Azure OpenAI
         chat_options = options[ :chat_options ]&.dup || {}
         chat_options.delete( :model )
 
-        # Use the parent implementation with cleaned options
         super( conversation, { tools: tools }.merge( options.merge( chat_options: chat_options ) ) )
       end
 
