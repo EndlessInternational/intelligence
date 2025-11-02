@@ -12,10 +12,10 @@ azure_enterprise = Intelligence::Adapter.build! :azure do
   client_id     ENV['AZURE_CLIENT_ID']
   client_secret ENV['AZURE_CLIENT_SECRET']
 
-  api_version '2024-02-01'
+  api_version '2024-10-21'
 
   chat_options do
-    model 'gpt-4o'  # Azure deployment name
+    model 'gpt-5'  # Azure deployment name
     max_tokens 256
     temperature 0.7
   end
@@ -25,10 +25,10 @@ end
 azure_api_key = Intelligence::Adapter.build! :azure do
   base_uri ENV['AZURE_OPENAI_ENDPOINT']
   key ENV['AZURE_OPENAI_API_KEY']
-  api_version '2024-02-01'
+  api_version '2024-10-21'
 
   chat_options do
-    model 'gpt-4o'
+    model 'gpt-5'
     max_tokens 256
     temperature 0.7
   end

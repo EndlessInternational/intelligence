@@ -15,7 +15,7 @@ module Intelligence
         tenant_id                   String
         client_id                   String
         client_secret               String
-        api_version                 String, required: true, default: '2024-02-01'
+        api_version                 String, required: true, default: '2024-10-21'
 
         chat_options do
           model                     String, required: true
