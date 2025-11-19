@@ -37,11 +37,20 @@ module Intelligence
 
           # google specific thinking properies
           reasoning as: :thinkingConfig, default: {} do 
-            thinking_budget       Integer,  as: :thinkingBudget, in:(-1...), default: 0
+            # gemini 2 and 2.5 models
+            thinking_budget       Integer,  as: :thinkingBudget, in:(-1...)
+            # gemini 3 models
+            thinking_level        String,   as: :thinkingLevel, in:['HIGH','LOW']
+            # gemini 2, 2.5 and 3 models
             include_thoughts      [ TrueClass, FalseClass ], as: :includeThoughts
 
             # normalized properties
+
+            # gemini 2 and 2.5 models
             budget                Integer,  as: :thinkingBudget, in:(-1...)
+            # gemini 3 models
+            effort                Integer,  as: :thinkingLevel, in:['HIGH','LOW']
+            # gemini 2, 2.5 and 3 models
             summary               [ TrueClass, FalseClass ], as: :includeThoughts
           end
 

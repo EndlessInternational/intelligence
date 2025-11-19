@@ -6,7 +6,7 @@
         "uri": "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:streamGenerateContent?alt=sse&key=<KEY>",
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"generationConfig\":{\"thinkingConfig\":{\"thinkingBudget\":0},\"maxOutputTokens\":32,\"temperature\":0.0},\"systemInstruction\":{\"role\":\"user\",\"parts\":[{\"text\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"}]},\"contents\":[{\"role\":\"user\",\"parts\":[{\"text\":\"what is the text in the attached file?\\n\"},{\"inline_data\":{\"mime_type\":\"text/plain\",\"data\":\"dGhpcyBpcyBhIHRlc3QK\"}}]},{\"role\":\"model\",\"parts\":[{\"text\":\"this is a test\\n\"}]},{\"role\":\"user\",\"parts\":[{\"text\":\"what about this file? what is it about?\\nrespond in less than 16 words\\n\"},{\"inline_data\":{\"mime_type\":\"text/plain\",\"data\":\"SW4gdGhlIGJlZ2lubmluZywgdGhlcmUgd2FzIGEgc2luZ3VsYXJpdHnigJRhbiBpbmZpbml0ZXNpbWFsbHkgc21hbGwsIGhvdCwgYW5kIGRlbnNlIHBvaW50LiAKQXBwcm94aW1hdGVseSAxMy43IGJpbGxpb24geWVhcnMgYWdvLCB0aGlzIHNpbmd1bGFyaXR5IGV4cGFuZGVkIGluIGEgbW9udW1lbnRhbCBldmVudCBrbm93biAKYXMgdGhlIEJpZyBCYW5nLCBnaXZpbmcgYmlydGggdG8gdGhlIHVuaXZlcnNlIGFzIHdlIGtub3cgaXQuIFRpbWUgYW5kIHNwYWNlIHVuZnVybGVkLCBsZWFkaW5nIAp0byB0aGUgZm9ybWF0aW9uIG9mIHN1YmF0b21pYyBwYXJ0aWNsZXMsIGF0b21zLCBhbmQgZXZlbnR1YWxseSwgdGhlIHZhc3QgYXJyYXkgb2YgY2VsZXN0aWFsIApib2RpZXMgdGhhdCBwb3B1bGF0ZSB0aGUgY29zbW9zIHRvZGF5LiBGcm9tIHRoYXQgcHJpbW9yZGlhbCBleHBsb3Npb24gZW1lcmdlZCBnYWxheGllcywgc3RhcnMsIApwbGFuZXRzLCBhbmQgdGhlIGludHJpY2F0ZSB0YXBlc3RyeSBvZiBsaWZlLCBhbGwgZXZvbHZpbmcgb3ZlciBiaWxsaW9ucyBvZiB5ZWFycyBpbnRvIHRoZSAKY29tcGxleCBhbmQgd29uZHJvdXMgdW5pdmVyc2Ugd2Ugb2JzZXJ2ZSBub3cuCg==\"}}]}]}"
+          "string": "{\"generationConfig\":{\"thinkingConfig\":{\"thinkingBudget\":0},\"maxOutputTokens\":256,\"temperature\":0.0},\"systemInstruction\":{\"role\":\"user\",\"parts\":[{\"text\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"}]},\"contents\":[{\"role\":\"user\",\"parts\":[{\"text\":\"what is the text in the attached file?\\n\"},{\"inline_data\":{\"mime_type\":\"text/plain\",\"data\":\"dGhpcyBpcyBhIHRlc3QK\"}}]},{\"role\":\"model\",\"parts\":[{\"text\":\"this is a test\\n\"}]},{\"role\":\"user\",\"parts\":[{\"text\":\"what about this file? what is it about?\\nrespond in less than 16 words\\n\"},{\"inline_data\":{\"mime_type\":\"text/plain\",\"data\":\"SW4gdGhlIGJlZ2lubmluZywgdGhlcmUgd2FzIGEgc2luZ3VsYXJpdHnigJRhbiBpbmZpbml0ZXNpbWFsbHkgc21hbGwsIGhvdCwgYW5kIGRlbnNlIHBvaW50LiAKQXBwcm94aW1hdGVseSAxMy43IGJpbGxpb24geWVhcnMgYWdvLCB0aGlzIHNpbmd1bGFyaXR5IGV4cGFuZGVkIGluIGEgbW9udW1lbnRhbCBldmVudCBrbm93biAKYXMgdGhlIEJpZyBCYW5nLCBnaXZpbmcgYmlydGggdG8gdGhlIHVuaXZlcnNlIGFzIHdlIGtub3cgaXQuIFRpbWUgYW5kIHNwYWNlIHVuZnVybGVkLCBsZWFkaW5nIAp0byB0aGUgZm9ybWF0aW9uIG9mIHN1YmF0b21pYyBwYXJ0aWNsZXMsIGF0b21zLCBhbmQgZXZlbnR1YWxseSwgdGhlIHZhc3QgYXJyYXkgb2YgY2VsZXN0aWFsIApib2RpZXMgdGhhdCBwb3B1bGF0ZSB0aGUgY29zbW9zIHRvZGF5LiBGcm9tIHRoYXQgcHJpbW9yZGlhbCBleHBsb3Npb24gZW1lcmdlZCBnYWxheGllcywgc3RhcnMsIApwbGFuZXRzLCBhbmQgdGhlIGludHJpY2F0ZSB0YXBlc3RyeSBvZiBsaWZlLCBhbGwgZXZvbHZpbmcgb3ZlciBiaWxsaW9ucyBvZiB5ZWFycyBpbnRvIHRoZSAKY29tcGxleCBhbmQgd29uZHJvdXMgdW5pdmVyc2Ugd2Ugb2JzZXJ2ZSBub3cuCg==\"}}]}]}"
         },
         "headers": {
           "User-Agent": [
@@ -36,7 +36,7 @@
             "chunked"
           ],
           "date": [
-            "Thu, 02 Oct 2025 17:42:26 GMT"
+            "Wed, 19 Nov 2025 16:13:05 GMT"
           ],
           "server": [
             "scaffolding on HTTPServer2"
@@ -51,7 +51,7 @@
             "nosniff"
           ],
           "server-timing": [
-            "gfet4t7; dur=1236"
+            "gfet4t7; dur=383"
           ],
           "alt-svc": [
             "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
@@ -59,10 +59,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "data: {\"candidates\": [{\"content\": {\"parts\": [{\"text\": \"The Big Bang:\"}],\"role\": \"model\"},\"index\": 0}],\"usageMetadata\": {\"promptTokenCount\": 222,\"candidatesTokenCount\": 4,\"totalTokenCount\": 226,\"promptTokensDetails\": [{\"modality\": \"TEXT\",\"tokenCount\": 222}]},\"modelVersion\": \"gemini-2.5-flash\",\"responseId\": \"grneaPq4KOm1qtsP9qbrqQ4\"}\r\n\r\ndata: {\"candidates\": [{\"content\": {\"parts\": [{\"text\": \" universe's origin, from singularity to cosmos, stars, and life.\"}],\"role\": \"model\"},\"finishReason\": \"STOP\",\"index\": 0}],\"usageMetadata\": {\"promptTokenCount\": 222,\"candidatesTokenCount\": 19,\"totalTokenCount\": 241,\"promptTokensDetails\": [{\"modality\": \"TEXT\",\"tokenCount\": 222}]},\"modelVersion\": \"gemini-2.5-flash\",\"responseId\": \"grneaPq4KOm1qtsP9qbrqQ4\"}\r\n\r\n"
+          "string": "data: {\"candidates\": [{\"content\": {\"parts\": [{\"text\": \"The text\"}],\"role\": \"model\"},\"index\": 0}],\"usageMetadata\": {\"promptTokenCount\": 222,\"candidatesTokenCount\": 2,\"totalTokenCount\": 224,\"promptTokensDetails\": [{\"modality\": \"TEXT\",\"tokenCount\": 222}]},\"modelVersion\": \"gemini-2.5-flash\",\"responseId\": \"kewdabr5GfPXjMcPwtH1kAc\"}\r\n\r\ndata: {\"candidates\": [{\"content\": {\"parts\": [{\"text\": \" describes the Big Bang theory and the universe's origin and evolution.\"}],\"role\": \"model\"},\"finishReason\": \"STOP\",\"index\": 0}],\"usageMetadata\": {\"promptTokenCount\": 222,\"candidatesTokenCount\": 17,\"totalTokenCount\": 239,\"promptTokensDetails\": [{\"modality\": \"TEXT\",\"tokenCount\": 222}]},\"modelVersion\": \"gemini-2.5-flash\",\"responseId\": \"kewdabr5GfPXjMcPwtH1kAc\"}\r\n\r\n"
         }
       },
-      "recorded_at": "Thu, 02 Oct 2025 17:42:26 GMT"
+      "recorded_at": "Wed, 19 Nov 2025 16:13:05 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

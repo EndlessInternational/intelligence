@@ -6,7 +6,7 @@
         "uri": "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=<KEY>",
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"generationConfig\":{\"thinkingConfig\":{\"thinkingBudget\":0},\"maxOutputTokens\":128,\"temperature\":0.0},\"contents\":[{\"role\":\"user\",\"parts\":[{\"text\":\"respond only with the word 'hello'\\n\"}]}]}"
+          "string": "{\"generationConfig\":{\"thinkingConfig\":{\"thinkingBudget\":0},\"maxOutputTokens\":256,\"temperature\":0.0},\"contents\":[{\"role\":\"user\",\"parts\":[{\"text\":\"respond only with the word 'hello'\\n\"}]}]}"
         },
         "headers": {
           "User-Agent": [
@@ -33,7 +33,7 @@
             "gzip"
           ],
           "date": [
-            "Thu, 02 Oct 2025 17:39:48 GMT"
+            "Wed, 19 Nov 2025 16:11:20 GMT"
           ],
           "server": [
             "scaffolding on HTTPServer2"
@@ -48,7 +48,7 @@
             "nosniff"
           ],
           "server-timing": [
-            "gfet4t7; dur=534"
+            "gfet4t7; dur=1214"
           ],
           "alt-svc": [
             "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
@@ -59,10 +59,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "{\n  \"candidates\": [\n    {\n      \"content\": {\n        \"parts\": [\n          {\n            \"text\": \"hello\"\n          }\n        ],\n        \"role\": \"model\"\n      },\n      \"finishReason\": \"STOP\",\n      \"index\": 0\n    }\n  ],\n  \"usageMetadata\": {\n    \"promptTokenCount\": 10,\n    \"candidatesTokenCount\": 1,\n    \"totalTokenCount\": 11,\n    \"promptTokensDetails\": [\n      {\n        \"modality\": \"TEXT\",\n        \"tokenCount\": 10\n      }\n    ]\n  },\n  \"modelVersion\": \"gemini-2.5-flash\",\n  \"responseId\": \"5LjeaMWDNMTnqtsP35PByQI\"\n}\n"
+          "string": "{\n  \"candidates\": [\n    {\n      \"content\": {\n        \"parts\": [\n          {\n            \"text\": \"hello\"\n          }\n        ],\n        \"role\": \"model\"\n      },\n      \"finishReason\": \"STOP\",\n      \"index\": 0\n    }\n  ],\n  \"usageMetadata\": {\n    \"promptTokenCount\": 10,\n    \"candidatesTokenCount\": 1,\n    \"totalTokenCount\": 11,\n    \"promptTokensDetails\": [\n      {\n        \"modality\": \"TEXT\",\n        \"tokenCount\": 10\n      }\n    ]\n  },\n  \"modelVersion\": \"gemini-2.5-flash\",\n  \"responseId\": \"KOwdaaz-LcPTjMcP4Kip8AY\"\n}\n"
         }
       },
-      "recorded_at": "Thu, 02 Oct 2025 17:39:48 GMT"
+      "recorded_at": "Wed, 19 Nov 2025 16:11:20 GMT"
     },
     {
       "request": {
@@ -70,7 +70,7 @@
         "uri": "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=<KEY>",
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"generationConfig\":{\"thinkingConfig\":{\"thinkingBudget\":0},\"maxOutputTokens\":128,\"temperature\":0.0},\"contents\":[{\"role\":\"user\",\"parts\":[{\"text\":\"the secret word is 'blue'\\n\"}]},{\"role\":\"model\",\"parts\":[{\"text\":\"ok\\n\"}]},{\"role\":\"user\",\"parts\":[{\"text\":\"what is the secret word?\\nrespond with the word only\\n\"}]}]}"
+          "string": "{\"generationConfig\":{\"thinkingConfig\":{\"thinkingBudget\":0},\"maxOutputTokens\":256,\"temperature\":0.0},\"contents\":[{\"role\":\"user\",\"parts\":[{\"text\":\"the secret word is 'blue'\\n\"}]},{\"role\":\"model\",\"parts\":[{\"text\":\"ok\\n\"}]},{\"role\":\"user\",\"parts\":[{\"text\":\"what is the secret word?\\nrespond with the word only\\n\"}]}]}"
         },
         "headers": {
           "User-Agent": [
@@ -97,7 +97,7 @@
             "gzip"
           ],
           "date": [
-            "Thu, 02 Oct 2025 17:39:49 GMT"
+            "Wed, 19 Nov 2025 16:11:22 GMT"
           ],
           "server": [
             "scaffolding on HTTPServer2"
@@ -112,7 +112,7 @@
             "nosniff"
           ],
           "server-timing": [
-            "gfet4t7; dur=1042"
+            "gfet4t7; dur=1268"
           ],
           "alt-svc": [
             "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
@@ -123,10 +123,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "{\n  \"candidates\": [\n    {\n      \"content\": {\n        \"parts\": [\n          {\n            \"text\": \"blue\"\n          }\n        ],\n        \"role\": \"model\"\n      },\n      \"finishReason\": \"STOP\",\n      \"index\": 0\n    }\n  ],\n  \"usageMetadata\": {\n    \"promptTokenCount\": 26,\n    \"candidatesTokenCount\": 1,\n    \"totalTokenCount\": 27,\n    \"promptTokensDetails\": [\n      {\n        \"modality\": \"TEXT\",\n        \"tokenCount\": 26\n      }\n    ]\n  },\n  \"modelVersion\": \"gemini-2.5-flash\",\n  \"responseId\": \"5bjeaNKDPPGpqtsPkO7L2Q0\"\n}\n"
+          "string": "{\n  \"candidates\": [\n    {\n      \"content\": {\n        \"parts\": [\n          {\n            \"text\": \"blue\"\n          }\n        ],\n        \"role\": \"model\"\n      },\n      \"finishReason\": \"STOP\",\n      \"index\": 0\n    }\n  ],\n  \"usageMetadata\": {\n    \"promptTokenCount\": 26,\n    \"candidatesTokenCount\": 1,\n    \"totalTokenCount\": 27,\n    \"promptTokensDetails\": [\n      {\n        \"modality\": \"TEXT\",\n        \"tokenCount\": 26\n      }\n    ]\n  },\n  \"modelVersion\": \"gemini-2.5-flash\",\n  \"responseId\": \"KuwdabKkBeKYjMcPkqyZiAU\"\n}\n"
         }
       },
-      "recorded_at": "Thu, 02 Oct 2025 17:39:49 GMT"
+      "recorded_at": "Wed, 19 Nov 2025 16:11:22 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

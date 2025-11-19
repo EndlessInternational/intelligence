@@ -33,7 +33,7 @@
             "gzip"
           ],
           "date": [
-            "Thu, 02 Oct 2025 17:41:52 GMT"
+            "Wed, 19 Nov 2025 16:12:34 GMT"
           ],
           "server": [
             "scaffolding on HTTPServer2"
@@ -48,7 +48,7 @@
             "nosniff"
           ],
           "server-timing": [
-            "gfet4t7; dur=917"
+            "gfet4t7; dur=479"
           ],
           "alt-svc": [
             "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
@@ -59,10 +59,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "{\n  \"candidates\": [\n    {\n      \"content\": {\n        \"parts\": [\n          {\n            \"functionCall\": {\n              \"name\": \"calculator\",\n              \"args\": {\n                \"expression\": \"3 * 5\"\n              }\n            }\n          }\n        ],\n        \"role\": \"model\"\n      },\n      \"finishReason\": \"STOP\",\n      \"index\": 0\n    }\n  ],\n  \"usageMetadata\": {\n    \"promptTokenCount\": 777,\n    \"candidatesTokenCount\": 16,\n    \"totalTokenCount\": 793,\n    \"promptTokensDetails\": [\n      {\n        \"modality\": \"TEXT\",\n        \"tokenCount\": 777\n      }\n    ]\n  },\n  \"modelVersion\": \"gemini-2.5-flash\",\n  \"responseId\": \"YLneaIn8FPe4mtkP6s-zqAI\"\n}\n"
+          "string": "{\n  \"candidates\": [\n    {\n      \"content\": {\n        \"parts\": [\n          {\n            \"functionCall\": {\n              \"name\": \"calculator\",\n              \"args\": {\n                \"expression\": \"3 * 5\"\n              }\n            }\n          }\n        ],\n        \"role\": \"model\"\n      },\n      \"finishReason\": \"STOP\",\n      \"index\": 0,\n      \"finishMessage\": \"Model generated function call(s).\"\n    }\n  ],\n  \"usageMetadata\": {\n    \"promptTokenCount\": 777,\n    \"candidatesTokenCount\": 16,\n    \"totalTokenCount\": 793,\n    \"cachedContentTokenCount\": 673,\n    \"promptTokensDetails\": [\n      {\n        \"modality\": \"TEXT\",\n        \"tokenCount\": 777\n      }\n    ],\n    \"cacheTokensDetails\": [\n      {\n        \"modality\": \"TEXT\",\n        \"tokenCount\": 673\n      }\n    ]\n  },\n  \"modelVersion\": \"gemini-2.5-flash\",\n  \"responseId\": \"cuwdaYCZCurTjMcP9Pq3kAU\"\n}\n"
         }
       },
-      "recorded_at": "Thu, 02 Oct 2025 17:41:52 GMT"
+      "recorded_at": "Wed, 19 Nov 2025 16:12:34 GMT"
     },
     {
       "request": {
@@ -97,7 +97,7 @@
             "gzip"
           ],
           "date": [
-            "Thu, 02 Oct 2025 17:41:52 GMT"
+            "Wed, 19 Nov 2025 16:12:36 GMT"
           ],
           "server": [
             "scaffolding on HTTPServer2"
@@ -112,7 +112,7 @@
             "nosniff"
           ],
           "server-timing": [
-            "gfet4t7; dur=400"
+            "gfet4t7; dur=1935"
           ],
           "alt-svc": [
             "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
@@ -123,10 +123,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "{\n  \"candidates\": [\n    {\n      \"content\": {\n        \"parts\": [\n          {\n            \"text\": \"15\"\n          }\n        ],\n        \"role\": \"model\"\n      },\n      \"finishReason\": \"STOP\",\n      \"index\": 0\n    }\n  ],\n  \"usageMetadata\": {\n    \"promptTokenCount\": 813,\n    \"candidatesTokenCount\": 2,\n    \"totalTokenCount\": 815,\n    \"cachedContentTokenCount\": 676,\n    \"promptTokensDetails\": [\n      {\n        \"modality\": \"TEXT\",\n        \"tokenCount\": 813\n      }\n    ],\n    \"cacheTokensDetails\": [\n      {\n        \"modality\": \"TEXT\",\n        \"tokenCount\": 676\n      }\n    ]\n  },\n  \"modelVersion\": \"gemini-2.5-flash\",\n  \"responseId\": \"YLneaLadMo2hqtsP_OmDqAI\"\n}\n"
+          "string": "{\n  \"candidates\": [\n    {\n      \"content\": {\n        \"parts\": [\n          {\n            \"text\": \"15\"\n          }\n        ],\n        \"role\": \"model\"\n      },\n      \"finishReason\": \"STOP\",\n      \"index\": 0\n    }\n  ],\n  \"usageMetadata\": {\n    \"promptTokenCount\": 813,\n    \"candidatesTokenCount\": 2,\n    \"totalTokenCount\": 815,\n    \"cachedContentTokenCount\": 676,\n    \"promptTokensDetails\": [\n      {\n        \"modality\": \"TEXT\",\n        \"tokenCount\": 813\n      }\n    ],\n    \"cacheTokensDetails\": [\n      {\n        \"modality\": \"TEXT\",\n        \"tokenCount\": 676\n      }\n    ]\n  },\n  \"modelVersion\": \"gemini-2.5-flash\",\n  \"responseId\": \"dOwdaaLkCsjajMcP0suUiQc\"\n}\n"
         }
       },
-      "recorded_at": "Thu, 02 Oct 2025 17:41:52 GMT"
+      "recorded_at": "Wed, 19 Nov 2025 16:12:36 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

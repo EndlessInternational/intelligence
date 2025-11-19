@@ -13,8 +13,11 @@ RSpec.describe "#{Intelligence::Adapter[ :google ]} stream requests", :google do
       key                     ENV[ 'GOOGLE_API_KEY' ]
       chat_options do
         model                 'gemini-2.5-flash'
-        max_tokens            128
+        max_tokens            256
         temperature           0
+        reasoning do 
+          budget              0
+        end
 
         stream                true
       end
@@ -44,6 +47,9 @@ RSpec.describe "#{Intelligence::Adapter[ :google ]} stream requests", :google do
         model                 'gemini-2.5-flash'
         max_tokens            1024
         temperature           0
+        reasoning do 
+          budget              0
+        end
 
         stream                true
       end
@@ -57,6 +63,9 @@ RSpec.describe "#{Intelligence::Adapter[ :google ]} stream requests", :google do
         model                 'gemini-2.5-flash'
         max_tokens            32
         temperature           0
+        reasoning do 
+          budget              0
+        end
 
         stream                true
       end
@@ -71,6 +80,9 @@ RSpec.describe "#{Intelligence::Adapter[ :google ]} stream requests", :google do
         max_tokens            32
         temperature           0
         stop                  'five'
+        reasoning do 
+          budget              0
+        end
 
         stream                true
       end
@@ -82,8 +94,11 @@ RSpec.describe "#{Intelligence::Adapter[ :google ]} stream requests", :google do
       key                     ENV[ 'GOOGLE_API_KEY' ]
       chat_options do
         model                 'gemini-2.5-flash'
-        max_tokens            32 
+        max_tokens            256 
         temperature           0
+        reasoning do 
+          budget              0
+        end
 
         stream                true
       end

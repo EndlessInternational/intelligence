@@ -36,7 +36,7 @@
             "chunked"
           ],
           "date": [
-            "Thu, 02 Oct 2025 17:41:57 GMT"
+            "Wed, 19 Nov 2025 16:12:40 GMT"
           ],
           "server": [
             "scaffolding on HTTPServer2"
@@ -51,7 +51,7 @@
             "nosniff"
           ],
           "server-timing": [
-            "gfet4t7; dur=475"
+            "gfet4t7; dur=350"
           ],
           "alt-svc": [
             "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
@@ -59,10 +59,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "data: {\"candidates\": [{\"content\": {\"parts\": [{\"text\": \"one\\ntwo\\n\"}],\"role\": \"model\"},\"index\": 0}],\"usageMetadata\": {\"promptTokenCount\": 60,\"candidatesTokenCount\": 3,\"totalTokenCount\": 63,\"promptTokensDetails\": [{\"modality\": \"TEXT\",\"tokenCount\": 60}]},\"modelVersion\": \"gemini-2.5-flash\",\"responseId\": \"ZbneaLXlCo-5qtsPlovskAI\"}\r\n\r\ndata: {\"candidates\": [{\"content\": {\"parts\": [{\"text\": \"three\\nfour\\nfive\\nsix\\nseven\\neight\\nnine\\nten\\n\"}],\"role\": \"model\"},\"index\": 0}],\"usageMetadata\": {\"promptTokenCount\": 60,\"candidatesTokenCount\": 18,\"totalTokenCount\": 78,\"promptTokensDetails\": [{\"modality\": \"TEXT\",\"tokenCount\": 60}]},\"modelVersion\": \"gemini-2.5-flash\",\"responseId\": \"ZbneaLXlCo-5qtsPlovskAI\"}\r\n\r\ndata: {\"candidates\": [{\"content\": {\"parts\": [{\"text\": \"eleven\\ntwelve\\nthirteen\\nfourteen\\n\"}],\"role\": \"model\"},\"finishReason\": \"MAX_TOKENS\",\"index\": 0}],\"usageMetadata\": {\"promptTokenCount\": 60,\"candidatesTokenCount\": 29,\"totalTokenCount\": 89,\"promptTokensDetails\": [{\"modality\": \"TEXT\",\"tokenCount\": 60}]},\"modelVersion\": \"gemini-2.5-flash\",\"responseId\": \"ZbneaLXlCo-5qtsPlovskAI\"}\r\n\r\n"
+          "string": "data: {\"candidates\": [{\"content\": {\"parts\": [{\"text\": \"one\\ntwo\\n\"}],\"role\": \"model\"},\"index\": 0}],\"usageMetadata\": {\"promptTokenCount\": 60,\"candidatesTokenCount\": 3,\"totalTokenCount\": 63,\"promptTokensDetails\": [{\"modality\": \"TEXT\",\"tokenCount\": 60}]},\"modelVersion\": \"gemini-2.5-flash\",\"responseId\": \"eOwdacHhCajVjMcPl7G8kQQ\"}\r\n\r\ndata: {\"candidates\": [{\"content\": {\"parts\": [{\"text\": \"three\\nfour\\nfive\\nsix\\nseven\\neight\\nnine\\nten\\n\"}],\"role\": \"model\"},\"index\": 0}],\"usageMetadata\": {\"promptTokenCount\": 60,\"candidatesTokenCount\": 18,\"totalTokenCount\": 78,\"promptTokensDetails\": [{\"modality\": \"TEXT\",\"tokenCount\": 60}]},\"modelVersion\": \"gemini-2.5-flash\",\"responseId\": \"eOwdacHhCajVjMcPl7G8kQQ\"}\r\n\r\ndata: {\"candidates\": [{\"content\": {\"parts\": [{\"text\": \"eleven\\ntwelve\\nthirteen\\nfourteen\\n\"}],\"role\": \"model\"},\"finishReason\": \"MAX_TOKENS\",\"index\": 0}],\"usageMetadata\": {\"promptTokenCount\": 60,\"candidatesTokenCount\": 29,\"totalTokenCount\": 89,\"promptTokensDetails\": [{\"modality\": \"TEXT\",\"tokenCount\": 60}]},\"modelVersion\": \"gemini-2.5-flash\",\"responseId\": \"eOwdacHhCajVjMcPl7G8kQQ\"}\r\n\r\n"
         }
       },
-      "recorded_at": "Thu, 02 Oct 2025 17:41:57 GMT"
+      "recorded_at": "Wed, 19 Nov 2025 16:12:40 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

@@ -36,7 +36,7 @@
             "chunked"
           ],
           "date": [
-            "Thu, 02 Oct 2025 17:42:39 GMT"
+            "Wed, 19 Nov 2025 16:13:15 GMT"
           ],
           "server": [
             "scaffolding on HTTPServer2"
@@ -51,7 +51,7 @@
             "nosniff"
           ],
           "server-timing": [
-            "gfet4t7; dur=486"
+            "gfet4t7; dur=903"
           ],
           "alt-svc": [
             "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
@@ -59,10 +59,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "data: {\"candidates\": [{\"content\": {\"parts\": [{\"functionCall\": {\"name\": \"calculator\",\"args\": {\"expression\": \"3 * 5\"}}}],\"role\": \"model\"},\"finishReason\": \"STOP\",\"index\": 0}],\"usageMetadata\": {\"promptTokenCount\": 777,\"candidatesTokenCount\": 16,\"totalTokenCount\": 793,\"cachedContentTokenCount\": 673,\"promptTokensDetails\": [{\"modality\": \"TEXT\",\"tokenCount\": 777}],\"cacheTokensDetails\": [{\"modality\": \"TEXT\",\"tokenCount\": 673}]},\"modelVersion\": \"gemini-2.5-flash\",\"responseId\": \"j7neaIiHIqC3qtsPhriWwQ4\"}\r\n\r\n"
+          "string": "data: {\"candidates\": [{\"content\": {\"parts\": [{\"functionCall\": {\"name\": \"calculator\",\"args\": {\"expression\": \"3 * 5\"}}}],\"role\": \"model\"},\"finishReason\": \"STOP\",\"index\": 0,\"finishMessage\": \"Model generated function call(s).\"}],\"usageMetadata\": {\"promptTokenCount\": 777,\"candidatesTokenCount\": 16,\"totalTokenCount\": 793,\"cachedContentTokenCount\": 673,\"promptTokensDetails\": [{\"modality\": \"TEXT\",\"tokenCount\": 777}],\"cacheTokensDetails\": [{\"modality\": \"TEXT\",\"tokenCount\": 673}]},\"modelVersion\": \"gemini-2.5-flash\",\"responseId\": \"m-wdafO_KMjajMcPqOKVkQo\"}\r\n\r\n"
         }
       },
-      "recorded_at": "Thu, 02 Oct 2025 17:42:39 GMT"
+      "recorded_at": "Wed, 19 Nov 2025 16:13:15 GMT"
     },
     {
       "request": {
@@ -100,7 +100,7 @@
             "chunked"
           ],
           "date": [
-            "Thu, 02 Oct 2025 17:42:39 GMT"
+            "Wed, 19 Nov 2025 16:13:16 GMT"
           ],
           "server": [
             "scaffolding on HTTPServer2"
@@ -115,7 +115,7 @@
             "nosniff"
           ],
           "server-timing": [
-            "gfet4t7; dur=283"
+            "gfet4t7; dur=506"
           ],
           "alt-svc": [
             "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
@@ -123,10 +123,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "data: {\"candidates\": [{\"content\": {\"parts\": [{\"text\": \"15\"}],\"role\": \"model\"},\"finishReason\": \"STOP\",\"index\": 0}],\"usageMetadata\": {\"promptTokenCount\": 813,\"candidatesTokenCount\": 2,\"totalTokenCount\": 815,\"cachedContentTokenCount\": 676,\"promptTokensDetails\": [{\"modality\": \"TEXT\",\"tokenCount\": 813}],\"cacheTokensDetails\": [{\"modality\": \"TEXT\",\"tokenCount\": 676}]},\"modelVersion\": \"gemini-2.5-flash\",\"responseId\": \"j7neaN7uN72AmtkPvN2NCQ\"}\r\n\r\n"
+          "string": "data: {\"candidates\": [{\"content\": {\"parts\": [{\"text\": \"15\"}],\"role\": \"model\"},\"finishReason\": \"STOP\",\"index\": 0}],\"usageMetadata\": {\"promptTokenCount\": 813,\"candidatesTokenCount\": 2,\"totalTokenCount\": 815,\"promptTokensDetails\": [{\"modality\": \"TEXT\",\"tokenCount\": 813}]},\"modelVersion\": \"gemini-2.5-flash\",\"responseId\": \"nOwdafXPDrONjMcP24Sz6QQ\"}\r\n\r\n"
         }
       },
-      "recorded_at": "Thu, 02 Oct 2025 17:42:39 GMT"
+      "recorded_at": "Wed, 19 Nov 2025 16:13:16 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

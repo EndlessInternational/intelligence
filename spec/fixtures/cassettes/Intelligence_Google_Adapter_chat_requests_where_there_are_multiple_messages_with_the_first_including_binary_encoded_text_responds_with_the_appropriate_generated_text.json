@@ -6,7 +6,7 @@
         "uri": "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=<KEY>",
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"generationConfig\":{\"thinkingConfig\":{\"thinkingBudget\":0},\"maxOutputTokens\":32,\"temperature\":0.0},\"systemInstruction\":{\"role\":\"user\",\"parts\":[{\"text\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"}]},\"contents\":[{\"role\":\"user\",\"parts\":[{\"text\":\"what is the text in the attached file?\\n\"},{\"inline_data\":{\"mime_type\":\"text/plain\",\"data\":\"dGhpcyBpcyBhIHRlc3QK\"}}]},{\"role\":\"model\",\"parts\":[{\"text\":\"this is a test\\n\"}]},{\"role\":\"user\",\"parts\":[{\"text\":\"how many words is that?\\nreply with just a number\\n\"}]}]}"
+          "string": "{\"generationConfig\":{\"thinkingConfig\":{},\"maxOutputTokens\":256,\"temperature\":0.0},\"systemInstruction\":{\"role\":\"user\",\"parts\":[{\"text\":\"\\n            You are integrated into a test platform. It is very important that you answer \\n            succinctly and always provide the text in the requested format without any additional \\n            text. \\n          \"}]},\"contents\":[{\"role\":\"user\",\"parts\":[{\"text\":\"what is the text in the attached file?\\n\"},{\"inline_data\":{\"mime_type\":\"text/plain\",\"data\":\"dGhpcyBpcyBhIHRlc3QK\"}}]},{\"role\":\"model\",\"parts\":[{\"text\":\"this is a test\\n\"}]},{\"role\":\"user\",\"parts\":[{\"text\":\"how many words is that?\\nreply with just a number\\n\"}]}]}"
         },
         "headers": {
           "User-Agent": [
@@ -33,7 +33,7 @@
             "gzip"
           ],
           "date": [
-            "Thu, 02 Oct 2025 17:40:03 GMT"
+            "Wed, 19 Nov 2025 16:11:31 GMT"
           ],
           "server": [
             "scaffolding on HTTPServer2"
@@ -48,7 +48,7 @@
             "nosniff"
           ],
           "server-timing": [
-            "gfet4t7; dur=573"
+            "gfet4t7; dur=607"
           ],
           "alt-svc": [
             "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
@@ -59,10 +59,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "{\n  \"candidates\": [\n    {\n      \"content\": {\n        \"parts\": [\n          {\n            \"text\": \"4\"\n          }\n        ],\n        \"role\": \"model\"\n      },\n      \"finishReason\": \"STOP\",\n      \"index\": 0\n    }\n  ],\n  \"usageMetadata\": {\n    \"promptTokenCount\": 80,\n    \"candidatesTokenCount\": 1,\n    \"totalTokenCount\": 81,\n    \"promptTokensDetails\": [\n      {\n        \"modality\": \"TEXT\",\n        \"tokenCount\": 80\n      }\n    ]\n  },\n  \"modelVersion\": \"gemini-2.5-flash\",\n  \"responseId\": \"87jeaOWhJKbwqtsPqs7emQI\"\n}\n"
+          "string": "{\n  \"candidates\": [\n    {\n      \"content\": {\n        \"parts\": [\n          {\n            \"text\": \"4\"\n          }\n        ],\n        \"role\": \"model\"\n      },\n      \"finishReason\": \"STOP\",\n      \"index\": 0\n    }\n  ],\n  \"usageMetadata\": {\n    \"promptTokenCount\": 80,\n    \"candidatesTokenCount\": 1,\n    \"totalTokenCount\": 114,\n    \"promptTokensDetails\": [\n      {\n        \"modality\": \"TEXT\",\n        \"tokenCount\": 80\n      }\n    ],\n    \"thoughtsTokenCount\": 33\n  },\n  \"modelVersion\": \"gemini-2.5-flash\",\n  \"responseId\": \"M-wdaf8qh5WMxw-lmMmZBw\"\n}\n"
         }
       },
-      "recorded_at": "Thu, 02 Oct 2025 17:40:03 GMT"
+      "recorded_at": "Wed, 19 Nov 2025 16:11:31 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"
