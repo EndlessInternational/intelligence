@@ -13,6 +13,9 @@ module Intelligence
     attr_reader   :duration
 
     attr_reader   :input_tokens
+    attr_reader   :cache_read_input_tokens
+    attr_reader   :cache_write_input_tokens
+
     attr_reader   :output_tokens
 
     def initialize( attributes )
@@ -27,6 +30,14 @@ module Intelligence
       @total_tokens
     end
 
+    def to_h
+      { 
+        input_tokens: @input_tokens, 
+        output_tokens: @output_tokens,
+        cache_read_input_tokens: @cache_read_input_tokens,
+        cache_write_input_tokens: @cache_write_input_tokens 
+      }.compact
+    end
+  
   end
-
 end
