@@ -57,6 +57,8 @@ module Intelligence
           result_metrics = {}
           result_metrics[ :input_tokens ] = metrics_json[ :input_tokens ] 
           result_metrics[ :output_tokens ] = metrics_json[ :output_tokens ]
+          result_metrics[ :cache_write_input_tokens ] = metrics_json[ :cache_creation_input_tokens ]
+          result_metrics[ :cache_read_input_tokens ] = metrics_json[ :cache_read_input_tokens ]
           result_metrics = result_metrics.compact
 
           result[ :metrics ] = result_metrics unless result_metrics.empty?
@@ -91,7 +93,9 @@ module Intelligence
         choices = context[ :choices ] || Array.new( 1 , { message: { contents: [] } } )
         metrics = context[ :metrics ] || {
           input_tokens: 0,
-          output_tokens:  0
+          output_tokens:  0,
+          cache_write_input_tokens: 0,
+          cache_read_input_tokens: 0
         }
 
         end_reason = context[ :end_reason ]
@@ -117,6 +121,8 @@ module Intelligence
             when 'message_start'
               metrics[ :input_tokens ] += data[ 'message' ]&.[]( 'usage' )&.[]( 'input_tokens' ) || 0
               metrics[ :output_tokens ] += data[ 'message' ]&.[]( 'usage' )&.[]( 'output_tokens' ) || 0
+              metrics[ :cache_write_input_tokens ] += data[ 'message' ]&.[]( 'usage' )&.[]( 'cache_creation_input_tokens' ) || 0
+              metrics[ :cache_read_input_tokens ] += data[ 'message' ]&.[]( 'usage' )&.[]( 'cache_read_input_tokens' ) || 0
             when 'content_block_start'
               index = data[ 'index' ]
               if contents.size <= index

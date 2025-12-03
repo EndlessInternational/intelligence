@@ -30,7 +30,7 @@
         },
         "headers": {
           "date": [
-            "Wed, 01 Oct 2025 20:58:53 GMT"
+            "Wed, 03 Dec 2025 16:24:50 GMT"
           ],
           "content-type": [
             "application/json"
@@ -45,40 +45,43 @@
             "gzip"
           ],
           "anthropic-ratelimit-input-tokens-limit": [
-            "450000"
+            "800000"
           ],
           "anthropic-ratelimit-input-tokens-remaining": [
-            "450000"
+            "800000"
           ],
           "anthropic-ratelimit-input-tokens-reset": [
-            "2025-10-01T20:58:53Z"
+            "2025-12-03T16:24:50Z"
           ],
           "anthropic-ratelimit-output-tokens-limit": [
-            "90000"
+            "160000"
           ],
           "anthropic-ratelimit-output-tokens-remaining": [
-            "90000"
+            "160000"
           ],
           "anthropic-ratelimit-output-tokens-reset": [
-            "2025-10-01T20:58:53Z"
+            "2025-12-03T16:24:50Z"
           ],
           "anthropic-ratelimit-requests-limit": [
-            "1000"
+            "2000"
           ],
           "anthropic-ratelimit-requests-remaining": [
-            "999"
+            "1999"
           ],
           "anthropic-ratelimit-requests-reset": [
-            "2025-10-01T20:58:51Z"
+            "2025-12-03T16:24:48Z"
+          ],
+          "retry-after": [
+            "10"
           ],
           "anthropic-ratelimit-tokens-limit": [
-            "540000"
+            "960000"
           ],
           "anthropic-ratelimit-tokens-remaining": [
-            "540000"
+            "960000"
           ],
           "anthropic-ratelimit-tokens-reset": [
-            "2025-10-01T20:58:53Z"
+            "2025-12-03T16:24:50Z"
           ],
           "request-id": [
             "<REQUEST-ID>"
@@ -90,10 +93,7 @@
             "ed8c3484-0c99-44df-aab0-b0c00ceaee61"
           ],
           "x-envoy-upstream-service-time": [
-            "2125"
-          ],
-          "via": [
-            "1.1 google"
+            "2660"
           ],
           "cf-cache-status": [
             "DYNAMIC"
@@ -110,10 +110,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\"id\":\"msg_01R91GUGLdwVpktJgP41ueCz\",\"type\":\"message\",\"role\":\"assistant\",\"model\":\"claude-sonnet-4-20250514\",\"content\":[{\"type\":\"text\",\"text\":\"three balloons\"}],\"stop_reason\":\"end_turn\",\"stop_sequence\":null,\"usage\":{\"input_tokens\":523,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"cache_creation\":{\"ephemeral_5m_input_tokens\":0,\"ephemeral_1h_input_tokens\":0},\"output_tokens\":6,\"service_tier\":\"standard\"}}"
+          "string": "{\"model\":\"claude-sonnet-4-20250514\",\"id\":\"msg_01BiDLLYsdF6P1u6aPSS3bWc\",\"type\":\"message\",\"role\":\"assistant\",\"content\":[{\"type\":\"text\",\"text\":\"three balloons\"}],\"stop_reason\":\"end_turn\",\"stop_sequence\":null,\"usage\":{\"input_tokens\":523,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"cache_creation\":{\"ephemeral_5m_input_tokens\":0,\"ephemeral_1h_input_tokens\":0},\"output_tokens\":6,\"service_tier\":\"standard\"}}"
         }
       },
-      "recorded_at": "Wed, 01 Oct 2025 20:58:53 GMT"
+      "recorded_at": "Wed, 03 Dec 2025 16:24:50 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

@@ -30,7 +30,7 @@
         },
         "headers": {
           "date": [
-            "Wed, 01 Oct 2025 21:00:26 GMT"
+            "Wed, 03 Dec 2025 16:26:46 GMT"
           ],
           "content-type": [
             "application/json"
@@ -54,10 +54,7 @@
             "max-age=31536000; includeSubDomains; preload"
           ],
           "x-envoy-upstream-service-time": [
-            "8"
-          ],
-          "via": [
-            "1.1 google"
+            "16"
           ],
           "cf-cache-status": [
             "DYNAMIC"
@@ -71,10 +68,10 @@
         },
         "body": {
           "encoding": "UTF-8",
-          "string": "{\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CTh9kevJe5JJNhqerdpaj\"}"
+          "string": "{\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CVk4qy3yCdihHe78Sp2Qx\"}"
         }
       },
-      "recorded_at": "Wed, 01 Oct 2025 21:00:26 GMT"
+      "recorded_at": "Wed, 03 Dec 2025 16:26:46 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"

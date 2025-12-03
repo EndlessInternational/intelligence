@@ -67,16 +67,19 @@ module Intelligence
             end
 
             result_message = { role: message[ :role ] }
-            result_message_content = []
+            result_message_contents = []
             
             message[ :contents ]&.each do | content |
+              cache_control = content[ :'anthropic/cache_control' ]
               case content[ :type ]
               when :text
-                result_message_content << { type: 'text', text: content[ :text ] }
+                result_message_content = { type: 'text', text: content[ :text ] }
+                result_message_content[ :cache_control ] = cache_control if cache_control
+                result_message_contents << result_message_content
               when :thought
                 signature = content[ :'anthropic/signature' ]
                 if signature && signature.length > 0 
-                  result_message_content << { 
+                  result_message_contents << { 
                     type:                   'thinking', 
                     thinking:               content[ :text ], 
                     signature:              signature 
@@ -89,7 +92,7 @@ module Intelligence
                 bytes = content[ :bytes ]
                 if content_type && bytes
                   if SUPPORTED_CONTENT_TYPES.include?( content_type )
-                    result_message_content << {
+                    result_message_content = {
                       type: content_type == 'application/pdf' ? 'document' : 'image',
                       source: {
                         type: 'base64',
@@ -97,6 +100,8 @@ module Intelligence
                         data: Base64.strict_encode64( bytes )
                       }
                     }
+                    result_message_content[ :cache_control ] = cache_control if cache_control            
+                    result_message_contents << result_message_content
                   else
                     raise UnsupportedContentError.new( 
                       :anthropic, 
@@ -114,13 +119,15 @@ module Intelligence
                 uri = content[ :uri ]
                 if content_type && uri  
                   if SUPPORTED_CONTENT_TYPES.include?( content_type )
-                    result_message_content << {
+                    result_message_content = {
                       type: content_type == 'application/pdf' ? 'document' : 'image',
                       source: {
                         type: 'url',
                         url: uri 
                       }
                     }
+                    result_message_content[ :cache_control ] = cache_control if cache_control            
+                    result_message_contents << result_message_content
                   else 
                     raise UnsupportedContentError.new( 
                       :anthropic, 
@@ -138,18 +145,22 @@ module Intelligence
                 tool_parameters = {} \
                   if tool_parameters.nil? || 
                      ( tool_parameters.is_a?( String ) && tool_parameters.empty? )
-                result_message_content << {
+                result_message_content = {
                   type: 'tool_use',
                   id: content[ :tool_call_id ],
                   name: content[ :tool_name ],
                   input: tool_parameters
                 }
+                result_message_content[ :cache_control ] = cache_control if cache_control            
+                result_message_contents << result_message_content
               when :tool_result 
-                result_message_content << {
+                result_message_content = {
                   type: 'tool_result',
                   tool_use_id: content[ :tool_call_id ],
                   content: content[ :tool_result ]&.to_s
                 }
+                result_message_content[ :cache_control ] = cache_control if cache_control            
+                result_message_contents << result_message_content
               when :web_search_call, :web_reference
                 # nop
               else
@@ -159,8 +170,8 @@ module Intelligence
                 ) 
               end
             end
-            
-            result_message[ :content ] = result_message_content
+  
+            result_message[ :content ] = result_message_contents
             result[ :messages ] << result_message
           
           end

@@ -30,7 +30,7 @@
         },
         "headers": {
           "date": [
-            "Wed, 01 Oct 2025 21:00:26 GMT"
+            "Wed, 03 Dec 2025 16:26:46 GMT"
           ],
           "content-type": [
             "application/json"
@@ -57,10 +57,7 @@
             "ed8c3484-0c99-44df-aab0-b0c00ceaee61"
           ],
           "x-envoy-upstream-service-time": [
-            "43"
-          ],
-          "via": [
-            "1.1 google"
+            "46"
           ],
           "cf-cache-status": [
             "DYNAMIC"
@@ -77,10 +74,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\"type\":\"error\",\"error\":{\"type\":\"not_found_error\",\"message\":\"model: invalid-model\"},\"request_id\":\"req_011CTh9kfgSgsWaQTLbAZCc1\"}"
+          "string": "{\"type\":\"error\",\"error\":{\"type\":\"not_found_error\",\"message\":\"model: invalid-model\"},\"request_id\":\"req_011CVk4qyrazczohDCPFcsVR\"}"
         }
       },
-      "recorded_at": "Wed, 01 Oct 2025 21:00:26 GMT"
+      "recorded_at": "Wed, 03 Dec 2025 16:26:46 GMT"
     }
   ],
   "recorded_with": "VCR 6.3.1"
