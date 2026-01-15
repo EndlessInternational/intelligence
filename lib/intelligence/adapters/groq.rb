@@ -37,14 +37,7 @@ module Intelligence
 
           temperature         Float
           tool                array: true, as: :tools, &Tool.schema 
-          tool_choice do 
-            # one of 'auto', 'none' or 'function'
-            type              Symbol, in: [ :auto, :none, :function ]
-            # the function parameters is required if you specify a type of 'function' 
-            function do 
-              name            String 
-            end
-          end
+          tool_choice         String
         
           top_logprobs        Integer
           top_p               Float
